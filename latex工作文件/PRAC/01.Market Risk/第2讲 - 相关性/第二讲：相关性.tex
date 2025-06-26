@@ -1,0 +1,1820 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+%\setCJKmainfont[
+ %   Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,
+ %   UprightFont = {SourceHanSerifCN-Light-5.otf},
+ %   BoldFont = {SourceHanSerifCN-Medium-6.otf},
+%    Scale=1
+%]{SourceHanSerifCN}
+
+%\setmainfont{SourceHanSerif}  % 设置英文字体
+
+% 处理冲突的命令
+\let\oldbackepsilon\backepsilon
+\let\backepsilon\relax
+\let\oldeth\eth
+\let\eth\relax
+\let\olddigamma\digamma
+\let\digamma\relax
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{float} % 用于浮动环境
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:相关性基础}
+\setcounter{question}{0}
+\begin{question}
+    Suppose an individual buys a correlation swap with a fixed correlation of 0.3 and a notional value of \$2 million for one year. The realized pairwise correlations of the daily log returns at maturity for three assets are $\rho_{1,2}= 0.8$, $\rho_{3,1} = 0.3$, and $\rho_{3,2} = 0.4$. What is the correlation swap buyer's payoff at maturity?
+\end{question}
+
+\begin{choices}
+    \item \$200,000
+    \item \$400,000
+    \item \$600,000
+    \item \$800,000
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item This option is incorrect because:
+        \begin{itemize}
+            \item The calculated payoff is too low
+            \item The calculation error likely occurred in the realized correlation
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item This option is correct because:
+        \begin{itemize}
+            \item Step 1: Calculate realized correlation
+            \begin{itemize}
+                \item $\rho_{\text{realized}} = \frac{2}{3^2 - 3} \times (0.8 + 0.3 + 0.4) = 0.5$
+                \item Formula: $\frac{2}{n^2 - n} \sum_{i<j} \rho_{i,j}$
+            \end{itemize}
+            \item Step 2: Calculate payoff
+            \begin{itemize}
+                \item Payoff = Notional × (Realized - Fixed)
+                \item = \$2,000,000 × (0.5 - 0.3)
+                \item = \$400,000
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item This option is incorrect because:
+        \begin{itemize}
+            \item The calculated payoff is too high
+            \item The calculation error likely occurred in the realized correlation
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item This option is incorrect because:
+        \begin{itemize}
+            \item The calculated payoff is too high
+            \item The calculation error likely occurred in the realized correlation
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+\checklist{
+    掌握相关性互换的支付计算：计算实现相关性，支付 = 名义金额 × (实现相关性 - 固定相关性)
+}
+
+
+
+\begin{question}
+    Within the framework of risk analysis, which of the following choices would be considered most critical when looking at risks within financial institutions?
+\end{question}
+
+\begin{choices}
+    \item Computing separate capital requirements for a bank's trading and banking books.
+    \item Proper analysis of stressed VaR.
+    \item Persistent use of backtesting.
+    \item Consideration of interactions among risk factors.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 分别计算资本要求已经是巴塞尔框架的一部分
+            \item 这是监管要求，不是关键风险分析问题
+            \item 没有解决核心风险管理挑战
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 压力VaR重要但不是最关键的
+            \item 只是风险分析的一个组成部分
+            \item 没有捕捉风险相互作用
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 回测是验证工具
+            \item 重要但不是最关键方面
+            \item 没有解决风险相互作用
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 风险相互作用至关重要，因为：
+            \begin{itemize}
+                \item 风险不是独立的
+                \item 相互作用可能放大或减少总风险
+                \item 当前巴塞尔框架忽略这些相互作用
+            \end{itemize}
+            \item 风险相互作用的例子：
+            \begin{itemize}
+                \item 市场风险影响信用风险
+                \item 操作风险影响市场风险
+                \item 流动性风险影响市场风险
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握风险分析的关键：考虑风险因子之间的相互作用，因为风险不是独立的，相互作用可能放大或减少总风险
+}
+
+
+\begin{question}
+    The risk measure that extracts the dependence structure from the joint distribution function created from several continuous marginal distribution functions is known as a:
+\end{question}
+
+\begin{choices}
+    \item Copula
+    \item Volatility
+    \item Correlation
+    \item Multivariate correlation
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item Copula是一个数学函数，它：
+            \begin{itemize}
+                \item 从联合分布中提取依赖结构
+                \item 将边际分布与依赖关系分离
+                \item 允许建模复杂依赖关系
+            \end{itemize}
+            \item 关键特征：
+            \begin{itemize}
+                \item 可以建模非线性依赖
+                \item 捕捉尾部依赖
+                \item 比相关性更灵活
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 波动率衡量离散程度
+            \item 不捕捉依赖结构
+            \item 是单变量度量
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 相关性是线性度量
+            \item 不能捕捉复杂依赖关系
+            \item 比Copula更不灵活
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 多元相关性仍然是线性的
+            \item 不能捕捉非线性依赖
+            \item 比Copula更不灵活
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握Copula的特点：从联合分布中提取依赖结构，可以建模非线性依赖和尾部依赖，比相关性更灵活
+}
+
+
+\begin{question}
+    What type of liquidity risk is most troublesome for complex trading positions?
+\end{question}
+
+\begin{choices}
+    \item Endogenous
+    \item Market-specific
+    \item Exogenous
+    \item Spectral
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 内生流动性风险：
+            \begin{itemize}
+                \item 源于头寸本身
+                \item 随头寸规模增加
+                \item 对复杂头寸更严重
+            \end{itemize}
+            \item 为什么最麻烦：
+            \begin{itemize}
+                \item 难以预测
+                \item 自我强化
+                \item 可能导致市场影响
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 市场特定风险是外部的
+            \item 影响所有市场参与者
+            \item 不特定于复杂头寸
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 外生风险是外部的
+            \item 与头寸规模无关
+            \item 平等影响所有市场参与者
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 谱风险不是流动性风险类型
+            \item 这是数学概念
+            \item 与交易头寸无关
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握流动性风险类型：内生流动性风险对复杂交易头寸最麻烦，因为它源于头寸本身，随规模增加，难以预测
+}
+
+
+\begin{question}
+    In May of 2008, several large hedge funds had speculative positions in the collateralized debt obligations (CDOs) tranches. These hedge funds were forced into bankruptcy due to the lack of understanding of correlations across tranches. Which of the following statements best describes the positions held by hedge funds at this time and the role of changing correlations? Hedge funds held:
+\end{question}
+
+\begin{choices}
+    \item a long equity tranche and short mezzanine tranche when the correlations in both tranches decreased.
+    \item a short equity tranche and long mezzanine tranche when the correlations in both tranches increased.
+    \item a short senior tranche and long mezzanine tranche when the correlation in the mezzanine tranche decreased.
+    \item a long mezzanine tranche and short equity tranche when the correlation in the mezzanine tranche increased.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 头寸结构：
+            \begin{itemize}
+                \item 做多权益层
+                \item 做空中间层
+            \end{itemize}
+            \item 相关性变化的影响：
+            \begin{itemize}
+                \item 权益层相关性下降
+                \item 中间层相关性下降
+                \item 两者都导致重大损失
+            \end{itemize}
+            \item 为什么导致破产：
+            \begin{itemize}
+                \item 两个头寸都亏损
+                \item 相关性风险未适当对冲
+                \item 杠杆放大损失
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 头寸结构相反
+            \item 相关性影响相反
+            \item 会导致盈利而非损失
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 头寸结构不同
+            \item 优先层未涉及
+            \item 相关性影响不同
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 头寸结构相反
+            \item 相关性影响相反
+            \item 会导致盈利而非损失
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握CDO分层交易策略：做多权益层和做空中间层的组合，相关性下降会导致双重损失
+}
+
+
+\begin{question}
+    Suppose a creditor makes a \$6 million loan to company A and a \$6 million loan to company B. Based on historical information of companies in this industry, companies A and B each have a 7\% default probability and a default correlation coefficient of 0.6. The expected loss for this creditor under the worst case scenario assuming loss given default is 100\% is closest to:
+\end{question}
+
+\begin{choices}
+    \item \$420,000
+    \item \$504,000
+    \item \$588,000
+    \item \$840,000
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的损失太低
+            \item 计算错误可能出现在联合概率上
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 步骤1：计算联合违约概率
+            \begin{itemize}
+                \item P(A和B违约) = P(A) × P(B) + ρ × √[P(A) × (1-P(A)) × P(B) × (1-P(B))]
+                \item = 0.07 × 0.07 + 0.6 × √[0.07 × 0.93 × 0.07 × 0.93]
+                \item = 0.0049 + 0.6 × 0.0674
+                \item = 0.0453
+            \end{itemize}
+            \item 步骤2：计算预期损失
+            \begin{itemize}
+                \item 总贷款金额 = \$12,000,000
+                \item 预期损失 = 0.0453 × \$12,000,000
+                \item = \$504,000
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的损失太高
+            \item 计算错误可能出现在联合概率上
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的损失太高
+            \item 计算错误可能出现在联合概率上
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握联合违约概率计算：考虑违约概率和违约相关性，计算最坏情况下的预期损失
+}
+
+
+\begin{question}
+    New copula correlation models were used by traders and risk managers during the 2008-2010 global financial crisis. This led to miscalculations in the underlying risk for structured products such as collateralized debt obligation (CDO) models. Which of the following statements least likely explains the failure of these new copula correlation models during the financial crisis?
+\end{question}
+
+\begin{choices}
+    \item The copula correlation models assumed a negative correlation between the equity and senior tranches of CDOs.
+    \item Correlations for equity tranches of CDOs increased during the financial crisis.
+    \item The correlation copula models were calibrated with data from time periods that had low risk.
+    \item Correlations for senior tranches of CDOs decreased during the financial crisis.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 模型确实假设负相关
+            \item 这是关键建模错误
+            \item 导致模型失败
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 权益层相关性确实增加
+            \item 这是关键市场变化
+            \item 导致模型失败
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 模型使用低风险数据校准
+            \item 这是关键校准错误
+            \item 导致模型失败
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 优先层相关性实际增加
+            \item 不是如陈述的减少
+            \item 这个陈述事实错误
+            \item 所有分层都显示相关性增加
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握Copula模型失败原因：假设负相关、使用低风险数据校准、危机期间相关性增加，但优先层相关性也增加而非减少
+}
+
+
+\begin{question}
+    Expected shortfall is generally suggested as a better alternative than VaR during market turmoil. Which of the following statements regarding VaR and ES is true?
+\end{question}
+
+\begin{choices}
+    \item ES leads to more required economic capital than VaR does for the same confidence level.
+    \item While VaR ensures that the estimate of portfolio risk is less than or equal to the sum of the risks of that portfolio's positions, ES does not.
+    \item Both VaR and ES account for the severity of losses beyond the confidence threshold.
+    \item ES is relatively easier to backtest than VaR.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item ES需要更多资本，因为：
+            \begin{itemize}
+                \item ES考虑超过VaR的所有损失
+                \item ES是尾部损失的平均值
+                \item ES更保守
+            \end{itemize}
+            \item 例子：
+            \begin{itemize}
+                \item 如果95\% VaR是\$100
+                \item 95\% ES会更高
+                \item 因为它平均所有>\$100的损失
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item ES具有次可加性
+            \item VaR不具有次可加性
+            \item ES更好地处理投资组合风险
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item VaR只考虑阈值
+            \item ES考虑所有尾部损失
+            \item 只有ES考虑严重程度
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item ES更难回测
+            \item 需要更多数据
+            \item 验证更复杂
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握ES和VaR的区别：ES需要更多资本，具有次可加性，考虑尾部损失严重程度，但回测更困难
+}
+
+
+\begin{question}
+    Which of the following measures is most likely an example of a dynamic financial correlation measure?
+\end{question}
+
+\begin{choices}
+    \item Pairs trading
+    \item Value at risk (VaR)
+    \item Binomial default correlation model
+    \item Correlation copulas for collateralized debt obligations (CDOs)
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 配对交易是动态的，因为：
+            \begin{itemize}
+                \item 监控相关性随时间变化
+                \item 根据变化调整头寸
+                \item 响应市场条件
+            \end{itemize}
+            \item 关键特征：
+            \begin{itemize}
+                \item 实时监控
+                \item 自适应交易策略
+                \item 时变相关性
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item VaR通常是静态的
+            \item 使用固定时间窗口
+            \item 不适应变化
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 二项模型是静态的
+            \item 使用固定概率
+            \item 不捕捉时间变化
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item CDO copula是静态的
+            \item 使用固定相关性结构
+            \item 不适应市场变化
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握动态相关性度量：配对交易是动态相关性的例子，因为它实时监控相关性变化并调整策略
+}
+
+
+\begin{question}
+    A portfolio manager owns a portfolio of options on a non-dividend paying stock XYZ. The portfolio is made up of 18,000 deep in-the-money call options on XYZ and 45,000 deep out-of-the-money call options on XYZ. The portfolio also contains 22,000 forward contracts on XYZ. XYZ is trading at USD 95. If the volatility of XYZ is 28\% per year, which of the following amounts would be closest to the 1-day VaR of the portfolio at the 95 percent confidence level, assuming 252 trading days in a year?
+\end{question}
+
+\begin{choices}
+    \item USD 1,045
+    \item USD 104,500
+    \item USD 125,400
+    \item USD 145,600
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的VaR太低
+            \item 计算错误可能出现在delta近似上
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 步骤1：计算投资组合delta
+            \begin{itemize}
+                \item 深度实值期权：delta ≈ 1
+                \item 深度虚值期权：delta ≈ 0
+                \item 远期合约：delta = 1
+                \item 总delta = 18,000 × 1 + 45,000 × 0 + 22,000 × 1 = 40,000
+            \end{itemize}
+            \item 步骤2：计算1天VaR
+            \begin{itemize}
+                \item VaR = α × S × Δ × σ × √(1/T)
+                \item = 1.645 × 95 × 40,000 × 0.28 × √(1/252)
+                \item = 104,500
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的VaR太高
+            \item 计算错误可能出现在delta近似上
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的VaR太高
+            \item 计算错误可能出现在delta近似上
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握期权组合VaR的计算：使用delta-normal方法，考虑深度实值期权delta≈1，深度虚值期权delta≈0，远期delta=1
+}
+
+
+\begin{question}
+    The relationship of correlation risk to credit risk is an important area of concern for risk managers. Which of the following statements regarding default probabilities and default correlations is incorrect?
+\end{question}
+
+\begin{choices}
+    \item Creditors benefit by diversifying exposure across industries to lower the default correlations of debtors.
+    \item The default term structure increases with time to maturity for most investment grade bonds.
+    \item The probability of default is higher in the long-term time horizon for non-investment grade bonds.
+    \item For non-investment grade bonds, the probability of default is higher in the immediate time horizon.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述正确
+            \item 行业多元化减少相关性
+            \item 有助于管理信用风险
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述正确
+            \item 更长期限意味着更高违约风险
+            \item 期限结构通常向上倾斜
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 陈述错误
+            \item 非投资级债券：
+            \begin{itemize}
+                \item 短期违约风险高
+                \item 如果公司存活风险降低
+                \item "驼峰形"违约曲线
+            \end{itemize}
+            \item 正确陈述应该是：
+            \begin{itemize}
+                \item 即期违约风险高
+                \item 随时间推移风险降低
+                \item 如果公司存活初始期间
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述正确
+            \item 符合实际行为
+            \item 与市场观察一致
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握违约概率特征：非投资级债券短期违约风险高，随时间推移风险降低，投资级债券违约风险随期限增加
+}
+
+
+\begin{question}
+    The dependence structure between the returns of financial assets plays an important role in risk measurement. For liquid markets, which of the following statements is incorrect?
+\end{question}
+
+\begin{choices}
+    \item Correlation is valid measure of dependence between random variables for only certain types of return distributions.
+    \item Even if the return distributions of two assets have a correlation of zero, the returns of these assets are not necessarily independent.
+    \item Copulas make it possible to model marginal distributions and the dependence structure separately.
+    \item With short time horizons (3 months or less), correlation estimates are typically very stable.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述正确
+            \item 相关性只对以下情况有效：
+            \begin{itemize}
+                \item 线性关系
+                \item 椭圆分布
+                \item 不是所有分布
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述正确
+            \item 零相关不意味着独立
+            \item 可能存在非线性关系
+            \item 可能存在尾部依赖
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述正确
+            \item Copula允许：
+            \begin{itemize}
+                \item 分别建模边际分布
+                \item 分别建模依赖结构
+                \item 比相关性更灵活
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 陈述错误
+            \item 短期相关性：
+            \begin{itemize}
+                \item 非常波动
+                \item 频繁变化
+                \item 估计不稳定
+            \end{itemize}
+            \item 正确陈述应该是：
+            \begin{itemize}
+                \item 短期相关性估计不稳定
+                \item 需要更长时间窗口
+                \item 波动性高
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握依赖结构特征：相关性只对特定分布有效，零相关不意味着独立，Copula可分别建模边际和依赖结构，短期相关性估计不稳定
+}
+
+
+\begin{question}
+    On December 31, 2008, Portfolio A had a market value of \$4,500,000. The historical standard deviation of daily returns was 1.8\%. Assuming that Portfolio A is normally distributed, calculate the daily VAR(2.5\%) on a dollar basis and state its interpretation. Daily VAR(2.5\%) is equal to:
+\end{question}
+
+\begin{choices}
+    \item \$132,300, implying that daily portfolio losses will fall short of this amount 2.5\% of the time.
+    \item \$111,375, implying that daily portfolio losses will only exceed this amount 2.5\% of the time.
+    \item \$132,300, implying that daily portfolio losses will only exceed this amount 2.5\% of the time.
+    \item \$111,375, implying that daily portfolio losses will fall short of this amount 2.5\% of the time.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 解释错误
+            \item VaR是关于超过损失
+            \item 不是关于低于损失
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算错误
+            \item VaR = 1.96 × 0.018 × \$4,500,000
+            \item = \$132,300
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 步骤1：计算百分比VaR
+            \begin{itemize}
+                \item VaR(2.5\%) = z2.5\% × σ
+                \item = 1.96 × 0.018
+                \item = 0.03528 = 3.528\%
+            \end{itemize}
+            \item 步骤2：计算美元VaR
+            \begin{itemize}
+                \item VaR = 0.03528 × \$4,500,000
+                \item = \$132,300
+            \end{itemize}
+            \item 解释：
+            \begin{itemize}
+                \item 2.5\%的概率损失 > \$132,300
+                \item 97.5\%的概率损失 < \$132,300
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算和解释都错误
+            \item VaR金额错误
+            \item 解释错误
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握VaR计算和解释：VaR(2.5\%)表示有2.5\%的概率损失超过该金额，计算使用z值乘以标准差再乘以组合价值
+}
+
+
+
+\begin{question}
+    Michael Wang is a risk analyst who wants to model the dependence between asset returns using copulas and must convince his manager that this is the best approach. Which of the following statements are correct?
+
+    I. The dependence between the return distributions of portfolio assets is critical for risk measurement.
+
+    II. Correlation estimates often appear stable in periods of low market volatility and then become volatile in stressed market conditions. Risk measures calculated using correlations estimated over long horizons will therefore underestimate risk in stressed periods.
+
+    III. Pearson correlation is a linear measure of dependence between the return of two assets equal to the ratio of the covariance of the asset returns to the product of their volatilities.
+
+    IV. Using copulas, one can construct joint return distribution functions from marginal distribution functions in a way that allows for more general types of dependence structure of the asset returns.
+\end{question}
+
+\begin{choices}
+    \item I, II, and III
+    \item II and IV
+    \item I, II, III, and IV
+    \item I, III, and IV
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述II错误
+            \item 长期相关性可能高估或低估
+            \item 影响取决于投资组合定位
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述II错误
+            \item 陈述III正确
+            \item 缺少重要陈述
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 陈述II错误
+            \item 不是所有陈述都正确
+            \item 缺少关键信息
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 陈述I正确：
+            \begin{itemize}
+                \item 依赖关系对风险至关重要
+                \item 影响投资组合风险
+                \item 风险度量的关键
+            \end{itemize}
+            \item 陈述III正确：
+            \begin{itemize}
+                \item Pearson相关性是线性的
+                \item 基于协方差
+                \item 标准度量
+            \end{itemize}
+            \item 陈述IV正确：
+            \begin{itemize}
+                \item Copula允许灵活建模
+                \item 可以处理非线性依赖
+                \item 比相关性更一般
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握Copula和相关性：资产收益的依赖关系对风险度量至关重要，Pearson相关性是线性度量，Copula允许更一般的依赖结构
+}
+
+\begin{question}
+    Portfolios (X) and (Y) each have volatility of 30\%, but portfolio (Y) has a higher return and therefore its absolute VaR is lower; i.e., Absolute VaR = - return * T + deviate * volatility * $\sqrt{T}$. Which coherence property does this illustrate?
+\end{question}
+
+\begin{choices}
+    \item Monotonicity
+    \item Subadditivity
+    \item Positive Homogeneity
+    \item Translational invariance
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 单调性意味着：
+            \begin{itemize}
+                \item 更高收益 → 更低风险
+            \end{itemize}
+            \item 在这种情况下：
+            \begin{itemize}
+                \item 两个投资组合有相同波动率
+                \item 投资组合Y有更高收益
+                \item 因此VaR更低
+            \end{itemize}
+            \item 这证明了单调性，因为：
+            \begin{itemize}
+                \item 更好的投资组合(Y)风险更低
+                \item 与风险度量性质一致
+                \item 符合直觉
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 次可加性是关于：
+            \begin{itemize}
+                \item 和的风险 ≤ 风险的和
+                \item 不是关于收益
+                \item 这里没有证明
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 正齐次性是关于：
+            \begin{itemize}
+                \item 风险缩放
+                \item 不是关于收益
+                \item 这里没有证明
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 平移不变性是关于：
+            \begin{itemize}
+                \item 添加无风险资产
+                \item 不是关于收益
+                \item 这里没有证明
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握风险度量的一致性：单调性表示收益更高的组合风险更低，这是风险度量的基本性质
+}
+
+
+
+\begin{question}
+    An analyst at an investment bank is calculating the payoff of a correlation swap that is maturing. The notional amount of the correlation swap covers four stocks that are equally weighted. The analyst uses the realized pairwise correlations given below to calculate the correlation that will be applied to determine the payoff for the swap:
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            & \textbf{Stock A} & \textbf{Stock B} & \textbf{Stock C} & \textbf{Stock D} \\
+            \hline
+            \textbf{Stock A} & 1.0 & 0.5 & 0.7 & 0.6 \\
+            \textbf{Stock B} & 0.5 & 1.0 & 0.3 & 0.4 \\
+            \textbf{Stock C} & 0.7 & 0.3 & 1.0 & 0.8 \\
+            \textbf{Stock D} & 0.6 & 0.4 & 0.8 & 1.0 \\
+            \hline
+        \end{tabular}
+        \caption{股票相关系数矩阵}
+    \end{table}
+    What is the average realized correlation?
+\end{question}
+
+\begin{choices}
+    \item 0.35
+    \item 0.70
+    \item 0.52
+    \item 0.78
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的平均值太低
+            \item 计算错误可能出现在：
+            \begin{itemize}
+                \item 没有计算所有配对
+                \item 公式应用错误
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item 步骤1：识别所有配对相关性
+            \begin{itemize}
+                \item ρ(A,B) = 0.5
+                \item ρ(A,C) = 0.7
+                \item ρ(A,D) = 0.6
+                \item ρ(B,C) = 0.3
+                \item ρ(B,D) = 0.4
+                \item ρ(C,D) = 0.8
+            \end{itemize}
+            \item 步骤2：计算平均值
+            \begin{itemize}
+                \item 平均相关性 = (0.5 + 0.7 + 0.6 + 0.3 + 0.4 + 0.8) / 6
+                \item = 4.2 / 6 = 0.70
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的平均值不正确
+            \item 计算错误可能出现在平均值计算上
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 计算的平均值太高
+            \item 计算错误可能出现在平均值计算上
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握相关性互换计算：平均实现相关性是所有配对相关性的算术平均值，用于计算互换支付
+}
+
+
+\begin{question}
+    Beta Capital Inc. (Beta), a wealth management company, currently manages an alternative investment fund, a growth equity fund, and individual assets that include Assets Z. The two funds are benchmarked against the same custom index. The alternative investment fund has allocated equal investments in the senior tranche and the mezzanine tranche of an MBS originated by Bank Alpha and issued by an SPV. Bank Alpha retains 6\% net economic interest in the securitization for the life of the transaction. To hedge its position, Beta purchased CDS on the MBS from Bank Gamma. Both Bank Alpha and Bank Gamma rely on retail deposits to finance their lending activities. Beta assesses its investment performance and capital budgeting using RAROC at the 99\% Confidence level. Beta's CIO expects market volatility and the correlation between assets in the custom index to increase over the coming year. The CIO then decides to execute the following two strategies:
+    ·Enter into a payer volatility swap on Asset Z, where the prespecified fixed volatility is the current volatility of Asset Z.
+    ·Take a long position in a correlation swap on the market index, with Beta as the fixed correlation payer.
+
+    Assuming the CIO's expectations are realized, which of the following is correct?
+\end{question}
+
+\begin{choices}
+    \item Assuming no low-risk anomaly, Beta would generate a gain from the volatility swap if the volatility of Asset Z decreases.
+    \item If the realized correlation in the correlation swap is higher than the fixed correlation, Beta would generate a gain on the correlation swap.
+    \item An increase in the default correlation between Bank Alpha and Bank Gamma, all else held constant, would lead to a decrease in the value of Beta's CDS position.
+    \item Holding all else constant, Beta's estimated after-tax RAROC would not change if it adopts a 95-Confidence level compared to a 99-Confidence level for its capital budgeting.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item Beta是波动率互换的支付方
+            \item 在波动率上升时获利
+            \item 不是在波动率下降时
+        \end{itemize}
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 此选项正确，因为：
+        \begin{itemize}
+            \item Beta是固定相关性支付方
+            \item 相关性互换多头头寸
+            \item 在实现相关性 > 固定相关性时获利
+            \item CIO预期相关性增加
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 更高的违约相关性
+            \item 增加CDS价值
+            \item 不是减少
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项错误，因为：
+        \begin{itemize}
+            \item 更低的置信水平
+            \item 改变资本要求
+            \item 影响RAROC
+        \end{itemize}
+    \end{itemize}
+\end{explanation}
+
+\checklist{
+    掌握互换交易策略：波动率互换支付方在波动率上升时获利，相关性互换多头在实现相关性高于固定相关性时获利
+}
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\section{考点2:相关性的经验特性}
+\setcounter{question}{0}
+
+\begin{question}
+    A risk manager uses the past 500 months of correlation data from the S\&P 500 Index to estimate the long-run mean correlation of common stocks and the mean reversion rate. Based on historical data, the long-run mean correlation of S\&P 500 stocks was 35\%, and the regression output estimates the following regression relationship: Y = 0.225 – 0.80X. Suppose that in March 2023, the average monthly correlation for all S\&P 500 stocks was 40\%. What is the expected correlation for April 2023 assuming the mean reversion rate estimated in the regression analysis?
+\end{question}
+
+\begin{choices}
+    \item 35\%
+    \item 36\%
+    \item 38\%
+    \item 40\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 长期平均相关和2023年3月相关相比有-5\%的差异（35\% - 40\% = -5\%）。
+        回归关系中逆β系数表示平均回归率为80\%。
+        因此，2023年4月的预期相关度为36\%：
+        St = 0.80(35\% - 40\%) + 0.40 = 0.36
+
+        对于同一样本，一阶自相关系数为20\%。平均回归率（根据-0.80的β系数为80\%）和一阶自相关系率之和始终等于100\%。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解相关性均值回归：当前相关性会向长期均值回归
+}
+
+
+\begin{question}
+    Suppose a risk manager examines the correlations and correlation volatility of stocks in the
+    S\&P 500 Index for the period beginning in 1980 and ending in 2020. Expansionary periods are defined as periods where the U.S. gross domestic product (GDP) growth rate is greater than 3.5\%, periods are normal when the GDP growth rates are between 0 and 3.5\%, and recessions are periods with two consecutive negative GDP growth rates. Which of the following statements characterizes correlation and correlation volatilities for this sample? The risk manager will most likely find that
+\end{question}
+
+\begin{choices}
+    \item correlations and correlation volatility are highest for recessions.
+    \item correlations and correlation volatility are highest for expansionary periods.
+    \item correlations are highest for normal periods, and correlation volatility is highest for recessions.
+    \item correlations are highest for recessions, and correlation volatility is highest for normal periods.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然衰退期相关性最高，但相关性波动性并非最高。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 扩张期相关性和波动性均最低。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 相关性最高出现在衰退期，而非正常期。
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 1980年至2020年标普500指数股票月度相关性的研究发现，衰退期间相关性最高，正常时期相关性波动性最高。经济衰退和正常时期的相关波动率分别为82.5\%和85.2\%。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解经济周期对相关性的影响：衰退期相关性高，正常期波动大
+}
+
+
+
+\begin{question}
+    Suppose mean reversion exists for a variable with a value of 35 at time period t – 1.
+    Assume that the long-run mean value for this variable is 45 and ignore the stochastic term
+    included in most regressions of financial data. What is the expected change in value of the
+    variable for the next period if the mean reversion rate is 0.5.
+\end{question}
+
+\begin{choices}
+    \item -10
+    \item -5
+    \item 5
+    \item 10
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这是当前值与长期均值的总差异，而非预期变化。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 计算错误，没有正确应用均值回归率。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 均值回归率α表示变量回归到均值的速度。如果均值回归率是0.5，当前值与长期均值的差异是10（= 45 - 35），则下一期的预期变化是5（即0.5 × 10 = 5）。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这是当前值与长期均值的总差异，而非预期变化。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解均值回归：变量会以一定速率向长期均值回归
+}
+
+\begin{question}
+    In estimating correlation matrices, risk managers often assume an underlying distribution
+    for the correlations. Which of the following statements most accurately describes the best-fit
+    distributions for equity correlation distributions, bond correlation distributions, and default
+    probability correlation distributions? The best-fit distribution for the equity, bond, and
+    default probability correlation distributions, respectively are:
+\end{question}
+
+\begin{choices}
+    \item lognormal, generalized extreme value, and normal.
+    \item Johnson SB, generalized extreme value, and Johnson SB.
+    \item beta, normal, and beta.
+    \item Johnson SB, normal, and beta.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 对数正态分布不适合描述股权相关性分布，正态分布不适合描述违约概率相关性分布。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 股权相关性分布和违约概率相关性分布最适合用Johnson SB分布描述，债券相关性分布最适合用广义极值分布描述。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Beta分布不适合描述股权相关性分布，正态分布不适合描述债券相关性分布。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 正态分布不适合描述债券相关性分布，Beta分布不适合描述违约概率相关性分布。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    掌握相关性分布：股权和违约用Johnson SB，债券用极值分布
+}
+
+\begin{question}
+    A risk manager uses the past 500 months of correlation data from the S\&P 500 Index to estimate the long-run mean correlation of common stocks and the mean reversion rate. Based on historical data, the long-run mean correlation of S\&P 500 stocks was 35\%, and the regression output estimates the following regression relationship: Y = 0.225 – 0.80X. Suppose that in March 2023, the average monthly correlation for all S\&P 500 stocks was 40\%. What is the expected correlation for April 2023 assuming the mean reversion rate estimated in the regression analysis?
+\end{question}
+
+\begin{choices}
+    \item 35\%
+    \item 36\%
+    \item 38\%
+    \item 40\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这是长期均值，而非考虑了均值回归后的预期值。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 长期平均相关和2023年3月相关相比有-5\%的差异（35\% - 40\% = -5\%）。
+        回归关系中逆β系数表示平均回归率为80\%。
+        因此，2023年4月的预期相关度为36\%：
+        St = 0.80(35\% - 40\%) + 0.40 = 0.36
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 计算错误，没有正确应用均值回归率。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这是当前值，而非考虑了均值回归后的预期值。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解相关性均值回归：当前值会以一定速率向长期均值回归
+}
+
+
+\newpage
+
+\section{考点3:财务相关性建模}
+\setcounter{question}{0}
+\begin{question}
+    Suppose a risk manager creates a copula function, C, defined by the equation:
+    \begin{equation*}
+        C\left[ G_1(u_1), \ldots, G_n(u_n) \right] = F_n \left[ F_1^{-1}(G_1(u_1)), \ldots, F_n^{-1}(G_n(u_n)); \rho_F \right]
+        \end{equation*}
+
+    Which of the following statements does not accurately describe this copula function?
+\end{question}
+
+\begin{choices}
+    \item Gi (ui) are standard normal univariate distributions.
+    \item Fn is the joint cumulative distribution function.
+    \item F1-1 is the inverse function of Fn that is used in the mapping process.
+    \item ρF is the correlation matrix structure of the joint cumulative function Fn.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item Gi(ui)是边际分布，不具有标准正态分布的特性。它们可以是任何形式的分布，不一定是标准正态分布。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item Fn确实是联合累积分布函数，这是正确的描述。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item F1-1确实是用于映射过程的逆函数，这是正确的描述。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item ρF确实是联合累积分布函数Fn的相关矩阵结构，这是正确的描述。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解Copula函数：边际分布不一定是标准正态分布
+}
+
+
+\begin{question}
+    In estimating correlation matrices, risk managers often assume an underlying distribution
+    for the correlations. Which of the following statements most accurately describes the best-fit
+    distributions for stock index correlation distributions, commodity correlation distributions, and credit spread correlation distributions? The best-fit distribution for the stock index, commodity, and credit spread correlation distributions, respectively are:
+\end{question}
+
+\begin{choices}
+    \item lognormal, generalized extreme value, and normal.
+    \item Johnson SB, generalized extreme value, and Johnson SB.
+    \item beta, normal, and beta.
+    \item Johnson SB, normal, and beta.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 对数正态分布不适合描述股指相关性分布，正态分布不适合描述信用利差相关性分布。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 股指相关性分布和信用利差相关性分布最适合用Johnson SB分布描述，商品相关性分布最适合用广义极值分布描述。这是因为：
+        \begin{itemize}
+            \item Johnson SB分布能够很好地捕捉股指和信用利差相关性的非对称性
+            \item 广义极值分布适合描述商品相关性的尾部风险
+        \end{itemize}
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Beta分布不适合描述股指相关性分布，正态分布不适合描述商品相关性分布。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 正态分布不适合描述商品相关性分布，Beta分布不适合描述信用利差相关性分布。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    掌握相关性分布：股指和信用用Johnson SB，商品用极值分布
+}
+
+
+\begin{question}
+    Which of the following statements best describes a Student's t copula?
+\end{question}
+
+\begin{choices}
+    \item A major disadvantage of a Student's t copula model is the transformation of the original
+    marginal distributions in order to define the correlation matrix.
+    \item The mapping of each variable to the new distribution is done by defining a mathematical
+    relationship between marginal and unknown distributions.
+    \item A Student's t copula maps the marginal distribution of each variable to the standard t
+    distribution.
+    \item A Student's t copula is seldom used in financial models because ordinal numbers are required.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 转换边际分布不是Student's t copula的主要缺点，这是所有copula模型的共同特征。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 这种描述过于笼统，没有具体说明Student's t copula的映射特点。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item Student's t copula通过将每个变量的边际分布按百分位数映射到标准t分布来构建。这种映射方式能够更好地捕捉金融数据的尾部相关性。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item Student's t copula在金融模型中经常使用，特别是在需要捕捉尾部相关性的情况下。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解Student's t copula：将边际分布映射到标准t分布
+}
+
+
+\begin{question}
+    Which of the following statements about correlation and copula are correct? 
+    
+    Ⅰ. Copula allows us to model the dependence structure between variables independently of their
+    marginal distributions. 
+    
+    Ⅱ. Linear transformation of variables preserves their correlation
+    structure. 
+    
+    Ⅲ. Correlation can be effectively used to measure the relationship between variables with
+    infinite variance. 
+    
+    Ⅳ. Correlation is an appropriate measure of dependence when the variables follow
+    a multivariate normal distribution.
+\end{question}
+
+\begin{choices}
+    \item I and IV only.
+    \item II, III, and IV only.
+    \item I and III only.
+    \item II and IV only.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item I是正确的。Copula方法允许我们独立于边际分布来建模变量之间的依赖结构。
+        IV也是正确的。当变量服从多元正态分布时，相关性是衡量依赖关系的合适指标。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item II是错误的。变量转换可能会改变相关性结构，特别是非线性转换。
+        III是错误的。相关性要求变量具有有限方差，否则无法定义。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item III是错误的。相关性不能用于衡量具有无限方差的变量之间的关系。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item II是错误的。变量转换可能会改变相关性结构。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解Copula和相关性：Copula可独立建模依赖结构，相关性要求有限方差
+}
+
+
+\begin{question}
+    A Gaussian copula is constructed to estimate the joint default probability of two assets
+    within a one-year time period. Which of the following statements regarding this type of copula is incorrect?
+    
+\end{question}
+
+\begin{choices}
+    \item This copula requires that the respective cumulative default probabilities are mapped to a
+    bivariate standard normal distribution.
+    \item This copula defines the relationship between the variables using a default correlation
+    matrix, ρM
+    \item The term maps each individual cumulative default probability for asset i for time period ton
+    a percentile-to-percentile basis.
+    \item This copula is a common approach used in finance to estimate joint default probabilities
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item Because there are only two companies, only a single correlation coefficient is
+        required and not a correlation matrix, ρM.因为只有两个公司，所以只需要一个相关系数，而不需要相
+        关矩阵ρM。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{explanation}
+\checklist{}
+
+\begin{question}
+    A risk manager wants to study the behavior of a portfolio that depends on only two economic
+    variables, X and Y. X is uniformly distributed between 5 and 9, and Y is uniformly distributed
+    between 6 and 10. The risk manager wants to model their joint distribution, H(X,Y). The theorem
+    of Sklar proves that, for any joint distribution H, there is a copula C such that:
+\end{question}
+
+\begin{choices}
+    \item H(4X + 5, 4Y + 6) is equal to C[X,Y].
+    \item H(X,Y) is equal to C[u,d] where u is the density marginal distribution of X and d is the
+    density marginal distribution of Y.
+    \item H(X,Y) is equal to C[(X – 5)/4, (Y – 6)/4].
+    \item H[(X - 5)/4, (Y- 6)/4] is equal to C(X,Y).
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 变换后的变量范围超出了[0,1]区间，不符合copula的定义域要求。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item copula使用的是累积分布函数，而不是密度函数。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 根据Sklar定理，对于连续边际分布Fx(x) = u和Fy(y) = v，联合分布F(x,y)可以表示为F(x,y) = C(u,v)。
+        在这个例子中：
+        \begin{itemize}
+            \item u = (X – 5)/4（X的累积分布函数，X在5到9之间均匀分布）
+            \item v = (Y – 6)/4（Y的累积分布函数，Y在6到10之间均匀分布）
+        \end{itemize}
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 变换顺序错误，应该是先计算累积分布函数，再应用copula。
+    \end{itemize}
+\end{explanation}
+\checklist{
+    理解Sklar定理：联合分布可通过copula和边际分布表示
+}
+
+\newpage
+
+
+
+
+\end{document}

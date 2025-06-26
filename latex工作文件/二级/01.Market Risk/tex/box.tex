@@ -1,0 +1,180 @@
+%定义知识点拓展盒子knowledgebox----------------------------------
+\newtcolorbox{knowledgebox}[2][]
+  {enhanced,
+    before skip=2mm,
+    after skip=2mm,
+    breakable,
+    colback=c4,
+    colframe=c1,%边框颜色
+    boxrule=0.5mm,
+    attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
+    fonttitle=\bfseries,
+    % varwidth boxed title*=-3cm,
+	boxed title style={frame code={
+                    \path[fill=c1]
+                    ([yshift=-1mm,xshift=-1mm]frame.north west)
+                    arc[start angle=0,end angle=180,radius=1mm]
+                    ([yshift=-1mm,xshift=1mm]frame.north east)
+                    arc[start angle=180,end angle=0,radius=1mm];
+                    \path[left color=c1,right color=c1,
+                        middle color=c1]
+                    ([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+                    [rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+                    -- (frame.south east) -- (frame.south west)
+                    -- ([xshift=-1mm,yshift=-1mm]frame.north west)
+                    [sharp corners]-- cycle;
+                },interior engine=empty,
+        },
+    title=\large \( \textbf{解释说明： #2} \),#1}
+
+%定义解题点拨盒子skillbox----------------------------------
+\newtcolorbox{skillbox}[2][]
+  {enhanced,
+  breakable,
+  sharp corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=c4,
+  colframe=c1,
+  boxrule=0.5mm,
+  fonttitle=\bfseries,
+  coltitle=white,
+  boxed title style={
+    sharp corners,
+    size=small,
+    colback=c1,
+    colframe=c1,
+  },
+  title=\large \( \textbf{解题点拨： #2} \),
+  #1}
+
+
+
+%定义考查方式盒子pointbox----------------------------------
+\newtcolorbox{pointbox}[2][]
+  {enhanced,
+  breakable,
+  colback = c4,
+  frame hidden,
+  borderline west = {2pt}{0pt}{c1},
+  coltitle = c0,
+  fonttitle = \bfseries\sffamily,
+  boxrule = 0sp,
+  sharp corners,
+  detach title,
+  before upper = \tcbtitle\par\smallskip,
+  description font = \mdseries,
+  separator sign none,
+  segmentation style={solid, c1},
+	title=\large \( \textbf{考查方式： #2} \),#1}
+
+% 备用盒子1boxa----------------------------------
+\makeatletter
+\newtcolorbox{boxa}[1]{%
+    enhanced,
+    breakable,
+    colback=c4,
+    colframe=c0,
+    attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+    fonttitle=\bfseries,
+    title={\large \( \textbf{备用盒子： #1} \)},
+    boxed title size=title,
+    boxed title style={%
+            sharp corners,
+            rounded corners=northwest,
+            colback=c0,
+            boxrule=0pt,
+        },
+    underlay boxed title={%
+            \path[fill=c0] (title.south west)--(title.south east)
+            to[out=0, in=180] ([xshift=5mm]title.east)--
+            (title.center-|frame.east)
+            [rounded corners=\kvtcb@arc] |-
+            (frame.north) -| cycle;
+        }
+}
+\makeatletter
+
+%例题盒子定义example----------------------------------
+\newtcolorbox{example}[1]{
+    colback = c4,
+    breakable,
+    colframe = c1,
+    coltitle = c0,
+    title={\large \( \textbf{Example： #1} \)},
+    boxrule = 1pt,
+    sharp corners,
+    detach title,
+    before upper=\tcbtitle\par\smallskip,
+    fonttitle = \bfseries,
+    description font = \mdseries
+}
+
+%定义注释盒子note----------------------------------
+\newtcolorbox{note}[1][]{%
+    enhanced jigsaw,
+    colback=c4,
+    colframe=c1,
+    size=small,
+    boxrule=1pt,
+    title=\textbf{Note},
+    halign title=flush center,
+    coltitle=black,
+    breakable,
+    drop shadow=c2,
+    attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+    minipage boxed title=1.5cm,
+    boxed title style={%
+        colback=white,
+        size=fbox,
+        boxrule=1pt,
+        boxsep=2pt,
+        underlay={%
+            \coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+            \coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+            \begin{scope}
+                \clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+                \filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+            \end{scope}
+            \begin{scope}[c1]
+                \fill (dotA) circle (2pt);
+                \fill (dotB) circle (2pt);
+            \end{scope}
+        },
+        },
+        #1,
+}
+
+%定义考点习题标题及分割线\et----------------------------------
+\newcommand{\et}[0]{
+  \color{c1}
+  \subsubsection*{\large 考点习题}
+  \hrule
+  \vspace{1em}
+  \color{black}
+}
+
+%初始盒子1----------------------------------------
+\newtcolorbox{warningbox}{
+	colback=green!10,
+	colframe=olive!50!black,
+	leftrule=0.5mm,
+	rightrule=0mm,
+	toprule=0mm,
+	bottomrule=0mm,
+	arc=2pt,
+	outer arc=2pt
+}
+
+% 初始盒子2：定义定理框样式------------------------------
+\newtcolorbox{theorembox}{
+	colback=gray!10,
+	colframe=olive!50!black,
+    leftrule=0.5mm,
+    rightrule=0mm,
+    toprule=0mm,
+    bottomrule=0mm,
+	arc=2pt,
+	outer arc=2pt
+}

@@ -1,0 +1,208 @@
+\usepackage{ctex}
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{left=0.5in, right=0.5in, top=0.5in, bottom=0.5in}
+\usepackage{titlesec}
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath} % 导入amsmath以使用Bmatrix环境
+
+\usepackage{setspace}
+\usepackage{geometry}%调用页面元素尺寸设置宏包
+\usepackage{fancyhdr}%调用页面样式设置宏包
+\pagestyle{fancy}%使用fancy页面样式，与上一个命令紧跟着
+\usepackage{lastpage}%调用末页标签宏包
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{colortbl}
+\usepackage{dashbox}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ruby}  % 引入 ruby 宏包
+\usepackage{tikz}  % 用于绘制图形
+%\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{booktabs}  % 用于创建漂亮的表格，支持三线表等
+\usepackage{setspace}  % 调整文档行距
+\usepackage{amsmath}   % 提供数学公式排版支持
+\usepackage{stfloats}  % 允许在双栏文档中使用跨页的浮动对象
+\usepackage{adjustbox}
+\usepackage{graphicx}  % 支持插入图片
+\usepackage{datetime}  % 提供日期和时间格式化
+\usepackage{fancyhdr}  % 自定义页眉页脚 
+\usepackage{caption}   % 改进浮动体标题的格式,提供\captionof命令
+\usepackage{array}     % 提供更多的表格列格式选项
+\usepackage{float}     % 提供浮动体排版控制
+\usepackage{makecell}  % 允许表格中的单元格内换行
+\usepackage{hyperref}  % 创建超链接，使文档可交互
+\usepackage{multicol}  % 允许文档分为多栏
+\usepackage{titlesec}  % 用于自定义章节标题的样式
+\usepackage[ruled,linesnumbered]{algorithm2e}  % 引入算法环境宏包
+\usepackage{ifthen}    %这个宏包提供逻辑判断命令
+\usepackage{bm} %粗体数学符号的支持
+\usepackage{marginnote}
+\usepackage{footnote}
+\usepackage{mdframed}
+\usepackage{multirow}
+\setlength{\parindent}{0pt}
+\usepackage{tikz}  % 用于绘制图形
+\usetikzlibrary{shapes.geometric,calc,arrows,shadows.blur}
+
+% 定义新的列类型用于自动换行
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usetikzlibrary{positioning}
+%设置主要字体为TimesNew Roman
+\setmainfont{Times New Roman} 
+% 为章节标题定义新字体 Times New Roman
+\newfontfamily\sectionef{Times New Roman} 
+% 为中文章节标题定义新的楷书字体
+\newCJKfontfamily\sectioncf{heiti}
+\usepackage{makeidx} % 用于索引
+\usepackage{tocloft}        % 用于自定义目录格式
+\usepackage{hyperref}       % 用于创建可点击的链接
+\usepackage{xeCJK}         % 用于中文支持
+\usepackage{tcolorbox} 
+\tcbuselibrary{most}
+% 设置tcolorbox的样式
+\usepackage{forest}
+
+\usepackage{tabularx}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xeCJK}
+\usepackage{tikz}
+
+
+
+\usetikzlibrary{shapes,arrows,positioning}
+\usetikzlibrary{shapes, arrows.meta, positioning}
+\usetikzlibrary{arrows.meta, fit}
+
+
+
+%颜色定义，c0-c4：由深到浅----------------------------
+\definecolor{c0}{HTML}{647382}
+\definecolor{c1}{HTML}{9AA6B2}
+\definecolor{c2}{HTML}{BCCCDC}
+\definecolor{c3}{HTML}{D9EAFD}
+\definecolor{c4}{HTML}{F8FAFC}
+
+%导入盒子定义-----------------------------------------
+\input{tex/box.tex}
+%----------------------------------------------------
+\newcommand{\view}[3][评论]{%
+	\begin{compactdesc}
+		\item [#1\ifx\relax#2\relax\else (#2)\fi.] #3
+	\end{compactdesc}
+}
+
+
+\usetikzlibrary{mindmap,trees,arrows.meta}
+\usetikzlibrary{shapes.misc}  % 为了使用 cross out 样式
+\tcbset{
+	%enhanced,
+	boxrule=0pt, % 边框宽度
+	left=3mm, right=3mm, top=3mm, bottom=3mm, % 内边距
+	%	width=\textwidth
+}
+
+%启用下面三行，可将图、表、参考文献的中文题注和标题变为英文
+\renewcommand{\refname}{References}
+\captionsetup[figure]{name=fig,labelsep=colon}
+\captionsetup[table]{name=table,labelsep=colon}
+
+\setlist[itemize]{itemsep=\parsep,parsep=\parskip,topsep=\parskip}
+\setlist[enumerate]{itemsep=\parsep,parsep=\parskip,topsep=\parskip}
+
+%习题----------------------------------------------------------
+% 定义习题环境
+\newcounter{exercise}
+\newenvironment{exercise}[1][]{\refstepcounter{exercise}\par\medskip
+	\noindent 
+  \textbf{习题\theexercise. #1} \rmfamily\nopagebreak[4]}{\medskip}
+
+% 定义选项环境
+\newenvironment{choices}{
+	\begin{enumerate}[label=\Alph*.]
+	}{\end{enumerate}}
+
+% 定义答案环境
+\newenvironment{answer}{
+	\noindent\textbf{答案：}}{}
+
+% 定义解析环境
+\newenvironment{solution}{
+	\noindent\textbf{解析：}}{}
+
+%习题----------------------------------------------------------
+
+
+\hypersetup{
+	colorlinks=false,     % 不使用颜色
+	pdfborder={0 0 0},   % 设置边框宽度为0
+	hidelinks            % 完全隐藏链接标记
+}
+
+
+\renewcommand{\contentsname}{\huge 考点目录}
+
+\makeatletter
+% 定义新命令用于标记PE1题目
+\newcommand{\peOneNumber}[1]{%
+	{\normalsize \colorbox{black!70}{\textcolor{white}{\textbf{PE1.#1}}}}%    % 在题目旁显示编号
+	\addtocontents{peOne}{PE1.#1 \dotfill \thepage\par}%
+}
+
+% 生成索引的命令
+\newcommand{\listofpeOne}{%
+	\thispagestyle{plain}%    % 移除当前页的页眉页脚
+	{\huge \textbf{PE1题目索引}}\par
+	\@starttoc{peOne}%
+}
+\makeatother
+
+\makeatletter
+% 定义新命令用于标记PE1题目
+\newcommand{\peTwoNumber}[1]{%
+	{\normalsize \colorbox{black!70}{\textcolor{white}{\textbf{PE2.#1}}}}%    % 在题目旁显示编号
+	\addtocontents{peTwo}{PE2.#1 \dotfill \thepage\par}%
+}
+
+% 生成索引的命令
+\newcommand{\listofpeTwo}{%
+	\thispagestyle{plain}%    % 移除当前页的页眉页脚
+	{\huge \textbf{PE2题目索引}}\par
+	\@starttoc{peTwo}%
+}
+\makeatother
+
+\makeatletter
+% 定义新命令用于标记PE1题目
+\newcommand{\peThreeNumber}[1]{%
+	{\normalsize \colorbox{black!70}{\textcolor{white}{\textbf{PE3.#1}}}}%    % 在题目旁显示编号
+	\addtocontents{peThree}{PE3.#1 \dotfill \thepage\par}%
+}
+
+% 生成索引的命令
+\newcommand{\listofpeThree}{%
+	\thispagestyle{plain}%    % 移除当前页的页眉页脚
+	{\huge \textbf{PE3题目索引}}\par
+	\@starttoc{peThree}%
+}
+\makeatother
+
+\usepackage{fix-cm}  % 允许任意大小的Computer Modern字体
+\renewcommand{\abstractname}{说明}
+% 在导言区添加以下命令来重新定义 subsection 的格式
+\renewcommand{\thesubsection}{考点\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+\usepackage{tocloft}
+\setlength{\cftsecnumwidth}{2em}  % section编号的宽度
+\setlength{\cftsubsecnumwidth}{4em}  % subsection编号的宽度
+\setlength{\cftsubsubsecnumwidth}{2em}  % subsubsection编号的宽度
+
+

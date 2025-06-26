@@ -1,0 +1,972 @@
+\documentclass{article}
+\usepackage{fontspec} 
+\usepackage{unicode-math}  % 先加载 unicode-math
+\setmathfont{XITS Math}    % 再设置数学字体
+%\usepackage[UTF8]{ctex} % 如果需要支持中文
+
+\usepackage{anyfontsize}
+\usepackage{xeCJK} % XeLaTeX 推荐 xeCJK，LuaLaTeX 也可用   
+\usepackage{setspace}  % 添加这个包
+\setstretch{1.2}      % 设置行距为1.5倍
+
+\setCJKmainfont[
+    Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,  % 改用 Windows 字体目录
+    UprightFont = {SourceHanSansCN-Light1.otf},  % 使用可变字体
+    BoldFont = {SourceHanSansCN-Medium1.otf},
+    LetterSpace = 2.0,  % 增加字间距
+    WordSpace = 1.2,    % 增加词间距
+    %BoldFeatures = {RawFeature={+wght=900}},
+    %Scale=1
+]{SourceHanSansCN}
+
+
+\setmainfont[
+    Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,  % 改用 Windows 字体目录
+    UprightFont = {SourceHanSansCN-Light1.otf},  % 使用可变字体
+    BoldFont = {SourceHanSansCN-Medium1.otf},
+    LetterSpace = 2.0,  % 增加字间距
+    WordSpace = 1.2,    % 增加词间距
+    %BoldFeatures = {RawFeature={+wght=900}},
+    %Scale=1
+]{SourceHanSansCN}
+
+%\setCJKmainfont[
+ %   Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,
+ %   UprightFont = {SourceHanSerifCN-Light-5.otf},
+ %   BoldFont = {SourceHanSerifCN-Medium-6.otf},
+%    Scale=1
+%]{SourceHanSerifCN}
+
+%\setmainfont{SourceHanSerif}  % 设置英文字体
+
+% 处理冲突的命令
+\let\oldbackepsilon\backepsilon
+\let\backepsilon\relax
+\let\oldeth\eth
+\let\eth\relax
+\let\olddigamma\digamma
+\let\digamma\relax
+\usepackage{float}
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:预警指标}
+\setcounter{question}{0}
+
+\begin{question}
+    Firms generally use a stoplight system in representing and communicating their performance against the thresholds of their EWIs. A green indicator means the measure is within normal bounds; An amber indicator means the measure should be investigated further; A red indicator should be a source for significant concern and may warrant an immediate response. Which of the following is the most suitable way to start a calibration of these thresholds?
+\end{question}
+
+\begin{choices}
+    \item The boundaries for which an EWI moves from green to yellow should be narrow enough
+    \item Historical data can inform the calibration of thresholds
+    \item Practitioners observe that this stoplight system is effective because it can be set very wide
+    \item The threshold should not be subject to back-testing
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 从绿色到黄色的边界不应过窄
+        \item 过窄会导致过度预警
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 历史数据可以指导阈值校准
+        \item 这是最合适的起点
+        \item 有助于设定合理的阈值
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 信号灯系统不应设置过宽
+        \item 过宽会降低预警效果
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 阈值应该进行回测
+        \item 回测有助于验证阈值有效性
+    \end{itemize}
+\end{explanation}
+
+\checklist{预警指标阈值校准}
+
+
+\begin{question}
+    The framework of Early Warning Indicators can be summarized as M.E.R.I.T" and "M" means "Measures". Which of the following is true about a good Early Warning Indicator (EWI) measures?
+\end{question}
+
+\begin{choices}
+    \item Forward-looking and sharp measures
+    \item Measures are not linked from the escalation process
+    \item Leading indicators provide Information and signal potential stress after the occurrence of an actual event
+    \item Banks should consider only internal but not external measures
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 好的预警指标应具有前瞻性
+        \item 指标应具有敏锐性
+        \item 能及时反映潜在风险
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 指标应与升级流程相关联
+        \item 升级流程是预警指标的重要组成部分
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 领先指标应在事件发生前提供信息
+        \item 而不是在事件发生后
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 银行应同时考虑内部和外部指标
+        \item 不应仅关注内部指标
+    \end{itemize}
+\end{explanation}
+
+\checklist{预警指标特征分析}
+
+
+\begin{question}
+    Venkat explains that firms often use a stoplight system to manage their thresholds: "Firms generally use a stoplight system in representing and communicating their performance against the thresholds of their EWIs. A green indicator means that the measure is within normal bounds. A measure that is classified as amber according to the threshold framework should be investigated further while a red indicator should be a source for significant concern and may warrant an immediate response." Which of the following is the BEST way to start the exercise of calibration of these thresholds?
+\end{question}
+
+\begin{choices}
+    \item Thresholds are ultimately subjective
+    \item Historical data can inform the calibration of thresholds
+    \item Practitioners observe that this stoplight system is obsolete and ineffective such that thresholds are moot
+    \item The firm should rely on the specific regulatory instructions, in particular BCBS 2008, for calibration of the thresholds
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 阈值不应完全主观
+        \item 需要客观依据支持
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 历史数据可以指导阈值校准
+        \item 这是最合适的起点
+        \item 有助于设定合理的阈值
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 信号灯系统并非过时无效
+        \item 阈值仍然很重要
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 不应仅依赖监管指引
+        \item 需要结合实际情况
+    \end{itemize}
+\end{explanation}
+
+\checklist{预警指标阈值校准}
+
+
+
+
+\newpage
+
+
+
+\section{考点2:日内流动性风险管理}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Which of the following factors is least likely to increase a bank treasurer's challenge in managing cash in order to stay within its intraday credit limits?
+\end{question}
+
+\begin{choices}
+    \item Cash flow volatility
+    \item Credit quality of assets
+    \item Insufficient real-time data
+    \item Securities price volatility
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 现金流波动会增加管理难度
+        \item 需要更频繁地调整头寸
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 银行资产信用质量很高
+        \item 包括现金余额和流动资产
+        \item 这些资产几乎没有违约风险
+        \item 不会增加日间流动性管理难度
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 实时数据不足会增加管理难度
+        \item 影响决策的及时性
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 证券价格波动会增加管理难度
+        \item 影响资产估值和流动性
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性管理分析}
+
+
+\begin{question}
+    In the context of characteristics of an effective governance structure in controlling intraday liquidity within a bank, there is emphasis on expertise in which line of defense?
+\end{question}
+
+\begin{choices}
+    \item Treasury
+    \item Internal audit
+    \item Information technology
+    \item Corporate risk management
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 资金部是第一道防线
+        \item 负责日常运营管理
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 内部审计是第三道防线
+        \item 负责独立监督
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 信息技术不是防线
+        \item 是支持性功能
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 企业风险管理是第二道防线
+        \item 强调专业知识和技能
+        \item 负责风险监控和管理
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行治理结构分析}
+
+
+\begin{question}
+    All risk management frameworks start with a governance structure that defines the roles and responsibilities of various bank employees and committees in overseeing risk-related activities. Effective governance includes the oversight of intraday liquidity risk. Which of the following statements is true about intraday liquidity risk management?
+\end{question}
+
+\begin{choices}
+    \item Payments on large value payment systems should not be considered as a intraday liquidity
+    \item Roles and responsibilities should be defined by Treasury department
+    \item PCS Systems should only be a source of funds; if PCS becomes a use of funds, then a yellow flag should be triggered
+    \item Intraday liquidity risk should be incorporated in the risk taxonomy and is a component of risk self-assessment including settlement risks
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 大额支付系统是重要的日间信用使用
+        \item 应纳入日间流动性管理
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 角色和职责应由资产负债委员会(ALCO)定义
+        \item 不是由资金部定义
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 支付、清算和结算(PCS)系统可以是资金来源或使用
+        \item 不应仅作为资金来源
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 日间流动性风险应纳入风险分类
+        \item 是风险自评估的组成部分
+        \item 包括结算风险
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性风险管理}
+
+
+\begin{question}
+    Each of the following is a measure for quantifying and/or monitoring risk levels except which is a measure for understanding intraday flows?
+\end{question}
+
+\begin{choices}
+    \item Total payments
+    \item Client intraday credit usage
+    \item Intraday credit relative to tier 1 capital
+    \item Daily maximum intraday liquidity usage
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 总支付是用于理解日间流动的指标
+        \item 不是风险量化或监控指标
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 客户日间信用使用是风险监控指标
+        \item 用于量化风险水平
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 日间信用相对于一级资本的比率是风险监控指标
+        \item 用于量化风险水平
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 每日最大日间流动性使用是风险监控指标
+        \item 用于量化风险水平
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性指标分析}
+
+\begin{question}
+    Which of the following is a USE of intraday liquidity?
+\end{question}
+
+\begin{choices}
+    \item Income funds flow
+    \item Term repo (as the repo seller)
+    \item Funding of nostro accounts (at correspondent bank outside home market)
+    \item Intraday credit (Federal Reserve unsecured committed line of credit, LOC)
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 收入资金流是日间流动性的来源
+        \item 不是使用
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 定期回购(作为回购卖方)是日间流动性的来源
+        \item 不是使用
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 代理行账户资金(在母国市场外的代理行)是日间流动性的使用
+        \item 需要动用日间流动性
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 日间信用(美联储无担保承诺信用额度)是日间流动性的来源
+        \item 不是使用
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性使用分析}
+
+
+
+\newpage
+
+
+\section{考点3:流动性风险报告}
+\setcounter{question}{0}
+\begin{question}
+    Which of the following is the most likely output of a bank's liquidity stress test report?
+\end{question}
+
+\begin{choices}
+    \item Cash flow survival horizon
+    \item Net interest income projection
+    \item Leverage ratio of unsecured debt to equity
+    \item Return on equity versus threshold and target
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 现金流生存期是流动性压力测试报告最重要的输出
+        \item 反映银行在压力情况下的生存能力
+        \item 是流动性风险管理的核心指标
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 净利息收入预测不是压力测试的主要输出
+        \item 属于盈利性分析
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 无担保债务与权益的杠杆比率不是压力测试的主要输出
+        \item 属于资本结构分析
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 股本回报率与阈值和目标的比较不是压力测试的主要输出
+        \item 属于盈利性分析
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性压力测试分析}
+
+
+
+
+
+\newpage
+
+
+
+\section{考点4:流动性压力测试}
+\setcounter{question}{0}
+
+\begin{question}
+    In the context of deposit outflows, which behavioral assessment factor is relevant for individual, small business, and commercial/institutional customers of the bank?
+\end{question}
+
+\begin{choices}
+    \item Credit usage
+    \item FDIC coverage
+    \item Industry segment
+    \item Relationship tenure
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 信用使用主要适用于小型企业和商业/机构客户
+        \item 不适用于个人客户
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item FDIC保险仅适用于个人和小型企业
+        \item 不适用于商业/机构客户
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 行业细分不适用于个人客户
+        \item 主要适用于商业/机构客户
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 关系权属适用于所有三类客户
+        \item 是共同的行为评估因素
+        \item 反映客户与银行的长期关系
+    \end{itemize}
+\end{explanation}
+
+\checklist{存款流出行为分析}
+
+
+\begin{question}
+    Which of the following types of liquidity is available in the form of the institution's liquidity asset buffer and represents liquidity available to meet general financial obligations under a stress scenario?
+\end{question}
+
+\begin{choices}
+    \item Operational
+    \item Strategic
+    \item Contingent
+    \item Restricted
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 运营流动性不可用于满足一般财务义务
+        \item 在压力测试中不可用
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 战略流动性不可用于满足一般财务义务
+        \item 在压力测试中不可用
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 或有流动性可用于满足一般财务义务
+        \item 以机构流动性资产缓冲形式存在
+        \item 在压力情景下可用
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 限制性流动性不可用于满足一般财务义务
+        \item 在压力测试中不可用
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性类型分析}
+
+
+
+
+\newpage
+
+
+
+\section{考点5:应急资金规划}
+\setcounter{question}{0}
+
+
+\begin{question}
+    In the context of governance and oversight of a contingency funding plan (CFP), which role has direct oversight of the liquidity crisis team (LCT)?
+\end{question}
+
+\begin{choices}
+    \item Board of directors
+    \item Risk management
+    \item Corporate treasury
+    \item Management committee
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 董事会不直接监督LCT
+        \item 仅提供建议和协助
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 风险管理不直接监督LCT
+        \item 负责风险监控
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 公司资金部不直接监督LCT
+        \item 负责日常资金管理
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 管理委员会(包括高级管理层)负责直接监督LCT
+        \item 是应急融资计划治理的核心
+        \item 确保LCT有效运作
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划治理}
+
+
+\begin{question}
+    Which of the following items is an example of a contingent action that could be taken by a bank during a stress situation?
+\end{question}
+
+\begin{choices}
+    \item Securitizing assets
+    \item Decreasing lending rates
+    \item Increasing capital distributions
+    \item Shifting from longer-term to shorter-term funding sources
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 资产证券化是银行的现金来源
+        \item 增加流动性
+        \item 是压力情况下的或有行动
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 降低贷款利率会鼓励增加放贷
+        \item 导致现金流出
+        \item 减少流动性
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 增加资本分配会减少流动性
+        \item 不是压力情况下的适当行动
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 从长期转向短期融资不是或有行动
+        \item 正确的方向是从短期转向长期融资
+    \end{itemize}
+\end{explanation}
+
+\checklist{压力情况应对措施}
+
+
+\begin{question}
+    Which level of escalation within a contingency funding plan (CFP) has more emphasis on analyzing the causes of liquidity deterioration closely?
+\end{question}
+
+\begin{choices}
+    \item Level 1
+    \item Level 2
+    \item Level 3
+    \item Level 4
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 1级是初始预警级别
+        \item 不需要详细分析原因
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 2级是更高级别的预警
+        \item 系统性或特例事件明显影响业务和流动性
+        \item 需要详细分析当前流动性和恶化原因
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 3级是严重预警级别
+        \item 重点在于采取行动而非分析原因
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 4级是最高预警级别
+        \item 重点在于危机管理而非分析原因
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划升级}
+
+
+\begin{question}
+    What is a key design consideration in developing a contingency funding plan (CFP)?
+\end{question}
+
+\begin{choices}
+    \item Aligned to business profile
+    \item Supported by a backup plan
+    \item Inclusive of all shareholder groups
+    \item Can be used in both normal and stressed states
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item CFP应与公司的业务和风险状况相匹配
+        \item 包括业务活动、产品和资产类别
+        \item 是制定CFP的关键考虑因素
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 备用计划不是CFP的关键设计考虑因素
+        \item CFP本身就是应对压力的计划
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item CFP应包含适当的利益相关者群体
+        \item 不仅限于股东
+        \item 还包括管理委员会、业务部门等
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item CFP本质上仅用于压力状态
+        \item 不适用于正常状态
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划设计}
+
+
+\begin{question}
+    Alan Chen, a staff of JY bank, is considering developing an appropriate contingency funding plan, all of the following statements should be considered in building Contingency Funding Plan EXCEPT:
+\end{question}
+
+\begin{choices}
+    \item Aligned to business and risk profiles
+    \item Integrated with broader risk management frameworks
+    \item Theoretical basis for precoded instruction set
+    \item Inclusive of appropriate stakeholder groups
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 与业务和风险状况相匹配是CFP的正确设计考虑因素
+        \item 是五个关键考虑因素之一
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 与更广泛的风险管理框架整合是CFP的正确设计考虑因素
+        \item 是五个关键考虑因素之一
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 预编码指令集的理论基础不是CFP的设计考虑因素
+        \item 五个正确的设计考虑因素是：
+        \begin{enumerate}
+            \item 与业务和风险状况相匹配
+            \item 与更广泛的风险管理框架整合
+            \item 可操作且灵活的行动手册
+            \item 包含适当的利益相关者群体
+            \item 有沟通计划支持
+        \end{enumerate}
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 包含适当的利益相关者群体是CFP的正确设计考虑因素
+        \item 是五个关键考虑因素之一
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划设计考虑因素}
+
+
+
+
+\newpage
+
+
+
+
+
+\end{document}

@@ -1,0 +1,247 @@
+\contentsline {section}{\numberline {1}Operational Risk and Resilience 相关概念}{1}{section.1}%
+\contentsline {subsection}{\numberline {考点1}Operational Risk and Resilience 相关概念}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1}操作风险定义}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {2}操作风险分类}{1}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {3}操作风险频率}{2}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {4}操作风险的特点 }{2}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {5}操作风险管理（ORM）框架}{2}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {6}运营复原力（Operational resilience）}{3}{subsubsection.1.1.6}%
+\contentsline {subsection}{\numberline {考点2}Risk Governance}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1}巴塞尔银行委员会健全 ORM 的原则}{3}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {2}Supervisory expectation on governance of ORM}{4}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {3}Committee structure in risk governance}{4}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {4}Role of BOD in risk governance}{4}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {5}Three lines of defense model}{4}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {6}Risk Appetite}{5}{subsubsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {7}Definition of culture}{5}{subsubsection.1.2.7}%
+\contentsline {subsubsection}{\numberline {8}Risk culture}{5}{subsubsection.1.2.8}%
+\contentsline {subsubsection}{\numberline {9}Risk culture-Codes of conduct and ethics}{6}{subsubsection.1.2.9}%
+\contentsline {subsubsection}{\numberline {10}Risk culture-Compensation structure}{6}{subsubsection.1.2.10}%
+\contentsline {subsubsection}{\numberline {11}Risk culture-Training}{6}{subsubsection.1.2.11}%
+\contentsline {subsubsection}{\numberline {12}Signs of good risk culture}{6}{subsubsection.1.2.12}%
+\contentsline {subsection}{\numberline {考点3}Risk Identification}{6}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1}Scope of risk identification}{6}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {2}Top-down}{6}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {3}Bottom-up}{7}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {4}Scenario analysis- Brainstorming techniques}{8}{subsubsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {5}Examples of risk taxonomy}{8}{subsubsection.1.3.5}%
+\contentsline {subsubsection}{\numberline {6}Structure of taxonomies}{9}{subsubsection.1.3.6}%
+\contentsline {subsection}{\numberline {考点4}Risk Measurement and Assessment}{9}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1}Loss data collection}{9}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {2}Incident database }{10}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {3}Comprehensiveness of data }{10}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {4}Dates of incidents}{10}{subsubsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {5}Qualitative risk assessment}{11}{subsubsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {6}Risk and Control Self-Assessment (RCSA)}{11}{subsubsection.1.4.6}%
+\contentsline {subsubsection}{\numberline {7}Severity assessment: impact scales}{11}{subsubsection.1.4.7}%
+\contentsline {subsubsection}{\numberline {8}Likelihood assessment scales}{11}{subsubsection.1.4.8}%
+\contentsline {subsubsection}{\numberline {9}Combining likelihood and impact: heatmap }{12}{subsubsection.1.4.9}%
+\contentsline {subsubsection}{\numberline {10}Outcome of RCSA }{12}{subsubsection.1.4.10}%
+\contentsline {subsubsection}{\numberline {11}Challenge of RCSA }{12}{subsubsection.1.4.11}%
+\contentsline {subsubsection}{\numberline {12}Key Performance Indicators (KPI) }{12}{subsubsection.1.4.12}%
+\contentsline {subsubsection}{\numberline {13}Key Risk Indicators (KRI) }{13}{subsubsection.1.4.13}%
+\contentsline {subsubsection}{\numberline {14}Key Control Indicators (KCI) }{13}{subsubsection.1.4.14}%
+\contentsline {subsubsection}{\numberline {15}Interaction among KPls, KRls, and KCls }{13}{subsubsection.1.4.15}%
+\contentsline {subsubsection}{\numberline {16}Quantitative risk assessment}{13}{subsubsection.1.4.16}%
+\contentsline {subsubsection}{\numberline {17}Causal analysis of scenarios}{13}{subsubsection.1.4.17}%
+\contentsline {subsubsection}{\numberline {18}Fault Tree Analysis (FTA)}{14}{subsubsection.1.4.18}%
+\contentsline {subsubsection}{\numberline {19}FAIR methodology}{14}{subsubsection.1.4.19}%
+\contentsline {subsubsection}{\numberline {20}Root-cause analysis and Bowtie tool}{14}{subsubsection.1.4.20}%
+\contentsline {subsubsection}{\numberline {21}Swiss cheese: control layering}{15}{subsubsection.1.4.21}%
+\contentsline {subsubsection}{\numberline {22}Operational risks modeling and capital}{15}{subsubsection.1.4.22}%
+\contentsline {subsubsection}{\numberline {23}Quantification of operational resilience }{16}{subsubsection.1.4.23}%
+\contentsline {subsection}{\numberline {考点5}Risk Mitigation}{16}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1}Two kinds of operational risk}{16}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {2}Risk response}{17}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {3}Internal control types}{17}{subsubsection.1.5.3}%
+\contentsline {subsubsection}{\numberline {4}Control design}{17}{subsubsection.1.5.4}%
+\contentsline {subsubsection}{\numberline {5}Control testing}{18}{subsubsection.1.5.5}%
+\contentsline {subsubsection}{\numberline {6}Risk mitigation by process design}{18}{subsubsection.1.5.6}%
+\contentsline {subsubsection}{\numberline {7}Typology and mitigation of human error}{19}{subsubsection.1.5.7}%
+\contentsline {subsubsection}{\numberline {8}New Product approval process}{19}{subsubsection.1.5.8}%
+\contentsline {subsubsection}{\numberline {9}Mitigation measures to reduce impact}{20}{subsubsection.1.5.9}%
+\contentsline {subsubsection}{\numberline {10}Contingency planning }{20}{subsubsection.1.5.10}%
+\contentsline {subsubsection}{\numberline {11}Event and crisis management}{20}{subsubsection.1.5.11}%
+\contentsline {subsubsection}{\numberline {12}Risk transfer}{21}{subsubsection.1.5.12}%
+\contentsline {subsubsection}{\numberline {13}Risk transfer-external insurance}{21}{subsubsection.1.5.13}%
+\contentsline {subsubsection}{\numberline {14}Risk transfer-outsourcing }{21}{subsubsection.1.5.14}%
+\contentsline {subsubsection}{\numberline {15}Management of reputational risk}{21}{subsubsection.1.5.15}%
+\contentsline {subsection}{\numberline {考点6}Risk Reporting}{21}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1}Roles and responsibilities of committees}{21}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {2}Considerations of operational reporting}{22}{subsubsection.1.6.2}%
+\contentsline {subsubsection}{\numberline {3}Seven elements of internal ORM report}{22}{subsubsection.1.6.3}%
+\contentsline {subsubsection}{\numberline {4}Characteristics and challenges of operational risk data}{23}{subsubsection.1.6.4}%
+\contentsline {subsubsection}{\numberline {5}Ways to overcome these challenges}{24}{subsubsection.1.6.5}%
+\contentsline {subsubsection}{\numberline {6}Aggregating qualitative risk data}{24}{subsubsection.1.6.6}%
+\contentsline {subsubsection}{\numberline {7}External risk reporting}{24}{subsubsection.1.6.7}%
+\contentsline {subsubsection}{\numberline {8}External risk reporting-Reporting to regulators}{24}{subsubsection.1.6.8}%
+\contentsline {subsubsection}{\numberline {9}External risk reporting-Reporting on operational resilience}{25}{subsubsection.1.6.9}%
+\contentsline {subsection}{\numberline {考点7}Integrated Risk Management}{25}{subsection.1.7}%
+\contentsline {subsubsection}{\numberline {1}ERM framework}{25}{subsubsection.1.7.1}%
+\contentsline {subsubsection}{\numberline {2}Risk governance}{25}{subsubsection.1.7.2}%
+\contentsline {subsubsection}{\numberline {3}Risk culture }{26}{subsubsection.1.7.3}%
+\contentsline {subsubsection}{\numberline {4}Risk appetite}{26}{subsubsection.1.7.4}%
+\contentsline {subsubsection}{\numberline {5}Role of regulatory capital}{26}{subsubsection.1.7.5}%
+\contentsline {subsubsection}{\numberline {6}Role of economic capital }{26}{subsubsection.1.7.6}%
+\contentsline {subsubsection}{\numberline {7}Risk aggregation for capital assessment}{26}{subsubsection.1.7.7}%
+\contentsline {subsubsection}{\numberline {8}Stress testing}{27}{subsubsection.1.7.8}%
+\contentsline {subsubsection}{\numberline {9}Stress-testing taxonomy-two dimensions}{27}{subsubsection.1.7.9}%
+\contentsline {subsubsection}{\numberline {10}Parameter stress testing }{27}{subsubsection.1.7.10}%
+\contentsline {subsubsection}{\numberline {11}Macroeconomic stress testing}{27}{subsubsection.1.7.11}%
+\contentsline {subsubsection}{\numberline {12}Parameter and macroeconomic stress testing}{27}{subsubsection.1.7.12}%
+\contentsline {subsubsection}{\numberline {13}Reverse stress testing}{28}{subsubsection.1.7.13}%
+\contentsline {subsubsection}{\numberline {14}Operational risk stress-testing models}{28}{subsubsection.1.7.14}%
+\contentsline {section}{\numberline {2}重点风险领域}{28}{section.2}%
+\contentsline {subsection}{\numberline {考点1} Cyber-Resilience: Range of Practices}{28}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {1}Framework}{28}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2}Cyber resilience standards and guidelines}{28}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {3}Cyber governance }{29}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {4}Approaches on cyber-risk management}{29}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {5}Communication and sharing of information}{29}{subsubsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {6}Interconnections with third parties}{30}{subsubsection.2.1.6}%
+\contentsline {subsection}{\numberline {考点2} Case study:Cyberthreats and Information Security Risks}{31}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {1}Information security risks (ISR) }{31}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2}Cyber risk management: frameworks}{32}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {3}Essentials of cybersecurity protection and monitoring }{33}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {4}Behavioral controls}{33}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {5}Technical controls}{33}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {6}Equifax case study}{33}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {7}Lessons learned from the Equifax case study}{33}{subsubsection.2.2.7}%
+\contentsline {subsection}{\numberline {考点3} Sound Management of Risks Related to Money Launderingand Financingof Terrorism}{34}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {1}Best practices }{34}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {考点4} Case Study:Financial Crime and Fraud}{35}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {1}Financial fraud risk management}{35}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2}AML risk management}{35}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {3}Case study: USAA }{35}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {考点5} Guidance on Managing Outsourcing Risk}{36}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {1}Risks from the use of service providers }{36}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2}Elements of effective program to manage outsourcing risk }{36}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {3}Due diligence of service providers}{36}{subsubsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {4}Contract provision }{36}{subsubsection.2.5.4}%
+\contentsline {subsection}{\numberline {考点6} Case Study:Third-Party Risk Management}{37}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {1}Third-party risk}{37}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2}Effective third-party risk management framework }{38}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {3}Case study: Capital One data breach}{38}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {4}Case study: OCC fines Morgan Stanley }{38}{subsubsection.2.6.4}%
+\contentsline {subsection}{\numberline {考点7} Case study:Investor Protectionand Compliance Risks in Investment Activities}{39}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {1}MIFID (Markets in Financial Instruments Directive) }{39}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2}Dodd-Frank}{39}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {3}Statistics and record fines cases}{39}{subsubsection.2.7.3}%
+\contentsline {subsubsection}{\numberline {4}FINRA fines Deutsche bank securities}{39}{subsubsection.2.7.4}%
+\contentsline {subsection}{\numberline {考点8} Supervisory Guidanceon Model Risk Management}{40}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {1}Model}{40}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2}Model risk}{40}{subsubsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {3}Effective framework to manage model risk}{40}{subsubsection.2.8.3}%
+\contentsline {subsubsection}{\numberline {4}Elements of the framework一1.development,implementation}{40}{subsubsection.2.8.4}%
+\contentsline {subsubsection}{\numberline {5}Elements of the framework-2.validation}{40}{subsubsection.2.8.5}%
+\contentsline {subsubsection}{\numberline {6}Challenges to an effective validation process}{41}{subsubsection.2.8.6}%
+\contentsline {subsection}{\numberline {考点9} Case Study: Model Risk and Model Validation}{41}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {1}Model risk}{41}{subsubsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2}Model risk management (MRM) function }{41}{subsubsection.2.9.2}%
+\contentsline {subsubsection}{\numberline {3}Gaussian Copula and CDO pricing}{42}{subsubsection.2.9.3}%
+\contentsline {subsubsection}{\numberline {4}Barclays'acquisition and excel spreadsheet error}{42}{subsubsection.2.9.4}%
+\contentsline {subsubsection}{\numberline {5}NASA Mars Orbiter}{42}{subsubsection.2.9.5}%
+\contentsline {section}{\numberline {3}Capital Planning}{42}{section.3}%
+\contentsline {subsection}{\numberline {考点1}Risk Capital Attribution and Risk-Adjusted Performance Measurement}{42}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {1}Risk capital, economic capital, \& regulatory capital}{42}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {2}Uses of economic capital-traditional way}{42}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3}Uses of economic capital-new way}{43}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {4}RAROC: risk-adjusted return on capital}{43}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {5}Example}{43}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {6}Answer}{43}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {7}RAROC calculation issues}{44}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {8}RAROC for capital budgeting decision}{44}{subsubsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {9}Example}{45}{subsubsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {10}Answer}{45}{subsubsection.3.1.10}%
+\contentsline {subsection}{\numberline {考点2}Range of Practices and lssues in Economic Capital Frameworks}{45}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {1}Overview of economical capital framework}{45}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {2}Issues in building blocks: governance}{45}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3}Issues in building blocks: risk measure}{45}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {4}Issues in building blocks: risk aggregation}{46}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {5}Issues in building blocks: validation}{46}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {6}Issues in building blocks: dependency modeling}{46}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {7}Issues in building blocks: counterparty credit risk}{46}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {8}Issues in building blocks: interest rate risk}{46}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {9}Recommendations}{47}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {10}Benefits and impacts of EC using and governance}{47}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {11}Benefits and impacts of EC using}{47}{subsubsection.3.2.11}%
+\contentsline {subsection}{\numberline {考点3}Capital Planning at large Bank Holding Companies}{48}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {1}Overview of Fed capital plan rule}{48}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {2}Foundational risk management}{48}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3}Loss-estimation methodologies}{48}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {4}Resource-estimation methodologies}{49}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {5}Capital policy and capital planning}{49}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {6}Assessing capital adequacy impact}{49}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {7}Internal controls}{49}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {8}Governance}{50}{subsubsection.3.3.8}%
+\contentsline {subsection}{\numberline {考点4}Stress Testing Banks}{50}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {1}Stress testing - historical evolution}{50}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {2}Stress testing-challenges in designing scenarios}{51}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3}Stress testing-challenge in modeling losses and revenues}{51}{subsubsection.3.4.3}%
+\contentsline {section}{\numberline {4}巴塞尔协议}{51}{section.4}%
+\contentsline {subsection}{\numberline {考点1}Capital Regulation Before the Global Financial Crisis}{51}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {1}Basel I}{51}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {2}Credit risk-standardized approach}{51}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {3}Capital requirement}{53}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4}The 1995 and 1996 Amendments}{53}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {5}Credit risk-adjustment for derivatives}{53}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {6}Market risk}{54}{subsubsection.4.1.6}%
+\contentsline {subsubsection}{\numberline {7}Market risk-standardized approach}{54}{subsubsection.4.1.7}%
+\contentsline {subsubsection}{\numberline {8}Market risk-internal model-based approach}{55}{subsubsection.4.1.8}%
+\contentsline {subsubsection}{\numberline {9}Market risk-specific risk}{55}{subsubsection.4.1.9}%
+\contentsline {subsubsection}{\numberline {10}Capital requirements}{55}{subsubsection.4.1.10}%
+\contentsline {subsubsection}{\numberline {11}Others}{55}{subsubsection.4.1.11}%
+\contentsline {subsubsection}{\numberline {12}BASEL II}{55}{subsubsection.4.1.12}%
+\contentsline {subsubsection}{\numberline {13}Three pillars by BCBS}{56}{subsubsection.4.1.13}%
+\contentsline {subsubsection}{\numberline {14}Credit risk}{56}{subsubsection.4.1.14}%
+\contentsline {subsubsection}{\numberline {15}Credit risk-standardized approach}{56}{subsubsection.4.1.15}%
+\contentsline {subsubsection}{\numberline {16}Credit risk-mitigants}{56}{subsubsection.4.1.16}%
+\contentsline {subsubsection}{\numberline {17}Credit risk-foundation internal ratings based approach}{57}{subsubsection.4.1.17}%
+\contentsline {subsubsection}{\numberline {18}Credit risk-foundation IRB approach}{57}{subsubsection.4.1.18}%
+\contentsline {subsubsection}{\numberline {19}Operational risk}{59}{subsubsection.4.1.19}%
+\contentsline {subsubsection}{\numberline {20}Operational risk-standardized approach}{59}{subsubsection.4.1.20}%
+\contentsline {subsubsection}{\numberline {21}Solvency II}{61}{subsubsection.4.1.21}%
+\contentsline {subsubsection}{\numberline {22}Solvency II: SCR and MCR}{61}{subsubsection.4.1.22}%
+\contentsline {subsubsection}{\numberline {23}Solvency II: SCR calculating}{61}{subsubsection.4.1.23}%
+\contentsline {subsection}{\numberline {考点2}Solvency, Liquidityand Other Regulation After the Global Financial Crisis}{61}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {1}Basel II.5}{61}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {2}Market risk-stressed VaR}{61}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {3}Market risk-lRC}{62}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4}Basel III}{63}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {5}Capital requirements}{63}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {6}Capital requirements-buffers}{63}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {7}Capital requirements-G-SIBs buffer}{64}{subsubsection.4.2.7}%
+\contentsline {subsubsection}{\numberline {8}Capital requirements -leverage ratio}{64}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {9}Capital requirements- Cocos}{65}{subsubsection.4.2.9}%
+\contentsline {subsubsection}{\numberline {10}Liquidity risk}{65}{subsubsection.4.2.10}%
+\contentsline {subsubsection}{\numberline {11}Liquidity risk: LCR}{65}{subsubsection.4.2.11}%
+\contentsline {subsubsection}{\numberline {12}Liquidity risk: : NSFR}{65}{subsubsection.4.2.12}%
+\contentsline {subsubsection}{\numberline {13}Counterparty credit risk}{67}{subsubsection.4.2.13}%
+\contentsline {subsubsection}{\numberline {14}Legislation and regulations after GFC}{67}{subsubsection.4.2.14}%
+\contentsline {subsection}{\numberline {考点3}High-Level Summary of Basel III Reforms}{67}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {1}Motivations for revising the Basel III framework}{67}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {2}Dec 2017 revisions to Basel III framework}{68}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {3}Standardized approach for credit risk}{68}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4}IRB approaches for credit risk}{69}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {5}CVA risk framework}{70}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {6}Operational risk framework}{70}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {7}Leverage ratio framework}{70}{subsubsection.4.3.7}%
+\contentsline {subsubsection}{\numberline {8}Review output floor}{70}{subsubsection.4.3.8}%
+\contentsline {subsection}{\numberline {考点4}Basel III: Finalising Post-Crisis Reforms}{71}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {1}SMA: operation risk capital charge}{71}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {2}SMA: business indicator (Bl)}{71}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {3}SMA: business indicator component (BIC)}{71}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4}SMA: internal loss multiplier （ILM）}{72}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {5}SMA: operational risk capital requirement}{72}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {6}SMA vs. earlier approach}{72}{subsubsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {7}Loss data identification, collection and treatment}{72}{subsubsection.4.4.7}%
+\contentsline {subsection}{\numberline {考点5}Supplementary（FRTB）}{73}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {1}FRTB}{73}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {2}Background}{73}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {3}Liquidity horizons}{74}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4}Market risk capital charge}{74}{subsubsection.4.5.4}%
+\contentsline {subsubsection}{\numberline {5} }{75}{subsubsection.4.5.5}%
+\contentsline {subsubsection}{\numberline {6} }{75}{subsubsection.4.5.6}%
+\contentsline {subsubsection}{\numberline {7} }{75}{subsubsection.4.5.7}%
+\contentsline {subsubsection}{\numberline {8} }{75}{subsubsection.4.5.8}%
+\contentsline {subsubsection}{\numberline {9} }{75}{subsubsection.4.5.9}%

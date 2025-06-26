@@ -1,0 +1,308 @@
+\documentclass{article}
+\usepackage{fontspec} 
+\usepackage{unicode-math}  % 先加载 unicode-math
+\setmathfont{XITS Math}    % 再设置数学字体
+%\usepackage[UTF8]{ctex} % 如果需要支持中文
+
+\usepackage{anyfontsize}
+\usepackage{xeCJK} % XeLaTeX 推荐 xeCJK，LuaLaTeX 也可用   
+\usepackage{setspace}  % 添加这个包
+\setstretch{1.2}      % 设置行距为1.5倍
+
+\setCJKmainfont[
+    Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,  % 改用 Windows 字体目录
+    UprightFont = {SourceHanSansCN-Light1.otf},  % 使用可变字体
+    BoldFont = {SourceHanSansCN-Medium1.otf},
+    LetterSpace = 2.0,  % 增加字间距
+    WordSpace = 1.2,    % 增加词间距
+    %BoldFeatures = {RawFeature={+wght=900}},
+    %Scale=1
+]{SourceHanSansCN}
+
+
+\setmainfont[
+    Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,  % 改用 Windows 字体目录
+    UprightFont = {SourceHanSansCN-Light1.otf},  % 使用可变字体
+    BoldFont = {SourceHanSansCN-Medium1.otf},
+    LetterSpace = 2.0,  % 增加字间距
+    WordSpace = 1.2,    % 增加词间距
+    %BoldFeatures = {RawFeature={+wght=900}},
+    %Scale=1
+]{SourceHanSansCN}
+
+%\setCJKmainfont[
+ %   Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,
+ %   UprightFont = {SourceHanSerifCN-Light-5.otf},
+ %   BoldFont = {SourceHanSerifCN-Medium-6.otf},
+%    Scale=1
+%]{SourceHanSerifCN}
+
+%\setmainfont{SourceHanSerif}  % 设置英文字体
+
+% 处理冲突的命令
+\let\oldbackepsilon\backepsilon
+\let\backepsilon\relax
+\let\oldeth\eth
+\let\eth\relax
+\let\olddigamma\digamma
+\let\digamma\relax
+\usepackage{float}
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:交易账簿的基本面回顾}
+\setcounter{question}{0}
+
+\begin{question}
+    Which of the following risks is specifically recognized by the incremental risk charge (IRC)?
+    \end{question}
+    
+    \begin{choices}
+        \item Expected shortfall risk, because it is important to understand the amount of loss potential in the tail
+        \item Jump-to-default risk, as measured by 99.9\% VaR, because a default could cause a significant loss for the bank
+        \item Equity price risk, because a change in market prices could materially impact mark-to-market accounting for risk
+        \item Interest rate risk, as measured by 97.5\% expected shortfall, because an increase in interest rates could cause a significant loss for the bank
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 预期短缺（Expected Shortfall）风险是FRTB（Fundamental Review of the Trading Book）中使用的风险度量方法，而不是IRC的范畴。
+        \end{itemize}
+        
+        \textbf{B选项正确。}
+        \begin{itemize}
+            \item IRC（增量风险费用）主要识别两种风险：信用利差风险和违约风险。违约风险使用99.9\%置信水平的VaR进行衡量，因为违约事件可能导致银行重大损失。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 股价风险属于常规市场风险类别，通过delta/vega/曲率方法或ES进行衡量，不在IRC的考虑范围内。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 利率风险也属于常规市场风险类别，使用97.5\%置信水平的ES进行衡量，不在IRC的考虑范围内。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{IRC通过99.9\% VaR衡量违约风险}
+
+
+
+    \begin{question}
+        Which of the following statements represents a criteria for classifying an asset into the trading book?
+        \begin{enumerate}
+            \item The bank must be able to physically trade the asset
+            \item The risk of the asset must be managed by the bank's trading desk
+        \end{enumerate}
+    \end{question}
+    
+    \begin{choices}
+        \item I only
+        \item II only
+        \item Both I and II
+        \item Neither I nor II
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 仅满足能够实物交易的条件不足以将资产归类为交易账户资产。银行还需要在交易台管理相关风险。
+        \end{itemize}
+        
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 仅满足在交易台管理风险的条件不足以将资产归类为交易账户资产。银行还需要能够对资产进行实物交易。
+        \end{itemize}
+        
+        \textbf{C选项正确。}
+        \begin{itemize}
+            \item 将资产归类为交易账户资产需要同时满足两个条件：1）银行必须能够对资产进行实物交易；2）银行必须在交易台管理相关风险。这两个条件缺一不可。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 这两个条件都是将资产归类为交易账户资产的必要标准，不能同时否定。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{交易账户资产需同时满足可交易性和交易台管理两个条件}
+
+
+    \begin{question}
+        Which of the following statements regarding the differences between Basel I, Basel II.5, and the Fundamental Review of the Trading Book (FRTB) for market risk capital calculations is incorrect?
+    \end{question}
+    
+    \begin{choices}
+        \item Both Basel I and Basel II.5 require calculation of VaR with a 99\% confidence interval
+        \item FRTB requires the calculation of expected shortfall with a 97.5\% confidence interval
+        \item FRTB requires adding a stressed VaR measure to complement the expected shortfall calculation
+        \item The 10-day time horizon for market risk capital proposed under Basel I incorporates a recent period of time, which typically ranges from one to four years
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 这个说法是正确的。巴塞尔协议I和巴塞尔协议II.5都使用99\%置信水平的VaR作为风险度量方法。
+        \end{itemize}
+        
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 这个说法是正确的。FRTB使用97.5\%置信水平的预期短缺（Expected Shortfall）作为风险度量方法。
+        \end{itemize}
+        
+        \textbf{C选项正确。}
+        \begin{itemize}
+            \item 这个说法是错误的。FRTB不需要在预期短缺计算中添加压力VaR。实际上，是巴塞尔协议II.5要求添加压力VaR作为补充风险度量。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 这个说法是正确的。巴塞尔协议I中10天期限的市场风险资本要求确实包含了最近一段时间（通常为1-4年）的数据。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{FRTB不需要压力VaR而巴塞尔II.5需要}
+
+
+    \begin{question}
+        A large commercial bank is using VaR as its main risk measurement tool. Expected shortfall (ES) is suggested as a better alternative to use during market turmoil. What should be understood regarding VaR and ES before modifying current practices?
+    \end{question}
+    
+    \begin{choices}
+        \item Despite being more complicated to calculate, ES is easier to backtest than VaR
+        \item Relative to VaR, ES leads to more required economic capital for the same confidence level
+        \item While VaR ensures that the estimate of portfolio risk is less than or equal to the sum of the risks
+        \item Both VaR and ES account for the severity of losses beyond the confidence threshold
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item ES实际上比VaR更难进行回测，因为ES需要考虑尾部损失的平均值，而VaR只需要考虑特定分位数。
+        \end{itemize}
+        
+        \textbf{B选项正确。}
+        \begin{itemize}
+            \item 在相同置信水平下，ES总是大于或等于VaR，因为ES考虑了超过特定置信水平的预期损失的严重程度，而VaR只衡量该置信水平下的最小预期损失。因此，ES会导致更高的经济资本要求。不过，监管机构通常会通过降低使用ES的银行的置信水平要求来调整这种差异。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 这个选项不完整，且VaR并不保证投资组合风险估计小于或等于各风险之和。实际上，VaR可能低估尾部风险。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 只有ES考虑了超过置信阈值的损失的严重程度，而VaR只关注特定分位数的损失水平。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{相同置信水平下ES要求的经济资本高于VaR}
+
+
+
+\newpage
+
+
+
+\end{document}

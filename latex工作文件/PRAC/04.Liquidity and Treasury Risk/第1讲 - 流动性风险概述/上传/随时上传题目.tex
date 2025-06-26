@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+\section{考点1:风险管理概况}
+\setcounter{question}{0}
+
+
+\begin{question}
+    A risk analyst at a financial institution is preparing a report on the key aspects of risk and risk management to present at an upcoming conference. Which of the following statements regarding risk and risk management is correct?
+\end{question}
+
+\begin{choices}
+
+        \item Investors typically care more about positive surprises (unexpected investment gains) than negative outcomes (unexpected investment losses).
+        
+        \item Investors focus more on unexpected losses rather than expected losses when managing risk.
+        
+        \item Investors pay close attention to potential losses during the risk management process, as risk is related to the magnitude of potential losses.
+        
+        \item Investors should not view risk management as a zero-sum game, as the process can eliminate risk over time.
+
+\end{choices}
+
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然投资者通常关注意外的投资收益，但在风险管理中，他们更关心的是如何避免意外的投资损失。
+        \item 题外话：心理学研究表明，人们通常对负面信息或坏事的关注程度高于对正面信息的关注。这种现象被称为“负面偏见”（negativity bias）
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 投资者在进行风险管理时确实更关注意外损失，而不是预期损失。意外损失可能会对投资组合造成重大影响，因此风险管理的重点是识别和应对这些潜在的意外损失。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 虽然投资者在风险管理过程中关注潜在损失，但风险的大小并不总是与潜在损失的大小成正比。许多潜在损失可能很大，但却是可预测的，因此可以通过风险管理技术进行有效管理。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 投资者可以将风险管理视为零和游戏，因为在这个过程中，风险的转移和承担可能导致某些“获胜”方在其他“失败”方的损失中获利。这意味着在风险管理的框架内，整体风险并没有被消除，而是重新分配给了不同的参与者。
+        \item 尽管风险管理的目标是减少个体的风险暴露，但如果足够多的参与者因过度承担风险而遭受严重损失，可能会导致广泛的经济危机。
+    \end{itemize}
+\end{explanation}
+
+\checklist{投资者在风险管理中对意外损失的关注程度及其对风险管理过程的理解。（特别是要理解风险管理是零和游戏）}
+
+
+
+\end{document}

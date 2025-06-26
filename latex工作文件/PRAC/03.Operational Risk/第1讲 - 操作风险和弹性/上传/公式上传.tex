@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+% 基础宏包
+
+\usepackage{etoolbox} % 用于修改公式字体大小
+\usepackage{xcolor}      % 颜色支持
+\usepackage{geometry}    % 页面设置
+
+% 移除页码
+\pagestyle{empty}
+% 设置页面为长方形
+\geometry{paperwidth=5cm, paperheight=3cm, margin=0pt}
+
+
+
+% 数学和公式相关宏包
+\usepackage{amsmath}     % 数学公式排版
+\usepackage{amssymb}     % 额外数学符号
+\usepackage{bm}          % 粗体数学符号
+\usepackage{mathtools}   % amsmath的扩展
+\usepackage{mathpazo}    % 数学字体
+\usepackage{microtype}   % 改进排版细节
+
+% 字体相关宏包
+\usepackage{fontspec}    % 字体设置
+\usepackage{xeCJK}       % 中文字体设置
+
+% 其他功能宏包
+\usepackage{graphicx}    % 图形支持
+\usepackage{hyperref}    % 超链接
+\usepackage{enumitem}    % 列表环境定制
+\usepackage{tcolorbox}   % 彩色文本框
+\tcbuselibrary{most}     % tcolorbox扩展库
+
+
+
+
+
+\begin{document}
+\fontsize{23}{31}\selectfont
+% 居中显示公式
+\vspace*{\fill}
+\begin{center}
+\[\alpha = \frac{1}{2} \sqrt{2} \]
+
+\end{center}
+\vspace*{\fill}
+
+
+\end{document}

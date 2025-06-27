@@ -1,0 +1,578 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+%\setCJKmainfont[
+ %   Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,
+ %   UprightFont = {SourceHanSerifCN-Light-5.otf},
+ %   BoldFont = {SourceHanSerifCN-Medium-6.otf},
+%    Scale=1
+%]{SourceHanSerifCN}
+
+%\setmainfont{SourceHanSerif}  % 设置英文字体
+
+% 处理冲突的命令
+\let\oldbackepsilon\backepsilon
+\let\backepsilon\relax
+\let\oldeth\eth
+\let\eth\relax
+\let\olddigamma\digamma
+\let\digamma\relax
+
+\usepackage{float}
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:信用风险基础}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Sarah Chen, FRM, is a bank credit analyst who is examining the financial statements of a bank. She notices that there is a paragraph noted in the auditor's report that states that although the auditors agreed with virtually all of the bank's accounting treatments of the financial statement items, the auditors did not agree with the bank's decision to treat some of the leases as operating leases instead of capital leases. Based on that information, which of the following audit report opinions has the auditor most likely issued?
+\end{question}
+
+\begin{choices}
+    \item Adverse opinion
+    \item Denial of opinion
+    \item Qualified opinion
+    \item Unqualified opinion
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 否定意见（Adverse opinion）表示财务报表存在全局性、系统性错误的情况，而本题中只有一个具体的会计处理问题。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 拒绝表示意见（Denial of opinion）表示审计师无法获取足够的审计证据，而本题中审计师已经完成了审计工作。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 有保留意见（Qualified opinion）适用于审计师对财务报表整体无异议，但对特定项目持不同意见。本题中审计师对租赁会计处理有不同意见，但认可其他会计处理，因此最可能出具保留意见。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 无保留意见（Unqualified opinion）表示审计师完全认可财务报表，而本题中审计师对租赁会计处理有不同意见。
+    \end{itemize}
+\end{explanation}
+
+\checklist{审计意见的差异源于问题的“严重性”和“影响范围”（较简单，考概念辨析）}
+
+
+\begin{question}
+    Bank of the Midwest has been struggling with poor asset quality for some time. The bank lends primarily to large farming operations that have struggled in recent years due to a glut of wheat and cotton on the market. Bank regulators have recently required that the bank write off some of these loans, which has entirely wiped out the capital of the bank. However, the bank still has some liquidity sources it can use, including a correspondent bank and the Federal Reserve. Bank of the Midwest is:
+\end{question}
+
+\begin{choices}
+    \item An insolvent but not failed bank
+    \item Both a failed bank and an insolvent bank
+    \item Neither a failed bank nor an insolvent bank
+    \item A failed bank but not an insolvent bank
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 题目明确说明银行的资本被完全冲销（Insolvent），但仍有流动性来源维持运营 → 未达到破产条件。
+        \item 典型的“资不抵债但未破产”场景
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 该银行虽然资不抵债，但由于仍能获得流动性继续运营，所以并未破产。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 该银行确实资不抵债，因为其资本已被完全冲销。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 逻辑矛盾。破产必然以资不抵债为前提。
+    \end{itemize}
+\end{explanation}
+
+\checklist{资不抵债（资本耗尽） vs. 破产（丧失持续经营能力）细节辨析题} 
+
+
+\begin{question}
+    In regard to bank failures, each of the following is correct, except which is false?
+\end{question}
+
+\begin{choices}
+    \item If liabilities exceed assets, a firm is insolvent
+    \item Although bank failures are very common, bank insolvencies are historically very rare
+    \item Bankruptcy is a legal status, and is not implied by (is not a synonym for) insolvency
+    \item It is possible for an insolvent bank to continue to operate
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个说法是正确的。当负债超过资产时，企业确实处于资不抵债状态。
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 这个说法是错误的。实际上，银行破产（failures）相对较少，而银行资不抵债（insolvencies）则更为常见。这是因为银行即使资不抵债，只要仍能获得流动性支持，就可以继续运营。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这个说法是正确的。破产是一个法律状态，与资不抵债不是同义词。资不抵债是破产的必要条件，但不是充分条件。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这个说法是正确的。资不抵债的银行如果能够获得流动性支持（如来自其他银行或央行的资金），确实可以继续运营。
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行破产较少而资不抵债较常见}
+
+
+\begin{question}
+    David Wang, a credit analyst with City Bank, is considering the loan application of a small, local car dealership. The dealership has been solely owned by John Smith for more than 20 years and sells three brands of American automobiles. Because of the suburban location, most of the cars sold in the past by the dealership have been large pick-up trucks and sports utility vehicles. However, sales have declined, and gasoline prices have continued to increase. As a result, Smith is considering selling a line of electric cars. Smith has borrowed from City Bank before but currently does not have a balance outstanding with the bank. Which of the following statements is not one of the four components of credit analysis Wang should be evaluating when performing the credit analysis for this potential loan?
+\end{question}
+
+\begin{choices}
+    \item The business environment, competition, and economic climate in the region
+    \item Smith's character and past payment history with the bank
+    \item The car dealership's balance sheets and income statements for the last few years as well as Smith's personal financial situation
+    \item The financial health of Smith's friends and family who could be called upon to guarantee the loan
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个选项属于外部环境（External Conditions）分析，是信用分析的四个组成部分之一。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 这个选项属于债务人的偿付能力和还款意愿（Obligor's Capacity and Willingness to Repay）分析，是信用分析的四个组成部分之一。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这个选项属于债务人的偿付能力和还款意愿分析，是信用分析的四个组成部分之一。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 这个选项不是信用分析的四个组成部分之一。虽然风险缓释工具（Credit Risk Mitigants）是信用分析的一部分，但分析师应该评估具体的担保人，而不是笼统地评估"朋友和家人"的财务状况。对于一个经营20年的汽车经销商来说，不太可能寻求朋友或家人的贷款担保。
+    \end{itemize}
+\end{explanation}
+
+\checklist{信用分析不包括评估借款人朋友和家人的财务状况}
+
+
+\begin{question}
+    Michael Chen, FRM, is a rating agency analyst who is currently performing financial statement analysis on a major bank. Which of the following financial statements would be least useful for bank credit analysis?
+\end{question}
+
+\begin{choices}
+    \item Balance sheet
+    \item Income statement
+    \item Statement of cash flows
+    \item Statement of changes in capital funds
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 资产负债表对银行信用分析非常重要，因为它显示了银行的资产、负债和资本结构，这些都是评估银行信用风险的关键指标。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 利润表对银行信用分析很重要，因为它显示了银行的收入、支出和盈利能力，这些都是评估银行经营状况的重要指标。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 现金流量表对银行信用分析的用处最小。虽然现金流量表在分析非金融实体时很有用（可以区分经营、投资和筹资活动的现金流入和流出），但对银行来说，由于其业务性质特殊，现金流量表的信息相对不那么重要。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 资本变动表对银行信用分析很重要，因为它显示了银行资本的变化情况，这是评估银行资本充足性的重要指标。
+    \end{itemize}
+\end{explanation}
+
+\checklist{现金流量表对银行信用分析用处最小}
+
+
+
+
+\newpage
+
+
+
+\section{考点2:信用风险管治}
+\setcounter{question}{0}
+
+
+\begin{question}
+    In regard to bank failures, each of the following is correct, except which is false?
+\end{question}
+
+\begin{choices}
+    \item If liabilities exceed assets, a firm is insolvent
+    \item Although bank failures are very common, bank insolvencies are historically very rare
+    \item Bankruptcy is a legal status, and is not implied by (is not a synonym for) insolvency
+    \item It is possible for an insolvent bank to continue to operate
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个说法是正确的。当负债超过资产时，企业确实处于资不抵债状态。
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 这个说法是错误的。实际上，银行破产（failures）相对较少，而银行资不抵债（insolvencies）则更为常见。这是因为银行即使资不抵债，只要仍能获得流动性支持，就可以继续运营。偿付能力衡量的是长期情况，而流动性看的是短期情况。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这个说法是正确的。破产是一个法律状态，与资不抵债不是同义词。资不抵债是破产的必要条件，但不是充分条件。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这个说法是正确的。资不抵债的银行如果能够获得流动性支持（如来自其他银行或央行的资金），确实可以继续运营。
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行破产较少而资不抵债较常见}
+
+\begin{question}
+    Dragon Capital, Inc., made a loan to a small start-up firm. The firm grew rapidly, and it appeared that Dragon had made a good credit decision. However, the firm grew too fast and could not sustain the growth. It eventually failed. Dragon had initially estimated its exposure at default to be \$1,500,000. Because of the firm's rapid growth and resulting increases in the line of credit, Dragon ultimately lost \$1,800,000. In terms of credit risk, this is an example of:
+\end{question}
+
+\begin{choices}
+    \item Default on payment for goods or services already rendered
+    \item A more severe loss than expected due to a ratings downgrade by a rating agency
+    \item A more severe loss than expected due to a greater than expected exposure at the time of a default
+    \item A more severe loss than expected due to a lower than expected recovery at the time of a default
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个选项描述的是对已提供商品或服务的付款违约，而本题中涉及的是金融债务的违约。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 这个选项提到评级机构降级导致的损失，但本题中的公司是一家小型初创企业，不太可能被评级。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 由于违约时的风险敞口（1,800,000美元）比最初估计的（1,500,000美元）要大，Dragon的损失超出了预期。这是因为公司快速增长导致信贷额度增加，最终在违约时产生了更大的风险敞口。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这个选项提到回收率低于预期导致的损失，但题目中并没有提到任何关于回收的信息。
+    \end{itemize}
+\end{explanation}
+
+\checklist{违约时风险敞口大于预期导致损失超出预期}
+
+\begin{question}
+    A bank has booked a loan with total commitment of USD 60,000 of which 75\% is currently outstanding. The default probability of the loan is assumed to be 3\% for the next year and loss given default (LGD) is estimated at 40\%. The standard deviation of LGD is 35\% and the standard deviation of the default event indicator is 8\%. Drawdown on default is assumed to be 70\%. The expected losses for the bank are:
+\end{question}
+
+\begin{choices}
+    \item USD 450
+    \item USD 540
+    \item USD 630
+    \item USD 720
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 计算过程如下：
+        \begin{enumerate}
+            \item 计算调整后的风险敞口（AE）：
+            \begin{itemize}
+                \item 已使用额度 = 60,000 × 75\% = 45,000
+                \item 未使用额度 = 60,000 - 45,000 = 15,000
+                \item 违约时的提款率 = 70\%
+                \item AE = 45,000 + (15,000 × 70\%) = 45,000 + 10,500 = 55,500
+            \end{itemize}
+            \item 计算预期损失：
+            \begin{itemize}
+                \item 违约概率 = 3\%
+                \item 违约损失率 = 40\%
+                \item 预期损失 = 55,500 × 3\% × 40\% = 630
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+    \end{itemize}
+\end{explanation}
+
+\checklist{预期损失的计算需要考虑调整后的风险敞口、违约概率和违约损失率}
+
+
+\begin{question}
+    You have been asked by the Chief Risk Officer of your bank to determine how much should be set aside as a loan-loss reserve for a 1-year horizon on a USD 150 million line of credit that has been extended to a large corporate borrower. Of the original balance, USD 30 million has already been drawn and due to deteriorating economic conditions the bank is concerned that the borrower might find itself in a liquidity crisis causing it to draw on the remaining commitment and default. Given the following information from the bank's internal credit risk models, what is an appropriate loan loss reserve to cover this eventually? 1-year default probability = 0.45\% Drawdown given default = 85\% Loss given default = 55\%
+\end{question}
+
+\begin{choices}
+    \item USD 280,000
+    \item USD 252,000
+    \item USD 224,000
+    \item USD 196,000
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 计算过程如下：
+        \begin{enumerate}
+            \item 计算违约时的风险敞口（AE）：
+            \begin{itemize}
+                \item 已使用额度 = 30,000,000
+                \item 未使用额度 = 150,000,000 - 30,000,000 = 120,000,000
+                \item 违约时的提款率 = 85\%
+                \item AE = 30,000,000 + (120,000,000 × 85\%) = 30,000,000 + 102,000,000 = 132,000,000
+            \end{itemize}
+            \item 计算预期损失：
+            \begin{itemize}
+                \item 违约概率 = 0.45\%
+                \item 违约损失率 = 55\%
+                \item 预期损失 = 132,000,000 × 0.45\% × 55\% = 252,000
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+    \end{itemize}
+\end{explanation}
+
+\checklist{贷款损失准备金的计算需要考虑违约时的风险敞口、违约概率和违约损失率}
+
+\begin{question}
+    The senior management of a large credit card issuer wants to strengthen the policies and procedures that the firm uses to manage its model risk. The CRO explains to the senior management the roles and responsibilities of different business functions in managing model risk in alignment with best practices and existing supervisory expectations. Which of the following statements would the CRO be correct to make?
+\end{question}
+
+\begin{choices}
+    \item The enterprise risk management function should be responsible for developing and maintaining documentation for the firm's models
+    \item The model development team should be responsible for maintaining the firm-wide framework for managing model risk
+    \item The validation team should start the model validation process after a model has been put in use and has begun to generate observable data
+    \item The internal audit function should verify that model owners are complying with the firm's policies for managing model risk
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 企业风险管理部门的职责是制定和维护全公司范围内的模型风险管理框架，而不是负责具体模型的文档开发。模型的文档开发应该由模型开发团队负责。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 模型开发团队的职责是开发和维护具体的模型，而不是维护全公司范围内的模型风险管理框架。这个职责应该由企业风险管理部门负责。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 模型验证应该在模型投入使用之前就开始，而不是等到模型开始生成可观察数据之后。这是为了确保模型在投入使用前就符合要求。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 内部审计部门的职责是验证模型所有者是否遵守公司的模型风险管理政策。这是内部审计部门在模型风险管理中的正确角色。
+    \end{itemize}
+\end{explanation}
+
+\checklist{内部审计部门负责验证模型所有者是否遵守模型风险管理政策}
+
+
+
+
+
+\newpage
+
+
+
+\end{document}

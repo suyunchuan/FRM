@@ -167,7 +167,7 @@
     \end{itemize}
 \end{explanation}
 
-\checklist{审计意见的差异源于问题的“严重性”和“影响范围”（较简单，考概念辨析）}
+\checklist{审计意见的差异源于问题的“严重性”和“影响范围”（考概念辨析）}
 
 
 \begin{question}
@@ -290,7 +290,7 @@
     \end{itemize}
 \end{explanation}
 
-\checklist{考察信用分析的核心四要素}
+\checklist{信用分析的核心四要素}
 
 
 \begin{question}
@@ -335,7 +335,7 @@
     \end{itemize}
 \end{explanation}
 
-\checklist{考察如何使用银行信用分析时各财务报表的作用}
+\checklist{如何使用银行信用分析时各财务报表的作用}
 
 
 
@@ -384,11 +384,11 @@
     
     \textbf{D选项正确，不选。}
     \begin{itemize}
-        \item 这个说法是正确的。资不抵债的银行如果能够获得流动性支持（如来自其他银行或央行的资金），确实可以继续运营。
+        \item 资不抵债的银行如果能够获得流动性支持（如来自其他银行或央行的资金），确实可以继续运营。
     \end{itemize}
 \end{explanation}
 
-\checklist{考察破产与资不抵债的区别、银行持续经营的监管特例}
+\checklist{破产与资不抵债的区别、银行持续经营的监管特例（注意流动支持）}
 
 \begin{question}
     Dragon Capital, Inc., made a loan to a small start-up firm. The firm grew rapidly, and it appeared that Dragon had made a good credit decision. However, the firm grew too fast and could not sustain the growth. It eventually failed. Dragon had initially estimated its exposure at default to be \$1,500,000. Because of the firm's rapid growth and resulting increases in the line of credit, Dragon ultimately lost \$1,800,000. In terms of credit risk, this is an example of:
@@ -408,26 +408,27 @@
 \begin{explanation}
     \textbf{A选项错误。}
     \begin{itemize}
-        \item 这个选项描述的是对已提供商品或服务的付款违约，而本题中涉及的是金融债务的违约。
+        \item 描述的是已交付商品或服务的付款违约，与本题中涉及的金融债务无关。
     \end{itemize}
     
     \textbf{B选项错误。}
     \begin{itemize}
-        \item 这个选项提到评级机构降级导致的损失，但本题中的公司是一家小型初创企业，不太可能被评级。
+        \item 涉及评级下调，但题干未提及评级变化
     \end{itemize}
     
     \textbf{C选项正确。}
     \begin{itemize}
-        \item 由于违约时的风险敞口（1,800,000美元）比最初估计的（1,500,000美元）要大，Dragon的损失超出了预期。这是因为公司快速增长导致信贷额度增加，最终在违约时产生了更大的风险敞口。
+        \item 信用风险中的非预期损失（UL）可能因EAD超预估而扩大。
+        \item 本题中，因借款人信用额度提升（即EAD动态增加），最终损失超过初始估值，属于“违约时敞口大于预期”的情景。
     \end{itemize}
     
     \textbf{D选项错误。}
     \begin{itemize}
-        \item 这个选项提到回收率低于预期导致的损失，但题目中并没有提到任何关于回收的信息。
+        \item 讨论回收率（Recovery Rate）低于预期，但题干未提及。
     \end{itemize}
 \end{explanation}
 
-\checklist{违约时风险敞口大于预期导致损失超出预期}
+\checklist{对风险敞口动态性与信用损失关系的理解}
 
 \begin{question}
     A bank has booked a loan with total commitment of USD 60,000 of which 75\% is currently outstanding. The default probability of the loan is assumed to be 3\% for the next year and loss given default (LGD) is estimated at 40\%. The standard deviation of LGD is 35\% and the standard deviation of the default event indicator is 8\%. Drawdown on default is assumed to be 70\%. The expected losses for the bank are:
@@ -436,7 +437,7 @@
 \begin{choices}
     \item USD 450
     \item USD 540
-    \item USD 630
+    \item USD 666
     \item USD 720
 \end{choices}
 
@@ -445,43 +446,29 @@
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项错误。}
+    \textbf{预期损失（Expected Loss, EL）计算公式：} 
+    \[
+    \text{EL} = \text{EAD} \times \text{PD} \times \text{LGD}
+    \]
+    
+    \textbf{步骤一：计算违约敞口（EAD）}
     \begin{itemize}
-        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
+        \item 总授信额度（Total Commitment）：\$60{,}000
+        \item 已提款部分（Outstanding）：\$60{,}000 × 75\% = \$45{,}000
+        \item 未提款部分中，违约时将提取 70\%：\$60{,}000 × 25\% × 70\% = \$10{,}500
+        \item EAD = \$45{,}000 + \$10{,}500 = \$55{,}500
     \end{itemize}
     
-    \textbf{B选项错误。}
-    \begin{itemize}
-        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
-    \end{itemize}
+    \textbf{步骤二：代入公式计算}
+    \begin{align*}
+    \text{EL} &= 55{,}500 \times 0.03 \times 0.4 \\
+             &= 666
+    \end{align*}
     
-    \textbf{C选项正确。}
-    \begin{itemize}
-        \item 计算过程如下：
-        \begin{enumerate}
-            \item 计算调整后的风险敞口（AE）：
-            \begin{itemize}
-                \item 已使用额度 = 60,000 × 75\% = 45,000
-                \item 未使用额度 = 60,000 - 45,000 = 15,000
-                \item 违约时的提款率 = 70\%
-                \item AE = 45,000 + (15,000 × 70\%) = 45,000 + 10,500 = 55,500
-            \end{itemize}
-            \item 计算预期损失：
-            \begin{itemize}
-                \item 违约概率 = 3\%
-                \item 违约损失率 = 40\%
-                \item 预期损失 = 55,500 × 3\% × 40\% = 630
-            \end{itemize}
-        \end{enumerate}
-    \end{itemize}
     
-    \textbf{D选项错误。}
-    \begin{itemize}
-        \item 这个选项的计算结果不正确。让我们看看正确的计算过程。
-    \end{itemize}
-\end{explanation}
+    \end{explanation}
 
-\checklist{预期损失的计算需要考虑调整后的风险敞口、违约概率和违约损失率}
+\checklist{预期损失的计算公式（理解公式中的风险敞口，排除干扰数据）}
 
 
 \begin{question}
@@ -490,7 +477,7 @@
 
 \begin{choices}
     \item USD 280,000
-    \item USD 252,000
+    \item USD 327,000
     \item USD 224,000
     \item USD 196,000
 \end{choices}
@@ -499,9 +486,9 @@
     B
 \end{correctanswer}
 \begin{explanation}
-    \textbf{本题考察预期损失的计算：}
+    \textbf{预期损失（Expected Loss, EL）计算公式：} 
     \[
-    \text{Expected Loss} = \text{EAD} \times \text{PD} \times \text{LGD}
+    \text{EL} = \text{EAD} \times \text{PD} \times \text{LGD}
     \]
 
     \textbf{已知条件：}
@@ -518,7 +505,7 @@
     \begin{itemize}
         \item 违约时提款金额 = \$120,000,000 × 85\% = \$102,000,000
         \item 风险敞口（EAD） = \$30,000,000 + \$102,000,000 = \$132,000,000
-        \item 预期损失 = \$132,000,000 × 0.0045 × 0.55 = \textbf{\$252,000}
+        \item 预期损失 = \$132,000,000 × 0.0045 × 0.55 = \$327,000
     \end{itemize}
 
     \textbf{正确答案：B}
@@ -526,7 +513,7 @@
 
 
 
-\checklist{贷款损失准备金的计算需要考虑违约时的风险敞口、违约概率和违约损失率}
+\checklist{预期损失的计算公式（注意公式中风险敞口）}
 
 \begin{question}
     The senior management of a large credit card issuer wants to strengthen the policies and procedures that the firm uses to manage its model risk. The CRO explains to the senior management the roles and responsibilities of different business functions in managing model risk in alignment with best practices and existing supervisory expectations. Which of the following statements would the CRO be correct to make?
@@ -546,17 +533,19 @@
 \begin{explanation}
     \textbf{A选项错误。}
     \begin{itemize}
-        \item 模型文档的开发和维护应由模型开发团队主导，而非风险管理部门。风险管理（ERM）的职责是监督框架执行。
+        \item 模型文档的开发和维护应由模型开发团队主导，而非风险管理部门。
+        \item 风险管理（ERM）的职责是监督框架执行。
     \end{itemize}
     
     \textbf{B选项错误。}
     \begin{itemize}
-        \item 全行模型风险管理框架的制定和维护是风险管理职能（如CRO办公室）的核心职责，而非模型开发团队。
+        \item 全行模型风险管理框架的制定和维护是风险管理职能的核心职责，而非模型开发团队。
     \end{itemize}
     
     \textbf{C选项错误。}
     \begin{itemize}
-        \item 监管要求验证必须前置，以确保模型投产前的可靠性。所以模型验证应在投入使用前完成，而非依赖使用后生成的数据。
+        \item 监管要求验证必须前置，以确保模型投产前的可靠性。
+        \item 所以模型验证应在投入使用前完成，而非依赖使用后生成的数据。
     \end{itemize}
     
     \textbf{D选项正确。}
@@ -565,7 +554,7 @@
     \end{itemize}
 \end{explanation}
 
-\checklist{考察模型风险管理的“三道防线”架构}
+\checklist{模型风险管理的“三道防线”架构}
 
 
 

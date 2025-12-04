@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  30 JUN 2025 18:28
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  2 JUL 2025 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -834,16 +834,16 @@ Package rerunfilecheck Warning: File `第一讲：信用风险基本概念.out' 
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `第一讲：信用风险基本概念.out':
-(rerunfilecheck)             Before: B5E90D4F52BCCAE7FD79A741817945D4;3113
-(rerunfilecheck)             After:  1849293112ADDE5E43FF854B99E0DA47;3193.
+(rerunfilecheck)             Before: 31AA2C50F746982CB30246ABA0F1AF08;2977
+(rerunfilecheck)             After:  8AB8F3A472A66B15D16F52B2DAEB55C1;3033.
  ) 
 Here is how much of TeX's memory you used:
- 26670 strings out of 475796
- 569431 string characters out of 5774033
- 970828 words of memory out of 5000000
- 49158 multiletter control sequences out of 15000+600000
+ 26696 strings out of 475796
+ 571105 string characters out of 5774033
+ 969692 words of memory out of 5000000
+ 49184 multiletter control sequences out of 15000+600000
  563846 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,6n,111p,826b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,111p,826b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on 第一讲：信用风险基本概念.pdf (7 pages).

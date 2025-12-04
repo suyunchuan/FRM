@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  26 JUN 2025 18:04
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  3 JUL 2025 16:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -823,10 +823,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [6]
 
 [7]
-Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-
 
 [8]
 
@@ -839,12 +835,12 @@ Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=t
 [12]
 
 [13]
+Missing character: There is no ≈ (U+2248) in font [lmroman10-regular]:mapping=tex-text;!
+
 
 [14]
 
 [15]
-Missing character: There is no ≈ (U+2248) in font [lmroman10-regular]:mapping=tex-text;!
-
 
 [16]
 
@@ -883,15 +879,15 @@ Missing character: There is no ≈ (U+2248) in font [lmroman10-regular]:mapping=
 [33]
 
 [34]
-
-[35]
-
-[36]
 Missing character: There is no Ⅰ (U+2160) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no Ⅱ (U+2161) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no Ⅲ (U+2162) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no Ⅳ (U+2163) in font [lmroman10-regular]:mapping=tex-text;!
 
+
+[35]
+
+[36]
 
 [37]
 
@@ -901,25 +897,28 @@ Missing character: There is no Ⅳ (U+2163) in font [lmroman10-regular]:mapping=
 
 [40]
 
-[41]
-
-[42]
-
-[43] (./第二讲：信用风险建模和分析.aux)
+[41] (./第二讲：信用风险建模和分析.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
-Package rerunfilecheck Info: File `第二讲：信用风险建模和分析.out' has not changed.
-(rerunfilecheck)             Checksum: 37668874632C95E66A8E1A28A5BDE6BF;20530.
+
+
+Package rerunfilecheck Warning: File `第二讲：信用风险建模和分析.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `第二讲：信用风险建模和分析.out':
+(rerunfilecheck)             Before: 84E7C895B61FB6A33593C8C96A47BD01;19762
+(rerunfilecheck)             After:  E74EF0AEF848C9D45D4BE455239F38A6;19744.
  ) 
 Here is how much of TeX's memory you used:
- 26677 strings out of 475796
- 569053 string characters out of 5774033
- 1034809 words of memory out of 5000000
- 49163 multiletter control sequences out of 15000+600000
+ 26763 strings out of 475796
+ 574637 string characters out of 5774033
+ 1033030 words of memory out of 5000000
+ 49249 multiletter control sequences out of 15000+600000
  563862 words of font info for 74 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,10n,111p,830b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,111p,830b,586s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 第二讲：信用风险建模和分析.pdf (43 pages).
+Output written on 第二讲：信用风险建模和分析.pdf (41 pages).

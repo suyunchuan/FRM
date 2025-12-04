@@ -1,0 +1,774 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+%\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+\usepackage{multirow}
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+%模版
+
+
+\section{考点1：Foreign Exchange Quotes 外汇报价}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a foreign exchange trading firm is examining the EUR/USD exchange rates. Assume the EUR/USD spot quote is bid 1.1832 and ask 1.1840. The six - month forward points quote is bid 48.25 and ask 51.75. What is the forward bid - ask spread closest to?
+    \end{question}
+    
+    \begin{choices}
+        \item 0.001150
+        \item 0.001343
+        \item 0.000450
+        \item 0.000775
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算六个月远期买入价。}
+    \begin{itemize}
+    \item 即期买入价为\(1.1832\)，六个月远期点数买入价为\(48.25\)（因为点数是小数点后四位的变动，所以\(48.25\)实际为\(0.004825\)），则六个月远期买入价\( = 1.1832 + 0.004825 = 1.188025\)。
+    \end{itemize}
+    \textbf{步骤2：计算六个月远期卖出价。}
+    \begin{itemize}
+    \item 即期卖出价为\(1.1840\)，六个月远期点数卖出价为\(51.75\)（实际为\(0.005175\)），则六个月远期卖出价\( = 1.1840 + 0.005175 = 1.189175\)。
+    \end{itemize}
+    \textbf{步骤3：计算远期买卖价差。}
+    \begin{itemize}
+    \item 远期买卖价差 = 远期卖出价 - 远期买入价，即\(1.189175 - 1.188025 = 0.00115\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{外汇远期报价与价差计算（关键是掌握利用即期汇率与远期点数计算远期汇率的方法，以及买卖价差的计算）}
+
+
+\section{考点2:Estimating Foreign Exchange Risk 外汇风险估算}
+\setcounter{question}{0}
+\begin{question}
+    A US - based multinational firm has a subsidiary in Japan. When finalizing its quarterly financial statements, it is required to translate the subsidiary's yen - denominated financial data into US dollars. Due to fluctuations in the yen - dollar exchange rate, there could be a variation in the firm's reported earnings. What kind of risk is this firm exposed to?
+    \end{question}
+    
+    \begin{choices}
+        \item Transaction risk
+        \item Translation risk
+        \item Economic risk
+        \item Operational risk
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项A错误。}
+    \begin{itemize}
+    \item 交易风险与交易过程中的应收和应付款项有关。在本情境中，并非是交易过程中因汇率变动产生的风险，所以不属于交易风险。
+    \end{itemize}
+    \textbf{选项B正确。}
+    \begin{itemize}
+    \item 折算风险，也叫会计风险，是指当以外币计价的资产和负债在编制财务报表时，需要以公司的本币进行计价，在此过程中因汇率波动而产生的风险。本题中公司将日元计价的财务数据换算成美元编制报表，面临的正是折算风险。
+    \end{itemize}
+    \textbf{选项C错误。}
+    \begin{itemize}
+    \item 经济风险是指汇率变动对公司未来现金流产生影响的风险，比如影响企业的生产销售数量、价格、成本等，本题并非这种情况。 
+    \end{itemize}
+    \textbf{选项D错误。}
+    \begin{itemize}
+    \item 操作风险是指由不完善或有问题的内部程序、人员及系统或外部事件所造成损失的风险，与本题汇率换算导致的风险不相关。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{外汇风险（通过实际案例判断风险类型）}
+    
+    \begin{question}
+    Which of the following statements accurately differentiates among Transaction risk, Translation risk, and Economic risk?
+    \end{question}
+    
+    \begin{choices}
+        \item Transaction risk impacts future cash flows, Translation risk impacts reported earnings, and Economic risk impacts receivables and payables.
+        \item Transaction risk impacts receivables and payables, Translation risk impacts reported earnings, and Economic risk impacts future cash flows.
+        \item Transaction risk impacts reported earnings, Translation risk impacts receivables and payables, and Economic risk impacts future cash flows.
+        \item Transaction risk impacts receivables and payables, Translation risk impacts future cash flows, and Economic risk impacts reported earnings.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项A错误。}
+    \begin{itemize}
+    \item 交易风险影响的是交易过程中的应收和应付款项，而非未来现金流；经济风险影响的是未来现金流，而非应收和应付款项。
+    \end{itemize}
+    \textbf{选项B正确。}
+    \begin{itemize}
+    \item 交易风险发生在使用外币进行交易时，会影响应收和应付款项；折算风险发生在编制财务报表时，会影响报告收益；经济风险是由于汇率变动对公司未来现金流产生影响。
+    \end{itemize}
+    \textbf{选项C错误。}
+    \begin{itemize}
+    \item 交易风险不影响报告收益，折算风险也不影响应收和应付款项。
+    \end{itemize}
+    \textbf{选项D错误。}
+    \begin{itemize}
+    \item 折算风险影响的是报告收益，不是未来现金流；经济风险影响的是未来现金流，不是报告收益。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{外汇风险（交易风险、折算风险和经济风险概念的辨析）}
+
+\begin{question}
+    A risk modeler at an international investment bank is building a new factor - based model to assess the potential risk exposures of foreign exchange (FX) trades. The modeler is carefully selecting factors for the model and analyzing their impacts on the model's performance. Which of the following statements should the modeler most likely take into account when constructing the model?
+    \end{question}
+    
+    \begin{choices}
+        \item The pair - wise exchange rates of developed countries' currencies can be regarded as stable for periods less than 2 months.
+        \item The value of a country's currency will have a negative correlation with a factor representing variations in that country's money supply.
+        \item The most crucial factor in forecasting a country's interest rates is the economic growth rate of the country.
+        \item Employing a vast number of underlying factors will enable the model to precisely forecast future exchange rates.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 根据货币数量论等相关理论，如果一个国家增加货币供应量，在其他条件不变的情况下，该国货币的价值会下降。例如，如果国家A增加其货币供应量，而国家B保持不变，那么国家A的货币相对于国家B的货币价值会降低，所以国家货币价值与该国货币供应量的变化呈负相关。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 即使是短期（如小于2个月），外汇汇率也会受到多种因素的影响而不断变化，如经济数据发布、央行政策调整等，不能简单地认为发达国家货币的两两汇率是稳定的。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 预测一个国家的利率时，虽然经济增长是一个重要因素，但不是最关键的。利率还受到通货膨胀预期、央行货币政策目标、国际资本流动等多种因素的综合影响。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 外汇市场是复杂且充满不确定性的，未来汇率受到众多难以预测的因素影响，如政治事件、突发事件等。即使使用大量的潜在因素，也无法精确预测未来汇率。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{外汇交易风险模型中因素的选择及影响（关键是理解货币供应量与货币价值的关系，以及外汇市场的不确定性和影响利率、汇率的多种因素）}
+
+\begin{question}
+    A large international corporation is implementing hedging strategies to manage various risks it encounters. Among the following types of risks, which one would the corporation likely find the most difficult to hedge?
+    \end{question}
+    
+    \begin{choices}
+        \item Liquidity risk, which can impact the company's ability to meet short - term obligations.
+        \item Credit risk, which pertains to the potential default of counterparties.
+        \item Economic risk, which is influenced by broader economic factors and their long - term impact on the company's cash flows.
+        \item Operational risk, which involves risks from internal processes, people, and systems.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 经济风险受宏观经济因素如经济衰退、利率变动、汇率波动等影响，这些因素难以准确预测，其对公司现金流的长期影响也难以量化和对冲，相比其他风险更具挑战性。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 流动性风险可通过持有现金储备、建立信贷额度等方式管理和缓解，并非最难对冲的风险。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 信用风险可通过信用评级、抵押、担保以及信用衍生品（如信用违约互换）等手段进行对冲和管理。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 操作风险可通过完善内部流程、加强员工培训、建立风险监控系统等方式进行控制和缓释。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{不同类型风险的对冲难度比较（关键是理解各类风险的特性，判断其对冲的难易程度）}
+\section{考点3:Determination of exchange rates 汇率的决定}
+\setcounter{question}{0}
+\begin{question}
+    A large international bank has branches in four different countries. The CFO of the bank is considering issuing a bond in one of these countries and believes that the country with the lowest real interest rate will offer the most favorable terms for the bank. The relevant information is presented in the table below:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Country & Nominal interest rate & Inflation \\ \hline
+    A & 4.2\% & 2.1\% \\ \hline
+    B & 4.4\% & 2.2\% \\ \hline
+    C & 4.5\% & 2.4\% \\ \hline
+    D & 4.8\% & 2.5\% \\ \hline
+    \end{tabular}
+    \end{center}
+    Assuming all other parameters are equal, in which of the four countries should the bank issue the bond?
+    \end{question}
+    
+    \begin{choices}
+        \item Country A
+        \item Country B
+        \item Country C
+        \item Country D
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确实际利率计算公式}
+    \begin{itemize}
+    \item 实际利率公式为\(R_{real}=\frac{1 + R_{nom}}{1 + R_{infl}} - 1\)，其中\(R_{real}\)是实际利率，\(R_{nom}\)是名义利率，\(R_{infl}\)是通货膨胀率。
+    \end{itemize}
+    \textbf{步骤2：分别计算各国实际利率}
+    \begin{itemize}
+    \item 对于Country A：\(R_{real}=\frac{1 + 0.042}{1 + 0.021}-1=\frac{1.042}{1.021}-1 =2.06\%\) 。
+    \item 对于Country B：\(R_{real}=\frac{1 + 0.044}{1 + 0.022}-1=\frac{1.044}{1.022}-1 = 2.15\%\) 。
+    \item 对于Country C：\(R_{real}=\frac{1 + 0.045}{1 + 0.024}-1=\frac{1.045}{1.024}-1 = 2.05\%\) 。
+    \item 对于Country D：\(R_{real}=\frac{1 + 0.048}{1 + 0.025}-1=\frac{1.048}{1.025}-1 = 2.24\%\) 。
+    \end{itemize}
+    \textbf{步骤3：比较实际利率并确定答案}
+    \begin{itemize}
+    \item 发行债券时，实际利率越低，债券的吸引力越大。通过比较，Country C的实际利率最低，故应选择在Country C发行债券。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{根据名义利率和通货膨胀率计算实际利率并决策（关键是掌握实际利率计算公式）}
+
+\begin{question}
+    A financial advisor is analyzing the interest rate situation in Country X. The real interest rate in Country X is 4\% and the expected inflation rate is 40\%. What is the nominal interest rate closest to?
+    \end{question}
+    
+    \begin{choices}
+        \item 42\%
+        \item 44\%
+        \item 46\%
+        \item 48\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 据费雪效应公式\(1 + i=(1 + r)(1 + \pi)\)，其中\(i\)是名义利率，\(r\)是实际利率，\(\pi\)是通货膨胀率。
+    \item 将\(r = 0.04\)，\(\pi= 0.4\)代入公式:\(i =(1 + 0.04)\times(1 + 0.4) - 1=45.6\% \approx 46\%\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{费雪效应公式的应用（根据实际利率和通货膨胀率计算名义利率）}
+
+    \begin{question}
+        A financial advisor is analyzing the exchange rate between the British pound (GBP) and the Canadian dollar (CAD). The expected annual inflation rate in the UK is 3\% and in Canada is 1.5\%. Given that the current spot exchange rate is GBP CAD 1.7000 and purchasing - power parity (PPP) holds, what is the expected exchange rate in one year?
+        \end{question}
+        
+        \begin{choices}
+            \item 1.6745
+            \item 1.7255
+            \item 1.6922
+            \item 1.7078
+        \end{choices}
+        
+        \begin{correctanswer}
+        A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}：
+        \begin{itemize}
+        \item 英国通胀率比加拿大高\(3\% - 1.5\% = 1.5\%\)，根据购买力平价理论，英镑相对加元应贬值\(1.5\%\) 。
+        \item 计算贬值后的汇率，使用公式：\(\text{预期汇率}=\text{当前汇率}\times(1 - \text{贬值率})\) ，即\(1.7000\times(1 - 0.015)=1.7000\times0.985 = 1.6745\) 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{购买力平价（PPP）理论的应用（关键是根据通胀率差值计算预期汇率）}
+
+
+
+\section{考点4:Covered and Uncovered Interest Rate Parity 有抛补利率和非抛补利率平价理论}
+\setcounter{question}{0}
+\begin{question}
+    A financial advisor has 8,000,000 EUR and needs to convert it into GBP. The current exchange rate is 0.85 EUR/GBP. If GBP appreciates by 4\%, will the conversion result in a gain or a loss compared to the original situation?
+    \end{question}
+    
+    \begin{choices}
+        \item Gain
+        \item Loss
+        \item No gain or loss
+        \item Cannot be determined
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：按第一种汇率理解计算原始可兑换数量。}
+    \begin{itemize}
+    \item 若0.85 EUR/GBP表示1 GBP = 0.85 EUR，那么8,000,000 EUR可以兑换的GBP数量为：$8000000\div0.85=9411764.71$ GBP。
+    \end{itemize}
+    \textbf{步骤2：计算GBP升值后的汇率及可兑换数量。}
+    \begin{itemize}
+    \item GBP升值4\%后，新汇率为1 GBP = $0.85\times(1 + 4\%)$ EUR = 0.884 EUR。
+    \item 此时8,000,000 EUR可以兑换的GBP数量为：$8000000\div0.884\approx9049773.76$ GBP。
+    \end{itemize}
+    \textbf{步骤3：比较并判断盈亏。}
+    \begin{itemize}
+    \item 因为$9049773.76 < 9411764.71$，兑换的GBP数量变少了，所以是亏损。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{货币升值的影响（关键是计算单一货币升值对汇率的影响）}
+
+    \begin{question}
+        A risk analyst for an equity hedge fund is analyzing the relationship between interest rates and forward exchange rates under covered interest parity. If the risk - free rate for currency A is lower than that for currency B, which of the following statements is correct?
+        \end{question}
+        
+        \begin{choices}
+            \item Currency A is weaker in the forward market than in the spot market.
+            \item Currency A is stronger in the forward market than in the spot market.
+            \item The forward exchange rate between currency A and currency B is not affected by the interest rate differential.
+            \item The spot exchange rate between currency A and currency B will remain unchanged.
+        \end{choices}
+        
+        \begin{correctanswer}
+        B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{选项A错误。}
+        \begin{itemize}
+        \item 根据抛补利率平价理论，当货币A的无风险利率低于货币B的无风险利率时（$R_{A}<R_{B}$），货币A在远期市场应该是升值的，而不是贬值（即不是更弱）。
+        \end{itemize}
+        \textbf{选项B正确。}
+        \begin{itemize}
+        \item 当$R_{A}<R_{B}$时，依据抛补利率平价理论，货币A在远期市场相对即期市场是更强的，会升值。
+        \end{itemize}
+        \textbf{选项C错误。}
+        \begin{itemize}
+        \item 抛补利率平价理论明确表明远期汇率和利率差异密切相关，通过公式$F = S\times\frac{(1 + R_{YYY})^{T}}{(1 + R_{XXX})^{T}}$体现，所以远期汇率受利率差异影响。
+        \end{itemize}
+        \textbf{选项D错误。}
+        \begin{itemize}
+        \item 利率差异会影响远期汇率，虽然不一定直接改变即期汇率，但题干讨论的是远期市场与利率关系，且即期汇率并非完全不受外部因素影响而不变。 
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{抛补利率平价理论(利率差异与远期汇率中货币强弱的关系)}
+
+\begin{question}
+    An options trader knows that the spot exchange rate between USD and EUR is 1.1 USD/EUR. The annual risk - free interest rate in the US is 2\% and in the eurozone is 1\%. What is the 1 - year forward exchange rate according to the covered interest parity formula?
+    \end{question}
+    
+    \begin{choices}
+        \item 1.0893 USD/EUR
+        \item 1.1109 USD/EUR
+        \item 1.0998 USD/EUR
+        \item 1.1202 USD/EUR
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 抛补利率平价公式为$F = S\times\frac{(1 + R_{USD})^{T}}{(1 + R_{EUR})^{T}}$，其中$S = 1.1$ USD/EUR。
+    \item $F=1.1\times\frac{(1 + 0.02)^{1}}{(1 + 0.01)^{1}}=1.1\times\frac{1.02}{1.01}=1.1109$ USD/EUR。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{抛补利率平价公式(通过即期汇率和两国利率计算远期汇率)}
+
+\begin{question}
+    An investor is studying the implications of interest rate parity theories. If both covered interest parity and uncovered interest parity hold simultaneously, which of the following statements is true regarding the exchange rates?
+    \end{question}
+    
+    \begin{choices}
+        \item The forward exchange rate is equal to the current spot exchange rate.
+        \item The forward exchange rate is equal to the expected future spot exchange rate. 
+        \item The forward exchange rate is greater than the current spot exchange rate.
+        \item The forward exchange rate is less than the expected future spot exchange rate.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项B正确。}
+    \begin{itemize}
+    \item 抛补利率平价通过套利来解释利率和汇率关系，非抛补利率平价通过市场预期来解释。当抛补利率平价和非抛补利率平价同时成立时，远期汇率等于预期的未来即期汇率。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{抛补利率平价vs非抛补利率平价（二者同时成立时的后果是远期汇率等于“预期的未来即期汇率”）}
+
+\begin{question}
+    A risk analyst at a bank is comparing covered interest parity and uncovered interest parity. Which of the following statements accurately describes a characteristic of these theories?
+    \end{question}
+    
+    \begin{choices}
+        \item Covered interest parity assumes risk - neutral investors, while uncovered interest parity does not make any assumption about investor risk preference.
+        \item Uncovered interest parity relies on arbitrage activities in the forward market, while covered interest parity is based on market expectations.
+        \item Covered interest parity is more likely to hold in practice because it involves hedging through forward contracts, reducing exchange rate risk.
+        \item Uncovered interest parity is always more accurate in predicting future exchange rates as it takes into account actual market transactions.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项A错误。}
+    \begin{itemize}
+    \item 抛补利率平价并未对投资者的风险偏好做出假定；非抛补利率平价假定投资者是风险中立的 ，该选项说法颠倒。
+    \end{itemize}
+    \textbf{选项B错误。}
+    \begin{itemize}
+    \item 抛补利率平价通过在远期市场进行套期保值的套利活动来解释利率和汇率关系；非抛补利率平价是通过市场预期来解释 ，该选项说法错误。
+    \end{itemize}
+    \textbf{选项C正确。}
+    \begin{itemize}
+    \item 抛补利率平价中投资者可以通过签订远期外汇合同进行套期保值，规避汇率风险，在资本具有充分国际流动性的前提下，更有可能在实践中成立。
+    \end{itemize}
+    \textbf{选项D错误。}
+    \begin{itemize}
+    \item 非抛补利率平价基于市场预期，而市场预期不一定准确，且没有实际交易的强制约束，不一定总是更准确地预测未来汇率。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{抛补利率平价vs非抛补利率平价（假定条件、理论基础辨析）}
+
+
+\begin{question}
+    A financial advisor is educating a client about interest rate parity theories. Which of the following statements correctly contrasts covered interest parity and uncovered interest parity?
+    \end{question}
+    
+    \begin{choices}
+        \item Covered interest parity is based on no - arbitrage in the forward market with hedging, while uncovered interest parity is based on expected returns without hedging.
+        \item Uncovered interest parity uses forward contracts to lock in exchange rates, while covered interest parity relies on expected future spot rates.
+        \item Covered interest parity assumes investors are risk - averse, and uncovered interest parity assumes investors are risk - seeking.
+        \item Uncovered interest parity is mainly applicable in the short - term, and covered interest parity is mainly applicable in the long - term.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项A正确。}
+    \begin{itemize}
+    \item 抛补利率平价是投资者通过在远期市场签订与套利方向相反的远期外汇合同（套期保值），实现无套利均衡 ；非抛补利率平价是基于投资者对未来汇率的预期，不进行套期保值，追求预期收益。
+    \end{itemize}
+    \textbf{选项B错误。}
+    \begin{itemize}
+    \item 是抛补利率平价使用远期合同锁定汇率，而非抛补利率平价依赖预期未来即期汇率，该选项说法颠倒。
+    \end{itemize}
+    \textbf{选项C错误。}
+    \begin{itemize}
+    \item 抛补利率平价未对投资者风险偏好做假定；非抛补利率平价假定投资者风险中立，并非分别假定投资者是风险厌恶和风险追求 。
+    \end{itemize}
+    \textbf{选项D错误。}
+    \begin{itemize}
+    \item 两种理论并没有严格的长短期适用之分，该说法没有理论依据。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{抛补利率平价vs非抛补利率平价（假定条件、理论基础辨析）}
+
+    \begin{question}
+        A foreign exchange analyst at an international bank is studying the exchange rate between the U.S. dollar and the Euro. The current exchange rate is 1.30 USD per EUR. The current USD - denominated 1 - year risk - free interest rate is 3\% per year (annually compounded), and the current EUR - denominated 1 - year risk - free interest rate is 6\% per year (annually compounded). According to the interest rate parity theorem, what is the 1 - year forward exchange rate?
+        \end{question}
+        
+        \begin{choices}
+            \item 0.76
+            \item 1.26
+            \item 1.34
+            \item 0.80
+        \end{choices}
+        
+        \begin{correctanswer}
+            B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确利率平价定理公式}
+        \begin{itemize}
+            \item 对于每年复利的情况，利率平价定理公式为\(F = S\times\frac{1 + r_{USD}}{1 + r_{EUR}}\)，其中\(F\)是远期汇率，\(S\)是即期汇率，\(r_{USD}\)是美元无风险利率，\(r_{EUR}\)是欧元无风险利率。
+        \end{itemize}
+        \textbf{步骤2：代入数据计算}
+        \begin{itemize}
+            \item 已知\(S = 1.30\)，\(r_{USD}=3\%=0.03\)，\(r_{EUR}=6\% = 0.06\)。
+            \item 则\(F=1.30\times\frac{1 + 0.03}{1 + 0.06}=1.26\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{利率平价定理下远期汇率的计算（关键是正确运用利率平价定理公式）}
+
+\begin{question}
+    A foreign exchange analyst at an international bank is studying the exchange rate between the U.S. dollar and the Euro. The current exchange rate is 1.30 USD per EUR. The current USD - denominated 1 - year risk - free interest rate is 3\% per year (annually compounded), and the current EUR - denominated 1 - year risk - free interest rate is 6\% per year (annually compounded). According to the interest rate parity theorem, what is the 1 - year forward exchange rate?
+    \end{question}
+    
+    \begin{choices}
+        \item 0.76
+        \item 1.26
+        \item 1.34
+        \item 0.80
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确利率平价定理公式}
+    \begin{itemize}
+        \item 对于每年复利的情况，利率平价定理公式为\(F = S\times\frac{1 + r_{USD}}{1 + r_{EUR}}\)，其中\(F\)是远期汇率，\(S\)是即期汇率，\(r_{USD}\)是美元无风险利率，\(r_{EUR}\)是欧元无风险利率。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算}
+    \begin{itemize}
+        \item 已知\(S = 1.30\)，\(r_{USD}=3\%=0.03\)，\(r_{EUR}=6\% = 0.06\)。
+        \item 则\(F=1.30\times\frac{1 + 0.03}{1 + 0.06}=1.26\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利率平价定理下远期汇率的计算（关键是正确运用利率平价定理公式）}
+    
+\begin{question}
+    A currency trader at a foreign exchange trading desk is analyzing the market for USD and CHF. The current spot USDCHF rate is 1.3850 (1.3850 CHF = 1 USD). The 4 - month USD interest rates are 1.20\%, and the 4 - month Swiss interest rates are 0.40\% (assuming annually compounding). The trader notices that the 4 - month future price is USD 0.7200. In order to arbitrage, the trader should investment:
+    \end{question}
+    
+    \begin{choices}
+        \item Borrow USD, buy CHF spot, go short CHF futures
+        \item Borrow CHF, buy USD spot, go short USD futures
+        \item Borrow CHF, sell USD spot, go long USD futures
+        \item Borrow USD, sell USD spot, go long CHF futures
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算理论远期汇率}
+    \begin{itemize}
+        \item 根据利率平价理论，对于每年复利的情况，远期汇率\(F = S\times\frac{1 + r_{CHF}\times\frac{t}{12}}{1 + r_{USD}\times\frac{t}{12}}\)，其中\(S\)是即期汇率，\(r_{CHF}\)是瑞士法郎利率，\(r_{USD}\)是美元利率，\(t\)是期限（月）。
+        \item 已知\(S = 1.3850\)，\(r_{CHF}=0.40\%\)，\(r_{USD}=1.20\%\)，\(t = 4\)。
+        \item 则\(F=1.3850\times\frac{1 + 0.004\times\frac{4}{12}}{1 + 0.012\times\frac{4}{12}}=1.3813\)。
+    \end{itemize}
+    \textbf{步骤2：计算实际的远期价格}
+    \begin{itemize}
+        \item 实际远期价格是\(\frac{1}{0.7200}=1.3889\)。
+    \end{itemize}
+    \textbf{步骤3：判断套利策略}
+    \begin{itemize}
+        \item 1.3889CHF>1.3813CHF，说明美元被高估，瑞士法郎被低估。
+        \item 套利策略为：借入即期瑞士法郎，买入即期美元，同时卖出美元期货合约（即做空美元期货）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{基于利率平价理论的外汇套利策略（关键是准确计算理论远期汇率，并根据实际与理论汇率的差异制定套利策略）}
+    
+    \begin{question}
+        The interest rate in AAA is 2\% and in BBB is 5\%. The AAA/BBB spot rate is 1.2000. How would the six - month forward rate be quoted in points?
+        \end{question}
+        
+        \begin{choices}
+            \item 120
+            \item 132
+            \item 156
+            \item 175
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确远期汇率计算公式}
+        \begin{itemize}
+        \item 远期汇率公式为\(F = S\times\frac{(1 + r_{d})^{T}}{(1 + r_{f})^{T}}\)，其中\(F\)是远期汇率，\(S\)是即期汇率，\(r_{d}\)是本国利率，\(r_{f}\)是外国利率，\(T\)是期限。
+        \end{itemize}
+        \textbf{步骤2：代入数据计算远期汇率}
+        \begin{itemize}
+        \item 已知\(S = 1.2000\)，\(r_{d}=5\%\)（假设BBB利率为本国利率），\(r_{f}=2\%\)，\(T=\frac{6}{12}=0.5\) 。
+        \item 代入公式可得\(F = 1.2000\times\frac{(1 + 0.05)^{0.5}}{(1 + 0.02)^{0.5}}=1.2175\)。
+        \end{itemize}
+        \textbf{步骤3：计算报价点数}
+        \begin{itemize}
+        \item 远期汇率报价点数是将远期汇率与即期汇率差值乘以\(10000\) 。
+        \item 即\((1.2175 - 1.2000)\times10000 = 175\) 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{远期汇率计算及报价点数确定（注意报价点数的计算方法）}
+    
+\begin{question}
+    An investor is looking at interest rate differentials between the United Kingdom and Australia. The annual interest rate is 2\% in the United Kingdom and 6\% in Australia. The spot rate for the Australian dollar is GBP/AUD 1.80. What is the three - month arbitrage - free forward rate closest to?
+    \end{question}
+    
+    \begin{choices}
+        \item GBP/AUD 1.76
+        \item GBP/AUD 1.78
+        \item GBP/AUD 1.82
+        \item GBP/AUD 1.84
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确利率平价公式。}
+    \begin{itemize}
+    \item \(F = S\times(\frac{1 + r_{d}}{1 + r_{f}})^{t}\)，其中\(F\)是远期汇率，\(S\)是即期汇率，\(r_{d}\)是本国利率，\(r_{f}\)是外国利率，\(t\)是期限。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算。}
+    \begin{itemize}
+    \item 这里\(S = 1.80\)，\(r_{d}=0.06\)（澳大利亚利率），\(r_{f}=0.02\)（英国利率），\(t=\frac{3}{12}= 0.25\)。
+    \item \(F = 1.80\times(\frac{1 + 0.06}{1 + 0.02})^{0.25} =1.82\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{外汇远期利率平价公式的应用}
+
+\begin{question}
+    An investor notices that the GBPCHF exchange rate has shifted from GBPCHF 1.2500 to 1.2750. What is the percentage change in the CHF price of a GBP, closest to?
+    \end{question}
+    
+    \begin{choices}
+        \item -2.00\%
+        \item +2.00\%
+        \item -2.44\%
+        \item +2.44\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 计算百分比变化使用公式：\((\text{新汇率}/\text{旧汇率} - 1)\)。这里新汇率是1.2750，旧汇率是1.2500 。
+    \item 代入公式可得：\((1.2750 / 1.2500 - 1)= 2.00\%\)。因为GBP的CHF价格上升了，意味着GBP相对CHF升值了。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{汇率变化百分比的计算}
+
+    \begin{question}
+        A risk analyst at a foreign - exchange trading firm knows that the interest rate for the Australian dollar (AUD) is 4.85\% and for the euro (EUR) is 3.2\%. The current spot rate is EURAUD 1.6200. Calculate the 1 - year forward rate expressed in EURAUD.
+        \end{question}
+        
+        \begin{choices}
+            \item 1.6459
+            \item 1.6002
+            \item 1.6283
+            \item 1.5945
+        \end{choices}
+        
+        \begin{correctanswer}
+        A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}：
+        \begin{itemize}
+        \item 根据利率平价公式，\(forward = spot\times\frac{(1 + r_{AUD})}{(1 + r_{EUR})}\)。
+        \item 已知\(spot = 1.6200\)，\(r_{AUD}=0.0485\)，\(r_{EUR}=0.032\) 。
+        \item 代入公式计算：\(1.6200\times\frac{(1 + 0.0485)}{(1 + 0.032)}=1.6459\) 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{利率平价公式的应用（关键是正确识别两种货币的利率并代入公式计算）}
+
+
+
+    
+\end{document}

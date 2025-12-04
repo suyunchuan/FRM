@@ -1,0 +1,708 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{hyperref} %不需要目录盒子注释这
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+%\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+\usetikzlibrary{positioning}
+
+
+%目录设定
+
+
+
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+\section{考点1：Nominal Interest Rate \& Real Interest Rate 名义利率和实际利率}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a fixed - income investment firm knows that the nominal interest rate on a bond is 8\% and the inflation rate is 3\%. What is the approximate real interest rate according to the simplified formula?
+    \end{question}
+    
+    \begin{choices}
+        \item 3\%
+        \item 4\%
+        \item 5\%
+        \item 6\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确公式。}
+    \begin{itemize}
+    \item 近似计算真实利率的公式为 $R_{real}\approx R_{nom}-R_{infl}$，其中 $R_{nom}$ 是名义利率，$R_{infl}$ 是通胀率。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算。}
+    \begin{itemize}
+    \item 已知 $R_{nom} = 8\%$，$R_{infl}=3\%$，将其代入公式可得 $R_{real}\approx8\% - 3\%=5\%$。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{真实利率计算}
+
+\begin{question}
+    A junior trader on a derivatives trading desk is analyzing the relationship between nominal and real interest rates. Which of the following statements is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item The real interest rate is always higher than the nominal interest rate.
+        \item The nominal interest rate is adjusted for inflation to get the real interest rate.
+        \item The real interest rate is adjusted for inflation, and it can be approximated by subtracting the inflation rate from the nominal interest rate.
+        \item The inflation rate is calculated by subtracting the nominal interest rate from the real interest rate.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项A错误。}
+    \begin{itemize}
+    \item 通常情况下，名义利率包含了通胀补偿等因素，所以名义利率一般高于真实利率，而不是真实利率高于名义利率。
+    \end{itemize}
+    \textbf{选项B错误。}
+    \begin{itemize}
+    \item 是真实利率需要通过对名义利率进行通胀调整得到，而不是名义利率由真实利率调整而来。
+    \end{itemize}
+    \textbf{选项C正确。}
+    \begin{itemize}
+    \item 真实利率考虑了通胀因素，并且可以通过简化公式 $R_{real}\approx R_{nom}-R_{infl}$ 来近似计算，也就是用名义利率减去通胀率。
+    \end{itemize}
+    \textbf{选项D错误。}
+    \begin{itemize}
+        \item 根据真实利率的计算公式$R_{real}\approx R_{nom}-R_{infl}$，变形可得$R_{infl}\approx R_{nom}-R_{real}$ ，而不是用真实利率减去名义利率来计算通货膨胀率。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{辨析名义利率、真实利率和通胀率之间关系}
+
+\section{考点2:Forward Rate Agreement(FRA) 远期利率协议}
+\setcounter{question}{0}
+\begin{question}
+    A financial advisor is evaluating a forward rate agreement. Assume the one - year zero rate is 3.5\% and the eighteen - month zero rate is 4.5\% with continuous compounding. What is the value of a forward rate agreement that allows the holder to earn 8\% expressed with quarterly compounding, for a 6 - month period starting in one year on a notional of \$1,200,000?
+    \end{question}
+    
+    \begin{choices}
+        \item -\$7,814
+        \item -\$8,092
+        \item +\$7,814
+        \item +\$8,092
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算1年到1.5年的远期利率（连续复利）。}
+    \begin{itemize}
+    \item 根据连续复利下远期利率公式\(r_f=\frac{r_2\times t_2 - r_1\times t_1}{t_2 - t_1}\)，其中\(t_1 = 1\)年，\(t_2 = 1.5\)年 。代入可得\(r_f=\frac{0.045\times1.5 - 0.035\times1}{1.5 - 1}\)，计算得出年化理论远期利率\(r_f = 0.065\) 。
+    \end{itemize}
+    \textbf{步骤2：计算FRA的价值。}
+    \begin{itemize}
+    \item FRA的价值为：
+    \[
+    PV ( \frac{(R_F - R_k) \tau L}{1 + R_F \tau} )
+    \]
+    \item where \( R_{\text{Forward}} \) = forward rate between \( T_1 \) and \( T_2 \)
+    \item 代入已知数据，计算得出：
+    \[
+    Value= ( \frac{(0.08\times0.5 - (e^{0.065\times0.5}-1)) \times 1200000}{e^{0.045\times1.5}} ) = 7814
+    \]
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期利率协议价值计算(注意折现的时点)}
+
+\begin{question}
+    A risk analyst at a bank is reviewing the characteristics of forward rate agreements (FRAs). Which of the following statements about FRAs is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item FRAs are traded on organized exchanges, providing high liquidity and standardized terms.
+        \item In a FRA, the interest rates are in compound interest form, similar to most other interest rate instruments.
+        \item For a long FRA position, when the market interest rate rises, the position benefits as it receives a floating rate and pays a fixed rate. 
+        \item A short FRA position is also known as a fixed - rate payer, and it gains when the market interest rate falls.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 对于多头远期利率协议（Long FRA） ，其收取浮动利率，支付固定利率。当市场利率上升时，浮动利率升高，而支付的固定利率不变，所以收益增加 。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item FRA是在场外（OTC）市场交易，并非在有组织的交易所交易，不具备交易所交易的高流动性和标准化条款特点 。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 在FRA中，利率是单利形式（且是30/360 day basis），不是复利形式，这与其他多数利率工具不同 。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 空头远期利率协议（Short FRA）是收取固定利率，支付浮动利率，也被称为fixed - rate receiver 。当市场利率下降时，支付的浮动利率降低，才会获利，而不是固定利率 payer 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期利率协议（注意辨析FRA多头和空头收益情况）}
+
+\begin{question}
+    An investor has entered into an FRA, agreeing to pay a fixed rate of 4\% on \$1.5 million based on the quarterly rate in four months. Assume that rates are compounded quarterly. Calculate the payoff from the FRA if the quarterly rate is 2\% in four months.
+    \end{question}
+    
+    \begin{choices}
+        \item -\$7,500
+        \item -\$5,000
+        \item \$5,000
+        \item \$7,500
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确公式}
+    \begin{itemize}
+    \item FRA的支付公式为：名义本金×(浮动利率 - 固定利率)×期限。这里名义本金是\(1500000\)美元，固定利率\(r_f = 4\%\)，浮动利率\(r_l = 2\%\)，期限为季度，即\(0.25\)。
+    \end{itemize}
+    \textbf{步骤2：计算支付金额}
+    \begin{itemize}
+    \item 将数值代入公式可得：\(1500000\times(0.02 - 0.04)\times0.25=-7500\)美元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期利率协议（FRA）的支付计算}
+
+\begin{question}
+    Suppose the two - month and five - month floating rates are 3\% and 4\% respectively (continuously compounded rates). An investor enters into an FRA in which she will receive 7\% (assuming quarterly compounding) on a principal of \$4,000,000 between Months 2 and 5. What is the payoff from the FRA?
+    \end{question}
+    
+    \begin{choices}
+        \item \$15,258
+        \item \$20,345
+        \item \$22,772
+        \item \$30,567
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算远期利率 \(R_{Forward}\)}
+    \begin{itemize}
+    \item 根据公式 \(R_{Forward}=r_2+(r_2 - r_1)\times\frac{t_1}{t_2 - t_1}\)，其中 \(r_1 = 3\%\)（2个月浮动利率），\(r_2 = 4\%\)（5个月浮动利率），\(t_1=\frac{2}{12}\)，\(t_2=\frac{5}{12}\)。
+    \item 代入可得 \(R_{Forward}=0.04+(0.04 - 0.03)\times\frac{2}{5-2} = 4.67\%\)。
+    \end{itemize}
+    \textbf{步骤2：将连续复利远期利率转换为季度复利远期利率}
+    \begin{itemize}
+    \item 公式为 \(R_{Forward}\text{(季度复利)}=4\times(e^{R_{Forward}/4}-1)=4\times(e^{0.0467/4}-1) = 4.70\%\)。
+    \end{itemize}
+    \textbf{步骤3：计算FRA的支付金额}
+    \begin{itemize}
+        \item 支付公式为：
+        \begin{align*}
+        \text{payoff} &= \frac{\text{名义本金}\times(\text{合约利率} - \text{远期利率})\times(\text{期限差})}{1 + r_2\times(\text{期限差})} \\
+        &= \frac{4000000\times(0.07 - 0.047)\times(\frac{5}{12}-\frac{2}{12})}{1 + 0.04\times(\frac{5}{12}-\frac{2}{12})} \\
+        &= 22772.28\text{ 美元}
+        \end{align*}
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期利率协议（FRA）支付计算（关键是掌握远期利率计算、利率转换以及FRA支付公式，并准确代入数据计算）}
+
+\begin{question}
+    A financial manager at a firm is looking to hedge the interest - rate risk of a future borrowing. The firm plans to borrow \$15 million for 60 days starting in two years. The manager enters into a forward rate agreement (FRA) where the firm will pay a fixed rate, R(k), of 4.5\%. The FRA cash settles in two years (T = 2.0), not in arrears. All rates are expressed with quarterly compounding. If the actual 60 - day LIBOR observed two years forward turns out to be 5.5\%, what is the cash flow payment/receipt by the firm under the FRA?
+    \end{question}
+    
+    \begin{choices}
+        \item The firm pays \$24,772
+        \item The firm pays \$25,325
+        \item The firm receives \$24,772
+        \item The firm receives \$25,325
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确FRA现金流计算公式}
+    \begin{itemize}
+        \item 对于提前结算（settles in advance）的FRA，现金流计算公式为：\(V=\frac{L\times (r_{LIBOR}-r_{fixed})\times t}{1 + r_{LIBOR}\times t}\)，其中\(L\)是名义本金，\(r_{LIBOR}\)是实际的LIBOR利率，\(r_{fixed}\)是FRA的固定利率，\(t\)是FRA的期限（年）。
+    \end{itemize}
+    \textbf{步骤2：确定各参数值}
+    \begin{itemize}
+        \item 已知\(L = 15000000\)，\(r_{LIBOR}=0.055\)，\(r_{fixed}=0.045\)，\(t=\frac{60}{360}=\frac{1}{6}\)。
+    \end{itemize}
+    \textbf{步骤3：计算现金流}
+    \begin{itemize}
+        \item 将参数代入公式可得：\[V=\frac{15000000\times(0.055 - 0.045)\times\frac{1}{6}}{1+0.055\times\frac{1}{6}}=24772.91\]
+        \item 因为\(r_{LIBOR}>r_{fixed}\)，且公司是支付固定利率的一方，所以公司需要支付现金流。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{提前结算的远期利率协议（FRA）现金流计算（关键是掌握提前结算FRA的现金流计算公式，并准确代入参数进行计算）}
+    
+\begin{question}
+    A risk analyst at a fixed - income investment firm is analyzing an FRA (forward rate agreement) that has the same maturity and compounding frequency as a Eurodollar futures contract. The FRA has a LIBOR underlying. Which of the following statements is true about the relationship between the forward rate and the futures rate?
+    \end{question}
+    
+    \begin{choices}
+        \item They should be exactly the same.
+        \item The forward rate is normally lower than the futures rate.
+        \item They have no fixed relationship.
+        \item The forward rate is normally higher than the futures rate.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 由于期货合约是每日盯市结算（mark - to - market），当利率上升时，期货多头会收到现金并可以以更高的利率进行再投资；当利率下降时，期货空头会收到现金并可以以较低的成本进行再融资。而远期利率协议（FRA）在到期时才进行结算。
+        \item 这种盯市结算的特点使得期货合约比FRA更具吸引力，投资者愿意为期货合约支付更高的价格，从而导致期货利率通常高于远期利率，即远期利率通常低于期货利率。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 由于期货的盯市结算制度和FRA到期结算制度的差异，两者的利率通常是不同的，不会完全相同。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 基于期货和FRA的结算机制，它们之间存在着相对固定的关系，并非没有固定关系。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 实际情况是期货利率通常高于远期利率，而不是远期利率高于期货利率。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期利率协议（FRA）和期货利率的关系（关键是理解期货的盯市结算制度和FRA到期结算制度对利率的影响）}
+
+
+
+\section{考点3:Treasury Bond Futures(T - bond Futures) 长期国债期货}
+\setcounter{question}{0}
+\begin{question}
+    A trader with a short position in a bond futures contract is looking to deliver a bond. Given the following options and a quoted price of 120.00, which bond is the cheapest - to - deliver (CTD)?
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+     & Quoted Price & Conversion Factor \\
+    \hline
+    Bond A & 105 - 08 & 0.8523 \\
+    \hline
+    Bond B & 112 - 16 & 0.9215 \\
+    \hline
+    Bond C & 130 - 24 & 1.0732 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{question}
+    
+    \begin{choices}
+        \item Bond A
+        \item Bond B
+        \item Bond C
+        \item None of the above
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：将报价转换为小数形式}
+    \begin{itemize}
+    \item Bond A报价\(105 - 08\)，转换为小数：\(105+\frac{8}{32}=105.25\) 。
+    \item Bond B报价\(112 - 16\)，转换为小数：\(112+\frac{16}{32}=112.5\) 。
+    \item Bond C报价\(130 - 24\)，转换为小数：\(130+\frac{24}{32}=130.75\) 。
+    \end{itemize}
+    \textbf{步骤2：计算各债券的交割成本}
+    \begin{itemize}
+    \item Bond A的交割成本：\(105.25-0.8523\times120 = 105.25 - 102.276=2.974\) 。
+    \item Bond B的交割成本：\(112.5 - 0.9215\times120=112.5 - 110.58 = 1.92\) 。
+    \item Bond C的交割成本：\(130.75-1.0732\times120=130.75 - 128.784=1.966\) 。
+    \item 比较交割成本，Bond B的交割成本最低。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{最便宜可交割债券（CTD）（关键是掌握交割成本计算公式）}
+
+\begin{question}
+    A risk analyst at a financial institution is studying the concept of the cheapest - to - deliver (CTD) bond in the context of bond futures contracts. Which of the following statements regarding CTD bonds is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item When yields are above 6\%, CTD bonds are typically low - coupon, short - maturity bonds.
+        \item In an upward - sloping yield curve environment, CTD bonds tend to have shorter maturities.
+        \item When yields are below 6\%, the CTD bond is usually a high - coupon, short - maturity bond.
+        \item The short position in a bond futures contract has no flexibility in choosing the bond for delivery.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 当收益率小于6\%时，CTD债券倾向于高息票、短期限债券，该选项正确。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 当收益率大于6\%时，CTD债券倾向于低息票、长期限债券，而非高息票、短期限债券 。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 在收益率曲线向上倾斜时，CTD债券倾向于长期限债券，因为长期限债券久期长，价格下降更多 。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 债券期货合约的空头方可以选择具体交割哪一个债券，具有一定的选择权 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{最便宜可交割债券(注意辨析不同情况下CTD债券的特点)}
+
+    \begin{question}
+        A junior trader is analyzing the implications of the cheapest - to - deliver (CTD) bond mechanism in bond futures contracts. Which of the following statements about the CTD bond and related strategies is accurate?
+        \end{question}
+        
+        \begin{choices}
+            \item When the yield curve is downward sloping, CTD bonds tend to have longer maturities.
+            \item The "wild card play" strategy is only available to the long position in a bond futures contract.
+            \item The ability to choose the CTD bond and use the "wild card play" generally increases the price of bond futures contracts.
+            \item The calculation of the cost for delivering a bond involves the quoted bond price, quoted futures price, and the conversion factor.
+        \end{choices}
+        
+        \begin{correctanswer}
+        D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{D选项正确。}
+        \begin{itemize}
+        \item 根据最便宜可交割债券交割成本计算公式\(Cost = QBP-(QFP\times CF)\)（其中\(QBP\)为债券报价，\(QFP\)为期货报价，\(CF\)为转换因子 ），交割成本计算涉及这些要素。
+        \end{itemize}
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 收益率下行，债券价格上升，期限更短的债券久期更短，价格上升更少，因此 CTD 倾向于期限更短的债券。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+        \item “百塔牌”策略（wild card play）是空头方在交割月期间可利用的策略，用于选择交割时间以降低成本，并非多头方可用 。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+        \item 空头方选择CTD债券和使用“百塔牌”策略的能力，给予空头方高度选择权，往往会降低期货合约价格，而非提高 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{最便宜可交割债券（注意CTD和“百塔牌”策略都是空头方用的，对空头有利）}
+
+\begin{question}
+    Suppose a Eurodollar futures quote is 96.80, the standard deviation of the change in the monthly rate over one year is 1.5\%, and the time to maturity is two years. Ignoring compounding effects, what is the forward rate?
+    \end{question}
+    
+    \begin{choices}
+        \item 3.05\%
+        \item 3.15\%
+        \item 3.45\%
+        \item 3.65\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 根据期货报价计算期货利率，期货利率\(r_f = 100 - 96.80 = 3.2\%\)，即\(0.032\)；标准偏差\(\sigma = 0.015\)；时间到到期\(T_{12}= 2\)年 。
+    \item 远期利率计算公式：
+    \[
+	\text{forward rate} = \text{futures rate} - \left( \frac{1}{2} \sigma^2 \times T_1 \times T_2 \right)
+	\]
+    \item 代入数据可得：
+    \[
+    \text{forward rate} = 0.032 - \left( \frac{1}{2} \times 0.015^2 \times 2 \times 2.25 \right) =3.15\%
+    \]
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{欧洲美元期货远期利率计算(掌握凸性调节部分公式，尤其是T2的含义)}
+
+    \begin{question}
+        A trader holds a long position in a Eurodollar futures contract. The price of the Eurodollar futures changes from 98.00 to 97.20. What is the gain/loss to the trader, considering the relationship with SOFR?
+        \end{question}
+        
+        \begin{choices}
+            \item SOFR decreased by 80 basis points, resulting in a loss of \$2,000 for the long position.
+            \item SOFR increased by 80 basis points, resulting in a loss of \$2,000 for the long position.
+            \item SOFR decreased by 80 basis points, resulting in a gain of \$2,000 for the long position.
+            \item SOFR increased by 80 basis points, resulting in a gain of \$2,000 for the long position.
+        \end{choices}
+        
+        \begin{correctanswer}
+        B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{B选项正确。}
+        \begin{itemize}
+        \item 对于欧洲美元期货，其价格与利率呈反向关系。期货价格从98.00下降到97.20，价格变动了\(98.00 - 97.20 = 0.8\) ，意味着利率（这里是SOFR）上升了\(0.8\times100 = 80\)个基点 。
+        \item 对于多头头寸，利率上升会导致合约价值下降，产生损失。一份欧洲美元期货合约的最小变动值为\(25\)美元（对应一个基点的变动），这里变动了80个基点，损失为\(25\times80 = 2000\)美元 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{欧洲美元期货价格(注意期货价格与利率之间为反向关系)}    
+
+\begin{question}
+    The yield curve is upward sloping. A trader has a short Treasury bond futures position. The following bonds are eligible for delivery:
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    Bond & A & B & C \\ \hline
+    Spot price & 104 - 16/32 & 108 - 20/32 & 100 - 14/32 \\ \hline
+    Coupon & 4.5\% & 5.5\% & 3.5\% \\ \hline
+    Conversion factor & 0.99 & 1.04 & 0.96 \\ \hline
+    \end{tabular}
+    \end{center}
+    The futures price is 105 - 18/32 and the maturity date of the contract is October 1. The bonds pay their coupon semiannually on July 31 and January 31. Which is the cheapest to deliver bond?
+    \end{question}
+    
+    \begin{choices}
+        \item Bond A
+        \item Bond B
+        \item Bond C
+        \item Insufficient information
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确最便宜可交割债券（CTD）的计算方法}
+    \begin{itemize}
+    \item 计算交割成本（Cost of Delivery, COD），公式为：COD = 现货价格 - 期货价格×转换因子 。
+    \end{itemize}
+    \textbf{步骤2：分别计算各债券的交割成本}
+    \begin{itemize}
+    \item 对于Bond A：\((104 - 16/32)-(105-18/32)\times0.99=104.5-105.56\times0.99=-0.0044\) 
+    \item 对于Bond B：\((108 - 20/32)-(105-18/32)\times1.04=108.625-105.56\times1.04=-1.1574\) 。 
+    \item 对于Bond C：\((100 - 14/32)-(105-18/32)\times0.96=100.4375-105.56\times0.96=-0.9001\) 。
+    \end{itemize}
+    \textbf{步骤3：比较交割成本并确定CTD}
+    \begin{itemize}
+    \item 比较 \(COD_A\)、\(COD_B\)、\(COD_C\) 的大小，\(-1.1574<-0.9001<-0.0044\)，Bond B的交割成本最低。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{国债期货中最便宜可交割债券（CTD）的计算（关键是掌握交割成本的计算公式）}
+
+\begin{question}
+    A French real - estate company is looking to hedge against the risk of increasing interest rates. It decides to use futures on 15 - year French government bonds. Which position in the futures should the company take, and what is the reason?
+    \end{question}
+    
+    \begin{choices}
+        \item Take a long position in the futures because rising interest rates lead to declining futures prices.
+        \item Take a short position in the futures because rising interest rates lead to declining futures prices.
+        \item Take a long position in the futures because rising interest rates lead to rising futures prices.
+        \item Take a short position in the futures because rising interest rates lead to rising futures prices.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 债券价格和利率呈反向关系。当利率上升时，债券的未来现金流折现到现在的价值会降低，从而导致债券价格下降。而债券期货价格与标的债券价格走势一致，所以利率上升会使债券期货价格下降。
+        \item 该法国房地产公司想要对冲利率上升的风险，采取期货空头头寸（short position）。当利率上升导致期货价格下降时，空头头寸会盈利，从而抵消公司在利率上升环境中可能面临的损失，达到套期保值的目的。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然利率上升会使期货价格下降，但采取多头头寸（long position）在期货价格下降时会遭受损失，无法对冲利率上升的风险。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 利率上升会使债券价格和期货价格下降，而不是上升，所以该选项关于利率和期货价格关系的描述错误。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 利率上升会使债券价格和期货价格下降，并非上升，此选项对利率和期货价格关系的判断有误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利率与债券期货价格的关系以及套期保值策略的选择（关键是理解利率和债券价格的反向关系，以及如何根据风险敞口选择合适的期货头寸进行套期保值）}
+
+
+\begin{question}
+    The five - year Eurodollar futures quote is 96.50. The volatility of the short - term interest rate (LIBOR) is 1.2\%, expressed with continuous compounding. What is the equivalent forward rate, adjusted for convexity, given in ACT/360 day count with continuous compounding (i.e., the Eurodollar futures contract gives LIBOR in quarterly compounding ACT/360, so convert to continuous but a day count conversion is not needed)?
+    \end{question}
+    
+    \begin{choices}
+        \item 3.29\%
+        \item 3.43\%
+        \item 3.55\%
+        \item 3.60\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算期货利率（年化）}
+    \begin{itemize}
+    \item 已知期货报价为\(96.50\)，则期货利率（年化）\[futures\ rate(annual)=(100 - 96.5)\% = 3.5\%\]
+    \end{itemize}
+    \textbf{步骤2：计算季度期货利率}
+    \begin{itemize}
+    \item 因为一年按\(360\)天算，季度为\(90\)天，所以季度期货利率\(futures\ rate(quarterly)=3.5\%\times\frac{90}{360}=0.875\%\) 。
+    \end{itemize}
+    \textbf{步骤3：将季度期货利率转换为连续复利形式}
+    \begin{itemize}
+    \item 根据公式\(r_{cont}=\ln(1 + r_{disc})\)（\(r_{cont}\)为连续复利利率，\(r_{disc}\)为离散复利利率），这里\(r_{disc}=0.00875\)，则\[futures\ rate(continuous)=\ln(1 + 0.00875)\times\frac{360}{90}=3.48\%\]
+    \end{itemize}
+    \textbf{步骤4：计算考虑凸性调整后的远期利率}
+    \begin{itemize}
+    \item 已知凸性调整公式\(futures\ rate = forward\ rate+\frac{1}{2}\sigma^{2}t_1t_2\)，其中\(\sigma = 1.2\%\)，\(t_1 = 5\)，\(t_2 = 5.25\)（五年期Eurodollar期货相关时间参数）。
+    \item 则\(forward\ rate = 3.48\%-\frac{1}{2}(0.012^{2})\times5\times5.25 = 3.29\%\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{Eurodollar期货中考虑凸性调整的远期利率计算（关键是掌握期货利率的计算、利率形式转换以及凸性调整公式）}
+
+\begin{question}
+    A junior trader on a derivatives trading desk is in charge of tracking the US Treasury bond futures contracts. The trader needs to understand how market conditions influence the choice of the cheapest - to - deliver bonds and how the delivery process affects the futures price. Which of the following statements about the delivery of US Treasury bond futures contracts is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item The “wild card play” benefits the short - position holders in expiring futures contracts by allowing them to choose the delivery time.
+        \item The embedded options associated with delivery against a US Treasury futures contract tend to decrease the value of the contract.
+        \item As bond yields decrease, long - maturity bonds with high coupons will tend to be the cheapest - to - deliver.
+        \item An upward - sloping yield curve makes it more likely that long - maturity bonds will be cheapest - to - deliver.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item “Wild card play”是指在国债期货合约到期时，空头方在一定时间内有选择交割时间的权利。
+        \item 空头方可以根据市场情况，选择对自己最有利的时间进行交割，从而受益。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 美国国债期货合约交割相关的嵌入式期权赋予了空头方一些权利，如选择交割债券的种类、交割时间等。
+        \item 这些权利增加了合约对于空头方的价值，而多头方需要为此付出代价，所以会增加合约的价值，而不是降低。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 当债券收益率下降时，低息票、短期限的债券价格上升幅度相对较小，其净基差（债券现货价格 - 期货价格×转换因子）更有可能为负且绝对值更大，更倾向于成为最便宜可交割债券，而不是高息票、长期限的债券。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 向上倾斜的收益率曲线意味着短期利率低于长期利率。在这种情况下，短期债券的融资成本相对较低，使得短期债券更有可能成为最便宜可交割债券，而不是长期债券。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{美国国债期货合约的交割机制、最便宜可交割债券的选择以及嵌入式期权对合约价值的影响（关键是理解各种市场条件下不同因素对交割和合约价值的作用）}
+
+
+\end{document}

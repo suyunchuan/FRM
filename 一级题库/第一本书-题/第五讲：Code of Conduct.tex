@@ -1,0 +1,465 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{hyperref} %不需要目录盒子注释这
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+%\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+\iftrue
+\section{考点1}
+\setcounter{question}{0}
+
+
+\begin{question}
+    David Chen, a financial advisor, promotes a new investment fund on social media, claiming it offers high returns with minimal risk. The fund primarily invests in volatile tech startups. Chen assures potential investors that the fund is a safe and lucrative option. Which of the following statements is most correct regarding Chen’s actions?
+\end{question}
+
+\begin{choices}
+    \item Chen did not violate the GARP Code of Conduct because investment funds are generally considered safe.
+    \item Chen violated the part of the GARP Code of Conduct dealing with confidentiality.
+    \item Chen violated the GARP Code of Conduct by misrepresenting the fund's risks and not providing a clear explanation of potential volatility.
+    \item Chen has not violated any of the ethical responsibilities related to the GARP Code of Conduct.
+\end{choices}
+
+\begin{correctanswer}
+C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+   \item Chen违反了行为准则中的职业操守和道德操守部分，错误地将基金表述为安全且有利可图的投资，而事实上该基金主要投资于波动性较大的科技初创公司。Chen没有解释基金的潜在风险，向投资者保证基金是安全的，歪曲了事实。根据准则，GARP成员不得故意歪曲与分析、建议、行动或其他专业活动有关的细节。
+    \end{itemize}
+\end{explanation}
+
+\checklist{GARP行为准则。（职业操守和道德操守）}
+
+
+\begin{question}
+    Alex Johnson, FRM, has been managing a balanced portfolio for his clients using a strategy focused on stable dividend-paying stocks. Due to recent market shifts, Johnson decides to switch to a growth strategy targeting high-tech startups. Johnson will violate the GARP Code of Conduct if he makes this change in his investment process without:
+\end{question}
+
+\begin{choices}
+    \item informing his supervisor before implementing the change.
+    \item promptly notifying his clients of the change in strategy.
+    \item obtaining written consent from his clients prior to the change.
+    \item receiving prompt written acknowledgment of the change from his clients within a reasonable time after the change.
+\end{choices}
+
+\begin{correctanswer}
+B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item Johnson改变投资策略而未及时告知其客户，这违反了GARP成员应充分、公平地披露所有可能会损害独立性和客观性，或干扰其对雇主、客户和潜在客户各事项的原则。
+    \end{itemize}
+\end{explanation}
+
+\checklist{GARP行为准则。（信息披露）}
+
+
+\begin{question}
+    Lisa Brown recommends investing in a real estate fund that focuses on commercial properties. She makes the following statements to her clients: \\
+    I. The properties are insured, so the risk of loss due to damage is minimal.\\
+    II. Investing in this fund will guarantee you a 12\% annual return based on past market trends.\\
+     Did Brown’s statements violate the GARP Code of Conduct?
+\end{question}
+
+\begin{choices}
+    \item Neither statement violated the Code and Standards.
+    \item Only statement I violated the Code and Standards.
+    \item Only statement II violated the Code and Standards.
+    \item Both statements violated the Code and Standards.
+\end{choices}
+
+\begin{correctanswer}
+C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item I．“物业投保，因此因损坏而导致的损失风险很小。”这是对保险的客观事实陈述，没有违反行为准则。
+    \item II．“投资该基金将保证您根据过去的市场趋势获得12\%的年回报率。”保证特定的回报率是一种观点而非客观事实的陈述，因此是一种虚假陈述，违反了行为准则。
+    \end{itemize}
+\end{explanation}
+
+\checklist{GARP行为准则。（事实与意见的区分）}
+
+
+
+\begin{question}
+    Emily Carter has been appointed as the head of compliance at XYZ Investments, a boutique firm in Canada. Carter implements a compliance framework based on outdated regulations that have been revised in recent years. Neither Carter nor her team is aware of these regulatory updates. As a GARP member, has Emily violated the GARP Code of Conduct?
+\end{question}
+
+\begin{choices}
+    \item No, this is not a violation of the GARP Code of Conduct because neither Carter nor her team is aware of the regulatory updates.
+    \item No, this is not a violation because the framework was valid when Carter completed her compliance certification.
+    \item This is only a violation of the GARP Code of Conduct if compliance decisions are made based on Carter’s outdated framework.
+    \item Yes, this is a violation of the GARP Code of Conduct.
+\end{choices}
+
+\begin{correctanswer}
+D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+    \item Emily Carter实施的合规框架基于已过时的法规，这些法规在近年来已被修订。Carter和她的团队都不知道这些法规的更新。这违反了行为准则，GARP行为准则规定，GARP成员应熟悉当前普遍接受的合规实践。
+    \end{itemize}
+\end{explanation}
+
+\checklist{GARP行为准则。（合规实践）}
+
+
+\begin{question}
+    As the Chief Risk Officer of a major bank, Ms. Li is responsible for evaluating new counterparty risk models. A well-known consulting firm offers her a one-week high-end training program in Dubai (valued at 80,000 RMB, including airfare, accommodation, and all activity expenses) in hopes that she will consider adopting their newly developed model. According to regulatory professional ethics guidelines, how should she handle this invitation?
+\end{question}
+    
+    \begin{choices}
+        \item She can accept the training invitation as long as she fully discloses all details to the board of directors.
+        \item She should politely decline the invitation and report this incident to the compliance department.
+        \item She can accept the invitation without reporting it, as this is a common practice in the industry.
+        \item She can accept just the airfare portion of the offer (valued at 15,000 RMB) while declining other expenses, as this represents a smaller value that is less likely to influence her judgment.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 即使向董事会披露，高额培训邀请仍可能影响决策的独立性和客观性，披露行为并不能消除利益冲突本身，也不能完全消除其对判断的影响。
+        \end{itemize}
+        
+        \textbf{B选项正确。}
+        \begin{itemize}
+            \item 拒绝邀请并报告合规部门完全符合监管要求的两个核心原则：独立性和透明度，这种做法不仅保护了个人，也维护了机构的声誉和整体利益。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item "行业普遍做法"这一理由本身就反映了对职业道德认识的偏差，不报告行为进一步加重了违规性质，违背了金融监管的基本要求。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 无论金额大小，只要是与业务决策相关的利益，都属于不当利益,将利益拆分或降低金额的做法本质上仍然违反了独立性原则。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{职业道德准则（不要做影响独立性和客观性的事情）}
+
+
+
+    \begin{question}
+        Sarah, a newly certified GARP member working as a risk manager at a multinational financial institution, is attending a new employee training session. During the discussion about GARP's Code of Conduct, which of the following statements correctly reflects the professional ethics requirements?
+    \end{question}
+    
+    \begin{choices}
+        \item When facing conflicts between GARP's Code of Conduct and local regulations, members should prioritize the Code of Conduct to maintain professional standards.
+    
+        \item Members should continuously enhance their professional knowledge, but there is no obligation to inform clients about their expertise limitations in specific areas.
+    
+        \item In situations where professional standards conflict with local customs, members should adhere to whichever standard sets a higher ethical bar.
+    
+        \item To improve work efficiency, members can delegate their core professional responsibilities to qualified team members under proper supervision.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item GARP会员必须同时遵守法律法规和职业道德准则，将协会准则置于法律之上的说法是错误的，这违背了合规的基本原则和风险管理的根本要求。
+        \end{itemize}
+        
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item GARP会员确实需要持续学习以保持专业水平，但必须向客户准确披露自己专业能力的局限性，这是职业道德中透明度和诚信的基本要求。
+        \end{itemize}
+        
+        \textbf{C选项正确。}
+        \begin{itemize}
+            \item 当道德准则与当地文化习俗发生冲突时，应该选择采用更高标准的规则，这确保了职业道德的最高标准得到维护，体现了GARP对专业操守的严格要求。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item GARP会员必须对自己的核心职责负责，不能将主要专业职责委托给他人，这关系到个人专业责任的承担，虽然可以进行团队协作，但不能转移核心责任。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{GARP 的道德准则。（在道德准则和当地文化习俗产生矛盾和利益冲突时，GARP 会员应该遵守更高标准的规则）}
+
+
+    \begin{question}
+        John, a certified FRM holder, was found to have misrepresented his client's investment performance and violated GARP's Code of Conduct. The Ethics Committee is now reviewing potential disciplinary actions. Which of the following penalties falls within GARP's authority to impose?
+    \end{question}
+    
+    \begin{choices}
+        \item GARP can temporarily suspend or permanently revoke John's membership and his right to use the FRM designation.
+    
+        \item GARP will refer the case to local regulatory authorities who will determine appropriate legal sanctions.
+    
+        \item GARP will coordinate with local supervisory bodies to impose regulatory penalties on John.
+    
+        \item GARP will recommend that John's employer take disciplinary actions, including demotion and salary reduction.
+    \end{choices}
+
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item GARP有权对违反道德准则的会员采取纪律处分，包括暂时或永久取消会员资格，以及撤销使用FRM专业称号的权利。这是GARP维护职业道德标准的核心权力。
+        \end{itemize}
+        
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 法律制裁不在GARP的权限范围内，这属于司法机构的职权范围。虽然GARP可能会配合法律调查，但无权决定或影响法律处罚。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 监管处罚完全属于监管机构的职权范围。GARP作为专业资格认证机构，无权指导或影响监管机构的决定和处罚措施。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 雇主的人事处分，如降职降薪等，属于雇主的管理权限。GARP无权干预或建议雇主如何处理其内部人事问题。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{GARP协会对于会员的惩罚措施。（对于违反道德准则的会员，GARP协会有权暂时或永久移除违规者的会员资格，也有权暂时或永久移除违规者使用FRM称号的权利。）}
+
+
+
+
+    \begin{question}
+        A certified FRM working as a risk manager at a bank is asked by the CRO to present a report to the public on the bank's compliance with industry best practices in risk management. The risk manager includes information about risk-adjusted returns of specific clients in the report to support the conclusion that the bank's risk management practices are strong. Which of the following statements is most appropriate regarding the adherence of the manager's behavior to the standards of the GARP Code of Conduct in this situation?
+        
+        \end{question}
+        
+        \begin{choices}
+            \item  The manager violates the GARP Code of Conduct because the manager discloses some of the bank's confidential information.  
+            \item The manager violates the GARP Code of Conduct because the manager overstates the strength of the bank's risk management practices in the report.  
+            \item The manager violates the GARP Code of Conduct because the manager does not distinguish between facts and opinions.  
+            \item The manager does not violate the GARP Code of Conduct.  
+        \end{choices}
+        
+        \begin{correctanswer}
+        A
+        \end{correctanswer}
+        
+        \begin{explanation}
+            \textbf{A选项正确。}
+            \begin{itemize}
+                \item 经理在报告中披露了一些机密信息，即实现的损失回收率。根据GARP的规定，成员应采取一切合理的预防措施，以防止机密信息的故意和无意披露。披露这些信息可能会对银行的声誉和客户信任造成负面影响，因此违反了GARP的行为准则。
+            \end{itemize}
+        
+            \textbf{B选项错误。}
+            \begin{itemize}
+                \item 经理使用事实来支持结论，并没有夸大银行风险管理实践的强度。报告中所述的风险调整回报是基于实际数据，而不是主观判断，因此不构成对GARP的违反。
+            \end{itemize}
+        
+            \textbf{C选项错误。}
+            \begin{itemize}
+                \item 该情境并不涉及区分事实和意见的问题。经理在报告中使用的数据是基于实际的风险调整回报，而不是个人观点，因此不违反GARP的相关规定。
+            \end{itemize}
+        
+            \textbf{D选项错误。}
+            \begin{itemize}
+                \item 经理违反了GARP行为准则，因为他披露了银行的机密信息。即使其意图是为了展示银行的风险管理能力，仍然需要遵循保密原则。
+            \end{itemize}
+        \end{explanation}
+        
+        \checklist{GARP行为准则及其在金融风险管理中的应用。（保密原则）}
+
+
+
+        \begin{question}
+            A financial institution is considering whether to hire a candidate who has recently been dismissed for violating professional conduct standards. According to the GARP Code of Conduct, how should the company handle this situation?
+            
+            \end{question}
+            
+            \begin{choices}
+                \item Ignore the candidate's past and focus only on their professional skills.  
+                \item Conduct a thorough background check, including an investigation into professional conduct.  
+                \item Directly reject the candidate to avoid any potential professional conduct issues.  
+                \item Only consider the candidate's professional qualifications, without regard to their professional conduct history.  
+            \end{choices}
+            
+            \begin{correctanswer}
+            B
+            \end{correctanswer}
+            
+            \begin{explanation}
+                \textbf{A选项错误。}
+                \begin{itemize}
+                    \item 忽视候选人的过去可能导致公司在招聘时忽视潜在的风险，增加未来的合规问题。
+                \end{itemize}
+            
+                \textbf{B选项正确。}
+                \begin{itemize}
+                    \item 根据GARP行为准则，进行全面的背景调查是必要的，以确保候选人符合公司的职业道德标准。这有助于识别潜在的风险并保护公司的声誉。
+                \end{itemize}
+            
+                \textbf{C选项错误。}
+                \begin{itemize}
+                    \item 直接拒绝候选人可能会错失合适的人才，且不符合公平招聘的原则。应通过调查了解情况后再做决定。
+                \end{itemize}
+            
+                \textbf{D选项错误。}
+                \begin{itemize}
+                    \item 仅考虑候选人的专业资格而忽视其职业道德历史是不负责任的，可能导致公司在未来面临合规风险。
+                \end{itemize}
+            \end{explanation}
+            
+            \checklist{GARP行为准则及其在招聘和风险管理中的应用。（不忽略候选人的职业道德历史）}
+
+
+          
+
+
+            \begin{question}
+                During a compliance training session for GARP members, participants discussed the importance of ethical standards and codes of conduct in risk management. Based on the following descriptions, which of the statements is incorrect?
+                
+                \end{question}
+                
+                \begin{choices}
+                    \item GARP members are expected to pursue a high standard of ethical culture that not only adheres to applicable rules and regulations but also embodies universal ethical values.  
+                    \item The greatest risks faced by the company are primarily related to legal or compliance violations; therefore, established policies and procedures should be followed to manage these risks.  
+                    \item GARP members should continuously consider ethical issues in their daily work and adjust their behavior accordingly.  
+                    \item There is no single standard that can be universally applied, so GARP members should seek to adhere to higher ethical standards.  
+                \end{choices}
+                
+                \begin{correctanswer}
+                B
+                \end{correctanswer}
+                
+                \begin{explanation}
+                    \textbf{A选项正确。}
+                    \begin{itemize}
+                        \item GARP成员应追求的道德标准，既要遵循适用的法律法规，也要体现道德文化的价值。
+                    \end{itemize}
+                
+                    \textbf{B选项错误。}
+                    \begin{itemize}
+                        \item 如今公司面临的一些最大风险并不涉及法律或合规违规，而是基于涉及道德考量的决策以及将适当的行为标准应用于商业决策。
+                    \end{itemize}
+                
+                    \textbf{C选项正确。}
+                    \begin{itemize}
+                        \item GARP成员在日常活动中应持续关注伦理问题，并根据情况调整行为，这与GARP的道德标准相符。
+                    \end{itemize}
+                
+                    \textbf{D选项正确。}
+                    \begin{itemize}
+                        \item 没有单一的标准可以适用于所有情况，GARP成员应努力遵循更高的道德标准，这与GARP的原则一致。
+                    \end{itemize}
+                \end{explanation}
+                
+                \checklist{GARP行为准则及其在风险管理中的应用。（没有单一标准）}
+
+
+
+
+
+
+
+\fi
+
+
+\newpage
+
+
+\end{document}

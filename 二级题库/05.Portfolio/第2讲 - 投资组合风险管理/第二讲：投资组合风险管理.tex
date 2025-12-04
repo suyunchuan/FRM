@@ -1,0 +1,1100 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:投资组合构建}
+\setcounter{question}{0}
+
+
+\begin{question}
+    An increase in which of the following factors will expand the no-trade region for the alpha of an asset?  
+    \begin{itemize}
+        \item I. Risk aversion.  
+        \item II. Marginal contribution to active risk.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I only.
+    \item II only.
+    \item Both I and II.
+    \item Neither I nor II.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 风险厌恶度增加会扩大非交易区间；风险厌恶度越高，投资者越不愿意承担风险，需要更大的alpha来补偿风险厌恶度的增加；因此，只有当alpha足够大时才会交易，非交易区间扩大。
+    \end{itemize}
+
+    \textbf{陈述II分析：正确}
+    \begin{itemize}
+        \item 积极风险的边际贡献增加会扩大非交易区间；如果资产对积极风险的边际贡献增加，意味着增加该资产会显著增加组合的风险；需要更大的alpha来补偿增加的风险，因此非交易区间扩大。
+    \end{itemize}
+
+\end{explanation}
+\checklist{非交易区间影响因素}
+
+
+\begin{question}
+    An analyst has forecasts for stocks X, Y, and Z, but not for stocks U and V. Stocks X, Y, and U are part of the benchmark portfolio, while stocks Z and V are not. Which of the following is correct regarding the specific weights the analyst should assign when constructing a portfolio to track this benchmark?
+\end{question}
+
+\begin{choices}
+    \item $w_Z = 0$.
+    \item $w_U = 0$.
+    \item $w_Z = (w_X + w_Y) / 2$.
+    \item $w_Z = w_U = w_V$.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 对于有预测但不在基准中的股票Z，其在跟踪投资组合中的权重应设为0。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 股票U在基准中，其权重应根据其他资产的alpha确定，不应为0。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 将权重设为其他股票的平均值没有理论依据。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 不同股票的权重应根据其在基准中的位置和预测情况分别确定，不能简单地设为相等。
+    \end{itemize}
+\end{explanation}
+\checklist{基准外资产的权重处理}
+
+\begin{question}
+    During the 2007–2008 financial crisis, concerns arose about the high interconnectedness of institutions like Bear Stearns and Lehman Brothers with other financial firms. What can such interdependency among financial institutions lead to?
+\end{question}
+
+\begin{choices}
+    \item Negative kurtosis.
+    \item Lower variance of returns.
+    \item Fat-tailed distributions.
+    \item Excess system-wide leverage.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 互联性增强通常导致厚尾分布（正峰度），而非负峰度。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 金融机构高度关联会增加系统风险，通常不会降低收益方差。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 金融机构间的高度依赖会导致收益分布出现厚尾，极端风险事件概率上升。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 虽然杠杆可能增加，但互联性本身主要导致风险分布厚尾，而非直接导致杠杆过高。
+    \end{itemize}
+\end{explanation}
+\checklist{金融机构互联性与厚尾风险}
+
+
+\begin{question}
+    An analyst regresses the returns of 100 stocks against a major market index. The resulting 100 alphas have a residual risk of 20\% and an information coefficient of 10\%. If the alphas are normally distributed with a mean of 0\%, approximately how many stocks have an alpha greater than 4\% or less than -4\%?
+\end{question}
+
+\begin{choices}
+    \item 5
+    \item 10
+    \item 20
+    \item 25
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算alpha的标准差}
+    \begin{itemize}
+        \item Alpha的标准差 = 残差风险 × 信息系数 = 0.20 × 0.10 = 0.02 = 2\%。
+    \end{itemize}
+
+    \textbf{步骤2：计算超出区间的股票数量}
+    \begin{itemize}
+        \item 4\% = 2倍标准差；在正态分布中，超出±2倍标准差的概率约为5\%，因此100只股票中约有5只股票的alpha大于4\%或小于-4\%。
+    \end{itemize}
+\end{explanation}
+\checklist{alpha分布与标准差概率}
+
+
+
+\section{考点2:投资组合风险：分析方法}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Given the following portfolio data, which recommendation would best improve the risk/return tradeoff of the portfolio?
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|c|c|c|c|c|c|}
+            \hline
+            \textbf{Asset} & \textbf{Expected return} & \textbf{Std. Dev.} & \textbf{Current Weight} & \textbf{Marginal Return} & \textbf{Marginal Risk} & \textbf{Marginal Return / Marginal Risk} \\
+            \hline
+            Asset 1 & 7.10\% & 17.00\% & 38.70\% & 3.10\% & 13.99\% & 22.17\% \\
+            Asset 2 & 8.00\% & 40.60\% & 6.20\% & 4.00\% & 23.93\% & 16.71\% \\
+            Asset 3 & 6.70\% & 44.80\% & 5.50\% & 2.70\% & 23.39\% & 11.55\% \\
+            Asset 4 & 6.90\% & 21.40\% & 14.60\% & 2.90\% & 13.86\% & 20.92\% \\
+            Risk free & 4.00\% & 0.00\% & 35.00\% &  &  &  \\
+            \hline
+        \end{tabular}
+        }
+    \end{table}
+\end{question}
+
+\begin{choices}
+    \item Increase allocations to assets 1 and 3, decrease allocations to assets 2 and 4.
+    \item Increase allocations to assets 1 and 2, decrease allocations to assets 3 and 4.
+    \item Increase allocations to assets 2 and 3, decrease allocations to assets 1 and 4.
+    \item Increase allocations to assets 1 and 4, decrease allocations to assets 2 and 3.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Asset 3的比值最低（11.55\%），应减少而非增加；Asset 4的比值第二高（20.92\%），应增加而非减少。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item Asset 4的比值第二高（20.92\%），应增加而非减少；Asset 2的比值（16.71\%）低于Asset 4，应减少Asset 2而非Asset 4。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Asset 1和Asset 4的比值最高，应增加而非减少；Asset 3的比值最低，应减少而非增加。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item Asset 1（22.17\%）和Asset 4（20.92\%）的比值最高，应增加；Asset 2（16.71\%）和Asset 3（11.55\%）的比值较低，应减少；这能优化风险收益权衡。
+    \end{itemize}
+\end{explanation}
+\checklist{边际收益/风险比优化配置}
+
+
+\begin{question}
+    A risk manager is assessing the risk profile of a stock portfolio valued at JPY 150 billion, which includes JPY 30 billion in stock ABC. The annual standard deviation of returns for stock ABC is 12\%, and for the overall portfolio is 20\%. The correlation between stock ABC and the portfolio is 0.5. Assuming a 1-year 95\% VaR and normal return distribution, what is the estimated component VaR of stock ABC?
+\end{question}
+
+\begin{choices}
+    \item JPY 2.958 billion
+    \item JPY 3.546 billion
+    \item JPY 4.734 billion
+    \item JPY 6.120 billion
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算ABC股票的独立VaR}
+    \begin{itemize}
+        \item ABC的独立VaR = 头寸价值 × 标准差 × z值 = JPY 30 billion × 0.12 × 1.645 = JPY 5.922 billion。
+    \end{itemize}
+
+    \textbf{步骤2：计算Component VaR}
+    \begin{itemize}
+        \item Component VaR = 独立VaR × 相关系数 = JPY 5.922 billion × 0.5 = JPY 2.961 billion ≈ JPY 2.958 billion。
+    \end{itemize}
+\end{explanation}
+\checklist{成分VaR计算方法}
+
+
+\begin{question}
+    Given the following information, what is the percentage contribution to VaR from Asset X?  
+    There are two assets in a portfolio: 
+    \begin{itemize}
+        \item Asset X marginal VaR: 0.06250, Asset X value: \$8,000,000  
+        \item Asset Y marginal VaR: 0.15000, Asset Y value: \$5,000,000
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item 40.00\%
+    \item 25.00\%
+    \item 51.06\%
+    \item 48.94\%
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算各资产的Component VaR}
+    \begin{itemize}
+        \item Asset X的Component $VaR_X$ = Marginal VaR × 头寸价值 = 0.06250 × \$8,000,000 = \$500,000。
+        \item Asset Y的Component $VaR_Y$ = Marginal VaR × 头寸价值 = 0.15000 × \$5,000,000 = \$750,000。
+    \end{itemize}
+
+    \textbf{步骤2：计算Asset X的百分比贡献}
+    \begin{itemize}
+        \item Asset X的贡献比例 = Component $VaR_X$ / (Component $VaR_X$ + Component $VaR_Y$) = \$500,000 / (\$500,000 + \$750,000) = \$500,000 / \$1,250,000 = 40.00\%。
+    \end{itemize}
+\end{explanation}
+\checklist{成分VaR贡献度计算}
+
+
+\begin{question}
+    A portfolio consists of two securities with the following characteristics:  
+    Investment in A: USD 2.0 million  
+    Investment in B: USD 3.0 million  
+    Volatility of A: 10\%  
+    Volatility of B: 5\%  
+    Correlation between A and B: 20\%  
+    What is the closest value to the diversified portfolio VaR at the 95\% confidence level?
+\end{question}
+
+\begin{choices}
+    \item \$10,000
+    \item \$18,400
+    \item \$245,000
+    \item \$495,000
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+  
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+    \item 组合方差$= (0.4^2 \times 0.1^2) + (0.6^2 \times 0.05^2) + 2 \times 0.4 \times 0.6 \times 0.1 \times 0.05 \times 0.2 =1.65 \times 0.0524 \times \$5m \approx \$432,300$，最接近\$495,000。
+    \end{itemize}
+\end{explanation}
+\checklist{投资组合分散化VaR计算}
+
+
+\begin{question}
+    A portfolio manager estimates the VaRs for two positions as follows:  
+    VaR(A) = \$6.0 million, VaR(B) = \$3.0 million.  
+    What is the portfolio VaR if the returns of the two securities are uncorrelated, and what is the portfolio VaR if the returns are perfectly correlated?
+\end{question}
+
+\begin{choices}
+    \item For zero correlation, VaR is \$6.71 million; for perfect correlation, VaR is \$9.00 million.
+    \item For zero correlation, VaR is \$5.00 million; for perfect correlation, VaR is \$7.00 million.
+    \item For zero correlation, VaR is \$9.00 million; for perfect correlation, VaR is \$3.00 million.
+    \item For zero correlation, VaR is \$7.71 million; for perfect correlation, VaR is \$12.00 million.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 零相关：组合VaR采用平方加总法，$\text{VaR}_p=\sqrt{6^2+3^2}=6.71$（百万）。
+        \item 完全相关：组合VaR线性相加，$\text{VaR}_p=6+3=9$（百万）。
+    \end{itemize}
+\end{explanation}
+\checklist{相关性对组合VaR的影响}
+
+
+\begin{question}
+    Pension analysts at a large firm use a two-step process for asset and risk management: first, they allocate assets across four classes using a VaR-based risk budget; second, they set a maximum tracking error for each class and assign active risk budgets to managers. Given the table below, which statements are correct?  
+    \begin{itemize}
+        \item I. Using VaR as the risk budgeting measure, the emerging markets class has the smallest risk budget.  
+        \item II. If an additional dollar is invested, the marginal impact on portfolio VaR is greatest for small caps.  
+        \item III. Lowering the maximum tracking error allowance gives managers more freedom to achieve excess returns.  
+        \item IV. Setting strict risk limits and monitoring guarantees that risk limits will not be exceeded.
+    \end{itemize}
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|c|}
+            \hline
+            & \textbf{Return (\%)} & \textbf{Volatility (\%)} & \textbf{Allocation (\%)} & \textbf{VAR (USD)} & \textbf{Marginal VAR} \\
+            \hline
+            Small Cap         & 0.20 & 2.66 & 35.0 & 6,491 & 0.055 \\
+            Large Cap         & 0.15 & 2.33 & 40.0 & 6,497 & 0.044 \\
+            Commodities       & 0.10 & 1.91 & 16.7 & 2,216 & 0.020 \\
+            Emerging markets  & 0.15 & 2.70 & 8.3  & 1,570 & 0.047 \\
+            \hline
+            \multicolumn{6}{|r|}{\textbf{Total VAR: 13,322}} \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{question}
+
+\begin{choices}
+    \item I and II only
+    \item I, II, III, and IV
+    \item II and III
+    \item I only
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I：正确}
+    \begin{itemize}
+        \item 新兴市场VaR=1,570（四类中最小），风险预算最小。
+    \end{itemize}
+
+    \textbf{陈述II：正确}
+    \begin{itemize}
+        \item 边际VaR最大的是小盘股（0.055），追加1美元对组合VaR的影响最大。
+    \end{itemize}
+
+    \textbf{陈述III：错误}
+    \begin{itemize}
+        \item 降低最大跟踪误差会收紧约束，减少而非增加经理博取超额收益的自由度。
+    \end{itemize}
+
+    \textbf{陈述IV：错误}
+    \begin{itemize}
+        \item 严格限额与监控可降低超限概率，但\emph{不能保证}绝不超限（模型误差/操作失误/极端情景）。
+    \end{itemize}
+\end{explanation}
+\checklist{VAR风险预算与边际风险}
+
+
+\begin{question}
+    Given the following information, what is the percentage contribution to VaR from Asset P?
+    A portfolio has two assets: P and Q.
+    Asset P marginal VaR: 0.04, Asset P value: \$15,000,000
+    Asset Q marginal VaR: 0.10, Asset Q value: \$5,000,000
+\end{question}
+
+\begin{choices}
+    \item 45.46\%
+    \item 28.57\%
+    \item 75.00\%
+    \item 54.54\%
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 资产P的成分VaR为 $0.04 \times 15,000,000 = 600,000$
+        \item 资产Q的成分VaR为 $0.10 \times 5,000,000 = 500,000$
+        \item 资产P的贡献比例为 $600,000 / (600,000 + 500,000) = 54.54\%$
+    \end{itemize}
+\end{explanation}
+\checklist{成分VaR贡献度计算}
+
+
+
+
+
+\newpage
+
+
+\section{考点3:投资管理中的VaR和风险预算编制}
+\setcounter{question}{0}
+
+
+\begin{question}
+    The Q-statistic is a useful measure for assessing liquidity risk in hedge funds. Which of the following statements about the statistical significance of the Q-statistic is true?
+\end{question}
+
+\begin{choices}
+    \item Smaller p-values indicate that autocorrelations are more statistically significant.
+    \item A p-value of 0.1 means we are 99\% confident in rejecting the null hypothesis of no correlation.
+    \item We can reject the null hypothesis of positive autocorrelations when each lagged autocorrelation is close to zero.
+    \item Larger p-values suggest that autocorrelations are more statistically significant.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item p值越小，拒绝原假设（自相关为零）的信心越足，说明自相关性越显著。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item p值为0.1表示我们有90\%的信心拒绝原假设，而不是99%。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 原假设通常是自相关为零，不是正自相关。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item p值越大，说明自相关性越不显著。
+    \end{itemize}
+\end{explanation}
+\checklist{Q统计量与p值显著性}
+
+
+\begin{question}
+    A corporate sponsor manages a defined benefit pension plan and must consider funding risk. Which of the following statements about the plan's funding risk is correct?
+\end{question}
+
+\begin{choices}
+    \item As the horizon for expected payouts lengthens, funding risk decreases.
+    \item A decline in interest rates will mitigate funding risk.
+    \item The funding risk is effectively borne by the employees.
+    \item For the plan sponsor, funding risk is the genuine long-term risk.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 支付期限越长，资产与负债的不匹配风险可能越大，资金风险可能增加。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 利率下降会提高负债的现值，通常会加剧而非减少资金风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 在固定收益计划中，资金风险由发起人承担，而非雇员。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 资金风险代表了资产和负债的长期不匹配，是计划发起人面临的真正长期风险。
+    \end{itemize}
+\end{explanation}
+\checklist{固定收益计划的资金风险}
+
+
+
+\begin{question}
+    An analyst at Quantum Capital needs to invest a small amount of new capital into a fund benchmarked against an index. Instead of adding a new asset, the analyst will increase the holding of one of the four assets in the table below. The analyst wants to select the asset with the lowest marginal VaR, provided its Treynor ratio is at least 0.08. Assuming a risk-free rate of 3\%, which asset should be selected?
+
+    \begin{table}[htbp]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \textbf{Asset} & \textbf{Portfolio Weight} & \textbf{Expected Return} & \textbf{Beta to Index} & \textbf{Beta to Portfolio} \\
+            \hline
+            \textbf{W} & 1.5\% & 15\% & 1.5 & 1.1 \\
+            \textbf{X} & 1.1\% & 11\% & 0.9 & 0.8 \\
+            \textbf{Y} & 0.9\% & 9\%  & 0.8 & 0.7 \\
+            \textbf{Z} & 0.5\% & 8\%  & 0.5 & 1.0 \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{question}
+
+\begin{choices}
+    \item Asset W
+    \item Asset X
+    \item Asset Y
+    \item Asset Z
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 资产W的特雷诺比率为(15\% - 3\%) / 1.5 = 0.08，符合条件，但其组合Beta为1.1，高于资产X。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 资产X的特雷诺比率为(11\% - 3\%) / 0.9 = 0.089，符合条件，其组合Beta为0.8，是所有符合条件资产中最低的。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 资产Y的特雷诺比率为(9\% - 3\%) / 0.8 = 0.075，低于0.08，不符合条件。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 资产Z的特雷诺比率为(8\% - 3\%) / 0.5 = 0.1，符合条件，但其组合Beta为1.0，高于资产X。
+    \end{itemize}
+\end{explanation}
+\checklist{特雷诺比率与边际风险决策}
+
+
+\begin{question}
+    For a portfolio of illiquid assets, analysts may smooth returns by adjusting valuations. Which of the following is NOT a typical consequence of this practice?
+\end{question}
+
+\begin{choices}
+    \item A higher reported Sharpe ratio.
+    \item Lower reported volatility.
+    \item Higher serial correlation in returns.
+    \item A higher measured market beta.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 回报平滑会降低报告的波动率，从而人为地提高夏普比率。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 回报平滑的直接结果就是降低报告的波动率。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 回报平滑会导致一个时期的回报部分地计入下一个时期，从而产生正的序列相关性。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 回报平滑会降低投资组合回报与市场回报的协方差，从而导致市场贝塔系数被低估，而不是高估。
+    \end{itemize}
+\end{explanation}
+\checklist{回报平滑的后果}
+
+
+
+\begin{question}
+    Risk management for hedge funds presents unique challenges compared to traditional investment firms. Which of the following statements about hedge fund risk management are correct?
+    \begin{itemize}
+        \item I. Due to long/short positions, derivatives, and leverage, hedge fund exposures can change rapidly, making monthly returns insufficient for risk assessment.  
+        \item II. Hedge funds often use OTC derivatives and hold illiquid assets, causing their returns to exhibit lower serial correlation than mutual fund returns.  
+        \item III. Strategies that use leverage and rely on quick exits require careful monitoring and management of liquidity risk.  
+        \item IV. Hedge fund returns can resemble a basket of exotic derivatives with nonlinear payoffs, so risk assessment based on past performance can be misleading.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I, II, III, and IV
+    \item I, III, and IV
+    \item I and III
+    \item II and IV
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{I：正确}
+    \begin{itemize}
+        \item 多空、衍生品与杠杆使敞口变化快；仅用月度收益评估风险不够，需更高频数据与头寸级监控。
+    \end{itemize}
+
+    \textbf{II：错误}
+    \begin{itemize}
+        \item OTC与非流动性资产常导致估值滞后与收益平滑，提升而非降低序列相关性。
+    \end{itemize}
+
+    \textbf{III：正确}
+    \begin{itemize}
+        \item 依赖杠杆与快速退出的策略对流动性敏感，需严控保证金、融资与赎回风险。
+    \end{itemize}
+
+    \textbf{IV：正确}
+    \begin{itemize}
+        \item 非线性（期权型）收益使基于历史表现的线性度量误导，需情景/压力与非线性风险衡量。
+    \end{itemize}
+\end{explanation}
+\checklist{对冲基金风险管理挑战}
+
+
+
+\begin{question}
+    The Zenith Corp pension fund has \$20 billion invested in equities. Assume a normal distribution and a volatility of 18\% per annum. The fund measures absolute risk with a 95\%, one-year VAR, which is \$4.5 billion. The pension plan wants to allocate this risk to two equity managers, each with the same VAR budget. Given that the correlation between the managers is 0.2, the VAR budget for each should be closest to:
+\end{question}
+
+\begin{choices}
+    \item \$4.5 billion
+    \item \$3.5 billion
+    \item \$2.9 billion
+    \item \$2.25 billion
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。}  
+    \begin{itemize}
+    \item 设每个经理的VaR预算为x。则组合VaR的计算公式为：
+    \[
+    \text{VaR}_{total}^2 = x^2 + x^2 + 2\rho x^2
+    \]
+    \[
+    \$4.5^2 = 2x^2 + 2(0.2)x^2 = 2.4x^2
+    \]
+    \[
+    x = \sqrt{\frac{\$4.5^2}{2.4}} = \sqrt{\frac{20.25}{2.4}} \approx \$2.9 \text{ billion}
+    \]
+    \end{itemize}
+    
+\end{explanation}
+\checklist{VaR风险预算分配}
+
+
+\begin{question}
+    StarLink Satellites has a defined benefit pension scheme with assets of \$200 million and liabilities of \$180 million. The annual growth of liabilities is expected to be 5.0\% with 3.0\% volatility. The annual return on pension assets has an expected value of 8.0\% with 15\% volatility. The correlation between asset return and liability growth is 0.40. What is the 95\% surplus at risk for StarLink?
+\end{question}
+
+\begin{choices}
+    \item \$15.51 million
+    \item \$28.28 million
+    \item \$39.51 million
+    \item \$46.51 million
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。}  
+    \begin{itemize}
+    \item 首先，计算预期盈余增长：\$200M * 8\% - \$180M * 5\% = \$7M。  
+    \item 其次，计算盈余波动性（标准差）：
+    \[
+    \text{Var(Surplus)} = (200^2 \times 0.15^2) + (180^2 \times 0.03^2) - 2 \times 0.4 \times (200 \times 0.15) \times (180 \times 0.03) = 799.56
+    \]
+    \[
+    \text{StDev(Surplus)} = \sqrt{799.56} = \$28.28\text{M}
+    \]
+    \item 最后，计算95\%置信水平下的风险敞口：
+    \[
+    \text{Surplus at Risk} = 1.645 \times \$28.28\text{M} - \$7\text{M} = \$46.51\text{M} - \$7\text{M} = \$39.51\text{M}
+    \]
+    \end{itemize}
+    
+\end{explanation}
+\checklist{养老金盈余风险计算}
+
+
+
+
+\begin{question}
+    A hedge fund has a long position of USD 400 million and a short position of USD 250 million. The fund's equity is USD 200 million, and its overall beta is 0.8. Calculate the Gross and Net leverage.
+\end{question}
+
+\begin{choices}
+    \item 3.25 and 0.75
+    \item 3.25 and 1.25
+    \item 0.75 and 3.25
+    \item 1.25 and 0.75
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+    \item 总杠杆 = (多头头寸 + 空头头寸) / 净值 = (\$400M + \$250M) / \$200M = 3.25。  
+    \item 净杠杆 = (多头头寸 - 空头头寸) / 净值 = (\$400M - \$250M) / \$200M = 0.75。
+    \end{itemize}
+\end{explanation}
+\checklist{对冲基金杠杆率计算}
+
+
+\begin{question}
+    Hedge fund manager Sarah Chen has managed a portfolio for over a decade. During the market turmoil of 2020, she was surprised to see her portfolio's returns fall sharply with the market, despite the fund being structured to have a beta uncorrelated with the market index. She considers several concepts to explain this. Which of the following risk-related items could NOT be used to explain this observation?
+\end{question}
+
+\begin{choices}
+    \item Nonlinearity risk.
+    \item Systemic correlation.
+    \item Asymmetric correlation.
+    \item Phase-locking behavior.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+    \item 非线性风险（如期权类敞口）在市场大跌时可能被触发，是合理的解释。
+    \end{itemize}
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item  “系统性相关性”不是一个标准的金融术语。虽然系统性风险会导致相关性增加，但这个词本身并不成立。
+    \end{itemize}]
+   
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 非对称相关性指的是在市场下跌时相关性会显著增加，这是一个有效的解释。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 锁相行为描述了在危机事件中，通常不相关的资产会变得高度相关，这也是一个合理的解释。
+    \end{itemize}
+\end{explanation}
+\checklist{危机中相关性的变化}
+
+
+\begin{question}
+    An analyst provides the following information to a pension fund advisor. The fund has an initial surplus of USD 10 million. To evaluate the surplus adequacy, the advisor estimates the surplus value at the end of one year, assuming returns and liability growth are jointly normal with a correlation of 0.7. With a 95\% confidence level, what will the surplus value be greater than or equal to?
+    \begin{table}[htbp]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|}
+            \hline
+            & \textbf{Pension Assets} & \textbf{Pension Liabilities} \\
+            \hline
+            Amount (in USD million)     & 120             & 110                 \\
+            Expected Annual Growth      & 5\%             & 6\%                 \\
+            Annual Volatility of Growth & 12\%            & 4\%                 \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{question}
+
+\begin{choices}
+    \item USD -11.8 million
+    \item USD -9.9 million
+    \item USD -4.5 million
+    \item USD 0 million
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。}  
+    \begin{itemize}
+    \item 首先，计算预期期末盈余：
+    \[ \text{Expected Surplus} = (120 \times 1.05) - (110 \times 1.06) = 126 - 116.6 = 9.4 \text{ million} \]
+    \item 其次，计算盈余的方差和波动率：
+    \[ \text{Var(Surplus)} = (120 \times 0.12)^2 + (110 \times 0.04)^2 - 2 \times 0.7 \times (120 \times 0.12) \times (110 \times 0.04) = 137.916 \]
+    \[ \text{Volatility(Surplus)} = \sqrt{137.916} = 11.74 \text{ million} \]
+    \item 最后，计算95\%置信水平下的盈余下限：
+    \[ \text{Lower Bound} = 9.4 - 1.645 \times 11.74 = 9.4 - 19.31 = -9.91 \text{ million} \]
+\end{itemize}
+\end{explanation}
+\checklist{养老金盈余风险价值计算}
+
+
+
+
+\section{考点4:风险监测和绩效衡量}
+\setcounter{question}{0}
+
+
+
+\begin{question}
+    A portfolio manager holds 30,000 shares of Innovate Corp. in a portfolio. The average daily trading volume of Innovate Corp. is 80,000 shares. The manager wishes to trade no more than 10\% of the daily trading volume of Innovate Corp. on any given day. Which of the following is closest to the liquidity duration of Innovate Corp. in this portfolio?
+\end{question}
+
+\begin{choices}
+    \item 0.27
+    \item 0.375
+    \item 3.75
+    \item 25.0
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 流动性久期 = 持有股数 / (每日最大交易比例 × 每日交易量) = 30,000 / (0.10 × 80,000) = 3.75天。
+    \end{itemize}
+
+\end{explanation}
+\checklist{流动性久期计算}
+
+
+
+\newpage
+
+
+\section{考点5:投资组合绩效评估}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Alice, a portfolio manager, claims her skill has consistently produced excess returns (over the benchmark) 99\% of the time. To support this, she provides regression results from 60 monthly observations: alpha = 1.2\%, and the standard error of alpha = 0.5\%. Would you reject the null hypothesis of true $\alpha = 0$ and accept her claim of superior performance at a 99\% confidence level?
+\end{question}
+
+\begin{choices}
+    \item t = 2.4; fail to reject the null hypothesis; reject her claim.
+    \item t = 2.4; reject the null hypothesis; accept her claim.
+    \item t = 1.96; fail to reject the null hypothesis; accept her claim.
+    \item t = 1.96; reject the null hypothesis; accept her claim.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item t统计量 = alpha / alpha的标准误 = 1.2\% / 0.5\% = 2.4。在99\%的置信水平下，临界t值（自由度约60）约为2.66。由于2.4 < 2.66，我们无法拒绝真实alpha为0的原假设，因此应拒绝她的说法。
+    \end{itemize}
+\end{explanation}
+\checklist{Alpha显著性的t检验}
+
+
+\begin{question}
+    Assume a hedge fund reports a substantial positive alpha. The fund is known to use leverage and take both long and short positions in equities. The market experienced a downturn over the reporting period. Based on this information, which statement is most accurate?
+\end{question}
+
+\begin{choices}
+    \item If the fund has a net positive beta, a portion of the alpha is attributable to the market's performance.
+    \item If the fund has a net negative beta, the alpha must entirely come from the market's performance.
+    \item If the fund has a net positive beta, the alpha must be generated entirely by stock selection, overcoming the market drag.
+    \item If the fund has a net negative beta, a portion of the alpha is attributable to the market's performance.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 当市场下跌时，一个正beta的投资组合会受到市场的负面影响。因此，任何正alpha都不可能来自市场表现。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 虽然负beta在下跌的市场中会贡献正回报，但alpha也包含了基金经理的选股能力，因此不能说alpha完全来自市场。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 这个说法比较接近，但最准确的描述是选项D。虽然基金经理的alpha确实需要克服市场拖累，但选项D直接描述了负beta情况下的市场贡献。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 因为市场下跌，一个净负beta的投资组合（例如，净空头敞口）会从市场下跌中获益。因此，其报告的正alpha中，有一部分可以归因于市场效应。
+    \end{itemize}
+\end{explanation}
+\checklist{Alpha归因与市场表现}
+
+
+\begin{question}
+    Leo Chen is an investment analyst for a European pension fund considering adding a large-cap equity mutual fund to its asset mix. To assess these funds, Leo conducts a detailed quantitative analysis on four mutual funds that claim to be large-capitalization funds. The results are in Exhibits 1 and 2.
+
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|c|}
+            \hline
+            \multicolumn{6}{|c|}{\textbf{Exhibit 1: Style Analysis Results}} \\
+            \hline
+            \multicolumn{2}{|l|}{ } & \textbf{Orion} & \textbf{Pegasus} & \textbf{Phoenix} & \textbf{Hydra} \\
+            \hline
+            \multicolumn{2}{|l|}{MSCI World Value (large-cap)} & 97\%  & 20\%  & 30\%  & 60\%  \\
+            \multicolumn{2}{|l|}{MSCI World Growth (large-cap)} & 1\%   & 70\%  & 10\%  & 30\%  \\
+            \multicolumn{2}{|l|}{MSCI EM Value (small-cap)}   & 2\%   & 5\%   & 35\%  & 10\%  \\
+            \multicolumn{2}{|l|}{MSCI EM Growth (small-cap)}  & 0\%   & 5\%   & 25\%  & 0\%   \\
+            \multicolumn{2}{|l|}{\textbf{Total}}              & 100\% & 100\% & 100\% & 100\% \\
+            \hline
+            \multicolumn{2}{|l|}{$R^2$}                      & 98.5\% & 90.1\% & 82.3\% & 70.2\% \\
+            \hline
+            \multicolumn{6}{|c|}{\textbf{Exhibit 2: Performance Measurement}} \\
+            \hline
+            & \textbf{Benchmark (Euro Stoxx 50)} & \textbf{Orion} & \textbf{Pegasus} & \textbf{Phoenix} & \textbf{Hydra} \\
+            \hline
+            Annual return (gross) & 5.0\% & 5.2\% & 6.0\% & 6.5\% & 7.5\% \\
+            Sharpe ratio          & 0.35  & 0.38 & 0.45 & 0.41 & 0.44 \\
+            Treynor ratio         & 0.28  & 0.30 & 0.33 & 0.31 & 0.40 \\
+            Tracking error        & --    & 7.0\%  & 8.0\% & 9.0\% & 8.5\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    Based on these results, Leo made several comments. Which statement is least likely to be correct?
+\end{question}
+
+\begin{choices}
+    \item Orion is a passively managed fund.
+    \item The pension fund should invest in the Pegasus fund because it has the highest Sharpe ratio.
+    \item Phoenix's investment style has drifted to small-capitalization.
+    \item Hydra has the highest Information Ratio.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item Orion基金的R平方值高达98.5\%，且其投资高度集中于大盘价值股，表明该基金很可能是一只被动管理型基金，该评论很可能是正确的。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 夏普比率衡量总风险调整后的收益，但在考虑将基金加入现有投资组合时，它不一定是最佳指标。仅因夏普比率最高而做出投资决策是不全面的，因此该投资建议最不可能是正确的。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item Phoenix基金声称是大盘股基金，但其在小盘股上的配置合计达到了60\%（35\% + 25\%），表明其投资风格已发生漂移，该评论很可能是正确的。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 信息比率 = (基金收益 - 基准收益) / 跟踪误差。Hydra的信息比率 = (7.5\% - 5.0\%) / 8.5\% ≈ 0.294，是四只基金中最高的，该评论很可能是正确的。
+    \end{itemize}
+\end{explanation}
+\checklist{基金风格分析与业绩评估}
+
+
+
+
+\newpage
+
+
+
+
+\end{document}

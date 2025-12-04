@@ -1,0 +1,1677 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:网络弹性：实践范围}
+\setcounter{question}{0}
+
+\begin{question}
+    Which of the practice on cyber-risk management, testing and incident response and recovery is wrong?
+\end{question}
+
+\begin{choices}
+    \item A clear understanding of business services and supporting assets (and their criticality and sensitivity) can be used to design testing and assurance of end-to-end business services. This is typically completed as part of business impact analysis, recovery and resolution planning, reviewing dependency of critical services on external third parties, and scoping for assessments.
+    \item Evaluation of service continuity plans focuses on reviewing alignment with institutions' risk management frameworks, the business continuity management strategies chosen, IT disaster recovery arrangements and data centre strategies.
+    \item Supervisors review and challenge regulated institutions' approach to testing controls and the remediation of issues identified. This can include reviewing survey responses, threat and vulnerability assessments, risk assessments, audit reports and control testing reports.
+    \item Supervisory authorities should neglect entities’ own management information because this differs across entities and is not yet mature
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法恰当。}
+    \begin{itemize}
+        \item 明确业务服务和支持资产的理解（包括其关键性和敏感性）可用于设计端到端业务服务的测试和保障，这是业务影响分析、恢复与处置规划、审查关键服务对外部第三方依赖以及评估范围确定的重要组成部分。
+    \end{itemize}   
+
+    \textbf{B选项说法恰当。}    
+    \begin{itemize}
+        \item 服务连续性计划评估聚焦于审查与机构风险管理框架的对齐、所选业务连续性管理策略、IT灾难恢复安排和数据中心策略，这是网络风险管理的关键环节。
+    \end{itemize}
+
+    \textbf{C选项说法恰当。}
+    \begin{itemize}
+        \item 监管机构审查并质询受监管机构对控制测试和问题整改的方法，可包括审查调查回复、威胁与脆弱性评估、风险评估、审计报告和控制测试报告，这是监管监督的常规做法。
+    \end{itemize}
+
+    \textbf{D选项说法不恰当。}
+    \begin{itemize}
+        \item 监管机构不应忽视机构自身的管理信息，即使不同机构的管理信息存在差异且尚未完全成熟，监管机构也应参考和利用这些信息，因为它们是网络风险管理的重要组成部分，有助于评估机构的风险管理成熟度和有效性。
+    \end{itemize}
+\end{explanation}
+
+\checklist{网络风险管理与测试的监管实践}
+
+
+\begin{question}
+    Most Basel Committee jurisdictions have put in place cyber-security information-sharing mechanisms, be they mandatory or voluntary, to facilitate sharing of cyber-security information among banks, regulators and security agencies. Which of the statement on information-sharing frameworks is wrong?
+\end{question}
+
+\begin{choices}
+    \item Because there is no common standard for automated information-sharing, regulators in most jurisdictions are directly involved in bank-to-bank information sharing and do play a role in facilitating the establishment of voluntary sharing mechanisms for cyber-vulnerability, threat and incident information, and in some cases indicators of compromise.
+    \item The sharing of cyber-security information from a bank to its regulator/supervisor is generally limited to cyber-incidents based on regulatory reporting requirements.
+    \item Regulators share information with fellow regulators, be they domestic or cross-border, as appropriate according to established mandatory or voluntary information-sharing arrangements.
+    \item Information-sharing from regulators to banks occurs through established channels, based on the information the regulator receives both from banks and other sources. Various jurisdictions have established clear guidance in the form of standards and practices to enable cyber-security information-sharing by regulators to banks.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法不恰当。}
+    \begin{itemize}
+        \item 监管机构通常不直接参与银行间信息共享，而是促进自愿共享机制的建立；监管机构的主要作用是促进和协调，而非直接介入银行对银行的信息流转过程。
+        \item 由于缺乏自动信息共享的通用标准，监管机构主要协助建立自愿共享机制，而非直接参与银行间信息共享活动。
+    \end{itemize}
+
+    \textbf{B选项说法恰当。}
+    \begin{itemize}
+        \item 银行向监管机构/监督机构共享网络安全信息通常限于基于监管报告要求的网络事件，这是监管报告框架的常见做法。
+    \end{itemize}
+
+    \textbf{C选项说法恰当。}
+    \begin{itemize}
+        \item 监管机构之间（包括国内和跨境）会根据既定的强制性或自愿性信息共享安排适当共享信息，这是监管协调与合作的重要机制。
+    \end{itemize}
+
+    \textbf{D选项说法恰当。}
+    \begin{itemize}
+        \item 监管机构通过既定渠道向银行共享信息，信息来源包括从银行和其他渠道获得的信息；各司法管辖区已建立明确的标准和实践指导，以促进监管机构向银行共享网络安全信息。
+    \end{itemize}
+\end{explanation}
+
+\checklist{网络安全信息共享机制的监管实践}
+
+
+\begin{question}
+    Which of the statements about incident response and crisis management is wrong?
+\end{question}
+
+\begin{choices}
+    \item The aim of cyber resilience is to maintain a system’s capability to deliver the intended outcome at all times, including crisis when regular delivery has failed
+    \item To balance risk with opportunity, a corporate risk-based strategy needs to be put in place that manages the vulnerabilities, threats, risks and impacts
+    \item Successful training can be achieved only with full staff engagement. If the training is perceived as dull, tedious and boring, the results are likely to be disappointing, Unless the training is technically expert
+    \item Gamification usually means awarding points to employees who do the right thing, with various forms of recognition, including badges, prizes, and a leader board listing point totals
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法恰当。}
+    \begin{itemize}
+        \item 网络韧性的目标是在任何时候（包括常规交付失败时的危机时刻）保持系统提供预期结果的能力，这是事件响应和危机管理的核心目标。
+    \end{itemize}
+
+    \textbf{B选项说法恰当。}
+    \begin{itemize}
+        \item 为平衡风险与机会，需要建立基于风险的企业策略来管理脆弱性、威胁、风险和影响，这是有效的风险管理方法。
+    \end{itemize}
+
+    \textbf{C选项说法不恰当。}
+    \begin{itemize}
+        \item 该表述错误：即使培训在技术上很专业，如果被认为枯燥、乏味和无聊，结果仍可能令人失望；技术专业性不能弥补缺乏参与感和吸引力的问题，成功的培训需要全员参与和积极的培训体验，而非仅依赖技术专业性。
+    \end{itemize}
+
+    \textbf{D选项说法恰当。}
+    \begin{itemize}
+        \item 游戏化通常指为做正确事情的员工授予积分，并通过徽章、奖品和显示积分总额的排行榜等各种形式的认可进行激励，这是提升员工参与度和培训效果的有效方法。
+    \end{itemize}
+\end{explanation}
+\checklist{事件响应与危机管理的培训原则}
+
+
+\begin{question}
+    Most Basel Committee jurisdictions have put in place cyber-security information-sharing mechanisms, be they mandatory or voluntary, to facilitate sharing of cyber-security information among banks, regulators and security agencies. Which of the statement on information-sharing frameworks is wrong?
+\end{question}
+
+\begin{choices}
+    \item Because there is no common standard for automated information-sharing, regulators in most jurisdictions are directly involved in bank-to-bank information sharing and do play a role in facilitating the establishment of voluntary sharing mechanisms for cyber-vulnerability, threat and incident information, and in some cases indicators of compromise.
+    \item The sharing of cyber-security information from a bank to its regulator/supervisor is generally limited to cyber-incidents based on regulatory reporting requirements.
+    \item Regulators share information with fellow regulators, be they domestic or cross-border, as appropriate according to established mandatory or voluntary information-sharing arrangements.
+    \item Information-sharing from regulators to banks occurs through established channels, based on the information the regulator receives both from banks and other sources. Various jurisdictions have established clear guidance in the form of standards and practices to enable cyber-security information-sharing by regulators to banks.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法不恰当。}
+    \begin{itemize}
+        \item 监管机构通常不直接参与银行间信息共享，而是促进自愿共享机制的建立；监管机构的主要作用是促进和协调，而非直接介入银行对银行的信息流转过程。
+        \item 由于缺乏自动信息共享的通用标准，监管机构主要协助建立自愿共享机制，而非直接参与银行间信息共享活动。
+    \end{itemize}
+
+    \textbf{B选项说法恰当。}
+    \begin{itemize}
+        \item 银行向监管机构/监督机构共享网络安全信息通常限于基于监管报告要求的网络事件，这是监管报告框架的常见做法。
+    \end{itemize}
+
+    \textbf{C选项说法恰当。}
+    \begin{itemize}
+        \item 监管机构之间（包括国内和跨境）会根据既定的强制性或自愿性信息共享安排适当共享信息，这是监管协调与合作的重要机制。
+    \end{itemize}
+
+    \textbf{D选项说法恰当。}
+    \begin{itemize}
+        \item 监管机构通过既定渠道向银行共享信息，信息来源包括从银行和其他渠道获得的信息；各司法管辖区已建立明确的标准和实践指导，以促进监管机构向银行共享网络安全信息。
+    \end{itemize}
+\end{explanation}
+
+\checklist{网络安全信息共享机制的监管实践}
+
+
+\begin{question}
+    Which of the following statements regarding the role of employees in making an organization more cyber resilient is correct?
+\end{question}
+
+\begin{choices}
+    \item Effective cyber training requires the full buy-in of all employees
+    \item Effective gamification requires mandatory participation of the employees
+    \item To date, studies of incentive training have shown incentivized training yields limited but positive results
+    \item Treating cyber security as a competitive game would not be considered appropriate
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 有效的网络安全培训需要所有员工的全力支持和参与，这是提升组织网络韧性的关键因素；员工的积极参与和认同是培训成功的基础。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 有效的游戏化不应要求员工强制参与，自愿参与更能激发员工的积极性和学习动力，强制参与反而可能降低效果和参与度。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 该表述不准确：激励性培训的研究显示其效果显著且积极，而非仅仅是"有限但积极的结果"；激励性培训在提升员工网络安全意识和行为方面通常表现出色。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 将网络安全作为竞争性游戏（如通过排行榜、积分和奖励）被认为是合适且有效的做法，游戏化是提升员工参与度和培训效果的重要方法，有助于增强组织的网络韧性。
+    \end{itemize}
+\end{explanation}
+
+\checklist{员工参与对网络韧性的作用}
+
+
+\begin{question}
+    A risk consultant is presenting to a large group of bankers on cyber resilience. The consultant summarizes recent practices regarding banks' cyber resilience described by the Basel committee, including the sharing of cyber security information between different stakeholder groups and the current use of metrics for assessing banks' cyber resilience. Which of the following is the most appropriate observation the consultant can make?
+\end{question}
+
+\begin{choices}
+    \item Banks typically use a mix of backward-looking and forward-looking indicators to assess cyber resilience, but forward-looking indicators are becoming more important
+    \item Banks are typically required to share detailed information about their cyber security systems implementations with their regulators
+    \item A standardized set of cyber security and resilience metrics has been broadly implemented by a large group of global banks to meet best practices
+    \item Sharing of cyber security information between regulators in different countries is typically more common than sharing of this information between banks and regulators in the same country
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 银行通常使用回顾性指标（如历史事件、损失数据）和前瞻性指标（如威胁情报、脆弱性评估、风险指标）的混合来评估网络韧性，但前瞻性指标正变得越来越重要，因为它们有助于预测和预防而非仅仅反应。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 银行通常不被要求向监管机构共享关于其网络安全系统实施的详细信息，监管报告要求通常限于网络事件和总体状况，而非详细的系统实现细节。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 目前尚未有标准化的网络安全和韧性指标集被全球大型银行广泛实施，各银行采用的指标和方法存在差异，标准化仍处于发展阶段，尚未成为最佳实践的普遍要求。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 不同国家监管机构之间的网络安全信息共享通常不如同一国家的银行与监管机构之间的信息共享常见，国内信息共享机制更为成熟和普遍，跨境共享存在监管协调和法律障碍。
+    \end{itemize}
+\end{explanation}
+
+\checklist{网络韧性评估指标的应用趋势}
+
+
+
+
+\section{考点2:案例研究：网络威胁与信息安全风险}
+\setcounter{question}{0}
+\begin{question}
+    The chief risk officer of a newly-formed public company is looking to establish a cyber risk management framework within the company. Which function would be included in the framework?
+\end{question}
+
+\begin{choices}
+    \item Adapt
+    \item Describe
+    \item Develop
+    \item Protect
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item NIST框架的五大核心功能是：Identify（识别）、Protect（保护）、Detect（检测）、Respond（响应）和Recover（恢复）。
+    \end{itemize}
+\end{explanation}
+
+\checklist{网络风险管理框架的核心功能}
+
+
+\begin{question}
+    Which of the statements regarding on resilient security solution is wrong?
+\end{question}
+
+\begin{choices}
+    \item A resilient strategy for coping with a cyber attack should minimize the intrusion dwell time, which is the time from initial system compromise to the time the malware ceases to be effective
+    \item Anomaly detection algorithms use state-of-the-art artificial intelligence methods, incorporating sophisticated Bayesian techniques of statistical inference. These probabilistic tools for searching for discrepancies have been refined using ideas developed for big data analysis
+    \item Conducting a pen test to prove that a missing patch is a security issue typically raises the cost of testing, and runs the expensive risk of potential system downtime
+    \item Junior security personnel may work obsessively to reduce vulnerability where they find it and the effectiveness of risk reduction should be considered prior to the cost on risk management
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法恰当。}
+    \begin{itemize}
+        \item 应对网络攻击的弹性策略应最小化入侵驻留时间（从初始系统被攻破到恶意软件停止有效的时间），快速检测和响应有助于降低损失和影响。
+    \end{itemize}
+
+    \textbf{B选项说法恰当。}
+    \begin{itemize}
+        \item 异常检测算法使用最先进的人工智能方法，结合复杂的贝叶斯统计推断技术，这些概率工具通过大数据分析理念进行改进，提高了检测的准确性和效率。
+    \end{itemize}
+
+    \textbf{C选项说法恰当。}
+    \begin{itemize}
+        \item 进行渗透测试以证明缺失补丁是安全问题通常会增加测试成本，并带来潜在系统停机的昂贵风险，这是渗透测试的常见考虑因素。
+    \end{itemize}
+
+    \textbf{D选项说法不恰当。}
+    \begin{itemize}
+        \item 该表述错误：虽然初级安全人员可能过度专注于减少发现的漏洞，但正确的做法是应先考虑风险降低的效果，然后考虑成本；风险管理的成本效益分析应在评估风险降低效果之后进行，而非相反的顺序。
+    \end{itemize}
+\end{explanation}
+
+\checklist{网络安全弹性方案的成本与效果权衡}
+
+
+
+\section{考点3:妥善管理与洗钱和资助恐怖主义有关的风险}
+\setcounter{question}{0}
+\begin{question}
+    Which of the followings about how a bank can structure performance incentives and make staff development decisions to encourage a strong corporate culture is wrong?
+\end{question}
+
+\begin{choices}
+    \item To encourage a strong corporate culture, the banks can structure their performance incentives and compensation measures so that it falls in line with cultural expectations rather than focusing on profitability or high performance alone
+    \item Banks need to not only act on but publicize acts of misconduct when needed. Where necessary they should even be ready to forego revenue opportunities in order to maintain a strong culture
+    \item Banks may use various scenarios or role-play based or industrial theater approaches and use a blend of live and web-based mechanisms to provide content that interprets the culture into daily practical behavior
+    \item As training can have a powerful effect on staff and sometimes can deepen employee awareness of regulations. So the mass training for all the staff is necessary. All in all, the training should be comprehensive and guide everyone to realize everything
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法恰当。}
+    \begin{itemize}
+        \item 为鼓励强大的企业文化，银行可以构建绩效激励和薪酬措施，使其与文化期望一致，而非仅关注盈利或高绩效，这有助于将文化价值观融入日常业务决策。
+    \end{itemize}
+
+    \textbf{B选项说法恰当。}
+    \begin{itemize}
+        \item 银行不仅需要处理不当行为，必要时还应公开这些行为；在必要时，银行应准备放弃收入机会以维护强大的企业文化，这体现了对文化优先级的承诺。
+    \end{itemize}
+
+    \textbf{C选项说法恰当。}
+    \begin{itemize}
+        \item 银行可以使用各种情景模拟、角色扮演或工业剧场方法，结合现场和网络机制，提供将文化转化为日常实际行为的内容，这有助于员工更好地理解和应用文化价值观。
+    \end{itemize}
+
+    \textbf{D选项说法不恰当。}
+    \begin{itemize}
+        \item 虽然培训对员工有重要影响，但培训不应是"全面的，指导每个人理解一切"；培训应有针对性、适度和可操作，过度全面和强制性的全员培训可能导致培训疲劳、效果递减，且"让每个人理解一切"的要求不现实；有效的培训应聚焦关键概念和实用技能，而非试图覆盖所有内容。
+    \end{itemize}
+\end{explanation}
+\checklist{企业文化建设中的激励与培训原则}
+
+
+
+
+
+\begin{question}
+    The risk committee at a bank is developing a set of policies and guidelines for the management of money laundering and financing of terrorism (ML/FT) risk. The CRO suggests actions for the bank to take that reflect best practices. Which of the following actions should the bank take to most appropriately manage ML/FT risk？
+\end{question}
+
+\begin{choices}
+    \item Assign a lower level of risk to accounts held by politically exposed persons (PEPs)
+    \item Encourage the CEO and CRO to monitor transactions for evidence of ML/FT on a day-to-day basis
+    \item Refuse to open an account for a customer until the customer's identity has been clearly established
+    \item Establish a transaction size threshold and monitor all transactions above this threshold for potential ML/FT activity
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 对政治公众人物（PEPs）的账户应分配更高的风险级别，而非较低级别；PEPs账户需要加强尽职调查和持续监控，因为其面临更高的洗钱和腐败风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item CEO和CRO不应亲自进行日常交易监控以寻找ML/FT证据，这种日常监控应由专门的合规部门和反洗钱团队负责；CEO和CRO应关注政策和流程的有效性，而非具体交易细节。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 在客户身份明确建立之前拒绝开户是反洗钱和反恐融资风险管理的最佳实践，这是"了解你的客户"（KYC）原则的核心要求，防止匿名或虚假身份开户，是合规的首要防线。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 仅建立交易金额阈值并监控超过该阈值的交易是不够的，因为洗钱者可能通过拆分交易（smurfing）规避阈值；有效的监控应综合多种风险因素（交易模式、客户行为、地理位置等），而不仅限于金额阈值。
+    \end{itemize}
+\end{explanation}
+
+\checklist{反洗钱与反恐融资的合规管理要点}
+
+
+
+\newpage
+
+
+
+\section{考点4:案例学习：金融犯罪和欺诈}
+\setcounter{question}{0}
+
+
+
+\begin{question}
+
+\end{question}
+
+\begin{choices}
+
+        \item 
+\end{choices}
+
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{explanation}
+\checklist{}
+
+
+
+\newpage
+
+
+\section{考点5:外包风险管理指南}
+\setcounter{question}{0}
+\begin{question}
+    A major challenge for banks is dealing with inappropriate behavior by employees who are overachievers based on traditional performance-driven measures. Which of the following compensation plans best describes recommended methods to mitigate this risk?
+\end{question}
+
+\begin{choices}
+    \item Compensation should not be strictly based on sales data and overachievers should not be terminated but appropriately reprimanded
+    \item Compensation linked to sales volume is appropriate for front-line staff but not upper management
+    \item Compensation should focus on employee behavior related to customer satisfaction and ethical behavior consistent with firm values
+    \item Because compensation linked to firm profitability is a way to reduce agency costs, upper management should always have compensation plans based on quantifiable measures of performance
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 该表述不完整：仅规定薪酬不应严格基于销售数据且过度追求业绩者应被惩戒是不够的，关键是应建立积极的替代激励结构，将薪酬与正确的行为和价值观挂钩，而非仅通过惩戒来解决问题。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 与销售量挂钩的薪酬不应作为主要标准，无论是一线员工还是高管；所有员工都应关注行为和文化合规，仅区分岗位类型而不改变激励结构本身无法有效缓解不当行为风险。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 薪酬应聚焦与客户满意度和符合公司价值观的道德行为相关的员工行为，这是缓解过度追求传统绩效指标导致不当行为的最佳方法；通过将激励与正确的行为和结果（客户满意度、道德行为）而非仅销售业绩挂钩，可以有效减少不当激励并促进健康的企业文化。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 仅基于盈利等可量化绩效指标的薪酬计划可能激励不当行为，因为过度关注量化指标可能导致员工忽视客户利益、合规要求和道德标准；有效的薪酬计划应综合考量行为、文化合规和长期价值，而非仅依赖量化指标。
+    \end{itemize}
+\end{explanation}
+
+\checklist{薪酬激励与企业文化建设}
+
+
+\begin{question}
+    When performing due diligence on a service provider, ascertaining the sufficiency of its insurance coverage would most appropriately be covered under which of the following categories?
+\end{question}
+
+\begin{choices}
+    \item Business background, reputation, and strategy
+    \item Financial performance and condition
+    \item Operations and internal controls
+    \item Oversight and monitoring
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 业务背景、声誉和战略主要关注公司的整体形象、市场地位、发展策略和行业声誉，不直接涉及保险覆盖等财务风险管理事项。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 确定保险覆盖的充分性应属于财务状况和条件类别，因为保险是财务风险管理的重要组成部分，保险覆盖的充分性直接影响服务提供商的财务稳定性、风险承受能力和在发生损失时的财务恢复能力，是财务状况评估的关键要素。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 运营和内部控制主要关注运营流程、合规性、内部控制框架和风险管理流程的设计，虽然可能涉及风险管理，但保险覆盖的充分性本身更直接属于财务事项，而非运营流程范畴。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 监督和监测属于尽职调查完成后的持续风险管理环节，而非尽职调查中的初始评估类别；确定保险覆盖充分性是在尽职调查阶段进行的评估活动，而非后续的监督监测。
+    \end{itemize}
+\end{explanation}
+
+\checklist{服务商尽职调查的财务关注点}
+
+
+\begin{question}
+    Which of the following provisions would a financial institution least likely include in a contract with a third-party service provider?
+\end{question}
+
+\begin{choices}
+    \item Establishment and monitoring of performance standards
+    \item Indemnification
+    \item Ownership and license
+    \item Right to audit
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+\begin{explanation}
+    \textbf{A选项通常包含。}
+    \begin{itemize}
+        \item 建立和监控业绩标准是第三方服务提供商合同的核心内容，有助于确保服务质量、明确服务期望、便于违约判定和合同管理，是合同的基础条款。
+    \end{itemize}
+
+    \textbf{B选项通常包含。}
+    \begin{itemize}
+        \item 赔偿条款是第三方服务提供商合同的重要组成部分，用于保护金融机构免受服务提供商过失、疏忽或违约导致的法律风险和经济损失，是风险管理的关键条款。
+    \end{itemize}
+
+    \textbf{C选项通常包含。}
+    \begin{itemize}
+        \item 所有权和许可条款是第三方服务提供商合同的关键内容，明确知识产权、数据所有权、软件许可权和使用权，规定服务商对数据和设备的使用范围和限制，是合同的核心条款。
+    \end{itemize}
+
+    \textbf{D选项最不可能包含。}
+    \begin{itemize}
+        \item 审计权条款虽然重要，但在某些情况下可能不如其他条款基础；审计权可能涉及额外成本、需要服务提供商同意，且对于某些较小规模或低风险的服务关系，可能通过其他方式（如定期报告、认证）来满足监督需求，而非直接授予审计权。
+    \end{itemize}
+\end{explanation}
+\checklist{外包服务合同的关键条款}
+
+
+
+\begin{question}
+    A regional bank is negotiating a contract with a third-party service provider to offer a software application that will provide payment services to the bank's customers. The service provider also plans to use several partners as subcontractors to offer the bank's customers rewards for using the payment services.
+    A risk manager at the bank has been asked to review the proposed contract and suggest additional terms that describe responsibilities for the bank and the service provider: Which of the following should be included in the contract as a responsibility of the bank?
+\end{question}
+
+\begin{choices}
+    \item Have the primary accountability for any deficiencies in the subcontracted services
+    \item Purchase insurance to cover potential data breaches from the provider's software
+    \item Review and approve the incentive compensation structure for the service provider's sales representatives
+    \item Develop the contingency plan for the service provider in case the payment services fail
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 银行不应承担分包服务缺陷的主要责任；分包服务的责任应由主服务提供商承担，银行的责任应限于选择和管理主服务提供商，而非直接管理分包商的服务缺陷。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 购买保险以覆盖服务提供商软件可能的数据泄露是银行应承担的责任；即使支付服务由第三方提供，数据泄露的最终责任和风险仍由银行承担，购买适当的保险是银行风险管理的重要组成部分，用于保护银行自身和客户利益。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 审查和批准服务提供商销售代表的激励薪酬结构不是银行的责任；这是服务提供商的内部人力资源管理事项，银行的责任应限于确保服务提供商的行为符合合同要求，而非管理其内部薪酬结构。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 为服务提供商制定支付服务失败的应急预案不是银行的责任；应急预案应由服务提供商制定并负责，银行的责任是审核和批准该计划，而非代其制定。
+    \end{itemize}
+\end{explanation}
+
+\checklist{外包合同中银行的风险管理责任}
+
+
+
+
+\section{考点6:案例学习：第三方风险管理}
+\setcounter{question}{0}
+\begin{question}
+    The ability of financial firms and systems to recover from an operational disruption and continue operations is a key concern for maintaining the financial stability of the economy. Under which of the following scenarios are supervisory authorities more concerned about the occurrence of systemic risk related to the failure of financial firms or financial market infrastructures (FMIs)?
+\end{question}
+
+\begin{choices}
+    \item a dynamic environment and more reliance on outsourcing to third parties
+    \item a dynamic environment and numerous stakeholders across international borders
+    \item a static environment and more reliance on outsourcing to third parties
+    \item a static environment and numerous stakeholders across international borders
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{第一部分：环境特征分析（动态 vs 静态）}
+    \begin{itemize}
+        \item 动态环境：技术快速变化、业务模式创新、监管要求演进，增加了不确定性和复杂性，使金融机构和FMIs面临更大的运营中断和系统性风险。
+        \item 静态环境：变化较少、风险相对可控，系统性风险触发因素和传播路径更容易识别和管理。
+    \end{itemize}
+
+    \textbf{第二部分：风险因素分析（外包依赖 vs 跨境利益相关方）}
+    \begin{itemize}
+        \item 第三方外包依赖：增加运营中断风险、数据安全风险、服务商集中风险，当关键服务外包给单一或少数服务商时，其失败可能引发系统性影响，监管机构对此高度关注。
+        \item 跨境利益相关方：虽然增加复杂性，但系统性风险主要取决于服务依赖和集中度，而非利益相关方的地理分布。
+    \end{itemize}
+\end{explanation}
+
+\checklist{系统性风险与外包依赖的关系}
+
+
+\section{考点7:案例学习：投资者保护与合规风险}
+\setcounter{question}{0}
+\begin{question}
+    The following is not a problem of having one employee perform trading functions and back-office functions.
+\end{question}
+
+\begin{choices}
+    \item The employee gets paid more because she performs two functions
+    \item The employee can hide trading mistakes when processing the trades
+    \item The employee can hide the size of her book
+    \item The employee’s firm may not know its true exposure
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项不是问题。}
+    \begin{itemize}
+        \item 员工因执行两个功能而获得更多薪酬不是职责合并的问题；薪酬增加是多劳多得的正常安排，不构成操作风险或合规问题，问题在于职责分离原则的违反，而非薪酬本身。
+    \end{itemize}
+
+    \textbf{B选项是问题。}
+    \begin{itemize}
+        \item 员工在处理交易时可以隐藏交易错误是职责合并的重大问题；违反职责分离原则使员工能够掩盖自己的错误，导致损失累积和风险暴露增加，损害公司利益和风险管理有效性。
+    \end{itemize}
+
+    \textbf{C选项是问题。}
+    \begin{itemize}
+        \item 员工可以隐藏其头寸规模是职责合并的严重问题；缺少独立的监督和控制使员工能够隐瞒真实的头寸规模，影响风险暴露的透明度，增加未授权交易和重大损失的风险。
+    \end{itemize}
+
+    \textbf{D选项是问题。}
+    \begin{itemize}
+        \item 公司可能不知道其真实敞口是职责合并的核心问题；缺少独立的报告和监控机制使管理层无法准确了解公司的真实风险敞口，导致风险管理失效，可能引发重大操作损失。
+    \end{itemize}
+\end{explanation}
+
+\checklist{职责分离对操作风险的影响}
+
+
+
+\section{考点8:模型风险管理监管指南}
+\setcounter{question}{0}
+\begin{question}
+    Even though risk managers cannot eliminate model risk, there are many ways managers can protect themselves against model risk. Which of the following statements about managing model risk is correct?
+\end{question}
+
+\begin{choices}
+    \item Models should be tested against known problems
+    \item It is not advisable to estimate model risk using simulations
+    \item Complex models are generally preferable to simple models
+    \item Small discrepancies in model outputs are always acceptable
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 模型应针对已知问题进行测试，这是模型风险管理的最佳实践；通过对已知问题的测试（如使用简单特例、已知解或历史案例），可以验证模型的有效性、识别潜在缺陷并及时修正，这是模型验证和风险管理的关键步骤。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 使用模拟来估计模型风险是建议的做法；敏感性分析、蒙特卡洛模拟、压力测试等模拟方法可以有效识别模型风险、评估模型稳健性并发现潜在问题，是模型风险管理的重要工具。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 复杂模型通常不优于简单模型；简单模型更易于理解、验证和维护，复杂模型可能引入过度拟合、难以解释、计算错误等风险，模型选择应基于适用性和稳健性，而非复杂度。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 模型输出的微小差异并非总是可以接受；即使是小的差异也可能反映模型缺陷、参数错误或假设不当，需要认真分析和解释，不能简单地认为微小差异可以忽略。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理的基本方法}
+
+
+\begin{question}
+    The senior management team of a small regional bank has established a committee to review procedures and implement best practices related to entering into significant contracts with third-party vendors. The committee is reviewing one proposed relationship with a third-party vendor who would have a significant responsibility for marketing the bank’s financial products to potential customers. In establishing policies to reduce the operational risk associated with this potential vendor contract, which of the following recommendations would be most appropriate?
+\end{question}
+
+\begin{choices}
+    \item The bank should review all third-party audit reports of a vendor that are publicly available
+    \item The bank should ensure that a vendor's sales representatives are compensated mainly with commissions from the sale of the bank's products
+    \item The bank should prevent a third-party vendor from having access to any of its critical processes
+    \item The bank should be responsible for developing a vendor's contingency planning process in order to mitigate risk exposure to the vendor
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 银行应审查服务提供商所有公开可用的第三方审计报告，这是降低操作风险的适当做法；通过审查审计报告，可以了解服务提供商的内部控制环境、合规情况、风险管理能力和财务健康状况，有助于识别潜在操作风险并做出明智的供应商选择决策。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 确保服务提供商的销售代表主要通过销售银行产品的佣金获得报酬会增加而非降低操作风险；纯佣金结构可能激励不当销售行为、误导客户、违规销售或过度销售，损害银行声誉并增加合规和法律风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 阻止第三方服务提供商访问银行的任何关键流程是不切实际的极端做法；如果服务提供商要为银行进行营销，它需要了解银行的产品、服务和流程；关键是通过适当的访问控制、监督和管理来降低风险，而非完全阻止访问。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 银行不应负责开发服务提供商的应急规划流程；虽然银行应审查、批准和监督服务提供商的应急计划，但开发应急计划是服务提供商自身的责任；银行的责任是确保服务提供商有适当的应急计划并对其进行审核。
+    \end{itemize}
+\end{explanation}
+
+\checklist{外包风险管理的最佳实践}
+
+
+\begin{question}
+    Which of the following statements about combating model risk are incorrect?
+    \begin{itemize}
+    \item I.If a position is known to have considerable model risk, a firm can limit its exposure by imposing a tighter position limit.
+    \item II.If we always choose the model that takes into account the largest number of real-world factors that affect prices, the firm’s exposure to model risk will be reduced.
+    \item III.Running regular stress tests or scenario analyses to test the volatility, correlation and liquidity assumptions in model helps reduce model risk.
+    \item IV.Risk managers should check the trader’s pricing model to ensure that model calibration is up-to-date and that models are upgraded in line with market best practice and to ensure that obsolete models are identified and taken out of use.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item None are true
+    \item II only
+    \item I, III and IV
+    \item I, II and III
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 如果已知头寸存在相当大的模型风险，公司可以通过实施更严格的头寸限额来限制其敞口，这是降低模型风险暴露的有效方法，通过限制头寸规模来降低潜在损失。
+    \end{itemize}
+
+    \textbf{陈述II分析：错误}
+    \begin{itemize}
+        \item 总是选择考虑最多影响价格的实际世界因素的模型并不能降低模型风险；过度复杂的模型可能引入更多不确定性、难以验证、计算错误和过度拟合风险，反而增加模型风险；简单合理的模型通常更易于理解、验证和管理。
+    \end{itemize}
+
+    \textbf{陈述III分析：正确}
+    \begin{itemize}
+        \item 定期运行压力测试或情景分析来测试模型中的波动率、相关性和流动性假设有助于降低模型风险；通过验证模型假设在不同市场条件下的稳健性，可以识别模型缺陷并改进模型。
+    \end{itemize}
+
+    \textbf{陈述IV分析：正确}
+    \begin{itemize}
+        \item 风险管理人员应检查交易员的定价模型，确保模型校准是最新的，模型根据市场最佳实践进行升级，并识别和停用过时模型，这是模型风险管理的关键流程。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理的有效措施与误区}
+
+
+\begin{question}
+    Model risk is the risk associated with trying to capture an observed phenomenon using a financial model. Models, by their very construction, are flawed instruments and cannot possibly capture the full scope of factors necessary to explain the dynamic relationships we observe. It is better to ask oneself what is wrong with the model rather than glossing over potential errors in construction. Important sources of model risk include incorrect model specifications, incorrect model application, implementation risk, incorrect calibration, programming errors, and data problems. Which of the following statements is correct regarding sources of model risk?
+\end{question}
+
+\begin{choices}
+    \item An example of incorrect model application would be if a model assumes a binomial distribution
+    \item Multiple users of the capital asset pricing model (CAPM) may incorporate different measures
+    \item Use of outdated model input parameters measured with error or based on inappropriate sample
+    \item Using the standard bond valuation model to value mortgage-backed securities is an example of incorrect model application
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 假设二项分布属于模型设定（specification）问题，而非模型应用错误；选择概率分布形式是模型设计的一部分，属于模型规范错误，不是将模型应用于错误场景的问题。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item CAPM的多个用户采用不同衡量方法属于模型校准（calibration）或实施（implementation）问题，而非模型应用错误；不同用户使用不同参数或方法属于模型输入或实施不一致，不是将模型应用于错误场景。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 使用过时的、测量有误的或基于不适当样本的模型输入参数属于模型校准错误（incorrect calibration）或数据问题（data problems），而非模型应用错误；这是输入数据质量或参数更新的问题，不是将模型应用于错误场景。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 使用标准债券估值模型来估值抵押贷款支持证券（MBS）是模型应用错误的典型例子；标准债券模型是为普通债券设计的，不能反映MBS的特殊风险特征（如提前还款风险、分层结构等），将不合适的模型应用于特定场景构成模型应用错误，是模型风险的重要来源。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险的主要来源与典型表现}
+
+
+\begin{question}
+    Which of the following statements regarding model risk is correct?
+\end{question}
+
+\begin{choices}
+    \item Shortcuts and simplifications will increase model risk
+    \item Managing model risk requires proper segregation of duties
+    \item With the appropriate procedures and tools, model risk can be eliminated
+    \item Like many other risks, model risk has both an upside and a downside component
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 捷径和简化不一定增加模型风险；合理的简化和近似可能有助于提高模型的可控性、可理解性和可验证性，而过度复杂的模型反而可能引入更多不确定性；关键在于简化是否合理和适当。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 管理模型风险需要适当的职责分离，这是模型风险管理的重要原则；模型开发、验证、评审和使用应由不同团队负责，确保独立性和客观性，防止利益冲突，有助于识别和纠正模型缺陷。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 通过适当的程序和工具，模型风险无法完全消除；模型本质上是现实的简化表示，无法完全捕捉所有影响因素和动态关系，模型风险总是存在；只能通过适当的程序、工具和治理来降低模型风险，而非完全消除。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 模型风险不像市场风险那样有上行和下行两个组成部分；模型风险主要产生负面影响，如导致错误决策、估值错误、风险度量不准确等，不像市场风险那样既有潜在损失也有潜在收益。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理的职责分离原则}
+
+
+\begin{question}
+    You are the head of the Independent Risk Oversight (IRO) unit of XYZ bank. Your first task is to review the following existing policies relating to model implementation.
+    \begin{itemize}
+    \item I. The remuneration of the staff of the IRO unit is dependent on how frequently the traders of XYZ bank use models vetted by the IRO.
+    \item II. Model specifications assume that markets are perfectly liquid.
+    \end{itemize}
+    Which of the existing policies are sources of model risk?
+\end{question}
+
+\begin{choices}
+    \item Statement I only
+    \item Statement II only
+    \item Both statements are correct
+    \item Both statements are incorrect
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：不是模型风险来源}
+    \begin{itemize}
+        \item IRO单位员工的薪酬取决于交易员使用IRO审核过的模型的频率，这虽然可能影响IRO的独立性（因为IRO可能倾向于批准更多模型以增加使用频率），但这不是模型风险本身的直接来源；模型风险来源于模型的设计、设定、应用等方面的缺陷，而非激励机制问题。
+    \end{itemize}
+
+    \textbf{陈述II分析：是模型风险来源}
+    \begin{itemize}
+        \item 模型规范假设市场完全流动是模型风险的重要来源；当市场流动性有限时，该假设会导致模型产生错误的价格评估、风险度量和决策，在实际市场条件下（特别是压力时期）可能产生重大偏差，这是模型设定错误的典型例子。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险的典型来源与假设问题}
+
+
+\begin{question}
+    The role of senior managers in managing model risk includes all of the following except
+\end{question}
+
+\begin{choices}
+    \item Becoming expert modelers
+    \item Establishing an organizational framework that implements sound risk management procedures
+    \item Questioning model features
+    \item Understanding the fundamentals of model risk
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项不包括。}
+    \begin{itemize}
+        \item 成为专家建模者不是高级管理人员在管理模型风险方面的作用；高级管理人员无需成为建模专家，他们的职责是理解模型风险的基本原理、建立有效的治理框架、进行监督和决策，而非亲自进行模型开发和技术建模工作；建模工作应由专门的建模团队负责。
+    \end{itemize}
+
+    \textbf{B选项包括。}
+    \begin{itemize}
+        \item 建立实施健全风险管理程序的组织框架是高级管理人员的关键职责；高级管理人员应建立有效的模型风险管理框架，包括职责分离、治理结构、政策和程序，确保模型风险得到适当管理。
+    \end{itemize}
+
+    \textbf{C选项包括。}
+    \begin{itemize}
+        \item 质疑模型特征是高级管理人员的重要作用；高级管理人员应具备批判性思维，对模型的假设、局限性、适用性提出质疑，促进模型透明度和改进，确保模型得到适当监督。
+    \end{itemize}
+
+    \textbf{D选项包括。}
+    \begin{itemize}
+        \item 理解模型风险的基本原理是高级管理人员管理模型风险的基础；高级管理人员需要理解模型风险的本质、来源和影响，以便做出明智的决策、建立有效的治理框架并监督模型风险管理活动。
+    \end{itemize}
+\end{explanation}
+
+\checklist{高管在模型风险管理中的职责}
+
+
+\begin{question}
+    Even though risk managers cannot eliminate model risk, there are many ways managers can protect themselves against model risk. Which of the following statements about managing model risk is correct?
+\end{question}
+
+\begin{choices}
+    \item Models should be tested against known problems
+    \item It is not advisable to estimate model risk using simulations
+    \item Complex models are generally preferable to simple models
+    \item Small discrepancies in model outputs are always acceptable
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 模型应针对已知问题进行测试，这是模型风险管理的最佳实践；通过对已知问题的测试（如使用简单特例、已知解或历史案例），可以验证模型的有效性、识别潜在缺陷并及时修正，这是模型验证和风险管理的关键步骤。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 使用模拟来估计模型风险是建议的做法；敏感性分析、蒙特卡洛模拟、压力测试等模拟方法可以有效识别模型风险、评估模型稳健性并发现潜在问题，是模型风险管理的重要工具。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 复杂模型通常不优于简单模型；简单模型更易于理解、验证和维护，复杂模型可能引入过度拟合、难以解释、计算错误等风险，模型选择应基于适用性和稳健性，而非复杂度。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 模型输出的微小差异并非总是可以接受；即使是小的差异也可能反映模型缺陷、参数错误或假设不当，需要认真分析和解释，不能简单地认为微小差异可以忽略。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理的基本方法}
+
+
+\begin{question}
+    Which of the following actions could worsen rather than reduce model risk?
+\end{question}
+
+\begin{choices}
+    \item Require documentation of the model so that the risk manager can produce the same prices as the user of the model
+    \item Use a simulation benchmark model to assess a model that has a closed-form solution
+    \item Make the model for the dynamics of the underlying fit past data better by making the price of the underlying depend on additional variables
+    \item Plot model prices against parameter values
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 要求模型文档化，使风险管理人员能够产生与模型使用者相同的价格，有助于降低模型风险；文档化使模型可复现、可验证和可审计，提高透明度，有助于识别和纠正模型缺陷。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 使用模拟基准模型来评估有封闭解的模型有助于降低模型风险；通过模拟方法验证封闭解模型，可以识别模型实现错误、数值问题或假设偏差，提高模型可靠性。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 通过使标的价格依赖于额外变量来让模型更好地拟合过去数据会恶化而非降低模型风险；这种做法会导致过度拟合（overfitting），使模型过度适应历史数据而失去泛化能力，在未来数据上表现不佳；增加额外变量会增加模型复杂性、不确定性和校准难度，反而增加模型风险。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 绘制模型价格与参数值的关系有助于降低模型风险；这种敏感性分析可以识别模型对参数变化的敏感度、发现模型行为异常、验证模型逻辑合理性，有助于理解和管理模型风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理中的过拟合问题}
+
+
+\begin{question}
+    Which of the following roles should not reside within an independent global risk management function?
+\end{question}
+
+\begin{choices}
+    \item Establish risk management policies and procedures
+    \item Review and approve risk management methodologies and models, in particular those used for pricing and valuation
+    \item Execute trading strategies to hedge out global market risk
+    \item Communicate risk management results to executive management and the board of directors, as well as investors, rating agencies, stock analysts, and regulators
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 制定风险管理政策和程序应属于独立的全球风险管理职能；这需要独立性和客观性，以确保风险管理政策和程序不受业务利益影响，是风险管理框架的基础。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 审查和批准风险管理方法和模型（特别是用于定价和估值的模型）应属于独立的全球风险管理职能；这是风险管理的关键职责，确保模型和方法得到独立审查和验证，不受业务部门的利益冲突影响。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 执行交易策略以对冲全球市场风险不应属于独立的全球风险管理职能；执行交易属于前台业务职能，应与风险管理职能分离；独立风险管理部门应评估、监控和报告风险，但不应该执行交易，这会导致职责冲突、利益冲突和内部控制失效，违反职责分离原则。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 向高级管理层和董事会以及投资者、评级机构、股票分析师和监管机构沟通风险管理结果应属于独立的全球风险管理职能；这是风险管理的重要职责，确保风险信息得到准确、及时和独立的报告，不受业务部门的影响。
+    \end{itemize}
+\end{explanation}
+
+\checklist{风险管理与交易职责的分离原则}
+
+
+\begin{question}
+    Which of the following is not a source of model risk?
+\end{question}
+
+\begin{choices}
+    \item Programming errors
+    \item Failure to recalibrate models
+    \item Minimal rounding errors from algorithms
+    \item Implementation of models for situations for which the models were not originally designed
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 编程错误是模型风险的重要来源；编程错误会导致模型输出错误、计算错误或逻辑错误，影响模型的准确性和可靠性，可能导致重大损失和错误决策。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 未能重新校准模型是模型风险的来源；模型参数需要根据市场条件变化定期更新，未能及时重新校准会导致模型参数过时，使模型在变化的市场条件下失效，产生错误的估值和风险度量。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 算法的最小舍入误差不是模型风险的来源；最小舍入误差是数值计算中不可避免的、可接受的技术误差，通常对模型结果的影响可以忽略不计，不会导致显著的模型风险；这是算法本身的特性，而非模型缺陷。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 在模型最初设计的场景之外使用模型是模型风险的重要来源；这是模型应用错误（incorrect model application）的典型例子，将模型应用于不合适的场景会导致错误的估值、风险度量和决策，可能产生重大损失。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险的典型来源与非来源}
+
+\begin{question}
+    Which of the following items is least likely to be a key consideration when testing models?
+\end{question}
+
+\begin{choices}
+    \item Testing for potential weaknesses
+    \item Testing with extreme values as inputs
+    \item Testing under normal market conditions
+    \item Testing other models that rely on the subject model
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 测试潜在弱点是模型测试的关键考虑因素；通过识别模型的局限性、假设缺陷和边界条件，可以提前发现模型风险和问题，有助于改进模型和建立适当的风险控制措施。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 使用极端值作为输入进行测试是模型测试的关键考虑因素；压力测试和极端值测试用于验证模型在异常市场条件下的稳健性，识别模型在尾部风险下的表现，这对于风险管理至关重要。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 仅在正常市场条件下测试相对于其他选项不是模型测试的关键考虑因素；虽然正常市场条件下的测试是必要的，但模型测试的重点是发现模型在异常、极端和压力条件下的表现和局限性；仅在正常条件下测试无法充分识别模型风险，模型失败往往发生在异常市场条件下。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 测试依赖该模型的其他模型是模型测试的关键考虑因素；需要检查模型风险的传导效应，了解模型错误如何影响下游模型和系统，识别模型间的依赖关系和风险传播路径。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型测试的关键关注点}
+
+
+\begin{question}
+    In managing model risk, risk managers should do all of the following except:
+\end{question}
+
+\begin{choices}
+    \item Try to eliminate model risk
+    \item Avoid adding complexity to a model unless there is a strong need
+    \item Backtest and stress test models
+    \item Check the sensitivity of a model’s performance to changes in key assumptions
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 试图消除模型风险不是风险管理人员应该做的，因为模型风险无法完全消除；模型本质上是现实的简化表示，无法完全捕捉所有影响因素和动态关系，模型风险总是存在；风险管理人员的职责是理解、管理和控制模型风险，而非试图消除它，应了解模型局限性并合理应用模型。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 除非有强烈需要，否则避免增加模型复杂性是风险管理人员的正确做法；不必要的复杂性会增加模型风险，使模型难以理解、验证和维护，可能引入过度拟合、计算错误等风险；应保持模型的简单性和可理解性。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 回测和压力测试模型是模型风险管理的重要手段；通过回测验证模型在历史数据上的表现，通过压力测试检查模型在极端市场条件下的稳健性，有助于发现模型弱点、识别模型缺陷并改进模型。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 检查模型性能对关键假设变化的敏感性是模型风险管理的重要做法；通过敏感性分析，可以了解模型对假设变化的敏感度，评估模型稳健性，识别关键假设和风险因素，有助于理解和管理模型风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理的基本原则}
+
+
+\begin{question}
+    Backtesting is most appropriately classified in which element of the validation process?
+\end{question}
+
+\begin{choices}
+    \item Evaluation of conceptual soundness
+    \item Ongoing monitoring
+    \item Outcomes analysis
+    \item Postvalidation review
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 概念合理性评估（Evaluation of conceptual soundness）主要关注模型的理论基础、假设、设计和方法论是否合理，属于模型设计阶段的评估，不涉及使用实际数据检验模型预测结果与实际结果的吻合度。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 持续监控（Ongoing monitoring）是模型使用后持续监控其运行状态和表现，而回测是使用历史数据验证模型在历史时期的表现，属于验证过程的结果分析阶段，而非持续监控环节。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 结果分析（Outcomes analysis）是通过比较模型预测结果与实际发生的结果来分析模型表现；回测是结果分析的典型方法，通过使用历史数据检验模型预测与实际结果的吻合度，评估模型的准确性和有效性，是模型验证过程的重要环节。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 后验证复审（Postvalidation review）是在验证过程完成后对整个验证流程、结果和改进措施的回顾和总结，而回测是验证过程中的结果分析活动，属于验证执行阶段而非后验证复审阶段。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型验证流程中的回测定位}
+
+
+\begin{question}
+    It would be prudent for a trader to direct accounting entries in the following situation:
+\end{question}
+
+\begin{choices}
+    \item Never
+    \item When senior management of the firm and the Board of Directors are aware and have approved such on an exception basis
+    \item When audit controls are such that the entries are reviewed on a regular basis to ensure detection of irregularities
+    \item Solely during such times as staffing turnover requires the trader to back-fill until additional personnel can be hired and trained
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 交易员永远不应指导会计分录，这是职责分离原则的严格要求；交易员执行交易，会计记录交易，两者职责必须分离，以防止利益冲突、欺诈、掩盖交易错误和操作风险；无论何种情况都不应破坏这一基本原则。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 即使高级管理层和董事会在例外基础上知晓并批准，也不应允许交易员指导会计分录；职责分离是内部控制的基本原则，不应因管理层的批准而被破坏，例外情况同样存在严重的操作风险和欺诈风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 即使审计控制确保定期审查分录以检测异常，也不应允许交易员指导会计分录；审计是事后控制，不能替代职责分离这一事前控制；交易员可能已经通过指导会计分录掩盖了错误或进行欺诈，事后审计可能无法及时发现问题。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 即使在人员流动导致需要临时填补的情况下，也不应允许交易员指导会计分录；职责分离原则不应因人员短缺而被破坏，应通过临时调配其他合格人员或寻求外部支持来解决，而非让交易员兼任会计职责。
+    \end{itemize}
+\end{explanation}
+
+\checklist{职责分离原则在操作风险防控中的作用}
+
+
+
+\section{考点9:案例研究： 模型风险与验证}
+\setcounter{question}{0}
+\begin{question}
+    Which of the following statements about combating model risk are incorrect?
+    \begin{itemize}
+    \item I. If a position is known to have considerable model risk, a firm can limit its exposure by imposing a tighter position limit.
+    \item II. If we always choose the model that takes into account the largest number of real-world factors that affect prices, the firm’s exposure to model risk will be reduced.
+    \item III. Running regular stress tests or scenario analyses to test the volatility, correlation and liquidity assumptions in model helps reduce model risk.
+    \item IV. Risk managers should check the trader’s pricing model to ensure that model calibration is up-to-date and that models are upgraded in line with market best practice and to ensure that obsolete models are identified and taken out of use.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item None are true
+    \item II only
+    \item I, III and IV
+    \item I, II and III
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 如果已知头寸存在相当大的模型风险，公司可以通过实施更严格的头寸限额来限制其敞口，这是降低模型风险暴露的有效方法，通过限制头寸规模来降低潜在损失。
+    \end{itemize}
+
+    \textbf{陈述II分析：错误}
+    \begin{itemize}
+        \item 总是选择考虑最多影响价格的实际世界因素的模型并不能降低模型风险；过度复杂的模型可能引入更多不确定性、难以验证、计算错误和过度拟合风险，反而增加模型风险；简单合理的模型通常更易于理解、验证和管理。
+    \end{itemize}
+
+    \textbf{陈述III分析：正确}
+    \begin{itemize}
+        \item 定期运行压力测试或情景分析来测试模型中的波动率、相关性和流动性假设有助于降低模型风险；通过验证模型假设在不同市场条件下的稳健性，可以识别模型缺陷并改进模型。
+    \end{itemize}
+
+    \textbf{陈述IV分析：正确}
+    \begin{itemize}
+        \item 风险管理人员应检查交易员的定价模型，确保模型校准是最新的，模型根据市场最佳实践进行升级，并识别和停用过时模型，这是模型风险管理的关键流程。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型风险管理的有效措施与误区}
+
+
+\begin{question}
+    An important source of model risk is incorrect model specification. Which of the following is not an example of model specification error?
+\end{question}
+
+\begin{choices}
+    \item Omitting an important risk factor from the model
+    \item Assuming that variables are independent when significant correlations exist
+    \item Assuming data is from a particular distribution when a more accurate distribution is available
+    \item Estimating the model using data from an inappropriate sample period
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 遗漏模型中的重要风险因子是模型设定错误的典型例子；模型设定错误是指模型的结构、假设或函数形式选择错误，遗漏关键风险因子属于模型结构不完整，导致模型无法准确反映现实风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 假设变量独立而实际上存在显著相关性是模型设定错误的典型例子；这属于模型假设错误，忽视了变量间的依赖关系，可能导致重大的风险度量和估值错误。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 假设数据来自特定分布而实际上有更准确的分布可用是模型设定错误的典型例子；选择错误的概率分布假设属于模型函数形式选择错误，影响模型的准确性和可靠性。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 使用不合适的样本期数据估计模型不是模型设定错误，而是模型校准错误（calibration error）或数据问题；这是关于如何估计模型参数的问题，而非模型本身的结构、假设或函数形式选择错误；模型设定关注"模型是什么"，而参数估计关注"如何用数据估计模型参数"。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型设定错误与校准误差的区别}
+
+
+\begin{question}
+    An important source of model risk is incorrect model specification. Which of the following is not an example of model specification error?
+\end{question}
+
+\begin{choices}
+    \item Omitting an important risk factor from the model
+    \item Assuming that variables are independent when significant correlations exist
+    \item Assuming data is from a particular distribution when a more accurate distribution is available
+    \item Estimating the model using data from an inappropriate sample period
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 遗漏模型中的重要风险因子是模型设定错误的典型例子；模型设定错误是指模型的结构、假设或函数形式选择错误，遗漏关键风险因子属于模型结构不完整，导致模型无法准确反映现实风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 假设变量独立而实际上存在显著相关性是模型设定错误的典型例子；这属于模型假设错误，忽视了变量间的依赖关系，可能导致重大的风险度量和估值错误。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 假设数据来自特定分布而实际上有更准确的分布可用是模型设定错误的典型例子；选择错误的概率分布假设属于模型函数形式选择错误，影响模型的准确性和可靠性。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 使用不合适的样本期数据估计模型不是模型设定错误，而是模型校准错误（calibration error）或数据问题；这是关于如何估计模型参数的问题，而非模型本身的结构、假设或函数形式选择错误；模型设定关注"模型是什么"，而参数估计关注"如何用数据估计模型参数"。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型设定错误与校准误差的区别}
+
+
+\begin{question}
+    Which of the following two model errors in the RMBS valuation and risk models are considered to have contributed the most to a significant underestimation of systematic risk in subprime RMBS returns during 2008-2009?
+\end{question}
+
+\begin{choices}
+    \item The assumption of future house price appreciation and the assumption of high correlations among regional housing markets
+    \item The assumption of future house price declines and the assumption of high correlations among regional housing markets
+    \item The assumption of future house price appreciation and the assumption of low correlations among regional housing markets
+    \item The assumption of future house price declines and the assumption of low correlations among regional housing markets
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然未来房价升值假设会低估风险，但高相关性假设会高估系统性风险（因为高相关性意味着区域市场联动性强，系统性风险高），两者相互抵消，不是导致系统性风险显著低估的主要原因。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 未来房价下跌假设会高估风险而非低估，与实际发生的系统性风险低估不符；高相关性假设也会高估系统性风险，该组合会导致风险高估而非低估。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 未来房价升值假设导致低估违约和损失风险（因为假设房价继续上涨，抵押品价值增加，违约率低）；低相关性假设导致低估系统性风险（因为假设区域市场分散化，忽略了系统性冲击的影响）；两个假设都导致风险低估，是次贷危机期间RMBS模型系统性风险显著低估的核心原因。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 未来房价下跌假设会高估风险而非低估，与实际发生的系统性风险低估不符；虽然低相关性假设会低估系统性风险，但与房价下跌假设相矛盾，不是导致系统性风险显著低估的主要组合。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型假设对系统性风险评估的影响}
+
+
+\begin{question}
+    Which is the best definition of a firm's risk appetite?
+\end{question}
+
+\begin{choices}
+    \item The existing levels of risk being run by a firm
+    \item The maximum amount of risk a firm is technically able to assume given its capital base
+    \item The amount and type of risk that a company is able and willing to accept in pursuit of its business objectives
+    \item The norms and traditions of behavior of individuals and of groups within an organization that determine the way in which they identify, understand, discuss, and act on the risks the organization confronts and the risks it takes
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 公司正在运行的现有风险水平不是风险偏好的定义，而是风险状况（risk profile）或实际风险暴露水平；风险偏好是公司愿意接受的风险，而非当前实际运行的风险水平。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 基于资本基础，公司技术上能够承担的最大风险量是风险承受能力（risk capacity）的定义，而非风险偏好；风险承受能力关注"能够"承担的风险（技术能力），而风险偏好关注"愿意"接受的风险（战略选择）；两者相关但不等同。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 公司为实现业务目标能够并愿意接受的风险数量和类型是风险偏好的标准定义；风险偏好同时包含"能够"（能力）和"愿意"（意愿）两个维度，反映了公司为实现战略目标而愿意承担的风险水平，是风险管理框架的核心概念。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 该表述是风险文化（risk culture）的定义，而非风险偏好；风险文化关注组织内个人和群体的行为规范、价值观和传统，决定了他们如何处理风险；风险偏好则是公司愿意接受的风险水平，两者是相关但不同的概念。
+    \end{itemize}
+\end{explanation}
+
+\checklist{风险偏好的定义与内涵}
+
+
+\begin{question}
+    Duane Danning is a junior risk analyst at a large risk management firm. He has been asked to assess the firm’s risk modeling practices and evaluate potential ways in which errors could be introduced into models. In his analysis, Danning indicates that errors can be introduced into models through programming bugs and errors in VaR estimates but rarely through incorrect position mappings. Danning’s analysis is most accurate with regard to:
+\end{question}
+
+\begin{choices}
+    \item Only programming bugs and incorrect position mappings
+    \item Only programming bugs and errors in VaR estimates
+    \item Only errors in VaR estimates
+    \item Only incorrect position mappings
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Danning的分析在编程错误方面是正确的，但他错误地认为错误的头寸映射很少导致模型错误；实际上，错误的头寸映射是模型错误的重要来源，可能导致风险度量不准确和重大损失。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item Danning的分析在编程错误和VaR估计错误方面是准确的；编程错误确实是模型错误的常见来源，VaR估计错误（如参数设定错误、分布假设错误等）也是模型风险的重要来源；但他低估了错误的头寸映射的影响，认为这种情况较少见是不准确的。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Danning的分析不仅包括VaR估计错误，还包括编程错误；只考虑VaR估计错误不全面，忽略了Danning也正确指出的编程错误这一重要的模型错误来源。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item Danning的分析在错误的头寸映射方面是不准确的，他低估了其影响；实际上，错误的头寸映射是模型错误的重要来源，可能导致风险分类错误、风险度量不准确等问题；Danning的分析最准确的部分是关于编程错误和VaR估计错误。
+    \end{itemize}
+\end{explanation}
+\checklist{风险模型常见误差来源}
+
+
+\begin{question}
+    In regard to model implementation, Crouhy says "even if a model is correct and is being used to tackle an appropriate problem, there remains the danger that it will be wrongly implemented. With complicated models that require extensive programming, there is always a chance that a programming “bug” may affect the output of the model. Some implementations rely on numerical techniques that exhibit inherent approximation errors and limited ranges of validity. Many programs that seem error-free have been tested only under normal conditions and so may be error-prone in extreme cases and conditions." With respect to model implementation, which of the following is the BEST pieces of advice?
+\end{question}
+
+\begin{choices}
+    \item Ensure responsibility for data accuracy is clearly assigned
+    \item Remove outliers in all cases because outliers distort skew and kurtosis of the distribution
+    \item Volatility and correlation should be directly observed rather than forecast; if these two inputs cannot be observed, seek an alternative approach
+    \item Seek the maximum length of the sampling period in order to improve the power of statistical tests and reduce estimation errors
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 确保数据准确性的责任明确分配是模型实施的最佳建议；数据是模型的基础输入，数据错误会导致模型输出错误；明确责任人有助于建立数据治理框架、确保数据质量、及时发现和纠正数据问题，这是防止模型实施错误的基础；Crouhy强调的编程错误、数值误差和测试不足等问题都可能导致数据问题，明确责任可以降低这些风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 在所有情况下删除异常值因为异常值扭曲分布的偏度和峰度是不正确的建议；异常值可能包含重要信息（如极端市场事件），不应一概删除；应分析异常值的原因，区分真实极端事件和错误数据，而非简单地删除所有异常值。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 波动率和相关性应该直接观察而非预测，如果无法观察则寻求替代方法是不可行的建议；在风险管理中，波动率和相关性通常需要预测（如用于VaR计算），不能总是直接观察；预测是风险管理模型的必要组成部分，而非应避免的做法。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 寻求最大采样期长度以提高统计检验功效并减少估计误差是不正确的建议；采样期过长可能引入结构性变化、非平稳性、过时信息等问题，导致模型参数估计不准确；应基于数据的稳定性和相关性选择合适的采样期，而非简单地追求最大长度。
+    \end{itemize}
+\end{explanation}
+
+\checklist{模型实施中的数据治理与责任分配}
+
+
+
+
+\end{document}

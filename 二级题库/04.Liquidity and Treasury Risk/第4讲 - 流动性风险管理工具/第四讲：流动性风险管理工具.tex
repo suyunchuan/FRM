@@ -1,0 +1,770 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:预警指标}
+\setcounter{question}{0}
+
+\begin{question}
+    Firms generally use a stoplight system in representing and communicating their performance against the thresholds of their EWIs. A green indicator means the measure is within normal bounds; An amber indicator means the measure should be investigated further; A red indicator should be a source for significant concern and may warrant an immediate response. Which of the following is the most suitable way to start a calibration of these thresholds?
+\end{question}
+
+\begin{choices}
+    \item The boundaries for which an EWI moves from green to yellow should be narrow enough
+    \item Historical data can inform the calibration of thresholds
+    \item Practitioners observe that this stoplight system is effective because it can be set very wide
+    \item The threshold should not be subject to back-testing
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 从绿色到黄色（amber）的边界不应过窄；边界过窄会导致过度预警，产生大量假阳性信号，使系统失去有效性；阈值应该基于历史数据和风险特征设定，而非简单地设置得很窄；过窄的边界会导致频繁触发黄色预警，降低管理层的关注度和响应效率。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 历史数据可以指导阈值校准，这是最合适的起点；历史数据可以提供基准值、正常波动范围、异常事件模式、压力时期的表现等信息，帮助设定合理的阈值；通过分析历史数据，可以识别正常波动和异常情况，确定绿色、黄色、红色区域的合理边界；这是阈值校准的标准做法和最佳起点。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 信号灯系统不应设置过宽；阈值过宽会导致预警不及时，错过重要的风险信号，使系统失去早期预警的作用；过宽的阈值会使系统很少触发黄色或红色预警，无法及时识别流动性风险，降低系统的有效性；阈值应该基于历史数据和风险特征设定，而非设置得很宽。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 阈值应该进行回测，而非不进行回测；回测有助于验证阈值的有效性，识别假阳性（false positives）和假阴性（false negatives），评估阈值在实际应用中的表现，并持续改进阈值设定；回测是风险管理工具验证的重要环节，不应被忽略。
+    \end{itemize}
+\end{explanation}
+
+\checklist{预警指标阈值校准}
+
+
+\begin{question}
+    The framework of Early Warning Indicators can be summarized as M.E.R.I.T" and "M" means "Measures". Which of the following is true about a good Early Warning Indicator (EWI) measures?
+\end{question}
+
+\begin{choices}
+    \item Forward-looking and sharp measures
+    \item Measures are not linked from the escalation process
+    \item Leading indicators provide Information and signal potential stress after the occurrence of an actual event
+    \item Banks should consider only internal but not external measures
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 好的早期预警指标应具有前瞻性（forward-looking）和敏锐性（sharp）；前瞻性意味着指标能够预测未来可能出现的流动性压力，而非仅反映当前状况；敏锐性意味着指标能够及时、清晰地识别风险信号，避免滞后或模糊；这使指标能够有效发挥早期预警作用。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 指标应该与升级流程（escalation process）相关联；升级流程是预警系统的重要组成部分，当指标触发不同阈值时，应有相应的升级机制和响应流程；指标与升级流程脱节会导致预警信号无法得到及时响应，降低系统的有效性。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 领先指标应在实际事件发生前提供信息和信号，而非在事件发生后；领先指标的核心价值在于提前预警，使管理层能够在流动性压力实际发生前采取预防措施；在事件发生后提供信号的是滞后指标，失去了早期预警的意义。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 银行应同时考虑内部和外部指标，而非仅关注内部指标；内部指标反映银行自身的流动性状况，外部指标（如市场流动性、同业状况、宏观经济指标）反映外部环境变化；两者结合才能全面评估流动性风险，仅关注内部指标会忽略外部风险因素。
+    \end{itemize}
+\end{explanation}
+
+\checklist{预警指标特征分析}
+
+
+\begin{question}
+    Venkat explains that firms often use a stoplight system to manage their thresholds: "Firms generally use a stoplight system in representing and communicating their performance against the thresholds of their EWIs. A green indicator means that the measure is within normal bounds. A measure that is classified as amber according to the threshold framework should be investigated further while a red indicator should be a source for significant concern and may warrant an immediate response." Which of the following is the BEST way to start the exercise of calibration of these thresholds?
+\end{question}
+
+\begin{choices}
+    \item Thresholds are ultimately subjective
+    \item Historical data can inform the calibration of thresholds
+    \item Practitioners observe that this stoplight system is obsolete and ineffective such that thresholds are moot
+    \item The firm should rely on the specific regulatory instructions, in particular BCBS 2008, for calibration of the thresholds
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 阈值不应完全主观；虽然阈值设定需要一定判断，但应该基于客观依据（如历史数据、统计分析、风险特征）而非完全主观判断；主观设定会导致阈值不合理，降低预警系统的有效性。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 历史数据可以指导阈值校准，这是最佳起点；历史数据可以提供基准值、正常波动范围、异常事件模式、压力时期表现等信息，帮助设定合理的绿色、黄色、红色阈值边界；通过分析历史数据，可以识别正常波动和异常情况，这是阈值校准的标准做法和最佳起点。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 信号灯系统并非过时无效，阈值仍然很重要；信号灯系统是有效的风险管理工具，能够清晰、直观地传达风险状况，帮助管理层快速识别和响应风险；阈值是系统的核心，决定了预警的准确性和及时性，不应被忽视。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 不应仅依赖监管指引（如BCBS 2008）来校准阈值；虽然监管指引提供重要参考，但阈值校准应该基于银行自身的历史数据、业务特征、风险状况等实际情况；监管指引是最低标准，银行需要结合自身情况设定更精确的阈值，而非仅依赖监管指引。
+    \end{itemize}
+\end{explanation}
+
+\checklist{预警指标阈值校准}
+
+
+
+\section{考点2:日内流动性风险管理}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Which of the following factors is least likely to increase a bank treasurer's challenge in managing cash in order to stay within its intraday credit limits?
+\end{question}
+
+\begin{choices}
+    \item Cash flow volatility
+    \item Credit quality of assets
+    \item Insufficient real-time data
+    \item Securities price volatility
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 现金流波动会增加日间现金管理的挑战；波动性使得预测现金流入和流出变得困难，需要更频繁地调整头寸以保持在信用限额内；波动性增加了现金管理的不确定性和复杂性。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 资产信用质量最不可能增加日间现金管理的挑战；日间现金管理主要关注现金头寸、支付和收款的时间安排，以及保持在日间信用限额内；资产信用质量主要影响长期信用风险和违约风险，而非日间现金流的操作管理；银行用于日间流动性管理的资产（如现金余额、高流动性证券）通常信用质量很高，几乎没有违约风险，不会影响日间现金管理的操作挑战。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 实时数据不足会增加日间现金管理的挑战；缺乏实时信息会影响及时决策，无法准确了解当前现金头寸和预测未来现金流，难以有效管理日间信用限额；实时数据是日间现金管理的关键工具。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 证券价格波动会增加日间现金管理的挑战；价格波动影响资产估值和流动性，可能影响抵押品价值（如果使用证券作为抵押品）和资产变现能力，增加日间现金管理的不确定性和复杂性。
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性管理分析}
+
+
+\begin{question}
+    In the context of characteristics of an effective governance structure in controlling intraday liquidity within a bank, there is emphasis on expertise in which line of defense?
+\end{question}
+
+\begin{choices}
+    \item Treasury
+    \item Internal audit
+    \item Information technology
+    \item Corporate risk management
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 资金部（Treasury）是第一道防线，负责日间流动性的日常运营管理；虽然需要操作技能，但治理结构更强调第二道防线的专业知识，因为第一道防线主要执行操作而非独立风险监控。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 内部审计是第三道防线，负责独立监督和验证；虽然需要审计专业知识，但治理结构在日间流动性控制中更强调第二道防线的风险管理专业知识，因为第三道防线是事后审计而非实时风险监控。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 信息技术是支持性功能，不是三道防线的一部分；虽然IT系统对日间流动性管理很重要，但治理结构强调的是风险管理专业知识，而非IT专业知识。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 企业风险管理（Corporate Risk Management）是第二道防线，在日间流动性治理结构中强调专业知识；第二道防线负责风险监控、政策制定、独立监督和风险管理，需要深入的风险管理专业知识来评估、监控和管理日间流动性风险；这是治理结构中最强调专业知识的防线，因为它需要具备风险识别、评估、监控和管理的专业能力。
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行治理结构分析}
+
+
+\begin{question}
+    All risk management frameworks start with a governance structure that defines the roles and responsibilities of various bank employees and committees in overseeing risk-related activities. Effective governance includes the oversight of intraday liquidity risk. Which of the following statements is true about intraday liquidity risk management?
+\end{question}
+
+\begin{choices}
+    \item Payments on large value payment systems should not be considered as a intraday liquidity
+    \item Roles and responsibilities should be defined by Treasury department
+    \item PCS Systems should only be a source of funds; if PCS becomes a use of funds, then a yellow flag should be triggered
+    \item Intraday liquidity risk should be incorporated in the risk taxonomy and is a component of risk self-assessment including settlement risks
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 大额支付系统的支付应被视为日间流动性的重要组成部分；这些支付会影响银行的日间现金头寸和信用限额使用，需要在日间流动性管理中考虑。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 角色和职责不应仅由资金部定义；应由更高层的治理机构（如ALCO、董事会风险管理委员会）定义，以确保独立性和适当的职责分离。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 支付、清算和结算（PCS）系统既可以是资金来源，也可以是资金使用，这是正常的业务运作；不应仅被视为资金来源，如果PCS成为资金使用就触发黄色标志是不合理的。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 日间流动性风险应纳入风险分类，是风险自评估的组成部分，包括结算风险；这是有效风险管理框架的要求，银行需要定期评估日间流动性风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性风险管理}
+
+
+\begin{question}
+    Each of the following is a measure for quantifying and/or monitoring risk levels except which is a measure for understanding intraday flows?
+\end{question}
+
+\begin{choices}
+    \item Total payments
+    \item Client intraday credit usage
+    \item Intraday credit relative to tier 1 capital
+    \item Daily maximum intraday liquidity usage
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 总支付是用于理解日间流动的指标，而非风险量化或监控指标；总支付反映日间支付活动的规模和模式，帮助理解资金流动情况，但不直接衡量风险水平或用于风险监控。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 客户日间信用使用是风险监控指标，用于量化风险水平；该指标监控客户对日间信用的使用情况，反映日间流动性风险暴露，是风险管理和监控的重要指标。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 日间信用相对于一级资本的比率是风险监控指标，用于量化风险水平；该比率将日间信用使用与资本水平关联，反映日间流动性风险相对于资本的风险水平，是重要的风险量化指标。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 每日最大日间流动性使用是风险监控指标，用于量化风险水平；该指标监控日间流动性的峰值使用情况，反映日间流动性风险的最大暴露，是风险管理和监控的重要指标。
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性指标分析}
+
+\begin{question}
+    Which of the following is a USE of intraday liquidity?
+\end{question}
+
+\begin{choices}
+    \item Income funds flow
+    \item Term repo (as the repo seller)
+    \item Funding of nostro accounts (at correspondent bank outside home market)
+    \item Intraday credit (Federal Reserve unsecured committed line of credit, LOC)
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 收入资金流是日间流动性的来源，而非使用；收入资金流（如客户付款、投资收益）为银行提供资金，增加日间流动性，而非消耗流动性。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 定期回购（作为回购卖方）是日间流动性的来源，而非使用；作为回购卖方，银行出售证券并收到现金，获得资金，增加日间流动性，而非消耗流动性。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 代理行账户资金（在母国市场外的代理行）是日间流动性的使用；银行需要在代理行账户中保持资金以支持跨境支付和结算，这些资金被占用，消耗日间流动性，是日间流动性的使用。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 日间信用（美联储无担保承诺信用额度）是日间流动性的来源，而非使用；信用额度为银行提供可用的日间融资来源，增加日间流动性，而非消耗流动性。
+    \end{itemize}
+\end{explanation}
+
+\checklist{日间流动性使用分析}
+
+
+
+\newpage
+
+
+
+\section{考点3:流动性压力测试}
+\setcounter{question}{0}
+
+\begin{question}
+    In the context of deposit outflows, which behavioral assessment factor is relevant for individual, small business, and commercial/institutional customers of the bank?
+\end{question}
+
+\begin{choices}
+    \item Credit usage
+    \item FDIC coverage
+    \item Industry segment
+    \item Relationship tenure
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 信用使用主要适用于小型企业和商业/机构客户，不适用于个人客户；个人客户通常不使用银行信用额度，因此信用使用不是评估个人客户存款流出的相关因素。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item FDIC保险仅适用于个人和小型企业，不适用于商业/机构客户；商业/机构客户的存款通常超过FDIC保险限额，因此FDIC保险不是评估商业/机构客户存款流出的相关因素。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 行业细分主要适用于商业/机构客户，不适用于个人客户；个人客户不属于特定行业，因此行业细分不是评估个人客户存款流出的相关因素。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 关系权属（关系期限）适用于所有三类客户（个人、小型企业、商业/机构客户）；关系权属反映客户与银行的长期关系，是评估存款流出行为的重要因素；长期客户通常更稳定，短期客户更容易流失，这是所有客户类型的共同行为评估因素。
+    \end{itemize}
+\end{explanation}
+
+\checklist{存款流出行为分析}
+
+
+\begin{question}
+    Which of the following types of liquidity is available in the form of the institution's liquidity asset buffer and represents liquidity available to meet general financial obligations under a stress scenario?
+\end{question}
+
+\begin{choices}
+    \item Operational
+    \item Strategic
+    \item Contingent
+    \item Restricted
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 运营流动性（operational liquidity）用于日常运营，不是以流动性资产缓冲形式存在，也不用于在压力情景下满足一般财务义务；运营流动性是日常业务运作所需的流动性，而非应急缓冲。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 战略流动性（strategic liquidity）用于战略目的，不是以流动性资产缓冲形式存在，也不用于在压力情景下满足一般财务义务；战略流动性是用于业务发展和战略投资的流动性，而非应急缓冲。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 或有流动性（contingent liquidity）以机构的流动性资产缓冲形式存在，用于在压力情景下满足一般财务义务；或有流动性是机构持有的高质量流动性资产（如现金、政府债券），专门用于应对压力情景和流动性危机，是流动性风险管理的重要组成部分。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 限制性流动性（restricted liquidity）受限制，不能用于满足一般财务义务；限制性流动性是受法律、监管或合同限制的流动性，不能自由使用，因此不能用于在压力情景下满足一般财务义务。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性类型分析}
+
+
+\section{考点4:流动性风险报告}
+\setcounter{question}{0}
+\begin{question}
+    Which of the following is the most likely output of a bank's liquidity stress test report?
+\end{question}
+
+\begin{choices}
+    \item Cash flow survival horizon
+    \item Net interest income projection
+    \item Leverage ratio of unsecured debt to equity
+    \item Return on equity versus threshold and target
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 现金流生存期（cash flow survival horizon）是流动性压力测试报告最重要的输出；该指标衡量银行在压力情况下能够维持现金流的时间长度，反映银行在流动性压力下的生存能力；这是流动性风险管理的核心指标，帮助管理层了解银行在压力情况下的流动性缓冲和应对能力。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 净利息收入预测不是流动性压力测试的主要输出；净利息收入预测属于盈利性分析和业务规划，而非流动性风险管理；流动性压力测试关注的是现金流和流动性状况，而非盈利能力。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 无担保债务与权益的杠杆比率不是流动性压力测试的主要输出；该比率属于资本结构分析和信用风险分析，反映财务杠杆和资本充足性，而非流动性状况；流动性压力测试关注的是现金流和流动性来源，而非资本结构。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 股本回报率与阈值和目标的比较不是流动性压力测试的主要输出；股本回报率属于盈利性分析和绩效评估，反映盈利能力，而非流动性状况；流动性压力测试关注的是流动性风险和现金流，而非盈利性指标。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性压力测试分析}
+
+
+
+
+
+\newpage
+
+
+
+
+\section{考点5:应急资金规划}
+\setcounter{question}{0}
+
+
+\begin{question}
+    In the context of governance and oversight of a contingency funding plan (CFP), which role has direct oversight of the liquidity crisis team (LCT)?
+\end{question}
+
+\begin{choices}
+    \item Board of directors
+    \item Risk management
+    \item Corporate treasury
+    \item Management committee
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 董事会不直接监督LCT；董事会负责战略监督和最终责任，但通常不直接监督LCT的日常运作；董事会的监督是更高层次的，而非直接操作监督。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 风险管理不直接监督LCT；风险管理部门负责风险监控、评估和报告，但LCT的监督应由管理层负责；风险管理是第二道防线，提供支持而非直接监督。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 公司资金部不直接监督LCT；资金部负责日常资金管理和流动性管理，但LCT的监督应由更高层的管理委员会负责；资金部是第一道防线，执行操作而非监督。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 管理委员会（包括高级管理层）负责直接监督LCT；管理委员会是应急融资计划治理的核心，负责直接监督LCT的运作，确保在流动性危机时LCT能够有效执行应急融资计划；这是治理结构中的直接监督角色。
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划治理}
+
+
+\begin{question}
+    Which of the following items is an example of a contingent action that could be taken by a bank during a stress situation?
+\end{question}
+
+\begin{choices}
+    \item Securitizing assets
+    \item Decreasing lending rates
+    \item Increasing capital distributions
+    \item Shifting from longer-term to shorter-term funding sources
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 资产证券化是压力情况下的或有行动；通过将非流动性资产（如贷款）证券化并出售，银行可以获得现金，增加流动性；这是应急融资计划中常见的或有流动性来源，有助于缓解流动性压力。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 降低贷款利率不是压力情况下的适当行动；降低贷款利率会鼓励更多放贷，导致现金流出增加，减少流动性；在压力情况下，银行应该减少放贷或提高贷款利率以保护流动性，而非降低利率。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 增加资本分配（如增加股息支付）不是压力情况下的适当行动；增加资本分配会减少现金和流动性，在压力情况下应该减少或暂停资本分配以保护流动性；这是应急融资计划中应避免的行动。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 从长期转向短期融资不是压力情况下的适当行动；在压力情况下，应该从短期转向长期融资以稳定资金来源，减少再融资风险；从长期转向短期融资会增加再融资频率和流动性风险，与压力管理目标相反。
+    \end{itemize}
+\end{explanation}
+
+\checklist{压力情况应对措施}
+
+
+\begin{question}
+    Which level of escalation within a contingency funding plan (CFP) has more emphasis on analyzing the causes of liquidity deterioration closely?
+\end{question}
+
+\begin{choices}
+    \item Level 1
+    \item Level 2
+    \item Level 3
+    \item Level 4
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Level 1是初始预警级别，通常只需要初步监控和观察，不需要详细分析流动性恶化的原因；在这个级别，问题可能刚刚出现，重点是识别信号而非深入分析。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item Level 2更强调分析流动性恶化的原因；在这个级别，系统性或特例事件明显影响业务和流动性，需要详细分析当前流动性状况和恶化原因，以便理解问题的根源并制定适当的应对策略；这是分析原因的关键阶段，因为问题已经明显但尚未到危机阶段。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Level 3是严重预警级别，重点在于采取紧急行动而非分析原因；在这个级别，流动性压力已经严重，需要立即采取应对措施，分析原因的重要性降低，行动优先。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item Level 4是最高预警级别（危机级别），重点在于危机管理和紧急应对而非分析原因；在这个级别，银行面临严重的流动性危机，需要全力应对，分析原因已不是优先事项。
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划升级}
+
+
+\begin{question}
+    What is a key design consideration in developing a contingency funding plan (CFP)?
+\end{question}
+
+\begin{choices}
+    \item Aligned to business profile
+    \item Supported by a backup plan
+    \item Inclusive of all shareholder groups
+    \item Can be used in both normal and stressed states
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item CFP应与业务概况（business profile）一致，这是关键设计考虑因素；CFP需要与公司的业务活动、产品类型、资产类别、风险状况和流动性特征相匹配；不同业务模式的银行需要不同的CFP设计，以确保计划的有效性和可操作性。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 有备用计划支持不是CFP的关键设计考虑因素；CFP本身就是应对流动性压力的应急计划，不需要另一个备用计划来支持；CFP应该包含多种应对措施和选项，但这不是"备用计划"的概念。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item CFP应包含适当的利益相关者群体，但"包含所有股东群体"不是关键设计考虑因素；CFP应该包括管理委员会、业务部门、风险管理、资金部等关键利益相关者，但不仅限于股东，且股东群体不是CFP设计的关键考虑因素。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item CFP本质上仅用于压力状态，不适用于正常状态；CFP是应急计划，专门设计用于应对流动性压力情况；正常状态下的流动性管理是日常运营的一部分，使用常规的流动性管理工具，而非CFP。
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划设计}
+
+
+\begin{question}
+    Alan Chen, a staff of JY bank, is considering developing an appropriate contingency funding plan, all of the following statements should be considered in building Contingency Funding Plan EXCEPT:
+\end{question}
+
+\begin{choices}
+    \item Aligned to business and risk profiles
+    \item Integrated with broader risk management frameworks
+    \item Theoretical basis for precoded instruction set
+    \item Inclusive of appropriate stakeholder groups
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 与业务和风险状况相匹配是CFP的正确设计考虑因素；CFP需要与公司的业务活动、产品类型、风险状况和流动性特征相匹配，确保计划的有效性和可操作性；这是五个关键设计考虑因素之一。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 与更广泛的风险管理框架整合是CFP的正确设计考虑因素；CFP应该与银行整体的风险管理框架、治理结构和政策保持一致，确保协调和有效性；这是五个关键设计考虑因素之一。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 预编码指令集的理论基础不是CFP的设计考虑因素；CFP的设计考虑因素关注计划的实用性、可操作性和有效性，而非技术实现的理论基础；五个正确的设计考虑因素是：与业务和风险状况相匹配、与更广泛的风险管理框架整合、可操作且灵活的行动手册、包含适当的利益相关者群体、有沟通计划支持。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 包含适当的利益相关者群体是CFP的正确设计考虑因素；CFP应该包括管理委员会、业务部门、风险管理、资金部等关键利益相关者，确保各方参与和协调；这是五个关键设计考虑因素之一。
+    \end{itemize}
+\end{explanation}
+
+\checklist{应急融资计划设计考虑因素}
+
+
+
+
+\newpage
+
+
+
+
+
+\end{document}

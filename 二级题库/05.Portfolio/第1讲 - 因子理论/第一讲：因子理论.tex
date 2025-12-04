@@ -1,0 +1,1577 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:因子理论}
+\setcounter{question}{0}
+
+
+\begin{question}
+    "The CAPM was revolutionary because it was the first cogent theory to recognize that the risk of an asset was not how that asset behaved in isolation but how that asset moved in relation to other assets and to the market as a whole. Before the CAPM, risk was often thought to be an asset's own volatility. The CAPM said this was irrelevant and that the relevant measure of risk was how the asset covariant with the market portfolio—the beta of the asset." What else does he say is TRUE about the CAPM?
+\end{question}
+
+\begin{choices}
+    \item CAPM is known to be a spectacular failure with respect to its predictive power
+    \item Neither finance professors nor Chief Financial Officers (CFO) employ the CAPM in practice
+    \item Equilibrium asserts that factors are temporary because arbitrageurs eventually eliminate factors
+    \item Investors make very different predictions about asset returns, variances and correlations; equilibrium is the theory that says this diversity of beliefs is reconciled via the market price mechanism of supply and demand
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item CAPM在预测能力方面确实存在显著不足；虽然CAPM在理论上具有重要意义，但大量实证研究显示其预测能力有限，无法很好地解释实际收益；这是学术界和实务界都承认的事实。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 金融教授和CFO在实践中仍使用CAPM；虽然CAPM有局限性，但它仍是资本成本估算、资产定价和投资决策的重要工具。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 该描述不符合CAPM；CAPM假设市场处于均衡状态，但不是说因子是暂时的；该描述更接近套利定价理论（APT）的观点，而非CAPM。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 该描述不符合CAPM；CAPM假设所有投资者具有相同的预期（homogeneous expectations），而非不同的信念；该描述更接近行为金融学的观点，而非CAPM。
+    \end{itemize}
+\end{explanation}
+
+\checklist{CAPM模型分析}
+
+
+\begin{question}
+    Assets that have losses during periods of low market returns have:
+\end{question}
+
+\begin{choices}
+    \item low betas and low risk premiums
+    \item high betas and low risk premiums
+    \item low betas and high risk premiums
+    \item high betas and high risk premiums
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 低beta资产在市场表现不佳时通常获得正收益或损失较小（因为与市场相关性低），风险较低，因此不需要高风险溢价。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 高beta资产对市场变动高度敏感，风险高，因此需要高风险溢价，不能同时具有低风险溢价。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 低beta资产风险较低，不需要高风险溢价；该选项将低beta与高风险溢价组合，这在逻辑上矛盾。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 在市场回报低时出现损失的资产具有高beta（对市场变动高度敏感）和高风险溢价（需要补偿高风险）；这是CAPM理论的核心：高风险（高beta）需要高回报（高风险溢价）来补偿。
+    \end{itemize}
+\end{explanation}
+
+\checklist{资产风险特征分析}
+
+
+
+\begin{question}
+    Which of the following statements most accurately explains the link between an asset's payoff during economic downturns (such as high unemployment or recession) and its expected return?
+\end{question}
+
+\begin{choices}
+    \item Assets with higher expected payoffs in economic downturns tend to offer higher expected returns.
+    \item Assets with higher expected payoffs in economic downturns tend to offer lower expected returns.
+    \item The expected payoff of an asset in downturns is unrelated to its expected return, as it is determined solely by market efficiency.
+    \item The expected payoff of an asset in downturns is unrelated to its expected return, because all risks are diversified away.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 资产在经济低迷时期预期收益高，说明其对投资者有保险价值，价格高，预期回报反而低。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 资产在经济低迷时期预期收益高，投资者愿意为其支付溢价，导致预期回报较低。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 市场有效性并不意味着资产在坏时期的收益与预期回报无关，投资者风险偏好仍然影响回报。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 并非所有风险都能被分散，系统性风险无法完全消除，资产在坏时期的表现仍影响其回报。
+    \end{itemize}
+\end{explanation}
+\checklist{坏时期收益与预期回报关系}
+
+
+
+\begin{question}
+    During a seminar, Michael Lee discussed the origins of a recent financial crisis. He stated that three main factors triggered the crisis: (1) insufficient liquidity in the banking sector, (2) excessive leverage and weak capital positions, and (3) a high level of global financial interconnectedness. How many of these factors did Lee correctly identify as initial causes of the crisis?
+\end{question}
+
+\begin{choices}
+    \item None.
+    \item One.
+    \item Two.
+    \item Three.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{因素1分析：银行部门流动性不足}
+    \begin{itemize}
+        \item 流动性不足通常是危机的表现或结果，而非初始原因；流动性问题往往是在高杠杆、资本薄弱等问题暴露后才出现的；因此这不是危机的初始原因。
+    \end{itemize}
+
+    \textbf{因素2分析：过度杠杆和资本薄弱}
+    \begin{itemize}
+        \item 过度杠杆和资本薄弱是金融危机的初始原因；这些因素在危机发生前就存在，是导致金融机构脆弱性的根本原因，使金融机构在面临冲击时容易崩溃。
+    \end{itemize}
+
+    \textbf{因素3分析：全球金融高度关联}
+    \begin{itemize}
+        \item 全球金融高度关联是金融危机的初始原因；高度关联性使风险能够在全球范围内快速传播，放大冲击的影响，是导致系统性风险的重要因素。
+    \end{itemize}
+\end{explanation}
+\checklist{金融危机初期关键因素识别}
+
+
+\begin{question}
+    During the market turmoil of 2020, certain benchmark rates such as the Euro Interbank Offered Rate (EURIBOR) became less practical for financial institutions. This situation most directly challenges which characteristic of an effective benchmark rate?
+\end{question}
+
+\begin{choices}
+    \item Reliability.
+    \item Robustness.
+    \item Availability.
+    \item Representativeness.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 可靠性主要指防止操纵和错误，与危机期间利率难以使用关系不大。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 稳健性指基准利率在压力时期依然可用和有效，危机期间EURIBOR难以使用，说明其稳健性受到质疑。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 可用性强调利率是否易于获取和公布，不直接反映危机期间的实际可用性问题。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 代表性关注利率对合约的相关性，与危机期间的可用性问题无直接关系。
+    \end{itemize}
+\end{explanation}
+\checklist{基准利率的稳健性}
+
+
+
+\begin{question}
+    A portfolio analyst assumes the joint distribution of returns is multivariate normal and computes the following risk measures for a 2-asset portfolio:
+
+    \begin{table}[htbp]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            \textbf{Asset} & \textbf{Position} & \textbf{Individual VaR} & \textbf{Marginal VaR} & \textbf{VaR Contribution} \\
+            \hline
+            A & USD 120 & USD 30.0 & 0.200 & USD 24.0 \\
+            B & USD 80 & USD 40.0 & 0.400 & USD 32.0 \\
+            Portfolio & USD 200 & USD 54.0 & -- & USD 54.0 \\
+            \hline
+        \end{tabular}
+        \caption{Asset VaR and Contribution Table}
+    \end{table}
+
+    Let $\beta_i = \rho_{ip}*\sigma_i/\sigma_p$, where $\rho_{ip}$ is the correlation between the return of asset i and the return of the portfolio, $\sigma_i$ is the volatility of asset i, and $\sigma_p$ is the volatility of the portfolio. What is $\beta_B$?
+\end{question}
+
+\begin{choices}
+    \item 0.593
+    \item 1.185
+    \item 1.481
+    \item Cannot determine from information provided.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{B选项正确。}  
+    \[
+    \beta_B = \text{Marginal VaR}_B \times \text{Portfolio Value} / \text{Portfolio VaR} = 0.4 \times 200 / 54 = 1.185
+    \]
+
+\end{explanation}
+\checklist{VaR与边际VaR计算}
+
+
+
+\begin{question}
+    Regarding the capital asset pricing model (CAPM), which of the following assumptions or implications is widely regarded as both accurate in reality and practically valuable?
+\end{question}
+
+\begin{choices}
+    \item All investors have free and instant access to information due to technological advances.
+    \item The risk of an asset is determined by its exposure to systematic factors.
+    \item Investors only care about the mean and variance of returns when making decisions.
+    \item All investors share identical expectations about returns, variances, and covariances.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 信息并非完全免费且即时，现实中信息摩擦依然存在。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 资产风险由其对系统性因子的暴露决定，这一CAPM观点在实际中被广泛接受和应用。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 投资者不仅关心均值和方差，现实中还会考虑其他因素如偏度、流动性等。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 投资者的预期并不完全一致，现实中存在信息和观点差异。
+    \end{itemize}
+\end{explanation}
+\checklist{CAPM风险因子暴露}
+
+
+
+\begin{question}
+    Which of the following is not a key factor influencing the risk of a portfolio?
+\end{question}
+
+\begin{choices}
+    \item The extent to which assets in the portfolio are correlated.
+    \item Significant concentration in a single asset within the portfolio.
+    \item The total risk of a well-diversified portfolio with many assets.
+    \item The volatility of each asset included in the portfolio.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 资产间的相关性直接影响投资组合的整体风险，是主要影响因素。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 投资组合中高度集中于单一资产会增加风险，也是重要影响因素。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 多元化投资组合的总风险主要由系统性风险决定，非系统性风险已被分散，选项C不是主要影响因素。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 单个资产的波动性会影响投资组合的整体风险，是主要影响因素之一。
+    \end{itemize}
+\end{explanation}
+\checklist{投资组合风险影响因素}
+
+
+\begin{question}
+    The efficient market hypothesis (EMH) provides a framework for understanding market efficiency. According to the EMH and its rational and behavioral interpretations, which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item Speculative trading incurs no costs.
+    \item Active managers generally cannot outperform the market.
+    \item Under the behavioral view, high returns compensate for losses in bad times.
+    \item Under the rational view, overreactions or underreactions to news create high returns.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+    \item 投机交易通常是有成本的，市场并非完全无摩擦。
+    \end{itemize}
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 有效市场假说认为所有可用信息都已反映在价格中，主动管理者难以持续跑赢市场。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 行为学派认为投资者的非理性行为导致市场波动，并非高回报补偿坏时期损失。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 理性解释认为市场价格反映所有信息，过度或不足反应属于行为金融范畴。
+    \end{itemize}
+\end{explanation}
+\checklist{有效市场假说及其解释}
+
+
+\begin{question}
+    Which of the following statements is least likely to be considered a limitation of the capital asset pricing model (CAPM)?
+\end{question}
+
+\begin{choices}
+    \item All investors act as price takers in the market.
+    \item Information is freely and instantly available to everyone.
+    \item All investors share identical expectations about returns and risks.
+    \item The market has uniform taxes and transaction costs for all participants.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 所有投资者都是价格接受者是CAPM的一个理想化假设，现实中难以实现，属于模型局限。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 信息完全免费且即时获取也是CAPM的假设，现实中信息获取有成本，属于局限。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 投资者拥有完全相同的预期也是CAPM的假设，现实中投资者预期差异大，属于局限。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+    \item CAPM假设市场无税收和无交易成本（完全无摩擦），而不是统一税收和交易成本。
+    \end{itemize}
+\end{explanation}
+\checklist{CAPM假设局限性}
+
+
+\begin{question}
+    "Factors are to assets what nutrients are to food." According to the theory of factor risk premiums, which of the following statements is NOT part of the theory?
+\end{question}
+
+\begin{choices}
+    \item Assets are composed of multiple factors, similar to how foods contain various nutrients.
+    \item Factors are important, not asset classes, just as nutrition focuses on nutrients rather than food labels.
+    \item Different investors have different preferences or needs for factors, just as people have different nutritional requirements.
+    \item Since factors represent different good times, most investors should seek exposure to most investable factors, just as most people should eat all nutrients.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 因子理论认为资产由多个因子组成，这一观点是理论核心之一。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 因子比资产类别更重要，理论强调关注因子本身，这也是理论要点。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 不同投资者对因子的需求不同，这一观点符合因子理论。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    因子理论并不主张所有投资者都应持有所有因子敞口，理论强调“坏时期”补偿和个性化需求，而非均衡配置所有因子。
+\end{explanation}
+\checklist{因子理论三大核心思想}
+
+
+\begin{question}
+    Which of the following is least likely to be considered a factor according to the definition of investment factors?
+\end{question}
+
+\begin{choices}
+    \item Market.
+    \item Volatility.
+    \item Hedge funds.
+    \item Momentum investing style.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 市场因子是最常见的投资因子之一，属于因子的定义范畴。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 波动率可以作为风险因子，符合因子的定义。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 对冲基金属于资产类别，不是单一的因子，本身可以分解为多个因子敞口。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 动量投资风格属于投资因子，符合因子的定义。
+    \end{itemize}
+\end{explanation}
+\checklist{因子的定义与识别}
+
+
+\begin{question}
+    An investment analyst is using the CAPM framework to optimize a diversified portfolio. When considering adding a new asset, which characteristic would most likely maximize the diversification benefit for the portfolio?
+\end{question}
+
+\begin{choices}
+    \item Low beta
+    \item Low return volatility
+    \item High return volatility
+    \item High beta
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 低贝塔资产对市场波动不敏感，与现有资产相关性低，有助于提升组合分散化效益。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 低波动性不代表与组合其他资产相关性低，未必能带来最佳分散化。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 高波动性增加风险，且可能与其他风险资产相关性高，不利于分散化。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 高贝塔资产与市场高度相关，分散化效益有限。
+    \end{itemize}
+\end{explanation}
+\checklist{低贝塔提升分散化}
+
+
+
+
+
+\section{考点2:因子}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Which of the following investment strategies is most effective for reducing volatility risk?
+\end{question}
+
+\begin{choices}
+    \item Buying put options.
+    \item Selling put options.
+    \item Buying equities.
+    \item Buying call options.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 买入看跌期权可以在市场下跌时获得保护，是对冲波动性风险的有效方式。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 卖出看跌期权会暴露于更高的下行风险，无法降低波动性风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 买入股票本身并不能对冲波动性风险，反而可能增加风险敞口。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 买入看涨期权主要用于捕捉上涨收益，不是专门用于对冲波动性风险。
+    \end{itemize}
+\end{explanation}
+\checklist{对冲波动性风险策略}
+
+
+\begin{question}
+    Volatility is considered one of the three most important macroeconomic factors. Which of the following statements about volatility as a macro factor is FALSE?
+\end{question}
+
+\begin{choices}
+    \item There is a negative correlation between stock returns and the VIX index.
+    \item Volatility has a negative "price of risk" across major markets such as equities, bonds, currencies, and commodities.
+    \item Because volatility's "price of risk" is negative, higher volatility leads to higher future stock returns due to a natural upper bound on volatility.
+    \item The "leverage effect" describes how increased financial leverage (assets/equity) from falling stock prices leads to higher stock volatility.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 股票收益与VIX指数呈负相关；VIX是波动率指数，通常与股票收益负相关，因为高波动率往往伴随市场下跌。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 波动率在主要市场（股票、债券、货币、商品）的风险价格为负；投资者厌恶波动率风险，愿意为低波动率支付溢价，因此波动率风险价格为负。
+    \end{itemize}
+
+    \textbf{C选项错误（正确答案）。}
+    \begin{itemize}
+        \item 该陈述错误：虽然波动率风险价格为负，但高波动率通常导致未来股票收益下降，而非上升；波动率存在上限并不意味着高波动率会带来高收益；高波动率通常反映市场不确定性和风险，导致未来收益下降。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 杠杆效应描述了股价下跌导致财务杠杆（资产/权益）上升，从而引发更高的股票波动率；这是波动率与股票价格之间的负反馈机制。
+    \end{itemize}
+\end{explanation}
+\checklist{波动性宏观因子特征}
+
+
+\begin{question}
+    Besides the three main macro factors, other macroeconomic risks include productivity risk, demographic risk, and political risk. Which of the following statements about these risks is NOT necessarily true?
+\end{question}
+
+\begin{choices}
+    \item As the population ages, retirees increase their purchases of financial assets, pushing asset prices higher.
+    \item Older individuals tend to be more risk-averse, so as the average age rises, the equity risk premium increases and equity prices fall.
+    \item Before the global financial crisis, political risk was mainly a concern in emerging markets, but after the crisis, it has become important in developed countries as well.
+    \item In real business cycle models, inflation is relatively neutral, and long-term asset returns reflect productivity shocks.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。} 
+    \begin {itemize}
+        \item 实际上，随着人口老龄化，退休人员通常会出售金融资产用于消费，反而可能导致资产价格下跌。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 老年人风险厌恶度更高，人口老龄化会提升权益风险溢价，压低股价，这一说法正确。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 金融危机后，政治风险在发达国家也变得重要，这一说法正确。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 实际商业周期模型中，长期资产回报反映生产率冲击，通胀影响相对中性，这一说法正确。
+    \end{itemize}
+\end{explanation}
+\checklist{宏观因子：人口与政治风险}
+
+
+
+\begin{question}
+    Andrew Ang classifies factors into macro (fundamental) factors and investment-style factors. Based on his long-term historical analysis (1952:Q1 to 2011:Q4), which of the following statements about asset class performance is FALSE?
+\end{question}
+
+\begin{choices}
+    \item Government and investment-grade bonds performed BETTER during recessions than during expansions.
+    \item Both large-cap and small-cap stocks performed significantly BETTER during economic expansions than during recessions.
+    \item During periods of high inflation, all five asset classes performed significantly BETTER than during periods of low inflation.
+    \item All five asset classes were much MORE VOLATILE during recessions (or periods of low GDP growth) than during expansions.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 政府和投资级债券在经济衰退期间表现优于扩张期，这一说法正确。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 大盘股和小盘股在经济扩张期表现显著优于衰退期，这一说法正确。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 实际上，高通胀时期五大类资产表现普遍较差，而非更好，因此该说法错误。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 所有五类资产在衰退或低GDP增长期波动性更高，这一说法正确。
+    \end{itemize}
+\end{explanation}
+\checklist{宏观因子与资产表现关系}
+
+
+\begin{question}
+    Which of the following investment strategies contributes to stabilizing asset prices?
+\end{question}
+
+\begin{choices}
+    \item A value investment strategy.
+    \item A momentum investment strategy.
+    \item A size investment strategy.
+    \item Value, momentum, and size strategies all stabilize asset prices.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 价值投资属于负反馈机制，低估资产被买入，价格回升，有助于稳定资产价格。
+    \end{itemize}
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 动量投资是正反馈机制，追涨杀跌，反而加剧价格波动，不利于稳定。
+    \end{itemize}
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 尺寸（市值）策略本身对价格稳定性影响有限，不具备稳定作用。
+    \end{itemize}
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 并非所有策略都能稳定价格，只有价值投资具有此特性。
+    \end{itemize}
+\end{explanation}
+\checklist{价值投资稳定资产价格}
+
+
+\begin{question}
+    The Fama-French three-factor model is expressed as:
+    \[
+    \mathbb{E}(r_i) = r_f + \beta_{i,\mathrm{MK}} \mathbb{E}(r_m - r_f) + \beta_{i,\mathrm{SMB}} \mathbb{E}(\mathrm{SMB}) + \beta_{i,\mathrm{HML}} \mathbb{E}(\mathrm{HML})
+    \]
+    Which of the following statements about the Fama-French model is TRUE?
+\end{question}
+
+\begin{choices}
+    \item Unlike the size factor, the value premium is robust and outperforms over the long run.
+    \item Since 1965 to the present, the size factor in Fama-French has been significant and robust.
+    \item Although the size effect remains robust, small stocks do NOT have higher average returns than large stocks.
+    \item The main feature of value stocks is that they outperform growth stocks especially during economic downturns, both in theory and in data.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 与规模因子不同，价值因子长期表现稳健，具有超额收益。
+    \end{itemize}
+
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 规模因子的有效性在近几十年已减弱，不再持续显著。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 小盘股长期平均回报高于大盘股，这一说法不正确。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 价值股在经济低迷时未必总能跑赢成长股，理论和数据并不完全支持。
+    \end{itemize}
+\end{explanation}
+\checklist{Fama-French三因子模型特征}
+
+
+
+\begin{question}
+    Which of the following asset classes tends to have similar returns during both high and low economic growth periods?
+\end{question}
+
+\begin{choices}
+    \item Small-cap stocks.
+    \item Large-cap stocks.
+    \item Government bonds.
+    \item High-yield bonds.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 小盘股在经济扩张期表现更好，衰退期表现较差，回报差异明显。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 大盘股同样在经济扩张期回报高于衰退期，表现受经济周期影响较大。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 政府债券在经济衰退期表现优于扩张期，回报随经济周期波动。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 高收益债券在经济高增长和低增长时期的回报相近，实证数据显示二者差异很小。
+    \end{itemize}
+\end{explanation}
+\checklist{资产类别与经济周期回报}
+
+
+\begin{question}
+    A team of junior analysts at an asset management firm is evaluating the effects and opportunities of volatility risk. They discuss various products and strategies related to trading market volatility. Which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item Buying out-of-the-money call options is a short volatility strategy that is inexpensive due to the gap between realized and implied volatility.
+    \item Rebalancing a portfolio is a short volatility strategy, but it does not capture the premium from directly shorting volatility in derivatives markets.
+    \item Entering a variance swap as a fixed payer is a short volatility strategy, but it results in large losses when the underlying asset price drops sharply.
+    \item Selling out-of-the-money put options is a short volatility strategy that typically generates large positive returns during severe economic downturns.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 买入虚值看涨期权属于多头波动率策略，而非空头波动率。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 组合再平衡本质上是空头波动率策略，但不会像衍生品市场直接卖出波动率那样获得波动率溢价。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 作为固定支付方参与方差互换确实是空头波动率，但在标的资产大幅下跌时会遭受巨大损失，描述不完整。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 卖出虚值看跌期权在经济下行时可能遭受巨大亏损，而非获得大额正收益。
+    \end{itemize}
+\end{explanation}
+\checklist{波动率策略与风险敞口}
+
+
+
+\newpage
+
+
+\section{考点3:Alpha和低风险异象}
+\setcounter{question}{0}
+
+
+\begin{question}
+    The Investment Committee is concerned about evaluating alpha for strategies with non-linear payoffs, such as short volatility bets, and wants benchmarks that are well defined, tradeable, replicable, and risk-adjusted (per Andrew Ang's criteria). Which of the following is the most appropriate solution?
+\end{question}
+
+\begin{choices}
+    \item One effective approach is to include tradeable non-linear factors in the benchmark to account for non-linear payoffs.
+    \item A joint hypothesis test, where alpha and the benchmark are determined simultaneously, is the best way to address non-linear payoffs.
+    \item The simplest way to compute tradeable alpha for non-linear payoffs is to add non-linear terms (e.g., $r^2(t)$ or $max[r(t),0]$) to the factor regression.
+    \item There is no real issue; alpha and related metrics are always suitable for any return distribution, regardless of payoff shape.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 针对非线性收益策略，将可交易的非线性因子纳入基准，有助于更准确地评估alpha，符合Ang的理想基准标准。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 联合假设检验方法复杂且难以实际操作，不如直接引入可交易因子有效。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 在回归中加入非线性项如$r^2(t)$，但若这些项不可交易，不符合理想基准的要求。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item alpha等指标并非适用于所有收益分布，尤其是非线性策略时，静态alpha可能失真。
+    \end{itemize}
+\end{explanation}
+\checklist{非线性策略的alpha评估}
+
+
+\begin{question}
+    The following are actual regression results for Berkshire Hathaway's monthly excess returns (1990–2012) using the CAPM and Fama-French three-factor models. Which of the following statements about these results is FALSE?
+\end{question}
+
+\begin{choices}
+    \item The -0.50 SMB loading and +0.38 HML loading indicate Berkshire Hathaway is a large-cap, value investor.
+    \item Berkshire generates significant alpha with at least 90\% confidence, and adding the size (SMB) and value (HML) factors improves the model fit.
+    \item The statistically insignificant alphas, low adjusted $R^2$, and increase in market beta when SMB and HML are added suggest Berkshire did not generate sustained alpha.
+    \item The Fama-French regression implies a benchmark: \$0.33 in T-bills, \$0.67 in the market, (long \$0.50 in large caps – short \$0.50 in small caps), and (\$0.38 in value stocks – \$0.38 in growth stocks).
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item SMB为负、HML为正，说明伯克希尔偏好大盘和价值风格，这一说法正确。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item alpha的t值约为2，显著性达到90\%以上，且加入SMB和HML后模型拟合度提升，这一说法正确。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 实际上，alpha接近显著，调整$R^2$也不算低，市场beta提升说明Fama-French模型更适合，不能据此否定伯克希尔的alpha。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item Fama-French回归的系数可解释为相应资产组合的权重，这一说法正确。
+    \end{itemize}
+\end{explanation}
+\checklist{CAPM与Fama-French风格回归分析}
+
+
+\begin{question}
+    The following table shows Andrew Ang's regression results for CalPERS pension fund's annual gross returns (not excess returns) against a passive benchmark portfolio of stocks and bonds. Which of the following statements about these results is TRUE?
+\end{question}
+
+\begin{choices}
+    \item The high adjusted $R^2$ proves that CalPERS active managers add value over the benchmark.
+    \item Since the factor loadings are not statistically significant, new factors should be tested until significance is found.
+    \item The regression should include at least one risk-free asset, as robust benchmarks must always contain a risk-free component.
+    \item It is acceptable to regress gross returns against a benchmark portfolio without a risk-free asset, as long as the factor loadings sum to one; here, $\beta(B) + \beta(S) = 1.0$.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 高调整$R^2$仅说明回归拟合度高，不能证明主动管理者超越基准。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 因子显著性不足不代表要不断更换因子，需结合经济意义和模型设定。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 回归不一定要包含无风险资产，只要因子权重之和为1即可。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 在回归总收益时，可以不包含无风险资产，只需保证因子权重之和为1，本例中$\beta(B)+\beta(S)=1.0$。
+    \end{itemize}
+\end{explanation}
+\checklist{基准投资组合回归与权重约束}
+
+
+\begin{question}
+    You are assessing the performance of Valance, an equity fund aiming to replicate the Russell 2000 Index. Based on the following data, what is the best estimate of Valance's tracking error relative to the Russell 2000 Index?
+    \begin{itemize}
+        \item Annual volatility of Valance: 32\%
+        \item Annual volatility of Russell 2000 Index: 38\%
+        \item Correlation between Valance and the Russell 2000 Index: 0.88
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item 4.2\%
+    \item 15.2\%
+    \item 36.7\%
+    \item 49.1\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+  
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 跟踪误差（tracking error）是基金收益与基准指数收益之差的波动率，公式为：$\omega = \sqrt{\sigma_p^2 + \sigma_b^2 - 2\rho_{pb}\sigma_p\sigma_b}$，其中$\sigma_p = 0.32$（基金波动率），$\sigma_b = 0.38$（基准波动率），$\rho_{pb} = 0.88$（相关性）。
+        \item $\omega = \sqrt{0.32^2 + 0.38^2 - 2 \times 0.32 \times 0.38 \times 0.88} = \sqrt{0.1024 + 0.1444 - 0.214016} = \sqrt{0.032784} = 0.152 = 15.2\%$。
+    \end{itemize}
+  
+\end{explanation}
+\checklist{跟踪误差计算公式}
+
+
+\begin{question}
+    The low-risk anomaly is supported by three empirical effects. Which of the following statements is FALSE and not technically part of the low-risk anomaly?
+\end{question}
+
+\begin{choices}
+    \item Both contemporaneous and lagged volatility are negatively related to returns.
+    \item Contemporaneous beta is negatively related to raw returns.
+    \item Lagged beta is negatively related to risk-adjusted returns.
+    \item Minimum variance portfolios outperform the market.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 同期和滞后波动率与收益率负相关，属于低风险异象的实证结论。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 同期beta与原始收益率实际上呈正相关，CAPM理论和实证均支持，负相关说法错误。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 滞后beta与风险调整后收益率负相关，属于低风险异象的内容。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 最小方差组合长期表现优于市场，也是低风险异象的体现。
+    \end{itemize}
+\end{explanation}
+\checklist{低风险异象的实证效应}
+
+
+\begin{question}
+    Why might an investor include multiple factors in a regression analysis?  
+    \begin{itemize}
+    \item I. To attempt to improve the adjusted $R^2$ measure.  
+    \item II. To reduce the f-statistic value of the regression coefficients.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I only.
+    \item II only.
+    \item Both I and II.
+    \item Neither I nor II.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 添加多个因子有助于提高调整后的$R^2$；调整后的$R^2$考虑了模型复杂度，当新增因子能显著解释收益变化时，调整后的$R^2$会提高；这是多因子模型的主要目标之一，使模型更好地解释投资组合的收益变化。
+    \end{itemize}
+
+    \textbf{陈述II分析：错误}
+    \begin{itemize}
+        \item 增加因子不是为了降低F统计量；F统计量反映整体回归的显著性，通常希望其更高而非更低；增加因子可能会影响F统计量，但降低F统计量不是增加因子的目的；实际上，如果新增因子显著，F统计量可能会提高。
+    \end{itemize}
+\end{explanation}
+\checklist{多因子回归的目的}
+
+
+\begin{question}
+    Which of the following is a potential explanation for the risk anomaly?
+\end{question}
+
+\begin{choices}
+    \item Investor preferences.
+    \item The presence of highly leveraged retail investors.
+    \item Lack of short selling constraints for institutional investors.
+    \item Lack of tracking error constraints for institutional investors.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。} 
+    \begin{itemize} 
+    \item 投资者偏好是风险异象的潜在解释之一，不同投资者对风险和收益的偏好差异会导致市场出现低风险高收益现象。
+    \end{itemize}
+    \textbf{B选项错误。}  
+    \begin{itemize}
+    \item 高杠杆散户的存在会影响市场，但不是风险异象的主要解释，反而杠杆受限更常见。
+    \end{itemize}
+    \textbf{C选项错误。}  
+    \begin{itemize}
+    \item 机构投资者通常面临卖空限制，缺乏卖空约束反而不利于风险异象的形成。
+    \end{itemize}
+    \textbf{D选项错误。}  
+    \begin{itemize}
+    \item 机构投资者通常有跟踪误差约束，缺乏此类约束不是风险异象的主因。
+    \end{itemize}
+\end{explanation}
+\checklist{风险异象的成因}
+
+
+\begin{question}
+    According to Grinold's fundamental law of active management, which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item Investors should focus solely on improving their predictive ability regarding stock price movements.
+    \item Sector allocation is the most critical aspect of active management.
+    \item Making fewer investment bets reduces mistakes and thus improves expected performance.
+    \item To maximize the information ratio, active investors must either make high-quality predictions or take a large number of investment bets each year.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 只关注预测能力不足以最大化信息比率，还需考虑投资次数。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 行业配置虽重要，但不是Grinold定律的核心内容。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 投资次数过少反而降低信息比率，不能提升预期业绩。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 格林罗德定律指出，提升信息比率既可以依靠高质量预测，也可以通过增加投资次数实现。
+    \end{itemize}
+\end{explanation}
+\checklist{主动管理基本定律}
+
+
+\begin{question}
+    Which of the following statements about the risk anomaly is TRUE?
+\end{question}
+
+\begin{choices}
+    \item The main argument against the risk anomaly is that efficient market hypothesis (EMH) holds, so markets should not allow such anomalies.
+    \item Because of time-varying realities, it is impossible to create a reproducible benchmark for low beta or low volatility anomalies, so empirical tests are not robust.
+    \item The risk anomaly may be explained by leverage constraints (investors unable to borrow, thus bidding up high beta stocks) and/or agency problems (such as minimizing tracking error, preventing shorting low beta/volatility stocks).
+    \item The existence of the low-risk anomaly in many markets is strong evidence that data mining creates an illusion, since diversification eliminates idiosyncratic volatility's impact on returns.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 有效市场假说并不能完全否定风险异象的存在，现实中确有低风险高收益现象。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 尽管现实变化，低风险异象的实证检验依然有方法和数据支持。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 杠杆约束和代理问题是解释风险异象的重要理论基础，许多投资者无法借贷或受限于跟踪误差，导致高beta资产被追捧。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 多市场低风险异象的存在并非仅由数据挖掘造成，分散化不能完全消除低风险高收益现象。
+    \end{itemize}
+\end{explanation}
+\checklist{风险异象的理论解释}
+
+
+\begin{question}
+    A portfolio manager generates alpha by making bets that differ from the benchmark. According to Grinold's Fundamental Law of Active Management, the maximum information ratio is $IR \approx IC \times \sqrt{BR}$, where $IC$ is the information coefficient and $BR$ is the breadth. Which of the following statements about the Fundamental Law is FALSE?
+\end{question}
+
+\begin{choices}
+    \item Empirical evidence shows that, on average, IC tends to decrease as BR increases.
+    \item A key advantage of the fundamental law is that it incorporates downside risk and higher moment risk, such as skewness and kurtosis.
+    \item To achieve an IR of 0.50, one could have an IC of 0.25 with 4 bets per year, or an IC of 0.025 with 400 bets per year.
+    \item The law assumes independent forecasts, but in practice, correlated bets mean true breadth is often overstated.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 实证研究表明，随着投资广度增加，IC通常会下降，这一说法正确。
+    \end{itemize}
+
+    \textbf{B选项正确。}  
+    \begin{itemize}
+        \item 格林罗德定律基于均值-方差效用，未考虑下行风险和高阶矩风险，因此不能调整偏度和峰度，这一说法错误。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 信息比率可以通过高IC少下注或低IC多下注实现，这一说法正确。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 该定律假设预测独立，现实中相关性导致实际广度被高估，这一说法正确。
+    \end{itemize}
+\end{explanation}
+\checklist{主动管理基本定律的局限}
+
+
+
+\begin{question}
+    Which of the following statements correctly describes the relationship between the low-risk anomaly and the capital asset pricing model (CAPM)?
+\end{question}
+
+\begin{choices}
+    \item The low-risk anomaly supports the CAPM.
+    \item There is no empirical evidence that the low-risk anomaly violates the CAPM.
+    \item The low-risk anomaly contradicts the CAPM and suggests that low-beta stocks outperform high-beta stocks.
+    \item Both CAPM and the low-risk anomaly indicate a positive relationship between risk and return.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 低风险异象与CAPM理论相悖，并不支持CAPM。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 实证研究已证明低风险异象确实违背了CAPM。
+    \end{itemize}
+
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 低风险异象表明低贝塔股票长期表现优于高贝塔股票，这与CAPM的正向风险-收益关系相反。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item CAPM认为风险越高回报越高，而低风险异象则显示低风险资产回报更高，两者结论相反。
+    \end{itemize}
+\end{explanation}
+\checklist{低风险异象与CAPM关系}
+
+
+\begin{question}
+    The Risk Committee is considering moving from a static Fama-French three-factor benchmark to a style-based benchmark for fund performance evaluation. Which of the following statements about style analysis is FALSE?
+\end{question}
+
+\begin{choices}
+    \item A drawback of style analysis (compared to static benchmarks) is that short positions cannot be included in the benchmark.
+    \item A drawback of style analysis is that it is harder to detect statistical significance due to larger standard errors.
+    \item An advantage of style analysis is that factor loadings can vary over time, as shown by time-varying $\beta$ coefficients.
+    \item An advantage of style analysis is the use of actual tradeable funds (e.g., SPDR ETFs) as benchmark factors.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}  
+    \begin{itemize}
+        \item 风格分析允许卖空，只要因子权重总和为1，因此该说法错误。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 风格分析因标准误更大，确实更难检验统计显著性，这一说法正确。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 风格分析的优点之一是因子载荷可以随时间变化，这一说法正确。
+    \end{itemize}
+
+    \textbf{D选项错误。}  
+    \begin{itemize}
+        \item 风格分析可以直接用可交易基金作为因子，提升实际可操作性，这一说法正确。
+    \end{itemize}
+\end{explanation}
+\checklist{风格分析优缺点}
+
+
+\begin{question}
+    By adding a momentum factor (WML or UMD) to the Fama-French model, we get a four-factor model. For the period from January 1965 to December 2011, which of the following statements about the momentum factor is TRUE?
+\end{question}
+
+\begin{choices}
+    \item Momentum is a negative feedback strategy and inherently stabilizing.
+    \item The momentum factor is only observed in equities, not in bonds, commodities, or real estate.
+    \item Momentum investing is by definition an anti-value strategy; correlations between HML and WML are strongly negative.
+    \item The cumulative profits from momentum strategies have been an order of magnitude greater than those from size or value strategies.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 动量策略属于正反馈机制，反而加剧市场波动，不具备稳定作用。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 动量因子不仅在股票市场存在，在其他资产类别中也有发现。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 虽然动量与价值因子相关性为负，但并非“反价值”策略的定义。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 长期来看，动量策略的累积收益远超规模和价值因子，这一说法正确。
+    \end{itemize}
+\end{explanation}
+\checklist{动量因子长期收益突出}
+
+
+
+\begin{question}
+    Which of the following is NOT a characteristic of an appropriate benchmark? An appropriate benchmark should be:
+\end{question}
+
+\begin{choices}
+    \item Tradeable.
+    \item Replicable.
+    \item Well-defined.
+    \item Equally applied to all risky assets regardless of their risk exposure.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}  
+    \begin{itemize}
+        \item 合理的基准必须是可交易的，便于实际操作和复制。
+    \end{itemize}
+
+    \textbf{B选项错误。}  
+    \begin{itemize}
+        \item 可复制性是基准的重要特征，确保评估结果可重复。
+    \end{itemize}
+
+    \textbf{C选项错误。}  
+    \begin{itemize}
+        \item 明确定义有助于基准的准确性和一致性。
+    \end{itemize}
+
+    \textbf{D选项正确。}  
+    \begin{itemize}
+        \item 合理基准应根据资产风险特征调整，不能对所有风险资产一刀切，否则无法公平比较。
+    \end{itemize}
+\end{explanation}
+\checklist{基准应具备的特征}
+
+
+
+\begin{question}
+    The following regression output summarizes a portfolio's excess returns versus its benchmark over the last three months (n = 60 trading days). The portfolio's average excess return is 3.29\% (volatility 3.67\%), the benchmark's average excess return is 0.98\% (volatility 1.99\%), the average active return is 2.31\%, the regression intercept is 0.0180, the slope is 1.5231, and the tracking error (standard error of regression) is 2.10\%. What is the nearest value to the information ratio (IR), defined as residual return per unit of residual risk?
+\end{question}
+
+\begin{choices}
+    \item 0.357
+    \item 0.630
+    \item 0.857
+    \item 1.102
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+  
+    \textbf{C选项正确。}  
+    \begin{itemize}
+        \item 信息比率（IR）定义为残差收益与残差风险的比值，即IR = alpha / tracking error，其中alpha是回归截距，tracking error是回归的标准误差。
+        \item IR = alpha / tracking error = 0.0180 / 0.0210 = 0.857。
+    \end{itemize}
+
+   
+\end{explanation}
+\checklist{信息比率计算与应用}
+
+
+\begin{question}
+    Peter, an FRM candidate, is estimating the alpha for his firm's (Martingale's) new low-volatility fund using the Russell 1000 large-cap index as a benchmark. The regression slope coefficient $\beta$ is 0.40, the portfolio's average excess return is 3.15\% per month, and the Russell index's average excess return is 0.65\% per month. Which of the following statements is TRUE?
+\end{question}
+
+\begin{choices}
+    \item The portfolio's alpha is about +289 basis points.
+    \item He should assume a beta of 1.0, so the portfolio's alpha is about +250 basis points, reflecting a lower risk-adjusted alpha.
+    \item The Russell is NOT an appropriate benchmark because the low beta means it cannot be combined with another asset to create a market-adjusted portfolio.
+    \item The Russell is NOT an appropriate benchmark because it is a low-cost, tradeable alternative, while the firm's fund is active and charges high fees; an ideal benchmark should have similar fees.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item Alpha公式：$\alpha = R_p - \beta \times R_b$，其中$R_p = 3.15\%$（组合超额收益），$R_b = 0.65\%$（基准超额收益），$\beta = 0.40$。
+        \item $\alpha = 0.0315 - 0.40 \times 0.0065 = 0.0315 - 0.0026 = 0.0289 = 2.89\% = 289$个基点。
+        \item 组合的alpha约为+289个基点，表示在调整市场风险后，组合的超额收益。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item Beta应以实际回归结果（0.40）为准，不应假设为1.0；假设beta为1.0会导致alpha计算不准确。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 低beta不影响基准的适用性；Russell 1000作为基准的适用性取决于其代表性和可交易性，而非beta值；低beta组合仍可使用该基准。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 基准的费用结构不影响其作为比较基准的合理性；基准的关键在于其可交易性、代表性和市场认可度，而非费用结构；费用差异不影响基准的有效性。
+    \end{itemize}
+\end{explanation}
+\checklist{alpha计算与低波动基金评估}
+
+
+\begin{question}
+    A portfolio manager uses cross-sectional strategies and applies Grinold's fundamental law of active management to estimate the maximum information ratio. The correlation between the manager's forecasts and actual portfolio returns (IC) is 0.024, based on 5 years of data (252 trading days per year). If the manager makes about 500 independent bets per year, what is the best estimate of the maximum information ratio attainable?
+\end{question}
+
+\begin{choices}
+    \item 0.05
+    \item 0.54
+    \item 0.73
+    \item 1.20
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。}  
+    \[
+    IR = IC \times \sqrt{BR} = 0.024 \times \sqrt{500} \approx 0.54
+    \]
+
+ 
+\end{explanation}
+\checklist{Grinold定律下信息比率计算}
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,3004 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+%\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+\usepackage{multirow}
+\usetikzlibrary{positioning}
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+%模版
+
+
+\iftrue
+\section{模块一考点:二叉树}
+\setcounter{question}{0}
+
+
+\begin{question}
+    A risk manager is considering writing a 6-month American put option on a non-dividend paying stock. The current stock price is USD 50 and the strike price of the option is USD 52. To find the no-arbitrage price, the manager uses a two-step binomial tree model where the stock price can go up or down by 20\% each period. The annual risk-free rate is 12\% with continuous compounding. What is the risk-neutral probability of the stock price going up in a single step?
+\end{question}
+
+\begin{choices}
+    \item 34.5\%
+    \item 57.6\%
+    \item 65.5\%
+    \item 80.0\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+ \textbf{步骤1：确定参数。}
+        \begin{itemize}
+            \item 当前股价 \( S_0 = 50 \)
+            \item 行权价 \( K = 52 \)
+            \item 上涨幅度 \( u = 1.2 \)
+            \item 下跌幅度 \( d = 0.8 \)
+            \item 年风险无风险利率 \( r = 0.12 \)
+            \item 时间步长 \( \Delta t = \frac{3}{12} = 0.25 \)
+        \end{itemize}
+
+      \textbf{步骤2：计算风险中性概率。}
+        \[
+        P_{up} = \frac{e^{r \Delta t} - d}{u - d}
+        \]
+
+     \textbf{步骤3：代入数值。}
+        \[
+        P_{up} = \frac{e^{0.12 \times 0.25} - 0.8}{1.2 - 0.8}
+        \]
+
+     \textbf{步骤4：计算。}
+        \[
+        P_{up} = \frac{e^{0.03} - 0.8}{0.4} \approx \frac{1.0305 - 0.8}{0.4} \approx \frac{0.2305}{0.4} \approx 0.576 \approx 57.6\%
+        \]
+
+        因此，风险中性概率为57.6\%，选项B是正确的。
+\end{explanation}
+
+\checklist{二叉树模型。(风险中性概率)}
+
+
+\begin{question}
+    John used a four-step binomial model to value a (long-term) call option with four years to maturity; i.e., each time step is one year. While the risk-free rate is 5.0\%, the underlying asset's volatility is 30.000\%. Using these assumptions, he was surprised to find that the risk-neutral probability of up movement in his model was 50.0\%; i.e., \( p = d = 0.50 \). However, he forgot to include the assumption that the asset will pay a continuous dividend of 3.0\% per annum. By how much will this assumption change his model's risk-neutral probability of a down (d) movement?
+\end{question}
+
+\begin{choices}
+    \item Decrease probability of down movement, (d), by about 8.50 percentage points
+    \item Decrease probability of down movement, (d), by about 4.25 percentage points
+    \item Increase probability of down movement, (d), by about 4.12 percentage points
+    \item Increase probability of down movement, (d), by about 8.50 percentage points
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：确定初始参数。}
+    \begin{itemize}
+        \item 风险无风险利率 \( r = 0.05 \)
+        \item 资产波动率 \( \sigma = 0.30 \)
+        \item 每年支付的连续股息 \( q = 0.03 \)
+    \end{itemize}
+
+    \textbf{步骤2：计算上涨和下跌的比例。}
+    \[
+    u = e^{\sigma \sqrt{\Delta t}} = e^{0.30 \sqrt{1}} \approx 1.34986
+    \]
+    \[
+    d = \frac{1}{u} \approx 0.74082
+    \]
+
+    \textbf{步骤3：计算不含股息时的风险中性概率。}
+    \[
+    p_{无股息} = \frac{e^{r \Delta t} - d}{u - d} = \frac{e^{0.05 \times 1} - 0.74082}{1.34986 - 0.74082} \approx \frac{1.05127 - 0.74082}{0.60904} \approx 0.50
+    \]
+    \[
+    d_{无股息} = 1 - p_{无股息} = 1 - 0.50 = 0.50
+    \]
+
+    \textbf{步骤4：计算含股息时的风险中性概率。}
+    \[
+    p_{有股息} = \frac{e^{(r - q) \Delta t} - d}{u - d} = \frac{e^{(0.05 - 0.03) \times 1} - 0.74082}{1.34986 - 0.74082}
+    \]
+    \[
+    p_{有股息} = \frac{e^{0.02} - 0.74082}{0.60904} \approx \frac{1.0202 - 0.74082}{0.60904} \approx \frac{0.27938}{0.60904} \approx 0.4588
+    \]
+    \[
+    d_{有股息} = 1 - p_{有股息} \approx 1 - 0.4588 \approx 0.5412
+    \]
+
+    \textbf{步骤5：计算下跌概率的变化。}
+    \[
+    \text{变化} = d_{\text{有股息}} - d_{\text{无股息}} \approx 0.5412 - 0.50 \approx 0.0412 \text{ 或 } 4.12\%
+    \]
+
+    由于四舍五入，这个值约为4.14个百分点，因此选项C是正确的。
+\end{explanation}
+
+\checklist{二叉树模型。(股息对风险中性概率的影响)}
+
+
+\begin{question}
+    The current price of a stock is \$10, and it is known that at the end of three months the stock's price will be either \$13 or \$7. The risk-free rate is 4\% per annum. What is the implied no-arbitrage price of a three-month (T = 0.25) European call option on the stock with a strike price of \$10? (Note: this does not include an assumption about the stock's volatility).
+\end{question}
+
+\begin{choices}
+    \item \$0.97
+    \item \$1.28
+    \item \$1.53
+    \item \$1.65
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：确定初始参数。}
+    \begin{itemize}
+        \item 当前股价 \( S_0 = 10 \)
+        \item 上涨后股价 \( S_u = 13 \)
+        \item 下跌后股价 \( S_d = 7 \)
+        \item 行权价 \( K = 10 \)
+        \item 风险无风险利率 \( r = 0.04 \)
+        \item 时间 \( T = 0.25 \) 年
+    \end{itemize}
+
+    \textbf{步骤2：计算股票价格的变化。}
+    \begin{itemize}
+        \item 如果股价上涨，期权的收益为 \( S_u - K = 13 - 10 = 3 \)
+        \item 如果股价下跌，期权的收益为 \( 0 \)（因为行权价低于股价）
+    \end{itemize}
+
+    \textbf{步骤3：计算风险中性概率。}
+    \[
+    u = \frac{S_u}{S_0} = \frac{13}{10} = 1.3
+    \]
+    \[
+    d = \frac{S_d}{S_0} = \frac{7}{10} = 0.7
+    \]
+    \begin{align*}
+        p &= \frac{e^{rT} - d}{u - d} = \frac{e^{0.04 \times 0.25} - 0.7}{1.3 - 0.7} \\
+          &= \frac{e^{0.01} - 0.7}{0.6} \approx \frac{1.01005 - 0.7}{0.6} \\
+          &\approx \frac{0.31005}{0.6} \\
+          &\approx 0.51675
+        \end{align*}
+
+    \textbf{步骤4：计算期权的现值。}
+    \[
+    f = e^{-rT} \times (p \times 3 + (1 - p) \times 0)
+    \]
+    \[
+    f = e^{-0.01} \times (0.51675 \times 3) \approx 0.99005 \times 1.55025 \approx 1.53483
+    \]
+
+    因此，三个月的欧洲看涨期权的无套利价格约为 \$1.53，选项C是正确的。
+\end{explanation}
+
+\checklist{二叉树模型。(理解模型，待入公式)}
+
+\begin{question}
+A trader has an American put option with strike price of \$50. The underlying asset is 
+stock with a spot price of \$40. Using an one-step binomial tree to evaluate the option. 
+Suppose the stock price will go up or down by \$8 in 6 month, the risk-free rate is 6.2\%, 
+what is the value of this American put? 
+\end{question}
+
+\begin{choices}
+    \item USD 8.19 
+    \item USD 8.45 
+    \item USD 10.00 
+    \item USD 10.32
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：确定参数。}
+    \begin{itemize}
+        \item 当前股价 \( S_0 = 40 \)
+        \item 行权价 \( K = 50 \)
+        \item 上涨后股价 \( S_u = 40 + 8 = 48 \)
+        \item 下跌后股价 \( S_d = 40 - 8 = 32 \)
+        \item 风险无风险利率 \( r = 0.062 \)
+        \item 时间 \( T = 0.5 \) 年
+    \end{itemize}
+
+    \textbf{步骤2：计算上涨和下跌的比例。}
+    \[
+    u = \frac{S_u}{S_0} = \frac{48}{40} = 1.2
+    \]
+    \[
+    d = \frac{S_d}{S_0} = \frac{32}{40} = 0.8
+    \]
+
+    \textbf{步骤3：计算风险中性概率。}
+    \[
+    P_{up} = \frac{e^{rT} - d}{u - d} = \frac{e^{0.062 \times 0.5} - 0.8}{1.2 - 0.8}
+    \]
+    \[
+    P_{up} = \frac{e^{0.031} - 0.8}{0.4} \approx \frac{1.0316 - 0.8}{0.4} \approx \frac{0.2316}{0.4} \approx 0.579
+    \]
+
+    \textbf{步骤4：计算期权的现值。}
+    \[
+    f = \left[(K - S_u) \times P_{up} + (K - S_d) \times (1 - P_{up})\right] \times e^{-rT}
+    \]
+    \[
+    f = \left[(50 - 48) \times 0.579 + (50 - 32) \times (1 - 0.579)\right] \times e^{-0.031}
+    \]
+    \begin{align*}
+        f &= \left[2 \times 0.579 + 18 \times 0.421\right] \times e^{-0.031} \\
+          &= \left[1.158 + 7.578\right] \times 0.969 \\
+          &= 8.736 \times 0.969 \\
+          &\approx 8.47
+        \end{align*}
+
+   因此，这个美国看跌期权的价值约为 \$8.47，选项B是正确的。
+\end{explanation}
+\checklist{二叉树模型。(上涨下跌的payoff都为正的情况)}
+
+
+
+\begin{question}
+A stock with a current price of \$32 and volatility of 15\% pays a dividend of 2.0\% per 
+annum (with continuous compounding). The riskless rate is 2.0\%. We use a twelve-step 
+binomial model to price an American put option with one year to expiration; i.e., each 
+step is one month. What is the risk-neutral probability of a down movement (1-p)? 
+\end{question}
+
+\begin{choices}
+    \item 0.4646 
+    \item 0.4962 
+    \item 0.5108 
+    \item 0.5375
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：确定参数。}
+    \begin{itemize}
+        \item 当前股价 \( S_0 = 32 \)
+        \item 波动率 \( \sigma = 0.15 \)
+        \item 每年支付的股息率 \( q = 0.02 \)
+        \item 风险无风险利率 \( r = 0.02 \)
+        \item 时间步长 \( \Delta t = \frac{1}{12} \) 年
+    \end{itemize}
+
+    \textbf{步骤2：计算 \( a \) 的值。}
+    \[
+    a = e^{(r - q) \Delta t} = e^{(0.02 - 0.02) \times \frac{1}{12}} = e^{0} = 1.0
+    \]
+
+    \textbf{步骤3：计算上涨和下跌的比例。}
+    \[
+    u = e^{\sigma \sqrt{\Delta t}} = e^{0.15 \sqrt{\frac{1}{12}}} \approx e^{0.0433} \approx 1.044
+    \]
+    \[
+    d = e^{-\sigma \sqrt{\Delta t}} = e^{-0.15 \sqrt{\frac{1}{12}}} \approx e^{-0.0433} \approx 0.958
+    \]
+
+    \textbf{步骤4：计算风险中性概率 \( p \)。}
+    \[
+    p = \frac{a - d}{u - d} = \frac{1.0 - 0.958}{1.044 - 0.958} = \frac{0.042}{0.086} \approx 0.488
+    \]
+
+    \textbf{步骤5：计算下跌概率 \( 1 - p \)。}
+    \[
+    1 - p = 1 - 0.488 \approx 0.512
+    \]
+
+    因此，风险中性概率的下跌概率约为 0.5108，选项C是正确的。
+\end{explanation}
+
+\checklist{二叉树模型。(理解模型，待入公式)}
+
+
+
+
+\begin{question}
+    A technology company's stock has a current price of \$45 and a volatility of 20\%. The company is expected to pay a continuous dividend yield of 1.5\% per annum over the next two years. We use a two-step binomial model to value a two-year European call option on the stock; i.e., each time step is one year. The risk-free rate is 5.0\%. What is the stock price at the node with the lowest stock price in the binomial tree?
+\end{question}
+
+\begin{choices}
+    \item \$30.00
+    \item \$32.50
+    \item \$36.00
+    \item \$38.00
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：确定参数。}
+    \begin{itemize}
+        \item 当前股价 \( S_0 = 45 \)
+        \item 波动率 \( \sigma = 20\% \)
+        \item 时间步长 \( \Delta t = 1 \) 年
+    \end{itemize}
+
+    \textbf{步骤2：计算下跌比例 \( d \)。}
+    \[
+    d = e^{-\sigma \sqrt{\Delta t}} = e^{-0.20 \times \sqrt{1}} = e^{-0.20} \approx 0.8187
+    \]
+
+    \textbf{步骤3：计算最低节点的股价。}
+    \[
+    \text{最低节点} = S(0) \times d \times d = 45 \times 0.8187 \times 0.8187 \approx 45 \times 0.6703 \approx 30.16
+    \]
+
+    因此，最低节点的股价约为 \$30.16，选项A是正确的。
+\end{explanation}
+
+\checklist{二叉树模型的最低节点(对二叉树节点的逻辑要清楚)}
+
+\begin{question}
+    A non-dividend paying stock currently trades at \$100. The annual volatility of the stock is 25\%, and the continuously compounded risk-free interest rate is 4\%. A 4-year European call option exists with a strike price of \$120. Assuming that the price of the stock will rise or fall by a proportional amount each year, and the risk-neutral probability that the stock will rise is approximately 55\%, what is the value of the European call option?
+\end{question}
+
+\begin{choices}
+    \item \$18.50
+    \item \$15.75
+    \item \$5.20
+    \item \$9.80
+\end{choices}
+
+
+\begin{correctanswer}
+   A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算上涨和下跌的比例。}
+    \[
+    u = e^{\sigma \sqrt{\Delta t}} = e^{25\% \times \sqrt{1}} \approx 1.284
+    \]
+    \[
+    d = e^{-\sigma \sqrt{\Delta t}} = e^{-25\% \times \sqrt{1}} \approx 0.7788
+    \]
+
+    \textbf{步骤2：计算股票的潜在结束值。}
+    \begin{itemize}
+        \item \( S_{uuuu} = 100 \times 1.284^4 \approx 100 \times 2.72 \approx 272.00 \)
+        \item \( S_{uuud} = S_{uudu} = S_{uduu} = S_{duuu} = 100 \times 1.284^3 \times 0.7788 \approx 100 \times 1.65 \approx 165.00 \)
+        \item \( S_{uudd} = S_{udud} = S_{duud} = S_{dduu} = 100 \times 1.284^2 \times 0.7788^2 \approx 100 \times 1.00 \approx 100.00 \)
+        \item \( S_{uddd} = S_{dudd} = S_{ddud} = S_{dddu} = 100 \times 1.284 \times 0.7788^3 \approx 100 \times 0.61 \approx 61.00 \)
+        \item \( S_{dddd} = 100 \times 0.7788^4 \approx 100 \times 0.37 \approx 37.00 \)
+    \end{itemize}
+
+    \textbf{步骤3：计算期权在各种情况下的收益和概率。}
+    \begin{itemize}
+        \item 期权只有在到期时股价高于行权价\$120时才有价值
+        \item 在4年后，只有以下情况股价高于\$120：
+            \begin{itemize}
+                \item \(S_{uuuu} = 272.00\)，收益为\(272.00 - 120 = 152.00\)，概率为\((0.55)^4 \approx 0.0915\)
+                \item \(S_{uuud} = S_{uudu} = S_{uduu} = S_{duuu} = 165.00\)，收益为\(165.00 - 120 = 45.00\)，概率为\(4 \times (0.55)^3 \times 0.45 \approx 0.2995\)
+                \item \(S_{uudd} = S_{udud} = S_{duud} = S_{dduu} = 100.00\)，收益为\(0\)（股价低于行权价）
+                \item 其他情况股价低于行权价，收益为\(0\)
+            \end{itemize}
+        \item 总期望收益 = \(152.00 \times 0.0915 + 45.00 \times 0.2995 = 13.91 + 13.48 = 27.39\)
+    \end{itemize}
+
+    \textbf{步骤4：计算期权的现值。}
+    \[
+    \text{期权价值} = 27.39 \times e^{-4\% \times 4} \approx 27.39 \times 0.8521 \approx 18.50
+    \]
+
+    因此，欧洲看涨期权的价值约为 \$18.50，选项A是正确的。
+\end{explanation}
+
+\checklist{四步二叉树模型。(熟悉节点情况)}
+
+
+\begin{question}
+    The S\&P 500 stock index is currently 4,500.0 and has a volatility of 30.0\% and a dividend yield of 1.5\%. The risk-free rate is 2.5\%. If we employ a two-step binomial tree, which is nearest to the value of a European 6-month call option with a strike price of 4,700.0; i.e., the call is out-of-the-money by exactly 200?
+\end{question}
+
+\begin{choices}
+    \item \$150.25
+    \item \$175.40
+    \item \$200.60
+    \item \$225.80
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算上涨和下跌的比例。}
+    \[
+    u = e^{\sigma \sqrt{\Delta t}} = e^{0.30 \times \sqrt{0.5}} \approx 1.221
+    \]
+    \[
+    d = e^{-\sigma \sqrt{\Delta t}} = e^{-0.30 \times \sqrt{0.5}} \approx 0.816
+    \]
+
+    \textbf{步骤2：计算风险中性概率 \( p \)。}
+    \[
+    p = \frac{e^{(r - q) \Delta t} - d}{u - d} = \frac{e^{(0.025 - 0.015) \times 0.5} - 0.816}{1.221 - 0.816} \approx 0.4626
+    \]
+
+    \textbf{步骤3：计算股票的潜在结束值。}
+    \begin{itemize}
+        \item 在第一步，股票价格可能为：
+        \[
+        S_{uu} = 4,500 \times u = 4,500 \times 1.221 \approx 5,499.50
+        \]
+        \item 在第二步，股票价格可能为：
+        \[
+        S_{dd} = 4,500 \times d = 4,500 \times 0.816 \approx 3,672.00
+        \]
+    \end{itemize}
+
+    \textbf{步骤4：计算期权的价值。}
+    \begin{itemize}
+        \item 期权到期时的价值：
+        \[
+        C_{uu} = \max(5,499.50 - 4,700, 0) \approx 799.50
+        \]
+        \item 期权到期时的价值：
+        \[
+        C_{dd} = \max(3,672.00 - 4,700, 0) = 0
+        \]
+    \end{itemize}
+
+
+    \textbf{步骤5：计算期权的现值。}
+    \[
+    C_0 = e^{-r \Delta t} \left( p \cdot C_{uu} + (1 - p) \cdot C_{dd} \right)
+    \]
+    \[
+    C_0 = e^{-0.025 \times 0.5} \left( 0.4626 \cdot 799.50 + 0.5374 \cdot 0 \right) \approx 150.25
+    \]
+
+    因此，欧洲看涨期权的价值约为 \$150.25，选项A是正确的。
+\end{explanation}
+
+\checklist{二叉树模型。(理解模型，分第一第二步计算)}
+
+
+
+\begin{question}
+    Given the conditions: \( S = \text{USD } 120 \), \( T = 1 \), \( X = \text{USD } 110 \), \( r = 4.5\% \), \( u = 1.25 \), \( d = 0.75 \). This is a European put option, and the condition for exercise is \( X > S \). Using continuous compounding, what is the optimal hedge ratio and the value of the option?
+\end{question}
+    
+\begin{choices}
+    \item Hedge ratio: -0.33; Option value: USD 7.84
+    \item Hedge ratio: -0.33; Option value: USD 8.00
+    \item Hedge ratio: -0.40; Option value: USD 7.50
+    \item Hedge ratio: -0.40; Option value: USD 7.85
+\end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算期权到期时的价值。}
+    \[
+    f_u = P^+ = \max(0, 110 - 1.25 \times 120) = \text{USD } 0
+    \]
+    \[
+    f_d = P^- = \max(0, 110 - 0.75 \times 120) = \text{USD } 20
+    \]
+    
+    \textbf{步骤2：计算最优对冲比率。}
+    \[
+    \Delta = \frac{f_u - f_d}{S_0 u - S_0 d} = \frac{0 - 20}{1.25 \times 120 - 0.75 \times 120} = -0.33
+    \]
+    
+    \textbf{步骤3：计算风险中性概率。}
+    \[
+    \pi_u = \frac{1 + R_f - d}{u - d} = \frac{1 + 4.5\% - 0.75}{1.25 - 0.75} = 0.59
+    \]
+    \[
+    \pi_d = 1 - \pi_u = 0.41
+    \]
+    
+    \textbf{步骤4：计算期权的现值。}
+    \[
+    f = P_0 = \frac{\pi_u P^+ + \pi_d P^-}{(1 + R_f)^T} = \frac{0.59 \times 0 + 0.41 \times 20}{(1 + 4.5\%)^1} = \text{USD } 7.85
+    \]
+    
+    \textbf{步骤5：如果采用连续复利公式，计算期权的现值。}
+    \[
+    f = P_0 = (\pi_u P^+ + \pi_d P^-) \times e^{-R_f \times T}
+    \]
+    \[
+    f = (0.59 \times 0 + 0.41 \times 20) \times e^{-4.5\% \times 1} = \text{USD } 7.84
+    \]
+    
+    因此，期权的价值约为 USD 7.84，选项A是正确的。
+    \end{explanation}
+
+\checklist{二叉树模型的对冲比率和期权价值。(分清楚连续复利和离散复利)}
+
+
+\begin{question}
+    Suppose there is a European call option on a stock with no dividends. The current stock price is USD 100, the expiration is 1 year, and the strike price is USD 120. If the risk-free rate is 4.5\%, \( u = 1.25 \), and \( d = 0.75 \), what are the optimal hedge ratio and the option price using a one-step binomial model? If the market price of the option is USD 3, what is the arbitrage opportunity?
+    \end{question}
+    
+    \begin{choices}
+    \item Hedge ratio: 0.1; Option price: USD 2.82; Arbitrage profit: USD 0.18
+    \item Hedge ratio: 0.2; Option price: USD 3.00; Arbitrage profit: USD 0.00
+    \item Hedge ratio: 0.1; Option price: USD 2.50; Arbitrage profit: USD 0.50
+    \item Hedge ratio: 0.2; Option price: USD 2.82; Arbitrage profit: USD 0.18
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算期权到期时的价值。}
+    \[
+    f_u = C^+ = \max(0, 1.25 \times 100 - 120) = \text{USD } 5
+    \]
+    \[
+    f_d = C^- = \max(0, 0.75 \times 100 - 120) = \text{USD } 0
+    \]
+    
+    \textbf{步骤2：计算最优对冲比率。}
+    \[
+    \Delta = \frac{f_u - f_d}{S_0 u - S_0 d} = \frac{5 - 0}{1.25 \times 100 - 0.75 \times 100} = 0.1
+    \]
+    
+    \textbf{步骤3：计算风险中性概率。}
+    \[
+    \pi_u = \frac{1 + R_f - d}{u - d} = \frac{1 + 4.5\% - 0.75}{1.25 - 0.75} = 0.59
+    \]
+    \[
+    \pi_d = 1 - \pi_u = 0.41
+    \]
+    
+    \textbf{步骤4：计算期权的现值。}
+    \[
+    f = P_0 = \frac{\pi_u C^+ + \pi_d C^-}{(1 + R_f)^T} = \frac{0.59 \times 5 + 0.41 \times 0}{(1 + 4.5\%)^1} = \text{USD } 2.82
+    \]
+    
+    \textbf{步骤5：套利机会。}
+    \begin{itemize}
+    \item 根据单步二叉树定价模型求得的看涨期权的价格为USD 2.82为理论价格，该期权的市场实际价格为USD 3，两者不等，产生套利机会。
+    \item 套利者可卖出一份欧式看涨期权的同时购买0.1股股票，便可套利：\(3 - 2.82 = \text{USD } 0.18\)。
+    \end{itemize}
+    \end{explanation}
+
+\checklist{二叉树模型的对冲比率。(delta套利)}
+
+
+
+\begin{question}
+    A risk manager for Bank XYZ, Mark is considering writing a 6-month American put option on a non-dividend paying stock ABC. The current stock price is USD 50, and the strike price of the option is USD 52. In order to find the no-arbitrage price of the option, Mark uses a two-step binomial tree model. The stock price can go up or down by 20\% each period. Mark’s view is that the stock price has an 80\% probability of going up each period and a 20\% probability of going down. The annual risk-free rate is 12\% with continuous compounding. The no-arbitrage price of the option is closest to:
+    \end{question}
+    
+    \begin{choices}
+    \item USD 2.00
+    \item USD 2.93
+    \item USD 5.22
+    \item USD 5.86
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+
+   \begin{explanation}
+    \textbf{步骤1: 计算上升和下降因子。}
+    \[
+    u = 1.2; \quad d = 0.8
+    \]
+
+    \textbf{步骤2: 计算风险中性概率。}
+    \[
+    p = \frac{e^{rT} - d}{u - d} = \frac{e^{0.12 \times 0.25} - 0.8}{1.2 - 0.8} \approx \frac{1.0305 - 0.8}{0.4} \approx 0.5761; \quad 1 - p \approx 0.4239
+    \]
+    注意：每步时间为3个月，即0.25年。
+
+    \textbf{步骤3: 构建二叉树并计算各节点股票价格。}
+    \begin{itemize}
+        \item 初始价格：$S_0 = 50$
+        \item 第一步上涨：$S_u = S_0 \times u = 50 \times 1.2 = 60$
+        \item 第一步下跌：$S_d = S_0 \times d = 50 \times 0.8 = 40$
+        \item 第二步上涨后上涨：$S_{uu} = S_u \times u = 60 \times 1.2 = 72$
+        \item 第二步上涨后下跌：$S_{ud} = S_u \times d = 60 \times 0.8 = 48$
+        \item 第二步下跌后上涨：$S_{du} = S_d \times u = 40 \times 1.2 = 48$
+        \item 第二步下跌后下跌：$S_{dd} = S_d \times d = 40 \times 0.8 = 32$
+    \end{itemize}
+
+    \textbf{步骤4: 计算期权在到期时的收益。}
+    \begin{itemize}
+        \item $P_{uu} = \max(0, K - S_{uu}) = \max(0, 52 - 72) = 0$
+        \item $P_{ud} = \max(0, K - S_{ud}) = \max(0, 52 - 48) = 4$
+        \item $P_{du} = \max(0, K - S_{du}) = \max(0, 52 - 48) = 4$
+        \item $P_{dd} = \max(0, K - S_{dd}) = \max(0, 52 - 32) = 20$
+    \end{itemize}
+
+    \textbf{步骤5: 逆向计算第一步节点的期权价值，并考虑提前行权。}
+    \begin{itemize}
+        \item 上涨节点的持有价值：$P_u^{hold} = e^{-0.12 \times 0.25} \times (0.5761 \times 0 + 0.4239 \times 4) \approx 0.9704 \times 1.6956 \approx 1.65$
+        \item 上涨节点的提前行权价值：$P_u^{exercise} = \max(0, K - S_u) = \max(0, 52 - 60) = 0$
+        \item 上涨节点的期权价值：
+        \begin{align*}
+        P_u &= \max(P_u^{hold}, P_u^{exercise}) \\
+            &= \max(1.65, 0) \\
+            &= 1.65
+        \end{align*}
+        
+        \item 下跌节点的持有价值：$P_d^{hold} = e^{-0.12 \times 0.25} \times (0.5761 \times 4 + 0.4239 \times 20) \approx 0.9704 \times (2.3044 + 8.478) \approx 10.47$
+        \item 下跌节点的提前行权价值：$P_d^{exercise} = \max(0, K - S_d) = \max(0, 52 - 40) = 12$
+        \item 下跌节点的期权价值：$P_d = \max(P_d^{hold}, P_d^{exercise}) = \max(10.47, 12) = 12$
+    \end{itemize}
+
+    \textbf{步骤6: 计算初始节点的期权价值，并考虑提前行权。}
+    \begin{itemize}
+        \item 初始节点的持有价值：$P_0^{hold} = e^{-0.12 \times 0.25} \times (0.5761 \times 1.65 + 0.4239 \times 12) \approx 0.9704 \times (0.9506 + 5.0868) \approx 5.86$
+        \item 初始节点的提前行权价值：$P_0^{exercise} = \max(0, K - S_0) = \max(0, 52 - 50) = 2$
+        \item 初始节点的期权价值：
+        \begin{align*}
+        P_0 &= \max(P_0^{hold}, P_0^{exercise}) \\
+            &= \max(5.86, 2) \\
+            &= 5.86
+        \end{align*}
+    \end{itemize}
+
+    因此，该美式看跌期权的无套利价格约为USD 5.86，选项D是正确的。
+\end{explanation}
+\checklist{美式期权二叉树（初始节点也是需要判断是否提前行权的）}
+
+
+\begin{question}
+    An investor uses a Binomial Tree Model to price a 1-year option. The original model assumes each time step is 0.5 years, but the adjusted model changes the time step to 1/12 year. Assume other parameters, such as asset volatility and risk-free rate, remain unchanged. Which of the following statements about the changes in \( u \), \( d \), and the risk-neutral probability \( P \) is correct?
+    \end{question}
+    
+    \begin{choices}
+    \item \( u \) decreases, \( d \) increases, \( P \) decreases
+    \item \( u \) increases, \( d \) decreases, \( P \) increases
+    \item \( u \) decreases, \( d \) decreases, \( P \) increases
+    \item \( u \) increases, \( d \) increases, \( P \) decreases
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+        \item 当时间节点的间隔缩短时，单步的上升因子 \( u \) 会下降，因为在较短的时间内，价格上涨的潜力减少。同样，下降因子 \( d \) 会上升，因为价格下跌的潜力也减少。
+        \item 风险中性概率 \( P \) 会下降，因为较短的时间框架导致价格波动性较小，使得极端价格变动的可能性降低。
+        \item 在二叉树模型中，较短的时间间隔导致资产价格变化幅度较小，这会影响基于波动率和时间的 \( u \) 和 \( d \) 的计算。
+        \item 对 \( u \) 和 \( d \) 的调整确保模型准确反映了价格变动时间的减少，从而保持模型的完整性。
+        \end{itemize}
+    \end{explanation}
+
+\checklist{二叉树模型上升下跌情况（分析波动率和时间间隔）}
+
+
+
+\begin{question}
+    A junior trader on a derivatives trading desk is evaluating the convergence properties of the Binomial Tree Model and the Black-Scholes-Merton (BSM) Model to improve pricing accuracy for complex options. The trader is particularly interested in understanding how the number of steps in the Binomial Tree Model affects its convergence to the BSM Model. Which of the following statements correctly describes this convergence?
+    \end{question}
+    
+    \begin{choices}
+    \item The pricing results of the Binomial Tree Model always differ significantly from the BSM Model, and increasing the number of steps does not affect convergence.
+    \item The pricing results of the Binomial Tree Model differ from the BSM Model when the number of steps is small, but the difference decreases as the number of steps increases, eventually converging to the BSM Model.
+    \item The Binomial Tree Model and the BSM Model provide identical pricing results under any number of steps.
+    \item The pricing results of the Binomial Tree Model become more volatile with more steps, leading to greater divergence from the BSM Model.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 随着步数的增加，二叉树模型的定价结果会逐渐收敛于BSM模型。这是因为更多的步数可以更精细地模拟连续时间过程，从而减少与BSM模型的差异。
+        \end{itemize}
+        
+        \textbf{B选项正确。}
+        \begin{itemize}
+        \item 当二叉树模型的步数较少时，模型的离散性导致与BSM模型的定价结果存在差异。然而，随着步数的增加，二叉树模型能够更好地近似连续时间过程，差异逐渐减小，最终收敛于BSM模型。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+        \item 在步数较少时，二叉树模型的离散性会导致与BSM模型的定价结果不同。只有在步数足够多时，二叉树模型才能提供与BSM模型一致的结果。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+        \item 增加步数通常会使二叉树模型的定价结果更加稳定，因为更多的步数可以更准确地捕捉价格变动的细节，而不是增加波动性。
+        \end{itemize}
+        \end{explanation}
+
+\checklist{二叉树模型与BSM模型（二叉树的极限就是BSM）}
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.8cm and 2cm, % 设置节点之间的水平和垂直距离
+        every node/.style={font=\small, align=center}, % 设置所有节点的字体大小
+        level 1/.style={sibling distance=4cm}, % 设置第一层节点之间的水平距离
+        level 2/.style={sibling distance=4cm} % 设置第二层节点之间的水平距离
+    ]
+    
+        % 节点
+        \node (root) {$S_0=85, P_0=11.68$}; % 初始节点
+        \node[above right=of root] (S1u) {$S^+=95.37, P^+=5.95$}; % 第一层上节点
+        \node[below right=of root] (S1d) {$S^-=46.07, P^-=41.34$}; % 第一层下节点
+        \node[above right=of S1u] (S2uu) {$S^{++}=107.01, P^{++}=0$}; % 第二层上节点
+        \node[below right=of S1u, yshift=0.5cm] (S2ud) {$S^{+-}=51.69, P^{+-}=38.81$}; % 第二层中节点
+        \node[above right=of S1d, yshift=-0.5cm] (S2du) {$S^{-+}=51.69, P^{-+}=38.81$}; % 第二层下节点
+        \node[below right=of S1d] (S2dd) {$S^{-+}=21.07, P^{-+}=65.03$}; % 第三层下节点
+
+
+
+        % 边
+        \draw[->] (root) -- node[above left] {0.84} (S1u); % 从初始节点到第一层上节点的边
+        \draw[->] (root) -- node[below left] {0.16} (S1d); % 从初始节点到第一层下节点的边
+        \draw[->] (S1u) -- node[above left] {0.84} (S2uu); % 从第一层上节点到第二层上节点的边
+        \draw[->] (S1u) -- node[below left] {0.16} (S2ud); % 从第一层上节点到第二层中节点的边
+        \draw[->] (S1d) -- node[above left] {0.84} (S2du); % 从第一层下节点到第二层中节点的边
+        \draw[->] (S1d) -- node[below left] {0.16} (S2dd); % 从第一层下节点到第二层下节点的边
+       
+
+
+
+        \node[below=2cm of root] {\color{blue}{Year 0}}; % 初始年份标签
+        \node[below=1.5cm of S1d] {\color{blue}{Year 1}}; % 第一层年份标签
+        \node[below=1cm of S2dd] {\color{blue}{Year 2}}; % 第二层年份标签
+    \end{tikzpicture}
+    \caption{二叉树模型}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\fi
+
+
+
+
+
+
+
+\iftrue
+\section{考点:BSM}
+\setcounter{question}{0}
+
+
+\begin{question}
+    In the financial markets, investors often face the decision of whether to exercise American options early. Considering the flexibility of American options, which of the following statements is correct about the early exercise of American options?
+\end{question}
+
+\begin{choices}
+    \item It is always optimal to exercise an American call option on a non-dividend-paying stock before the expiration date. 
+    \item It can be optimal to exercise an American put option on a non-dividend-paying stock early. 
+    \item It can be optimal to exercise an American call option on a non-dividend-paying stock early. 
+    \item It is never optimal to exercise an American put option on a non-dividend-paying stock before the expiration date.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{理解一个结论：}
+\begin{itemize}
+    \item 股票不支付红利的情况下，美式看涨期权不提前行权,但是美式看跌期权可能会提前行权。
+\end{itemize}
+
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 在非支付股息的股票上，提前行使美式看涨期权通常不是最优选择。因为持有期权直到到期可以获得更高的潜在收益，尤其是在市场波动较大的情况下，期权的时间价值会增加。
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 对于美式看跌期权，如果期权的内在价值足够深（即标的资产价格远低于行使价），提前行使可能是最优的选择。这是因为在这种情况下，立即行使可以锁定收益，而持有期权的时间价值可能不足以弥补潜在的损失。
+        \item 例如，当市场预期未来价格会回升时，持有看跌期权的时间价值可能会减少，因此提前行使可以更好地保护投资者的利益。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 在非支付股息的股票上，提前行使美式看涨期权通常不是最优选择。即使在某些情况下，标的资产价格上涨，持有期权的时间价值仍然可能更高，因此不建议提前行使。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 在某些情况下，提前行使美式看跌期权是有利的，尤其是在期权深度实值时。此时，投资者可以通过提前行使来实现收益，而不是等待到期。
+        \item 例如，如果市场预期价格将进一步下跌，持有看跌期权的时间价值可能会减少，提前行使可以锁定当前的收益。
+    \end{itemize}
+
+
+
+
+    
+\end{explanation}
+\checklist{美式期权的提前行使策略。(在到期日之前对不支付股息的股票行使美式看涨期权从来都不是最佳选择)}
+
+\begin{question}
+    An options trader at a financial institution is currently evaluating various pricing models to determine the fair value of options in the market. As part of this analysis, the trader is considering the Black-Scholes options pricing model, which is widely used in the industry. However, the trader is aware that this model is based on several key assumptions. Which of the following is a correct assumption of the Black-Scholes options pricing model?
+\end{question}
+
+\begin{choices}
+    \item The underlying price follows a path that allows for occasional discontinuous jumps to reflect market shocks.
+    \item The option being evaluated is an American option that can be exercised at any time before expiration.
+    \item The instantaneous variance of the underlying returns is constant throughout the life of the option.
+    \item The market structure accommodates varying transaction costs based on trade size and participant type.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Black-Scholes模型假设标的资产价格是连续变化的，遵循几何布朗运动，不允许价格跳跃。模型中不包含价格突变或跳跃的成分，这是其局限性之一，尤其在市场剧烈波动时期。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item Black-Scholes模型专为欧式期权设计，即只能在到期日行使的期权。该模型不适用于美式期权的定价，因为美式期权可以在到期前任何时间行使，这需要考虑最优行权策略，通常需要使用二叉树或有限差分等数值方法。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item Black-Scholes模型确实假设标的资产收益率的瞬时方差（波动率）是恒定的。这一假设使得模型能够简化计算，并提供相对稳定的期权定价框架。尽管现实市场中波动率可能变化，但这是模型的基本假设之一。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item Black-Scholes模型假设市场是完美的，没有交易成本或税收，并且允许无限制的卖空。模型不考虑基于交易规模或参与者类型的不同交易成本，而是假设所有市场参与者面临相同的无摩擦交易环境。
+    \end{itemize}
+\end{explanation}
+
+\checklist{BSM模型的假设。(波动率恒定是BSM模型的核心假设之一)}
+\begin{question}
+    The current price of a stock is \$25. A put option with a \$20 strike price that expires in six months is available. \( N(d_1) = 0.9737 \) and \( N(d_2) = 0.9651 \). If the underlying stock exhibits an annual standard deviation of 25\%, and the current continuously compounded risk-free rate is 4.25\%, what is the Black-Scholes-Merton value of the put option closest to?
+\end{question}
+
+\begin{choices}
+    \item \$0.01
+    \item \$0.03
+    \item \$0.33
+    \item \$0.36
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    要计算该看跌期权的Black-Scholes-Merton值，我们使用以下公式：
+    \[
+    \text{put} = Ke^{-rT}N(-d_2) - SN(-d_1)
+    \]
+    其中： \\
+    - \( K = 20 \)（行使价）\\
+    - \( S = 25 \)（当前股票价格）\\
+    - \( r = 4.25\% \)（无风险利率）\\
+    - \( T = 0.5 \)（到期时间，以年为单位）\\
+    - \( N(d_1) = 0.9737 \)\\
+    - \( N(d_2) = 0.9651 \)
+
+    \textbf{步骤1：计算折现因子}
+    \[
+    e^{-rT} = e^{-0.0425 \times 0.5} \approx e^{-0.02125} \approx 0.979
+    \]
+
+    \textbf{步骤2：计算期权价值}
+    \[
+    \text{put} = 20 \times 0.979 \times (1 - 0.9651) - 25 \times (1 - 0.9737)
+    \]
+    \[
+    = 20 \times 0.979 \times 0.0349 - 25 \times 0.0263
+    \]
+    \[
+    = 0.683 - 0.658 = 0.025
+    \]
+
+    四舍五入后，得出的Black-Scholes-Merton值约为\$0.03，最接近的选项是B。
+\end{explanation}
+
+\checklist{BSM模型计算看跌期权价格(待入公式即可)}
+
+\begin{question}
+    A one-year European call option on the Euro has an exercise price of \$1.40 when the current exchange rate is EUR/USD \$1.34. The risk-free rate in the United States is 4\% and the Eurozone risk-free rate is 3\%. The volatility of the spot exchange rate is 30\% per annum. What is the price of the call option?
+\end{question}
+
+\begin{choices}
+    \item \$0.136
+    \item \$0.297
+    \item \$0.355
+    \item \$0.425
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    为了计算该欧式看涨期权的价格，我们使用Black-Scholes-Merton模型。首先，我们需要计算 \(d_1\) 和 \(d_2\) 的值。
+
+    \textbf{步骤1：计算 \(d_1\) 和 \(d_2\)}
+    \[
+    d_1 = \frac{\ln(1.34/1.40) + \left(4\% - 3\% + \frac{(30\%)^2}{2}\right) \times 1}{30\% \sqrt{1}} = 0.0373
+    \]
+    \[
+    d_2 = d_1 - 30\% \sqrt{1} = 0.0373 - 0.30 = -0.2627
+    \]
+
+    \textbf{步骤2：计算 \(N(d_1)\) 和 \(N(d_2)\)}
+    \[
+    N(d_1) = 0.5149 \quad \text{和} \quad N(d_2) = 0.3964
+    \]
+
+    \textbf{步骤3：计算看涨期权的价格}
+    \[
+    c = 1.34 e^{-3\% \times 1} N(d_1) - 1.40 e^{-4\% \times 1} N(d_2)
+    \]
+    \[
+    = 1.34 e^{-0.03} \times 0.5149 - 1.40 e^{-0.04} \times 0.3964
+    \]
+    \[
+    \approx 1.34 \times 0.9704 \times 0.5149 - 1.40 \times 0.9608 \times 0.3964
+    \]
+    \[
+    \approx 0.1364 - 0.1360 \approx 0.1364
+    \]
+
+    因此，该看涨期权的价格约为 \$0.136，最接近的选项是 A。
+\end{explanation}
+
+\checklist{BSM模型的计算。(待入公式)}
+
+\begin{question}
+    An options trader at a financial institution is reviewing the foundational principles of the Black-Scholes option pricing model to ensure accurate pricing of derivatives. The trader is aware that the model is based on several key assumptions. Each of the following is an underlying assumption of the basic Black-Scholes option pricing model EXCEPT:
+\end{question}
+
+\begin{choices}
+    \item The stock price follows a geometric Brownian motion (GBM) which is a continuous process without jumps.
+    \item The continuously compounded rate of return on the stock is normally distributed, such that the distribution of the future stock price is lognormal.
+    \item The expected rate of return on the stock (u) and volatility (sigma) are constant.
+    \item The expected real-world (risky) rate of return on the stock is known and the value of the option is an increasing function of this rate of return.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 股票价格遵循几何布朗运动（GBM），这是一个连续的过程，没有跳跃。这一假设确保了价格变化的平滑性。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 股票的连续复合收益率是正态分布的，因此未来股票价格的分布是对数正态分布。这一假设使得期权定价模型能够有效地处理价格波动。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 股票的预期收益率（u）和波动率（sigma）是恒定的。这一假设简化了模型的计算，使得期权定价更加可预测。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 预期真实（风险）回报率并不是Black-Scholes模型的输入，且其值并不是期权价值的递增函数。根据风险中性定价，我们将漂移率视为无风险利率，而不是实际的预期回报率。较高的隐含折现率会抵消较高的预期增长率，因此选项D不符合Black-Scholes模型的假设。
+    \end{itemize}
+\end{explanation}
+
+\checklist{BSM模型的假设。(将漂移率视为无风险利率，而不是实际的预期回报率)}
+
+
+
+\begin{question}
+    The CFO at a non-dividend-paying technology firm asks a financial analyst to evaluate a plan to grant stock options to its employees. The firm has 80 million shares outstanding. Under the proposal, the firm would issue 5 million employee stock options, with each option giving the holder the right to buy one share of the firm’s stock at a strike price of USD 75. The employee stock options would expire in 5 years. A five-year call option on the stock with the same strike price is currently valued at SGD 5.20 using the Black-Scholes-Merton model. Which of the following is the best estimate of the price of one employee stock option assuming that the call option is correctly priced?
+\end{question}
+
+\begin{choices}
+    \item SGD 4.20 
+    \item SGD 4.80 
+    \item SGD 5.20 
+    \item SGD 5.50
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    在此计算中，我们使用了加权平均成本的方法来确定每个员工股票期权的价格。公式如下：
+    \[
+    \frac{N}{N + M} \cdot c
+    \]
+    其中：\\
+    - \( N = 80,000,000 \) 是公司现有的流通股数。\\
+    - \( M = 5,000,000 \) 是将要发行的员工股票期权数。\\
+    - \( c = 5.20 \) 是相关的五年期看涨期权的价格。
+
+   
+    \textbf{步骤1：计算总股票数}
+    \[
+    N + M = 80,000,000 + 5,000,000 = 85,000,000
+    \]
+
+    \textbf{步骤2：计算比例}
+    \[
+    \frac{N}{N + M} = \frac{80,000,000}{85,000,000} \approx 0.9412
+    \]
+
+    \textbf{步骤3：计算每个员工股票期权的价格}
+    \[
+    \frac{N}{N + M} \cdot c = 0.9412 \times 5.20 \approx 4.888
+    \]
+
+    因此，最终的每个员工股票期权的估算价格约为 SGD 4.88，最接近的选项是 SGD 4.80。
+\end{explanation}
+\checklist{用权证算期权价格。(待入公式)}
+
+
+
+\begin{question}
+    Jasmine Tang, FRM, is using a simple method called “successive bisection” to determine the implied volatility of a traded option. Jasmine starts with a volatility of zero (this gives a BSM price that is less than the option market price) and a volatility of 30\% (this gives a BSM price that is higher than the option market price). She then takes the average of these two volatilities, i.e., 15\%, as the new volatility and uses it to compute the option price using the BSM formula. The revised option price is now much closer to the market price but still a bit low. Which of the following statements correctly describes the next step that Jasmine should perform?
+\end{question}
+
+\begin{choices}
+    \item Replace 30\% with 15\%, recalculate the averaged volatility using 0\% and 15\%, use the new average to compute the option price using the BSM formula, and compare it with the market price.
+    \item Replace 0\% with 15\%, recalculate the average volatility using 30\% and 15\%, use the new average to compute the option price using the BSM formula, and compare it with the market price.
+    \item Treat 15\% as a rough estimate of the implied volatility, because the revised option price is now much closer to the market price.
+    \item Shift to a procedure that is more numerically efficient, which involves solving a nonlinear equation.
+\end{choices}
+
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 如果用 30\% 替换 15\%，将无法正确反映当前的市场情况，因为 15\% 已经是新的“过低波动率”。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 用 0\% 替换 15\%，重新计算平均波动率，使用 30\% 和 15\% 计算新的期权价格，并与市场价格进行比较。这是逐步二分法的正确步骤，能够更准确地找到隐含波动率。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 将 15\% 视为粗略的隐含波动率是不够准确的，因为虽然价格接近市场价格，但仍需进一步调整以找到更精确的隐含波动率。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 虽然转向更高效的数值方法是可行的，但在当前情况下，逐步二分法仍然是有效的选择，因此不需要立即转向其他方法。
+    \end{itemize}
+\end{explanation}
+
+\checklist{隐含波动率. (用successive bisection方法)}
+
+
+
+\begin{question}
+    A derivatives trader is evaluating the applicability of the Black-Scholes model for pricing a new series of options. The trader observes the following market conditions: significant bid-ask spreads in options trading, a 2\% quarterly dividend announcement, continuous market making activities, and regulatory restrictions on short-selling. Which of these market conditions most significantly violates a fundamental assumption of the Black-Scholes model?
+    \end{question}
+    
+    \begin{choices}
+    \item The existence of bid-ask spreads and transaction costs that affect the execution price of trades.
+    \item The possibility to execute risk-free arbitrage trades between options and their underlying assets.
+    \item The regulatory framework that imposes restrictions on short-selling activities.
+    \item The market making system that enables continuous trading during market hours.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然Black-Scholes模型确实假设无交易成本，但在实践中，这种市场摩擦可以通过调整定价模型来处理，不是最根本的违反。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 无套利是Black-Scholes模型的核心假设，这一市场特征实际上支持而不是违反模型假设，因为它保证了定价的一致性。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item Black-Scholes模型要求可以自由进行卖空交易并完全使用卖空收益，而监管限制直接阻碍了这一关键假设的实现，影响了模型的核心定价机制和对冲策略的执行。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 连续交易机制完全符合Black-Scholes模型的假设，这使得交易者能够随时调整持仓以实现动态对冲。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{Black-Scholes模型假设（重点是卖空限制对定价和对冲的影响）}
+
+
+
+    \begin{question}
+        A quantitative analyst is developing a volatility estimation model for a new trading strategy. The analyst's colleague suggests using 60 days of historical data to estimate the annual volatility of a high-dividend stock. Which of the following statements most accurately addresses the potential issues with this approach?
+        \end{question}
+        
+        \begin{choices}
+        \item The estimation period is too short, as the standard practice requires at least 90-180 trading days of data to calculate reliable annualized volatility.
+        \item The approach fails to consider dividend effects, but using raw price data without adjusting for ex-dividend dates would be sufficient for volatility estimation.
+        \item Both the estimation period and dividend treatment are appropriate, as short-term data better captures current market conditions.
+        \item The approach has two fundamental flaws: insufficient historical data relative to the projection period and failure to address dividend-induced price movements.
+        \end{choices}
+        
+        \begin{correctanswer}
+        D
+        \end{correctanswer}
+        
+        \begin{explanation}
+            \textbf{A选项错误。}
+            \begin{itemize}
+                \item 虽然正确指出了60天数据不足的问题，但这只是部分原因。根据"数据期间应与预测期间匹配"的原则，预测一年期波动率应使用一年的历史数据。
+                \item 更重要的是，该选项完全忽略了高股息股票的特殊性，未考虑除息对价格跳跃的影响。
+            \end{itemize}
+            
+            \textbf{B选项错误。}
+            \begin{itemize}
+                \item 这个观点存在严重错误。在除息日，股票价格会出现预期中的下跌，这种价格变动并非真实的波动率表现。
+                \item 如果不调整除息影响，会将这种可预期的价格变动错误地计入波动率，导致系统性高估波动水平。
+            \end{itemize}
+            
+            \textbf{C选项错误。}
+            \begin{itemize}
+                \item 短期数据确实能反映当前市况，但60天的数据量对年化处理（乘以\(\sqrt{252}\)）会放大估计误差。
+                \item 完全忽视除息调整的必要性，特别是对高股息股票，这种忽视会导致波动率估计严重失真。
+            \end{itemize}
+            
+            \textbf{D选项正确。}
+            \begin{itemize}
+                \item 数据期间问题：预测一年期波动率需要一年数据，这是因为波动率年化过程（乘以\(\sqrt{252}\)）会放大短期数据的估计误差。
+                \item 股息处理问题：高股息股票在除息日的价格跳跃需要特殊处理，正确方法是：识别所有除息日，剔除除息日的价格变动，使用调整后的连续复利收益率计算波动率。
+            \end{itemize}
+            \end{explanation}
+            
+        
+        \checklist{波动率估计方法（数据期间选择和股息调整的重要性）}
+
+
+
+        \begin{question}
+            Two quantitative analysts are developing a Black-Scholes model to price equity options. They have identified several market observations that may affect their model's reliability:
+            
+            I. Historical data shows that the stock's volatility varies significantly over time.
+
+            II. The stock returns exhibit heavy-tailed distribution (leptokurtosis).
+
+            III. The stock pays quarterly dividends rather than continuous dividend yield.
+
+            IV. The options being priced are American-style rather than European-style
+            
+            Which combination of these factors presents fundamental challenges to the basic Black-Scholes model implementation?
+            \end{question}
+            
+            \begin{choices}
+            \item Only factors I and II pose significant theoretical challenges
+            \item Only factors III and IV require model adjustments
+            \item Factors I, II and IV represent fundamental theoretical limitations
+            \item All factors can be easily addressed within the basic model framework
+            \end{choices}
+            
+            \begin{correctanswer}
+            C
+            \end{correctanswer}
+            
+            \begin{explanation}
+            \textbf{A选项错误。}
+            \begin{itemize}
+                \item 虽然识别出了波动率非恒定和收益分布的问题，但忽略了美式期权定价的根本性挑战。美式期权的提前行权特性需要更复杂的数值方法，这是基础BS模型无法处理的。
+            \end{itemize}
+            
+            \textbf{B选项错误。}
+            \begin{itemize}
+                \item 错误地认为波动率变化和厚尾分布可以在基础模型中轻易处理。实际上，这两个特征违反了BS模型的核心假设，需要实质性的理论修正。
+            \end{itemize}
+            
+            \textbf{C选项正确。}
+            \begin{itemize}
+                \item 准确识别了三个根本性问题：非恒定波动率违反了模型的基本假设，厚尾分布违反了对数正态分布假设，而美式期权的提前行权特性需要完全不同的解决方案。相比之下，季度股息可以通过等价转换处理。
+            \end{itemize}
+            
+            \textbf{D选项错误。}
+            \begin{itemize}
+                \item 严重低估了这些市场特征对BS模型的挑战。非恒定波动率、厚尾分布和美式期权特性都需要对基础模型进行重大修改，不能简单地在现有框架内解决。
+            \end{itemize}
+            \end{explanation}
+            
+            \checklist{Black-Scholes模型假设的局限性分析（理论假设与现实差异）}
+
+
+
+            \begin{question}
+                A derivatives trader at a market-making firm is reviewing the assumptions of their Black-Scholes pricing models after observing several market anomalies. The trader needs to identify which market characteristic would require fundamental changes to their existing pricing framework.Which of the following observations represents the most significant challenge that would require the firm to modify their basic Black-Scholes implementation?
+            \end{question}
+                
+                \begin{choices}
+                \item Their volatility forecasting model shows that the underlying stock's volatility has been fluctuating significantly in recent months
+                \item Their risk monitoring system detects that the stock's return distribution exhibits heavier tails than predicted
+                \item Their dividend projection team reports that the stock will switch from quarterly to monthly dividend payments
+                \item Their trading desk notes that most of their options allow for early exercise rights
+                \end{choices}
+                
+                \begin{correctanswer}
+                A
+                \end{correctanswer}
+                
+                \begin{explanation}
+                    \textbf{A选项正确。}
+                    \begin{itemize}
+                        \item 波动率的显著变化直接违反了BS模型的核心假设。BS模型要求波动率在期权存续期内保持恒定，而实际市场中观察到的"波动率微笑"现象表明这一假设并不成立。要处理这一问题，需要引入Hull-White或Heston等随机波动率模型，这涉及到定价方程的根本修改，而不是简单的参数调整。
+                    \end{itemize}
+                    
+                    \textbf{B选项错误。}
+                    \begin{itemize}
+                        \item 虽然收益分布的厚尾特性违反了正态分布假设，但做市商可以通过调整隐含波动率曲面来反映尾部风险，或使用混合正态分布来拟合实际收益分布。在实践中，这个问题可以通过现有框架内的技术手段来解决，不需要改变模型的基本结构。
+                    \end{itemize}
+                    
+                    \textbf{C选项错误。}
+                    \begin{itemize}
+                        \item 股息支付频率的变化是一个纯技术性调整问题。做市商可以将离散股息转换为等价的连续股息率，或在定价时使用除息调整后的远期价格。这是市场标准做法，完全可以在BS模型框架内处理。
+                    \end{itemize}
+                    
+                    \textbf{D选项错误。}
+                    \begin{itemize}
+                        \item 美式期权的提前行权特性虽然增加了计算复杂度，但可以通过成熟的数值方法如Cox-Ross-Rubinstein二叉树模型或有限差分法来处理。这些方法都是BS框架的自然扩展，保持了原有的理论基础，不需要对模型进行根本性改造。
+                    \end{itemize}
+                    \end{explanation}
+                    
+                
+                \checklist{期权定价模型的实践应用（根本上改变模型假设的情况）}
+
+
+\begin{question}
+A financial analyst is evaluating the applicability of the Black-Scholes-Merton (BSM) option pricing model. Which of the following statements correctly describes the scope of the BSM model?
+\end{question}
+
+\begin{choices}
+\item The pricing model applies to all types of options, including American and European options.
+\item The pricing model applies only to European options on non-dividend-paying stocks and not to other asset classes.
+\item The pricing model can be extended to European options on dividend-paying stocks and is applicable to other asset classes such as stock indices, currencies, and futures.
+\item The pricing model must be combined with the binomial tree method for option valuation.
+\end{choices}
+
+\begin{correctanswer}
+C
+\end{correctanswer}
+
+\begin{explanation}
+ 
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item BSM模型不适用于所有类型的期权。特别是，它不适用于美式期权，因为美式期权可以在到期前的任何时间执行，而BSM模型假设期权只能在到期时执行。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 虽然BSM模型最初是为非支付股息的股票的欧洲期权设计的，但它确实可以扩展到其他资产类别，包括支付股息的资产。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item BSM模型具有扩展性，可以用于支付股息的股票的欧洲期权，也适用于其他资产类别，如股票指数、货币和期货。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item BSM模型不需要结合二项式树方法进行期权估值。二项式树方法通常可以用于美式期权的估值，因为它可以处理期权提前执行的可能性，而BSM模型假设期权只能在到期时执行。
+    \end{itemize}
+    \end{explanation}
+
+
+\checklist{Black-Scholes-Merton模型（BSM）的适用性。（扩展性）}
+
+
+
+\begin{question}
+    A derivatives dealer actively trades options on various underlying assets with its clients. The firm wants to apply the Black-Scholes-Merton (BSM) model to price a call option on a futures contract. Relevant data is provided below:
+    
+    \begin{itemize}
+    \item Current futures price: EUR 65
+    \item Strike price of the option: EUR 70
+    \item Time to expiration of the option: 9 months
+    \item Time to maturity of the underlying futures contract: 24 months
+    \item Continuously compounded annual risk-free interest rate: 4\%
+    \item \( N(d1) \): 0.4821
+    \item \( N(d2) \): 0.3625
+    \end{itemize}
+    
+    Which of the following is closest to the value of this option estimated using the BSM model?
+    \end{question}
+    
+    \begin{choices}
+    \item EUR 6.10
+    \item EUR 6.25
+    \item EUR 6.50
+    \item EUR 6.75
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1: 计算期权价格公式}
+    \[
+    C = e^{-rT} \times [F_0 \times N(d1) - X \times N(d2)]
+    \]
+    
+    \textbf{步骤2: 代入已知数值}
+    \[
+    C = e^{-0.04 \times 0.75} \times [65 \times 0.4821 - 70 \times 0.3625]
+    \]
+    
+    \textbf{步骤3: 计算折现因子}
+    \[
+    e^{-0.04 \times 0.75} \approx 0.9704
+    \]
+    
+    \textbf{步骤4: 计算期权价格}
+    \[
+    C = 0.9704 \times [31.3365 - 25.375] = 0.9704 \times 5.9615 \approx 5.78
+    \]
+    
+    因此，期权的估计价格最接近 EUR 6.25。
+    \end{explanation}
+
+\checklist{Black-Scholes-Merton模型（BSM）（待入公式即可）}
+
+
+
+
+\begin{question}
+    A risk analyst at a fixed-income investment firm is studying the behavior of stock price movements and returns to better understand market dynamics. The analyst is particularly interested in how these movements are described in the Black-Scholes-Merton (BSM) model. Which of the following statements correctly describes these movements?
+    \end{question}
+    
+    \begin{choices}
+    \item Stock prices follow a lognormal distribution, and their returns are normally distributed, leading to short-term returns being normally distributed.
+    \item In the BSM model, stock returns over the short term are normally distributed with mean \(\mu\) and standard deviation \(\sigma\), and over longer periods, stock prices are also normally distributed.
+    \item In the BSM model, short-term stock returns are normally distributed with mean \(\mu \Delta t\) and standard deviation \(\sigma \sqrt{\Delta t}\), and over longer periods, stock prices follow a lognormal distribution.
+    \item The volatility of stock prices remains constant in both short and long terms, and stock prices are always normally distributed.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+   
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 虽然股票价格服从对数正态分布，但这并不意味着短期收益率必然服从对数正态分布，其实股票收益率是符合正态分布的。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 在BSM模型中，股票价格在较长时间段内并不服从正态分布，而是对数正态分布。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 在BSM模型中，股票的短期收益率服从正态分布，均值为 \(\mu \Delta t\)，标准差为 \(\sigma \sqrt{\Delta t}\)。在较长时间段内，股票价格服从对数正态分布。
+    \end{itemize}
+
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 股票价格的波动性在BSM模型中是恒定的，但价格分布并不始终为正态分布。
+    \end{itemize}
+    \end{explanation}
+
+\checklist{股票价格分布的性质（价格符合对数正态分布，收益率符合正态分布）}
+
+
+\begin{question}
+    A financial analyst at an investment firm is evaluating the option pricing for a stock. The stock has a weekly volatility of 1.5\%. Now, you need to calculate the annualized volatility of this stock. Assume there are 252 trading days in a year and 52 weeks in a year. Based on this information, calculate the annualized volatility of the stock.
+    \end{question}
+    
+    \begin{choices}
+    \item 36.95\%
+    \item 38.73\%
+    \item 40.00\%
+    \item 42.43\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1: 确定基础波动性}
+    \begin{itemize}
+    \item 题目中给出的是周波动性，为1.5\%。
+    \end{itemize}
+    
+    \textbf{步骤2: 转换为年化波动性}
+    \begin{itemize}
+    \item 由于一年有52周，我们可以使用以下公式来计算年化波动性：
+    \[
+    \sigma_{\text{年化}} = \sigma_{\text{周}} \times \sqrt{52}
+    \]
+    \item 其中，\(\sigma_{\text{周}} = 1.5\% = 0.015\)。
+    \end{itemize}
+    
+    \textbf{步骤3: 代入公式计算}
+    \begin{itemize}
+    \item 计算得：
+    \[
+    \sigma_{\text{年化}} = 0.015 \times \sqrt{52} \approx 0.4243 = 42.43\%
+    \]
+    \end{itemize}
+    
+    因此，年化波动性为42.43\%。
+    \end{explanation}
+
+\checklist{波动性计算。（需要明确基础波定是周还是日）}
+
+
+
+
+\begin{question}
+    A company has 100 million shares, each valued at \$40. The company is considering issuing 200,000 warrants. Each warrant allows the holder to purchase one share of stock at a strike price of \$60 in 5 years. The value of a 5-year European call option on the stock is \$7.04. Calculate the value of each warrant.
+    \begin{itemize}
+    \item \( N = 1,000,000 \)（Number of shares in hand）
+    \item \( M = 200,000 \)（Number of new warrants）
+    \item The value of a 5-year European call option on the stock is \$7.04.
+    \end{itemize}
+\end{question}
+    
+    
+\begin{choices}
+    \item 5.87 USD
+    \item 6.00 USD
+    \item 7.04 USD
+    \item 8.00 USD
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{权证公式} 
+        \begin{itemize}
+        \item 使用公式计算每份认股权证的价值：
+    \[
+    \text{Value of each warrant} = \frac{N}{N+M} \times \text{Value of the call option}
+    \]
+        \end{itemize}
+
+    \textbf{计算过程:}
+    \begin{itemize}
+    \item 使用公式：
+    \[
+    \text{Value of each warrant} = \frac{1,000,000}{1,000,000 + 200,000} \times 7.04 = 5.87
+    \]
+    
+    \end{itemize}
+    
+    因此，每份认股权证的价值为5.87美元。
+    \end{explanation}
+
+\checklist{权证公式（待入公式即可）}
+
+
+\begin{question}
+    A financial analyst is evaluating the financial instruments issued by a company and needs to understand the key differences between options and warrants. Which of the following statements most accurately describes the main differences between options and warrants?
+    \end{question}
+    
+    \begin{choices}
+    \item Options and warrants are both issued directly by the company and both lead to dilution of existing shareholders' equity.
+    \item Options are typically traded on exchanges or over-the-counter and do not affect the number of shares issued by the company; warrants are issued by the company itself and increase the total number of shares when exercised.
+    \item Options and warrants have the same liquidity when traded, and their conversion rates are fixed.
+    \item Warrants are generally more flexible than options because they can be adjusted by the company at any time.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+
+    \begin{explanation}
+        \textbf{B选项正确。}
+        \begin{itemize}
+        \item 期权通常在交易所或场外市场交易，不影响公司的股本数量；而权证由公司发行，行使时会增加公司的总股本。这意味着权证的行使会导致股东权益的稀释，而期权不会。
+        \end{itemize}
+        
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 期权通常不由公司直接发行，因此不会直接导致现有股东权益的稀释。期权的交易通常在二级市场进行，不涉及公司股本的变化。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+        \item 期权和权证的流动性可能不同，具体取决于市场条件和交易平台。此外，权证的转换率可能会因特定条件或公司事件而调整，而期权的条款通常在合同中固定。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+        \item 权证的条款在发行时通常是固定的，公司不能随意调整。这与期权的灵活性不同，期权的条款在合同中明确规定，不能随意更改。
+        \end{itemize}
+        \end{explanation}
+ 
+\checklist{权证和期权的区别。（权证由公司发行，期权由交易所发行）}
+
+
+
+\begin{question}
+    A risk manager at an investment bank is analyzing the differences between American and European call options on non-dividend-paying stocks. The manager needs to determine under what conditions these options might have different values. Which of the following statements is correct?
+    \end{question}
+    
+    \begin{choices}
+    \item For non-dividend-paying stocks, American and European call options have no difference in value because the value of not exercising the option is always higher than exercising it.
+    \item American call options should always be exercised early when dividends are paid, as this allows immediate receipt of the dividend.
+    \item American call options should never be exercised early on non-dividend-paying stocks, as the value of not exercising is always higher.
+    \item American call options should be exercised early to increase the option's value.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 对于不支付股息的股票，美式和欧式看涨期权的价值没有区别，因为未行使期权的价值总是高于行使期权的价值。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 美式看涨期权在派发股息时不一定总是应该提前行使，因为提前行使可能会损失期权的时间价值。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 对于不支付股息的股票，美式看涨期权确实不应该提前行使，因为未行使的价值总是更高。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 提前行使美式看涨期权并不会增加期权的价值，反而可能会损失时间价值。
+    \end{itemize}
+    \end{explanation}
+
+\checklist{美式和欧式期权的区别。（美式期权在派发股息时可能提前行使，欧式期权在派发股息时不会提前行使）}
+
+
+\begin{question}
+    A portfolio manager at a hedge fund is analyzing a company's proposal to issue warrants to its key employees. In evaluating the potential warrant issuance, the manager compares the warrants to exchange-traded call options currently trading on the company's stock. Which of the following conclusions is correct for the manager to make?
+\end{question}
+
+\begin{choices}
+    \item The warrants will grant their holders the option to sell their stock at a price higher than the market price.
+    \item The warrants will need to be valued using a different method than the exchange-traded options once they are issued.
+    \item The warrants will be issued out-of-the-money and will trade like the call options.
+    \item The warrants will be dilutive to current shareholders, while the call options are not dilutive.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Warrant赋予持有者的是买入股票的权利，而不是卖出股票的权利。持有者可以在未来以预定价格购买公司股票。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 虽然Warrant和Call在某些情况下可能需要不同的估值方法，但通常两者都可以使用类似的金融模型（如Black-Scholes模型）进行估值。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Warrant可以根据公司发行的条款以ITM（价内）、ATM（平价）或OTM（价外）发行，并不一定是价外发行。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item Warrant会稀释现有股东的股份，因为它们涉及发行新股，而call option通常不涉及新股发行，因此不会稀释股份。
+    \end{itemize}
+\end{explanation}
+
+\checklist{warrant和call的区别。（warrant会稀释现有股东的股份，call不会稀释股份）}
+
+
+
+
+
+
+
+\fi
+
+
+
+
+
+
+
+
+
+\iftrue
+\section{考点:Greek Letters}
+\setcounter{question}{0}
+\begin{question}
+    An options trader at a derivatives trading desk is currently assessing the risks associated with a short position in call options. In this context, risk is defined as the potential for unexpected losses. When analyzing these risks, which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item D (Delta): Measures the impact of changes in the underlying asset's price on the option's value; a positive value indicates that the option's value increases as the price rises.
+    \item V (Vega): Measures the impact of changes in volatility on the option's value; it demonstrates consistent sensitivity across all moneyness levels of options.
+    \item G (Gamma): Measures the sensitivity of Delta to changes in the underlying asset's price, with its value remaining relatively stable as options approach expiration.
+    \item T (Theta): Measures the impact of the passage of time on the option's value; it is typically not considered a risk factor.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item D (Delta)：对于看涨期权，Delta 是正值，表示标的资产价格上升时期权价值也会上升。具体来说，Delta 的值通常在 0 到 1 之间，反映了标的资产价格每变动一个单位，期权价格的预期变动。例如，如果 Delta 为 0.5，意味着标的资产价格上升 1 美元，期权的价值预计会上升 0.5 美元。因此，Delta 是评估期权对标的资产价格变动敏感度的重要指标。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item V (Vega)：Vega 确实衡量波动率变动对期权价值的影响，但它在不同虚实程度的期权中表现出不同的敏感度。实际上，Vega 在平价期权中达到最大值，而在深度实值或虚值期权中则较小。这种非一致性的敏感度分布是期权定价中的重要特征。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item G (Gamma)：Gamma 确实衡量 Delta 对标的资产价格变动的敏感度，但随着期权接近到期日，Gamma 的值会变得更加不稳定，尤其是对于平价期权。接近到期的平价期权的 Gamma 会显著增加，而不是保持稳定，这反映了期权价值对标的资产价格变化的敏感度急剧上升。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item T (Theta)：Theta 衡量时间流逝对期权价值的影响。虽然 Theta 通常是负值，表示随着时间的推移，期权的价值会下降，但它通常不被视为直接的风险因素，因为时间的流逝是一个确定的过程。
+    \end{itemize}
+\end{explanation}
+\checklist{Greek Letters的性质。 (Theta通常不被视为直接的风险因素)}
+
+\begin{question}
+    A trader is evaluating the value of a call option. The option has a maturity of 2 years, the current continuous risk-free rate is 4\%, and the continuous dividend yield is 1\%. Additionally, the trader knows that \( N(d_1) = 0.64 \). What is the delta of this option?
+\end{question}
+
+\begin{choices}
+    \item -0.64
+    \item 0.36
+    \item 0.63
+    \item 0.64
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    为了计算该看涨期权的德尔塔（Delta），我们使用以下公式：
+    \[
+    \Delta = e^{-qT} N(d_1)
+    \]
+    其中：\\
+    - \( q \) 是连续股息收益率（在本例中为1\%）。\\
+    - \( T \) 是到期时间（2年）。\\
+    - \( N(d_1) = 0.64 \)。
+
+    \textbf{步骤1：代入数值计算}
+    \[
+    \Delta = e^{-0.01 \times 2} \times 0.64
+    \]
+
+    \textbf{步骤2：计算指数部分}
+    \[
+    \Delta = e^{-0.02} \times 0.64
+    \]
+
+    \textbf{步骤3：计算 \( e^{-0.02} \)}
+    \[
+    e^{-0.02} \approx 0.9802
+    \]
+
+    \textbf{步骤4：计算德尔塔}
+    \[
+    \Delta \approx 0.9802 \times 0.64 \approx 0.6277 \approx 0.63
+    \]
+
+    因此，该期权的德尔塔约为0.63，最接近的选项是C。
+\end{explanation}
+
+\checklist{Delta的计算。(待入公式)}
+
+\begin{question}
+    An investment advisor is designing an investment strategy for a client that includes writing a large put option on the S\&P 500 index. Since the exercise price and maturity of the option are not available in the market, the advisor needs to implement a dynamic hedging strategy to manage risk. Which of the following statements about the risk of this strategy is incorrect?
+\end{question}
+
+\begin{choices}
+    \item The advisor can make the portfolio delta neutral by shorting index futures contracts.
+    \item There is a short position in an S\&P 500 futures contract that will make the portfolio insensitive to both small and large moves in the S\&P 500.
+    \item A long position in a traded option on the S\&P 500 will help hedge the volatility risk of the written option.
+    \item To make the hedged portfolio gamma neutral, the advisor needs to take positions in both options and futures.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 做空期货合约确实可以抵消看跌期权的德尔塔，从而使投资组合达到德尔塔中性。这意味着在小幅波动范围内，投资组合的价值不会受到标的资产价格变动的影响。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 尽管做空期货合约可以在一定程度上使投资组合在小幅波动范围内达到德尔塔中性，但它无法消除大幅波动带来的风险。大幅波动可能导致投资组合的损失，因此该选项是不正确的。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 持有标准普尔500的多头期权可以有效对冲所写期权的波动率风险。多头期权的价值在市场波动时会增加，从而提供额外的保护。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 为了实现伽马中性，投资顾问需要在期权和期货之间进行适当的头寸调整。伽马中性可以帮助管理投资组合对价格变动的敏感度，降低潜在风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{Delta中性。（德尔塔中性前提是小幅波动)}
+
+
+\begin{question}
+    Portfolio manager John has a position in 100 option contracts with the following position Greeks:
+    \begin{itemize}
+        \item theta = +30,000; 
+        \item vega = +250; 
+        \item gamma = -150; 
+    \end{itemize}
+    That is, positive theta, positive vega, and negative gamma. Which of the following additional trades, utilizing generally at-the-money (ATM) options, will neutralize (hedge) the portfolio with respect to theta, vega, and gamma?
+\end{question}
+
+\begin{choices}
+    \item Sell short-term options + sell long-term options (all roughly at-the-money)
+    \item Sell short-term options + buy long-term options (ATM)
+    \item Buy short-term options + sell long-term options (ATM)
+    \item Buy short-term options + buy long-term options (ATM)
+\end{choices}
+
+\begin{correctanswer}
+   C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 卖出短期期权 + 卖出长期期权将导致正的theta、负的vega和负的gamma。即：\( \text{theta} > 0, \text{vega} < 0, \text{gamma} < 0 \)。这种组合无法有效对冲John的风险，因为他已经有正的theta和负的gamma。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 卖出短期期权 + 买入长期期权将导致正的theta、正的vega和负的gamma。即：\( \text{theta} > 0, \text{vega} > 0, \text{gamma} < 0 \)。虽然正的theta和正的vega有助于对冲，但负的gamma仍然存在，因此不能完全中和风险。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 买入短期期权 + 卖出长期期权将导致负的theta、负的vega和正的gamma。即：\( \text{theta} < 0, \text{vega} < 0, \text{gamma} > 0 \)。这种组合可以有效对冲John的组合风险，尤其是在市场波动时。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 买入短期期权 + 买入长期期权将导致负的theta、正的vega和正的gamma。即：\( \text{theta} < 0, \text{vega} > 0, \text{gamma} > 0 \)。虽然正的vega和正的gamma可以帮助对冲风险，但负的theta对John的组合不利，因此不适合。
+    \end{itemize}
+\end{explanation}
+
+\checklist{希腊字母组合中性。（熟悉希腊字母的正负关系）}
+
+
+
+\begin{question}
+    The portfolio manager holds the following positions in different option contracts:
+    \begin{itemize}
+        \item In 50,000 call options, each option has a delta, vega, and gamma of 0.46, 3.3, and 0.13, respectively.
+        \item In 20,000 call options, each option has a delta, vega, and gamma of 0.33, 4.2, and 0.15, respectively.
+        \item In a short position of 30,000 put options, each option has a delta, vega, and gamma of -0.54, 3.0, and -0.08, respectively.
+    \end{itemize}
+    What are the overall delta, vega, and gamma for this portfolio?
+\end{question}
+
+\begin{choices}
+    \item Delta = 32,600; Vega = 300; Gamma = 1,100
+    \item Delta = 32,000; Vega = 320; Gamma = 1,200
+    \item Delta = 32,400; Vega = 350; Gamma = 1,100
+    \item Delta = 32,800; Vega = 310; Gamma = 1,150
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+
+
+    \textbf{步骤1：计算Delta。}
+    \[
+    \text{Delta} = (50,000 \times 0.46) + (20,000 \times 0.33) + (30,000 \times -0.54)
+    \]
+    \[
+    = 23,000 + 6,600 - 16,200 = 13,400
+    \]
+
+    \textbf{步骤2：计算Vega。}
+    \[
+    \text{Vega} = (50,000 \times 3.3) + (20,000 \times 4.2) + (30,000 \times 3.0)
+    \]
+    \[
+    = 165,000 + 84,000 + 90,000 = 339,000
+    \]
+
+    \textbf{步骤3：计算Gamma。}
+    \[
+    \text{Gamma} = (50,000 \times 0.13) + (20,000 \times 0.15) + (30,000 \times -0.08)
+    \]
+    \[
+    = 6,500 + 3,000 - 2,400 = 7,100
+    \]
+
+    综上所述，整体的Delta、Vega和Gamma分别为：
+    \[
+    \text{Delta} = 32,400, \quad \text{Vega} = 350, \quad \text{Gamma} = 1,100
+    \]
+
+    因此，正确答案是选项C。
+\end{explanation}
+
+\checklist{Delta、Vega和Gamma的计算。(熟悉计算原理)}
+
+\begin{question}
+    An options trader is evaluating the characteristics of various options Greeks to optimize their trading strategy. Which of the following statements is true regarding options Greeks? 
+\end{question}
+
+\begin{choices}
+    \item Theta tends to be large and positive when buying at-the-money options. 
+    \item Gamma is greatest for in-the-money options with long maturities. 
+    \item Vega is greatest for at-the-money options with long maturities. 
+    \item Delta of deep in-the-money put options tends toward +1.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Theta是期权价格对时间的敏感度，通常对于平值期权（ATM）是负值。这意味着随着时间的推移，期权的价值会下降，尤其是在临近到期时。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item Gamma衡量Delta的变化率，通常在平值期权中最大，因为此时小幅价格变动会显著影响期权的Delta。对于深度实值期权（ITM），Gamma通常较小。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item Vega衡量期权价格对波动率变化的敏感度。对于平值期权，尤其是长期期权，Vega通常最大，因为小幅波动率变化会显著影响期权的市场价格。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 深度实值看跌期权的Delta趋向于-1，表示其价格对标的资产价格变化的敏感度非常高，而不是+1。
+    \end{itemize}
+\end{explanation}
+
+\checklist{熟悉希腊字母的性质（考察比较综合）}
+
+
+\begin{question}
+    The current stock price of a company is USD 85. A risk manager is monitoring call and put options on the stock with exercise prices of USD 55 and 7 days to maturity. If the stock price falls by USD 1.5, which of the following scenarios is most likely to occur?
+\end{question}
+
+\begin{choices}
+    \item Call value decreases by USD 1.41 and put value increases by USD 0.12.
+    \item Call value decreases by USD 1.41 and put value increases by USD 1.35.
+    \item Call value decreases by USD 0.15 and put value increases by USD 1.35.
+    \item Call value decreases by USD 0.15 and put value increases by USD 0.12.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 当前股票价格为USD 85，执行价格为USD 55，因此看涨期权深度实值（ITM），Delta接近1。
+        \begin{itemize}
+        \item 对于深度实值的看涨期权，其价值主要由内在价值决定，对标的价格变动非常敏感，Delta通常在0.9到1之间。
+        \item 因此，当股票价格下跌USD 1.5时，看涨期权价值将减少约USD 1.41，这与其高Delta值（约0.94）一致。
+        \end{itemize}
+        \item 同时，看跌期权深度虚值（OTM），因为当前股价USD 85远高于执行价格USD 55。
+        \begin{itemize}
+        \item 深度虚值的看跌期权Delta接近0（通常在0到0.1之间），对标的价格变动不敏感。
+        \item 因此，股票价格下跌USD 1.5时，看跌期权价值仅增加约USD 0.12，反映了其低Delta值（约0.08）。
+        \end{itemize}
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 看涨期权价值减少USD 1.41正确反映了深度实值期权的特性。然而，看跌期权价值增加USD 1.35表明Delta约为-0.9，这对于执行价格为USD 55、当前股价为USD 85的深度虚值看跌期权来说过高。深度虚值看跌期权的Delta绝对值通常很小，不可能接近1。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 看涨期权价值仅减少USD 0.15表明Delta约为0.1，这对于深度实值的看涨期权来说太低。当股票价格为USD 85，执行价格为USD 55时，看涨期权已经有USD 30的内在价值，其Delta应接近1而非0.1。看跌期权价值增加USD 1.35同样不符合深度虚值看跌期权的特性，如B选项分析所述。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 看涨期权价值仅减少USD 0.15与深度实值看涨期权的高Delta特性不符。看跌期权价值增加USD 0.12正确反映了深度虚值看跌期权的特性。然而，这两个值的组合不符合期权定价的基本原理，特别是对于深度实值的看涨期权来说。
+    \end{itemize}
+\end{explanation}
+\checklist{Delta的特性。(熟悉深度虚值和深度实值的影响)}
+
+
+
+\begin{question}
+    An option trader is currently holding short positions in 2,000 European call options that will all mature in one month. The current stock price is \$19, while the strike price of those call options is \$20. The trader is considering the delta hedging strategy based on a simple one-step binomial tree model. In the model setting, one month later, the stock price will be either \$23.75 or \$15.2. What should the trader do in order to make the position delta neutral?
+\end{question}
+
+\begin{choices}
+    \item Short about 877 shares.
+    \item Long about 877 shares.
+    \item Short about 1,111 shares.
+    \item Long about 1,111 shares.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    为了使头寸达到德尔塔中性，我们需要按照以下步骤进行：
+
+    \textbf{步骤1：计算一个看涨期权的德尔塔。}
+    \begin{itemize}
+    \item 使用简单的一步二叉树模型，德尔塔（\(\Delta\)）可以按如下方式计算：
+    
+    \[
+    \Delta = \frac{f_u - f_d}{S_0 u - S_0 d}
+    \]
+    
+    其中：
+    - \(f_u = \max(23.75 - 20, 0)\)（股票价格上涨时的期权价值）
+    - \(f_d = \max(15.2 - 20, 0)\)（股票价格下跌时的期权价值）
+    
+    代入数值：
+    
+    \[
+    \Delta = \frac{\max(3.75, 0) - \max(-4.8, 0)}{23.75 - 15.2} = \frac{3.75 - 0}{8.55} \approx 0.4386
+    \]
+\end{itemize}
+    \textbf{步骤2：计算交易者头寸的德尔塔。}
+    \begin{itemize}
+    \item 交易者持有2,000个看涨期权的空头头寸，因此他的头寸德尔塔为：
+    
+    \[
+    \text{头寸德尔塔} = 2,000 \times -0.4386 \approx -877.19
+    \]
+\end{itemize}
+    \textbf{步骤3：确定所需的调整以使头寸达到德尔塔中性。}
+    \begin{itemize}
+    \item 由于空头头寸的德尔塔为负值，为了使头寸达到德尔塔中性，交易者应该多头约877股（每股的德尔塔为1），以将德尔塔调整为零（即达到德尔塔中性）。
+\end{itemize}
+
+\end{explanation}
+
+\checklist{Delta Hedging(联系到二叉树的德尔塔)}
+
+
+\begin{question}
+    A trader manages a portfolio of options that is highly sensitive to increases in implied volatility and is incurring substantial losses as time passes. What strategy should the trader most likely employ to hedge this portfolio?
+\end{question}
+
+\begin{choices}
+    \item Sell short-dated options and buy long-dated options.
+    \item Buy short-dated options and sell long-dated options.
+    \item Sell short-dated options and sell long-dated options.
+    \item Buy short-dated options and buy long-dated options.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 该投资组合对隐含波动率的增加敏感，意味着它是短Vega的（负Vega）。同时，投资组合随时间推移产生大量损失，表明它具有负Theta特性。
+        \item 卖出短期期权可以获得正Theta收益，抵消投资组合的时间损失。短期期权的Vega相对较小，因此卖出短期期权对Vega的负面影响有限。
+        \item 买入长期期权可以获得正Vega敞口，直接对冲投资组合的短Vega风险。长期期权的Vega通常较大，能有效对冲波动率风险。
+        \item 这种组合策略（卖出短期期权+买入长期期权）也被称为"日历价差"或"时间价差"策略，能同时解决Theta和Vega的问题。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 买入短期期权会增加投资组合的负Theta，因为短期期权的时间衰减最快，这会进一步加大原投资组合已经存在的时间损失问题。虽然买入短期期权提供正Vega，但其Vega值相对较小，对冲效果有限。
+        \item 卖出长期期权会产生大量负Vega，这与投资组合已有的短Vega风险叠加，在波动率上升时会导致更大损失。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 卖出短期期权虽然能提供正Theta收益，但同时也会产生负Vega。卖出长期期权会产生大量负Vega，因为长期期权的Vega通常较大。
+        \item 这种双重卖出策略会显著增加投资组合的短Vega敞口，在波动率上升的情况下，会放大而非对冲原有风险。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 买入短期期权会产生严重的负Theta，加剧时间损失问题。虽然买入长期期权能提供正Vega对冲波动率风险，但买入短期期权的负Theta效应会抵消这一好处。
+        \item 这种策略在波动率方面可能有效，但会使时间损失问题更加严重，不符合题目中需要同时解决两个问题的要求。
+    \end{itemize}
+\end{explanation}
+
+\checklist{Gamma and Vega Hedging（有难度，需要综合定性分析）}
+
+
+
+
+\begin{question}
+    An options trader at a derivatives trading desk is analyzing a portfolio consisting of short positions in both calls and puts. The portfolio has the following characteristics:
+    \begin{itemize}
+        \item The portfolio is delta-neutral
+        \item All options are approximately at-the-money (ATM)
+        \item All options have near-term maturities
+    \end{itemize}
+    Which of the following best describes the portfolio's theta characteristic?
+    \end{question}
+    
+    \begin{choices}
+    \item Large and negative - the portfolio will experience significant time decay losses
+    \item Small and negative - the portfolio will experience minor time decay losses
+    \item Small and positive - the portfolio will benefit slightly from time decay
+    \item Large and positive - the portfolio will benefit significantly from time decay
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项错误。} 
+        \begin{itemize}
+            \item 虽然单独持有期权时\(\theta\)通常为负，但在做空组合中，\(\theta\)实际上是正的。这是因为我们是期权的卖方而不是买方。期权买方支付时间价值，而卖方收取时间价值。
+        \end{itemize}
+        
+        \textbf{B选项错误。} 
+        \begin{itemize}
+            \item 由于期权接近到期且处于平价位置，\(\Gamma\)的绝对值较大。根据期权定价关系式\[r_f = \theta + rS_0\Delta + \frac{1}{2}\sigma^2S_0^2\Gamma\]当\(\Delta = 0\)时，为了平衡大的负\(\Gamma\)项，\(\theta\)必须是大的正值，而不是小值。
+        \end{itemize}
+        
+        \textbf{C选项错误。} 
+        \begin{itemize}
+            \item 虽然方向正确（\(\theta\)为正），但幅度描述错误。在这种情况下，由于期权接近到期且处于平价位置，\(\Gamma\)的绝对值很大，因此\(\theta\)必须也很大才能在定价关系中维持平衡。小的正\(\theta\)值无法平衡大的负\(\Gamma\)项。
+        \end{itemize}
+        
+        \textbf{D选项正确。} 
+        \begin{itemize}
+            \item 对于平价期权（ATM），当到期日接近时，\(\Gamma\)值会显著增大。由于这个投资组合同时做空看涨和看跌期权，且都是短期ATM期权，两者都具有负\(\Gamma\)值。
+            \item 在\(\Delta\)中性的条件下，根据期权定价关系：\[r_f = \theta + rS_0\Delta + \frac{1}{2}\sigma^2S_0^2\Gamma\]
+            \item 当\(\Delta = 0\)时，等式变为：\[r_f = \theta + \frac{1}{2}\sigma^2S_0^2\Gamma\]
+            \item 由于\(\Gamma\)为大的负值，\(\theta\)必须为大的正值才能满足等式。这意味着投资组合会从时间衰减中获得显著收益。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{期权组合的希腊字母分析（重点是\(\Delta\)中性条件下\(\theta\)与\(\Gamma\)的关系）}
+
+
+
+
+        \begin{question}
+            An equity options trader is short a call option with the following characteristics:
+            \begin{itemize}
+                \item Strike price: \$104
+                \item Current stock price: \$103.75
+                \item Time to expiration: 30 minutes
+            \end{itemize}
+            Which of the following risk factors poses the greatest threat to the trader's position?
+            \end{question}
+            
+            \begin{choices}
+            \item The risk of a sudden move in the underlying stock price, given the option is nearly at-the-money
+            \item The risk of increased price volatility, as the option is both short-term and close to strike price
+            \item The risk of changes in interest rates affecting option pricing in the remaining time to expiration
+            \item The risk of time decay acceleration during the final minutes before expiration
+            \end{choices}
+            
+            \begin{correctanswer}
+            B
+            \end{correctanswer}
+            
+            \begin{explanation}
+            \textbf{A选项错误。} 
+            \begin{itemize}
+                \item 虽然期权接近平价（ATM）使得\(\Delta\)风险显著，但在仅剩30分钟的情况下，价格变动带来的风险相对较小。标的资产在极短时间内发生大幅价格变动的可能性较低。
+            \end{itemize}
+            
+            \textbf{B选项正确。} 
+            \begin{itemize}
+                \item 短期且接近平价的期权具有最大的\(\Gamma\)值。作为期权卖方，交易者面临显著的负\(\Gamma\)风险。即使标的价格小幅波动，也会导致期权价值的剧烈变化，这在临近到期时尤其明显。
+            \end{itemize}
+            
+            \textbf{C选项错误。} 
+            \begin{itemize}
+                \item 期权即将到期，利率变化（\(\rho\)风险）对期权价值的影响极小。短期期权的价值主要受到价格波动和时间价值的影响，而不是利率变化。
+            \end{itemize}
+            
+            \textbf{D选项错误。} 
+            \begin{itemize}
+                \item 作为期权卖方，时间衰减（\(\theta\)）实际上对交易者有利。虽然接近到期时时间衰减加速，但这会增加卖方的收益而不是风险。
+            \end{itemize}
+            \end{explanation}
+            
+            \checklist{期权希腊字母风险分析（短期平价期权的\(\Gamma\)风险特征）}
+
+
+            \begin{question}
+                Steve, a market risk manager at Marcat Securities, is analyzing the risk exposures of the S\&P 500 index options trading desk. His risk report shows the following characteristics:
+                \begin{itemize}
+                    \item Net gamma position: Long (positive)
+                    \item Net vega position: Short (negative)
+                    \item Current market environment: High volatility
+                \end{itemize}
+                Which of the following options portfolio structures would most likely create these risk exposures?
+                \end{question}
+                
+                \begin{choices}
+                \item A combination of long-dated long calls and short-dated short puts
+                \item A combination of long-dated long puts and long-dated short calls
+                \item A combination of long-dated long calls and short-dated short calls
+                \item A combination of short-dated long calls and long-dated short calls
+                \end{choices}
+                
+                \begin{correctanswer}
+                D
+                \end{correctanswer}
+                
+                \begin{explanation}
+                
+                \textbf{关键原理：}
+                \begin{itemize}
+                    \item \(\Gamma\)特征：期权到期时间越短，\(\Gamma\)值越大
+                    \item Vega特征：期权到期时间越长，Vega值越大
+                \end{itemize}
+                
+                \textbf{A选项错误。} 
+                \begin{itemize}
+                    \item 虽然短期卖出看跌期权提供正\(\Gamma\)，但长期买入看涨期权的\(\Gamma\)较小，无法解释净正\(\Gamma\)。且两个头寸都是正Vega，与净短Vega不符。
+                \end{itemize}
+                
+                \textbf{B选项错误。} 
+                \begin{itemize}
+                    \item 长期期权的\(\Gamma\)较小，且组合会产生净负\(\Gamma\)，与报告显示的净正\(\Gamma\)不符。
+                \end{itemize}
+                
+                \textbf{C选项错误。} 
+                \begin{itemize}
+                    \item 虽然可能产生正的净\(\Gamma\)，但两个头寸都会产生正Vega，与报告显示的净短Vega不符。
+                \end{itemize}
+                
+                \textbf{D选项正确。} 
+                \begin{itemize}
+                    \item 短期买入看涨期权：提供大的正\(\Gamma\)和相对小的正Vega
+                    \item 长期卖出看涨期权：提供小的负\(\Gamma\)和大的负Vega
+                    \item 组合效果：净正\(\Gamma\)（短期\(\Gamma\) > 长期\(\Gamma\)）和净负Vega（长期Vega > 短期Vega）
+                \end{itemize}
+                \end{explanation}
+                
+                \checklist{期权组合的希腊字母特征分析（期权到期时间对\(\Gamma\)和Vega的影响）}
+
+
+
+                \begin{question}
+                    A quantitative analyst at a derivatives trading firm is conducting research on option price sensitivity. The analyst is specifically studying how changes in the underlying asset price affect the rate of change in option deltas (gamma) under the Black-Scholes framework. Assuming European-style options with constant interest rates and volatility, and fixed time to expiration, for which of the following option positions would the deltas be most sensitive to changes in the underlying asset price?
+                    \end{question}
+                    
+                    \begin{choices}
+                    \item Deep in-the-money calls combined with deep out-of-the-money puts, as these represent extreme price positions
+                    \item Both puts and calls that are deep in-the-money, as these options have the highest absolute delta values
+                    \item Both puts and calls that are deep out-of-the-money, as these options have the lowest absolute delta values
+                    \item Both puts and calls that are at-the-money, as these options are at their theoretical pivot point
+                    \end{choices}
+                    
+                    \begin{correctanswer}
+                    D
+                    \end{correctanswer}
+                    
+                    \begin{explanation}
+                    \textbf{A选项错误。} 
+                    \begin{itemize}
+                        \item 深度实值看涨期权和虚值看跌期权的\(\Delta\)变化率（即\(\Gamma\)）较小，因为这些期权的\(\Delta\)已经接近极值（1或0），变化空间有限。
+                    \end{itemize}
+                    
+                    \textbf{B选项错误。} 
+                    \begin{itemize}
+                        \item 深度实值期权的\(\Delta\)接近1（看涨）或-1（看跌），此时\(\Gamma\)接近0，对标的价格变化的敏感度最低。
+                    \end{itemize}
+                    
+                    \textbf{C选项错误。} 
+                    \begin{itemize}
+                        \item 深度虚值期权的\(\Delta\)接近0，此时\(\Gamma\)也接近0，对标的价格变化的敏感度很低。
+                    \end{itemize}
+                    
+                    \textbf{D选项正确。} 
+                    \begin{itemize}
+                        \item 平价期权（ATM）的\(\Gamma\)值最大，意味着其\(\Delta\)对标的价格变化最敏感。这是因为平价期权处于最不确定的状态，任何标的价格的小幅变动都会显著影响期权的\(\Delta\)值。
+                    \end{itemize}
+                    \end{explanation}
+                    
+                    \checklist{期权希腊字母特征分析（平价期权的\(\Gamma\)特性）}
+
+\begin{question}
+A portfolio manager is analyzing the sensitivity measures (Greeks) of various European-style options. Which of the following statements about option Greeks is CORRECT?
+\end{question}
+
+\begin{choices}
+\item The sensitivity to volatility changes (vega) typically exhibits its highest values for deep in-the-money European options due to their substantial intrinsic value
+\item For a European put option, its delta maintains significant negative values even as the underlying asset price increases substantially above the strike price
+\item The rate of change in delta (gamma) tends to decrease as the time to expiration shortens for at-the-money options due to reduced time value
+\item For European call options with the same strike price and maturity, the time decay (theta) has a more negative value for at-the-money options than for out-of-the-money options
+\end{choices}
+
+\begin{correctanswer}
+D
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{A选项错误。}
+\begin{itemize}
+    \item vega在平价(ATM)期权时达到最大值，而非深度实值(ITM)期权。深度实值期权的内在价值虽然较高，但其对波动率变化的敏感度反而较低，因为其价值主要由内在价值而非时间价值决定。
+\end{itemize}
+
+\textbf{B选项错误。}
+\begin{itemize}
+    \item 当标的价格远高于执行价格时，看跌期权的delta实际上会趋近于0，而非保持显著的负值。这是因为随着标的价格大幅上涨，看跌期权几乎确定不会执行，其价值对标的价格变动的敏感度极低。
+\end{itemize}
+
+\textbf{C选项错误。}
+\begin{itemize}
+    \item 对于平价期权，随着到期时间减少，gamma实际上会增大而非减小。这是因为时间越短，期权价值对标的价格变动的敏感度变化越剧烈，特别是在平价附近。
+\end{itemize}
+
+\textbf{D选项正确。}
+\begin{itemize}
+    \item 对于相同执行价格和到期日的欧式看涨期权，平价期权的theta确实比虚值期权的theta有更大的负值。这是因为平价期权具有最大的时间价值，随着时间推移，其损失的时间价值也最多。
+    \item 虚值期权的时间价值较小，因此其theta的绝对值也较小。深度虚值期权的theta接近于零，因为几乎没有时间价值可以损失。
+\end{itemize}
+\end{explanation}
+
+\checklist{期权希腊字母特征（重点是theta随到期时间和价格的变化特征）}
+
+
+
+
+
+
+\begin{question}
+    An options trader at a hedge fund is evaluating four different portfolio positions in terms of their risk profiles. Each position combines various options strategies resulting in different gamma and delta exposures. Given that market volatility is expected to increase significantly in the coming weeks, which of the following positions would expose the fund to the highest level of risk?
+    \end{question}
+    
+    \begin{choices}
+    \item A portfolio with negative gamma exposure but overall delta-neutral, constructed through a combination of short straddles.
+    \item A portfolio with positive gamma and positive delta exposure, achieved through long call options and bull spreads.
+    \item A portfolio with negative gamma but positive delta exposure, created by writing naked calls and buying the underlying.
+    \item A portfolio with positive gamma but delta-neutral, built using long straddles and covered calls.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然负gamma使组合面临风险，但delta中性特性能在标的价格小幅波动时提供保护，降低了整体风险。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 正gamma意味着delta随着标的价格变动而有利变化，这提供了一定程度的自然对冲，风险相对可控。
+    \end{itemize}
+    
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 这是最危险的组合，因为负gamma意味着delta的不利变动，同时正delta暴露使得组合在标的价格下跌时遭受双重损失。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 正gamma提供了有利的delta变化，而delta中性则进一步降低了方向性风险，使得这个组合相对安全。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期权组合风险分析（重点是gamma和delta的组合效应）}
+
+    \begin{question}
+        A derivatives trader has established the following positions in equity options on the same underlying stock (current price \$50, all options expire in 3 months): long 80 ATM call options with delta of 0.5; short 120 ATM put options with delta of -0.5; and short 40 ATM call options with delta of 0.5. Which of the following trades would achieve delta neutrality for the entire position?
+        \end{question}
+        
+        \begin{choices}
+        \item Buy 20 shares of the underlying stock
+        \item Sell 20 shares of the underlying stock
+        \item Buy 10 shares of the underlying stock
+        \item Sell 10 shares of the underlying stock
+        \end{choices}
+        
+        \begin{correctanswer}
+        B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        
+        \textbf{步骤1：计算看涨期权多头头寸的position delta。}
+        \begin{itemize}
+            \item 对于80张ATM看涨期权多头：
+            \[
+            \text{Position Delta}_{\text{long calls}} = 80 \times 0.5 = +40
+            \]
+        \end{itemize}
+        
+        \textbf{步骤2：计算看跌期权空头头寸的position delta。}
+        \begin{itemize}
+            \item 对于120张ATM看跌期权空头（注意空头看跌期权delta符号转换）：
+            \[
+            \text{Position Delta}_{\text{short puts}} = 120 \times (-(-0.5)) = +60
+            \]
+        \end{itemize}
+        
+        \textbf{步骤3：计算看涨期权空头头寸的position delta。}
+        \begin{itemize}
+            \item 对于40张ATM看涨期权空头：
+            \[
+            \text{Position Delta}_{\text{short calls}} = 40 \times (-0.5) = -20
+            \]
+        \end{itemize}
+        
+        \textbf{步骤4：计算总position delta并确定对冲交易。}
+        \begin{itemize}
+            \item 总position delta为：
+            \[
+            \text{Total Delta} = 40 + 60 - 20 = +80
+            \]
+        \end{itemize}
+        
+        因此，为达到delta中性，需要卖出20股股票（每股delta为1）。
+        \end{explanation}
+        
+        \checklist{期权组合delta对冲（就是相加起来即可）}
+
+        \begin{question}
+            A portfolio manager has a derivatives position with the following Greeks: delta = -200, gamma = -100, and vega = -2,000. To achieve Greek neutrality, the manager can trade in the following instruments in addition to the underlying stock:
+            \begin{itemize}
+                \item Call option A: delta = 0.50, gamma = 0.25, vega = 15.0
+                \item Put option B: delta = -0.50, gamma = 0.35, vega = 25.0
+            \end{itemize}
+            Along with the underlying shares, which combination of trades will make the total position delta-gamma-vega neutral?
+            \end{question}
+            
+            \begin{choices}
+            \item Long 600 calls; short 400 puts; and short 300 shares of the underlying stock
+            \item Short 1,000 calls; long 500 puts; and long 250 shares of the underlying stock
+            \item Long 1,200 calls; short 600 puts; and short 700 shares of the underlying stock
+            \item Short 800 calls; long 300 puts; and long 600 shares of the underlying stock
+            \end{choices}
+            
+            \begin{correctanswer}
+            C
+            \end{correctanswer}
+            
+            \begin{explanation}
+            
+            \textbf{步骤1：建立方程组。}
+            \begin{itemize}
+                \item 设 x = 看涨期权数量，y = 看跌期权数量，则：
+                
+                对于gamma中性：
+                \[
+                -100 + 0.25x + 0.35y = 0
+                \]
+            
+                对于vega中性：
+                \[
+                -2,000 + 15x + 25y = 0
+                \]
+            \end{itemize}
+            
+            \textbf{步骤2：求解方程组。}
+            \begin{itemize}
+                \item 将两个方程整理为标准形式：
+                \[
+                \begin{cases}
+                0.25x + 0.35y = 100 \\
+                15x + 25y = 2,000
+                \end{cases}
+            \]
+            
+                \item 求解得到：x = 1,200, y = -600
+            \end{itemize}
+            
+            \textbf{步骤3：计算所需的股票数量。}
+            \begin{itemize}
+                \item 计算期权组合的delta：
+                \[
+                \begin{aligned}
+                \text{总Delta} &= -200 + 1,200 \times 0.50 + (-600) \times (-0.50) \\
+                &= -200 + 600 + 300 \\
+                &= 700
+                \end{aligned}
+                \]
+            \item 因此需要做空700股以达到delta中性。
+            \end{itemize}
+            
+            \end{explanation}
+            
+            \checklist{期权组合希腊字母对冲（联立方程求解）}
+
+
+
+            \begin{question}
+                A trader sells 1 million European call options at a price of \$100 per share, with a strike price of \$105, a risk-free rate of 4\%, and a stock volatility of 25\%. The options have a one-year expiration. According to the Black-Scholes-Merton model, the theoretical price of the option is \$9.56 per share. The trader's total revenue is \$10 million, with a theoretical profit of \$440,000. The trader uses a stop-loss strategy for risk management.
+                Regarding the effectiveness of the stop-loss strategy, which of the following statements is correct?
+                \end{question}
+                
+                \begin{choices}
+                \item The stop-loss strategy always ensures the trader makes a profit when the option is exercised, regardless of stock price movements.
+                \item The stop-loss strategy automatically executes when the stock price falls below \$105 to limit potential losses.
+                \item The stop-loss strategy limits potential losses by purchasing stock when the price exceeds \$105 and selling options when the price is below \$105 to gain profit.
+                \item The effectiveness of the stop-loss strategy depends on stock price movements and may not always be effective during high volatility.
+                \end{choices}
+                
+                \begin{correctanswer}
+                D
+                \end{correctanswer}
+                
+                \begin{explanation}
+                        \textbf{A选项错误。}
+                \begin{itemize}
+                \item 止损策略并不能保证在期权被执行时总能获利，因为股票价格的剧烈波动可能导致交易员在行权时面临损失。例如，如果股票价格大幅下跌，期权可能会变得无利可图。
+                \end{itemize}
+
+                \textbf{B选项错误。}
+                \begin{itemize}
+                \item 止损策略并不是在股票价格低于\$105时自动执行：它通常需要设置一个特定的触发价格来启动卖出操作。这意味着交易员需要主动监控市场并设定止损点。
+                \end{itemize}
+
+                \textbf{C选项错误。}
+                \begin{itemize}
+                    \item 止损策略涉及在股票价格超过\$105时购买股票，以对冲期权头寸。当股票价格低于\$105时，交易员可能会选择卖出期权以限制损失。这种策略的目的是在价格波动中保护利润或减少损失。然而，交易成本和市场波动可能影响策略的实际效果。
+                \end{itemize}
+                    
+                    \textbf{D选项正确。}
+                    \begin{itemize}
+                        \item 止损策略的有效性取决于股票价格的变动，在高波动性期间可能并不总是有效。
+                        \item 具体分析如下：
+                        \begin{itemize}
+                            \item 当期权处于价外（股票价格 < 行权价）时：交易员维持裸头寸，赚取期权费，但面临价格波动导致损失的风险。
+                            \item 当期权处于价内（股票价格 > 行权价）时：交易员通过购买股票来覆盖头寸，限制损失，但增加了交易成本。
+                        \end{itemize}
+                        \item 止损策略的不确定性主要在于交易成本和价格不确定性。随着股票价格波动率增加，购买和出售资产的成本可能会很高。此外，资产到期时的价格是否高于（或低于）行权价也存在不确定性。
+                    \end{itemize}
+                    \end{explanation}
+
+
+\checklist{止损策略的优缺点。（优点：限制损失，缺点：不确定性，交易成本高）}
+
+
+
+\begin{question}
+    In financial derivatives trading, Delta measures the sensitivity of an option's price to changes in the price of the underlying asset. Based on the characteristics of Delta, which of the following descriptions about different option positions is correct?
+\end{question}
+
+\begin{choices}
+    \item When going long on a call option, Delta is negative, and an increase in the underlying asset's price leads to a decrease in the option's price.
+    \item When shorting a put option, Delta is negative, and a decrease in the underlying asset's price leads to an increase in the option's price.
+    \item When going long on a put option, Delta is positive, and a decrease in the underlying asset's price leads to a decrease in the option's price.
+    \item When shorting a call option, Delta is negative, and an increase in the underlying asset's price leads to a decrease in the option's price.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 做多看涨期权时，Delta为正值，基础资产价格上涨会导致期权价格上涨。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 做空看跌期权时，Delta为正值，基础资产价格下跌会导致期权价格下跌。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 做多看跌期权时，Delta为负值，基础资产价格下跌会导致期权价格上涨。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 做空看涨期权时，Delta为负值，基础资产价格上涨会导致期权价格下跌。
+    \end{itemize}
+\end{explanation}
+
+\checklist{不同持仓对Delta的影响（正值表示价格同向变动，负值表示价格反向变动。）}
+
+
+\begin{question}
+    Suppose we sold put options on 5,000 shares of stock. The \(\Delta\) value for the call option is 0.482, and the \(\Delta\) value for the put option is -0.207. Each stock option corresponds to one share of stock. If the hedging tool is either stock or call options, which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item Sell 1,035 shares of stock or 2,147 call options for delta hedging.
+    \item Buy 1,035 shares of stock or 2,147 call options for delta hedging.
+    \item Sell 2,147 call options or 1,035 shares of stock for delta hedging.
+    \item Buy 2,147 call options or 1,035 shares of stock for delta hedging.
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+\begin{explanation}
+
+    \textbf{步骤1：计算股票对冲数量。}
+    \begin{itemize}
+        \item 已知看跌期权的\(\Delta_{\text{put}} = -0.207\)，看跌期权数量为5,000。
+        \item 理论公式：\(N_{\text{stock}} = -N_{\text{put}} \times \Delta_{\text{put}}\)
+        \item 计算所需股票数量：
+        \[
+        N_{\text{stock}} = -5,000 \times 0.207 = 1,035
+        \]
+        \item 因此，需要出售1,035股股票以实现delta中性。
+    \end{itemize}
+    
+    \textbf{步骤2：计算看涨期权对冲数量。}
+    \begin{itemize}
+        \item 已知看涨期权的\(\Delta_{\text{call}} = 0.482\)。
+        \item 理论公式：\(N_{\text{call}} = \frac{-N_{\text{stock}}}{\Delta_{\text{call}}}\)
+        \item 计算所需看涨期权数量：
+        \[
+        N_{\text{call}} = \frac{-1,035}{0.482} = -2,147
+        \]
+        \item 因此，需要出售2,147份看涨期权以实现delta中性。
+    \end{itemize}
+    
+    \textbf{重要结论：}
+    \begin{itemize}
+        \item 通过本题可得出一个重要结论：期权的数量总是比股票数量多，因为\(\Delta\)的绝对值小于等于1。
+        \item 股票数量除以\(\Delta\)，自然得到的期权数量要大于股票数量。
+    \end{itemize}
+    
+    \end{explanation}
+
+\checklist{delta对冲（期权对冲需要根据\(\Delta\)值调整持仓数量以实现delta中性。）}
+
+
+
+\begin{question}
+    In the context of options trading, Gamma measures the rate of change of Delta in response to changes in the price of the underlying asset. Which of the following descriptions is correct based on the definition and role of Gamma?
+\end{question}
+
+\begin{choices}
+    \item When Gamma is high, Delta is insensitive to price changes, so frequent adjustments are not needed.
+    \item When Gamma is low, Delta is highly sensitive to price changes, so frequent adjustments are needed.
+    \item When Gamma is high, Delta is highly sensitive to price changes, so frequent adjustments are needed.
+    \item When Gamma is low, Delta is insensitive to price changes, so frequent adjustments are not needed.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 高Gamma值意味着Delta对价格变化非常敏感，因此需要频繁调整对冲。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 低Gamma值意味着Delta对价格变化不敏感，因此不需要频繁调整对冲。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 高Gamma值意味着Delta对价格变化非常敏感，因此需要频繁调整对冲。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 低Gamma值意味着Delta对价格变化不敏感，因此不需要频繁调整对冲。
+    \end{itemize}
+\end{explanation}
+
+\checklist{Gamma对冲频率（Gamma影响Delta的变化速度，进而影响对冲调整的频率。）}
+
+
+\begin{question}
+    An options trader at a hedge fund is currently evaluating the sensitivity of their portfolio to changes in market volatility. They need to understand how Vega affects option pricing to manage risk effectively. Based on the key characteristics of Vega, which of the following descriptions is correct?
+\end{question}
+
+\begin{choices}
+    \item A higher Vega value means the option price is less sensitive to changes in volatility, so the hedging frequency can be reduced.
+    \item A lower Vega value means the option price is more sensitive to changes in volatility, so more frequent hedging is needed.
+    \item Vega is highest when the option is at-the-money and approaches zero when the option is deep in-the-money or out-of-the-money.
+    \item Vega is unaffected by the option's time to expiration and is only related to the underlying asset's volatility.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Vega值越高，期权价格对波动率的变化越敏感。这意味着当市场波动率变化时，期权价格会有较大幅度的波动，因此需要更频繁的对冲来管理风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item Vega值越低，期权价格对波动率的变化越不敏感。此时，期权价格对波动率变化的反应较小，因此对冲频率可以降低。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 当期权接近平值时，Vega值最大，因为此时期权对波动率的变化最为敏感。相反，当期权深度价内或价外时，Vega值趋于零，表明期权价格对波动率变化不敏感。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item Vega值不仅受标的资产波动率的影响，还受期权到期时间的影响。随着到期日的临近，Vega值通常会减小。
+    \end{itemize}
+\end{explanation}
+
+\checklist{Vega对冲频率（Vega影响期权价格对波动率变化的敏感性，进而影响对冲调整的频率。）}
+
+
+
+\begin{question}
+    A risk analyst at a fixed-income investment firm is assessing the impact of time decay on their portfolio of long-term options. They need to understand how Theta affects these positions. Which of the following descriptions most accurately reflects the impact of Theta on long-term option positions?
+\end{question}
+
+\begin{choices}
+    \item Theta is typically positive for long-term option positions because the time value of the option increases over time, leading to a rise in the option's price.
+    \item Theta is typically negative for long-term option positions because the time value of the option decreases over time, leading to a decline in the option's price.
+    \item The value of Theta is unrelated to the option's Gamma because Theta only measures the impact of time decay on the option's price, while Gamma measures the sensitivity of Delta to changes in the underlying asset's price.
+    \item The value of Theta significantly increases as the option approaches expiration because the time value of the option rapidly decreases, causing the option's price to drop quickly.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item Theta通常为负值，因为期权的时间价值随着时间的推移而减少。这种减少反映了期权价格的下降，而不是上升。
+        \item 长期期权的时间价值会逐渐衰减，导致Theta为负。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 对于长期期权，Theta为负值，表示时间价值的减少对期权价格的影响。
+        \item 随着时间的流逝，期权的时间价值逐渐减少，导致价格下降。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item Theta和Gamma之间存在关系，尤其是在Delta中性组合中，它们通常是负相关的。
+        \item 当Delta维持在零时，Theta高度负值时，Gamma值往往是高度正值。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 虽然Theta的绝对值在到期日临近时增加，但它通常是负值，反映了时间价值的快速衰减。
+        \item 这种快速衰减导致期权价格迅速下降，而不是Theta值增加。
+    \end{itemize}
+\end{explanation}
+
+\checklist{希腊字母的定义和性质（Theta和Gamma之间存在关系）}
+
+\begin{question}
+    A junior trader on a derivatives trading desk is reviewing the definitions of the Greeks in option pricing models to better understand their impact on option strategies. Based on the definitions of the Greeks, which of the following descriptions is correct?
+\end{question}
+
+\begin{choices}
+    \item Delta measures the sensitivity of the option's price to changes in the price of the underlying asset, while Gamma measures the sensitivity of the option's price to changes in volatility.
+    \item Vega measures the sensitivity of the option's price to changes in the risk-free interest rate, while Rho measures the sensitivity of the option's price to changes in the price of the underlying asset.
+    \item Theta measures the sensitivity of the option's price to the passage of time, while Vega measures the sensitivity of the option's price to changes in volatility.
+    \item Gamma measures the sensitivity of the option's price to the passage of time, while Theta measures the sensitivity of the option's price to changes in the price of the underlying asset.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+
+\textbf{希腊字母的定义和作用：}
+\begin{itemize}
+    \item \textbf{Delta (\(\Delta\)):} 衡量期权价格对标的资产价格变化的敏感度。
+    \item \textbf{Gamma (\(\Gamma\)):} 衡量Delta对标的资产价格变化的敏感度，即标的资产价格的二阶偏导数。
+    \item \textbf{Theta (\(\Theta\)):} 衡量期权价格对时间流逝的敏感度，即时间的偏导数。
+    \item \textbf{Vega (\(\Lambda\)):} 衡量期权价格对标的资产波动率变化的敏感度。
+    \item \textbf{Rho (\(\rho\)):} 衡量期权价格对无风险利率变化的敏感度。
+\end{itemize}
+
+
+
+\textbf{选项A错误。} 
+\begin{itemize}
+\item Gamma衡量的是Delta对标的资产价格变化的敏感度，而不是对波动率的敏感度。
+\end{itemize}
+
+ \textbf{B选项错误。}
+ \begin{itemize}
+  \item Vega衡量的是对波动率的敏感度，而不是对利率的敏感度。
+ \end{itemize}
+
+\textbf{C选项正确。} 
+\begin{itemize}
+\item Theta衡量的是对时间流逝的敏感度，Vega衡量的是对波动率的敏感度。
+\end{itemize}
+ \textbf{D选项错误。} 
+ \begin{itemize}
+ \item Gamma不衡量时间流逝的敏感度，Theta不衡量对标的资产价格变化的敏感度。
+ \end{itemize}
+
+
+\end{explanation}
+
+\checklist{希腊字母的定义和作用(了解全部希腊字母定义)}
+
+
+
+\begin{question}
+    A portfolio manager is considering using put options to protect their portfolio from market downturns while maintaining potential gains. Delta hedging is a key technique in achieving this protection, involving the creation of an offsetting position equal to the desired option Delta. Based on the principles of Delta hedging, which of the following descriptions is correct?
+\end{question}
+
+\begin{choices}
+    \item If the asset manager wants to purchase put option protection with a Delta of -0.236, she should sell 23.6\% of the portfolio.
+    \item If the asset manager wants to purchase put option protection with a Delta of -0.236, she should buy 23.6\% of the portfolio.
+    \item To match Delta, the asset manager should create an offsetting position using the underlying asset equal to the desired option Delta.
+    \item To match Delta, the asset manager should create a positive position using index futures equal to the desired option Delta.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 卖出投资组合的部分资产会增加风险暴露，因为这与Delta匹配的原则相反，Delta匹配要求创建一个反向头寸来对冲风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 买入更多的投资组合资产会增加市场风险，而不是减少风险。Delta匹配需要减少风险敞口。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 符合Delta匹配的定义和应用，通过使用标的资产创建一个与所需期权Delta相等的反向头寸来对冲风险。这种方法有效地中和了市场波动对投资组合的影响。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 使用指数期货创建正向头寸可能会增加市场风险，而不是提供保护。Delta匹配需要反向头寸来有效对冲。
+    \end{itemize}
+\end{explanation}
+
+\checklist{保险策略（Delta匹配是通过反向头寸对冲风险的关键技术。）}
+
+
+\begin{question}
+    Ken manages a portfolio with delta-neutral, 200 vega, and 30 gamma. There are two options available. From the information in the following table, estimate (a) what position should be taken in option A and the underlying asset for vega and delta neutrality, and (b) what position should be taken in option B and the underlying asset for gamma and delta neutrality.
+\end{question}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & Delta & Vega & Gamma \\
+        \hline
+        Portfolio & 0 & 200 & 30 \\
+        Option A & 0.5 & 2 & 0.3 \\
+        Option B & -0.8 & 4 & 0.6 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{choices}
+    \item For vega and delta neutrality: Take a -100 position in option A and buy 60 units of the underlying asset.
+    \item For vega and delta neutrality: Take a 100 position in option A and sell 50 units of the underlying asset.
+    \item For gamma and delta neutrality: Take a 50 position in option B and buy 40 units of the underlying asset.
+    \item For gamma and delta neutrality: Take a -50 position in option B and sell 40 units of the underlying asset.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 虽然在Option A中持有-100的头寸可以实现Vega中性（\(200 + 2 \times (-100) = 0\)），但购买60个标的资产会导致Delta不中性。
+        \item 计算Delta：\(0 + 0.5 \times (-100) + 60 = 10\)
+        \item 正确的Delta中性需要购买50个标的资产：\(0 + 0.5 \times (-100) + 50 = 0\)
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 持有100的Option A头寸会增加Vega和Delta，不符合中性要求。
+        \item 计算Vega：\(200 + 2 \times 100 = 400\)
+        \item 计算Delta：\(0 + 0.5 \times 100 = 50\)
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 持有50的Option B头寸会增加Gamma和Delta，不符合中性要求。
+        \item 计算Gamma：\(30 + 0.6 \times 50 = 60\)
+        \item 计算Delta：\(0 + (-0.8) \times 50 = -40\)
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 为了实现Gamma中性，Ken需要在Option B中持有-50的头寸。
+        \item 计算Gamma中性：\(30 + 0.6 \times (-50) = 0\)
+        \item 这将产生一个Delta为\(-0.8 \times (-50) = 40\)，因此需要出售40个标的资产以实现Delta中性。
+        \item 计算Delta中性：\(0 + 40 - 40 = 0\)
+    \end{itemize}
+\end{explanation}
+
+\checklist{投资组合的希腊字母中性。（简单相加来判断）}
+
+
+
+
+
+
+
+
+
+
+
+\fi
+
+\end{document}

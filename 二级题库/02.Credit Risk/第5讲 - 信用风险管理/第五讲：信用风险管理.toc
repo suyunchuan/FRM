@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}考点1:信用风险管理}{2}{section.1}%
+\contentsline {subsection}{题号1考察: }{2}{Item.1}%
+\contentsline {section}{\numberline {2}考点2:衍生品信用风险}{3}{section.2}%
+\contentsline {subsection}{题号1考察: }{3}{Item.2}%
+\contentsline {section}{\numberline {3}考点3:结构化信用产品}{4}{section.3}%
+\contentsline {subsection}{题号1考察: 次贷证券化中发起人与安排人之间的信息不对称}{4}{Item.6}%
+\contentsline {subsection}{题号2考察: 证券化产品现金流分配的优先级顺序}{5}{Item.10}%
+\contentsline {subsection}{题号3考察: 信用增级（Credit Enhancement）的定义}{5}{Item.14}%
+\contentsline {subsection}{题号4考察: CBO（Collateralized Bond Obligation）的特征}{6}{Item.18}%
+\contentsline {subsection}{题号5考察: 违约概率上升对股权层和夹层级VaR的影响}{6}{Item.22}%
+\contentsline {subsection}{题号6考察: 证券化产品的信用和流动性风险管理}{7}{Item.26}%
+\contentsline {subsection}{题号7考察: 次贷证券化市场中的摩擦因素}{7}{Item.30}%
+\contentsline {subsection}{题号8考察: 次贷证券化市场中的摩擦因素}{8}{Item.34}%
+\contentsline {subsection}{题号9考察: 违约概率下降和相关性上升对股权层和高级层的影响}{9}{Item.38}%
+\contentsline {subsection}{题号10考察: 次贷证券化中的信用增级机制}{9}{Item.42}%
+\contentsline {subsection}{题号11考察: 无追索权出售贷款的影响}{10}{Item.46}%
+\contentsline {subsection}{题号12考察: 次贷危机中次级层级违约对所有层级投资者的影响}{10}{Item.50}%
+\contentsline {subsection}{题号13考察: 违约相关性上升对高级层和股权层的影响}{11}{Item.54}%
+\contentsline {subsection}{题号14考察: 证券化产品中的资本结构特征}{11}{Item.58}%
+\contentsline {subsection}{题号15考察: 财务困境时高级债和次级债的敞口特征}{12}{Item.62}%
+\contentsline {subsection}{题号16考察: 主成分分析的第二阶段方法}{12}{Item.66}%
+\contentsline {subsection}{题号17考察: 财务困境时次级债的行为特征}{13}{Item.70}%
+\contentsline {subsection}{题号18考察: 违约敏感性的计算方法}{13}{Item.74}%
+\contentsline {subsection}{题号19考察: 通过SPE隔离风险投资的优缺点}{14}{Item.78}%
+\contentsline {subsection}{题号20考察: 银行证券化贷款的CDO结构选择}{14}{Item.82}%
+\contentsline {subsection}{题号21考察: 次贷证券化中的损失波动性特征}{15}{Item.86}%
+\contentsline {subsection}{题号22考察: 超额抵押账户的计算方法}{16}{Item.90}%
+\contentsline {subsection}{题号23考察: 抵押贷款支持证券的加权平均期限计算方法}{16}{Item.94}%
+\contentsline {subsection}{题号24考察: 年提前还款率转换为月提前还款率}{16}{Item.98}%
+\contentsline {subsection}{题号25考察: 信用卡债务证券化的结构特征}{17}{Item.102}%
+\contentsline {subsection}{题号26考察: ABS的信用增级机制}{17}{Item.106}%
+\contentsline {subsection}{题号27考察: 发起人保留第一损失部分的所有权的原因}{18}{Item.110}%
+\contentsline {subsection}{题号28考察: 内部信用增级与外部信用增级的区别}{18}{Item.114}%
+\contentsline {subsection}{题号29考察: PSA模型下的月提前还款率}{19}{Item.118}%
+\contentsline {subsection}{题号30考察: 信用联结票据（Credit-Linked Note）的收益特征}{19}{Item.122}%
+\contentsline {subsection}{题号31考察: 托管人和受托人在证券化过程中的利益冲突}{20}{Item.126}%
+\contentsline {subsection}{题号32考察: 学生贷款证券化的衡量指标}{20}{Item.130}%
+\contentsline {subsection}{题号33考察: 抵押贷款证券化的经济效益}{21}{Item.134}%
+\contentsline {subsection}{题号34考察: 结构性投资工具（SIVs）的作用}{21}{Item.138}%
+\contentsline {subsection}{题号35考察: 超额抵押的定义}{22}{Item.142}%
+\contentsline {subsection}{题号36考察: 300\% PSA模型下首月提前还款金额的计算方法}{23}{Item.146}%
+\contentsline {subsection}{题号37考察: 信用卡债务证券化的结构选择}{23}{Item.150}%
+\contentsline {subsection}{题号38考察: 加权平均票息低于投资者票息时资产池的支付能力}{24}{Item.154}%
+\contentsline {subsection}{题号39考察: 利率上升时固定利率支付方的互换价值变化}{24}{Item.158}%
+\contentsfinish 

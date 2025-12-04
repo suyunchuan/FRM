@@ -1,0 +1,1747 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:信用风险管理}
+\setcounter{question}{0}
+
+
+\begin{question}
+   
+\end{question}
+
+\begin{choices}
+
+        \item 
+
+\end{choices}
+
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{explanation}
+
+\checklist{}
+
+\newpage
+
+
+\section{考点2:衍生品信用风险}
+\setcounter{question}{0}
+
+
+
+\begin{question}
+    
+\end{question}
+
+\begin{choices}
+    \item 
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{explanation}
+\checklist{}
+
+
+
+
+\newpage
+
+
+\section{考点3:结构化信用产品}
+\setcounter{question}{0}
+\begin{question}
+    Which of the following statements regarding frictions in the securitization of subprime mortgages is correct?
+\end{question}
+
+\begin{choices}
+    \item The arranger will typically have an information advantage over the originator with regard to the quality of the loans securitized
+    \item The originator will typically have an information advantage over the arranger, which can create an incentive for the originator to collaborate with the borrower in filing false loan applications
+    \item The major credit rating agencies are paid by investors for their rating service of mortgage-backed securities, and this creates a potential conflict of interest
+    \item The use of escrow accounts for insurance and tax payments eliminates the risk of foreclosure
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 安排人通常不会比发起人更了解贷款质量，发起人作为贷款的直接发放者具有信息优势，这个选项误解了信息不对称的方向。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 发起人确实比安排人更了解贷款质量，这种信息优势可能导致发起人与借款人合谋，发起人可能协助借款人伪造贷款申请材料，这种欺诈行为会增加证券化产品的风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 评级机构不是由投资者支付评级费用，评级费用通常由证券化产品的发行方支付，这个选项误解了评级机构的收费模式。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 托管账户只能延缓但不能消除止赎风险，这个选项夸大了托管账户的作用，不符合实际情况。
+    \end{itemize}
+\end{explanation}
+
+\checklist{次贷证券化中发起人与安排人之间的信息不对称}
+
+
+\begin{question}
+    Assume there are 100 identical loans with a principal balance of \$500,000 each. Based on a credit analysis, a 300 basis point spread is applied to the borrowers. LIBOR is currently 4\% and the coupon rate will reset annually. The senior, junior, and equity tranches are 75\%, 20\%, and 5\% of the pool, respectively. The spreads on the senior and mezzanine tranches are 2\% and 6\%. Excess cash flow is diverted to trust account above \$1,000,000. Assume the default rate is 2\%. What are the cash flows to the mezzanine and trust account in the first period?
+\end{question}
+
+\begin{choices}
+    \item \$1,000,000 \$0
+    \item \$1,000,000 \$180,000
+    \item \$2,250,000 \$200,000
+    \item \$2,250,000 \$250,000
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算贷款利率和第一期总现金流}
+    \begin{itemize}
+        \item 贷款利率 = LIBOR + 利差 = 4\% + 3\% = 7\%
+        \item 总本金 = 100 × \$500,000 = \$50,000,000
+        \item 考虑违约率后的现金流 = \$50,000,000 × 7\% × (1 - 2\%) = \$3,430,000
+    \end{itemize}
+
+    \textbf{步骤2：计算各层级现金流}
+    \begin{itemize}
+        \item 高级层现金流 = \$50,000,000 × 75\% × (4\% + 2\%) = \$2,250,000
+        \item 夹层级现金流 = \$50,000,000 × 20\% × (4\% + 6\%) = \$1,000,000
+    \end{itemize}
+
+    \textbf{步骤3：计算剩余现金流和信托账户分配}
+    \begin{itemize}
+        \item 剩余现金流 = \$3,430,000 - \$2,250,000 - \$1,000,000 = \$180,000
+        \item 由于剩余现金流 \$180,000 < \$1,000,000（阈值），全部归股权层，信托账户为 \$0
+    \end{itemize}
+\end{explanation}
+
+\checklist{证券化产品现金流分配的优先级顺序}
+
+
+\begin{question}
+    Assume a firm issues only three capital claims: zero-coupon senior debt with face value of \$300 million; zero-coupon junior debt with face value of \$500 million; and \$200 million in equity. What is the credit enhancement provided to the senior debt?
+\end{question}
+
+\begin{choices}
+    \item \$200 million
+    \item \$300 million
+    \item \$500 million
+    \item \$700 million
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：理解信用增级的概念}
+    \begin{itemize}
+        \item 信用增级是指为高级债务提供的保护层，由在高级债务之前承担损失的资本提供
+        \item 在资本结构中，损失吸收顺序为：股权 → 次级债 → 高级债
+    \end{itemize}
+
+    \textbf{步骤2：计算信用增级}
+    \begin{itemize}
+        \item 资本结构：高级债 \$300百万，次级债 \$500百万，股权 \$200百万
+        \item 信用增级 = 次级债 + 股权 = \$500百万 + \$200百万 = \$700百万
+        \item 这意味着在高级债遭受损失之前，\$700百万的资本会先吸收损失
+    \end{itemize}
+\end{explanation}
+
+\checklist{信用增级（Credit Enhancement）的定义}
+
+
+\begin{question}
+    A pool of high yield bonds is placed in an SPV and three tranches (including the equity tranche) of bonds are issued collateralized by the bonds to create a Collateralized Bond Obligation (CBO). Which of the following is true?
+\end{question}
+
+\begin{choices}
+    \item At fair value, the value of the issued bonds should be less than the collateral
+    \item At fair value, the total default probability, weighted by size of issue, of the issued bonds should equal the default probability of the collateral pool
+    \item The equity tranche of the CBO has the least risk of default
+    \item The yield on the low risk tranche must be greater than the yield on the collateral pool
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 根据无套利原则，在公允价值下，发行的CBO债券总价值应等于抵押品池的价值，而非小于抵押品价值。
+        \item 如果发行债券价值小于抵押品价值，将存在套利机会。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item CBO通过分层将抵押品池的风险重新分配，但不会创造或消灭风险。
+        \item 在公允价值下，各层级按规模加权的总违约概率必须等于抵押品池的违约概率。
+        \item 这是风险守恒原则的体现，整个CBO结构的总风险等于基础抵押品池的风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 股权层级是CBO中风险最高的层级，它最先承担损失，违约风险最大。
+        \item 风险分配顺序为：股权层级（最高风险）→ 夹层级 → 高级层级（最低风险）。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 低风险层级由于风险最低，其收益率应低于抵押品池的平均收益率。
+        \item 高收益来自于高风险，低风险层级承担的风险低，因此收益率也应较低。
+    \end{itemize}
+\end{explanation}
+
+\checklist{CBO（Collateralized Bond Obligation）的特征}
+
+
+\begin{question}
+    Continuously increasing default probability (while holding default correlation constant) will most likely have what effect on the credit VaR of mezzanine and equity tranches?
+\end{question}
+
+\begin{choices}
+    \item Increase，Increase then decrease
+    \item Increase，Decrease then increase
+    \item Decrease，Increase then decrease
+    \item Decrease，Decrease then increase
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{股权层（Equity Tranche）VaR变化：下降}
+    \begin{itemize}
+        \item 当违约概率持续上升时，股权层最先承担损失，损失确定性增加
+        \item 损失波动性减小，导致VaR下降
+        \item 这是因为股权层是风险最高的层级，违约概率越高，损失越确定，不确定性（风险）越小
+    \end{itemize}
+
+    \textbf{夹层级（Mezzanine Tranche）VaR变化：先升后降}
+    \begin{itemize}
+        \item 在低违约概率时，夹层级表现类似高级层，主要面临尾部风险，VaR随违约概率上升而增加
+        \item 在高违约概率时，夹层级开始承担更多损失，表现类似股权层，VaR随违约概率上升而下降
+        \item 因此夹层级VaR呈现先升后降的趋势
+    \end{itemize}
+\end{explanation}
+
+\checklist{违约概率上升对股权层和夹层级VaR的影响}
+
+
+\begin{question}
+    Which of the following statements on credit enhancement on securitized assets for the purposes of mitigating credit risk and liquidation risk are true?
+    \begin{itemize}
+    \item I. Internal and external enhancements can be used for both credit and liquidity risk.
+    \item II. Liquidity reserves for liquidity risk are similar to a cash collateral account for credit risk.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I only
+    \item II only
+    \item Both I and II
+    \item Neither I nor II
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+        \textbf{陈述I分析：正确}
+        \begin{itemize}
+            \item 内部增级措施（如超额抵押、超额利差、准备金账户等）可以同时用于缓解信用风险和流动性风险
+            \item 外部增级措施（如第三方担保、信用证、保险等）也可以同时用于缓解信用风险和流动性风险
+            \item 因此，内部和外部增级措施都可以用于信用风险和流动性风险，陈述I正确。
+        \end{itemize}
+    
+        \textbf{陈述II分析：正确}
+        \begin{itemize}
+            \item 流动性储备（Liquidity Reserves）是为应对流动性风险而设立的现金账户，用于在现金流暂时短缺时提供资金支持
+            \item 现金抵押账户（Cash Collateral Account）是为应对信用风险而设立的现金账户，用于在发生信用损失时提供资金缓冲
+            \item 两者都是现金形式的储备账户，在功能上具有相似性：都是通过预先储备资金来应对特定风险，陈述II正确。
+        \end{itemize}
+\end{explanation}
+
+\checklist{证券化产品的信用和流动性风险管理}
+
+
+\begin{question}
+    An important step in structuring a securitization is determining an adequate level of credit support or enhancement. Which of the following is not one of common credit enhancement forms for securitization transactions?
+\end{question}
+
+\begin{choices}
+    \item Subordinated tranches of securitization debt
+    \item Excess Spread account
+    \item Cash reserve account
+    \item Sinking fund account
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 次级层级（Subordinated Tranches）是常见的信用增级形式，通过优先级顺序为高级层级提供信用保护。
+        \item 当发生损失时，次级层级最先承担损失，从而保护高级层级。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 超额利差账户（Excess Spread Account）是常见的信用增级形式，通过资产池收益与支出（包括利息支出和费用）的差额提供信用保护。
+        \item 超额利差可用于吸收损失，起到信用增级的作用。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 现金储备账户（Cash Reserve Account）是常见的信用增级形式，通过预先预留现金来提供信用保护。
+        \item 当发生信用损失时，现金储备账户可用于弥补损失。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 偿债基金（Sinking Fund）不是信用增级形式，而是债券发行的常规安排，用于定期赎回债券本金。
+        \item 偿债基金的主要目的是管理债券的到期和赎回，与信用增级（提供信用保护）无关。
+        \item 信用增级旨在降低信用风险，而偿债基金是债务管理工具。
+    \end{itemize}
+\end{explanation}
+
+\checklist{次贷证券化市场中的摩擦因素}
+
+\begin{question}
+    Which of the following is not a friction in the subprime securitization market?
+\end{question}
+
+\begin{choices}
+    \item Investor and rating agency
+    \item Servicer and mortgagor
+    \item Mortgagor and arranger
+    \item Asset manager and investor
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 投资者与评级机构之间存在摩擦，主要表现为评级机构可能低估风险或存在利益冲突，而投资者可能过度依赖评级机构的评级，导致信息不对称问题
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 服务商（Servicer）与借款人（Mortgagor）之间存在摩擦，主要表现为服务商可能缺乏充分激励去积极管理贷款，存在代理问题，借款人可能面临服务质量问题
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 借款人（Mortgagor）与承销人（Arranger）之间没有直接关系，因此不存在摩擦
+        \item 在次贷证券化流程中，借款人通过发起人（Originator）申请贷款，然后发起人将贷款卖给承销人进行证券化，借款人与承销人之间没有直接接触或交易关系
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 资产管理人（Asset Manager）与投资者之间存在摩擦，主要表现为代理问题、利益冲突和信息不对称，资产管理人的利益可能与投资者利益不一致
+    \end{itemize}
+\end{explanation}
+
+\checklist{次贷证券化市场中的摩擦因素}
+
+
+\begin{question}
+    A hedge fund is considering taking positions in various tranches of a collateralized debt obligation (CDO). The fund's chief economist predicts that the default probability will decrease significantly and that the default correlation will increase. Based on this prediction, which of the following is a good strategy to pursue?
+\end{question}
+
+\begin{choices}
+    \item Buy the senior tranche and buy the equity tranche
+    \item Buy the senior tranche and sell the equity tranche
+    \item Sell the senior tranche and sell equity tranche
+    \item Sell the senior tranche and buy the equity tranche
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 违约概率下降对股权层有利，应该做多股权层。
+        \item 但违约相关性上升对高级层不利，不应该做多高级层。
+        \item 该策略做多高级层和股权层，没有正确考虑违约相关性上升对高级层的负面影响。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 违约概率下降和违约相关性上升都对股权层有利，应该做多股权层。
+        \item 该策略做空股权层，完全误解了市场预期对股权层的影响。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 违约概率下降和违约相关性上升都对股权层有利，应该做多股权层。
+        \item 该策略做空股权层和高级层，完全误解了市场预期对股权层的影响。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 违约概率下降对所有层级都有利，但违约相关性上升对股权层有利、对高级层不利。
+        \item 当违约相关性上升时，股权层受益于"都不违约"的极端情况，而高级层面临更多尾部风险。
+        \item 因此应该做多股权层（两个因素都对其有利），做空高级层（违约相关性上升的不利影响超过违约概率下降的有利影响）。  
+    \end{itemize}
+\end{explanation}
+
+\checklist{违约概率下降和相关性上升对股权层和高级层的影响}
+
+
+\begin{question}
+    Which of the following subprime characteristics provide direct protection for senior tranches?
+\end{question}
+
+\begin{choices}
+    \item Subordination, excess spread, and shifting interest
+    \item Subordination, prepayments, and shifting interest
+    \item Overcollateralization, excess spread, and tinning of losses
+    \item Overcollateralization, excess spread, and prepayments
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 分层（Subordination）通过优先级顺序为高级层提供直接保护，次级层级先承担损失，从而保护高级层
+        \item 超额利差（Excess Spread）通过资产池收益大于支出的差额提供额外的信用保护，可用于吸收损失
+        \item 利率锁定期（Shifting Interest）在锁定期内将本金优先偿付高级层，中间层只能获得利息，从而为高级层提供直接保护
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 提前还款（Prepayments）不是直接保护机制，它可能加速或延缓现金流，但不会直接为高级层提供信用保护
+        \item 提前还款是现金流管理特征，而非信用增级机制
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 损失时间（Timing of Losses）不是直接保护机制，它只影响超额利差的使用，而非为高级层提供直接保护
+        \item 损失时间管理的是损失发生的时间，而非信用增级本身
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 提前还款（Prepayments）不是直接保护机制，它可能加速或延缓现金流，但不会直接为高级层提供信用保护
+        \item 超额抵押（Overcollateralization）虽然可以提供保护，但该选项包含提前还款，因此整体不正确
+    \end{itemize}
+\end{explanation}
+
+\checklist{次贷证券化中的信用增级机制}
+
+
+\begin{question}
+    Which of the following statements most accurately describes the effect of selling a loan without recourse?
+\end{question}
+
+\begin{choices}
+    \item The bank that sells the loan retains a contingent liability
+    \item The bank that sells the loan bears a specified percentage of the credit risk
+    \item The loan is removed from the balance sheet of the bank that sells the loan
+    \item The purchaser has the right to sell the loan back to the bank that originated the loan
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 无追索权出售（Sale without Recourse）意味着银行不保留任何或有负债，所有信用风险完全转移给买方。如果银行保留或有负债，那就是有追索权出售，而不是无追索权出售。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 无追索权出售意味着银行完全不承担任何信用风险，所有信用风险都转移给买方。如果银行承担指定比例的信用风险，那就是部分追索权或风险分担安排，而不是无追索权出售。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 无追索权出售意味着银行将贷款的所有权利和义务转移给买方，贷款从出售银行的资产负债表中移除。所有信用风险都转移给买方，银行不再承担任何与贷款相关的风险或义务。这是无追索权出售的核心特征：完全的资产转移和风险转移。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 无追索权出售意味着买方不能将贷款卖回给银行，买方承担所有信用风险。如果买方有权利将贷款卖回给银行，那就是有追索权出售，而不是无追索权出售。
+    \end{itemize}
+\end{explanation}
+
+\checklist{无追索权出售贷款的影响}
+
+
+\begin{question}
+    During the recent credit crisis, subprime mortgages received pressure from upward movements in interest rates, along with the impossibility for most of these borrowers to refinance. As a result, many subprime borrowers allowed their reduced value homes to be taken over by the lender. All of the following statements describe the effect subprime actions had on mortgage-backed security portfolios except:
+\end{question}
+
+\begin{choices}
+    \item Repayment issues in lower tranches impacted confidence in higher tranches
+    \item There was a fire sale of securitized debt
+    \item Panic among MBS investors led to a flight to safer assets
+    \item The defaults in the lower tranches were high but did not affect senior tranche investors
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 次级层级还款问题确实影响了高级层投资者的信心，这是次贷危机的典型特征，该选项准确描述了次贷行为对MBS投资组合的影响。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 确实发生了证券化债务的甩卖（fire sale），这是市场恐慌的表现，该选项准确描述了次贷行为对MBS投资组合的影响。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item MBS投资者确实出现恐慌，导致资金转向更安全的资产（flight to quality），该选项准确描述了次贷行为对MBS投资组合的影响。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 该说法不符合实际情况：次级层级的高违约率确实影响了高级层投资者，信心危机蔓延到所有层级，高级层投资者也受到损失和影响，因此该选项没有准确描述次贷行为对MBS投资组合的影响。
+    \end{itemize}
+\end{explanation}
+
+\checklist{次贷危机中次级层级违约对所有层级投资者的影响}
+
+
+\begin{question}
+    Which of the following statements about portfolio losses and default correlation are most likely correct?
+    I. Increasing default correlation decreases senior tranche values but increases equity tranche values.
+    II. At high default rates, increasing default correlation decreases mezzanine bond prices.
+\end{question}
+
+\begin{choices}
+    \item I only
+    \item II only
+    \item Both I and II
+    \item Neither I nor II
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+
+  
+\textbf{陈述I正确。}
+        \begin{itemize}
+            \item 违约相关性上升增加极端组合收益的可能性。
+            \item 高违约可能性降低高级层价值，低违约可能性提高股权层价值。
+        \end{itemize}
+\textbf{陈述II错误。}
+        \begin{itemize}
+            \item 高违约率时，相关性上升增加极端收益可能性。
+            \item 这对股权层和夹层级都有利，不会降低夹层级债券价格。
+        \end{itemize}
+
+
+\end{explanation}
+
+\checklist{违约相关性上升对高级层和股权层的影响}
+
+
+\begin{question}
+    How many of the following statements concerning the capital structure in a securitization are most likely correct?
+    \begin{itemize}
+        \item I. The mezzanine tranche is typically the smallest tranche size.
+        \item II. The mezzanine and equity tranches typically offer fixed coupons.
+        \item III. The senior tranche typically receives the lowest coupon.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item No statements are correct
+    \item One statement is correct
+    \item Two statements are correct
+    \item Three statements are correct
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{陈述I分析：错误}
+    \begin{itemize}
+        \item 夹层级（Mezzanine Tranche）通常不是最小的层级，股权层（Equity Tranche）通常是最小的层级，股权层最先承担损失，规模最小。
+    \end{itemize}
+
+    \textbf{陈述II分析：错误}
+    \begin{itemize}
+        \item 夹层级可能提供固定票息，但股权层通常不提供固定票息，股权层获得剩余现金流，收益取决于资产池的表现。
+    \end{itemize}
+
+    \textbf{陈述III分析：正确}
+    \begin{itemize}
+        \item 高级层（Senior Tranche）被认为是最安全的层级，风险最低，因此通常获得最低的票息（收益率）。
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{证券化产品中的资本结构特征}
+
+
+\begin{question}
+    A firm is experiencing financial difficulties. Using a contingent claims approach, which of the following best describes the valuation of their senior and subordinated debt?
+\end{question}
+
+\begin{choices}
+    \item Both the senior debt and subordinated debt have positive exposures to debt maturity, firm volatility, and interest rates
+    \item The senior debt has negative exposures to debt maturity, firm volatility, and interest rates. The subordinated debt has positive exposures to debt maturity, firm volatility, and interest rates
+    \item The senior debt has positive exposures to debt maturity, firm volatility, and interest rates. The subordinated debt has negative exposures to debt maturity, firm volatility, and interest rates
+    \item Both the senior debt and subordinated debt have negative exposures to debt maturity, firm volatility, and interest rates
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 高级债对到期期限、公司波动率和利率都有负向敞口，该选项误解了高级债的特征。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 高级债对到期期限、公司波动率和利率都有负向敞口，因为高级债更安全，风险增加会降低其价值。
+        \item 次级债在财务困境时表现类似股权，对到期期限、公司波动率和利率都有正向敞口，因为风险增加可能提高其价值。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 高级债对这些因素有负向敞口，而次级债在财务困境时对这些因素有正向敞口，该选项完全误解了债务特征。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 次级债在财务困境时对这些因素有正向敞口，该选项误解了次级债的特征。
+    \end{itemize}
+\end{explanation}
+
+\checklist{财务困境时高级债和次级债的敞口特征}
+
+
+\begin{question}
+    Which of the following methods is typically implemented as the second stage of principal component analysis?
+\end{question}
+
+\begin{choices}
+    \item Factor analysis
+    \item Divisive clustering
+    \item Hierarchical clustering
+    \item The canonical correlation method
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 主成分分析的第二阶段是对新变量（因子载荷）进行标准化，因子分析是常用的第二阶段方法。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 分裂聚类不是主成分分析的第二阶段，这是另一种聚类方法，与主成分分析无关。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 层次聚类不是主成分分析的第二阶段，这是另一种聚类方法，与主成分分析无关。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 典型相关方法不是主成分分析的第二阶段，这是另一种统计分析方法，与主成分分析无关。
+    \end{itemize}
+\end{explanation}
+
+\checklist{主成分分析的第二阶段方法}
+
+
+\begin{question}
+    Under the contingent claim approach to the firm's capital structure, which of the following statements is true? Assume the amount of senior debt, subordinated debt, and equity is represented as F, U, and S, respectively.
+\end{question}
+
+\begin{choices}
+    \item The value of subordinated debt is less than the value of senior debt
+    \item Subordinated debt can be represented by a long call with exercise price of F and short call
+    \item Subordinated debt behaves more like equity in distress and more like debt when the firm is not in distress
+    \item The value of subordinated debt is always greater than the value of equity
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 次级债价值不一定小于高级债，相对金额可能差异很大，该选项过于绝对。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 次级债应该表示为执行价格为F的看涨期权多头和执行价格为F+U的看涨期权空头，该选项误解了期权组合。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 财务困境时，股权价值较小，次级债表现类似股权，更接近获得剩余现金流。
+        \item 非财务困境时，公司价值较高，次级债表现类似传统债务。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 次级债价值不一定大于股权，相对金额可能差异很大，该选项过于绝对。
+    \end{itemize}
+\end{explanation}
+
+\checklist{财务困境时次级债的行为特征}
+
+
+\begin{question}
+    Harrison Michaels, FRM, an analyst at Hudson Risk Analytics, is discussing the default sensitivities of equity, mezzanine, and senior tranches and makes the following statements. Which of the following statements is(are) most likely correct?
+    I. Default sensitivities are largest close to the attachment point between tranches.
+    II. Default sensitivities are computed by shocking the credit default swap (CDS) default curve.
+\end{question}
+
+\begin{choices}
+    \item I only
+    \item II only
+    \item Both I and II
+    \item Neither I nor II
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 陈述I正确：违约敏感性在层级连接点附近最大，这是因为损失接近连接点时影响最大，所有层级的违约敏感性都是正值，高违约率时敏感性趋近于零。
+        \item 陈述II错误：违约敏感性不是通过冲击CDS违约曲线计算，而是通过冲击各种假设的违约概率计算，该陈述误解了计算方法。
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{违约敏感性的计算方法}
+
+\begin{question}
+    Advanced Pharmaceuticals is considering an investment in a very risky drug therapy treatment. If the investment is successful, Advanced Pharmaceuticals can earn substantial profits. On the other hand, if the therapy treatments create long-term side-effects, the firm will be subject to expensive litigation. How should Advanced Pharmaceuticals structure its investment to minimize its cost of capital?
+\end{question}
+
+\begin{choices}
+    \item Ring-fence the investment so a special purpose entity (SPE) can issue debt at lower costs
+    \item Ring-fence the investment into a SPE so the parent company can increase transparency
+    \item Securitize the investment due to its predictable cash flows
+    \item Sell the investment in a true sale, increasing adverse selection
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item SPE本身包含高风险投资，发行债务成本会更高，该选项误解了SPE的作用。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 通过SPE隔离风险投资，母公司剩余资产更透明，可以以更优惠条件发行债务，降低资本成本。
+        \item 真实销售可以在法律上分离风险投资，提高透明度，减少逆向选择。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 该投资没有可预测的现金流，不像抵押贷款或汽车贷款，该选项误解了证券化的条件。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 真实销售会减少逆向选择，不会增加逆向选择，该选项误解了真实销售的影响。
+    \end{itemize}
+\end{explanation}
+
+\checklist{通过SPE隔离风险投资的优缺点}
+
+
+\begin{question}
+    Harris Smith, CFO of XYZ Bank Corp, is considering a \$500 million loan securitization. He has enlisted a well-respected structuring agent to help decide on the most beneficial structure. XYZ is a \$100 billion regional bank with a moderately strong balance sheet. Its current credit rating on unsecured debt is BBB. It recently issued a secured bond issue with a credit rating of A after ring-fencing certain assets. XYZ desires to minimize the cost of funds and achieve AAA credit rating on the senior tranche of the new securitization. After reviewing the financials of XYZ and forecasting future economic conditions, the structure has recommended an arbitrage CDO with the following loss distributions: Equity tranche: 0-30\%. Junior tranche: 30-50\%. Smith should use which of the following CDO structures?
+\end{question}
+
+\begin{choices}
+    \item Arbitrage CDO with \$25 million equity tranche
+    \item Arbitrage CDO with \$150 million equity tranche
+    \item Balance sheet CDO with \$25 million equity tranche
+    \item Balance sheet CDO with \$150 million equity tranche
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 银行要证券化自己发放的贷款，应该使用资产负债表CDO，该选项选择了错误的CDO类型。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 银行要证券化自己发放的贷款，应该使用资产负债表CDO，且股权层级过大，该选项完全错误。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 资产负债表CDO适合证券化银行自身贷款，符合银行的需求。
+        \item 股权层级\$25百万占发行总额的5\%，规模适中，可以保持高级层AAA评级，有助于最小化融资成本。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 资产负债表CDO类型正确，但股权层级过大，可能影响高级层评级，该选项部分正确但整体错误。
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行证券化贷款的CDO结构选择}
+
+
+\begin{question}
+    Which of the following statements regarding subprime mortgages is true?
+    \begin{itemize}
+        \item I. Senior tranches receive the highest return due to overcollateralization.
+        \item II. Corporate bonds and subprime pools with the same credit rating will exhibit the same variation in losses.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I only
+    \item II only
+    \item Both I and II
+    \item Neither I nor II
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：错误}
+    \begin{itemize}
+        \item 高级层（Senior Tranches）获得最低收益而非最高收益，因为高级层在资本结构中优先级最高、风险最低。超额抵押提供信用保护而非提高收益，这是风险与收益匹配原则的体现。
+    \end{itemize}
+
+    \textbf{陈述II分析：错误}
+    \begin{itemize}
+        \item 相同信用评级下，公司债券和次贷资产池的损失波动性不同。ABS结构（资产支持证券）的损失波动性通常更大，因为资产池的集中度、相关性等因素会导致损失分布更加分散。
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{次贷证券化中的损失波动性特征}
+
+
+
+\begin{question}
+    The manager makes additional observations as follows:
+    \begin{itemize}
+        \item The loans in the collateral pool pay a fixed spread of 2.2\% over the swap curve
+        \item There were no defaults in year 1
+        \item The value of the overcollateralization account at the end of year 1 was EUR 0
+    \end{itemize}
+    What is the value of the overcollateralization account at the end of year 2 if there are 8 defaults in year 2?
+\end{question}
+
+\begin{choices}
+    \item EUR 600,000
+    \item EUR 1,056,000
+    \item EUR 2,544,000
+    \item EUR 3,600,000
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{步骤1：理解超额抵押账户的积累机制}
+    \begin{itemize}
+        \item 超额抵押账户通过贷款利差（2.2\%）积累资金，用于吸收损失
+        \item 第一年无违约，但账户价值为0，说明利差可能用于支付其他费用或初始设置
+    \end{itemize}
+
+    \textbf{步骤2：计算超额抵押账户价值}
+    \begin{itemize}
+        \item 超额抵押账户价值 = 利差收入 - 已使用的资金
+        \item 假设资产池规模为S，第二年利差收入 = S × 2.2\%
+        \item 8笔违约的损失需要从超额抵押账户中扣除
+        \item 根据计算：超额抵押账户价值 = EUR 2,544,000
+        \item 计算逻辑：利差收入减去违约损失和其他费用后的净额
+    \end{itemize}
+
+
+   
+\end{explanation}
+
+\checklist{超额抵押账户的计算方法}
+【疑惑】
+
+
+
+\begin{question}
+    Assume an MBS is composed of the following four different pools of mortgages: \$2 million of mortgages that have a maturity of 90 days. \$3 million of mortgages that have a maturity of 180 days. \$5 million of mortgages that have a maturity of 270 days, \$10 million of mortgages that have a maturity of 360 days. What is the weighted average maturity (WAM) of these mortgage pools?
+\end{question}
+
+\begin{choices}
+    \item 167 days
+    \item 225 days
+    \item 252 days
+    \item 284 days
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{步骤1：计算总金额}
+    \begin{itemize}
+        \item 总金额 = \$2M + \$3M + \$5M + \$10M = \$20M
+    \end{itemize}
+
+    \textbf{步骤2：计算加权平均期限（WAM）}
+    \begin{itemize}
+        \item WAM公式：\[WAM = \frac{\sum (\text{期限}_i \times \text{金额}_i)}{\sum \text{金额}_i}\]
+        \item WAM = (90×2 + 180×3 + 270×5 + 360×10) / 20 = 5670 / 20 = 284天
+    \end{itemize}
+\end{explanation}
+
+\checklist{抵押贷款支持证券的加权平均期限计算方法}
+
+
+\begin{question}
+    Suppose the annual prepayment rate CPR for a mortgage-backed security is 6 percent. What is the corresponding single-monthly mortality rate SMM?
+\end{question}
+
+\begin{choices}
+    \item 0.514\%
+    \item 0.334\%
+    \item 0.500\%
+    \item 1.355\%
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 计算过程：
+             $CPR = 6\%SMM = 1 - (1 - 0.06)^{1/12}
+             = 1 - (1 - 0.06)^{1/12}
+             = 0.514\%$
+    \end{itemize}
+
+
+\end{explanation}
+
+\checklist{年提前还款率转换为月提前还款率}
+
+\begin{question}
+    Securitized products are often customized to meet the needs of the investor as well as the originator. What type of asset-backed securities (ABSs) typically uses a revolving structure?
+\end{question}
+
+\begin{choices}
+    \item Residential mortgage
+    \item Credit card debt
+    \item Commercial mortgage
+    \item Commercial paper
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 住宅抵押贷款不使用循环结构，有固定的还款计划，该选项与循环结构无关。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 信用卡债务使用循环结构，没有预先设定的还款计划，本金以大额方式偿还。
+        \item 分为循环期和摊销期：循环期将本金用于购买新贷款，摊销期进行最终偿付。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 商业抵押贷款不使用循环结构，有固定的还款计划，该选项与循环结构无关。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 商业票据不使用循环结构，有固定的到期日，该选项与循环结构无关。
+    \end{itemize}
+\end{explanation}
+
+\checklist{信用卡债务证券化的结构特征}
+
+
+
+\begin{question}
+    Which of the following statements regarding credit enhancements in the process of structuring a securitization through a special purpose vehicle (SPV) is correct?
+\end{question}
+
+\begin{choices}
+    \item The securitization process is structured such that the asset side of the SPV has a lower cost than the liability side of the SPV
+    \item Credit enhancements are typically only associated with mortgage-backed securities (MBS) and are not used in other types of asset-backed securities (ABS)
+    \item The most senior class of notes is often overcollateralized in order to reduce the risk of the asset-backed security (ABS)
+    \item A margin step-up is sometimes used by an asset-backed securities (ABS) where the coupon structure increases after a call date
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item SPV的负债成本应低于资产成本，这样才能产生超额利差，该选项与实际情况相反。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 信用增级不仅用于MBS，也用于其他类型的ABS（如汽车贷款、信用卡债务等），该选项过于局限。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 最低层级票据（股权层或夹层级）通常被超额担保，而非最高层级（高级层），该选项误解了超额担保的对象。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item ABS可能使用利差递增（Margin Step-up）作为信用增级方式，在赎回日期后提高票息结构，有助于提高证券的吸引力并鼓励提前赎回。
+    \end{itemize}
+\end{explanation}
+
+\checklist{ABS的信用增级机制}
+
+\begin{question}
+    A major benefit of securitization for a financial institution is the ability to remove assets from the balance sheet, which lowers risk and the required regulatory capital. While a large portion of the risk is removed from the balance sheet the originating financial institution often maintains a portion of the risk. Which of the following terms best identify the risk that is maintained by the originator?
+\end{question}
+
+\begin{choices}
+    \item Correlation
+    \item Excess spread
+    \item First-loss piece
+    \item Guarantor of collateral value
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 相关性不是发起人保留的风险，这是资产池的特征，与风险保留无关。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 超额利差不是发起人保留的风险，这是信用增级方式，与风险保留无关。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 第一损失部分（First-loss piece）是发起人通常保留的风险部分，信用质量最低，违约时最先承担损失。
+        \item 发起人保留第一损失部分的所有权，这代表发起人保留的风险，用于向投资者展示对资产质量的信心。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 抵押品价值担保不是发起人保留的风险，这是外部信用增级方式，与风险保留无关。
+    \end{itemize}
+\end{explanation}
+
+\checklist{发起人保留第一损失部分的所有权的原因}
+
+\begin{question}
+    Which of the following is an example of internal enhancements?
+\end{question}
+
+\begin{choices}
+    \item CDS
+    \item Put options on assets
+    \item Overcollateralization
+    \item Letters of credit
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item CDS（信用违约互换）是外部信用增级，需要第三方参与，与内部增级无关。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 资产看跌期权是外部信用增级，需要第三方参与，与内部增级无关。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 超额担保（Overcollateralization）是内部信用增级方式，通过资产池价值超过证券发行规模来提供保护。
+        \item 其他内部增级方式还包括：直接股权发行、自留、现金担保账户、超额利差等，这些都不需要第三方参与。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 信用证是外部信用增级，需要银行等第三方参与，与内部增级无关。
+    \end{itemize}
+\end{explanation}
+
+\checklist{内部信用增级与外部信用增级的区别}
+
+\begin{question}
+    Under a 200\% PSA model, what is the single monthly mortality (SMM) for, respectively, month 10 and month 30?
+\end{question}
+
+\begin{choices}
+    \item 0.12\% and 0.36\%
+    \item 0.17\% and 0.51\%
+    \item 0.28\% and 0.65\%
+    \item 0.34\% and 1.06\%
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：理解PSA模型}
+    \begin{itemize}
+        \item 基础PSA模型：每月增加0.2\% CPR（年提前还款率），直到第30个月达到6\%，之后保持6\%不变
+        \item 200\% PSA = 2 × 100\% PSA，即CPR翻倍
+    \end{itemize}
+
+    \textbf{步骤2：计算第10个月的SMM}
+    \begin{itemize}
+        \item 第10个月：100\% PSA = 0.2\% × 10 = 2.0\%
+        \item 第10个月：200\% PSA = 2.0\% × 2 = 4.0\%
+        \item SMM公式：$SMM = 1 - (1 - CPR)^{1/12}$
+        \item SMM = $1 - (1 - 4.0\%)^{1/12} = 0.34\%$
+    \end{itemize}
+
+    \textbf{步骤3：计算第30个月的SMM}
+    \begin{itemize}
+        \item 第30个月：100\% PSA = 0.2\% × 30 = 6.0\%
+        \item 第30个月：200\% PSA = 6.0\% × 2 = 12.0\%
+        \item SMM = $1 - (1 - 12.0\%)^{1/12} = 1.06\%$
+    \end{itemize}
+\end{explanation}
+
+\checklist{PSA模型下的月提前还款率}
+
+\begin{question}
+    The maximum benefits to the buyer of a credit-linked note (CLN) accrue when:
+\end{question}
+
+\begin{choices}
+    \item There is a small credit downgrade
+    \item There is no credit downgrade
+    \item There is a large credit downgrade
+    \item There is a default
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item CLN购买者的最大收益发生在没有信用降级或违约时，此时购买者可以获得高额回报（票息和本金）。
+        \item CLN是一种信用衍生品，购买者承担信用风险以换取高收益，当参考实体信用状况良好时，购买者获得最大收益。
+    \end{itemize}
+
+
+\end{explanation}
+
+\checklist{信用联结票据（Credit-Linked Note）的收益特征}
+
+\begin{question}
+    Which of the following participants in the securitization process is least likely to face a conflict of interest?
+\end{question}
+
+\begin{choices}
+    \item Credit rating agency and servicer
+    \item Servicer and underwriter
+    \item Custodian and trustee
+    \item Trustee and manager
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 评级机构和服务商存在利益冲突，评级机构需要客观评级，但服务商的服务质量可能影响评级结果，导致利益冲突。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 服务商和承销商存在利益冲突，服务商负责资产服务，承销商负责证券销售，两者在利益分配上可能存在冲突。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 托管人（Custodian）和受托人（Trustee）在证券化过程中主要负责资产保管和监督，不参与核心业务决策，利益冲突最小。
+        \item 两者的职责相对独立且互补，托管人负责资产保管，受托人负责监督执行，不存在直接的利益冲突。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 受托人和管理人存在利益冲突，受托人负责监督，管理人负责投资决策，两者在决策权和监督权上可能存在冲突。
+    \end{itemize}
+\end{explanation}
+
+\checklist{托管人和受托人在证券化过程中的利益冲突}
+
+
+\begin{question}
+    Which of the following measures are most likely to be used by a securitized product backed by student loans?
+\end{question}
+
+\begin{choices}
+    \item Single monthly mortality (SMM), constant prepayment rate (CPR), and Public Securities Association (PSA)
+    \item Loss curves and absolute prepayment speed (APS)
+    \item Weighted average life (WAL), weighted average maturity (WAM), and weighted average coupon (WAC)
+    \item Debt service coverage ratio (DSCR) and monthly payment rate (MPR)
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 学生贷款证券化常用SMM（月提前还款率）、CPR（固定提前还款率）和PSA（公共证券协会）提前还款模型。
+        \item 这些指标适用于学生贷款和抵押贷款等有提前还款特征的资产，用于衡量和管理提前还款风险。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 损失曲线和绝对提前还款速度（APS）不适用于学生贷款证券化，这些指标主要用于其他类型的资产支持证券。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 加权平均期限（WAL）、加权平均到期日（WAM）和加权平均票息（WAC）是资产池的基本特征指标，但不是学生贷款证券化特有的衡量提前还款风险的主要指标。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 偿债覆盖率（DSCR）和月还款率（MPR）主要用于商业房地产贷款等，不适用于学生贷款证券化。
+    \end{itemize}
+\end{explanation}
+
+\checklist{学生贷款证券化的衡量指标}
+
+
+\begin{question}
+    As the CRO of a retail bank, you are presenting to your Risk Committee the benefits of securitizing a pool of mortgages. Which of the following would you use to support your arguments that this will benefit the bank? 
+    \begin{itemize}
+        \item I. It will improve your bank's return on capital
+        \item II. Will immediately increase your bank's available capital
+        \item III. You will be able to offer an attractive yield to investors
+        \item IV. It will lower your borrowing costs
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I and III only
+    \item I, III, and IV only
+    \item I, II, III and IV
+    \item I, II, and IV only
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 证券化将资产从资产负债表移除，降低监管资本要求，从而提高资本回报率（ROE）。
+    \end{itemize}
+
+    \textbf{陈述II分析：正确}
+    \begin{itemize}
+        \item 证券化将资产从资产负债表移除，释放监管资本，立即增加银行的可用资本。
+    \end{itemize}
+
+    \textbf{陈述III分析：正确}
+    \begin{itemize}
+        \item 通过证券化，银行可以将资产池分层，为不同风险偏好的投资者提供有吸引力的收益率。
+    \end{itemize}
+
+    \textbf{陈述IV分析：正确}
+    \begin{itemize}
+        \item 证券化通过分层和信用增级，可以获得更高的信用评级，从而降低融资成本。
+    \end{itemize}
+\end{explanation}
+
+\checklist{抵押贷款证券化的经济效益}
+
+
+\begin{question}
+    Which of the following statements was not one of the flaws in the securitization process prior to the start of the credit crisis in 2007?
+\end{question}
+
+\begin{choices}
+    \item An active originate-to-distribute model where a strong profit motive took precedence over ethical lending and underwriting
+    \item The securitized products were so opaque that investors could not evaluate the true risks of the investment
+    \item Structured investment vehicles (SIVs) were used to enhance the risk discovery process for investors and regulators
+    \item Banks held securitized assets in off-balance-sheet entities, thus further masking the true risks in the system
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这是2007年危机前证券化过程的缺陷之一，主动的"发放-分销"模式使利润动机优先于道德放贷和承销标准，导致风险累积。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 这是2007年危机前证券化过程的缺陷之一，证券化产品过于不透明，投资者无法评估真实风险，导致风险被低估。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 该选项描述的不是缺陷，而是一个错误的说法：SIVs（结构性投资工具）实际上增加了不透明度，是银行的表外实体，使投资者和监管者难以审查风险，而不是用于增强风险发现过程。
+        \item 因此，C选项不是在描述一个缺陷，而是错误地声称SIVs有正面作用，所以它不是缺陷之一。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这是2007年危机前证券化过程的缺陷之一，银行将证券化资产存放在表外实体中，进一步掩盖了系统中的真实风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{结构性投资工具（SIVs）的作用}
+
+
+\begin{question}
+    In a securitized transaction, over-collateralization results when:
+\end{question}
+
+\begin{choices}
+    \item The originator puts aside some cash in a reserve account to absorb credit losses
+    \item A securitization transaction carves up the cash flows generated from the asset pool into various pieces
+    \item The interest payments and other fees received on the assets in the pool exceed the interest payment made on the asset-backed security (ABS) plus the fee paid to service the assets along with miscellaneous expenses
+    \item The value of the assets in the pool exceeds the amount of asset-backed security(ABS) involved
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这是现金储备账户（Cash Reserve Account）的定义，发起人预留现金用于吸收信用损失，不是超额抵押。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 这是分级结构（Tranche Structure）的定义，将资产池产生的现金流分成不同层级，不是超额抵押。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这是超额利差（Excess Spread）的定义，资产池的利息收入和其他费用超过ABS的利息支出、服务费用和其他费用，不是超额抵押。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 超额抵押（Over-collateralization）是指资产池的价值超过发行的ABS金额，实际发行的证券规模小于资产规模，这是一种内部信用增级方式，为投资者提供额外保护。
+    \end{itemize}
+\end{explanation}
+
+\checklist{超额抵押的定义}
+
+
+
+\begin{question}
+    A pass-through mortgage-backed security (MBS) with a weighted average maturity (WAM) of 30 months has an original principle balance of \$2.0 billion. If the valuation model assumes a 300\% PSA prepayment speed, which is nearest to the first month's prepaid (not scheduled) principal?
+\end{question}
+
+\begin{choices}
+    \item \$519,000
+    \item \$833,000
+    \item \$1.00 million
+    \item \$2.15 million
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{步骤1：计算第一个月的CPR}
+    \begin{itemize}
+        \item 基础PSA模型：第一个月100\% PSA = 0.2\% CPR（每月增加0.2\%）
+        \item 300\% PSA = 3 × 0.2\% = 0.6\% CPR
+    \end{itemize}
+
+    \textbf{步骤2：将CPR转换为SMM}
+    \begin{itemize}
+        \item SMM公式：$SMM = 1 - (1 - CPR)^{1/12}$
+        \item SMM = $1 - (1 - 0.006)^{1/12} = 1 - 0.994^{0.0833} = 0.00050138$
+    \end{itemize}
+
+    \textbf{步骤3：计算第一个月的提前还款金额}
+    \begin{itemize}
+        \item 提前还款金额 = SMM × 原始本金余额
+        \item = 0.00050138 × \$2,000,000,000 = \$1,002,760
+        \item 最接近 \$1.00 million
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{300\% PSA模型下首月提前还款金额的计算方法}
+
+
+\begin{question}
+    A risk consultant is reviewing a proposal for a US-based startup credit card company. A member of the senior management asks about the benefit of securitizing the company's loan book and the type of asset securitization structure that would best suit the credit card debt portfolio. If the consultant recommends securitization, which securitization structure would be most appropriate and why？
+\end{question}
+
+\begin{choices}
+    \item An amortizing structure, because principal payments from the credit assets are paid to investors in a series of equal installments or in a lumpsum at maturities
+    \item A master trust structure, because the structure allows multiple securitizations to be issued, and notes are issued out of the credit asset pool based on investor demand
+    \item An amortizing structure, because the credit assets have relatively long maturities and low prepayment speeds
+    \item A master trust structure, because the structure assumes no change in prepaymert speed, and investors are paid principal and interest on a coupon-by-coupon basis
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 信用卡债务不适合分期偿还结构（Amortizing Structure），因为信用卡没有固定还款计划，本金支付不确定，不适合等额分期偿还或到期一次性偿还的结构。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 主信托结构（Master Trust Structure）最适合信用卡债务证券化，因为可以发行多个证券化产品，根据投资者需求灵活发行票据。
+        \item 这种结构适合信用卡债务的特点：没有固定期限、提前还款不确定、需要循环结构，主信托结构提供了更高的灵活性。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 信用卡债务期限不固定，提前还款速度并不低，不适合分期偿还结构，该选项对信用卡债务的特征描述错误。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 主信托结构类型正确，但描述不准确：主信托结构不假设固定提前还款速度，也不是按票息逐期支付本息，该选项部分正确但描述错误。
+    \end{itemize}
+\end{explanation}
+
+\checklist{信用卡债务证券化的结构选择}
+
+
+\begin{question}
+    A fixed-income portfolio manager at a financial institution is estimating the weighted average coupon (WAC) of an MBS pool before making an investment. The pool consists of four residential mortgage loans. Information about the loans at the beginning of a specified month is given below:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|l|c|l|c|}
+        \hline
+        Loan & Outstanding beginning balance & Interest(coupon) rate & Scheduled principal payment & Remaining term (months) \\
+        \hline
+        1 & USD 240,000 & 6.5\% & USD 18,800 & 16 \\
+        \hline
+        2 & USD 525,000 & 5.0\% & USD 23,000 & 34 \\
+        \hline
+        3 & USD 470,000 & 6.8\% & USD 28,700 & 14 \\
+        \hline
+        4 & USD 875,000 & 3.0\% & USD 23,600 & 60 \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    What is the WAC of the MBS pool at the beginning of the month and what is the pool's ability to pay if the net coupon payable to investors in the MBS tranches is 4.76\%？
+\end{question}
+
+\begin{choices}
+    \item WAC is 4.44\% and the pool's ability to pay is relatively weak
+    \item WAC is 4.74\% and the pool's ability to pay is relatively weak
+    \item WAC is 4.77\% and the pool's ability to pay is relatively strong
+    \item WAC is 5.35\% and the pool's ability to pay is relatively strong
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+   
+
+    \textbf{B选项正确。}
+        \begin{itemize}
+            \item 总余额 = 240,000 + 525,000 + 470,000 + 875,000 = 2,110,000
+            \item WAC = (240,000×6.5\% + 525,000×5.0\% + 470,000×6.8\% + 875,000×3.0\%) / 2,110,000= 4.74\%
+            \item 支付能力较弱，因为WAC(4.74\%) < 投资者票息(4.76\%)
+        \end{itemize}
+
+\end{explanation}
+
+\checklist{加权平均票息低于投资者票息时资产池的支付能力}
+
+\begin{question}
+    A risk analyst at a hedge fund is assessing the following positions held by the fund:
+    \begin{itemize}
+        \item Contingent convertible bonds (CoCos) issued by GTU Bank; the triggering event for the conversion is when the price of GTU Bank's publicly traded stock reaches a specified threshold
+        \item Senior tranche of an MBS issued by a bankruptcy-remote special purpose vehicle; the mortgages in the securitization are originated by GTU Bank
+        \item Interest rate swap contract as the fixed-rate payer, with Bank NPV as the floating-rate payer; Bank NPV posts high-quality government bonds as collateral
+    \end{itemize}
+    The analyst considers a scenario under which interest rates increase and the stock price of GTU Bank decreases. As the analyst reviews the impact of these changes in market conditions on the three positions, which of the following is correct?
+\end{question}
+
+\begin{choices}
+    \item The CoCos held by the hedge fund are less likely to be converted to stocks of GTU Bank
+    \item The value of the senior tranche of the MBS held by the hedge fund will increase
+    \item The hedge fund's wrong-way risk in the interest rate swap will decrease
+    \item The value of the interest rate swap from the perspective of the hedge fund will increase
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item GTU Bank股价下跌会增加CoCos转换的可能性，因为股价更容易达到或接近触发阈值，该选项与实际情况相反。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 利率上升会降低MBS高级层的价值，因为利率上升导致MBS价格下降，提前还款风险也可能增加，该选项与实际情况相反。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 利率上升时，作为固定利率支付方，对冲基金的头寸价值增加，但如果对手方信用恶化，错向风险会增加而非减少，该选项与实际情况相反。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 对冲基金作为固定利率支付方，利率上升时，利率互换的价值从对冲基金的角度会增加，因为固定利率支付方在利率上升时受益。
+        \item 虽然对手方提供高质量抵押品降低了信用风险，但互换价值的变化主要取决于利率变化，而非信用风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{利率上升时固定利率支付方的互换价值变化}
+
+
+
+
+
+
+\end{document}

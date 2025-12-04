@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}考点1:波动率微笑}{2}{section.1}%
+\contentsline {subsection}{题号1考察: 看涨-看跌期权平价关系}{2}{Item.4}%
+\contentsline {subsection}{题号2考察: Sticky Strike Rule 的核心假设}{3}{Item.8}%
+\contentsline {subsection}{题号3考察: BSM 模型在处理障碍期权（特别是上升出局期权）时的局限性}{3}{Item.12}%
+\contentsline {subsection}{题号4考察: 货币期权波动率微笑}{4}{Item.16}%
+\contentsline {subsection}{题号5考察: 货币期权波动率微笑}{4}{Item.20}%
+\contentsline {subsection}{题号6考察: 股票期权波动率微笑}{5}{Item.24}%
+\contentsline {subsection}{题号7考察: 波动率微笑与期望短缺（ES）}{5}{Item.28}%
+\contentsline {subsection}{题号8考察: 期权定价中的波动率微笑}{6}{Item.32}%
+\contentsline {subsection}{题号9考察: 恒定波动率假设下的隐含波动率低估}{7}{Item.36}%
+\contentsline {subsection}{题号10考察: 货币期权波动率微笑与极端价格变动预期}{7}{Item.40}%
+\contentsline {subsection}{题号11考察: BSM 模型在处理障碍期权（特别是上升出局期权）时的局限性}{8}{Item.44}%
+\contentsline {subsection}{题号12考察: 看涨-看跌期权平价关系}{8}{Item.48}%
+\contentsline {subsection}{题号13考察: 股票期权波动率微笑与期望短缺（ES）}{9}{Item.52}%
+\contentsline {subsection}{题号14考察: 股票期权定价中的波动率微笑与期望短缺（ES）}{10}{Item.56}%
+\contentsline {subsection}{题号15考察: 期权定价中的波动率微笑}{10}{Item.60}%
+\contentsline {subsection}{题号16考察: 汇率期权波动率微笑}{11}{Item.64}%
+\contentsline {subsection}{题号17考察: 汇率期权波动率微笑与期望短缺（ES）}{12}{Item.68}%
+\contentsline {subsection}{题号18考察: 隐含波动率曲面与波动率期限结构}{13}{Item.72}%
+\contentsline {subsection}{题号19考察: 重大事件对期权波动率曲线的影响}{13}{Item.76}%
+\contentsline {subsection}{题号20考察: 汇率分布的超额峰度与期权价格}{14}{Item.80}%
+\contentsline {subsection}{题号21考察: 资产波动率增加对公司价值的影响}{14}{Item.84}%
+\contentsfinish 

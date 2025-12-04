@@ -1,0 +1,1299 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:金融服务管理中的投资职能}
+\setcounter{question}{0}
+
+\begin{question}
+    The main business lines of large dealer banks are: 
+    \begin{itemize}
+        \item (1) securities dealing, underwriting, and trading; 
+        \item (2) over-the-counter derivatives; 
+        \item (3) prime brokerage and asset management. 
+    \end{itemize}
+    About these main business lines, each of the following statements is true except which is false?
+\end{question}
+
+\begin{choices}
+    \item A tri-party repo agreement is used to mitigate counterparty risk and/or reduce burden of collateral management
+    \item For most OTC derivatives, one of the counterparties is a dealer who typically lays off much of the risk of its client-initiated trades by running a matched book
+    \item With respect to OTC derivatives, the best measure of their systemic risk is the total market value of all outstanding contracts; further, master swap agreements do not reduce their actual risks
+    \item Some large dealers are Prime Brokers who provide clients a range of services including management of securities holdings, clearing, cash-management, securities lending, financing, reporting, and tax accounting
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法正确。}
+    \begin{itemize}
+        \item 三方回购协议用于减轻对手方风险和/或减少抵押品管理负担；三方回购涉及第三方托管机构（如清算银行），负责抵押品的托管、估值和管理，可以降低对手方风险并简化抵押品管理流程；这是三方回购的主要优势。
+    \end{itemize}
+
+    \textbf{B选项说法正确。}
+    \begin{itemize}
+        \item 对于大多数OTC衍生品，交易对手之一通常是交易商，交易商通常通过运行匹配账簿来对冲其客户发起交易的大部分风险；交易商通过匹配账簿（matched book）策略，将不同客户的交易进行匹配和对冲，从而降低自身的风险敞口；这是OTC衍生品交易的标准做法。
+    \end{itemize}
+
+    \textbf{C选项说法错误。}
+    \begin{itemize}
+        \item 该说法有两个错误：首先，所有未偿合约的总市值不是衡量OTC衍生品系统性风险的最佳指标；总市值本身接近零（因为多头和空头相互抵消），更重要的是总名义本金、信用敞口、或有敞口、杠杆率等指标；其次，主互换协议（master swap agreements）通过净额结算（netting）确实可以降低实际风险；主协议允许在违约时对多个交易进行净额结算，从而降低信用敞口和系统性风险；这是主协议的重要作用，而非不能降低风险。
+    \end{itemize}
+
+    \textbf{D选项说法正确。}
+    \begin{itemize}
+        \item 一些大型交易商是主要经纪商，为客户提供一系列服务，包括证券持有管理、清算、现金管理、证券借贷、融资、报告和税务会计；这是主要经纪业务的核心内容，为客户提供综合性的金融服务。
+    \end{itemize}
+\end{explanation}
+
+\checklist{交易商银行业务分析}
+
+
+
+\begin{question}
+    The Rosenfeld Investment Firm wants to invest in bond portfolios. Based on its multi-year fabulous expertise in bond investment, it can choose from among the following maturity strategies: Ladder Policy, Front-end Load Maturity Policy, Back-end Load Maturity Policy, Barbell Strategy, or Rate Expectations Approach. The firm's goal for the portfolio is neither to maximize income nor to seek to maximize the upside potential for earnings. Instead, the primary goal is to use the portfolio as a source of liquidity. For that purpose, which of the following strategy is the most suitable?
+\end{question}
+
+\begin{choices}
+    \item Barbell strategy
+    \item Front-end Load Maturity Policy
+    \item Back-end Load Maturity Policy
+    \item Ladder policy
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 杠铃策略（Barbell Strategy）不适合流动性需求；杠铃策略主要投资于短期和长期债券，中间期限债券较少；虽然短期债券提供流动性，但长期债券流动性较差，且策略结构不够聚焦于流动性目标；杠铃策略更适合利率预期管理，而非流动性管理。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 前端加载期限政策（Front-end Load Maturity Policy）最适合流动性需求；该策略主要投资于短期证券，短期到期提供持续的流动性来源；短期证券易于变现，可以快速满足流动性需求；这是将投资组合作为流动性来源的最合适策略。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 后端加载期限政策（Back-end Load Maturity Policy）不适合流动性需求；该策略主要投资于长期债券，长期债券流动性较差，难以快速变现；长期债券更适合收入最大化目标，而非流动性来源。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 阶梯策略（Ladder Policy）虽然可以提供定期流动性，但不如前端加载策略适合流动性需求；阶梯策略投资于多个期限，均匀分布，可以提供定期到期，但流动性不如主要投资于短期证券的前端加载策略；如果主要目标是流动性来源，前端加载策略更优。
+    \end{itemize}
+\end{explanation}
+
+\checklist{债券投资策略分析}
+
+
+
+
+\section{考点2:存款服务和非存款负债的管理}
+\setcounter{question}{0}
+
+
+\begin{question}
+    Which of the following describes a certificate of deposit (CD) that carries an interest rate that periodically adjusts upward?
+\end{question}
+
+\begin{choices}
+    \item Liquidity CD
+    \item Bump-up CD
+    \item Step-up CD
+    \item Index CD
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 流动性CD（Liquidity CD）指可以提前支取的定期存单，与利率调整机制无关；流动性CD的流动性特征在于可以提前支取，而非利率调整。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 加息CD（Bump-up CD）允许存款人在市场利率上升时选择提高利率，但这不是定期自动调整；加息CD的利率上调需要存款人主动选择，通常是在市场利率上升时，而非按照预先设定的时间表定期自动调整。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 递增CD（Step-up CD）的利率会按照预先设定的时间表定期自动向上调整；递增CD的利率在存期内按照合同约定的时间点（如每6个月、每1年）自动递增，这是预先设定的机制，无需存款人选择；题目描述"利率定期向上调整"正是递增CD的特征。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 指数CD（Index CD）的利率与特定指数（如股市指数、商品指数）的表现挂钩，而非定期自动向上调整；指数CD的利率变化取决于指数表现，可能上升也可能下降，且调整机制基于指数而非预先设定的时间表。
+    \end{itemize}
+\end{explanation}
+
+\checklist{定期存款类型识别}
+
+\begin{question}
+    If the bank raises its offer rate on new deposits from 7 percent to 7.5 percent, Table above shows the marginal cost of this change: Change in total cost = \$50 million × 7.5 percent - \$25 million × 7 percent = \$3.75 million - \$1.75 million = \$2.00 million. The marginal cost rate:
+\end{question}
+
+\begin{choices}
+    \item 9\%
+    \item 8\%
+    \item 7\%
+    \item 6\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{步骤1：计算总成本变化}
+    \begin{itemize}
+        \item 变化后的总成本 = 新资金 × 新利率 = \$50 million × 7.5\% = \$3.75 million
+        \item 变化前的总成本 = 旧资金 × 旧利率 = \$25 million × 7\% = \$1.75 million
+        \item 总成本变化 = \$3.75 million - \$1.75 million = \$2.00 million
+    \end{itemize}
+
+    \textbf{步骤2：计算边际成本率}
+    \begin{itemize}
+        \item 边际成本率 = 总成本变化 / 额外资金
+        \item 额外资金 = 新资金 - 旧资金 = \$50 million - \$25 million = \$25 million
+        \item 边际成本率 = \$2.00 million / \$25 million = 8\%
+    \end{itemize}
+
+   
+\end{explanation}
+
+\checklist{边际成本率计算}
+
+
+\begin{question}
+    An analyst in a commercial bank is evaluating the available funds gap for the next month. After analysis, he found that 
+    \begin{enumerate}
+        \item the qualified loan requests accepted is \$150 Million, 
+        \item a major customer of the bank is going to withdraw \$135 Million, 
+        \item the bank has plan to invest in bond markets for \$50 Million, 
+        \item the current deposit is \$160 Million and \$100 Million is expected to come next month, 
+        \item \$10 Million will be added to available funds gap for a cushion. 
+    \end{enumerate}
+    Which of the following is the amount of funds that the bank needs to finance from non-deposit sources?
+\end{question}
+
+\begin{choices}
+    \item 85 Million
+    \item 75 Million
+    \item 65 Million
+    \item 335 Million
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：计算资金需求总额}
+    \begin{itemize}
+        \item 合格贷款申请 = \$150 Million
+        \item 主要客户提款 = \$135 Million
+        \item 债券投资计划 = \$50 Million
+        \item 缓冲资金 = \$10 Million
+        \item 资金需求总额 = \$150 + \$135 + \$50 + \$10 = \$345 Million
+    \end{itemize}
+
+    \textbf{步骤2：计算资金来源总额和资金缺口}
+    \begin{itemize}
+        \item 当前存款 = \$160 Million
+        \item 预期下月存款 = \$100 Million
+        \item 资金来源总额 = \$160 + \$100 = \$260 Million
+        \item 资金缺口 = 资金需求 - 资金来源 = \$345 - \$260 = \$85 Million
+    \end{itemize}
+
+   
+\end{explanation}
+
+\checklist{可用资金缺口计算}
+
+
+\begin{question}
+    A deposit institution has accepted \$30 million qualified loan request. The management is considering issuing \$30 million negotiable CDs with current interest rate of 6\% to finance funds, the noninterest cost in the form of flotation cost in 0.2\%, and legal reserve requirements is 5\% of the total loan amount. What is the effective financing cost rate by issuing negotiable CDs?
+\end{question}
+
+\begin{choices}
+    \item 6.2\%
+    \item 6.53\%
+    \item 6.6\%
+    \item 5.8\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{步骤1：理解有效融资成本率公式}
+    \begin{itemize}
+        \item 有效融资成本率 = (利息成本 + 非利息成本) / (1 - 准备金率)
+        \item 由于需要保留法定准备金，实际可用于贷款的资金少于融资总额，因此需要调整成本率以反映实际可用资金。
+    \end{itemize}
+
+    \textbf{步骤2：计算有效融资成本率}
+    \begin{itemize}
+        \item 利息成本 = 6\%
+        \item 非利息成本（发行成本）= 0.2\%
+        \item 总成本率 = 6\% + 0.2\% = 6.2\%
+        \item 法定准备金率 = 5\%
+        \item 有效融资成本率 = 6.2\% / (1 - 5\%) = 6.2\% / 0.95 = 6.526\% ≈ 6.53\%
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{有效融资成本率计算}
+
+
+\begin{question}
+    James, an analyst in liability management department, has to propose an appropriate non-deposit financing sources for the bank's coming \$50 million investment requirement next week. After investigate, he gets the following information and both ways require deposit insurance fee. Which of the following statements are most likely accurate?
+\end{question}
+
+\begin{choices}
+    \item The effective cost rate of the Fed funds is 6.3\%
+    \item The effective cost rate of the commercial paper is 7.2\%
+    \item James should suggest the Fed Funds for financing due to the lower effective cost rate
+    \item James should suggest the commercial paper for financing due to the lower effective cost rate
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 联邦基金成本率 = \$50M × (6\% + 0.25\%)/(\$50M - \$2M - \$50M × 0.003) ≈ 6.5\%
+        \item 商业票据成本率 = \$50M × (7\% + 0.2\%)/(\$50M - \$2M - \$50M × 0.003) ≈ 7.5\%
+        \item 联邦基金成本率更低
+    \end{itemize}
+\end{explanation}
+
+\checklist{融资方式选择}
+
+
+\begin{question}
+    While smaller banks and thrift institutions usually rely most heavily on deposits for their funding needs, leading depository institutions around the globe have come to regard the nondeposit funds market as a key source of short-term money to meet both loan demand and unexpected cash emergencies. The most popular domestic source of borrowed reserves among depository institutions is the Federal funds market. Which of the following statement about the Federal funds market is most likely accurate?
+\end{question}
+
+\begin{choices}
+    \item Specific collateral is needed for all Federal funds
+    \item The Fed has set three levels of credit, primary, secondary and seasonal, to meet needs of different institutions
+    \item The Federal funds market allows depository institutions short of reserves to meet their legal reserve requirements or to satisfy loan demand by tapping immediately usable funds from other institutions possessing temporarily idle funds
+    \item The Federal funds market improves the liquidity of home mortgages by allowing troubled institutions to use the home mortgages they held in their portfolios as collateral for emergency loans
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 并非所有联邦基金都需要特定抵押品；联邦基金市场主要是无抵押的隔夜资金交易，银行之间通过联邦基金市场进行短期资金借贷，通常不需要提供特定抵押品；这是联邦基金市场的一个重要特征，使其成为快速、便捷的短期融资工具。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 美联储设置三个信用级别（主要、次要和季节性）是美联储贴现窗口（Discount Window）的特征，而非联邦基金市场的特征；联邦基金市场是银行间市场，银行之间直接借贷，而非从美联储借款；这是两个不同的融资机制。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 联邦基金市场允许储备不足的存款机构通过从拥有暂时闲置资金的其他机构获得即时可用资金，用于满足法定准备金要求或贷款需求；这是联邦基金市场的核心功能：为储备充足的机构提供投资机会，为储备不足的机构提供快速融资渠道；资金在联邦储备系统中即时转移，是银行间短期资金调剂的重要机制。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 允许机构使用住房抵押贷款作为紧急贷款抵押品是联邦住房贷款银行（Federal Home Loan Banks, FHLB）的特征，而非联邦基金市场的特征；FHLB是政府支持企业，为成员机构提供以抵押贷款为担保的融资；联邦基金市场是银行间无抵押的短期资金市场，功能不同。
+    \end{itemize}
+\end{explanation}
+\checklist{联邦基金市场特征}
+
+
+\begin{question}
+    A small commercial bank wants to know the minimum rate of return it has to earn for the next year. Jack a treasurer from the investing department, starts from the total cost of capital, he found that next year, all coming funds is \$400 million, however, 10\% of them cannot be invested, and the current average interest rate is 5\%, and operating expense, is about \$10 million. According to the information above, please help Jack figure out the hurdle rate for investing.
+\end{question}
+
+\begin{choices}
+    \item 7.5\%
+    \item 8.3\%
+    \item 2.5\%
+    \item 5.5\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 最低回报率 = (利息成本 + 运营成本) / 可投资资金
+        \item (\$400M × 5\% + \$10M) / [\$400M × (1 - 10\%)]= 8.3\%
+    \end{itemize}
+
+   
+\end{explanation}
+
+\checklist{最低回报率计算}
+
+ 
+\begin{question}
+    In a deposit institution, savings deposits, checking accounts, NOW accounts, Christmas Club accounts, time deposits, cashiers' checks, money orders, officers'checks, and any outstanding drafts normally are protected by federal insurance. About the deposit insurance, which of the following is the least accurate?
+\end{question}
+
+\begin{choices}
+    \item Deposit insurance allows institutions to sell deposits at relatively low rates of interest
+    \item Only members of Federal Deposit Insurance Corporation (FDIC) have deposit insurance
+    \item Liquidity risk for institutions is eliminated by deposit insurance because customers are less panic about the loss of their funds in deposit institutions
+    \item There is a limit on the deposit insurance, customers only get part of their deposit back if any crisis happened
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法正确。}
+    \begin{itemize}
+        \item 存款保险允许机构以相对较低的利率出售存款；存款保险降低了存款人的风险，使存款人愿意接受较低的利率，因为他们的资金受到保护；这有助于银行降低融资成本，是存款保险的重要作用之一。
+    \end{itemize}
+
+    \textbf{B选项说法正确。}
+    \begin{itemize}
+        \item 只有FDIC成员机构才能获得存款保险；联邦存款保险公司（FDIC）为成员机构提供存款保险，非成员机构无法获得这种保险保护；这是存款保险制度的基本要求。
+    \end{itemize}
+
+    \textbf{C选项说法错误。}
+    \begin{itemize}
+        \item 存款保险不能消除机构的流动性风险；虽然存款保险可以降低客户恐慌，减少挤兑风险，但不能完全消除流动性风险；客户仍可能因其他原因（如需要资金、寻找更高收益、对银行服务不满等）提款；此外，存款保险有金额上限，超过上限的存款不受保护，客户可能因担心超出上限的部分而提款；存款保险只能缓解而非消除流动性风险。
+    \end{itemize}
+
+    \textbf{D选项说法正确。}
+    \begin{itemize}
+        \item 存款保险有上限，如果发生危机，客户只能收回部分存款；FDIC的存款保险有金额上限（如每人每银行25万美元），超过上限的存款不受保护；如果银行倒闭且存款超过上限，客户只能收回受保部分；这是存款保险制度的重要限制。
+    \end{itemize}
+\end{explanation}
+
+\checklist{存款保险特征}
+
+
+\begin{question}
+    Important indicators of management's effectiveness are whether or not funds deposited by the public have been raised at the lowest possible cost and whether sufficient deposits are available to fund all those loans and projects management wishes to pursue. Which of the following statements about deposit pricing methods are most appropriate?
+    \begin{itemize}
+        \item I. Conditional pricing is sensitive to the types of customers each depository institution plans to serve and the cost that serving different types of depositors will present to the offering institution.
+        \item II. Marginal revenue should be determined at the beginning when using marginal cost pricing method.
+        \item III. Free-pricing may attract too much volatile funds when market rate is high, which actually adverse to deposit institutions.
+        \item IV. Relationship pricing promotes greater customer loyalty and makes the customer more sensitive to the prices posted on services offered by competing financial firms.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I \& II
+    \item II \& III
+    \item I, II \& III
+    \item I, II, III \& IV
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 条件定价（Conditional pricing）对每种存款机构计划服务的客户类型敏感，以及对服务不同类型存款人将给机构带来的成本敏感；条件定价根据客户类型、账户活动、账户余额等因素设定不同的定价条件，需要考虑服务不同类型客户的实际成本，以实现成本效益匹配。
+    \end{itemize}
+
+    \textbf{陈述II分析：正确}
+    \begin{itemize}
+        \item 使用边际成本定价方法时，应该在开始时确定边际收入；边际成本定价需要比较边际成本和边际收入，只有当边际收入大于或等于边际成本时，融资决策才合理；因此需要先确定边际收入，才能进行有效的边际成本分析。
+    \end{itemize}
+
+    \textbf{陈述III分析：正确}
+    \begin{itemize}
+        \item 自由定价（Free-pricing）在市场利率高时可能吸引过多不稳定资金，这对存款机构实际上不利；自由定价根据市场利率设定价格，市场利率高时会吸引追求高收益的热钱，这些资金不稳定，在市场利率下降时会快速流出，导致银行面临流动性风险和融资成本波动，对银行不利。
+    \end{itemize}
+
+    \textbf{陈述IV分析：错误}
+    \begin{itemize}
+        \item 关系定价（Relationship pricing）促进更大的客户忠诚度是正确的，但使客户对竞争对手金融机构提供的服务价格更敏感是错误的；关系定价通过提供优惠价格来奖励长期客户和多种服务关系的客户，这应该使客户对竞争对手的价格更不敏感，而非更敏感；客户因为关系定价而更忠诚，因此对竞争对手的价格不太敏感，更倾向于留在现有机构。
+    \end{itemize}
+\end{explanation}
+
+\checklist{存款定价方法分析}
+
+
+\begin{question}
+    Deposits provide much of the raw material for making loans and, thus, may represent the ultimate source of profits and growth for a depository institution. A deposit manager is trying to make the appropriate interest rate for deposits in order to balance the cost and profit. Among the following statements, which is correct?
+\end{question}
+
+\begin{choices}
+    \item The optimal interest rate should be determined when marginal cost rate equals to marginal revenue rate
+    \item Margin cost rate decrease at first and increases as the rises of interest rate
+    \item Higher interest rate should always be taken therefore to appeal more deposits
+    \item Amount of profit earned always decreases when interest rate increases
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 最优利率应在边际成本率等于边际收益率时确定；根据经济学原理，利润最大化的条件是边际成本等于边际收益；对于存款定价，当边际成本率等于边际收益率时，增加单位存款的额外成本等于额外收益，此时总利润达到最大值；这是存款定价的基本原理。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 边际成本率不会先下降然后随利率上升而上升；边际成本率通常随利率上升而上升，因为高利率会吸引更多存款，而额外的存款可能来自成本更高的渠道（如需要支付更高利率才能吸引的资金）；边际成本率曲线通常是向上倾斜的，而非先降后升。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 不应总是采用更高的利率以吸引更多存款；更高的利率意味着更高的融资成本，虽然可能吸引更多存款，但如果边际成本超过边际收益，利润会下降；最优利率不是在最高利率处，而是在边际成本等于边际收益的利率处；盲目提高利率可能导致利润下降。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 当利率上升时，获得的利润量并非总是减少；利润与利率的关系通常是先增加后减少：在最优利率之前，利润随利率上升而增加（因为边际收益大于边际成本）；超过最优利率后，利润随利率上升而减少（因为边际成本大于边际收益）；利润在最优利率处达到最大值。
+    \end{itemize}
+\end{explanation}
+
+\checklist{存款利率定价原则}
+
+
+
+\begin{question}
+    Darcy is estimating the total financing cost included deposit and nondeposit funds. By reviewing the bank's past expense, he concluded that the following table:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            Total interest expense & \$50 million \\
+            \hline
+            Total operating expense & \$10 million \\
+            \hline
+            Shareholder's investment & \$150 million \\
+            \hline
+            Total funds raised & \$800 million \\
+            \hline
+            All earning assets & \$500 million \\
+            \hline
+            Required return of rate of shareholder (before tax) & 10\% \\
+            \hline
+            Tax rate & 35\% \\
+            \hline
+        \end{tabular}
+        \caption{主要财务数据表}
+    \end{table}
+
+    Which of the following statement is NOT correct?
+\end{question}
+
+\begin{choices}
+    \item The weighted average of interest expense is 6.25\%
+    \item The break-even cost rate is 12\%
+    \item The weighted average overall cost of capital is 15\%
+    \item The least return of rate the bank should earn is 16.615\%
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法正确。}
+    \begin{itemize}
+        \item 加权平均利息费用 = 总利息费用 / 总融资额 = \$50 million / \$800 million = 6.25\%；这是正确的计算。
+    \end{itemize}
+
+    \textbf{B选项说法正确。}
+    \begin{itemize}
+        \item 盈亏平衡成本率 = (总利息费用 + 总运营费用) / 所有盈利资产 = (\$50 + \$10) / \$500 = \$60 / \$500 = 12\%；这是银行需要从盈利资产中获得的回报率，以覆盖所有融资成本。
+    \end{itemize}
+
+    \textbf{C选项说法正确。}
+    \begin{itemize}
+        \item 加权平均总资本成本 = 盈亏平衡成本率 + 股东要求回报率 × (权益 / 盈利资产) = 12\% + 10\% × (\$150 / \$500) = 12\% + 10\% × 0.3 = 12\% + 3\% = 15\%；这是考虑了债务成本和权益成本的加权平均总资本成本。
+    \end{itemize}
+
+    \textbf{D选项说法错误。}
+    \begin{itemize}
+        \item 银行应获得的最低回报率应为15\%，而非16.615\%；银行的最低回报率应等于加权平均总资本成本（15\%），以确保覆盖所有融资成本并满足股东回报要求；16.615\%的计算结果不正确，可能使用了错误的公式或计算方法；正确的最低回报率应为15\%。
+    \end{itemize}
+\end{explanation}
+
+\checklist{融资成本计算}
+
+
+
+\begin{question}
+    A manager at a financial institution is assessing the cash flow requirements of the institution's largest customers using the available funds gap (AFG) model. The manager obtains the following current and projected inflows and outflows of funds:
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        Deposits received today & USD 60 million \\
+        \hline
+        Approved new loan requests & USD 57 million \\
+        \hline
+        Expected drawdown on corporate client's credit lines & USD 16 million \\
+        \hline
+        Deposit inflows expected within the next week & USD 12 million \\
+        \hline
+        10-year Treasury securities expected to be purchased this week & USD 35 million \\
+        \hline
+        Other customer funds available today & USD 45 million \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    Assuming all else is held constant, if the institution's objective is to maintain an AFG of zero, what is the maximum amount of unexpected customer withdrawals it can meet within the next week?
+\end{question}
+
+\begin{choices}
+    \item USD 0 million
+    \item USD 3 million
+    \item USD 9 million
+    \item USD 15 million
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 资金流入 = 60 + 12 + 45 = 117百万
+        \item 资金流出 = 57 + 16 + 35 = 108百万
+        \item 剩余资金 = 117 - 108 = 9百万
+        \item 可应对的意外提款 = 9百万
+    \end{itemize}
+   
+\end{explanation}
+
+\checklist{可用资金缺口计算}
+
+
+
+
+\section{考点3:回购协议和融资}
+\setcounter{question}{0}
+
+
+\begin{question}
+    In a presentation to management, a bond trader makes the following statements about repo collateral:
+    \begin{itemize}
+        \item Statement 1: The difference between the federal funds rate and the general collateral rate is the special spread.
+        \item Statement 2: During times of financial crisis, the spread between the federal funds rate and the general collateral rate widens.
+    \end{itemize}
+    Which of the trader's statements are accurate?
+\end{question}
+
+\begin{choices}
+    \item Both statements are incorrect
+    \item Only statement 1 is correct
+    \item Only statement 2 is correct
+    \item Both statement are correct
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述1分析：错误}
+    \begin{itemize}
+        \item 联邦基金利率和一般抵押品（GC）利率的差额不是特殊利差（special spread）；特殊利差是指一般抵押品回购利率与特定证券的特殊回购利率之间的差额，衡量的是特定证券相对于一般抵押品的稀缺性溢价；联邦基金利率与GC利率之间的差额是联邦基金-GC利差，而非特殊利差；两者是不同的概念。
+    \end{itemize}
+
+    \textbf{陈述2分析：正确}
+    \begin{itemize}
+        \item 在金融危机期间，联邦基金利率与一般抵押品利率之间的利差确实会扩大；金融危机期间，市场参与者对安全资产（如国债）的需求增加，借出国债的意愿下降，导致GC回购利率下降；同时，联邦基金利率可能相对稳定或下降幅度较小，导致两者之间的利差扩大；这是金融危机期间流动性紧张和市场压力增加的典型表现，反映了市场对安全资产的需求和流动性风险溢价。
+    \end{itemize}
+\end{explanation}
+
+\checklist{回购担保品利差分析}
+
+
+\begin{question}
+    In contrast to general collateral (GC) repo rates, which of the following is TRUE about special repo rates?
+\end{question}
+
+\begin{choices}
+    \item Special rates are typically less than general collateral rates
+    \item If the counterparty's primary motivation is to lend cash rather than borrow a security, the special rate applies
+    \item Special rates are well-suited to repo investors who are looking to obtain the highest rate for the collateral they are willing to accept
+    \item The most commonly cited special rates are for overnight repos where any U.S. Treasury collateral is acceptable
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 特殊利率通常低于一般抵押品（GC）利率；当特定证券稀缺时，需要这些证券的借款人愿意接受较低的利率以获取这些证券；特殊回购利率低于GC回购利率，因为借款人为了获得特定证券而愿意支付较低的融资成本；这是特殊回购市场的典型特征，反映了特定证券的稀缺性溢价。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 特殊利率的适用不取决于交易对手的主要动机是借出现金还是借入证券；特殊利率适用于需要特定证券的情况，即借款人需要特定的、稀缺的证券作为抵押品；这是由证券的稀缺性和需求决定的，而非交易对手的动机。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 特殊利率通常较低，不适合寻求最高利率的回购投资者；由于特殊利率低于GC利率，追求最高利率的投资者应该选择GC回购或其他利率更高的回购交易，而非特殊回购；特殊回购适合需要特定证券的借款人，而非追求最高收益的投资者。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 特殊利率不适用于"任何美国国债都可接受"的情况；特殊回购利率适用于特定证券，即借款人需要特定的、稀缺的证券；"任何美国国债都可接受"是一般抵押品（GC）回购的特征，而非特殊回购的特征；特殊回购要求特定的证券，而非一般抵押品。
+    \end{itemize}
+\end{explanation}
+
+\checklist{特殊回购利率特征}
+
+
+\begin{question}
+    How many of the following statements is most likely correct?
+    \begin{itemize}
+        \item I. The special spreads usually derives from the difference between the general collateral rate and the repo rate if the collateral securities are on-the-run (OTR) T-bonds.
+        \item II. An important reason that special trade usually uses on-the-run (OTR) bonds is the brilliant liquidity involved in new-issued T-bonds, and the liquidity has been cherished by both investors who hold long positions and short sellers.
+        \item III. Special spread would usually become largest immediately after auctions and smallest before auctions.
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item Zero
+    \item One
+    \item Two
+    \item Three
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item 特殊利差通常来自一般抵押品（GC）利率和特殊回购利率的差额，当抵押品证券是on-the-run（OTR）国债时；特殊利差 = GC回购利率 - 特殊回购利率；当特定证券（如OTR国债）稀缺时，其特殊回购利率低于GC利率，因此特殊利差为正；这是特殊利差的定义和计算方法。
+    \end{itemize}
+
+    \textbf{陈述II分析：正确}
+    \begin{itemize}
+        \item 特殊交易通常使用on-the-run（OTR）债券的一个重要原因是新发行国债涉及的良好流动性，这种流动性受到持有多头头寸的投资者和卖空者的重视；OTR债券是最新发行的国债，流动性最好，因此受到多方和空方（需要这些债券进行交割或对冲）的重视；空方需要OTR债券进行交割，多方也愿意持有高流动性债券，这导致OTR债券的稀缺性和特殊利差。
+    \end{itemize}
+
+    \textbf{陈述III分析：错误}
+    \begin{itemize}
+        \item 特殊利差通常在拍卖前变得最大，在拍卖后立即变得最小，而非相反；在拍卖前，OTR债券稀缺，特殊回购利率低于GC利率，特殊利差较大（或最大）；在拍卖后，新的OTR债券发行，供应增加，特殊回购利率上升，接近GC利率，特殊利差缩小（或最小）；陈述III说反了。
+    \end{itemize}
+\end{explanation}
+
+\checklist{特殊利差特征分析}
+
+
+
+\begin{question}
+    In regard to special spreads, each of the following is true EXCEPT which is false?
+\end{question}
+
+\begin{choices}
+    \item On-the-run (OTR) issues tend to trade "more special" than off-the-run (OFR) issues, where "more special" refers to special spreads that are larger
+    \item The special spread equals the general collateral (GC) repo rate minus the special collateral repo rate
+    \item On-the-run special spreads peak immediately after an auction, and tend to decrease over the cycle, reaching their lowest level immediately before the next auction
+    \item Special spreads tend to be volatile on a daily basis and special spreads can be quite large (e.g., hundreds of basis points)
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法正确。}
+    \begin{itemize}
+        \item On-the-run（OTR）债券通常比off-the-run（OFR）债券交易"更特殊"，即特殊利差更大；OTR债券是刚发行的最新国债，流动性最好，需求更高，因此更稀缺，特殊回购利率更低，特殊利差更大；OFR债券是之前发行的国债，流动性相对较低，特殊利差较小。
+    \end{itemize}
+
+    \textbf{B选项说法正确。}
+    \begin{itemize}
+        \item 特殊利差等于一般抵押品（GC）回购利率减去特殊抵押品回购利率；特殊利差 = GC回购利率 - 特殊回购利率；由于特殊证券稀缺，特殊回购利率通常低于GC利率，因此特殊利差为正；这是特殊利差的计算公式。
+    \end{itemize}
+
+    \textbf{C选项说法错误。}
+    \begin{itemize}
+        \item 实际情况是：拍卖后，新的OTR债券刚发行，供应增加，特殊回购利率上升（接近GC利率），特殊利差最小；周期内，随着时间推移，OTR债券被持有和消耗，变得稀缺，特殊回购利率下降，特殊利差逐渐增大；下次拍卖前，OTR债券最稀缺，特殊回购利率最低，特殊利差最大（峰值）。
+    \end{itemize}
+
+    \textbf{D选项说法正确。}
+    \begin{itemize}
+        \item 特殊利差在日基础上往往波动较大，特殊利差可能相当大（例如数百个基点）；特殊利差的波动性反映了特定证券的供需变化，在特定证券非常稀缺时，特殊利差可能达到数百个基点；这是特殊回购市场的特征。
+    \end{itemize}
+\end{explanation}
+
+\checklist{特殊利差特征分析}
+
+
+\begin{question}
+    Rankcon is a repo investor in the money market mutual fund industry with the exclusive motive of cash management. Given this motivation, Rankcon understandably employs each of the following criteria (or preference) with respect to its repo investments EXCEPT which is the LEAST likely preference?
+\end{question}
+
+\begin{choices}
+    \item Rankcon insists on a sufficient collateral haircut
+    \item Rankcon only accept securities with the highest credit quality; e.g., debt of government-sponsored entities (GSEs)
+    \item Rankcon refuses to accept general collateral and instead insists on particular securities with delineated asset classes
+    \item Rankcon places a premium on liquidity so tends to lend overnight rather than for term; or, if it wants to lend cash for an extended period, engages in an open repo
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项是合理的偏好。}
+    \begin{itemize}
+        \item Rankcon要求足够的抵押品折扣是合理的；足够的抵押品折扣（haircut）可以降低对手方违约风险，提供额外的安全缓冲，符合现金管理的安全性需求。
+    \end{itemize}
+
+    \textbf{B选项是合理的偏好。}
+    \begin{itemize}
+        \item Rankcon只接受最高信用质量的证券（如GSEs债务）是合理的；现金管理关注安全性，只接受最高信用质量的证券可以降低信用风险，符合现金管理的风险偏好。
+    \end{itemize}
+
+    \textbf{C选项是最不可能的偏好。}
+    \begin{itemize}
+        \item Rankcon拒绝接受一般抵押品，要求特定证券并明确资产类别是最不可能的偏好；作为现金管理的回购投资者，通常关注抵押品的信用质量、流动性和抵押品折扣，而非特定证券；一般抵押品（GC）通常就足够了，简单且易于管理；要求特定证券是特殊回购的特征，而现金管理投资者通常不需要特定证券，更倾向于接受一般抵押品以简化交易和降低管理复杂性。
+    \end{itemize}
+
+    \textbf{D选项是合理的偏好。}
+    \begin{itemize}
+        \item Rankcon重视流动性，倾向于隔夜回购或开放式回购是合理的；现金管理需要流动性，隔夜回购或开放式回购提供了这种灵活性，允许根据现金需求快速调整；这符合现金管理的流动性需求。
+    \end{itemize}
+\end{explanation}
+
+\checklist{回购投资偏好分析}
+
+
+
+\newpage
+
+
+
+\section{考点5:针对利率变化的风险管理：资产负债管理和期限技术}
+\setcounter{question}{0}
+\begin{question}
+    Changing interest rates also changes the market value of assets and liabilities, thereby changing each financial institution's net worth. Shareholders may pay more attention to the management of net worth, which of the following statements about duration gap management is least correct?
+\end{question}
+
+\begin{choices}
+    \item The larger the leverage-adjusted duration gap, the more sensitive will be the net worth of a financial institution to a change in interest rates
+    \item A financial firm with longer-duration assets than liabilities will suffer a greater decline in net worth when market interest rates rise
+    \item Net worth is more sensitive to interest rate when rate is at high level than at low due to the existence of convexity
+    \item In practice, duration gap management considers only the liner relationship between the change of interest rate and the asset/liability price, which is a limitation
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 杠杆调整后的久期缺口越大，金融机构的净资产对利率变化的敏感性越高；久期缺口衡量资产和负债久期的差异，缺口越大意味着资产和负债对利率变化的反应差异越大，净资产波动性越大。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 资产久期长于负债久期的金融机构，当市场利率上升时，净资产将遭受更大下降；资产久期大于负债久期意味着资产对利率变化更敏感，利率上升时资产价值下降幅度大于负债价值下降幅度，导致净资产下降。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 由于凸性存在，在低利率水平时，净资产对利率的敏感性更高，而非高利率时；凸性意味着价格-收益率曲线向上凸起，在低利率时，利率的小幅变化会导致债券价格更大的变化（凸性效应更明显）；久期管理假设线性关系，但实际由于凸性，低利率时敏感性被低估，高利率时敏感性被高估；该选项将高利率和低利率的作用方向说反了。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 实践中，久期缺口管理只考虑利率变化与资产/负债价格之间的线性关系，这是一个局限性；久期是一阶导数，是线性近似，忽略了凸性（二阶导数）效应；在利率大幅变化时，凸性效应显著，久期管理可能产生较大误差，需要结合凸性分析。
+    \end{itemize}
+\end{explanation}
+
+\checklist{久期缺口管理分析}
+
+
+\begin{question}
+    Asset-liability committee (ALCO), meets regularly to manage the financial firm's interest rate risk and other risk exposure, and estimates the firm's risk exposure. As a member of ALCO, Jason finds that the bank has negative interest-sensitive gap, which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item The bank is asset sensitive
+    \item If interest rates rise, bank's net interest margin will decrease
+    \item If interest rates rise, bank's net interest margin will increase
+    \item The Interest Sensitivity Ratio (ISR) is more than 1
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 负利率敏感缺口表示银行是负债敏感型（liability sensitive），而非资产敏感型（asset sensitive）；利率敏感资产少于利率敏感负债，意味着重新定价的负债多于资产；资产敏感型银行具有正缺口（RSA > RSL）。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 负利率敏感缺口时，如果利率上升，银行的净息差会下降；利率上升时，利率敏感负债的利息支出增加幅度大于利率敏感资产的利息收入增加幅度（因为负债多于资产），导致净利息收入下降，净息差缩小；这是负债敏感型银行在利率上升时面临的风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 负利率敏感缺口时，利率上升会导致净息差下降，而非增加；只有正缺口（资产敏感型）的银行在利率上升时净息差才会增加；该选项将负缺口银行的影响方向说反了。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 利率敏感比率（ISR）= 利率敏感资产/利率敏感负债；负缺口时，RSA < RSL，因此ISR < 1，而非大于1；ISR > 1表示正缺口（资产敏感型），ISR < 1表示负缺口（负债敏感型）。
+    \end{itemize}
+\end{explanation}
+
+\checklist{利率敏感缺口分析}
+
+
+\begin{question}
+    No financial manager can completely avoid one of the toughest and potentially most damaging forms of risk that all financial institutions must face—interest rate risk. An analyst is evaluating four banks interest risk management, the information is as follows:
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|c|c|}
+            \hline
+            & \textbf{Bank A} & \textbf{Bank B} \\
+            \hline
+            Interest-sensitive gap & \$50 million & \$-30 million \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    Which of the following statements are appropriate strategies these banks can adopt?
+    \begin{itemize}
+        \item I. Bank A should increase investing in interest-sensitive assets if rate increases 1\%
+        \item II. Bank B should decrease its interest-sensitive liabilities if rate decreases 2\%
+        \item III. Bank C should purchase more assets with longer maturity and decreasing liabilities with longer maturity if rate falls from 4\% to 2\%
+        \item IV. Bank D should decrease duration of assets and increase duration of liabilities if rate raises from 2\% to 4\%
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item I, III \& IV
+    \item II \& IV
+    \item I, II \& III
+    \item I, II, III \& IV
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析：正确}
+    \begin{itemize}
+        \item Bank A是正缺口（资产敏感型），利率上升1\%时，净息差会增加（资产利息收入增加幅度大于负债利息支出增加幅度）；增加利率敏感资产投资可以进一步扩大正缺口，增强净利息收入增长，这是合理的策略。
+    \end{itemize}
+
+    \textbf{陈述II分析：错误}
+    \begin{itemize}
+        \item Bank B是负缺口（负债敏感型），利率下降2\%时，净息差会增加（负债利息支出下降幅度大于资产利息收入下降幅度）；减少利率敏感负债会缩小负缺口，降低净息差增长收益；正确的策略应该是增加利率敏感负债以锁定低成本，或至少不应减少；该策略方向错误。
+    \end{itemize}
+
+    \textbf{陈述III分析：正确}
+    \begin{itemize}
+        \item 利率从4\%下降到2\%时，购买更多长期资产（增加资产久期）并减少长期负债（降低负债久期）可以扩大久期缺口；当资产久期大于负债久期时，利率下降会增加净资产（资产价值上升幅度大于负债价值上升幅度），这是最大化净资产的正确策略。
+    \end{itemize}
+
+    \textbf{陈述IV分析：正确}
+    \begin{itemize}
+        \item 利率从2\%上升到4\%时，减少资产久期并增加负债久期可以缩小久期缺口；当资产久期大于负债久期时，利率上升会减少净资产（资产价值下降幅度大于负债价值下降幅度），缩小久期缺口可以减少净资产下降，这是保护净资产的正确策略。
+    \end{itemize}
+\end{explanation}
+
+\checklist{利率风险管理策略分析}
+
+
+\begin{question}
+    A risk consultant is reviewing the credit function at Bank WDI. The bank recently shifted its lending business from using the originate-to-hold model to using the originate-to-distribute model. Under the originate-to-distribute model, Bank WDI divides its loans into core loans that it holds until maturity, and noncore loans that it hedges by means of credit derivatives or sells by means of loan securitization. Which of the following statements would the consultant be correct to make?
+\end{question}
+
+\begin{choices}
+    \item The non-core loans are managed by the originating business units and the core loans are transfer priced to the credit portfolio management group
+    \item When economic capital is allocated to the core loans, the allocation is based on the weighted average of the loan exposures, with the weights determined by the size of the core loans
+    \item When any core loan is originated, a primary consideration is that its spread should produce a risk-adjusted return on capital that is greater than the hurdle rate of the bank
+    \item The spread charged to a noncore loan at origination is directly related to the loan's credit rating and maturity
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 核心贷款（hold until maturity）由发起业务部门管理，非核心贷款（hedged/sold）转移定价给信贷组合管理组进行管理；该选项将两者的管理主体说反了；非核心贷款需要转移给专门部门进行对冲或证券化，而核心贷款由发起部门管理至到期。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 经济资本分配应基于风险加权，而非贷款规模加权；经济资本需要反映信用风险、违约概率、违约损失率、相关性等风险因素，而不是简单地按贷款规模加权；基于规模加权会忽略风险差异，导致资本分配不当。
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 发起核心贷款时，主要考虑其利差应产生超过银行最低要求回报率（hurdle rate）的风险调整后资本回报率（RAROC）；核心贷款由银行持有至到期，需要分配经济资本，因此必须确保风险调整后收益能够补偿资本成本；这是风险管理的基本原则，确保贷款能够创造价值。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 非核心贷款的利差不是直接与信用评级和期限相关，而是主要取决于市场条件、流动性、证券化市场的定价、信用衍生品市场的对冲成本等因素；虽然评级和期限会影响定价，但非核心贷款会被对冲或出售，定价更多反映市场可销售性和对冲成本，而非直接与贷款特征相关；市场流动性和需求是更重要的定价因素。
+    \end{itemize}
+\end{explanation}
+
+\checklist{贷款管理模式分析}
+
+
+
+
+\newpage
+
+
+\section{考点4:非流动资产}
+\setcounter{question}{0}
+
+
+\begin{question}
+    One of the board members has suggested that the CIO look at several hedge funds that have reported strong performance in recent years. The CRO is familiar with many of these funds and is aware that several invest heavily in illiquid assets and that this may cause standard risk measures based on daily returns to give a misleading picture of their risk. Which of following statements about daily risk measures applied to hedge funds that invest in illiquid assets is correct?
+\end{question}
+
+\begin{choices}
+    \item Correlation with other investments will be artificially lowered, giving the appearance of low systematic risk
+    \item Infrequent trading reduces the smoothing effects from mark-to-market valuation, giving the appearance of high volatility
+    \item Returns of illiquid assets tend to exhibit negative serial correlation, leading to higher long-term volatility
+    \item All else being equal, illiquid assets tend to have lower Sharpe ratios, causing the incorrect appearance of an illiquid premium
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 与其他投资的相关性会被人为降低，看起来系统性风险较低；非流动性资产交易不频繁，价格更新滞后，不能及时反映市场变化；当其他资产价格变化时，非流动性资产的价格可能尚未更新，导致相关性被低估；这使投资组合看起来系统性风险较低，但实际上风险可能更高。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 不频繁交易不会减少平滑效应，反而会增加平滑效应；非流动性资产的价格更新滞后，导致收益数据更加平滑，波动率会被低估而非高估；由于价格不能及时反映市场波动，日收益的波动性被平滑，导致波动率被低估。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 非流动性资产的收益通常呈现正序列相关，而非负序列相关；由于价格更新滞后，价格变化被平滑，导致收益序列呈现正序列相关；这会使长期波动率被低估，而非导致更高的长期波动率。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 非流动性资产通常有较高的夏普比率（而非较低），因为波动率被低估；由于波动率被低估而收益可能被高估（滞后的价格更新），夏普比率会被高估；这导致流动性溢价被错误地显示为更高，而非被低估。
+    \end{itemize}
+\end{explanation}
+
+\checklist{非流动性资产风险度量}
+
+
+\begin{question}
+    The treasurer of ABC, a large industrial firm, is considering issuing a 7-year bond to fund a planned expansion. In order for the debt issuance to be successful, the treasurer feels that the bond must be attractive to investors in terms of potential return and liquidity. To get a sense of the current market and how investors might receive the new debt issuance, the treasurer asks the risk department to conduct an analysis of the historical trading activity and performance of bonds issued by firms similar to ABC. The bonds range in their initial maturity from 6 to 8 years but vary significantly in liquidity with some bonds traded several times a week and others that may only trade a few times a year. When analyzing the information, the risk department should be concerned that an illiquid bond, when compared to a liquid bond, could exhibit:
+\end{question}
+
+\begin{choices}
+    \item Lower returns and bid-ask spreads
+    \item Higher autocorrelation of returns
+    \item A lower calculated Sharpe ratio
+    \item A higher beta to the market
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 非流动性债券通常有更高的买卖价差，而非更低；流动性差导致交易成本高，买卖价差扩大；非流动性债券的回报率可能更高（流动性溢价补偿），但买卖价差不会更低；该选项将两者都描述为"更低"，与实际情况不符。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 非流动性债券的收益呈现更高的自相关性；由于交易不频繁，价格更新滞后，当前价格变化不能及时反映市场信息，导致价格变化被平滑；收益序列呈现正序列相关，即当前收益与历史收益高度相关；这是非流动性资产的重要特征，风险部门在分析时应关注这一偏差。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 非流动性债券通常有更高的计算夏普比率，而非更低；由于价格更新滞后，收益波动被平滑，波动率被低估；同时，流动性溢价可能使收益被高估；在夏普比率计算中，分子（收益）可能被高估，分母（波动率）被低估，导致夏普比率被高估；这使非流动性债券看起来风险调整后收益更好，但这是统计偏差而非真实表现。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 非流动性债券通常有更低的市场贝塔，而非更高；由于价格更新滞后，非流动性债券的价格不能及时反映市场变化，导致与市场收益率的相关性被低估；贝塔系数衡量资产对市场变化的敏感度，非流动性资产的价格滞后使贝塔被低估；这使非流动性债券看起来系统性风险较低，但实际上是统计偏差。
+    \end{itemize}
+\end{explanation}
+
+\checklist{非流动性债券特征分析}
+
+
+\begin{question}
+    A risk analyst in a hedge fund is gauging the liquidity risk exposure of a portfolio which allocates on illiquid assets such as private equity, convertible bond, treasure assets, etc. Which one of following statements about risk and return biases of illiquid assets is incorrect?
+\end{question}
+
+\begin{choices}
+    \item The risk analyst found a significant first-order autocorrelation coefficient of 0.5 for the quarterly historical returns. This can be seen as an indicator of historical return smoothing
+    \item For an illiquid asset, the correlation between asset return and market return will be artificially biased upward, giving the appearance of high systematic risk
+    \item If there is survivorship bias in this portfolio, the returns tend to be biased upward
+    \item The price impact of large trades can be seen as an illiquidity variable to measure the illiquidity in equity market
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法恰当。}
+    \begin{itemize}
+        \item 一阶自相关系数显著（如0.5）通常反映收益被平滑（price smoothing/return smoothing），是非流动性资产的典型特征。
+    \end{itemize}
+
+    \textbf{B选项说法错误。}
+    \begin{itemize}
+        \item 非流动性导致价格更新滞后，资产与市场的相关性与贝塔被低估（而非被抬高），表面上呈现较低的系统性风险；因此“被人为上调相关性、看起来系统性风险更高”的说法不正确。
+    \end{itemize}
+
+    \textbf{C选项说法恰当。}
+    \begin{itemize}
+        \item 存在幸存者偏差时，样本往往剔除了表现不佳而退出的资产，导致历史收益被上调。
+    \end{itemize}
+
+    \textbf{D选项说法恰当。}
+    \begin{itemize}
+        \item 大额交易的价格冲击（price impact）是常用的股票市场非流动性度量之一；价格冲击越小通常表明流动性越好。
+    \end{itemize}
+\end{explanation}
+
+\checklist{非流动性资产偏差分析}
+
+
+\begin{question}
+    Consider investors in the following five asset classes:
+    \begin{itemize}
+        \item I. leveraged buyout (LBO) investors
+        \item II. merger arbitrage hedge funds
+        \item III. mortgage loan investors
+        \item IV. convertible bond investors
+        \item V. statistical arbitrage investors
+    \end{itemize}
+    Which of the above is (are) materially or meaningfully exposed to systematic funding liquidity risk?
+\end{question}
+
+\begin{choices}
+    \item None of the above
+    \item I. and II. Only
+    \item III. and IV. only
+    \item All of the above
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{陈述I分析。}
+    \begin{itemize}
+        \item 杠杆收购需要大量债务融资，依赖银行信贷市场和债券市场；当系统性流动性危机发生时，银行放贷能力下降、债券市场流动性枯竭，LBO投资者难以获得或维持融资，面临重大的融资流动性风险。
+    \end{itemize}
+
+    \textbf{陈述II分析。}
+    \begin{itemize}
+        \item 合并套利策略通常需要融资来建立头寸，依赖经纪人融资和市场流动性；在市场压力时期，融资成本上升、保证金要求提高、融资渠道受限，合并套利基金面临融资困难，可能被迫平仓或无法执行策略。
+    \end{itemize}
+
+    \textbf{陈述III分析。}
+    \begin{itemize}
+        \item 抵押贷款投资者（如银行、抵押贷款机构）需要持续融资来发放和持有贷款，依赖存款、银行间市场、证券化市场；系统性流动性危机时，这些融资渠道都可能受阻，面临再融资风险和流动性压力；2008年金融危机期间，抵押贷款市场是系统性流动性风险的典型例子。
+    \end{itemize}
+
+    \textbf{陈述IV分析。}
+    \begin{itemize}
+        \item 可转债投资者在转换或交易时需要市场流动性，且可转债市场在压力时期流动性可能急剧下降；系统性流动性危机时，可转债市场买卖价差扩大、交易困难，投资者面临融资和流动性风险；此外，可转债发行人也面临再融资风险。
+    \end{itemize}
+
+    \textbf{陈述V分析。}
+    \begin{itemize}
+        \item 统计套利策略通常使用高杠杆，依赖短期融资和保证金交易；在系统性流动性危机时（如2008年金融危机、2020年3月市场崩盘），融资成本上升、保证金要求提高、融资渠道受限，统计套利策略面临严重的融资流动性风险，可能导致大规模平仓和损失。
+    \end{itemize}
+\end{explanation}
+
+\checklist{系统性融资流动性风险分析}
+
+
+\begin{question}
+    A fund manager is presenting to a group of analysts on the topic of asset illiquidity. The manager highlights the sources of illiquidity in the presentation and describes the relationship between market imperfections and illiquidity. Which of the following is a correct statement to include in the presentation?
+\end{question}
+
+\begin{choices}
+    \item Insufficient capital and differences in investor expertise can result in illiquid asset markets
+    \item Asset illiquidity is independent of investors' access to credit
+    \item Transactions, whether large or small in size, will have an equal impact on asset prices
+    \item Symmetric information among a large group of investors can cause markets to freeze and break down
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 资本不足使做市商和投资者缺乏资金提供流动性，无法承担库存风险；投资者专业知识差异导致只有少数专业投资者参与交易，市场参与者减少、交易频率降低，流动性下降；这是非流动性市场的重要特征。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 资产非流动性与投资者的信贷可得性密切相关；信贷可得性影响投资者的融资能力，进而影响其参与交易和提供流动性的能力；信贷约束会减少市场参与者，降低市场流动性；2008年金融危机期间，信贷紧缩直接导致市场流动性枯竭。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 交易规模对资产价格的影响不相等；大额交易产生更大的价格冲击，需要更大的价格让步来吸引对手方或补偿做市商的库存风险；小额交易对价格影响相对较小；这是流动性风险的核心特征，交易规模越大，价格影响越大。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 信息对称不会导致市场冻结，而是信息不对称导致市场问题；当信息不对称严重时，信息劣势方担心逆向选择，不愿交易，导致市场流动性降低甚至冻结；信息对称有助于市场效率，促进交易和流动性。
+    \end{itemize}
+\end{explanation}
+
+\checklist{资产非流动性来源分析}
+
+
+
+\end{document}

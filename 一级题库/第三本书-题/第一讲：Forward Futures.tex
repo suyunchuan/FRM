@@ -1,0 +1,2587 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+%模版
+
+\section{考点1:Introduction to Derivatives 衍生品介绍}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a financial institution is classifying derivative instruments. Which of the following statements regarding the classification of derivatives as linear or nonlinear is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item Options are linear derivatives because their payoff is directly proportional to the change in the underlying asset's value.
+        \item Forwards and futures are nonlinear derivatives since their payoff does not follow a simple linear relationship with the underlying asset's value.
+        \item Forwards and futures are linear derivatives as their payoff has a linear relationship with the value of the underlying asset.
+        \item Options are neither linear nor nonlinear derivatives; they belong to a separate category entirely.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 期权属于非线性衍生品，其回报与标的资产价值并非呈线性关系。例如，对于看涨期权，当标的资产价格低于行权价时，期权价值为0；当标的资产价格高于行权价时，期权价值才随标的资产价格上升而增加，不是简单的线性比例关系。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 远期和期货是线性衍生品，它们的回报与标的资产价值呈线性关系。比如，在远期合约中，合约价值会随着标的资产价格的变动而按固定比例变动。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 远期和期货的回报与标的资产价值之间存在线性关系，符合线性衍生品的定义。 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 期权属于非线性衍生品，并非不属于这两种分类范畴。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{线性衍生品和非线性衍生品（重点远期、期货和期权的类别）}
+
+\begin{question}
+    An investment bank's risk analyst is assessing the motives of various market participants. Which of these parties has the primary goal of transferring the risk of price change?
+    \end{question}
+    
+    \begin{choices}
+        \item Spot seller.
+        \item Investor.
+        \item Hedger.
+        \item Arbitrageur.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 套期保值者（Hedger）参与市场的主要目的是转移价格变动风险。他们通过在期货、期权等衍生品市场建立与现货市场相反的头寸，来对冲现货价格波动带来的风险。例如，农产品生产商担心收获时农产品价格下跌，就可以在期货市场卖出期货合约，将价格风险转移出去。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 现货卖方（Spot seller）主要关注的是按照当前市场价格出售商品，获取收益，并非以转移价格变动风险为首要目标 。他们在交易时更多考虑的是当下的市场供需和价格水平，而不是规避未来价格波动风险。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 投资者（Investor）主要目的是通过资产配置获取收益，虽然在投资过程中也会考虑风险，但不是像套期保值者那样专门为了转移价格变动风险。投资者可能会通过分散投资等方式管理风险，而非直接转移价格风险。 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 套利者（Arbitrageur）主要通过利用不同市场或不同资产之间的价格差异进行低买高卖，获取无风险利润，并非以转移价格变动风险为主要目标。他们关注的是市场间的价格偏差，而不是自身面临的价格风险。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{市场参与者（辨析套期保值者、投机者、套利者的动机）}
+
+    \begin{question}
+        A financial analyst is classifying different types of underlying assets for derivatives. Which of the following correctly categorizes the assets as either commodities assets or financial assets?
+        \end{question}
+        
+        \begin{choices}
+            \item Foreign currencies are commodities assets, while stock indexes are financial assets.
+            \item Agricultural products like corn and soybeans are financial assets, and precious metals such as gold are commodities assets.
+            \item Interest rates are commodities assets, and foreign currencies are financial assets.
+            \item Stock indexes are financial assets, and crude oil is a commodities asset.
+        \end{choices}
+        
+        \begin{correctanswer}
+        D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 外汇属于金融资产，并非商品资产。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+        \item 玉米、大豆等农产品属于商品资产，不是金融资产。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+        \item 利率属于金融资产相关范畴，不是商品资产。
+        \end{itemize}
+        \textbf{D选项正确。}
+        \begin{itemize}
+        \item 股票指数是金融资产，原油是商品资产中的能源类资产，该选项分类正确。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{商品资产和金融资产的分类判断}
+
+\begin{question}
+    Commodities assets play a significant role in the derivatives market, with their unique characteristics influencing trading strategies and risk management. A risk analyst is examining the features of commodities assets to better understand their behavior and implications for investment portfolios. Which of the following characteristics is commonly associated with commodities assets?
+    \end{question}
+    
+    \begin{choices}
+        \item They always have very low storage costs.
+        \item Their prices are rarely affected by weather conditions.
+        \item For agricultural commodities, seasonality is a significant consideration.
+        \item They do not require any physical handling or storage.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 并非所有商品资产存储成本都很低，比如农产品存储成本较高。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 农产品等商品资产价格常受天气影响，比如恶劣天气影响收成进而影响价格。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 对于农产品这类商品资产，季节性是重要考虑因素，比如收获季节会影响供应和价格。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 多数商品资产需要物理处理和存储，比如金属、农产品等。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{商品资产的特征}
+
+    \begin{question}
+        A risk analyst at a financial institution is evaluating different trading systems. Which of the following statements represents an advantage of an exchange - trading system?
+        \end{question}
+        
+        \begin{choices}
+            \item There is limited transparency in price discovery.
+            \item Trades are structured to minimize counterparty credit risk.
+            \item Participants have to adhere to strict and inflexible rules.
+            \item It lacks a standardized clearing process.
+        \end{choices}
+        
+        \begin{correctanswer}
+            B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{B选项正确。}
+        \begin{itemize}
+            \item 在交易所交易系统中，通常会有中央清算机构介入。中央清算机构作为所有交易的对手方，承担了交易双方的信用风险。当一方违约时，中央清算机构会采取相应措施来弥补损失，从而大大降低了交易中的信用风险。
+        \end{itemize}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 交易所交易系统的一个重要特点就是价格发现的透明度高。所有的交易信息，包括价格、成交量等都是公开的，参与者可以基于这些信息做出决策，而不是有限的透明度。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 与场外交易相比，交易所交易系统的规则是标准化的，参与者在交易时的灵活性相对较低。场外交易中，交易双方可以根据自身需求协商交易条款，而交易所交易需要遵循统一的规则和合约标准。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 交易所交易系统通常具有标准化的清算流程。中央清算机构会对交易进行统一的清算和结算，确保交易的顺利完成和资金的安全转移，而不是缺乏标准化的清算流程。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{交易所交易系统的优势（关键是理解交易所交易系统在信用风险、透明度、规则灵活性和清算流程等方面的特点）}
+
+\begin{question}
+    A risk manager at a large bank is assessing the drawbacks of bilaterally cleared over - the - counter (OTC) derivatives trades. Which of the following statements least likely describes a problem with these trades?
+    \end{question}
+    
+    \begin{choices}
+        \item Losses can be effectively diversified among a large number of market participants.
+        \item The failure of a single counterparty can trigger a chain reaction and cause systemic risks.
+        \item Bilateral OTC derivatives usually have non - standard and complex features.
+        \item Exiting existing trades can be extremely challenging.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 在双边清算的场外衍生品交易中，由于交易是在两个对手方之间直接进行的，缺乏像集中清算那样的损失共担机制，很难将损失有效地分散到大量市场参与者中。所以该项描述的情况并不是双边清算OTC衍生品交易的问题，而是其不具备的优势。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 双边清算的OTC衍生品交易中，单个交易对手的违约可能会引发连锁反应。因为交易对手之间存在相互的信用风险敞口，一个对手方的违约可能导致其他对手方的损失，进而可能引发系统性问题，这是双边清算OTC衍生品交易的一个显著问题。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 双边OTC衍生品往往是根据交易双方的特定需求定制的，具有非标准化和复杂的特征。这些非标准和复杂的特性使得交易的估值、风险管理和监管变得更加困难，是双边清算OTC衍生品交易的一个问题。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 由于双边清算缺乏集中清算的损失共担机制，当出现损失时，很难将所有损失在参与者之间进行合理分摊，这会导致部分参与者承担过大的损失，是双边清算OTC衍生品交易的问题之一。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{双边清算场外衍生品交易的问题（关键是理解双边清算OTC衍生品在信用风险、标准化程度、交易退出和损失分摊等方面的特点）}
+
+\begin{question}
+    A futures trader at an investment bank is studying the role of clearinghouses in futures trading. In the settlement process of futures contracts, which of the following functions is correctly associated with clearinghouses?
+    \end{question}
+    
+    \begin{choices}
+        \item In the case of cash settlement, the clearinghouse ensures that the shorts pay the net gain amount to the longs.
+        \item The clearinghouse assigns delivery notices from the shorts to the longs randomly.
+        \item Each day, members who have gained money pay their gain amount to the clearinghouse, while members who have lost will receive their loss amount from the clearinghouse.
+        \item The clearinghouse allows long and short positions in different contracts to offset each other.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 在现金结算的期货合约中，清算所的一个重要职能是确保资金的正确转移。当合约到期进行现金结算时，清算所会保证空头将净盈利金额支付给多头，以完成结算过程，所以该选项正确。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 通常情况下，清算所是将多头的交割通知分配给空头，而不是将空头的通知分配给多头，所以该选项错误。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 每日结算时，亏损的会员需要向清算所支付亏损金额，盈利的会员则从清算所收取盈利金额，而不是盈利会员向清算所支付盈利金额，所以该选项错误。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 清算所实现的是同一合约内多头和空头头寸的相互冲销，而不是不同合约的头寸相互冲销，所以该选项错误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期货清算所的职能（关键是准确理解清算所在期货结算过程中资金转移、交割通知分配和头寸冲销等方面的正确操作）}
+   
+\begin{question}
+    A junior trader on a derivatives trading desk is trying to understand the characteristics of different derivatives. Which of the following statements is least accurate regarding derivatives?
+    \end{question}
+    
+    \begin{choices}
+        \item A swap is an over - the - counter contract. Compared with exchange - traded options with the same underlying asset and maturity, the credit risk of a swap is lower due to strict regulations.
+        \item The benefit of OTC markets is that market participants can customize contracts according to their specific needs instead of using standardized contracts defined by exchanges.
+        \item A forward contract offers a comparable payoff to a futures contract, but a forward is traded over - the - counter while a futures is exchange - traded.
+        \item Derivatives markets draw in various traders. The high leverage available to speculators implies that traders can easily take on substantial risks.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 场外交易（OTC）的互换合约（swap）通常缺乏像交易所那样严格的监管和保证金制度。与具有相同标的资产和到期日的交易所交易期权相比，互换合约的信用风险更高，因为在OTC市场中，交易双方直接承担对方违约的风险，而不是像交易所那样有清算所作为中介来降低信用风险。所以该选项中说互换合约信用风险更低是错误的。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 场外交易市场（OTC）的一个主要优势就是合约的非标准化。市场参与者可以根据自身的特定需求定制合约条款，而不必局限于交易所规定的标准化合约，这增加了交易的灵活性。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 远期合约（forward contract）和期货合约（futures contract）在本质上都约定了在未来某个时间以特定价格买卖标的资产，因此它们的收益情况具有可比性。但远期合约是在OTC市场交易，而期货合约是在交易所交易。
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 衍生品市场吸引了各种各样的交易者，包括投机者。投机者可以利用衍生品的高杠杆特性，只需投入少量的资金就可以控制较大价值的合约，这使得他们能够轻松地承担重大风险，同时也可能获得高额回报。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{衍生品的特点（关键是准确理解不同衍生品的交易场所、信用风险、合约标准化程度以及杠杆特性等方面的差异）}
+    
+\section{考点2:Forward contracts \& Futures contracts 远期和期货}
+\setcounter{question}{0}
+\begin{question}
+    A junior trader at a derivatives trading desk is studying the key distinctions between forward contracts and futures contracts as part of their professional development. These two financial instruments play crucial roles in the world of finance, yet they possess notable differences that impact their trading dynamics, risk profiles, and regulatory landscapes. For instance, their trading venues and contract standardization levels vary significantly. Which of the following statements accurately captures the disparities between forward contracts and futures contracts?
+    \end{question}
+    
+    \begin{choices}
+        \item Forward contracts are publicly listed and traded on regulated exchanges, adhering to strict standardization norms regarding contract specifications.
+        \item Futures contracts benefit from the guarantee of a clearinghouse, effectively eliminating the risk of default by either party involved in the transaction.
+        \item Forward contracts mandate a daily settlement process, where gains and losses are realized and accounted for on a day - to - day basis.
+        \item Futures contracts predominantly conclude with the physical delivery of the underlying asset upon reaching their expiration date.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 远期合约是场外交易的非标准化合约，并非在交易所公开交易且标准化，所以该选项说法错误。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 期货合约由清算所提供履约担保，充当买卖双方的中介，极大地降低了交易对手违约风险，此选项说法正确。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 远期合约一般是到期一次性结算，不存在每日结算（盯市）机制，该选项说法错误。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 期货合约多数通过平仓了结头寸，只有少数会进行实物交割，并非主要以实物交割告终，该选项说法错误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期合约和期货合约的区别（辨析远期合约和期货合约的特性）}
+
+    \begin{question}
+        A small - scale manufacturing company needs to enter into a contract for the purchase of a specialized raw material in six months. The company has very specific quality, quantity, and delivery terms requirements that are not standard in the market. Which financial instrument, forward or futures, would be more appropriate for this company to use, and why?
+        \end{question}
+        
+        \begin{choices}
+            \item Futures contract, because it offers standardized terms that are easy to understand and trade.
+            \item Forward contract, because it can be customized to meet the company's specific quality, quantity, and delivery terms requirements.
+            \item Futures contract, since it is guaranteed by a clearinghouse, reducing the risk of default.
+            \item Forward contract, mainly because it has a large trading volume which ensures liquidity.
+        \end{choices}
+        
+        \begin{correctanswer}
+        B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 期货合约是标准化合约，无法满足该公司特定的质量、数量和交付条款要求 。
+        \end{itemize}
+        \textbf{B选项正确。}
+        \begin{itemize}
+        \item 远期合约是场外交易的私人合约，可以根据交易双方的需求进行定制。该公司有特殊的要求，远期合约能够满足其对质量、数量和交付条款的个性化需求 。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+        \item 虽然期货合约由清算所担保降低违约风险，但这不是该公司在这种场景下选择合约的关键因素，关键是合约能否满足其特殊需求 。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+        \item 远期合约交易规模大并非其被选择的主要原因，且本题中公司需求的特殊性才是决定因素，而不是交易规模带来的流动性 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{远期合约和期货合约的区别（远期合约的优点是可定制化）}
+
+\begin{question}
+    A medium - sized investment firm is looking to hedge its exposure to fluctuations in the price of a certain commodity. The firm is concerned about counter - party default risk and wants to ensure a high level of security in its transactions. Why would the firm choose a futures contract over a forward contract in this scenario?
+    \end{question}
+    
+    \begin{choices}
+        \item Because futures contracts can be customized to fit the firm's exact hedging needs.
+        \item Because futures contracts are traded over - the - counter (OTC), providing more flexibility.
+        \item Because futures contracts are guaranteed by a clearinghouse.
+        \item Because futures contracts have a lower trading volume, which makes them more stable.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 期货合约是标准化合约，不能根据公司确切的套期保值需求进行定制，可定制是远期合约的特点 。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 期货合约是在交易所交易，而非场外交易（OTC），场外交易是远期合约的交易方式 。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 期货合约由清算所提供担保，清算所在买卖双方之间充当中间人，能有效降低交易对手违约风险，符合该公司关注的重点 。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 期货合约交易量大，而不是交易规模小，且交易规模大小并非该公司选择期货合约的关键原因 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期合约和期货合约的区别（期货合约由清算所担保，可降低违约风险）}
+
+\begin{question}
+    A corporate treasurer is tasked with hedging the foreign exchange risk of an upcoming payment in six months. The company has a relatively large budget for hedging costs and wants to have flexibility in its hedging strategy. Given the choice between entering into a forward contract and buying a foreign exchange option, which would be the more appropriate choice and why?
+    \end{question}
+    
+    \begin{choices}
+        \item A forward contract, because it has no cost associated with it and provides a definite hedge.
+        \item A foreign exchange option, because it allows the company to benefit from favorable exchange rate movements while limiting losses to the option premium.
+        \item A forward contract, because it is easier to execute and has lower administrative burden.
+        \item A foreign exchange option, because it completely eliminates the foreign exchange risk without any cost.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 远期合约虽然能确定地对冲风险，但并非没有成本，而且缺乏灵活性，不能从有利的汇率变动中获利。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 期权赋予买方权利而非义务。购买外汇期权后，若汇率朝有利方向变动，公司可行使期权获利；若汇率不利，公司可放弃行权，仅损失期权费，符合公司有预算且追求灵活性的需求。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 远期合约相对期权可能在执行上不复杂，但它缺乏灵活性，不能满足公司对灵活策略的需求。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 期权需要支付期权费，并非没有成本，而且不能完全消除风险（损失期权费的风险存在）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期合约和期权的对冲选择（重点理解利用期权对冲的优势）}
+
+\begin{question}
+    A junior risk analyst is studying the characteristics of futures, options, and forwards. Which of the following statements regarding these derivative instruments is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item Futures and forwards are both traded on exchanges, while options can be traded both on - exchange and over - the - counter (OTC).
+        \item In futures and forwards, the rights and obligations of both parties are symmetric, whereas in options, the rights and obligations of the long and short parties are asymmetric.
+        \item Forwards have no default risk as they are guaranteed by a clearinghouse, while futures and options may face default risk.
+        \item Options are always traded on exchanges, while futures and forwards are traded OTC.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 远期是场外交易（OTC），期货是场内（交易所）交易，期权部分在交易所交易，部分在场外交易。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 期货和远期中，交易双方权利义务对等，必须履行合约；期权中，多头有行权权利，空头有履约义务，权利义务不对称。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 期货由清算所担保，降低违约风险；远期没有清算所担保，存在违约风险；期权的违约风险情况较为复杂，取决于交易对手等因素。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 期权部分在交易所交易，部分在场外交易；期货在交易所交易，远期在场外交易。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期货、期权和远期定性分析（辨析期货、期权和远期的特性，重点掌握交易场所和权利义务关系）}
+
+\begin{question}
+    A financial analyst is comparing the characteristics of over - the - counter (OTC) and exchange - traded derivatives. Which of the following statements accurately reflects the differences between these two types of trading environments?
+    \end{question}
+    
+    \begin{choices}
+        \item OTC derivatives are standardized contracts, while exchange - traded derivatives can be customized to meet specific needs.
+        \item OTC derivatives are backed by a clearinghouse, reducing default risk, whereas exchange - traded derivatives rely on the creditworthiness of the counter - party.
+        \item OTC derivatives are typically unregulated, while exchange - traded derivatives are subject to regulatory oversight.
+        \item OTC derivatives have a smaller trading volume compared to exchange - traded derivatives.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item OTC衍生品是定制化合约，而交易所交易的衍生品是标准化合约，该选项说法颠倒。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item OTC衍生品交易对手存在违约风险，因为没有清算所担保；交易所交易的衍生品由清算所提供担保，降低违约风险，该选项说法错误。 
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item OTC衍生品通常不受监管或监管较少，而交易所交易的衍生品要遵循相关的监管规定，受到严格监管。 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item OTC衍生品交易规模通常较大，而交易所交易的衍生品交易规模相对较小，该选项说法错误。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{OTC vs 交易所交易（辨析OTC和交易所交易的特性-违约风险、监管、合同标准化程度、交易规模）}
+
+    \begin{question}
+        An investor enters into 4 long futures contracts to buy August silver at \$20 per ounce. A silver futures contract size is 100 troy ounces. The initial margin is \$200 per contract and the maintenance margin is 80\% of the initial margin. Which of the following drops in the futures price will lead to a margin call?
+        \end{question}
+        
+        \begin{choices}
+            \item \$1 drop.
+            \item \$2 drop.
+            \item \$3 drop.
+            \item \$4 drop.
+        \end{choices}
+        
+        \begin{correctanswer}
+        A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算每份合约的维持保证金}
+        \begin{itemize}
+        \item 维持保证金为初始保证金的 80\%，即 $\$200\times80\% = \$160$。
+        \end{itemize} 
+        \textbf{步骤2：计算触发追加保证金通知的每份合约价值变动}
+        \begin{itemize}
+        \item 设价格下降 \$x 美元，每份合约价值变动为 \$100x 美元。当保证金账户价值下降到维持保证金水平以下时会触发追加保证金通知，也就是每份合约损失达到 \$200 - \$160 = \$40 时会触发。
+        \item 由 \$100x = \$40，可得 \$x = 0.4 美元。因此，当价格下降0.4美元时，会触发追加保证金通知。 
+        \end{itemize}
+     
+        \end{explanation}
+        
+        \checklist{期货保证金计算（辨析初始保证金和维持保证金的概念，判断触发追加保证金通知的情况）}
+
+\begin{question}
+    A hedge fund manager aims to equitize the cash portion of assets under management. He enters into a long futures position on a stock index with a multiplier of 300. The cash position is \$9,000,000, and at the current futures value of 1200, it requires the manager to be long 25 contracts. If the current initial margin is \$18,000 per contract, and the current maintenance margin is \$15,000 per contract, what is the variation margin the portfolio manager needs to advance if the futures contract value falls to 1185 at the end of the first day of the position?
+    \end{question}
+    
+    \begin{choices}
+        \item \$49,500.
+        \item \$66,000.
+        \item \$82,500.
+        \item \$99,000.
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算期货合约价值的变动}
+    \begin{itemize}
+    \item 每份合约价值变动为：$(1200 - 1185)\times300 = 4500$ 美元。
+    \item 总共持有 25 份合约，所以头寸总价值变动为：$4500\times25 = 112500$ 美元。
+    \end{itemize}
+    \textbf{步骤2：分析保证金情况}
+    \begin{itemize}
+    \item 初始保证金：$18000\times25 = 450000$ 美元。
+    \item 维持保证金：$15000\times25 = 375000$ 美元。
+    \item 由于头寸价值下降了 112500 美元，保证金账户现有价值为 $450000 - 112500 = 337500$ 美元，低于维持保证金 375000 美元。需要追加变动保证金使保证金账户回到初始保证金水平，所以需要追加的变动保证金为 37500 美元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{变动保证金（追加保证金须使保证金账户回到初始保证金水平）}
+    
+\begin{question}
+    A financial analyst is comparing the accounting treatments for futures contracts under normal accounting rules and hedge accounting. Which of the following statements accurately describes the differences between these two accounting methods?
+    \end{question}
+    
+    \begin{choices}
+        \item Under normal accounting rules, the gains and losses of futures contracts are recognized at the end of the accounting period, resulting in stable earnings on the accounting books. In contrast, hedge accounting requires immediate recognition of gains and losses, increasing earnings volatility.
+        \item Normal accounting rules mandate that the gains and losses of futures contracts be recognized as they occur, leading to higher earnings volatility on the accounting books. Hedge accounting, on the other hand, can reduce this earnings volatility, albeit with strict recognition criteria.
+        \item Both normal accounting rules and hedge accounting recognize the gains and losses of futures contracts in the same way, with no significant difference in earnings volatility.
+        \item Hedge accounting allows for the deferral of all gains and losses of futures contracts indefinitely, while normal accounting rules require recognition only when the contracts are closed.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 普通会计准则下，期货合约损益是在发生时入账，会造成账面收益波动性大，而非在会计期末确认且收益稳定；对冲会计是降低收益波动性，不是增加，该选项说法错误。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 普通会计准则要求期货损益发生时入账，因期货逐日盯市，会使账面收益波动性大；对冲会计可降低这种波动性，但认定标准严格，该选项说法正确。 
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 普通会计准则和对冲会计准则对期货合约损益的确认方式不同，收益波动性也有差异，该选项说法错误。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 对冲会计并非允许无限期递延期货合约所有损益，普通会计准则也不是仅在合约平仓时确认损益，该选项说法错误。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{普通会计准则vs对冲会计准则（重点掌握损益确认时间和对收益波动性的影响）}
+
+    \begin{question}
+        A portfolio manager aims to make use of the cash position of assets under management. The manager enters into a long futures position on the NASDAQ 100 index with a multiplier of 300. The cash position is \$20 million, and the current futures value is 1200, which requires the manager to long 55 contracts. If the current initial margin is \$15000 per contract, and the current maintenance margin is \$12000 per contract, what variation margin does the portfolio manager have to advance if the futures contract value falls to 1196 at the end of the first day of the position being placed?
+        \end{question}
+        
+        \begin{choices}
+            \item \$0
+            \item \$66,000
+            \item \$330,000
+            \item \$220,000
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算每份合约的损失}
+        \begin{itemize}
+            \item 期货合约价值从1200下降到1196，每份合约的损失为\((1200 - 1196)\times300 = 1200\)美元。
+        \end{itemize}
+        \textbf{步骤2：计算总损失和保证金变化}
+        \begin{itemize}
+            \item 总共持有55份合约，总损失为\(1200\times55 = 66000\)美元。
+            \item 初始保证金为每份合约15000美元，55份合约的初始保证金总额为\(15000\times55 = 825000\)美元。
+            \item 损失后保证金余额为\(825000-66000 = 759000\)美元。
+            \item 维持保证金为每份合约12000美元，55份合约的维持保证金总额为\(12000\times55 = 660000\)美元。
+            \item 因为\(759000>660000\)，即保证金余额高于维持保证金，无需补充保证金。
+        \end{itemize}
+        
+        \end{explanation}
+        
+        \checklist{期货合约保证金和变动保证金的计算（注意辨析初始保证金和维持保证金，以及何时需要补充变动保证金）}
+
+\begin{question}
+    An investor enters into 8 long futures contracts to buy September silver for \$20 per ounce. A silver futures contract size is 50 troy ounces. The initial margin is \$5,000 per contract and the maintenance margin is 80\% of the initial margin. What change in the futures price of silver will lead to a margin call?
+    \end{question}
+    
+    \begin{choices}
+        \item \$160 drop
+        \item \$4 drop
+        \item \$8 drop
+        \item \$20 drop
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算每份合约的维持保证金}
+    \begin{itemize}
+        \item 已知初始保证金为每份合约5000美元，维持保证金是初始保证金的80\%，则每份合约的维持保证金为\(5000\times80\% = 4000\)美元。
+    \end{itemize}
+    \textbf{步骤2：计算每份合约可承受的损失}
+    \begin{itemize}
+        \item 每份合约初始保证金为5000美元，当保证金余额降至维持保证金4000美元时会触发追加保证金通知，所以每份合约可承受的损失为5000 - 4000 = 1000美元。
+    \end{itemize}
+    \textbf{步骤3：计算导致保证金追加的价格变动}
+    \begin{itemize}
+        \item 每份合约的规模是50盎司，设价格变动为\(\Delta P\)，则每份合约的损失为\(50\times\Delta P\)。
+        \item 令\(50\times\Delta P = 1000\)，解得\(\Delta P=\frac{1000}{50}=20\)美元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期货合约保证金与价格变动的关系（关键是理解初始保证金、维持保证金的概念，以及根据合约规模计算导致保证金追加的价格变动）}
+
+    \begin{question}
+        In early July, an investor named Sarah bought three September platinum futures contracts. Each contract size is 4,000 ounces of platinum and the futures price on the date of purchase was USD 20.50 per ounce. The required initial margin is USD 7,000 and a maintenance margin of USD 5,500. The following is the price history for the September platinum futures:
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Day & Futures Price & Daily Gain \\ \hline
+        July 2 & 20.50 & 0 \\ \hline
+        July 3 & 20.58 & 960 \\ \hline
+        July 4 & 20.30 & -3360 \\ \hline
+        July 5 & 20.10 & -2400 \\ \hline
+        July 9 & 20.25 & 1800 \\ \hline
+        July 10 & 20.00 & -3000 \\ \hline
+        July 11 & 19.90 & -1200 \\ \hline
+        \end{tabular}
+        \end{center}
+        On which days did Sarah receive a margin call?
+        \end{question}
+        
+        \begin{choices}
+            \item July 5 only
+            \item July 4 and July 5 only
+            \item July 5 and July 10 only
+            \item July 4, July 5 and July 11 only
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确保证金计算原理}
+        \begin{itemize}
+        \item 初始保证金为 \(7000\times3 = 21000\) 美元，维护保证金为 \(5500\times3 = 16500\) 美元。投资者的保证金账户余额会根据每日盈亏进行调整，当余额低于维护保证金时，会收到追加保证金通知（margin call）。
+        \end{itemize}
+        \textbf{步骤2：按天计算保证金账户余额}
+        \begin{itemize}
+        \item 7月2日：初始保证金 \(21000\) 美元。
+        \item 7月3日：盈利 \(960\) 美元，保证金账户余额为 \(21000 + 960 = 21960\) 美元，高于维护保证金。
+        \item 7月4日：亏损 \(3360\) 美元，保证金账户余额为 \(21960 - 3360 = 18600\) 美元，高于维护保证金。
+        \item 7月5日：亏损 \(2400\) 美元，保证金账户余额为 \(18600 - 2400 = 16200\) 美元，低于维护保证金，会收到margin call，须补足保证金至初始保证金，即21000美元。
+        \item 7月9日：盈利 \(1800\) 美元，保证金账户余额为 \(21000 + 1800 = 22800\) 美元，高于维护保证金。
+        \item 7月10日：亏损 \(3000\) 美元，保证金账户余额为 \(22800 - 3000 = 19800\) 美元，高于维护保证金。
+        \item 7月11日：亏损 \(1200\) 美元，保证金账户余额为 \(19800 - 1200 = 18600\) 美元，高于维护保证金。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{期货交易中保证金计算与追加保证金通知（关键是掌握保证金账户余额的计算方法，根据每日盈亏调整余额，并与维护保证金比较判断是否收到margin call）}
+
+        \begin{question}
+            A junior trader on a derivatives trading desk has a long position in a futures contract and wishes to issue instructions to close out the position. When would the trader use a market - if - touched order?
+            \end{question}
+            
+            \begin{choices}
+                \item Execute the trade at the best available price as soon as a bid/offer reaches a specified worse price.
+                \item Execute the trade at the best available price once the market trades at the specified or a more favorable price.
+                \item Give the broker the discretion to postpone the order execution to secure a superior price.
+                \item Ensure the order is executed right away; otherwise, it will be canceled.
+            \end{choices}
+            
+            \begin{correctanswer}
+                B
+            \end{correctanswer}
+            
+            \begin{explanation}
+            \textbf{B选项正确。}
+            \begin{itemize}
+            \item 市场触及指令（market - if - touched order）是指当市场价格达到或优于指定价格时，该指令会以当时可获得的最优价格执行交易。所以当市场交易价格达到指定的或更有利的价格时，会触发此指令以最优价格执行。
+            \end{itemize}
+            \textbf{A选项错误。}
+            \begin{itemize}
+            \item 市场触及指令是在价格达到指定或更好价格时执行，而非指定或更差价格。
+            \end{itemize}
+            \textbf{C选项错误。}
+            \begin{itemize}
+            \item 允许经纪人延迟执行订单以获取更好价格的是 discretionary order，并非市场触及指令。
+            \end{itemize}
+            \textbf{D选项错误。}
+            \begin{itemize}
+            \item 要求立即执行订单，否则取消的是 立即执行否则取消指令（FOK, Fill - or - Kill order），并非市场触及指令。
+            \end{itemize}
+            \end{explanation}
+            
+            \checklist{期货交易指令类型（关键是理解市场触及指令的定义，以及与其他类型交易指令的区别）}
+
+\begin{question}
+    An investor holds a long position in a stock with a current market price of \$40. The investor has two goals. Firstly, to keep the ownership as long as the stock price keeps rising. Secondly, to liquidate the position entirely if the stock price falls below \$35. Which type of order can best achieve these two objectives?
+    \end{question}
+    
+    \begin{choices}
+        \item Stop - loss sell order at \$35
+        \item Sell market order
+        \item Sell limit order at \$42
+        \item Stop - and - limit sell order at \$35
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 止损卖出指令（Stop - loss sell order）是指当股票价格下跌到设定的止损价格（本题为\$35）时，该指令会自动触发成为市价卖出指令。这意味着只要股票价格高于\$35，投资者可以继续持有股票以获取价格上涨的收益；而当股票价格跌破\$35时，指令会立即执行，投资者可以退出头寸，满足了投资者的两个目标。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 市价卖出指令（Sell market order）会立即以当前市场价格卖出股票，无法实现投资者在股票价格上涨时继续持有的目标。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 限价卖出指令（Sell limit order）是指只有当股票价格达到或高于设定的限价（本题为\$42）时才会执行卖出操作。如果股票价格没有达到\$42，指令不会执行；而且即使股票价格跌破\$35，只要没有达到\$42，指令也不会执行，不能保证在股票价格下跌到\$35以下时退出头寸。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 止损限价卖出指令（Stop - and - limit sell order）在股票价格达到止损价格（\$35）时，会触发一个限价卖出指令。但是如果市场价格迅速下跌，可能会跳过限价，导致指令无法执行，不能确保在股票价格跌破\$35时一定能退出头寸。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{不同类型股票交易指令的特点和应用（关键是理解各种指令在不同市场情况下的执行机制，以及如何根据投资目标选择合适的指令）}
+
+\section{考点3:Using Futures for Hedging 使用期货进行对冲}
+\setcounter{question}{0}
+\begin{question}
+    An investor holds 300,000 ounces of silver. To hedge the price risk, the investor sells 300 silver futures contracts. The initial futures price is \$25 per ounce. If the futures price rises to \$28 at maturity, what is the gain or loss on the futures position?
+    \end{question}
+    
+    \begin{choices}
+        \item A gain of \$900,000
+        \item A loss of \$900,000
+        \item A gain of \$750,000
+        \item A loss of \$750,000
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：判断盈亏情况}
+    \begin{itemize}
+    \item 因为投资者卖空期货（Short 期货），当期货价格上升时会产生损失。
+    \end{itemize}
+    \textbf{步骤2：计算损失金额}
+    \begin{itemize}
+    \item 损失金额计算公式为\(loss=(到期期货价格 - 初始期货价格)\times 期货合约数量\)。
+    已知初始期货价格为\(25\)美元/盎司，到期期货价格为\(28\)美元/盎司，期货合约数量为\(300,000\)盎司。
+    \item 则\(loss=(28 - 25)\times300,000 = 3\times300,000=900,000\)（美元），即产生\(900,000\)美元的损失。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期货盈亏计算(空投方在价格上涨时产生损失）}
+
+\begin{question}
+    A farmer grows wheat and wants to hedge the price risk associated with the upcoming harvest. The correlation coefficient between the spot price of wheat and the price of wheat futures is 0.7. The variance of the spot price of wheat is 0.04, and the variance of the wheat futures price is 0.0625. What is the optimal hedge ratio for the farmer to minimize price risk?
+    \end{question}
+    
+    \begin{choices}
+        \item 0.35
+        \item 0.56
+        \item 0.7
+        \item 1.25
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确最优对冲比例公式}
+    \begin{itemize}
+    \item 最优对冲比例公式为\(h^{*}=\rho\frac{\sigma_{S}}{\sigma_{F}}\)。
+    \item 其中\(\rho\)为相关系数，\(\sigma_{S}\)为现货价格的标准差，\(\sigma_{F}\)为期货价格的标准差。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算}
+    \begin{itemize}
+    \item 已知\(\rho = 0.7\)，\(\sigma_{S}^2=0.04\)，\(\sigma_{F}^2=0.0625\)，代入公式可得：
+    \[
+    h^{*}=0.7\times\frac{\sqrt{0.04}}{\sqrt{0.0625}}=0.7\times\frac{0.2}{0.25}=0.56
+    \]
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{最优对冲比例计算（关键是掌握最优对冲比例的计算公式）}
+
+    \begin{question}
+        An investor holds a diversified stock portfolio worth \$1,750,000. The standard deviation of the portfolio's returns is \$0.25, and the standard deviation of the S\&P 500 index futures returns is \$0.15. The correlation coefficient between the portfolio returns and the S\&P 500 index futures returns is \$0.9. The S\&P 500 index futures contract has a multiplier of \$250, and the current S\&P 500 index level is \$3,500. Which of the following actions should the investor take to hedge the price risk of the portfolio?
+        \end{question}
+        
+        \begin{choices}
+            \item Buy 2 S\&P 500 index futures contracts.
+            \item Sell 2 S\&P 500 index futures contracts.
+            \item Buy 3 S\&P 500 index futures contracts.
+            \item Sell 3 S\&P 500 index futures contracts.
+        \end{choices}
+        
+        \begin{correctanswer}
+        D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算最优对冲比例（$h^{*}$）}
+        \begin{itemize}
+        \item 根据公式\(h^{*}=\rho\frac{\sigma_{p}}{\sigma_{f}}\)，将\(\rho = 0.9\)，\(\sigma_{p}=0.25\)，\(\sigma_{f}=0.15\)代入可得：
+        \[
+        h^{*}=0.9\times\frac{0.25}{0.15}=1.5
+        \]
+        \end{itemize}
+        
+        \textbf{步骤2：计算每份期货合约价值}
+        \begin{itemize}
+        \item 每份S\&P 500指数期货合约价值 = 指数水平×合约乘数，即\(3500\times250 = 875000\)美元。
+        \end{itemize}
+        
+        \textbf{步骤3：计算对冲合约数量并确定方向}
+        \[ \Rightarrow N^* = \frac{h^* Q_A}{Q_F} = \frac{1.5\times1750000}{875000}=3\]
+        \begin{itemize}
+            \item 由于是为了对冲股票组合价格下跌风险，应采取空头对冲策略，即应卖出3份期货合约。
+        \end{itemize}
+        
+        \end{explanation}
+        
+        \checklist{最优对冲合约数量计算以及对冲方向判断（关键是掌握对冲合约数量的计算公式，以及如何判断对冲方向）}
+
+\begin{question}
+    An investment manager oversees a portfolio valued at USD 15 million, which has a beta relative to the S\&P 500 index of 0.6. The current level of the S\&P 500 index is 3,000, and 3 - month S\&P 500 futures, with a contract size of USD 250×S\&P 500 index value, are trading at 3,050. To increase the portfolio's beta to 1.4, which of the following trading actions is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item Buy 22 futures contracts.
+        \item Sell 22 futures contracts.
+        \item Buy 16 futures contracts.
+        \item Sell 16 futures contracts.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}    
+    \textbf{步骤1：计算期货合约价值}
+    \begin{itemize}
+    \item 期货合约价值 = 期货价格×合约乘数=\(3050×250 = 762500\)美元。
+    \end{itemize}
+    \textbf{步骤2：计算合约数量}
+    \begin{itemize}
+    \item 调整投资组合beta所需买卖的期货合约数量公式为\(N^* = (\beta^* - \beta) \times \frac{V_A}{V_F}\) 。
+    \item \(N^* = (1.4 - 0.6) \times \frac{15000000}{762500}=15.74\)，向上取整为\(16\) 。
+    \end{itemize}
+    \textbf{步骤3：确定交易方向}
+    \begin{itemize}
+    \item 因为要增加投资组合的beta（N>0），所以需买入期货合约。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{beta对冲（关键是掌握期货合约数量的计算公式，以及如何判断买卖期货合约的方向）}
+
+\begin{question}
+    A risk manager is analyzing the concept of basis risk in the context of hedging with futures contracts. Which of the following statements regarding basis risk is accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item Basis risk only exists when the hedged asset is exactly the same as the underlying asset of the futures contract, and the hedge is held until maturity.
+        \item Basis risk can be completely eliminated by choosing a futures contract with a maturity that is far from the hedge horizon.
+        \item Basis risk is the risk that arises from the uncertainty of the basis when a hedge is closed out, and it is mainly caused by time and asset mismatches.
+        \item The basis is always defined as the futures price minus the spot price, and basis risk is solely related to the stability of this relationship.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 当被对冲资产与期货合约标的资产完全相同且持有至到期时，是完美对冲，基差风险最小，而非基差风险仅在这种情况下存在。实际上，资产不匹配或提前平仓等情况都会导致基差风险。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 选择与对冲期限相差很远的期货合约并不能消除基差风险，反而可能加大基差风险。应选择与现货头寸相关性高且到期日接近对冲期限的合约来降低基差风险。 
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 基差风险源于平仓时基差的不确定性，主要由时间不匹配（如套期保值期限与期货合约期限不一致）和资产不匹配（如用于套期保值的期货标的资产与现货资产不完全相同 ）导致。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 基差通常定义为被对冲资产的现货价格减去用于对冲的期货合约价格，但有时在金融资产期货中也会定义为期货价格减去现货价格。基差风险源于基差的不确定性，并非其稳定性。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{基差风险（基差风险主要来源于时间不匹配和资产不匹配）}
+
+\begin{question}
+    A commodities trader is considering strategies for long - term hedging when liquid long - term futures contracts are unavailable. Which of the following statements regarding the stack and roll strategy is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item The stack and roll strategy involves using only long - maturity futures contracts and rolling them over at maturity.
+        \item In the stack and roll strategy, a trader closes the short - maturity futures hedge right at the start of the delivery period and replaces it with a long - maturity futures hedge.
+        \item The stack and roll strategy requires implementing a short - maturity futures hedge, closing it out just prior to the delivery period, and replacing it with another short - maturity futures hedge repeatedly.
+        \item The stack and roll strategy is ineffective in hedging long - term risks as it only deals with short - term futures contracts.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 滚动对冲策略使用的是短期到期的期货合约，并非长期到期的期货合约，该选项说法错误。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 在滚动对冲策略中，是在交割期前平仓短期期货对冲头寸，并替换为另一个短期期货对冲头寸，而不是替换为长期期货对冲头寸，该选项说法错误。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 滚动对冲策略确实是先实施短期期货对冲，在交割期前平仓，再用另一个短期期货对冲替换，如此反复，该选项说法正确。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 滚动对冲策略通过不断滚动短期期货合约来实现长期对冲，是应对缺乏长期流动性期货合约时的有效策略，并非无效，该选项说法错误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{滚动对冲策略（用滚动的短期期货对冲长期头寸）}
+
+\begin{question}
+    Which of the following statements is true regarding basis risk?
+    \end{question}
+    
+    \begin{choices}
+        \item Basis risk only occurs in cross - hedging strategies and disappears when the hedged asset and the underlying asset are the same, and short hedge positions benefit from unexpected weakening of basis.
+        \item Basis risk only occurs in cross - hedging strategies and disappears when the hedged asset and the underlying asset are the same, and long hedge positions benefit from unexpected strengthening of basis.
+        \item Basis risk only occurs in cross - hedging strategies and disappears when the hedged asset and the underlying asset are the same, and short hedge positions benefit from unexpected strengthening of basis.
+        \item Basis risk arises in cross-hedging strategies but there is no basis risk when the underlying asset and hedge asset are the same.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 基差风险在交叉套期保值策略中会出现，当套期保值资产和标的资产相同时，基差风险消失。对于空头套期保值头寸，基差意外走强会带来收益。因为基差\(B = S - F\)（\(S\)是现货价格，\(F\)是期货价格），基差走强意味着\(S\)相对\(F\)上升，空头套期保值者在现货市场卖出资产、期货市场买入平仓，基差增大能带来更多收益。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 空头套期保值头寸是从基差意外走强中受益，而不是基差意外走弱。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 多头套期保值头寸是从基差意外走弱中受益，而不是基差意外走强。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 基差风险主要来源于时间不匹配和资产不匹配，故即使套期保值资产和标的资产相同，基差风险依然存在。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{基差风险（关键是理解基差风险的来源以及基差变化与套期保值头寸收益的关系）}
+
+\begin{question}
+    A commodities trader at a trading firm is analyzing the basis of wheat futures. The July 2023 spot price (\(S_1\)) of wheat is \$6.40 per bushel and the March 2024 futures price (\(F_1\)) is \$8.50. Four months later, in November, assume the spot price (\(S_2\)) of wheat increases to \$6.80 and the March 2024 futures price (\(F_2\)) increased to \$8.60. What happens to the basis between July and November?
+    \end{question}
+    
+    \begin{choices}
+        \item Basis weakens by -\$0.30
+        \item Basis strengthens by +\$0.20
+        \item Basis weakens by -\$0.20
+        \item Basis strengthens by +\$0.30
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确基差的计算公式。}
+    \begin{itemize}
+        \item 基差（Basis）的计算公式为：\(Basis = Spot\ Price - Futures\ Price\)。
+    \end{itemize}
+    \textbf{步骤2：计算7月的基差（\(Basis_{T1}\)）。}
+    \begin{itemize}
+        \item 已知7月的现货价格\(S_1 = 6.40\)美元，期货价格\(F_1 = 8.50\)美元。
+        \item 根据基差公式可得：\(Basis_{T1}=S_1 - F_1=6.40 - 8.50=-2.10\)美元。
+    \end{itemize}
+    \textbf{步骤3：计算11月的基差（\(Basis_{T2}\)）。}
+    \begin{itemize}
+        \item 已知11月的现货价格\(S_2 = 6.80\)美元，期货价格\(F_2 = 8.60\)美元。
+        \item 根据基差公式可得：\(Basis_{T2}=S_2 - F_2=6.80 - 8.60=-1.80\)美元。
+    \end{itemize}
+    \textbf{步骤4：计算基差的变化。}
+    \begin{itemize}
+        \item 基差变化:\[\Delta Basis=Basis_{T2}-Basis_{T1}=-1.80-(-2.10)= + 0.30\]
+        \item 基差变大意味着基差走强（strengthens）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{基差的计算与变化分析（关键是掌握基差的计算公式）}
+
+\begin{question}
+    A lamb farmer is worried that the price he can obtain for his lamb flock will be lower than his forecast. To safeguard against price drops in the flock, the farmer has chosen to hedge with live sheep futures. He has taken the appropriate number of sheep futures positions for November delivery, which he thinks will counterbalance any lamb price decreases during the spring selling season. What are the appropriate position and the likely sources of basis risk in the hedge, respectively?
+    \end{question}
+    
+    \begin{choices}
+        \item Long; choice of futures delivery date and asset.
+        \item Short; choice of futures delivery date.
+        \item Short; choice of futures asset.
+        \item Short; choice of futures delivery date and asset.
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定合适的期货头寸。}
+    \begin{itemize}
+        \item 农民担心羊羔价格下跌，为了对冲价格下降的风险，需要在期货市场上建立一个能在价格下跌时获利的头寸。
+        \item 当价格下降时，做空期货（Short Futures）可以获利，所以农民应该选择做空期货合约。
+    \end{itemize}
+    \textbf{步骤2：分析基差风险的来源。}
+    \begin{itemize}
+        \item \textbf{期货资产选择方面}：农民使用绵羊期货来对冲羊羔价格风险，羊羔和绵羊价格并非完全正相关。这种相关性的不完全匹配会影响绵羊期货合约和现货羊羔价格之间的基差，从而产生基差风险。
+        \item \textbf{期货交割日期选择方面}：农民的对冲期限是春季销售季节，而期货合约是11月交割。为了在春季维持对冲，农民可能需要展期（进入另一个期货合约），这会引入额外的基差风险。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期货套期保值的头寸选择和基差风险来源分析（关键是理解为对冲价格下跌应做空期货，且资产不匹配和事件不匹配均会产生基差风险）}
+
+\begin{question}
+    You aim to hedge an investment in Titanium using futures. However, there are no futures contracts based on this asset. To find the most suitable futures contract for hedging, you conduct a regression of daily price changes in Titanium against daily price changes in similar assets with associated futures contracts. Based on the following regression results, which asset - tied futures would likely introduce the least basis risk to your hedging position?
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{4}{|c|}{Change in price of Titanium = $\alpha+\beta$ (Change in price of Asset)} \\ \hline
+    Asset & $\alpha$ & $\beta$ & $R^{2}$ \\ \hline
+    A & 1.50 & 1.10 & 0.70 \\ \hline
+    B & 0.80 & 1.60 & 0.85 \\ \hline
+    C & 0.05 & 0.90 & 0.30 \\ \hline
+    D & 5.00 & 2.50 & 0.50 \\ \hline
+    \end{tabular}
+    \end{center}
+    \end{question}
+    
+    \begin{choices}
+        \item Asset A
+        \item Asset B
+        \item Asset C
+        \item Asset D
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 在选择用于套期保值的期货合约对应的资产时，\(R^{2}\) 越接近1，表示该资产价格变动与钛价格变动的相关性越强，基于此资产的期货合约进行套期保值时引入的基差风险就越小。
+    \item 比较四个选项的\(R^{2}\) 值，Asset B的\(R^{2}=0.85\) 最接近1，所以与Asset B相关的期货合约在套期保值时引入的基差风险最小。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{选择基差风险最小的期货合约（\(R^{2}\) 越接近1，表示资产价格变动与标的资产价格变动相关性越强，基差风险越小）}
+
+\begin{question}
+    Apple, Inc. is a company that relies significantly on rubber components sourced from Thailand. Apple intends to hedge its exposure to rubber price fluctuations over the next 8 months. Unfortunately, rubber futures contracts are not easily accessible. Through research, Apple discovers futures contracts on other commodities whose prices are closely related to rubber prices. Futures on Commodity X have a correlation of 0.88 with the price of rubber, and futures on Commodity Y have a correlation of 0.95 with the price of rubber. Futures on both Commodity X and Commodity Y are available with 7 - month and 10 - month expirations. Disregarding liquidity factors, which contract would be optimal for minimizing basis risk?
+    \end{question}
+    
+    \begin{choices}
+        \item Futures on Commodity X with 7 months to expiration
+        \item Futures on Commodity X with 10 months to expiration
+        \item Futures on Commodity Y with 7 months to expiration
+        \item Futures on Commodity Y with 10 months to expiration
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确最小化基差风险的原则}
+    \begin{itemize}
+    \item 为了最小化基差风险，应选择与标的资产（橡胶）价格变动相关性最高的期货合约，并且合约到期日应尽量接近套期保值期限，最好在套期保值期限之后到期。
+    \end{itemize}
+    \textbf{步骤2：分析相关性}
+    \begin{itemize}
+    \item Commodity X与橡胶价格的相关性为\(0.88\)，Commodity Y与橡胶价格的相关性为\(0.95\)，因为\(0.95 > 0.88\)，所以从相关性角度，应优先选择Commodity Y的期货合约。
+    \end{itemize}
+    \textbf{步骤3：分析到期期限}
+    \begin{itemize}
+    \item 套期保值期限是8个月，Commodity Y的期货合约中，10个月到期的合约比7个月到期的合约更符合在套期保值期限之后到期的原则。
+    \end{itemize}
+    \textbf{步骤4：得出结论}
+    \begin{itemize}
+    \item 综合相关性和到期期限，选择Futures on Commodity Y with 10 months to expiration可以最小化基差风险，D选项正确。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{选择最小化基差风险的期货合约（关键是掌握最小化基差风险的两个原则：高相关性和合适的到期期限，且期限最好在套期保值期限之后）}
+
+\begin{question}
+    A risk analyst at a commodities trading firm is assessing the optimal hedge ratio for a portfolio. The standard deviation of price changes in a copper futures contract is 0.4, while the standard deviation of changes in the price of copper is 0.5. The covariance between the spot price changes and the futures price changes is 0.26. Which of the following amounts is closest to the optimal hedge ratio?
+    \end{question}
+    
+    \begin{choices}
+        \item 0.520
+        \item 0.650
+        \item 1.300
+        \item 1.625
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算相关系数\(\rho\)}
+    \begin{itemize}
+    \item 根据公式\(\rho=\frac{Cov_{S,F}}{(\sigma_{S})(\sigma_{F})}\)，其中\(Cov_{S,F}=0.26\)（现货价格变动与期货价格变动的协方差），\(\sigma_{S}=0.5\)（现货价格变动的标准差），\(\sigma_{F}=0.4\)（期货价格变动的标准差）。
+    \item 代入可得\(\rho=\frac{0.26}{0.5\times0.4}=1.3\) 。
+    \end{itemize}
+    \textbf{步骤2：计算最优套期保值比率}
+    \begin{itemize}
+    \item 根据公式\(h = \rho\times\frac{\sigma_{S}}{\sigma_{F}}\)，将\(\rho = 1.3\)，\(\sigma_{S}=0.5\)，\(\sigma_{F}=0.4\)代入，可得\(h = 1.3\times\frac{0.5}{0.4}=1.3\times1.25 = 1.625\) 。
+    \item 此外，直接根据公式\(h=\frac{Cov_{S,F}}{\sigma_{F}^{2}}\)，将\(Cov_{S,F}=0.26\)，\(\sigma_{F}=0.4\)代入，可得\(h=\frac{0.26}{0.4^{2}}=\frac{0.26}{0.16}=1.625\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{最优套期保值比率计算（关键是掌握相关系数和最优套期保值比率的计算公式）}
+
+    \begin{question}
+        A risk manager at a manufacturing firm is determining the optimal hedge ratio for a portfolio involving a commodity. The standard deviation of quarterly changes in the price of the commodity is 0.65, the standard deviation of quarterly changes in the price of a futures contract on the commodity is 0.92, and the correlation between the two changes is 0.4215. What is the optimal hedge ratio for a 3 - month contract?
+        \end{question}
+        
+        \begin{choices}
+            \item 0.2765
+            \item 0.2978
+            \item 0.3016
+            \item 0.3258
+        \end{choices}
+        
+        \begin{correctanswer}
+            B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确最优套期保值比率公式}
+        \begin{itemize}
+        \item 最优套期保值比率\(h = \rho\times\frac{\sigma_{S}}{\sigma_{F}}\)，其中\(\rho\)是相关系数，\(\sigma_{S}\)是现货价格变动标准差，\(\sigma_{F}\)是期货价格变动标准差。
+        \end{itemize}
+        \textbf{步骤2：代入数据计算}
+        \begin{itemize}
+        \item 已知\(\rho = 0.4215\)，\(\sigma_{S}=0.65\)，\(\sigma_{F}=0.92\)。
+        \item 代入公式可得\(h = 0.4215\times\frac{0.65}{0.92}=0.2978\) 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{最优套期保值比率计算（关键是掌握最优套期保值比率计算公式）}
+
+\begin{question}
+    On Dec 1, Lisa Thompson, a fund manager of a USD 80 million US medium - to - large cap equity portfolio, wants to lock in the profit from the recent market upswing. The S\&P 500 index and its futures with a multiplier of 200 are trading at 1050 and 1060, respectively. Instead of liquidating her holdings, she decides to hedge three - fourths of her market exposure over the next 3 months. Given that the correlation between Lisa's portfolio and the S\&P 500 index futures is 0.92 and the volatilities of the equity fund and the futures are 0.55 and 0.52 per year respectively, what position should she take to achieve her goal?
+    \end{question}
+    
+    \begin{choices}
+        \item Sell 261 futures contracts of S\&P 500
+        \item Sell 262 futures contracts of S\&P 500
+        \item Sell 275 futures contracts of S\&P 500
+        \item Sell 276 futures contracts of S\&P 500
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算最优套期保值比率。}
+    \begin{itemize}
+        \item 最优套期保值比率\(h\)的计算公式为\(h=\rho\times\frac{\sigma_S}{\sigma_F}\)，其中\(\rho\)是现货价格变化和期货价格变化的相关系数，\(\sigma_S\)是现货（这里是股票组合）的波动率，\(\sigma_F\)是期货的波动率。
+        \item 已知\(\rho = 0.92\)，\(\sigma_S=0.55\)，\(\sigma_F = 0.52\)，则\(h = 0.92\times\frac{0.55}{0.52}=0.9731\)。
+    \end{itemize}
+    \textbf{步骤2：计算需要套期保值的资产价值。}
+    \begin{itemize}
+        \item 她要对冲四分之三的市场风险，投资组合价值为\(80000000\)美元，所以需要套期保值的资产价值\(V = 80000000\times\frac{3}{4}=60000000\)美元。
+    \end{itemize}
+    \textbf{步骤3：计算所需期货合约数量。}
+    \begin{itemize}
+        \item 所需期货合约数量\(N\)的计算公式为\(N=h\times\frac{V}{F\times m}\)，其中\(F\)是期货价格，\(m\)是期货合约乘数。
+        \item 已知\(h=0.9731\)，\(V = 60000000\)美元，\(F = 1060\)，\(m = 200\)，则\(N=0.9731\times\frac{60000000}{1060\times200}=275.41\approx276\)（须向上取整）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{最优套期保值比率的计算和期货合约数量的确定（关键是掌握最优套期保值比率公式和期货合约数量计算公式，同时注意计算合约数量时须向上取整）}
+
+    \begin{question}
+        The current value of the NASDAQ 100 index futures is 1320, and each NASDAQ futures contract is for delivery of 100 times the index. A long - only equity portfolio with a market value of USD 250,000,000 has a beta of 1.2. To reduce the portfolio beta to 0.8, how many NASDAQ futures contracts should you sell?
+        \end{question}
+        
+        \begin{choices}
+            \item 758 contracts
+            \item 910 contracts
+            \item 1136 contracts
+            \item 1350 contracts
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确调整投资组合贝塔值所需期货合约数量公式}
+        \begin{itemize}
+        \item 公式为\(N = \frac{(\beta_{target}-\beta_{current}) \times V_{portfolio}}{V_{futures}}\)，其中\(N\)是期货合约数量，\(\beta_{target}\)是目标贝塔值，\(\beta_{current}\)是当前贝塔值，\(V_{portfolio}\)是投资组合价值，\(V_{futures}\)是一份期货合约价值。
+        \end{itemize}
+        \textbf{步骤2：计算一份期货合约价值\(V_{futures}\)}
+        \begin{itemize}
+        \item 已知\(V_{futures}=1320\times100 = 132000\) 。
+        \end{itemize}
+        \textbf{步骤3：代入数据计算期货合约数量\(N\)}
+        \begin{itemize}
+        \item 已知\(\beta_{target}=0.8\)，\(\beta_{current}=1.2\)，\(V_{portfolio}=250000000\)，\(V_{futures}=132000\) 。
+        \item 代入公式\(N = \frac{(0.8 - 1.2) \times 250000000}{132000}=\frac{-0.4\times250000000}{132000}=- 757.58\)，合约数量取绝对值约为\(758\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{利用期货合约调整投资组合贝塔值（关键是掌握调整贝塔值的期货合约数量计算公式）}
+
+\begin{question}
+    A derivatives trader at a financial institution has just executed a \$500 million 6 - year pay - fixed swap (duration 4.65) with one client and a \$450 million 12 - year receive - fixed swap (duration 8.2) with another client. Given that the 6 - year rate is 4.3\% and the 12 - year rate is 5.6\%, and all contracts are transacted at par, how can the trader hedge his position?
+    \end{question}
+    
+    \begin{choices}
+        \item Sell 5,460 Eurodollar contracts
+        \item Buy 5,460 Eurodollar contracts
+        \item Sell 6,350 Eurodollar contracts
+        \item Buy 6,350 Eurodollar contracts
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算第一个互换合约的DV01。}
+    \begin{itemize}
+        \item 支付固定利率互换相当于做空一个具有相似息票特征和期限的债券，同时做多一个浮动利率票据。
+        \item \(\text{DV01} = \text{合约价值} \times \text{久期} \times 0.0001\)
+        \item 对于\(500\)百万美元、久期为\(4.65\)的\(6\)年期支付固定利率互换，其\(DV01_1=500\times4.65\times0.0001 = 0.2325\)百万美元。
+    \end{itemize}
+    \textbf{步骤2：计算第二个互换合约的DV01。}
+    \begin{itemize}
+        \item 收取固定利率互换相当于做多一个具有相似息票特征和期限的债券，同时做空一个浮动利率票据。
+        \item 对于\(450\)百万美元、久期为\(8.2\)的\(12\)年期收取固定利率互换，其\(DV01_2 = 450\times8.2\times0.0001=0.369\)百万美元。
+    \end{itemize}
+    \textbf{步骤3：计算投资组合的净DV01。}
+    \begin{itemize}
+        \item 净\(DV01= - DV01_1+DV01_2=- 0.2325 + 0.369 = 0.1365\)百万美元\(=136500\)美元。
+    \end{itemize}
+    \textbf{步骤4：计算所需的欧洲美元期货合约数量。}
+    \begin{itemize}
+        \item 欧洲美元期货的DVBP约为\(25\)美元。
+        \item 最优合约数量\(N^*=-\frac{DV01_{组合}}{DV01_{期货}}=-\frac{136500}{25}=- 5460\)。
+        \item 负号表示需要卖出欧洲美元期货合约。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利率互换的DV01计算和利用欧洲美元期货进行套期保值（关键是理解不同类型互换的DV01计算方法，以及根据净DV01确定套期保值所需的期货合约数量）}
+
+\begin{question}
+    An aluminum producer will sell 1,200 mt (metric tons) of aluminum in four months at the prevailing market price at that time. The standard deviation of the change in the price of aluminum over a 4 - month period is 2.8\%. The company decides to use 4 - month futures on zinc to hedge the exposure. The zinc futures contract is for 20 mt of zinc. The standard deviation of the futures price is 3.5\%. The correlation between 4 - month changes in the futures price and the price of aluminum is 0.80. To hedge its price exposure, how many futures contracts should the company buy/sell?
+    \end{question}
+    
+    \begin{choices}
+        \item Buy 32 futures
+        \item Sell 39 futures
+        \item Buy 58 futures
+        \item Sell 48 futures
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定套期保值方向和公式}
+    \begin{itemize}
+    \item 铝生产商要对冲价格风险，应卖出期货合约。计算卖出合约数量的公式为\(N = \)套期保值比率\(\times\frac{V_{spot}}{V_{futures}}\)，其中\(V_{spot}\)是现货数量，\(V_{futures}\)是一份期货合约对应的数量 ，套期保值比率\(h=\rho\times\frac{\sigma_{S}}{\sigma_{F}}\)，\(\rho\)是相关系数，\(\sigma_{S}\)是现货价格变动标准差，\(\sigma_{F}\)是期货价格变动标准差。
+    \end{itemize}
+    \textbf{步骤2：计算套期保值比率\(h\)}
+    \begin{itemize}
+    \item 已知\(\rho = 0.80\)，\(\sigma_{S}=2.8\%\)，\(\sigma_{F}=3.5\%\)，则\(h = 0.80\times\frac{2.8\%}{3.5\%}=0.64\) 。
+    \end{itemize}
+    \textbf{步骤3：计算卖出合约数量\(N\)}
+    \begin{itemize}
+    \item 已知\(V_{spot}=1200\)，\(V_{futures}=20\)，代入公式\(N = 0.64\times\frac{1200}{20}=0.64\times60 = 38.4\approx39\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利用期货合约进行套期保值（关键是确定套期保值方向，掌握套期保值比率和合约数量计算公式）}
+
+
+\begin{question}
+    A senior risk analyst at a hedge fund is conducting a training session for new analysts on stock index arbitrage. The analyst is emphasizing the significance of this strategy for market efficiency and how it is put into practice. Which of the following statements accurately describes stock index arbitrage?
+    \end{question}
+    
+    \begin{choices}
+        \item It involves selling a portfolio of stocks that are members of an index while buying other stocks in the same index.
+        \item It ensures that the price of the index will always match the value of a non - tradable portfolio of the underlying stocks.
+        \item It involves selling a stock index futures contract and buying the portfolio of stocks underlying the index.
+        \item It involves buying one stock index futures contract and selling another different stock index futures contract.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 股票指数套利是指同时买卖股票指数期货合约和构成该指数的股票组合。当期货价格和现货价格出现偏离时，通过卖空期货合约并买入标的股票组合，或者买入期货合约并卖空标的股票组合来获利。所以该选项准确描述了股票指数套利的操作方式。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 该选项描述的是在同一指数内不同股票之间的多空交易，也就是配对交易（pairs trade），并非股票指数套利。股票指数套利关注的是指数期货和标的股票组合之间的关系，而不是指数内不同股票之间的交易。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 当指数的标的投资组合不可交易时，指数价格和标的投资组合价值之间可能会出现偏离，无法保证两者始终一致。只有在市场完全有效且标的组合可交易的理想情况下，两者才会趋近一致。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 此选项描述的是不同股票指数期货合约之间的交易，属于跨品种的期货交易策略，不是股票指数套利。股票指数套利强调的是期货合约和标的股票组合之间的套利关系。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{股票指数套利的概念和操作方式（股票指数套利是在指数期货和标的股票组合之间进行操作，而非指数内股票之间或不同指数期货之间的交易）}
+
+\begin{question}
+    You are a portfolio manager with a \$25 million growth portfolio that has a beta of 1.3 relative to the NASDAQ 100. The NASDAQ 100 futures are trading at 13,500, and the multiplier is 100. You want to hedge your exposure to market risk over the next few months. Identify whether a long or short hedge is appropriate, and determine the number of NASDAQ 100 contracts you need to implement the hedge.
+    \end{question}
+    
+    \begin{choices}
+        \item Long hedge, 25 contracts
+        \item Short hedge, 25 contracts
+        \item Long hedge, 27 contracts
+        \item Short hedge, 27 contracts
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定套期保值方向}
+    \begin{itemize}
+    \item 因为持有与纳斯达克100相关的投资组合多头，为对冲市场风险，应构建空头套期保值，即卖出期货合约。
+    \end{itemize}
+    \textbf{步骤2：计算所需期货合约数量}
+    \begin{itemize}
+    \item 根据公式\(N = \frac{(\beta_{target}-\beta_{current}) \times V_{portfolio}}{V_{futures}}\)，其中\(N\)是期货合约数量，\(\beta_{target}\)是目标贝塔值，\(\beta_{current}\)是当前贝塔值，\(V_{portfolio}\)是投资组合价值，\(V_{futures}\)是一份期货合约价值。
+    \item 其中\(\beta_{target}=0\)（目标贝塔值），\(\beta_{current}=1.3\)（当前贝塔值），\(V_{portfolio}=25000000\)（投资组合价值），\(V_{futures}=13500\times100=1350000\)（一份期货合约价值）。
+    \item 代入可得\(N=\frac{(0-1.3)\times25000000}{1350000}=- \frac{32500000}{1350000}=- 24.07\approx -25\)（取整）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利用股指期货进行套期保值（关键是确定套期保值方向，掌握期货合约数量计算公式）}
+
+\begin{question}
+    An equity portfolio worth \$120 million has the benchmark of the S\&P 500. The S\&P 500 is currently at 4,000, and the corresponding portfolio beta is 1.1. The futures multiplier for the S\&P 500 is 250. Which of the following is closest to the number of contracts needed to triple the portfolio beta?
+    \end{question}
+    
+    \begin{choices}
+        \item 352
+        \item 264
+        \item 480
+        \item 576
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确目标贝塔值和相关公式}
+    \begin{itemize}
+    \item 原投资组合贝塔值为\(1.1\)，要将其变为原来的\(3\)倍，则目标贝塔值\(\beta_{target}=1.1\times3 = 3.3\)。计算期货合约数量的公式为\(N=\frac{(\beta_{target}-\beta_{current})\times V_{portfolio}}{F\times M}\)，其中\(\beta_{current}\)是当前贝塔值，\(V_{portfolio}\)是投资组合价值，\(F\)是期货价格，\(M\)是期货乘数。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算}
+    \begin{itemize}
+    \item 已知\(\beta_{current}=1.1\)，\(\beta_{target}=3.3\)，\(V_{portfolio}=120000000\)，\(F = 4000\)，\(M = 250\)。
+    \item 代入公式可得\(N=\frac{(3.3 - 1.1)\times120000000}{4000\times250}=\frac{2.2\times120000000}{1000000}=2.2\times120 = 264\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利用期货合约调整投资组合贝塔值（关键是确定目标贝塔值，掌握期货合约数量计算公式）}
+
+\begin{question}
+    An equity portfolio with the benchmark of the NASDAQ 100 is worth \$80 million. The NASDAQ 100 is currently at 15,000, and the portfolio beta is 1.5. The futures multiplier for the NASDAQ 100 is 100. To cut the beta to a third of its current value, what is the correct trade?
+    \end{question}
+    
+    \begin{choices}
+        \item Long 54 contracts
+        \item Short 54 contracts
+        \item Long 67 contracts
+        \item Short 67 contracts
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定目标贝塔值和套期保值方向}
+    \begin{itemize}
+    \item 原贝塔值\(\beta_{current}=1.5\)，要将其变为原来的\(\frac{1}{3}\)，则目标贝塔值\(\beta_{target}=1.5\times\frac{1}{3}=0.5\)。因为要降低贝塔值，应卖出期货合约（空头套期保值）。
+    \end{itemize}
+    \textbf{步骤2：计算所需期货合约数量}
+    \begin{itemize}
+    \item 根据公式\(N=\frac{(\beta_{target}-\beta_{current})\times V_{portfolio}}{F\times M}\)，其中\(V_{portfolio}=80000000\)，\(F = 15000\)，\(M = 100\)。
+    \item 代入可得\(N=\frac{(0.5 - 1.5)\times80000000}{15000\times100}=\frac{- 1\times80000000}{1500000}= - 53.33\approx -54\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利用期货合约调整投资组合贝塔值（关键是确定目标贝塔值和套期保值方向，掌握期货合约数量计算公式并准确计算）}
+
+
+
+
+\begin{question}
+    A finance manager at an energy - trading firm is delving into the accounting regulations associated with hedging operations. The manager is assessing the application and consequences of adopting either standard or hedge accounting, along with the tax implications of hedging activities. Which of the following statements is accurate regarding the accounting treatment of hedging transactions?
+    \end{question}
+    
+\begin{choices}
+    \item Under hedge accounting, the gain or loss on a hedge is recognized at the same time as the item being hedged.
+    \item The sole condition for a company to employ hedge accounting is to disclose this practice in its financial statements.
+    \item Hedging transactions are typically treated identically for tax and accounting purposes.
+    \item The use of standard accounting rules for hedging transactions can reduce the volatility of reported earnings.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+
+\textbf{A选项正确。}
+\begin{itemize}
+    \item 在对冲会计中，对冲的全部收益或损失是在同一时间实现的 时间作为被对冲的项目。
+\end{itemize}
+\textbf{B选项错误。}
+\begin{itemize}
+    \item 公司使用对冲会计有非常严格的规则，不仅仅是在财务报表中披露这一做法。例如，任何套期都需要进行充分的文档记录，并且套期必须是有效的，经济关系不能主要受信用风险的影响。
+\end{itemize}
+\textbf{C选项错误。}
+\begin{itemize}
+    \item 在许多司法管辖区，特别是美国，套期交易在税务和会计目的上的处理方式是不同的。税务处理可能会考虑更多的因素，与会计处理的原则和方法存在差异。
+\end{itemize}
+\textbf{D选项错误。}
+\begin{itemize}
+    \item 在普通会计规则下，套期保值交易的损益会每年报告。而套期保值的目的是降低风险，但普通会计处理方式没有将套期工具和被套期项目的损益匹配起来，这就可能导致报告收益的波动性增加。
+\end{itemize}
+\end{explanation}
+
+\checklist{普通会计准则 vs 对冲会计准则（关键是辨析两种准则对套期交易损益确认的方式）}
+
+\begin{question}
+A natural gas producer has a contractual obligation to supply 50,000 cubic feet of natural gas every month for two years at a fixed price. The producer wants to hedge against potential upward spikes in natural gas prices and chooses a stack and roll hedge over a strip hedge. Which of the following statements is correct?
+\end{question}
+
+\begin{choices}
+    \item A strip hedge decreases transaction costs because of minimal trading each month, and it has narrower bid - ask spreads compared to a stack and roll hedge.
+    \item A strip hedge increases transaction costs due to frequent trading each month, and it has wider bid - ask spreads compared to a stack and roll hedge.
+    \item A stack and roll hedge increases transaction costs as it involves rolling over contracts annually, and it has wider bid - ask spreads than a strip hedge.
+    \item A stack and roll hedge decreases transaction costs as it only requires quarterly trading, and it has narrower bid - ask spreads than a strip hedge.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{B选项正确。}
+\begin{itemize}
+\item 条式套期保值（strip hedge）需要每月进行交易来调整头寸以匹配套期保值期限，频繁交易导致交易成本增加 。同时，相比堆叠滚动套期保值（stack and roll hedge），条式套期保值由于频繁交易等因素，往往会面临更宽的买卖价差。
+\end{itemize}
+\textbf{A选项错误。}
+\begin{itemize}
+\item 条式套期保值是频繁交易，不是最小化交易，会增加而非减少交易成本，且其买卖价差更宽而不是更窄。
+\end{itemize}
+\textbf{C选项错误。}
+\begin{itemize}
+\item 堆叠滚动套期保值是定期滚动合约，不是每年，且它通常交易成本更低，买卖价差更窄，而不是相反情况。
+\end{itemize}
+\textbf{D选项错误。}
+\begin{itemize}
+\item 堆叠滚动套期保值虽然交易成本相对低，但不是因为只进行季度交易，且说它买卖价差更窄缺乏依据，相比条式套期保值没有绝对的买卖价差更窄的结论。
+\end{itemize}
+\end{explanation}
+
+\checklist{条式套期保值和堆叠滚动套期保值对比（关键是理解两种套期保值方式在交易成本和买卖价差方面的差异）}
+
+\begin{question}
+    An oil producer is currently considering a hedging strategy. The current spot price of oil is \$112, the one - month futures price is \$108, and the 12 - month futures price is \$104. If the spot price and the oil futures curve remain completely unchanged throughout the one - year period, and the producer uses the stack - and - roll hedge method (for instance, at the end of the one - year, the spot price still stays at \$112), what will be the net performance of rolling the hedge forward, disregarding the underlying future sale of spot oil and ignoring transaction costs?
+    \end{question}
+    
+    \begin{choices}
+        \item Gains due to the roll yield
+        \item Losses due to the roll yield
+        \item Approximately breakeven (no gain or loss)
+        \item Not enough information
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：判断市场状态}
+    \begin{itemize}
+        \item 已知现货价格为\(112\)美元，一个月期货价格为\(108\)美元，12个月期货价格为\(104\)美元，期货价格低于现货价格，市场处于反向市场（backwardation）。
+    \end{itemize}
+    \textbf{步骤2：分析生产者套期保值情况}
+    \begin{itemize}
+        \item 石油生产者进行套期保值通常是做空期货合约。在反向市场中，滚动套期保值时，生产者每次进入一个月期货合约的价格是\(108\)美元，而到期时期货价格会向现货价格收敛，即接近\(112\)美元。
+        \item 对于做空期货合约的生产者来说，以较低价格（\(108\)美元）卖出，到期以较高价格（接近\(112\)美元）平仓，会产生损失。
+        \item 这种损失是由于滚动收益率（roll yield）造成的，在反向市场中，滚动收益率对空头头寸不利。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{反向市场中滚动套期保值的损益分析（关键是判断市场处于反向市场，以及理解反向市场中滚动收益率对空头头寸的影响）}
+
+    \begin{question}
+        An analyst at a mining firm is assessing the potential cash flow and accounting impact of a 4 - year hedge on the company's zinc production. The hedge was set up by selling 80 four - year futures contracts at USD 2.50 per pound of zinc on December 31, 2023, with each contract representing 20,000 pounds of zinc. The analyst has the following data:
+        \begin{center}
+        \begin{tabular}{|c|c|}
+        \hline
+        Date & Futures price (USD) \\ \hline
+        December 31, 2023 & 2.50 \\ \hline
+        December 31, 2024 & 2.40 \\ \hline
+        December 31, 2025 & 2.65 \\ \hline
+        December 31, 2026 & 2.70 \\ \hline
+        \end{tabular}
+        \end{center}
+        The company employs hedge accounting and reports cash flows resulting from variation margin on the hedge at the end of each calendar year. Which of the following is the best estimate of the reported cash flow on December 31, 2025?
+        \end{question}
+        
+        \begin{choices}
+            \item A cash inflow of USD 160,000
+            \item A cash outflow of USD 240,000
+            \item A cash outflow of USD 400,000
+            \item A cash outflow of USD 320,000
+        \end{choices}
+        
+        \begin{correctanswer}
+            C
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：判断现金流量方向}
+        \begin{itemize}
+        \item 对于期货套期保值，计算现金流量的公式为：现金流量=(初始期货价格 - 当前期货价格)合约数量×每合约代表的资产数量。这里是卖出期货合约进行套期保值，当期货价格上升时，会产生现金流出。2025年相比2024年，期货价格上升，故会产生现金流出。
+        \end{itemize}
+        \textbf{步骤2：代入数据计算}
+        \begin{itemize}
+        \item 已知初始期货价格为\(2.40\)美元（2024年12月31日价格），2025年12月31日期货价格为\(2.65\)美元，合约数量为\(80\)，每合约代表\(20,000\)磅锌。
+        \item 代入公式可得现金流量\(=(2.40 - 2.65)\times80\times20000=-400000\)（美元），即现金流出\(400,000\)美元。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{期货套期保值现金流量计算（注意对冲会计准则下每年计算一次，计算价格变动应以上一年度为基准）}
+
+\begin{question}
+    Suppose there are one - year exchange currency forward and futures contracts with the same quoting price at 1.2500 GBPUSD. During the year, the futures price first decreases to 1.1500 GBPUSD and then rises to 1.3500 GBPUSD at the end of the year. The interest rate during the year remains constant. For a trader who wants to buy 1.5 million British pounds and eliminate the currency risk, considering the mark - to - market effect of the futures contract, which is the favorable choice?
+    \end{question}
+    
+    \begin{choices}
+        \item Entering into the long position of the GBPUSD forward contract.
+        \item Entering into the long position of the GBPUSD futures contract.
+        \item Entering into the short position of the GBPUSD forward contract.
+        \item Entering into the short position of the GBPUSD futures contract.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 远期合约没有逐日盯市（mark - to - market）机制。如果签订远期合约的多头，无论期间价格如何波动，最终都按照初始约定价格\(1.2500\) GBPUSD 进行交割。
+        \item 期货合约有逐日盯市机制。当期货价格下降到\(1.1500\) GBPUSD 时，多头会面临亏损并需要追加保证金；但当价格又回升到\(1.3500\) GBPUSD 时，多头最终可以以更有利的价格进行交割（相比远期合约的\(1.2500\) GBPUSD ） 。从整体来看，期货合约多头在价格回升后能获得更好的收益。
+        \item 所以，对于想要买入英镑并消除汇率风险的交易者，进入GBPUSD期货合约的多头头寸是更有利的选择。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期合约和期货合约在汇率风险管理中的选择（关键是理解远期合约无逐日盯市机制和期货合约有逐日盯市机制，以及在价格波动情况下对多头和空头收益的影响）}
+
+
+\section{考点4:Type ofFutures Market 期货市场类型}
+\setcounter{question}{0}
+\begin{question}
+    A commodities trader is analyzing the market conditions for a particular asset's futures contracts. Which of the following statements correctly differentiates between a normal market and an inverted market for futures prices?
+    \end{question}
+    
+    \begin{choices}
+        \item In a normal market, the futures price decreases as the time to maturity increases, while in an inverted market, the futures price increases with longer maturities.
+        \item A normal market has a situation where the near - month futures price is greater than the far - month futures price, whereas in an inverted market, the far - month futures price exceeds the near - month price.
+        \item In a normal market, the futures price rises as the time to maturity lengthens, while in an inverted market, the futures price declines with longer maturities.
+        \item Both normal and inverted markets have the same pattern of futures price movement with respect to time to maturity, but they differ in other aspects such as trading volume.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 在正常市场中，期货价格随到期时间增加而上升，不是下降；在反向市场中，期货价格随到期时间增加而下降，该选项说法颠倒。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 正常市场是近月期货价格低于远月期货价格，反向市场是近月期货价格高于远月期货价格，该选项说法错误。
+    \end{itemize}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 正常市场中期货价格随到期时间增加而上升，即近月期货价格低于远月期货价格；反向市场中期货价格随到期时间增加而下降，即近月期货价格高于远月期货价格，该选项说法正确。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 正常市场和反向市场在期货价格随到期时间的变动模式上不同，并非相同，且题干要求辨析的是价格变动模式，与交易量无关，该选项说法错误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{正常市场和反向市场（重点掌握期货价格随到期时间变动模式差异）}
+
+    \begin{question}
+        A commodities trader is analyzing the forward market for Commodity Y. The current spot price of Commodity Y is \$38.50. One - year forward contracts for Commodity Y are trading at \$39.35. Given that the current annually compounded annual risk - free interest rate is 6.5\%, the trader needs to calculate the implicit lease rate for Commodity Y. Then, assuming the calculated implicit lease rate remains constant, the trader has to determine whether the forward market for Commodity Y would be in backwardation or contango if the annually compounded annual risk - free rate suddenly drops to 4.5\%.
+        \end{question}
+        
+        \begin{choices}
+            \item The implicit lease rate is 2.24\%. Holding this rate constant, the forward market would be in contango if the annually compounded annual risk - free rate immediately fell to 4.5\%.
+            \item The implicit lease rate is 4.29\%. Holding this rate constant, the forward market would be in backwardation if the annually compounded annual risk - free rate immediately fell to 4.5\%.
+            \item The implicit lease rate is 2.24\%. Holding this rate constant, the forward market would be in backwardation if the annually compounded annual risk - free rate immediately fell to 4.5\%.
+            \item The implicit lease rate is 4.29\%. Holding this rate constant, the forward market would be in contango if the annually compounded annual risk - free rate immediately fell to 4.5\%.
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算隐含租赁利率。}
+        \begin{itemize}
+            \item 根据公式\(F = S(1 + r - l)\)，其中\(F\)是远期价格，\(S\)是现货价格，\(r\)是无风险利率，\(l\)是隐含租赁利率。
+            \item 已知\(S=\$38.50\)，\(F = \$39.35\)，\(r = 6.5\%\)，将其代入公式可得\(39.35=38.50\times(1 + 0.065 - l)\)。
+            \item 解得\(l=4.29\%\)。
+        \end{itemize}
+        \textbf{步骤2：判断市场状态。}
+        \begin{itemize}
+            \item 当无风险利率\(r\)下降到\(4.5\%\)时，根据公式计算预期现货价格\(E(S_T)=S(1 + r - l)=38.50\times(1 + 0.045-0.0429)=38.58<39.35\)。
+            \item 若预期现货价格\(E(S_T)\)大于远期价格\(S\)，市场处于反向市场（backwardation）；若预期现货价格\(E(S_T)\)小于\(S\)，市场处于正向市场（contango）。
+            \item 这里\(38.58<39.35\)，所以市场处于正向市场（contango）。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{隐含租赁利率的计算以及根据无风险利率变化判断商品远期市场状态（注意辨析backwardation和contango）}
+
+\begin{question}
+    In commodity markets, the relationships between spot and forward prices are depicted by the commodity price curve. Which of the following statements is accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item In a contango market, the premium of forward prices over the spot price represents a positive yield for the commodity supplier.
+        \item In a backwardation market, the premium of spot prices over forward prices represents a positive yield for the commodity consumer.
+        \item In a contango market, the premium of spot prices over forward prices represents a positive yield for the commodity consumer.
+        \item In a backwardation market, the premium of forward prices over the spot price represents a positive yield for the commodity supplier.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 在现货溢价（backwardation）市场中，现货价格高于远期价格。对于商品消费者而言，持有商品用于即时消费能获得便利收益，这种较高的现货价格体现了对消费者的正向收益 。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 在期货溢价（contango）市场中，远期价格高于现货价格，这种溢价主要是反映存储成本等因素，并非给商品供应商带来正向收益。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 在期货溢价市场中，是远期价格高于现货价格，而不是现货价格高于远期价格，且这种情况也不是给消费者带来正向收益的方式。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 在现货溢价市场中，是现货价格高于远期价格，并非远期价格高于现货价格，所以该选项说法错误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{商品市场中现货与远期价格关系（关键是理解现货溢价和期货溢价市场的特点，以及不同市场对商品供应商和消费者收益的影响）}  
+
+    \begin{question}
+        A commodities trader notes the following quotes for futures contracts:
+        \begin{center}
+        \begin{tabular}{|c|c|}
+        \hline
+         & Price \\ \hline
+        Spot Price & 350 \\ \hline
+        August, 2014 & 340 \\ \hline
+        November, 2014 & 338 \\ \hline
+        January, 2015 & 335 \\ \hline
+        \end{tabular}
+        \end{center}
+        This commodity is trading:
+        \end{question}
+        
+        \begin{choices}
+            \item As a normal futures market since the futures prices are in line with the commodity's seasonality.
+            \item As an inverted futures market since more distant delivery contracts are trading at lower prices than nearer - term ones.
+            \item As a normal futures market because it's typical for more distant delivery contracts to trade lower than nearer - term delivery contracts.
+            \item Consistently with convergence as futures prices will rise when the delivery period nears.
+        \end{choices}
+        
+        \begin{correctanswer}
+            B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{B选项正确。}
+        \begin{itemize}
+        \item 在本题中，随着交割期越来越远，期货合约价格越来越低（如从8月到11月再到1月，价格从340降到338再降到335 ），符合反向市场（inverted futures market）的特征，即远期合约价格低于近期合约价格。
+        \end{itemize}
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 题干中未提及与商品季节性相关的信息，不能得出期货价格符合商品季节性从而认定是正常期货市场的结论。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+        \item 在正常期货市场中，一般是远期合约价格高于近期合约价格，而本题情况与之相反。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+        \item 期货价格收敛是指期货价格在临近交割期时趋近于现货价格，但本题主要体现的是不同期限期货合约价格的关系，并非收敛情况。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{期货市场类型判断（辨析正常期货市场和反向期货市场中不同期限合约价格走势）}
+
+
+\section{考点5:Forwards and Futures Price 远期/期货价格}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a derivatives trading desk is analyzing the impact of changes in various factors on the forward price of an asset. If all other factors remain constant, what will be the effect on the forward price ($F$) when the lease rate ($q$) increases for a forward contract on an asset with discrete compounding? 
+    \end{question}
+    
+    \begin{choices}
+        \item The forward price will increase.
+        \item The forward price will decrease.
+        \item The forward price will remain unchanged.
+        \item There is not enough information to determine the change in the forward price.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 根据公式$F = S_0(\frac{1 + r}{1 + q})^T$，当$q$（lease rate）增加时，分母$1 + q$增大，而分子$1 + r$不变，$S_0$和$T$也不变。那么整个分式$\frac{1 + r}{1 + q}$的值会减小，其$T$次方也会减小，所以$F$（forward price）会减小。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期合约价格影响因素（lease rate与远期合约价格具有负相关关系）}
+
+    \begin{question}
+        An options trader is evaluating the factors that affect the price of commodity futures. Assuming all other factors are held constant, which of the following factors, when increased, will cause the commodity futures price to increase?
+        \end{question}
+        
+        \begin{choices}
+            \item Lease rate
+            \item Convenience yield
+            \item Storage cost
+            \item All of the above
+        \end{choices}
+        
+        \begin{correctanswer}
+        C
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{C选项正确。}
+        \begin{itemize}
+        \item 对于商品期货定价，成本类因素增加会使期货价格增加，收益类因素增加会使期货价格降低。
+        \item Storage cost（存储成本）属于成本类。成本增加时，期货价格会增加。
+        \item Lease rate（租赁利率）属于收益类，其增加会使期货价格降低。
+        \item Convenience yield（便利性收益）也属于收益类，增加会使期货价格降低。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{远期合约价格影响因素（关键在于区分各因素属于成本还是收益类别，成本类因素增加会使期货价格增加，收益类因素增加会使期货价格降低）}
+
+\begin{question}
+    A risk analyst at an equity hedge fund is estimating the price of the NASDAQ 100 Index futures contract maturing in 3 months. The analyst has the following market data:\\
+    - Current level of the NASDAQ 100 Index: USD 12,500\\
+    - Risk - free interest rate: 2.2\% per year\\
+    - Dividend yield: 1.6\% per year\\
+    Which of the following values is closest to the price of a 3 - month NASDAQ 100 futures contract?
+    \end{question}
+    
+    \begin{choices}
+        \item USD 12,462
+        \item USD 12,492
+        \item USD 12,518
+        \item USD 12,538
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 已知\(S_0 = 12500\)（当前纳斯达克100指数水平），\(r = 0.022\)（年化无风险利率），\(q = 0.016\)（年化股息收益率），\(t = 3\)个月\( = 0.25\)年（期货合约到期时间）。
+    \item 对于支付股息收益率的股票指数期货，使用公式\(F = S_0(\frac{1 + r}{1 + q})^t\)。
+    \item 代入已知数据，计算得到：
+    \[
+    F = 12500 \times \left(\frac{1 + 0.022}{1 + 0.016}\right)^{0.25} =12518
+    \]
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{离散复利下的期货价格计算}
+
+\begin{question}
+    A junior trader on a commodities trading desk is comparing the pricing of commodity - based futures and financial - based futures. What is the most significant difference between commodity - based and financial - based futures?
+    \end{question}
+    
+    \begin{choices}
+        \item Commodity - based futures have more liquid markets than financial - based futures.
+        \item Commodities have storage and transportation costs, while financial assets generally do not.
+        \item Financial - based futures are always more volatile than commodity - based futures.
+        \item The pricing of commodity - based futures is not affected by interest rates, while that of financial - based futures is.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 大宗商品（如农产品、金属等）在实际交易中，确实存在储存成本（如仓储费）和运输成本，这些成本会影响商品期货的定价。而金融资产（如股票、债券等）一般不存在这类成本，它们的交易更多是在金融市场通过电子形式完成，不需要实体的储存和运输。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 不能一概而论地说商品期货市场就比金融期货市场更具流动性。不同的商品期货和金融期货在不同时期、不同市场环境下，流动性表现各异。例如，一些活跃的金融期货合约（如股指期货）的流动性也非常高。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize} 
+    \item 金融期货和商品期货的波动性不能简单比较。波动性取决于多种因素，包括市场供求、宏观经济环境、行业特定因素等。有些商品期货（如原油期货）在特定时期波动性可能很高，而一些金融期货的波动性也可能较低。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 商品期货和金融期货的定价都会受到利率的影响。利率是资金的成本，无论是商品期货的持有成本定价模型（涉及资金成本），还是金融期货的定价模型（如债券期货与利率的紧密关系），利率都是重要的影响因素。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{大宗商品期货与金融期货在定价上的区别（商品期货定价需考虑储存和运输成本）}
+
+    \begin{question}
+        A risk analyst for an investment firm is tasked with calculating the price of a commodity futures contract with continuous compounding. The current spot price of the commodity is USD 800. The risk - free interest rate is 3\% per annum, the storage cost is 2\% per annum, and the convenience yield is 1.5\% per annum. The contract matures in 9 months. What is the price of the commodity futures contract?
+        \end{question}
+        
+        \begin{choices}
+            \item USD 816.32
+            \item USD 821.28
+            \item USD 832.47
+            \item USD 840.12
+        \end{choices}
+        
+        \begin{correctanswer}
+        B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{B选项正确。}
+        \begin{itemize}
+        \item 对于大宗商品期货在连续复利下的定价公式为\(F = S_0e^{(r + u - q)t}\)，其中\(S_0\)是现货价格，\(r\)是无风险利率，\(u\)是储存成本率，\(q\)是便利性收益率，\(t\)是到期时间。
+        \item 已知\(S_0 = 800\)，\(r = 0.03\)，\(u = 0.02\)，\(q = 0.015\)，\(t=\frac{9}{12}= 0.75\)，代入公式计算得到：
+        \[
+        F = 800e^{(0.03 + 0.02 - 0.015) \times 0.75} = 821.28
+        \]
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{连续复利下的大宗商品期货价格计算（注意成本类因素是+，收益类因素是-）}  
+
+\begin{question}
+A stock index is valued at USD 800 and pays a dividend at the rate of 2.5\% per annum. The 9 - month futures contract on that index is trading at USD 820. The risk - free rate is 4\% annually compounded. There are no transaction costs or taxes. Is the futures contract priced so that there is an arbitrage opportunity? If yes, which of the following numbers comes closest to the arbitrage profit you could realize by taking a position in one futures contract?
+\end{question}
+
+\begin{choices}
+    \item 9.12
+    \item 11.24
+    \item 15.78
+    \item There is no arbitrage opportunity.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{步骤1：计算理论期货价格}
+\begin{itemize}
+\item 根据公式 \(F_0 = S_0\frac{(1 + R)^T}{(1 + Q)^T}\)，其中 \(S_0 = 800\)（现货指数价格），\(R = 4\%\)（无风险利率），\(Q = 2.5\%\)（股息率），\(T=\frac{9}{12}=0.75\)（期限）。
+\item 代入计算：\(F_0 = 800\times\frac{(1 + 0.04)^{0.75}}{(1 + 0.025)^{0.75}}=808.76\) 。
+\end{itemize}
+\textbf{步骤2：判断是否存在套利机会并计算套利利润}
+\begin{itemize}
+\item 实际期货价格 \(F_{actual}=820\)，因为 \(F_{actual}>F_0\)，存在套利机会。
+\item 套利利润 = \(F_{actual}-F_0 = 820 - 808.76 = 11.24\) 。
+\end{itemize}
+\end{explanation}
+
+\checklist{股票指数期货的套利定价（关键是掌握股票指数期货理论价格计算公式，通过比较理论价格和实际价格判断套利机会并计算利润）}
+
+\begin{question}
+    A risk analyst at an investment bank is looking for arbitrage opportunities. An asset is currently trading at USD 1,100. The price of a 1 - year futures contract on this asset is USD 1,115, and the price of a 2 - year futures contract is USD 1,135. Assume that there are no cash flows from the asset for 2 years. If the term structure of interest rates is flat at 1.2\% per year (annually compounded), which of the following is an appropriate arbitrage strategy?
+    \end{question}
+    
+    \begin{choices}
+        \item Short 1 - year futures and long the underlying asset funded by borrowing for 1 year
+        \item Short 2 - year futures and long 1 - year futures
+        \item Short 1 - year futures and long 2 - year futures
+        \item Short 2 - year futures and long the underlying asset funded by borrowing for 2 years
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 首先，根据无套利定价原理，计算资产的理论期货价格。对于\(n\)年期期货合约，理论期货价格\(F = S(1 + r)^n\)，其中\(S\)是资产现货价格，\(r\)是无风险利率。
+        \item 对于\(2\)年期期货合约，理论价格\(F_2=1100\times(1 + 0.012)^2= 1126.56\)美元，而实际的\(2\)年期期货价格是\(1135\)美元，实际价格高于理论价格。
+        \item 因此，可以采取的套利策略是：以\(1.2\%\)的年利率借入资金\(1100\)美元购买现货资产，同时卖出\(2\)年期期货合约。在\(2\)年后，以期货合约约定的价格\(1135\)美元卖出资产，归还借款本息\(1126.56\)美元，从而获得套利利润。
+    \end{itemize}
+
+    \end{explanation}
+    
+    \checklist{期货合约的无套利定价与套利策略（关键是计算期货合约的理论价格，并根据实际价格与理论价格的差异制定套利策略）}
+
+    \begin{question}
+        A financial advisor is helping a client choose between a futures contract on an exchange and a forward contract with a counterparty for the same underlying asset. Both contracts have the same maturity and delivery terms. The advisor notices that the futures price is lower than the forward price. Assuming no arbitrage opportunities, which single factor acting alone could realistically explain this price difference?
+        \end{question}
+        
+        \begin{choices}
+            \item The asset is strongly negatively correlated with interest rates.
+            \item The forward contract counterparty is more likely to default.
+            \item The futures contract is more liquid and easier to trade.
+            \item The transaction costs on the futures contract are less than on the forward contract.
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item 当资产价格与利率呈强负相关时，期货合约的盯市结算特性会导致其价格低于远期合约。因为当资产价格下降时，利率上升，期货多头会因盯市结算而遭受损失，且损失资金的再投资利率较高；当资产价格上升时，利率下降，期货多头获得的盈利再投资利率较低。而远期合约到期结算不受此影响，所以期货价格会低于远期价格。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 若远期合约对手方更可能违约，投资者会要求更高的风险补偿，这会使远期价格更低，而不是更高，与题目中期货价格低于远期价格的情况不符。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 期货合约的高流动性和易交易性通常会使其更具吸引力，一般会导致期货价格相对较高，而不是低于远期价格。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 期货合约交易成本低于远期合约，会使期货合约更有优势，通常会使期货价格相对较高，而不是低于远期价格。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{期货合约与远期合约价格差异的影响因素（关键是理解资产与利率的相关性、对手方违约风险、流动性和交易成本对期货和远期价格的影响）}
+
+\begin{question}
+    An investor is eyeing a 18 - month futures contract on an equity index. The futures contract is currently trading at USD 3,850. The underlying index is currently valued at USD 3,700 and has an annually compounded dividend yield of 5\% per year. The annually compounded risk - free rate is 4\% per year. Assuming no transactions costs, what is the potential arbitrage profit per contract and the appropriate strategy?
+    \end{question}
+    
+    \begin{choices}
+        \item USD 15, sell the futures contract and buy the underlying.
+        \item USD 205, sell the futures contract and buy the underlying.
+        \item USD 15, buy the futures contract and sell the underlying.
+        \item USD 205, buy the futures contract and sell the underlying.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算理论期货价格}
+    \begin{itemize}
+        \item 根据期货定价公式\(F = S\times(1 + r - d)^T\)，其中\(S\)是现货价格，\(r\)是无风险利率，\(d\)是股息率，\(T\)是合约期限（年）。
+        \item 已知\(S = 3700\)，\(r = 4\%=0.04\)，\(d = 5\% = 0.05\)，\(T=\frac{18}{12}=1.5\)年。
+        \item 则理论期货价格\(F=3700\times(1 + 0.04-0.05)^{1.5}=3644.64\)美元。
+    \end{itemize}
+    \textbf{步骤2：判断套利策略和计算套利利润}
+    \begin{itemize}
+        \item 实际期货价格为\(3850\)美元，高于理论期货价格，存在套利机会。
+        \item 应采取的套利策略是：卖出期货合约，同时买入标的资产。
+        \item 套利利润为\(3850 - 3644.64=205.36\)美元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{基于期货定价公式的套利策略和利润计算（关键是准确计算理论期货价格，并根据实际与理论价格的差异制定套利策略）}
+
+    \begin{question}
+        A risk analyst at a precious metals investment firm is assessing the supply - demand dynamics of different precious metals and is worried about the medium - term volatility of silver forward prices. Currently, silver is trading at a spot price of USD 22.10 per troy ounce, and the eight - month forward price is quoted at USD 22.30 per troy ounce. Suppose that after eight months, the lease rate goes above the continuously compounded interest rate. Which of the following statements is correct regarding the shape of the silver forward curve after eight months?
+        \end{question}
+        
+        \begin{choices}
+            \item The forward curve will be downward sloping.
+            \item The forward curve will be upward sloping.
+            \item The forward curve will be flat.
+            \item The forward curve will be humped.
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item 对于商品的远期价格，其定价公式为\(F = S\times e^{(r - l)T}\)，其中\(F\)是远期价格，\(S\)是现货价格，\(r\)是连续复利无风险利率，\(l\)是租赁利率，\(T\)是到期时间。
+            \item 当租赁利率\(l\)高于连续复利无风险利率\(r\)时，即\(r - l<0\)。随着到期时间\(T\)的增加，\(e^{(r - l)T}\)的值会越来越小。
+            \item 这意味着远期价格\(F\)会随着到期时间的延长而降低，所以远期曲线将呈向下倾斜的形状。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 当\(r - l>0\)时，远期价格会随着到期时间的增加而上升，远期曲线才会向上倾斜，与本题中\(l>r\)的情况不符。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 只有当\(r = l\)时，\(F = S\)，远期价格不随到期时间变化，远期曲线才会是平坦的，本题并非这种情况。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 一般情况下，远期曲线呈驼峰状是由于市场预期和供需关系在不同期限上的复杂变化导致的，而本题中仅根据\(l>r\)这一条件，不会出现远期曲线呈驼峰状的情况。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{商品远期曲线形状与租赁利率、无风险利率的关系（关键是理解商品远期定价公式中租赁利率和无风险利率对远期价格的影响）}
+
+\begin{question}
+    A junior analyst at a financial firm is examining the relationship between futures markets and their underlying spot markets. The analyst aims to understand how price movements in these two markets interact and to suggest trading strategies based on these relationships. Which of the following statements about futures prices and spot prices is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item If the futures price is below the underlying spot price during the delivery period, a trader can profit by selling futures contracts and buying the underlying asset in the spot market.
+        \item The Dow Jones Industrial Average futures contract has the most trading activity of any futures contract because of its high liquidity.
+        \item Arbitrageurs only ensure the convergence of futures and spot prices at the expiration of the contract, not throughout its life.
+        \item Futures prices always remain stable and are not affected by the spot price of the underlying asset.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 当期货价格低于标的资产现货价格时，存在套利机会。交易者可以在现货市场买入标的资产，同时在期货市场卖出期货合约。
+        \item 在交割期，按照期货合约价格卖出资产，从而获得差价利润。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 虽然流动性是影响期货合约交易活跃度的因素之一，但不能简单地说道琼斯工业平均指数期货合约因为高流动性就有最多的交易活动。
+        \item 不同的期货合约在不同时期的交易活跃度受到多种因素影响，如市场热点、宏观经济环境等。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 套利者在期货合约的整个生命周期中都会发挥作用，通过买卖期货和现货来消除两者之间的价格差异。
+        \item 他们的行为使得期货价格和现货价格在整个合约期间都保持相对接近，而不仅仅是在到期时收敛。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 期货价格与标的资产的现货价格密切相关。期货价格是基于对未来现货价格的预期，会受到现货价格波动、利率、持有成本等多种因素的影响。
+        \item 所以期货价格并非总是稳定的，而是会随着市场情况变化。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{期货价格与现货价格的关系及套利策略（关键是理解期货与现货价格的互动机制以及如何利用价格差异进行套利）}
+
+
+\begin{question}
+    A commodities analyst at a trading firm is investigating the elements that affect the prices of commodity futures contracts. Besides supply - demand dynamics, the analyst has recognized storage costs, lease rates, and convenience yields as significant factors. Which of the following statements accurately depicts one of these factors?
+    \end{question}
+    
+    \begin{choices}
+        \item Lease rates on commodities are generally lower than the relevant risk - free interest rate and are non - negative.
+        \item Convenience yield is a benefit that the holder of a physical commodity enjoys and is not a charge.
+        \item Storage cost is the only factor influencing the prices of short - term commodity futures contracts on precious metals.
+        \item Storage costs of energy commodities always lead futures prices to show a normal pricing pattern.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 商品的租赁利率（lease rate）通常低于相关的无风险利率。这是因为持有商品会有一定的成本，如存储成本等。
+        \item 同时，租赁利率不能为负，因为没有人会倒贴钱把商品租出去，所以具有非负性。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 便利收益（convenience yield）是持有实物商品所获得的好处，比如在供应短缺时能够及时使用商品，而不是一种费用。
+        \item 它反映了持有实物商品相对于持有期货合约的额外优势。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 虽然存储成本是影响贵金属短期期货合约价格的重要因素，但不是唯一因素。
+        \item 期货价格还会受到供求关系、市场预期、宏观经济环境等多种因素的影响。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 能源商品的存储成本并不总是使期货价格呈现正向市场（normal pricing pattern）。
+        \item 当市场对能源商品的近期需求非常高，或者预期未来供应大幅增加时，也可能出现反向市场（inverted pricing pattern）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{影响商品期货价格的因素（辨析存储成本、租赁利率和便利收益的概念和特点）}
+
+    \begin{question}
+        A risk manager at a gold trading company entered into a one - year forward contract to buy 100 ounces of gold four months ago. At that time, the one - year forward price was USD 980 per ounce. The eight - month forward price of gold is now USD 1030 per ounce. The continuous compounded risk - free rate is 3.5\% per year for all maturities, and there are no storage costs. Which of the following is closest to the value of the contract?
+        \end{question}
+        
+        \begin{choices}
+            \item USD 4,762
+            \item USD 4,885
+            \item USD 5,050
+            \item USD 5,210
+        \end{choices}
+        
+        \begin{correctanswer}
+            B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确计算远期合约价值的公式。}
+        \begin{itemize}
+            \item 对于多头远期合约价值\(V=(F_1 - F_0)e^{-rT}\times N\)，其中\(F_1\)是当前的远期价格，\(F_0\)是初始的远期价格，\(r\)是无风险利率，\(T\)是剩余到期时间，\(N\)是合约数量。
+        \end{itemize}
+        \textbf{步骤2：确定各参数的值。}
+        \begin{itemize}
+            \item 已知\(F_1 = 1030\)美元/盎司，\(F_0 = 980\)美元/盎司，\(N = 100\)盎司，\(r=3.5\%\)，剩余到期时间\(T=\frac{8}{12}\)年。
+        \end{itemize}
+        \textbf{步骤3：计算远期合约价值。}
+        \begin{itemize}
+            \item \(V=(F_1 - F_0)e^{-rT}\times N=(1030 - 980)e^{-3.5\%\times8/12}\times 100=4885\)美元。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{远期合约价值的计算（关键是掌握远期合约价值公式）}
+
+\begin{question}
+    Which of the following statements about a lease rate is accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item It has an lower bound of zero.
+        \item It is equivalent to the market interest rate.
+        \item It is similar to the convenience yield in a commodity forward contract.
+        \item It is directly proportional to the supply of the asset available for borrowing.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 租赁利率（lease rate）和商品远期合约中的便利收益（convenience yield）类似。便利收益是持有商品能带来的额外好处，租赁利率也反映了持有资产进行租赁等活动所产生的一种收益特性。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 租赁利率下限不为零，它可以是正数，代表租赁资产获得的收益等情况。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 租赁利率和市场利率不同，市场利率反映的是资金的借贷成本等，而租赁利率针对的是资产租赁相关的收益情况。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 租赁利率和资产可借贷的供给并非直接成比例关系，它受到多种因素影响，如资产的稀缺性、租赁市场的供需等，但不是简单的直接比例关系。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{租赁利率相关概念（关键是理解租赁利率的内涵，以及与便利收益、市场利率等概念的区别，和与资产供给的关系）}
+
+\begin{question}
+    A currency trader at a French bank has entered into a 5 - month forward contract with an importer to sell GBP 35 million in 5 months at a rate of EUR 0.78 per GBP. If in 5 months the exchange rate is EUR 0.83 per GBP, what is the payoff for the bank from the forward contract?
+    \end{question}
+    
+    \begin{choices}
+        \item EUR -1,750,000
+        \item EUR -1,575,000
+        \item EUR 1,575,000
+        \item EUR 1,750,000
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确银行在远期合约中的义务和市场情况。}
+    \begin{itemize}
+        \item 银行签订了以 EUR 0.78 每英镑的汇率卖出 GBP 3500 万的远期合约。
+        \item 5 个月后市场汇率变为 EUR 0.83 每英镑。
+    \end{itemize}
+    \textbf{步骤2：计算银行的盈亏。}
+    \begin{itemize}
+        \item 银行按照远期合约卖出英镑得到的欧元数为\(35000000\times0.78 = 27300000\)欧元。
+        \item 如果银行在市场上按照即期汇率卖出英镑得到的欧元数为\(35000000\times0.83 = 29050000\)欧元。
+        \item 银行的盈亏为\(27300000 - 29050000=- 1750000\)欧元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{外汇远期合约的盈亏计算（关键是明确合约汇率和市场汇率的差异，并根据合约的买卖方向计算盈亏）}
+
+    \begin{question}
+        A financial analyst at Company ABC, which is based in the U.S., is dealing with a net trade receivable situation. On May 1, 2010, the company has a net trade receivable of EUR 6,000,000 from an export contract with a French firm. The company anticipates receiving this amount on Nov. 1, 2010. The CFO of ABC wants to safeguard the value of this receivable. On May 1, 2010, the EUR spot rate is 1.36, and the 6 - month EUR forward rate is 1.35. The CFO has two options: locking in an exchange rate by entering a forward contract or selling a 6 - month EUR 6,000,000 call option with a strike price of 1.36. The CFO believes that selling an option is superior to taking a forward position because if the EUR appreciates, ABC can receive USD at 1.36, which is better than the forward rate of 1.35. If the EUR depreciates, the option will not be exercised, and ABC can keep the premium from selling the call option. What can be concluded about the CFO's analysis?
+        \end{question}
+        
+        \begin{choices}
+            \item CFO's analysis is not correct. The company will suffer if the EUR goes up sharply.
+            \item CFO's analysis is correct. The company is better off whichever way the EUR rate goes.
+            \item CFO's analysis is not correct. The company will suffer if the EUR moves within a narrow range.
+            \item CFO's analysis is not correct. The company will suffer if the EUR goes down sharply.
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item CFO的分析是不正确的，因为卖出看涨期权在价格上涨时损失是无限的，而收到的期权溢价是固定金额，如果欧元急剧下跌，公司会遭受损失。如果公司采用远期合约，虽然远期汇率1.35低于1.36，但市场汇率大幅高于1.36时，远期合约能让公司避免更大的损失。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 如上述分析，当欧元大幅升值时，公司卖出期权的策略会导致损失，并非无论欧元汇率如何变动公司都更有利。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 欧元在窄幅波动时，期权可能不会被行使，公司可以获得期权费，不一定会遭受损失。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 当欧元大幅贬值时，期权不会被行使，公司可以保留卖出期权获得的期权费，在一定程度上弥补欧元贬值带来的损失，不一定会遭受损失。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{外汇风险管理中远期合约和期权策略的比较分析（关键是要分析不同汇率变动情况下两种策略对公司收益的影响）}
+
+\begin{question}
+    Suppose there is an active lending market for a barrel of oil (with a current spot price of \$50 per barrel). If the annual lease rate is 6\% and the effective annual risk - free rate is 6\%, how could an investor create an arbitrage opportunity (assuming the forward contract is overpriced)?
+    \end{question}
+    
+    \begin{choices}
+        \item Borrow money at 6\% and purchase a barrel of oil and sell it forward.
+        \item Borrow a barrel of oil and sell it at the spot price and go long the forward contract.
+        \item Sell a barrel of oil at the forward price and lend the money at the risk - free rate.
+        \item Go long in oil forward contracts, short in oil spot prices, and lend the excess proceeds at the risk - free rate.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 当远期合约价格被高估时，投资者可以通过卖出高价的远期合约，同时在现货市场进行相应操作来获取无风险利润。借入一桶石油并按现货价格卖出，同时买入远期合约。在远期合约到期时，用较低成本（远期合约约定价格）买入石油归还借入的石油，利用了远期合约高估的价格差实现套利。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 仅借入资金购买石油并卖出远期合约，没有充分利用租赁市场和价格差异实现套利。因为在租赁利率和无风险利率相同情况下，这种操作不能产生额外利润。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 仅按远期价格卖出石油并将资金按无风险利率借出，没有考虑现货市场操作以及租赁市场情况，无法实现套利。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 做多远期合约、做空现货并将多余资金借出的操作不符合在远期合约高估情况下的套利逻辑，不能实现无风险套利。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{远期合约套利策略（若远期合约价格高估，就做空远期合约）}
+
+    \begin{question}
+        Which of the following amounts is closest to the four - month forward price for a bushel of wheat if the current spot price for wheat is \$4 per bushel, the effective monthly interest rate is 1.2\%, and the monthly storage costs are \$0.04 per bushel? Assume that the present value of storage costs over the next four months is \$0.15 per bushel.
+        \end{question}
+        
+        \begin{choices}
+            \item \$4.16
+            \item \$4.25
+            \item \$4.30
+            \item \$4.35
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确远期价格计算公式}
+        \begin{itemize}
+        \item 对于有存储成本的商品，远期价格 \(F = (S_0 + PV(C))(1 + r)^T\)，其中 \(S_0\) 是现货价格，\(PV(C)\) 是存储成本的现值，\(r\) 是利率，\(T\) 是期限。
+        \end{itemize}
+        \textbf{步骤2：代入数据计算}
+        \begin{itemize}
+        \item \(F = (4 + 0.15)\times(1 + 0.012)^4=4.35\) 美元。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{有存储成本商品的远期价格计算（注意成本是+，收益是-，同时注意辨析是比率还是绝对值）}
+
+\begin{question}
+    A risk manager at an asset management firm is performing scenario analysis on the valuation of a 3 - year forward contract on stock ABC, considering a possible change in interest rates. The manager has the following data:
+    \begin{itemize}
+    \item Current price of stock ABC: USD 80.50
+    \item Annually compounded risk - free rate of interest: -0.50\%
+    \item Annualized dividend yield of stock ABC: 0.50\%
+    \end{itemize}
+    Assuming the forward contract is currently fairly priced, and all dividends are reinvested into stock ABC, what is the best estimate of the change in the value of the forward contract (per share of ABC) if the risk - free rate of interest were to immediately increase by 1.2\%?
+    \end{question}
+    
+    \begin{choices}
+        \item USD -1.68
+        \item USD -2.80
+        \item USD 1.68
+        \item USD 2.80
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算初始远期价格}
+    \begin{itemize}
+    \item 根据公式 \(F = S\times(\frac{1 + R}{1 + Q})^T\)，其中 \(S = 80.50\)（现货价格），\(R=-0.50\%\)（无风险利率），\(Q = 0.50\%\)（股息率），\(T = 3\)（期限）。
+    \item 代入可得 \(F_1 = 80.50\times(\frac{1 - 0.005}{1 + 0.005})^3=78.12\) 美元。
+    \end{itemize}
+    \textbf{步骤2：计算利率变化后的远期价格}
+    \begin{itemize}
+    \item 当无风险利率增加 \(1.2\%\) 后，新的无风险利率 \[R_2=-0.50\% + 1.2\% = 0.7\%\] 
+    \item 再次使用公式 \(F = S\times(\frac{1 + R}{1 + Q})^T\)，此时 \(F_2 = 80.50\times(\frac{1 + 0.007}{1 + 0.005})^3=80.98\) 美元。
+    \end{itemize}
+    \textbf{步骤3：计算价值变化}
+    \begin{itemize}
+    \item 价值变化量为 \(F_2 - F_1 = 80.98 - 78.12 = 2.86\) 美元。考虑资金的时间价值，价值变化 \(= \frac{2.86}{(1 + 0.7\%)^3}=2.80\) 美元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{股票远期合约价值随利率变化的计算（关键是掌握股票远期价格计算公式，同时注意价格差异需要折现）}
+
+\begin{question}
+    A junior analyst at a financial institution is studying the features and nature of options and forward derivative contracts. When analyzing the differences between linear and non - linear derivative contracts, which of the following statements is most likely accurate for the analyst to conclude?
+    \end{question}
+    
+    \begin{choices}
+        \item The value of the derivative contract in both linear and non - linear derivatives dictates the value of the underlying asset.
+        \item Options are linear derivatives, enabling the holder to have the right to transact the underlying asset at will.
+        \item Forward contracts are linear derivatives where one party is committed to pay the pre - set price and the other to deliver the underlying asset.
+        \item The value of a forward contract is determined by the price of the underlying asset, interest rate, time, and its price volatility.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 远期合约是线性衍生品，其到期收益与标的资产价值呈线性关系。合约双方都有义务履行合约条款，一方按预先设定价格支付，另一方交付标的资产。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 是标的资产的价值决定衍生品合约的价值，而不是衍生品合约价值决定标的资产价值。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 期权是非线性衍生品，因为其收益与股票价格不是线性关系，若期权未被行权，收益为零。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 远期合约是线性衍生品，其价值仅由标的资产价格、利率和时间决定，并非由标的资产价格的波动性决定 ，计算公式为\(F = S(1 + R)^T\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{线性与非线性衍生品合约的特点（关键是理解线性和非线性衍生品收益与标的资产价值的关系，以及远期合约和期权各自的特性）}
+
+\end{document}

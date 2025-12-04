@@ -1,0 +1,2739 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{hyperref} %不需要目录盒子注释这
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+%\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+\usetikzlibrary{positioning}
+
+
+%目录设定
+
+
+
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+\section{考点1:Basic Concepts of Bonds 债券基本概念}
+\setcounter{question}{0}
+
+\section{考点2:Sovereign Bonds 主权债券}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a fixed - income investment firm is analyzing a U.S. Treasury bill. Assume the cash price of the U.S. Treasury bill is 97.6 and has a quoted price of 2.4. How many days is this bill outstanding? And what is the discount factor during this period?
+    \end{question}
+    
+    \begin{choices}
+    \item The U.S. Treasury bill lasts 360 days and the discount factor is 0.976.
+    \item The U.S. Treasury bill lasts 270 days and the discount factor is 0.976.
+    \item The U.S. Treasury bill lasts 360 days and the discount factor is 0.95.
+    \item The U.S. Treasury bill lasts 270 days and the discount factor is 0.95.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算国债期限天数}
+    \begin{itemize}
+    \item 根据公式现金价格 = \(100 - \text{报价}\times\frac{n}{360}\)，已知现金价格为\(97.6\)，报价为\(2.4\)，则\(97.6 = 100 - 2.4\times\frac{n}{360}\)。
+    通过移项可得\(2.4\times\frac{n}{360}=100 - 97.6 = 2.4\)，进一步计算得出\(n = 360\)（天） 。
+    \end{itemize}
+    \textbf{步骤2：计算折现因子}
+    \begin{itemize}
+    \item 折现因子 = \(97.6\div100 = 0.976\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{美国国债期限天数计算、折现因子计算（$C = 100 \times (1 - Q \times \frac{n}{360})$）}
+
+\begin{question}
+    An investor is considering a bond. The bond's quoted price is 106 - 20 and the par value is \$100. Given that the accrued interest is \$4.20, what is the bond's clean price?
+    \end{question}
+    
+    \begin{choices}
+        \item \$100.125
+        \item \$102.225
+        \item \$106.625
+        \item \$110.750
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    报价（quoted price）是净价（clean price），不含应计利息。根据32位报价法，债券报价106 - 20的报价为$106 + 20/32 = 106 + 0.625 = 106.625$ 。
+    \end{explanation}
+    
+    \checklist{国债报价方式（重点掌握32位报价法的计算方式）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating a U.S. Treasury bond. The cash price of the bond is 107. The bond is sold in a transaction settled on August 15. Coupons are paid at a rate of 4\% per year on May 15 and November 15. Given the U.S. Treasury bond's day - count convention of Actual/actual, what is the quoted price of the bond?
+    \end{question}
+    
+    \begin{choices}
+        \item 106
+        \item 102.55
+        \item 100.8
+        \item 104
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算应计利息（accrued interest）。}
+    \begin{itemize}
+    \item 美国国债的天数计算惯例为Actual/actual， 两次付息日间隔为184天（从5月15日到11月15日），从上次付息日5月15日到结算日8月15日经过了92天。每年票面利率4\%，面值为100，则半年利息为$100\times4\%\div2 = 2$，应计利息$AI = 2\times\frac{92}{184}=1$ 。
+    \end{itemize}
+    \textbf{步骤2：计算报价（quoted price）。}
+    \begin{itemize}
+    \item 现金价格（cash price）=报价（quoted price） + 应计利息（accrued interest），变形可得报价 = 现金价格 - 应计利息 = $107 - 1 = 106$ 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{美国国债报价计算（掌握现金价格、报价和应计利息之间的关系，计算应计利息时注意美国国债的天数计算惯例）}
+
+\begin{question}
+    A junior trader on a fixed - income trading desk is looking to purchase a 210 - day U.S. Treasury bill. The bill is quoted at 6.10. What is the cash price for a purchase of $\$1.2$ million in face value?
+    \end{question}
+    
+    \begin{choices}
+        \item $\$1,157,300$
+        \item $\$1,164,600$
+        \item $\$1,170,680$
+        \item $\$1,176,760$
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确美国国债贴现率报价公式}
+    \begin{itemize}
+        \item 美国国债贴现率（Discount rate）报价公式为：$d=\frac{F - P}{F}\times\frac{360}{t}$，其中$d$是贴现率报价，$F$是面值，$P$是现金价格，$t$是到期天数。
+    \end{itemize}
+    \textbf{步骤2：根据已知条件求解现金价格$P$}
+    \begin{itemize}
+        \item 已知$d = 6.10\%$，$F=\$1,200,000$，$t = 210$天。
+        \item 由$d=\frac{F - P}{F}\times\frac{360}{t}$，可得$P=F(1 - \frac{d\times t}{360})$。
+        \item 代入数据：$P = 1200000\times(1-\frac{0.061\times210}{360})=1157300$。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{美国国债贴现率报价与现金价格的计算（关键是掌握贴现率报价公式并能正确运用求解现金价格）}
+
+\section{考点3:Corporate Bonds 公司债}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating statements about Guaranteed Corporate Bonds. Which of the following statements is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item Guaranteed bonds are completely immune to market risk.
+        \item The security of a guaranteed bond hinges on the financial standing of both the guarantor and the issuer.
+        \item A guaranteed bond can only have one corporate guarantor.
+        \item A guarantee can only cover the principal repayment, not the interest payment.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 担保公司债券虽然有担保方，但仍然会受到市场风险影响，比如利率波动、信用利差变化等，并非完全不受市场风险影响。
+    \end{itemize}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 担保公司债券的安全性确实取决于担保方和发行方的财务能力。如果发行方财务状况恶化，担保方有能力履约才能保障债券的安全性，二者缺一不可。 
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 担保公司债券可以有多个公司作为担保方，并非只能有一个公司作为担保方。 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 担保可以涵盖本金和利息的偿还，并非只能保障本金偿还。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{担保公司债券的风险特性及相关规定（担保债券安全性与担保方和发行方的财务能力均相关）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating bonds. Given a risk - free rate of 3\%, a default probability of 5\%, and a recovery rate of 45\%, which bond in the following table has an expected yield exactly equal to 6.5\%?
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Bond & Credit spread (bps) \\
+    \hline
+    A & 375 \\
+    \hline
+    B & 450 \\
+    \hline
+    C & 515 \\
+    \hline
+    D & 625 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{question}
+    
+    \begin{choices}
+        \item Bond A
+        \item Bond B
+        \item Bond C
+        \item Bond D
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确预期收益率计算公式}
+    \begin{itemize}
+    \item 预期收益率\(E(R)\)的计算公式为\(E(R)=r + s - p\times(1 - R)\)，其中\(r\)是无风险利率，\(s\)是信用利差（单位转换为小数），\(p\)是违约概率，\(R\)是回收率。
+    \end{itemize}
+    \textbf{步骤2：计算预期收益率为6.5\%的债券}
+    \begin{itemize}
+    \item 当预期收益率等于5\%时，信用利差$=6.5\%-3\%+5\%\times(1-45\%)=6.25\%$，应选择信用利差为625bps的债券，即Bond D。
+   
+    \end{itemize}
+    \end{explanation}
+    \checklist{债券预期收益率的计算（预期收益率=无风险利率+信用利差-违约概率×（1-回收率））}
+
+\begin{question}
+    A junior analyst at a fixed - income investment firm is reviewing statements about high - yield bonds. Which of the following statements is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item Bonds that were initially investment - grade can turn into high - yield bonds if the issuer's financial condition worsens, often called "fallen angels".
+        \item High - yield bonds are typically known as "investment - grade bonds".
+        \item High - yield bonds are rarely issued by newly - established and rapidly - expanding companies with limited financial history.
+        \item High - yield bonds never feature special structures like deferred - coupon bonds or step - up bonds.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 当原本投资级的债券发行公司财务状况恶化，信用评级下降，就会变成高收益债券，这类债券被称为“堕落天使”。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 高收益债券信用风险较高，和投资级债券是不同类别。投资级债券信用评级较高，风险较低；高收益债券是“非投资级债券”。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 高收益债券常由年轻且快速发展、财务记录不如成熟企业完备的公司发行，因为这类公司较难通过传统低风险渠道融资，需要发行高收益债券吸引投资者。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 高收益债券为吸引投资者，常设计特殊结构，如递延付息债券（前期少付息或不付息，后期多付息）、递增利率债券（利率随时间逐步提高）。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{高收益债券（了解高收益债券是投资级债券，以及高收益债券的结构、发行主体）}
+
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating statements about a sinking fund provision. Which of the following statements is most accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item It demands that the issuer only use cash payments, following a set schedule, to pay the trustee for bond retirement.
+        \item It stipulates that the issuer accumulates funds solely for paying off bonds at the exact maturity date according to a predefined plan.
+        \item It obligates the issuer to redeem a part of the principal through a series of payments during the bond's life.
+        \item It restricts the issuer to retire only the specified sinking fund amount and not exceed it.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 偿债基金条款要求发行人在债券存续期内通过一系列本金支付来赎回部分本金 。这是偿债基金的核心功能之一。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 选项A错误，偿债基金的实现方式既可以是现金支付，也可以是交付证券，并非只能用现金支付给受托人。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 选项B错误，偿债基金不只是为了在债券到期时积累资金偿还债券，而是在债券存续期内就进行本金偿还操作 。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 选项D错误，加速偿债基金条款允许发行人赎回超过契约规定的金额，并非只能赎回规定金额。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{偿债基金（偿债基金的运作方式、偿还方式）}
+
+\begin{question}
+    A financial advisor is explaining bond covenants to a client. One of the covenants is the Minimum Interest Coverage. Which of the following correctly pairs the bond covenant type?
+    \end{question}
+    
+    \begin{choices}
+        \item Positive Covenant
+        \item Negative Covenant
+        \item Financial Covenant
+        \item Structural Covenant
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 利息覆盖率最低要求（Interest Coverage Minimum）限制了发行人相对于营业收入或息税折旧摊销前利润 （EBITDA）的杠杆水平，属于否定条款（Negative Covenant），因为它限制了发行人的行为。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 选项A错误，肯定条款（Affirmative Covenant）是要求发行人做某些事，如定期提供财务报表等，利息覆盖率最低要求不属于此类。 
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 选项C错误，虽然财务条款（Financial Covenant）可能涉及财务比率，但利息覆盖率最低要求更符合否定条款限制发行人行为的特征 。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 选项D错误，frm考试中没有structural covenant这一类型。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券契约类型（关键是掌握各类型条款的具体例子）}
+
+\begin{question}
+    A risk analyst at a bond - trading firm is evaluating different bond covenants to determine which one is an Affirmative Covenant. Which of the following bond covenants is an Affirmative Covenant?
+    \end{question}
+    
+    \begin{choices}
+        \item Cross - Default Clause
+        \item Additional Debt Restriction Clause
+        \item Asset Sale Prohibition Clause
+        \item Acquisition Restriction Clause
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 交叉违约条款（Cross - Default Clause）规定如果借款人在其他债务义务上违约，就视为在本债务上也违约，这是对借款人行为的一种规定，属于肯定条款（Affirmative Covenant） ，它明确了借款人需要遵守的规则。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 额外债务限制条款（Additional Debt Restriction Clause）限制了发行人进一步的债务融资，是对发行人行为的限制，属于否定条款（Negative Covenant）。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 资产出售禁止条款（Asset Sale Prohibition Clause）限制发行人出售主要资产，属于否定条款。 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 收购限制条款（Acquisition Restriction Clause）约束发行人对其他公司的收购行为，属于否定条款。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券契约类型（区分肯定条款和否定条款）}
+
+\begin{question}
+    A financial advisor at a wealth management firm is reviewing the statements of two clients, Tom and Jerry, regarding the event risk in their bond portfolio. Tom states that because their portfolio comprises high - yield bonds, event risk can be ignored. Jerry claims that since their portfolio has a large number of diverse issues, event risk has been completely eliminated from their portfolio. Which, if either, of these statements is based on correct assumptions?
+    \end{question}
+    
+    \begin{choices}
+        \item Neither statement by Tom nor Jerry is correct.
+        \item The statement made by Tom is correct, but not the one made by Jerry.
+        \item The statement made by Jerry is correct, but not the one made by Tom.
+        \item Both statements made by Tom and Jerry are correct.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 可能对债券产生负面影响的事件包括 natural disasters，the death of a CEO，其中一种重要的事件风险是企业杠杆率的增加a large increase in leverage。
+    \item 高收益债券同样面临事件风险，比如发行人被收购或合并等情况，所以Tom认为高收益债券组合可忽略事件风险是错误的。
+    \item 尽管投资组合中有大量不同的债券（diverse issues），可以分散部分非系统性事件风险。但是，非系统性事件风险源于个别公司特有的情况，如公司管理层突然出现重大问题、公司产品出现质量危机等。很难保证组合中的每一个债券发行人都不会出现这类问题，所以无法完全消除非系统性事件风险。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{事件风险（注意事件风险不能被完全消除，不能忽视）}
+
+\begin{question}
+    A risk analyst at an investment bank is asked to explain the main distinctions among default risk, spread risk, and event risk. Which of the following best describes these differences?
+    \end{question}
+    
+    \begin{choices}
+        \item Default risk pertains to the risk of a borrower's failure to fulfill debt obligations, spread risk is about the risk of alterations in bond spreads due to shifts in market liquidity, and event risk is the risk linked to corporate - wide events (like leadership changes, regulatory issues) that can impact a firm's financial standing.
+        \item Default risk is mainly driven by industry - specific downturns, spread risk is caused by macroeconomic policies, and event risk is solely related to natural disasters affecting a company.
+        \item Default risk refers to the risk of changes in a company's market share, spread risk refers to the risk caused by changes in the investor sentiment towards the bond market, and event risk refers to changes in the coupon rate of the debt instrument itself.
+        \item Default risk and spread risk are mutually exclusive, while event risk encompasses both of them.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 违约风险（Default risk）就是借款人无法履行债务义务的风险。
+    \item 利差风险（Spread risk）是因市场流动性变化等因素导致债券利差变动的风险 。
+    \item 事件风险（Event risk）是与公司层面事件（如领导层变动、监管问题等）相关，这些事件会影响公司财务状况的风险。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 违约风险主要不是由行业特定衰退驱动，而是借款人自身偿债能力问题；利差风险并非主要由宏观经济政策导致，市场流动性等因素影响更大；事件风险也不只是与自然灾害有关。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 违约风险不是公司市场份额变化的风险；利差风险不是投资者对债券市场情绪变化导致；事件风险不是债务工具票面利率变化的风险。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 违约风险和利差风险并非互斥，事件风险也并不涵盖这两者。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{违约风险、利差风险和事件风险的概念区分（准确理解三种风险的内涵及驱动因素）}
+
+\begin{question}
+    A corporate trust manager at a trust firm, ABC Trust, has been appointed as the corporate trustee for a new bond issuance by XYZ Bank, a regional investment bank. Which of the following statements regarding ABC Trust's role as a third - party to the bond indenture is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item ABC Trust is paid by XYZ Bank but is obligated to represent the interests of the bondholders.
+        \item ABC Trust should only act when explicitly instructed by the majority of bondholders, regardless of the indenture terms.
+        \item ABC Trust has no obligation to monitor XYZ Bank's financial health as long as the bond payments are being made on time.
+        \item ABC Trust can modify the indenture terms at its discretion to better protect bondholders.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 作为债券契约的第三方受托人，虽然是由发行方（XYZ Bank）支付费用，但受托人的主要职责是代表债券持有人的利益。受托人需要确保发行方遵守契约条款，维护债券持有人的合法权益。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 受托人应按照债券契约的条款行事，而不是仅在大多数债券持有人明确指示时才行动。契约中通常规定了受托人在特定情况下应采取的行动，受托人有义务在这些情况发生时履行职责。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 受托人有责任持续监测发行方（XYZ Bank）的财务状况，即使债券按时支付。监测财务健康状况有助于提前发现可能的违约风险和契约违约情况，以便及时采取措施保护债券持有人的利益。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 受托人不能随意修改契约条款。债券契约是具有法律约束力的文件，修改条款需要遵循特定的法律程序和获得相关方的同意，而不是由受托人自行决定。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券受托人在债券契约中的职责和角色（关键是理解受托人代表债券持有人利益以及按契约条款行事的原则）}
+
+    \begin{question}
+        A fixed - income analyst at an investment firm is comparing zero - coupon bonds and coupon - bearing bonds of the same maturity. Which type of risk is a zero - coupon bond not subject to, relative to a coupon - bearing bond of the same maturity?
+        \end{question}
+        
+        \begin{choices}
+            \item Liquidity risk
+            \item Credit risk
+            \item Interest rate risk
+            \item Reinvestment risk
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{D选项正确。}
+        \begin{itemize}
+            \item 再投资风险（Reinvestment risk）是指投资者将收到的现金流（如利息）进行再投资时，面临再投资收益率低于初始投资收益率的风险。
+            \item 零息债券在持有期间不支付利息，到期时一次性支付本金和利息，不存在期间利息现金流需要再投资的问题，所以零息债券不受再投资风险的影响。
+            \item 而附息债券在持有期间会定期支付利息，这些利息需要进行再投资，因此面临再投资风险。
+        \end{itemize}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 流动性风险（Liquidity risk）是指债券难以以合理价格迅速买卖的风险。零息债券和附息债券都可能面临流动性风险，这取决于债券市场的供需情况、债券的发行规模等因素，与是否为零息债券无关。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 信用风险（Credit risk）是指债券发行人违约的风险。无论是零息债券还是附息债券，只要发行人存在违约的可能性，就都面临信用风险，与债券是否支付利息无关。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 利率风险（Interest rate risk）是指市场利率变动导致债券价格波动的风险。零息债券和附息债券都会受到市场利率变动的影响，因为债券价格与市场利率呈反向变动关系，所以零息债券也面临利率风险。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{零息债券和附息债券的风险特征对比（关键是理解各种风险的定义以及零息债券和附息债券的现金流特点）}
+
+\begin{question}
+    A risk analyst at a bond investment firm is evaluating the role of the trustee in a corporate bond indenture. Which of the following statements about the trustee named in a corporate bond indenture is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item The trustee is paid by the bond issuer.
+        \item The trustee can only act when a single bondholder requests.
+        \item The trustee has no power to handle default situations.
+        \item The trustee is prohibited from taking any action outside the indenture terms.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 在公司债券契约中，受托人通常由债券发行人支付费用。发行人聘请受托人来履行监督契约执行等职责，以保障债券发行的顺利进行和债券持有人的利益。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 受托人并非仅在单个债券持有人请求时才行动。一般需要达到一定数量或比例的债券持有人提出请求，或者根据契约规定的特定情况发生时，受托人才会采取行动。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 受托人在债券违约等情况发生时具有重要作用。当发行人违约（如错过支付款项）时，受托人有权宣布违约，并根据契约条款采取相应措施来保护债券持有人的利益。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 虽然受托人主要按照契约条款行事，但在某些特殊情况下，为了保护债券持有人的最大利益，受托人可能会在合理范围内采取超出契约明确规定的行动。不过这种情况较为少见且需要有充分的理由。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{公司债券契约中受托人的职责、权力和报酬来源（关键是理解受托人在契约中的角色和相关规定）}
+
+    \begin{question}
+        A financial advisor at a wealth management firm is discussing investment options with a client. Which of the following statements about high - yield bonds is true?
+        \end{question}
+        
+        \begin{choices}
+            \item Step - up bonds pay a fixed interest rate throughout their life.
+            \item High - yield bonds are usually issued by companies with excellent credit ratings.
+            \item Investment - grade bonds can't experience a rating downgrade to high - yield status.
+            \item High - yield bonds are generally rated below Baa3 by Moody's.
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{D选项正确。}
+        \begin{itemize}
+            \item 穆迪（Moody's）评级体系中，Baa3及以上为投资级债券，低于Baa3的债券通常被认为是高收益债券（垃圾债券）。高收益债券由于发行主体信用风险较高，所以评级较低。
+        \end{itemize}
+        \textbf{A选项错误。}
+        \begin{itemize}
+            \item 累进利率债券（Step - up bonds）的利率并非固定不变，而是在特定时间点会逐步提高利率，并非支付固定利率直至到期。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 高收益债券通常由信用状况不佳、财务实力较弱的公司发行，而不是具有优秀信用评级的公司。这些公司为了吸引投资者，需要支付更高的利息。
+        \end{itemize}
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 投资级债券在某些情况下，如发行公司财务状况恶化、经营业绩下滑等，可能会被评级机构下调评级，从而沦为高收益债券。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{高收益债券的评级标准、特点以及与投资级债券的关系（关键是理解不同评级体系和各类债券的特性）}
+
+\section{考点4:Interest Rate 利率}
+\setcounter{question}{0}
+\begin{question}
+    A risk analyst at a fixed - income investment firm is tasked with calculating the two - year par rate. Given the following spot rates:
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    时间 & Spot rate \\
+    \hline
+    0.5 & 1.6\% \\
+    \hline
+    1.0 & 1.9\% \\
+    \hline
+    1.5 & 2.05\% \\
+    \hline
+    2.0 & 2.20\% \\
+    \hline
+    \end{tabular}
+    \end{center}
+    What is the two - year par rate?
+    \end{question}
+    
+    \begin{choices}
+        \item 1.10\%
+        \item 2.20\%
+        \item 2.84\%
+        \item 4.36\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算各时间点的贴现因子}
+    \begin{itemize}
+    \item 对于\(t = 0.5\)，贴现因子\(D_{0.5}=\frac{1}{1 + \frac{1.6\%}{2}}=\frac{1}{1 + 0.008}=0.9921\)。
+    \item 对于\(t = 1.0\)，贴现因子\(D_{1}=\frac{1}{(1 + \frac{1.9\%}{2})^2}=\frac{1}{(1 + 0.0095)^2}=0.9813\)。
+    \item 对于\(t = 1.5\)，贴现因子\(D_{1.5}=\frac{1}{(1 + \frac{2.05\%}{2})^3}=\frac{1}{(1 + 0.01025)^3}=0.9699\)。
+    \item 对于\(t = 2.0\)，贴现因子\(D_{2}=\frac{1}{(1 + \frac{2.20\%}{2})^4}=\frac{1}{(1 + 0.011)^4}=0.9571\)。
+    \end{itemize}
+    \textbf{步骤2：计算两年期par rate}
+    \begin{itemize}
+    \item 根据par rate计算公式，设par rate为\(r\)，\[r = 2\times\frac{1 - D_{2}}{D_{0.5} + D_{1}+D_{1.5} + D_{2}}\]
+    \item 先计算分母：\(D_{0.5} + D_{1}+D_{1.5} + D_{2}=0.9921+ 0.9813+0.9699 + 0.9571 = 3.9004\)。
+    \item 再计算分子：\(1 - D_{2}=1 - 0.9571 = 0.0429\)。
+    \item 则\(r = 2\times\frac{0.0429}{3.9004}=2.20\%\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{par rate计算（贴现因子的计算以及par rate的计算公式）}
+
+\begin{question}
+    An investor is considering an investment with an annual nominal interest rate of 7\% compounded continuously. What is the equivalent annual nominal interest rate if the investment is compounded semi - annually?
+    \end{question}
+    
+    \begin{choices}
+        \item 7.12\%
+        \item 7.07\%
+        \item 7.00\%
+        \item 6.94\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确连续复利终值公式}
+    \begin{itemize}
+    \item 连续复利终值公式为\(A = Pe^{rt}\)，当\(t = 1\)，\(r = 0.07\)时，\(A = Pe^{0.07}\) 。
+    \end{itemize}
+    \textbf{步骤2：明确半年复利终值公式}
+    \begin{itemize}
+    \item 半年复利的终值公式为\(A = P(1+\frac{r_{s}}{n})^{nt}\)，其中\(n = 2\)（一年复利2次），\(t = 1\)，则\(A = P(1 + \frac{r_{s}}{2})^{2}\)。
+    \end{itemize}
+    \textbf{步骤3：求解等效利率}
+    \begin{itemize}
+    \item 由于两种复利方式下终值相等，即\(e^{0.07}=(1 + \frac{r_{s}}{2})^{2}\)。
+    \item 解方程可得\(r_{s}=7.12\%\)，A选项正确。
+    \end{itemize}
+    
+    \end{explanation}
+    
+    \checklist{复利计算（连续复利与普通复利（半年复利）之间的转换）}
+
+\begin{question}
+A risk analyst at a fixed - income investment firm is tasked with calculating the two - year par rate. Given the following spot rates:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+时间 & Spot rate \\
+\hline
+0.5 & 1.6\% \\
+\hline
+1.0 & 1.9\% \\
+\hline
+1.5 & 2.05\% \\
+\hline
+2.0 & 2.20\% \\
+\hline
+\end{tabular}
+\end{center}
+What is the two - year par rate?
+\end{question}
+
+\begin{choices}
+    \item 1.10\%
+    \item 2.2\%
+    \item 2.8\%
+    \item 4.36\%
+\end{choices}
+
+\begin{correctanswer}
+B
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{步骤1：计算各时间点的贴现因子}
+\begin{itemize}
+\item 对于\(t = 0.5\)，贴现因子\(D_{0.5}=\frac{1}{1 + \frac{1.6\%}{2}}=\frac{1}{1 + 0.008}= 0.992063\)。
+\item 对于\(t = 1.0\)，贴现因子\(D_{1}=\frac{1}{(1 + \frac{1.9\%}{2})^2}=\frac{1}{(1 + 0.0095)^2}\approx0.981262\)。
+\item 对于\(t = 1.5\)，贴现因子\(D_{1.5}=\frac{1}{(1 + \frac{2.05\%}{2})^3}=\frac{1}{(1 + 0.01025)^3}\approx0.970077\)。
+\item 对于\(t = 2.0\)，贴现因子\(D_{2}=\frac{1}{(1 + \frac{2.20\%}{2})^4}=\frac{1}{(1 + 0.011)^4}\approx0.958257\)。
+\end{itemize}
+\textbf{步骤2：计算两年期par rate}
+\begin{itemize}
+\item 根据par rate计算公式，设par rate为\(r\)，\[r = 2\times\frac{1 - D_{2}}{D_{0.5} + D_{1}+D_{1.5} + D_{2}}\]
+\item 先计算分母：\(D_{0.5} + D_{1}+D_{1.5} + D_{2}=0.992063+ 0.981262+0.970077 + 0.958257 = 3.891659\)。
+\item 再计算分子：\(1 - D_{2}=1 - 0.958257 = 0.041743\)。
+\item 则\(r = 2\times\frac{0.041743}{3.891659}\approx 2.15\%\approx2.2\%\)（四舍五入）。
+\end{itemize}
+\end{explanation}
+
+\checklist{考查根据即期利率计算par rate，重点是掌握贴现因子的计算以及par rate的计算公式并正确代入数据计算。}
+\begin{question}
+    A financial advisor is analyzing two U.S. Treasury bonds. The first bond has a price of \$100.35, matures in six months, and pays a semi - annual coupon at a rate of 3.5\% per annum. The second bond has a price of \$103.78, matures in one year, and pays a semi - annual coupon at a rate of 4.5\% per annum. What are, respectively, the six - month and one - year discount factors?
+    \end{question}
+    
+    \begin{choices}
+        \item \(d(0.5)=0.9862\), \(d(1.0)=0.9737\)
+        \item \(d(0.5)=0.9858\), \(d(1.0)=0.9723\)
+        \item \(d(0.5)=1.0032\), \(d(1.0)=0.9837\)
+        \item \(d(0.5)=0.9688\), \(d(1.0)=1.0383\)
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算六个月期债券对应的贴现因子\(d(0.5)\)}
+    \begin{itemize}
+    \item 对于半年期债券，其价格公式为\(P = C\times d(0.5)+F\times d(0.5)\)，其中\(C\)是半年的息票支付，\(F\)是面值（通常设为\$100）。半年息票率为\(3.5\%\div2 = 0.0175\)，则\(C = 100\times0.0175 = 1.75\) ，\(F = 100\)，\(P = 100.35\)。
+    \item 由\(P=(C + F)\times d(0.5)\)，可得\(d(0.5)=\frac{P}{C + F}=\frac{100.35}{1.75 + 100}=0.9862\)。
+    \end{itemize}
+    \textbf{步骤2：计算一年期债券对应的贴现因子\(d(1.0)\)}
+    \begin{itemize}
+    \item 对于一年期债券，价格公式为\(P = C_1\times d(0.5)+(C_2 + F)\times d(1.0)\)，这里\(C_1 = C_2=100\times(4.5\%\div2)= 2.25\)，\(F = 100\)，\(P = 101.78\)，已求得\(d(0.5)=0.9862\)。
+    \item 先计算\(C_1\times d(0.5)=2.25\times0.9862 = 2.21895\)。
+    \item 那么\((C_2 + F)\times d(1.0)=P - C_1\times d(0.5)=101.78 - 2.21895 = 99.56105\) ，\(C_2 + F=2.25 + 100 = 102.25\) 。
+    \item 所以\(d(1.0)=\frac{99.56105}{102.25}=0.9737\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{贴现因子计算（明确不同期限债券的价格构成公式）}
+
+    \begin{question}
+        A risk analyst at a fixed - income investment firm is calculating forward rates based on the current zero - coupon bond yields. The zero - rate for a three - year investment is 4.2\%, and the zero - rate for a four - year investment is 5.4\%. What is the 1 - year forward rate three years from today, assuming continuous compounding?
+        \end{question}
+        
+        \begin{choices}
+            \item 6.6\%
+            \item 7.8\%
+            \item 5.9\%
+            \item 9.0\%
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确连续复利下的零息利率与远期利率关系公式。}
+        \begin{itemize}
+            \item 设\(r_T\)为期限\(T\)年的零息利率，\(r_{T_1}\)为期限\(T_1\)年的零息利率，\(f_{T_1,T_2}\)为从\(T_1\)到\(T_2\)的远期利率，根据连续复利公式有\(r_TT=r_{T_1}T_1 + f_{T_1,T_2}(T_2 - T_1)\)。
+            \item 本题中\(T_1 = 3\)，\(r_{T_1}=4.2\%\)，\(T_2 = 4\)，\(r_{T_2}=5.4\%\)，要求\(f_{3,4}\)。
+        \end{itemize}
+        \textbf{步骤2：代入数据计算。}
+        \begin{itemize}
+            \item 将数据代入公式\(r_{T_2}T_2=r_{T_1}T_1 + f_{T_1,T_2}(T_2 - T_1)\)，可得\(5.4\%\times4=4.2\%\times3 + f_{3,4}\times(4 - 3)\)。
+            \item 先计算等式左边\(5.4\%\times4 = 21.6\%\)，等式右边\(4.2\%\times3=12.6\%\)，则\(f_{3,4}=21.6\% - 12.6\%=9\%\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{连续复利下远期利率的计算（关键是掌握零息利率与远期利率的关系公式）}
+
+\begin{question}
+    A financial advisor is explaining the relationship between different yield curves to a client. Currently, the yield curve is upward - sloping. Which of the following statements accurately describes the relationship between the forward rate yield curve, the zero - coupon yield curve, and the coupon - bearing bond yield curve?
+    \end{question}
+    
+    \begin{choices}
+        \item The zero - coupon yield curve is above the coupon - bearing bond yield curve, which is above the forward rate yield curve.
+        \item The forward rate yield curve is above the zero - coupon yield curve, which is above the coupon - bearing bond yield curve.
+        \item The coupon - bearing bond yield curve is above the forward rate yield curve, which is above the zero - coupon yield curve.
+        \item The coupon - bearing bond yield curve is above the zero - coupon yield curve, which is above the forward rate yield curve.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 当收益率曲线向上倾斜时，远期利率大于即期利率。根据零息收益率曲线和远期收益率曲线的关系，远期利率曲线位于零息收益率曲线之上。
+        \item 对于附息债券，由于其现金流是分散在不同时期的，其收益率会受到再投资风险等因素的影响，通常会低于零息债券的收益率。所以零息收益率曲线位于附息债券收益率曲线之上。
+        \item 因此，当收益率曲线向上倾斜时，远期利率收益率曲线高于零息收益率曲线，零息收益率曲线高于附息债券收益率曲线。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 向上倾斜的收益率曲线下，远期利率是高于零息利率的，所以远期利率收益率曲线应在零息收益率曲线之上，而不是零息收益率曲线在远期利率收益率曲线之上。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 向上倾斜的收益率曲线下，远期利率大于即期利率，所以远期利率收益率曲线应在零息收益率曲线之上，而不是零息收益率曲线在远期利率收益率曲线之上。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 同样，根据上述分析，向上倾斜的收益率曲线下，远期利率收益率曲线应在零息收益率曲线之上，该选项顺序错误。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{不同类型收益率曲线之间的关系（关键是理解向上倾斜收益率曲线下远期利率、零息利率和附息债券收益率的大小关系）}  
+    
+\begin{question}
+    A risk analyst at a financial institution is analyzing zero - coupon government bonds. The price of a three - year zero - coupon government bond is 82.54, and the price of a similar four - year zero - coupon government bond is 76.32. What is the one - year implied forward rate from year 3 to year 4?
+    \end{question}
+    
+    \begin{choices}
+        \item 7.2\%
+        \item 6.1\%
+        \item 5.3\%
+        \item 8.2\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 远期利率公式为\((1 + r_4)^4=(1 + r_3)^3\times(1 + f_{3,4})\)。
+        \item 将\((1 + r_3)^3=\frac{100}{82.54}\)和\((1 + r_4)^4=\frac{100}{76.32}\)代入公式，可得\(1 + f_{3,4}=\frac{(1 + r_4)^4}{(1 + r_3)^3}=\frac{\frac{100}{76.32}}{\frac{100}{82.54}}=\frac{82.54}{76.32}=1.0815\)。
+        \item \(f_{3,4}=1.0815-1=0.0815=8.2\%\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{根据零息债券价格计算隐含远期利率（关键是掌握零息债券价格公式和远期利率公式）}
+
+\begin{question}
+    An investor is looking at the interest rate market. The continuously - compounded interest rate for a 1 - year period is 4\%, and the rate for a 2 - year period is 6\%. What is the forward rate for the period from the end of the first year to the second year, assuming continuous compounding?
+    \end{question}
+    
+    \begin{choices}
+        \item 7.0000\%
+        \item 8.0000\%
+        \item 9.0000\%
+        \item 10.0000\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确连续复利下的零息利率与远期利率关系公式。}
+    \begin{itemize}
+        \item 设\(r_T\)为期限\(T\)年的零息利率，\(r_{T_1}\)为期限\(T_1\)年的零息利率，\(f_{T_1,T_2}\)为从\(T_1\)到\(T_2\)的远期利率，根据连续复利公式有\(r_TT=r_{T_1}T_1 + f_{T_1,T_2}(T_2 - T_1)\)。
+        \item 本题中\(T_1 = 1\)，\(r_{T_1}=4\%\)，\(T_2 = 2\)，\(r_{T_2}=6\%\)，要求\(f_{1,2}\)。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算。}
+    \begin{itemize}
+        \item 将数据代入公式\(r_{T_2}T_2=r_{T_1}T_1 + f_{T_1,T_2}(T_2 - T_1)\)，可得\(6\%\times2=4\%\times1 + f_{1,2}\times(2 - 1)\)。
+        \item 先计算等式左边\(6\%\times2 = 12\%\)，等式右边\(4\%\times1 = 4\%\)，则\(f_{1,2}=12\% - 4\%=8\%\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{连续复利下远期利率的计算（关键是掌握零息利率与远期利率的关系公式）}
+
+    \begin{question}
+        Given the following bonds and forward rates:
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        Maturity & YTM & Coupon & Price \\
+        \hline
+        1 year & 5.5\% & 0\% & 94.788 \\
+        \hline
+        2 years & 8\% & 0\% & 85.734 \\
+        \hline
+        3 years & 10\% & 0\% & 74.987 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        \begin{itemize}
+        \item 1 - year forward rate one year from today = 10.56\%
+        \item 1 - year forward rate two years from today = 11.77\%
+        \item 2 - year forward rate one year from today = 12.32\%
+        \end{itemize}
+        Which of the following statements about the forward rates, based on the bond prices, is true?
+        \end{question}
+        
+        \begin{choices}
+            \item The 1 - year forward rate one year from today is too high.
+            \item The 2 - year forward rate one year from today is too low.
+            \item The 1 - year forward rate two years from today is too low.
+            \item The forward rates and bond prices provide opportunities for arbitrage.
+        \end{choices}
+        
+        \begin{correctanswer}
+        C
+        \end{correctanswer}
+        
+        \begin{explanation}        
+        \textbf{A选项错误}
+        \begin{itemize}
+        \item 根据无套利定价原理，1 - year forward rate one year from today，记为\(f_{1,2}\)，计算公式为\((1 + y_2)^2=(1 + y_1)(1 + f_{1,2})\) ，将\(y_1 = 5.5\%\)，\(y_2 = 8\%\)代入可得：
+        \[
+        f_{1,2}=\frac{(1+8\%)^2}{1+5.5\%}-1\approx10.56\%
+        \]
+        \item 计算出的合理值约等于给定的10.56\%，所以不能说该远期利率太高，A选项错误。
+        \end{itemize}
+
+        \textbf{选项B分析}
+        \begin{itemize}
+        \item 2 - year forward rate one year from today，记为\(f_{1,3}\)，计算公式为\((1 + y_3)^3=(1 + y_1)(1 + f_{1,3})^2\) ，将\(y_1 = 5.5\%\)，\(y_3 = 10\%\)代入可得：
+        \[
+        f_{1,3}=\sqrt{\frac{(1+10\%)^3}{1+5.5\%}}-1\approx12.32\%
+        \]
+        \item 计算出的合理值12.32\%约等于给定的12.32\% ，说明给定的2 - year forward rate one year from today是合理的，B选项错误。
+        \end{itemize}
+        
+        \textbf{选项C分析}
+        \begin{itemize}
+        \item 1 - year forward rate two years from today，记为\(f_{2,3}\)，计算公式为\((1 + y_3)^3=(1 + y_2)^2(1 + f_{2,3})\) ，将\(y_2 = 8\%\)，\(y_3 = 10\%\)代入可得：
+        \[
+        f_{2,3}=\frac{(1+10\%)^3}{1+8\%^2}-1\approx14.11\%
+        \]
+        \item 计算出的合理值14.11\%高于给定的11.77\% ，说明给定的该远期利率太低，C选项正确。
+        \end{itemize}
+        
+        \textbf{选项D分析}
+        \begin{itemize}
+        \item 由于计算出的合理远期利率和给定的远期利率存在差异，这意味着市场存在定价不合理情况，是有套利机会的，并非没有套利机会，D选项错误。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{远期利率与债券价格的关系以及无套利定价原理的应用关(键在于通过计算合理远期利率并与给定远期利率对比来判断选项正误)}
+
+\begin{question}
+    A fixed - income analyst is examining a set of bonds with the following characteristics.
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Maturity & Coupon & Price \\
+    \hline
+    3 months & 4.5\% & 100.8765 \\
+    \hline
+    9 months & 13.0\% & 101.5678 \\
+    \hline
+    1.5 years & 7.5\% & 99.3456 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    Which of the following is the closest to the discount factor for the 3 - month discount factor, \(d(0.25)\)?(quarterly compounding)
+    \end{question}
+    
+    \begin{choices}
+        \item 0.9223
+        \item 0.9404
+        \item 0.9656
+        \item 0.9866
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 对于零息债券，价格\(P\)与面值\(F\)、到期期限\(t\)和贴现因子\(d(t)\)的关系为\(P = F\times d(t)\) 。
+        \item 对于附息债券，其价格是各期现金流按相应贴现因子贴现后的现值之和。这里可根据3个月期债券的价格和现金流信息来计算贴现因子。  
+        \item 3个月期债券，半年付息一次，票面利率\(4.5\%\)，则3个月利息\(C = 100\times\frac{4.5\%}{2}= 2.25\) ，面值\(F = 100\) ，价格\(P = 100.8765\) 。
+        \item 设3个月贴现因子为\(d(0.25)\) ，则\((100+2.25)\times d(0.25)=100.8765\) ，解得\(d(0.25)=0.9866\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{根据债券价格和现金流计算贴现因子}
+
+    \begin{question}
+        A fixed - income analyst is studying a set of bonds with the following details.
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Maturity & Coupon & Price \\
+        \hline
+        1 year & 6.0\% & 100.9876 \\
+        \hline
+        2 years & 12.0\% & 101.8765 \\
+        \hline
+        3 years & 8.0\% & 99.5678 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        Which of the following is the closest to the discount factor for the 2 - year discount factor, \(d(2)\)?(Annual compounding)
+        \end{question}
+        
+        \begin{choices}
+            \item 0.8075
+            \item 0.8213
+            \item 0.9543
+            \item 0.9765
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+            \textbf{步骤1：计算1年期贴现因子为\(d(1)\)。}
+            \begin{itemize}
+                \item 1年期债券，付息\(C_1=100\times6.0\% = 6\)，价格\(P_1 = 100.9876\)，由\(P_1=(C_1 + F_1)\times d(1)\)（\(F_1 = 100\)），可得\(d(1)=\frac{100.9876}{100 + 6}=0.9527\)。
+            \end{itemize}
+
+        \textbf{步骤2：计算2年期贴现因子为\(d(2)\)。}
+        \begin{itemize}
+        \item 2年期债券，一年付息一次，票面利率\(12.0\%\)，则每年付息金额\(C = 100\times12.0\% = 12\)，到期本金\(F = 100\)，债券价格\(P = 101.8765\)。
+        \item 该债券在1年时有一次付息，在2年时付息并还本。则债券价格公式为\(P = C\times d(1)+(C + F)\times d(2)\)。
+        \item 将\(d(1)\)的值代入2年期债券价格公式\(101.8765 = 12\times0.9527+(12 + 100)\times d(2)\)。
+        \item 解得\(d(2)=0.8075\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{根据债券价格和现金流计算特定期限的贴现因子（关键是明确不同期限债券现金流情况，先求出短期贴现因子，再代入长期债券价格公式求解长期贴现因子）}
+
+\begin{question}
+    A financial advisor is helping a client calculate the present value of a 3 - year, \$1500 bond. The bond has an annualized interest rate of 4\% compounded quarterly. What is the present value of this bond, rounded to the nearest cent?
+    \end{question}
+    
+    \begin{choices}
+        \item \$1332.12
+        \item \$1331.17
+        \item \$1338.91
+        \item \$1341.25
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定相关参数}
+    \begin{itemize}
+        \item 债券面值\(F = 1500\)美元，年利率\(r = 4\%\)，每年复利次数\(m = 4\)（季度复利），期限\(t = 3\)年。
+        \item 则每期利率\(i=\frac{r}{m}=\frac{4\%}{4}=1\%\)，总期数\(n = m\times t=4\times3 = 12\)期。
+    \end{itemize}
+    \textbf{步骤2：计算债券现值}
+    \begin{itemize}
+        \item 根据复利现值公式\(PV=\frac{F}{(1 + i)^n}\)，将\(F = 1500\)，\(i = 0.01\)，\(n = 12\)代入可得：
+        \item \(PV=\frac{1500}{(1 + 0.01)^{12}}=1331.17\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{复利现值的计算（关键是准确确定每期利率和总期数，并运用复利现值公式进行计算）}
+
+\begin{question}
+    A fixed - income trader at a financial institution is analyzing the term structure of interest rates. Given that the continuously - compounded spot rates are 3.80\% for a 2.5 - year investment and 4.10\% for a 3 - year investment, the trader needs to calculate the forward rate for the period between Year 2.5 and Year 3 to make informed trading decisions. Calculate this forward rate.
+    \end{question}
+    
+    \begin{choices}
+        \item 4.70\%
+        \item 5.00\%
+        \item 5.20\%
+        \item 5.60\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确连续复利下远期利率计算公式}
+    \begin{itemize}
+        \item 连续复利下，计算\(t_1\)到\(t_2\)期间的远期利率\(r_{f}\)公式为\(r_{f}=\frac{r_{2}t_{2}-r_{1}t_{1}}{t_{2}-t_{1}}\)，其中\(r_{1}\)是\(t_1\)期限的即期利率，\(r_{2}\)是\(t_2\)期限的即期利率。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算}
+    \begin{itemize}
+        \item 已知\(r_{1}=0.0380\)（\(2.5\)年期即期利率），\(t_{1}=2.5\)；\(r_{2}=0.0410\)（\(3\)年期即期利率），\(t_{2}=3\)。
+        \item 将数据代入公式可得：\(r_{f}=\frac{0.0410\times3 - 0.0380\times2.5}{3 - 2.5}=\frac{0.123 - 0.095}{0.5}=\frac{0.028}{0.5}= 5.6\%\)
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{连续复利下远期利率的计算（关键是准确掌握连续复利下远期利率计算公式，正确代入即期利率和对应期限数据进行计算）}
+
+    \begin{question}
+        A fixed - income analyst is tasked with calculating the par rate for a 3 - year bond. The spot rates for each semi - annual period over three years, along with their respective discount factors, are presented in the table below.
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Maturity (Years) & Spot Rate & Discount Factor \\
+        \hline
+        0.5 & 3.00\% & 0.9850 \\
+        \hline
+        1.0 & 3.30\% & 0.9705 \\
+        \hline
+        1.5 & 3.60\% & 0.9563 \\
+        \hline
+        2.0 & 3.90\% & 0.9425 \\
+        \hline
+        2.5 & 4.20\% & 0.9290 \\
+        \hline
+        3.0 & 4.50\% & 0.9158 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        Calculate the 3 - year par rate.
+        \end{question}
+        
+        \begin{choices}
+            \item 3.78\%
+            \item 4.05\%
+            \item 4.23\%
+            \item 5.90\%
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算\(A_T\)的值}
+        \begin{itemize}
+            \item \(A_T\)为各期贴现因子之和，\(A_T=0.9850 + 0.9705+0.9563 + 0.9425+0.9290 + 0.9158 = 5.6991\) 。
+            \item \(d(T)\)为3年期的贴现因子，\(d(T)=0.9158\) 。
+        \end{itemize}
+        \textbf{步骤2：根据公式计算票面利率\(P_T\)}
+        \begin{itemize}
+            \item 对于每半年付息一次的债券，计算票面利率\(P_T\)的公式为\(P_T=\frac{2(1 - d(T))}{A_T}\) 。
+            \item 将\(A_T = 5.6991\)，\(d(T)=0.9158\)代入公式可得：
+            \item \(P_T=\frac{2\times(1 - 0.9158)}{5.6991}=2.95\%\) ，这是半年的票面利率。
+            \item 年化票面利率为\(2.95\%\times2 = 5.9\%\) 。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{根据即期利率和贴现因子计算票面利率（关键是准确计算各期贴现因子之和\(A_T\)，明确对应期限的贴现因子\(d(T)\)）}
+
+
+
+
+
+
+
+
+        
+\section{考点5:Bond Valuation 债券估值}
+\setcounter{question}{0}
+\begin{question}
+    An investor is considering a zero - coupon bond. What percentage of the face value is the price of an 8 - year zero - coupon bond, given that the yield to maturity (YTM) is 7.25\%?
+    \end{question}
+    
+    \begin{choices}
+    \item 57.12\%
+    \item 68.32\%
+    \item 42.50\%
+    \item 50.10\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    对于零息债券，其价格计算公式为\(P = \frac{F}{(1 + r)^n}\)，其中\(F\)为面值（假设\(F = 100\)），\(r\)为到期收益率（YTM），\(n\)为期数。这里\(r = 7.25\%\)，\(n = 8\)，则\(P=\frac{100}{(1 + 7.25\%)^8}=57.12\)，即价格是面值的\(56.18\%\) 。
+    \end{explanation}
+    
+    \checklist{零息债券价格计算（对于零息债券，$P = \frac{F}{(1 + r)^n}$）}
+
+
+
+\begin{question}
+    An investor is considering a 10 - year annuity product with a 5.5\% interest rate, paid semi - annually. The annuity has a face value of 100. If the required rate of return is 7\%, what is the price of this annuity product?
+    \end{question}
+    
+    \begin{choices}
+        \item -32.15
+        \item -34.38
+        \item -36.72
+        \item -38.95
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定相关参数}
+    \begin{itemize}
+    \item 期限是10年，每半年支付一次，所以期数\(N = 10\times2=20\)。
+    \item 利率是\(5.5\%\)，每半年支付，半年利率\(PMT=\frac{100\times5.5\%}{2}= 2.75\) 。
+    \item 要求的收益率是\(7\%\)，半年收益率\(I/Y=\frac{7\%}{2}=3.5\%\) 。
+    \item 年金终值\(FV = 0\)。
+    \end{itemize}
+    \textbf{步骤2：计算年金现值}
+    \begin{itemize}
+    \item 根据年金现值计算公式（使用金融计算器或公式\(PV = PMT\times\frac{1-(1 + I/Y)^{-N}}{I/Y}\) ），解得现值为39.08。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{年金现值的计算（掌握年金现值的计算公式/金融计算器使用方法）}
+
+    \begin{question}
+        Given a six - month and a two - year zero - coupon bonds price of 97.53 and 85.70 respectively, what should be the price of a one - year zero - coupon bond using linear interpolation on zero rates (quarterly compounding)?
+        \end{question}
+        
+        \begin{choices}
+            \item 97.53
+            \item 94.21
+            \item 94.47
+            \item 90.70
+        \end{choices}
+        
+        \begin{correctanswer}
+        C
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算6个月和2年期债券的季度零利率}
+        \begin{itemize}
+        \item 对于6个月债券，期限\(N = 2\)个季度（因为是季度复利），终值\(FV = 100\)，现值\(PV=-97.53\)，息票\(PMT = 0\)。
+        \item 根据公式\(PV=\frac{FV}{(1 + r)^N}\)，使用金融计算器或公式求解\(r\)（季度利率），\(r=\sqrt{\frac{100}{97.53}}-1\approx1.26\%\)，年化利率\(y_1=1.26\%\times4 =5.04\%\)。
+        
+        \item 对于2年期债券，期限\(N = 8\)个季度，终值\(FV = 100\)，现值\(PV=-85.70\)，息票\(PMT = 0\)。
+        \item \(r=\sqrt[8]{\frac{100}{85.70}}-1\approx1.95\%\)，年化利率\(y_2=1.95\%\times4\approx7.80\%\)。
+        \end{itemize}
+        \textbf{步骤2：使用零利率线性插值计算1年期债券的零利率}
+        \begin{itemize}
+        \item 1年期处于6个月和2年期中间，间隔数为\(2\)（从6个月到1年为1个间隔，从1年到2年为1个间隔）。
+        \item 零利率差值\(\Delta y=\frac{y_2 - y_1}{2}=\frac{7.80\% - 5.04\%}{2}=1.38\%\)。
+        \item 1年期债券的年化零利率\(y = 5\%+1.38\% = 6.38\%\)，季度利率\(r=\frac{6.38\%}{4}=1.595\%\)。
+        \end{itemize}
+        \textbf{步骤3：计算1年期债券的价格}
+        \begin{itemize}
+        \item 对于1年期债券，期限\(N = 4\)个季度，终值\(FV = 100\)，息票\(PMT = 0\)，季度利率\(r = 1.27\%\)。
+        \item  根据\(PV=\frac{FV}{(1 + r)^N}\)，可得\(PV=\frac{100}{(1 + 0.0127)^4}\approx94.47\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{考查利用线性插值法计算零息债券价格，关键在于准确计算不同期限债券的零利率，并正确进行线性插值。}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is analyzing zero - coupon bonds. Given that the prices of a one - year and a three - year zero - coupon bonds are 93.52 and 78.63 respectively, what should be the price of a two - year zero - coupon bond using linear interpolation on zero rates with semiannual compounding?
+    \end{question}
+    
+    \begin{choices}
+        \item 85.21
+        \item 86.32
+        \item 89.47
+        \item 91.60
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算一年期和三年期零息债券的零利率}
+    \begin{itemize}
+        \item 对于零息债券，价格公式为$P = \frac{F}{(1 + \frac{r}{n})^{nt}}$，其中$P$是债券价格，$F$是面值（设为100），$r$是零利率，$n$是每年复利次数（这里$n = 2$，半年度复利），$t$是到期年限。
+        \item 对于一年期零息债券，$93.52=\frac{100}{(1+\frac{r_1}{2})^{2\times1}}$，解得$r_1 = 2\times(\sqrt{\frac{100}{93.52}}-1)=6.81\%$。
+        \item 对于三年期零息债券，$78.63=\frac{100}{(1+\frac{r_3}{2})^{2\times3}}$，解得$r_3 = 2\times(\sqrt[6]{\frac{100}{78.63}}-1)=8.18\%$。
+    \end{itemize}
+    \textbf{步骤2：使用线性插值法计算两年期零息债券的零利率$r_2$}
+    \begin{itemize}
+        \item 线性插值公式为$r_2=r_1+\frac{2 - 1}{3 - 1}(r_3 - r_1)$。
+        \item 代入$r_1 = 6.80\%$，$r_3 = 8.18\%$，可得$r_2=6.80\%+\frac{1}{2}(8.18\% - 6.80\%)=7.49\%$。
+    \end{itemize}
+    \textbf{步骤3：计算两年期零息债券的价格$P_2$}
+    \begin{itemize}
+        \item 根据零息债券价格公式$P_2=\frac{100}{(1+\frac{0.0749}{2})^{2\times2}}=86.32$。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{零息债券零利率的计算、线性插值法的应用（关键是掌握零息债券价格公式和线性插值公式）}
+
+\begin{question}
+    A risk analyst for a corporate bond investment fund is evaluating a three - year zero - coupon bond issued by corporate ABC. Currently, the bond is rated BBB. One year from now, ABC is expected to remain at BBB with 75\% probability, upgraded to A with 15\% probability, and downgraded to BB with 10\% probability. The risk - free rate is flat at 3\%. The credit spreads are flat at 60, 120, and 200 basis points for A, BBB, and BB rated issuers, respectively. All rates are compounded annually. Estimate the expected value of the zero - coupon bond one year from now (for USD 100 face amount).
+    \end{question}
+    
+    \begin{choices}
+        \item USD 92.12
+        \item USD 93.72
+        \item USD 94.50
+        \item USD 95.28
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算不同评级下的利率}
+    \begin{itemize}
+        \item 对于A评级，利率$r_A=3\% + 0.6\%=3.6\%$。
+        \item 对于BBB评级，利率$r_{BBB}=3\%+1.2\% = 4.2\%$。
+        \item 对于BB评级，利率$r_{BB}=3\% + 2\%=5\%$。
+    \end{itemize}
+    \textbf{步骤2：计算不同评级下债券一年后的价值}
+    \begin{itemize}
+        \item 当债券评级为A时，距离到期还有2年，根据零息债券价值公式$V=\frac{F}{(1 + r)^n}$，其中$F = 100$，$n = 2$，$r=r_A$，则$V_A=\frac{100}{(1 + 0.036)^2}\approx93.17$。
+        \item 当债券评级为BBB时，$V_{BBB}=\frac{100}{(1 + 0.042)^2}\approx92.10$。
+        \item 当债券评级为BB时，$V_{BB}=\frac{100}{(1 + 0.05)^2}\approx90.70$。
+    \end{itemize}
+    \textbf{步骤3：计算债券一年后的预期价值}
+    \begin{itemize}
+        \item 根据预期价值公式$E(V)=p_A\times V_A + p_{BBB}\times V_{BBB}+p_{BB}\times V_{BB}$，其中$p_A = 15\%$，$p_{BBB}=75\%$，$p_{BB}=10\%$。
+        \item $E(V)=0.15\times93.17+0.75\times92.10 + 0.1\times90.70=92.12$。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{信用评级变化下零息债券预期价值的计算（关键是根据不同信用评级确定利率，再结合概率计算预期价值）}
+
+\begin{question}
+    A junior bond analyst at an investment bank is analyzing a \$2,000 par corporate bond. The bond has a coupon rate of 7\%, pays coupons semiannually, and has 12 coupon payments remaining until maturity. The current market rate is 6\%. There are 120 days between settlement and the next coupon payment. What are the dirty and clean prices of the bond, respectively?
+    \end{question}
+    
+    \begin{choices}
+        \item \$2,094.88, \$2,069.88
+        \item \$2,094.88, \$2,079.88
+        \item \$2,107.91, \$2,082.91
+        \item \$2,120.33, \$2,097.00
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算债券的息票金额}
+    \begin{itemize}
+        \item 已知债券面值$F = 2000$，票面利率$C = 7\%$，每半年付息一次，则每次息票金额$C_{semi}=\frac{7\%}{2}\times2000 = 70$。
+        \item 市场利率$r = 6\%$，半年利率$r_{semi}=\frac{6\%}{2}=3\%$，剩余付息次数$n = 12$。
+    \end{itemize}
+    \textbf{步骤2：计算债券的初始理论价格（全价，即干净价格加上应计利息）}
+    \begin{itemize}
+        \item 根据债券定价公式$P=\sum_{t = 1}^{n}\frac{C_{semi}}{(1 + r_{semi})^t}+\frac{F}{(1 + r_{semi})^n}$。
+        \item 金融计算器：N = 12, I/Y = 3, PMT = 70, FV = 2,000; CPT→PV =2099.54.
+    \end{itemize}
+    \textbf{步骤3：计算应计利息}
+    \begin{itemize}
+        \item 每半年付息一次，半年为180天，距离下次付息还有120天，则已过付息期天数为$180 - 120 = 60$天。
+        \item 应计利息$AI=\frac{60}{180}\times70=23.33$。
+    \end{itemize}
+    \textbf{步骤4：计算当前的脏价和净价}
+    \begin{itemize}
+        \item 脏价（Dirty price）:$P_{dirty}=2099.54*(1+3\%)^(60/180)=2120.33$。
+        \item 干净价格（Clean price）:$P_{clean}=2120.33-23.33=2097$。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券脏价和净价的计算（关键是掌握债券定价公式和应计利息的计算方法）}
+
+\begin{question}
+    An investor purchases a U.S. Treasury bond with a face value of \$12,000. The bond has a coupon rate of 7.00\% and matures on September 15, 2018. The investor settles the purchase on June 1st, 2015. The last coupon was paid on March 15, 2015, and the next coupon will be paid on September 15, 2015. Given that the bond's yield to maturity is 5.00\%, what is the closest value to the bond's quoted price at settlement?
+    \end{question}
+    
+    \begin{choices}
+        \item \$10,892.34
+        \item \$11,543.67
+        \item \$12718.18
+        \item \$13,012.56
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算应计利息}
+    \begin{itemize}
+    \item 首先，确定两次付息日之间的天数。从3月15日到9月15日，共184天。
+    \item 然后，计算从上次付息日（3月15日）到结算日（6月1日）的天数，为78天。
+    \item 每半年的利息为 $12000\times(7\%/2) = 420$ 美元。
+    \item 应计利息 $AI=\frac{78}{184}\times420=178.04$ 美元。
+    \end{itemize}
+    \textbf{步骤2：计算债券的全价}
+    \begin{itemize}
+    \item 金融计算器：N = 7, I/Y = 2.5, PMT = 420, FV = 12,000; CPT→PV =12761.93.
+    \item 脏价（Dirty price）:$P_{dirty}=12761.93*(1+5\%/2)^(78/184)=12896.22$。
+    \end{itemize}
+    \textbf{步骤3：计算债券的报价}
+    \begin{itemize}
+    \item 债券报价 = 全价 - 应计利息，即 $12896.22-178.04=12718.18$ 美元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券定价（关键是准确计算应计利息和运用债券定价公式计算全价，再通过全价与应计利息的关系得到报价）}
+
+\begin{question}
+    A financial advisor at an investment firm has been tasked with identifying arbitrage opportunities in the Treasury bond market by comparing the cash flows of various bonds with combinations of other bonds. If a 1-year zero-coupon bond is priced at USD 97.25 and a 1-year bond paying a 12\% coupon semi-annually is priced at USD 108.30, what should be the price of a 1-year Treasury bond that pays a coupon of 6\% semiannually?
+    \end{question}
+    
+    \begin{choices}
+        \item USD 96.15
+        \item USD 100.37
+        \item USD 102.78
+        \item USD 103.51
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：设定复制债券的权重并列出方程}
+    \begin{itemize}
+    \item 为了复制1年期、半年付息6\%的债券的现金流，设零息债券的权重为\(F_1\)，半年付息12\%的债券的权重为\(F_2\)。
+    \item 半年付息12\%的债券，每半年利息为\(100\times\frac{12\%}{2} = 6\)，1年期、半年付息6\%的债券每半年利息为\(100\times\frac{6\%}{2} = 3\) 。
+    \item 根据1年后的现金流（本金和利息）可列方程：\((100\times F_1)+(106\times F_2)=103\) 。
+    \item 根据6个月时的现金流（利息）可列方程：\((6\times F_2)=3\) 。
+    \end{itemize}
+    \textbf{步骤2：求解权重\(F_1\)和\(F_2\)}
+    \begin{itemize}
+    \item 由\(6\times F_2 = 3\)，解得\(F_2 = 0.5\) ,\(F_1=1-F_2 = 0.5\) 
+    \item 另外将\(F_2 = 0.5\)代入\((100\times F_1)+(106\times F_2)=103\)，可得\(100\times F_1+106\times0.5 = 103\)，即\(100\times F_1=103 - 53 = 50\)，也可解得\(F_1 = 0.5\) 。
+    \end{itemize}
+    \textbf{步骤3：计算目标债券的价格}
+    \begin{itemize}
+    \item 已知零息债券价格为\(97.25\)，半年付息12\%的债券价格为\(108.30\)。
+    \item 则1年期、半年付息6\%的债券价格为\(0.5\times97.25 + 0.5\times108.30= 102.78\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{通过债券现金流复制计算债券价格（关键是合理设定权重，根据现金流列出方程并求解，再计算目标债券价格）}
+
+\begin{question}
+    A bond trader at a financial institution is looking at the prices of three US Treasury notes that will mature on August 30, 2026, exactly one year from the settlement date of August 30, 2025. The notes make semi - annual coupon payments and have the same coupon payment dates. The following table shows the prices of two of the three notes:
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Coupon & Price \\
+    \hline
+    3 1/8 & 93.60 \\
+    4 3/4 &? \\
+    6 3/8 & 102.10 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    Approximately what would be the price of the 4 3/4 US Treasury note?
+    \end{question}
+    
+    \begin{choices}
+        \item 98.25
+        \item 99.10
+        \item 97.85
+        \item 100.30
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：设未知数并建立方程}
+    \begin{itemize}
+        \item 设投资于3 1/8\%息票率债券的权重为\(X_1\)，则投资于6 3/8\%息票率债券的权重为\(1 - X_1\)。
+        \item 根据现金流匹配原理，构建方程\((\frac{3.125}{2}+100)X_1+(\frac{6.375}{2}+100)(1 - X_1)=\frac{4.75}{2}+100\)。
+    \end{itemize}
+    \textbf{步骤2：求解权重\(X_1\)}
+    \begin{itemize}
+        \item 展开方程左边得到\((1.5625 + 100)X_1+(3.1875 + 100)(1 - X_1)=1.5625X_1+100X_1+3.1875 - 3.1875X_1+100 - 100X_1=103.1875 - 1.625X_1\)，方程右边为\(2.375 + 100 = 102.375\)。
+        \item 则\(103.1875 - 1.625X_1 = 102.375\)，解得\(X_1=\frac{103.1875-102.375}{1.625}=0.5\)。
+    \end{itemize}
+    \textbf{步骤3：计算4 3/4\%息票率债券的价格}
+    \begin{itemize}
+        \item 根据加权平均原理，4 3/4\%息票率债券的价格\(P = X_1\times P_1+(1 - X_1)\times P_2\)，其中\(P_1 = 93.60\)，\(P_2 = 102.10\)。
+        \item 代入\(X_1 = 0.5\)，可得\(P = 0.5\times93.60+(1 - 0.5)\times102.10=97.85\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利用现金流匹配原理计算债券价格（关键是根据已知债券的现金流构建方程求出权重，再用权重计算目标债券价格）}
+
+\begin{question}
+    A portfolio manager at an investment firm has obtained quotes from a bond dealer regarding two bonds, Bond A and Bond B, which have the same maturity and coupon rate. The dealer tells the manager that Bond A trades at a spread of 20 bps over the Treasury market, while Bond B trades at a spread of 60 bps. Which of the following statements represents a correct conclusion that the manager can draw?
+    \end{question}
+    
+    \begin{choices}
+        \item Bond A earns a lower return than that of the comparable Treasury bond, because its spread increases the discount rate of its cash flows.
+        \item The price of Bond A is currently higher than the price of Bond B.
+        \item To make the present value of Bond B’s cash flows equal to its face value, 60 bps should be added to the yield to maturity of a Treasury bond with a similar maturity.
+        \item The spread difference implies that there is a 0.4\% difference in the yield to maturity between Bond A and Bond B, not in price.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项B正确。}：
+    \begin{itemize}
+    \item 利差是指债券相对于参考证券（如国债）所获得的超额收益的一种度量。由于参考证券（国债）的现金流是按照合适的远期利率进行折现的，在这些利率上加上利差会降低相应的折现因子。利差越大，折现因子的降低幅度就越大，债券价格也就越低。所以，利差为60个基点的Bond B的价格低于利差为20个基点的Bond A的价格。
+    \end{itemize}
+    \textbf{选项A错误。}：
+    \begin{itemize}
+    \item 如前所述，利差可以被理解为相对于可比参考证券所获得的超额收益。Bond A的正利差表明它的收益高于国债，而不是更低。
+    \end{itemize}
+    \textbf{选项C错误。}：
+    \begin{itemize}
+    \item 利差是应用于参考证券（国债）的远期利率曲线，而不是应用于国债的到期收益率。
+    \end{itemize}
+    \textbf{选项D错误。}：
+    \begin{itemize}
+    \item 虽然Bond A和Bond B的利差差值为40个基点（0.4\%），但不能简单地认为这就是它们到期收益率的差值，而且也不是价格的差值。利差和到期收益率、价格之间的关系更为复杂，不能直接这样推导。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券利差的含义及其对债券价格和收益率的影响（关键是理解利差与债券价格之间的关系）}
+
+\begin{question}
+    An investor at a wealth management firm is analyzing a 10 - year bond. The bond has a current price of \$950.00 and pays an annual coupon of 5.5\%. What is the bond's yield - to - maturity (YTM)?
+    \end{question}
+    
+    \begin{choices}
+        \item 5.98\%
+        \item 6.12\%
+        \item 6.33\%
+        \item 6.67\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确已知条件}
+    \begin{itemize}
+        \item 债券期限\(N = 10\)年。
+        \item 债券当前价格\(PV=- 950\)（负号表示现金流出）。
+        \item 每年利息支付\(PMT = 1000\times5.5\%=55\)（假设债券面值\(FV = 1000\)）。
+        \item 债券面值\(FV = 1000\)。
+    \end{itemize}
+    \textbf{步骤2：使用金融计算器计算YTM}
+    \begin{itemize}
+        \item 使用金融计算器，输入\(N = 10\)，\(PV=-950\)，\(PMT = 55\)，\(FV = 1000\)，然后计算\(I/Y\)→得出\(I/Y=6.33\%\)
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券到期收益率（YTM）的计算（关键是如何使用金融计算器来计算YTM）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating the characteristics of a bond's yield - to - maturity (YTM). Each of the following statements is generally correct about a bond's YTM, EXCEPT:
+    \end{question}
+            
+\begin{choices}
+    \item A bond trading at a premium above par value has a YTM that is lower than its coupon rate.
+    \item A bond trading at a discount below par value has a YTM that is higher than its coupon rate.
+    \item The YTM of a zero - coupon bond is equal to the spot (zero) rate for the bond's maturity period.
+    \item If the same term structure of spot rates is applicable to two bonds with the same maturities, the bond with the lower YTM is a more attractive investment.
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{选项D错误。}：
+\begin{itemize}
+\item 不能仅仅根据收益率（YTM）来判断哪种债券是更优投资。虽然两只债券期限相同且适用相同的即期利率期限结构，但收益率（YTM）还受到债券票面利率等因素的影响。仅仅比较收益率高低不能得出哪只债券是更优投资的结论，因为需要考虑债券的息票效应等因素。
+\end{itemize}
+\textbf{选项A正确。}：
+\begin{itemize}
+\item 对于溢价交易（高于票面价值）的债券，其YTM低于票面利率。这是因为债券价格高于票面价值，意味着按照票面利率支付的利息相对较多，使得计算出来的YTM会低于票面利率。
+    \end{itemize}
+    \textbf{选项B正确。}：
+    \begin{itemize}
+    \item 对于折价交易（低于票面价值）的债券，其YTM高于票面利率。因为债券价格低于票面价值，为了在到期时达到票面价值，需要有一个更高的收益率，所以YTM会高于票面利率。
+    \end{itemize}
+    \textbf{选项C正确。}：
+    \begin{itemize}
+    \item 零息债券的YTM等于债券到期期限对应的即期（零）利率。因为零息债券没有期间利息支付，其价格就是按照到期时的本金按照即期利率折现得到的，所以YTM和即期利率相等。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券到期收益率（YTM）的特性（注意辨析在溢价/折价债券中YTM与票面利率的关系）}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+\section{考点6:Duration and Convexity 久期和凸性}
+\setcounter{question}{0}
+\begin{question}
+    A risk manager at an insurance company is analyzing the interest rate sensitivity of a bond portfolio and is considering a 3 - year 5\% coupon bond with a face value of USD 100. The coupon is paid annually, and the bond yield is 7\% per year with annual compounding. What is the approximate dollar duration of the bond, where dollar duration is defined as the modified duration multiplied by the current value of the bond?
+    \end{question}
+    
+    \begin{choices}
+        \item 212
+        \item 253
+        \item 280
+        \item 287
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算债券各期现金流现值}
+    \begin{itemize}
+    \item 每年的息票支付\(C = 100\times5\% = 5\)。
+    \item 第一年现金流现值：\(\frac{5}{1 + 0.07}=4.67\)。
+    \item 第二年现金流现值：\(\frac{5}{(1 + 0.07)^2}=4.37\)。
+    \item 第三年现金流现值：\(\frac{5 + 100}{(1 + 0.07)^3}=85.71\)。
+    \item 债券现值=4.67+4.37+85.71=94.75。
+    \end{itemize}
+    \textbf{步骤2：计算麦考利久期（Macaulay Duration，\(D_{mac}\)）}
+    \begin{itemize}
+    \item 麦考利久期公式\(D_{\text{Macaulay}} = \sum_{t=1}^{T} \left( \frac{\text{PV}(C_t)}{P} \times t \right) \)。
+    \[
+    D_{\text{Macaulay}} = \frac{4.67}{94.75}\times1 + \frac{4.37}{94.75}\times2 + \frac{85.71}{94.75}\times3 = 2.86
+    \]
+    \end{itemize}
+    \textbf{步骤3：计算修正久期（Modified Duration，\(D_{mod}\)）}
+    \begin{itemize}
+    \item 修正久期公式\(D_{mod}=\frac{D_{mac}}{1 + y}\)，所以\(D_{mod}=\frac{2.86}{1 + 0.07}=2.67\)。
+    \end{itemize}
+    \textbf{步骤4：计算美元久期（Dollar Duration）}
+    \begin{itemize}
+    \item 美元久期\(=D_{mod}\times PV\)，即\(2.67\times94.75=253\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券美元久期的计算（麦考利久期→修正久期→美元久期）}
+
+\begin{question}
+    An investor holds a short position in a 15 - year, 4\% coupon U.S. Treasury bond (T - bond) with a yield to maturity (YTM) of 5\% and par value of \$100. Assume discounting occurs on a semi - annual basis. What is the dollar value of a basis point (DV01) for this bond?
+    \end{question}
+    
+    \begin{choices}
+        \item 0.0977
+        \item 0.0987
+        \item 0.0997
+        \item 0.1007
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定相关参数}
+    \begin{itemize}
+    \item 半年付息一次，所以期数\(n = 15\times2 = 30\)期，半年票面利率\(r_c=\frac{4\%}{2}=0.02\)，半年到期收益率\(r_y=\frac{5\%}{2}=0.025\)，面值\(F = 100\)。
+    \end{itemize}
+    \textbf{步骤2：计算债券价格}
+    \begin{itemize}
+    \item 利用债券价格公式\(P=\sum_{t = 1}^{n}\frac{F\times r_c}{(1 + r_y)^t}+\frac{F}{(1 + r_y)^n}\)计算债券价格\(P\)。设\(P_1\)为收益率\(r_y\)时的债券价格，\(P_2\)为收益率\(r_y + 0.0001\)（变动1个基点）时的债券价格。
+    \item 当\(YTM=5\%\)时，N=30；I/Y=2.5；PMT=2；FV=100；计算得出PV=89.5349
+    \item 当\(YTM=5.01\%\)时，N=30；I/Y=2.505；PMT=2；FV=100；计算得出PV=89.4372
+    \item \(DV01 = |P_2 - P_1|=0.0977\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券DV01的计算（需掌握如何用金融计算器计算现值）}
+
+    \begin{question}
+        An investor has a short position in a bond with a dollar value of a basis point (DV01) of 0.1035 and a par value of \$100. To hedge the interest rate risk, the investor uses a 25 - year, 4.5\% coupon, U.S. T - bond yielding 4.5\% with a DV01 of 0.1425. Which of the following actions should the investor take?
+        \end{question}
+        
+        \begin{choices}
+            \item Buy \$72.63 of the hedging instrument.
+            \item Buy \$68.72 of the hedging instrument.
+            \item Buy \$85.75 of the hedging instrument.
+            \item Buy \$87.50 of the hedging instrument.
+        \end{choices}
+        
+        \begin{correctanswer}
+        A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算对冲比例}
+        \begin{itemize}
+        \item 根据对冲原理，\(N = \frac{DV01_{target}}{DV01_{hedge}}\)，其中\(DV01_{target}\)是目标债券（持有的空头债券）的DV01，\(DV01_{hedge}\)是套期工具（用于对冲的债券）的DV01。
+        \item 已知\(DV01_{target} = 0.1035\)，\(DV01_{hedge} = 0.1425\)，则\(N=\frac{0.1035}{0.1425}= 0.7263\)。
+        \end{itemize}
+        \textbf{步骤2：确定对冲操作及金额}
+        \begin{itemize}
+        \item 因为投资者持有目标债券空头，所以要买入套期工具。已知目标债券面值为\$100，买入金额\(=0.7263\times100 = 72.63\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{DV01对冲，计算对冲比例}
+
+\begin{question}
+    A risk analyst at a financial institution is tasked with calculating the effective convexity when the interest rate is 6\%. Given the following table of interest rates and corresponding asset prices:
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Interest rate & Asset price \\
+    \hline
+    5.8\% & 11,823,456 \\
+    \hline
+    5.9\% & 11,767,7522 \\
+    \hline
+    6.0\% & 11,710,987 \\
+    \hline
+    6.1\% & 11,654,321 \\
+    \hline
+    6.2\% & 11,600,123 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    What is the effective convexity?
+    \end{question}
+    
+    \begin{choices}
+        \item 5.84
+        \item 8.47
+        \item 10.12
+        \item 12.36
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：利用有效凸性公式计算}
+    \begin{itemize}
+    \item 有效凸性公式为\(\text{CE} = \frac{D_- - D_+}{\Delta y} = \frac{P_- + P_+ - 2P_0}{P_0 \Delta y^2}\)
+    \item \( P_- \)：利率下降时，对应的债券价格；\( P_+ \)：利率上升时，对应的债券价格。
+
+    \[
+    \text{CE}=\frac{11,767,752 + 11,654,321 - 2\times 11,710,987}{ 11,710,987\times(0.001)^2}=8.47
+    \]
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{有效凸性的计算公式}
+
+    \begin{question}
+        A financial advisor is educating a client about callable bonds. Which of the following statements regarding callable bonds is most accurate?
+        \end{question}
+        
+        \begin{choices}
+            \item Are always called at par value, without any call premium.
+            \item With a deferred call feature enable the bondholder to request an extension of the call date for up to 3 years.
+            \item Usually require the issuer to pay a premium above par value to call the bond, and this premium generally decreases as the bond nears maturity.
+            \item Tend to be called when market interest rates rise significantly.
+        \end{choices}
+        
+        \begin{correctanswer}
+        C
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项错误。}
+        \begin{itemize}
+        \item 可赎回债券不一定按面值赎回，通常会有赎回溢价来补偿债券持有人，并非总是按面值赎回且无溢价。
+        \end{itemize}
+        \textbf{B选项错误。}
+        \begin{itemize}
+        \item 延迟赎回条款是指债券在初始一段时间内不可赎回，并非债券持有人能要求延长赎回日期。
+        \end{itemize}
+        \textbf{C选项正确。}
+        \begin{itemize}
+        \item 可赎回债券通常要求发行人支付高于面值的溢价来赎回债券，并且随着债券临近到期，该溢价金额通常会下降 。这符合可赎回债券的一般特征。
+        \end{itemize}
+        \textbf{D选项错误。}
+        \begin{itemize}
+        \item 可赎回债券一般在市场利率下降时被赎回，这样发行人可以以更低的利率重新融资，而不是在利率上升时被赎回。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{可赎回债券（赎回价格、延迟赎回条款以及赎回与利率变动的关系）}
+
+\begin{question}
+    A risk analyst at an investment firm is evaluating the characteristics of putable bonds. Which of the following statements about putable bonds is accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item The effective duration of a putable bond is smaller compared to a non - putable bond.
+        \item Putable bonds are typically exercised when interest rates decline.
+        \item The price of a putable bond is equal to the price of a non - putable bond minus the value of the put option.
+        \item Putable bonds exhibit high convexity when interest rates are high.
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item 可回售债券的有效久期比不可回售债券大，而不是小。因为当利率变动时，可回售债券持有人的回售权增加了债券价格的变化幅度，导致有效久期更大。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 可回售债券通常在利率上升时被行使回售权，此时债券持有人将债券回售给发行人，避免因利率上升导致债券价格下跌带来的损失，而不是在利率下降时行使，可赎回债券通常在利率下降时被行使赎回权。 
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 可回售债券的价格等于不可回售债券价格加上回售期权价值，即\(Putable\ bond = non - putable\ bond+put\ option\)，而不是减去。
+    \end{itemize}
+    \textbf{D选项正确。}
+    \begin{itemize}
+    \item 可回售债券在利率较高时表现出高凸性。当利率较高时，回售期权价值增加，使得债券价格对利率变动的敏感度呈现高凸性的特征。 
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{可回售债券的特性（辨析可回售债券与可赎回债券的特性）}
+
+    \begin{question}
+        A junior trader on a fixed - income trading desk is managing a portfolio with two bonds, Bond X and Bond Y. Both bonds have a modified duration of 4 years and a face value of USD 1200. Bond X is a zero - coupon bond with a current price of USD 1050, while Bond Y pays semi - annual coupons and is priced at par. What do you expect will happen to the market prices of Bond X and Bond Y if the risk - free yield curve moves up by 2 basis points?
+        \end{question}
+        
+        \begin{choices}
+            \item Both bond prices will move up, and Bond Y will gain more than Bond X.
+            \item Both bond prices will move up by roughly the same amount.
+            \item Both bond prices will move down by roughly equal amounts.
+            \item Both bond prices will move down, but Bond Y will lose more than Bond X.
+        \end{choices}
+        
+        \begin{correctanswer}
+            D
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：明确价格变动公式}
+        \begin{itemize}
+            \item 债券价格变动的计算公式为\(\Delta P=-P\times\Delta y\times D_{mod}\)，其中\(\Delta P\)是债券价格的变动，\(P\)是债券当前价格，\(\Delta y\)是收益率的变动，\(D_{mod}\)是修正久期。
+        \end{itemize}
+        \textbf{步骤2：分析收益率曲线向上移动对债券价格的影响}
+        \begin{itemize}
+            \item 当收益率曲线向上移动时，即\(\Delta y>0\)，根据公式\(\Delta P=-P\times\Delta y\times D_{mod}\)，\(\Delta P<0\)，所以债券价格会下降。
+            \item 对于Bond X，当前价格\(P_X = 1050\)，修正久期\(D_{mod,X}=4\)，收益率变动\(\Delta y = 0.0002\)，则价格变动\(\Delta P_X=-1050\times0.0002\times4=- 0.84\)。
+            \item 对于Bond Y，因为是按面值定价，所以当前价格\(P_Y = 1200\)，修正久期\(D_{mod,Y}=4\)，收益率变动\(\Delta y = 0.0002\)，则价格变动\(\Delta P_Y=-1200\times0.0002\times4=-0.96\)。
+            \item \(\vert\Delta P_Y\vert>\vert\Delta P_X\vert\)，即Bond Y的价格下降幅度更大。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{利用修正久期计算债券价格变动以及比较不同债券价格变动幅度（关键是正确运用价格变动公式，根据债券当前价格、修正久期和收益率变动计算价格变动）}
+
+\begin{question}
+    A junior risk analyst at a fixed - income investment firm is tasked with evaluating the interest rate risk of a portfolio of bonds. The analyst decides to use DV01 as a measure of this risk. Which of the following is an assumption made when using DV01 in this context?
+    \end{question}
+    
+    \begin{choices}
+        \item Changes in the interest rates are small.
+        \item The yield curve is upward sloping.
+        \item Changes to the yield curve are non - parallel.
+        \item The yield curve is flat at a fixed level.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 当使用DV01衡量利率风险时，假设利率变化是小幅度的。如果利率变化幅度大，DV01可能不是一个可靠的衡量指标。同时，还假设收益率曲线的移动是平行的。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 使用DV01衡量利率风险时，并没有假设收益率曲线是向上倾斜的。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 使用DV01时假设收益率曲线的移动是平行的，而不是非平行的。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 使用DV01时没有假设收益率曲线是固定在某一水平的平坦曲线。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{使用DV01衡量利率风险时的假设条件（关键是掌握利率变化幅度小以及收益率曲线平行移动这两个核心假设）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is tasked with calculating the impact of a 15 - basis - point increase in yield on a bond portfolio. The details of the bond portfolio are as follows:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Bond & Value (USD) & Modified Duration \\
+    \hline
+    1 & 5,000,000 & 8.0 \\
+    2 & 3,000,000 & 2.0 \\
+    3 & 2,000,000 & 6.5 \\
+    4 & 1,500,000 & 1.5 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    What is the impact on the bond portfolio's value?
+    \end{question}
+    
+    \begin{choices}
+        \item USD - 64,125
+        \item USD - 72,375
+        \item USD - 81,500
+        \item USD - 91,875
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算各债券价值与修正久期的乘积。}
+    \begin{itemize}
+        \item 债券1：\(V_1D_1 = 5000000\times8.0 = 40000000\)。
+        \item 债券2：\(V_2D_2 = 3000000\times2.0 = 6000000\)。
+        \item 债券3：\(V_3D_3 = 2000000\times6.5 = 13000000\)。
+        \item 债券4：\(V_4D_4 = 1500000\times1.5 = 2250000\)。
+    \end{itemize}
+    \textbf{步骤2：计算投资组合的修正久期。}
+    \begin{itemize}
+        \item 根据公式\(D_{p}=\frac{\sum_{i = 1}^{n}V_{i}D_{i}}{\sum_{i = 1}^{n}V_{i}}\)，其中\(V_{i}\)是第\(i\)个债券的价值，\(D_{i}\)是第\(i\)个债券的修正久期。
+        \item 计算债券价值总和\(\sum_{i = 1}^{4}V_{i}=5000000 + 3000000+2000000 + 1500000=11500000\)。
+        \item 计算乘积总和\(\sum_{i = 1}^{4}V_{i}D_{i}=40000000+6000000 + 13000000+2250000 = 61250000\)。
+        \item 则投资组合的修正久期\(D_{p}=\frac{61250000}{11500000}=5.3261\)。
+    \end{itemize}
+    \textbf{步骤2：计算投资组合价值的变化}
+    \begin{itemize}
+        \item 根据公式\(\Delta V=-V\times D_{p}\times\Delta y\)，其中\(V\)是投资组合的初始价值，\(\Delta y\)是收益率的变化。
+        \item 已知\(V = 11500000\)，\(D_{p}\approx5.3261\)，\(\Delta y=0.0015\)。
+        \item 则\(\Delta V=-11500000\times5.3261\times0.0015=-91875.225\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券投资组合修正久期的计算及收益率变动对组合价值的影响（关键是正确计算投资组合的修正久期，并运用公式计算收益率变动导致的组合价值变化）}
+
+\begin{question}
+    A risk analyst at a hedge fund is looking to adjust the fund's interest - rate exposure. The analyst has studied the market trends and expects a notable change in interest rates. To achieve a negative duration exposure, the analyst plans to invest in fixed - income securities. Which of the following positions should the analyst take?
+    \end{question}
+    
+    \begin{choices}
+        \item An interest rate swap paying LIBOR plus a margin and receiving fixed
+        \item A long position in a putable government bond
+        \item A long position in a callable municipal bond
+        \item An interest rate swap paying fixed and receiving LIBOR plus a margin
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 为了获得负久期的利率敞口，需要投资于当利率下降时价值降低（当利率上升时价值增加）的证券。
+        \item 在利率互换中，支付固定利率并收取LIBOR加上利差的互换合约，当市场利率上升时，收取的浮动利率（LIBOR加上利差）会增加，而支付的固定利率不变，所以该互换合约的价值会上升，具有负久期的特征。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 支付LIBOR加上利差并收取固定利率的利率互换，当利率上升时，支付的浮动利率（LIBOR加上利差）会增加，而收取的固定利率不变，合约价值会下降，不具有负久期的特征。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 可回售债券虽然由于回售期权的存在，其久期比相同条件下的无期权债券久期低，但总体久期仍然是正的，不满足负久期的要求。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 可赎回债券的赎回期权会使债券的久期比相同条件下的无期权债券久期低，但整体久期依然为正，不能提供负久期的利率敞口。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{不同固定收益证券的久期特征以及负久期的获取（关键是理解各类固定收益证券在利率变动时的价值变化，以及负久期意味着利率上升时价值增加）}
+
+\begin{question}
+    A risk analyst at a bond investment firm is analyzing a 6 - year, 9\% coupon bond (with annual coupons) priced to yield 11\% per annum. The bond has a par value of \$120 and a price of \$108.6527. The analyst has calculated the following values:
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Measure & Value \\
+    \hline
+    Macaulay Duration & 4.5821 \\
+    Modified Duration & 4.1280 \\
+    Convexity & 26.3547 \\
+    Modified Convexity & 23.7430 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    Which pair of duration and convexity should the risk analyst use when computing the duration - convexity approximation for the capital loss if the yield were to change to 11.5\% per annum? And what is the estimated dollar amount of the capital loss?
+    \end{question}
+    
+    \begin{choices}
+        \item The risk analyst should use Macaulay duration and convexity, and the dollar amount of the capital loss is \$2.2188.
+        \item The risk analyst should use modified duration and convexity, and the dollar amount of the capital loss is \$2.0376.
+        \item The risk analyst should use modified duration and modified convexity, and the dollar amount of the capital loss is \$2.2103.
+        \item The risk analyst should use Macaulay duration and modified convexity, and the dollar amount of the capital loss is \$2.2204.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：确定使用的久期和凸性指标}
+    \begin{itemize}
+        \item 在离散复利的情况下（本题中为每年付息一次），应该使用修正久期（Modified Duration）和修正凸性（Modified Convexity）来进行分析。
+    \end{itemize}
+    \textbf{步骤2：计算资本损失}
+    \begin{itemize}
+        \item 根据久期 - 凸性近似公式\(\Delta P\approx - \text{Mod.D}\times P\times\Delta y+\frac{1}{2}\times\text{Mod.C}\times P\times(\Delta y)^{2}\)。
+        \item 已知修正久期\(\text{Mod.D}=4.1280\)，债券价格\(P = 108.6527\)，收益率变化\(\Delta y=0.005\)，修正凸性\(\text{Mod.C}=23.7430\)。
+        \item 代入公式可得：
+         \[
+         \Delta P= - 4.1280\times108.6527\times0.005+\frac{1}{2}\times23.7430\times108.6527\times(0.005)^{2}=-2.2103
+         \]
+        
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{久期 - 凸性近似公式的应用以及离散复利下指标的选择（关键是要选择修正久期和修正凸性）}
+
+\begin{question}
+    A fixed - income analyst at a financial institution is studying the impact of convexity on option - free bonds. For an option - free bond, what are the effects of the convexity adjustment on the magnitude (absolute value) of the approximate bond price change in response to a decrease in yield and an increase in yield, respectively?
+    \end{question}
+    
+    \begin{choices}
+        \item Decrease in magnitude, Increase in magnitude
+        \item Increase in magnitude, Increase in magnitude
+        \item Decrease in magnitude, Decrease in magnitude
+        \item Increase in magnitude, Decrease in magnitude
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+    \item 无期权债券具有正凸性。当收益率下降时，正凸性会使债券价格上升的幅度增大；当收益率上升时，正凸性会使债券价格下降的幅度减小。所以对于收益率下降，凸性调整使债券价格变化幅度增大；对于收益率上升，凸性调整使债券价格变化幅度减小。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{无期权债券凸性对债券价格变化幅度的影响（关键是掌握无期权债券正凸性的特点，以及正凸性在收益率上升和下降时对债券价格变化幅度的不同影响）}
+
+\begin{question}
+    Bonds issued by ABC Corp. are currently callable at par value and trade close to par. These bonds mature in 7 years and have a coupon rate of 7\%. The yield on ABC bonds is 150 basis points over 7 - year US Treasury securities, and the Treasury spot yield curve has a normal, rising shape. If the yield on bonds comparable to the ABC bond decreases sharply, the ABC bonds will most likely exhibit:
+    \end{question}
+    
+    \begin{choices}
+        \item Negative convexity
+        \item Decreasing modified duration
+        \item Decreasing effective duration
+        \item Positive convexity
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 当市场收益率大幅下降时，可赎回债券（ABC债券）被赎回的可能性增加。因为发行人可以以较低的成本进行再融资，所以会倾向于赎回债券。这会导致债券价格相对于无期权的可比债券降低，这种情况被称为负凸性。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 当市场收益率下降且可赎回债券被赎回可能性增加时，其修正久期不会减小。因为债券现金流的不确定性增加，修正久期不会呈现减小的趋势。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 有效久期衡量的是债券价格对收益率变动的敏感性。当市场收益率下降且可赎回债券被赎回可能性增加时，其有效久期不会减小，而是会受到负凸性影响，与正凸性债券的有效久期变化不同。 
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 正凸性是无期权债券的特征，对于可赎回债券，在收益率大幅下降时，由于赎回风险增加，不会呈现正凸性。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{可赎回债券在收益率变动时的凸性和久期特征（关键是理解市场收益率下降时可赎回债券被赎回可能性增加导致的负凸性，以及与久期变化的关系）}
+
+\begin{question}
+    A financial advisor is discussing bond investment strategies with a client. They are evaluating different bond characteristics and portfolio concepts. Which of the following statements is true?
+    \end{question}
+    
+    \begin{choices}
+        \item If a consol bond with a \$150 face value pays a 4.0\% coupon in perpetuity and the yield is 6.0\%, the consol’s price is \$100 and its modified duration is approximately 16.67 years.
+        \item Since a BULLET bond portfolio has greater convexity than a BARBELL, the bullet always outperforms.
+        \item Duration, convexity and DV01 are all decreasing with maturity.
+        \item Portfolio convexity is a weighted average of individual (component) durations, but portfolio duration is not a weighted average of individual convexities.
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 对于永续债券，价格计算公式为\(P = \frac{C}{y}\)，其中\(C\)为每年利息支付，\(y\)为收益率。已知面值\(F = 150\)，票面利率\(r = 4\%\)，则每年利息\(C=F\times r=150\times0.04 = 6\)，收益率\(y = 6\%\)，所以价格\(P=\frac{6}{0.06}=100\)。
+        \item 永续债券的修正久期公式为\(D_{mod}=\frac{1}{y}\)，所以修正久期\(D_{mod}=\frac{1}{0.06}\approx16.67\)年。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 通常杠铃型（BARBELL）债券组合的凸性大于子弹型（BULLET）债券组合。当利率变动幅度较大时，杠铃型组合表现更好；当利率变动幅度较小时，子弹型组合表现更好，并非子弹型组合总是表现更优。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 一般情况下，久期和凸性随着期限的增加而增加。对于DV01，它等于\(P\times D_{mod}/10000\)，随着期限增加，修正久期增加，但对于深度折价债券，价格可能会下降，所以DV01不一定随着期限增加而增加，也不是都随着期限增加而减少。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 投资组合的久期和凸性都是各组成部分久期和凸性的加权平均值。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{永续债券的定价和久期计算、不同债券组合的凸性与表现、久期和凸性与期限的关系以及投资组合久期和凸性的计算（关键是准确掌握各类债券相关指标的计算公式和不同债券组合的特点）}
+
+\begin{question}
+    A fixed-income analyst at an investment firm is evaluating a 7-year 4\% coupon bond with a par value of \$100. The bond is currently trading at a price of \$95.23. When the interest rates fall by 25 basis points, the price of this bond rises to \$96.88, and when the interest rates rise by 25 basis points, the price falls to \$93.55. What is the effective duration of this bond closest to?
+    \end{question}
+    
+    \begin{choices}
+        \item 5.98
+        \item 6.34
+        \item 6.99
+        \item 7.06
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确有效久期计算公式}
+    \begin{itemize}
+        \item 有效久期公式为\(D = \frac{P_{-}-P_{+}}{2P_{0}\Delta Y}\)，其中\(P_{-}\)是利率下降时债券的价格，\(P_{+}\)是利率上升时债券的价格，\(P_{0}\)是债券当前价格，\(\Delta Y\)是利率变动幅度。
+    \end{itemize}
+    \textbf{步骤2：代入数据计算}
+    \begin{itemize}
+        \item 已知\(P_{-}=96.88\)，\(P_{+}=93.55\)，\(P_{0}=95.23\)，\(\Delta Y = 0.0025\)。
+        \item 将数据代入公式可得：
+        \[
+        D=\frac{96.88 - 93.55}{2\times95.23\times0.0025}=6.99
+        \]
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券有效久期的计算（关键是准确掌握有效久期的计算公式，注意辨析\(P_{-}\)和\(P_{+}\)的含义）}
+
+\begin{question}
+    A risk analyst at an asset management firm is using a valuation model to assess a bond portfolio. The model estimates the current value of the bond portfolio to be USD 130.526 million. The term - structure of interest rates is flat. The analyst further estimates that if all interest rates fall by 40 basis points, the portfolio value will increase to USD 133.879 million, and if all interest rates rise by 40 basis points, the portfolio value will decrease to USD 127.173 million. Based on these estimates, what is the closest value to the effective duration of the bond portfolio?
+    \end{question}
+    
+    \begin{choices}
+        \item 12.94
+        \item 6.42
+        \item 13.94
+        \item 7.42
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确有效久期的计算公式}
+    \begin{itemize}
+        \item 有效久期（Effective Duration）的计算公式为\(D_{eff}=\frac{V_{-}-V_{+}}{2V_{0}\Delta y}\)，其中\(V_{-}\)是利率下降后的债券组合价值，\(V_{+}\)是利率上升后的债券组合价值，\(V_{0}\)是当前债券组合价值，\(\Delta y\)是利率变动的幅度。
+    \end{itemize}
+    \textbf{步骤2：确定各参数的值}
+    \begin{itemize}
+        \item 已知\(V_{0} = 130.526\)百万美元，\(V_{-}=133.879\)百万美元，\(V_{+}=127.173\)百万美元，\(\Delta y = 0.004\)。
+    \end{itemize}
+    \textbf{步骤3：计算有效久期}
+    \begin{itemize}
+        \item 将各参数代入公式可得：\(D_{eff}=\frac{133.879 - 127.173}{2\times130.526\times0.004}=6.42\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{有效久期的计算（关键是准确使用有效久期公式，确定利率变动前后的债券组合价值和利率变动幅度）}
+
+\begin{question}
+    A risk analyst at a financial institution is using the firm's valuation system to assess the price sensitivity of an investment - grade callable bond. The current interest rate environment is flat at 6\%. The following table shows the values in USD per USD 120 face value of the callable bond and the embedded call option at different interest rate levels:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Interest Rate Level & Callable Bond & Call Option \\
+    \hline
+    5.97\% & 122.49417 & 2.5045 \\
+    6.00\% & 121.93389 & 2.4655 \\
+    6.03\% & 121.25563 & 2.4265 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    The convexity of the callable bond can be estimated as:
+    \end{question}
+    
+    \begin{choices}
+        \item -13,145
+        \item -10,750
+        \item -6.3145
+        \item -6.2261
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确凸性的计算公式}
+    \begin{itemize}
+        \item 凸性（Convexity）的计算公式为\(Convexity=\frac{V_{+}+V_{-}-2V_{0}}{V_{0}(\Delta y)^{2}}\)，其中\(V_{+}\)是利率上升后的债券价值，\(V_{-}\)是利率下降后的债券价值，\(V_{0}\)是当前债券价值，\(\Delta y\)是利率变动的幅度。
+    \end{itemize}
+    \textbf{步骤2：确定各参数的值}
+    \begin{itemize}
+        \item 已知\(V_{0}=121.93389\)，\(V_{-}=122.49417\)，\(V_{+}=121.25563\)，\(\Delta y = 0.0003\)。
+    \end{itemize}
+    \textbf{步骤3：计算凸性}
+    \begin{itemize}
+        \item 将各参数代入公式可得：\(Convexity=\frac{121.25563 + 122.49417-2\times121.93389}{121.93389\times(0.0003)^{2}}=-10750.8166\approx-10750\)
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{可赎回债券凸性的计算（关键是准确运用凸性计算公式，确定利率变动前后及当前的债券价值和利率变动幅度）}
+
+\begin{question}
+    An investment advisor is comparing two bond portfolios that have the same yield of 4.5\%. One is a bullet portfolio with a duration of 8; the other is a barbell portfolio with a duration that is also 8. How do the convexities of these two portfolios compare?
+    \end{question}
+    
+    \begin{choices}
+        \item The barbell portfolio's convexity is less than that of the bullet portfolio.
+        \item The barbell portfolio's convexity is greater than that of the bullet portfolio.
+        \item The convexities of the two portfolios are approximately the same.
+        \item More information is needed to make a comparison.
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{B选项正确。}
+    \begin{itemize}
+    \item 凸性大致与期限的平方成正比。在杠铃型（barbell）投资组合中，包含长期限债券，这会使杠铃型投资组合的凸性不成比例地增加。所以，即使子弹型（bullet）投资组合和杠铃型投资组合的久期相同，杠铃型投资组合的凸性也会大于子弹型投资组合的凸性。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{子弹型和杠铃型债券投资组合凸性比较（杠铃型债券投资组合的现金流更分散，故凸性更大）}
+
+\begin{question}
+    A portfolio manager at an investment firm is considering two bond portfolio strategies: a barbell strategy and a bullet strategy. The firm's economic research team predicts a large parallel shift in the yield curve in the near future. Given this prediction, how would the performance of these two strategies compare?
+    \end{question}
+    
+    \begin{choices}
+        \item Bullet outperforms barbell
+        \item Need more information
+        \item Same or similar
+        \item Barbell outperforms bullet
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 当收益率曲线发生较大的平行移动时，杠铃型（Barbell）债券组合通常会优于子弹型（Bullet）债券组合。这是因为杠铃型组合具有更高的凸性，凸性衡量了债券价格 - 收益率曲线的弯曲程度。
+        \item 在利率大幅变动时，凸性的优势会体现出来，使得杠铃型组合在利率下降时价格上升更多，在利率上升时价格下降更少，从而表现更优。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{杠铃型债券组合和子弹型债券组合在收益率曲线大幅平行移动时的表现比较（关键是理解凸性对债券组合在利率变动时表现的影响）}
+
+    \begin{question}
+        A fixed - income portfolio manager currently holds a bullet - 6 - year US Treasury position with a face value of USD 50 million. The manager aims to create a cost - matching barbell portfolio by purchasing a combination of a 3 - year Treasury and a 12 - year Treasury that would have the same duration as the 6 - year US Treasury position. The data for the three US Treasuries are presented below:
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Maturity & Price & Duration \\
+        \hline
+        3 Years & 101.250 & 2.150 \\
+        \hline
+        6 Years & 105.320 & 5.890 \\
+        \hline
+        12 Years & 120.450 & 10.560 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        Which of the following combinations correctly describes the weights of the two bonds that the manager will use to construct the barbell portfolio?
+        \end{question}
+        
+        \begin{choices}
+            \item Weight of 3 - Year Treasury: 12.34\%, Weight of 12 - Year Treasury: 87.66\%
+            \item Weight of 3 - Year Treasury: 42.15\%, Weight of 12 - Year Treasury: 57.85\%
+            \item Weight of 3 - Year Treasury: 55.53\%, Weight of 12 - Year Treasury: 44.47\%
+            \item Weight of 3 - Year Treasury: 87.66\%, Weight of 12 - Year Treasury: 12.34\%
+        \end{choices}
+        
+        \begin{correctanswer}
+            C
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：计算子弹型投资组合的成本}
+        \begin{itemize}
+            \item  子弹型（6年期）投资组合的成本为\((105.320 / 100)\times50,000,000 = USD\ 52,660,000\) 。
+            \item 设\(V_{3}\)和\(V_{12}\)分别为3年期和12年期国债的价值（成本），则有\(V_{3}+V_{12}=52,660,000\) （式1）。
+        \end{itemize}
+        \textbf{步骤2：根据久期匹配列方程}
+        \begin{itemize}
+            \item 为了匹配久期，6年期国债的久期等于3年期和12年期国债的加权平均久期，即\(5.890=(V_{3}/52,660,000)\times2.150+(V_{12}/52,660,000)\times10.560\) （式2）。
+            \item 由式1可得\(V_{3}=52,660,000 - V_{12}\) ，将其代入式2：
+            \begin{align*}
+                5.890 = \frac{52,660,000 - V_{12}}{52,660,000} \times 2.150 + \frac{V_{12}}{52,660,000} \times 10.560 \\
+                V_{12} = 23,418,359.10
+            \end{align*}
+        
+     
+            \item 则\(V_{3}=52,660,000 - 23,418,359.10 = 29,241,640.90\) 。
+        \end{itemize}
+        \textbf{步骤3：计算两种债券的权重}
+        \begin{itemize}
+            \item 3年期国债的权重为\(29,241,640.90/52,660,000=55.53\%\) 。
+            \item 12年期国债的权重为\(1-55.53\%=44.47\%\) 。
+        \end{itemize}
+        
+        \end{explanation}
+        
+        \checklist{构建与子弹型投资组合成本和久期匹配的杠铃型投资组合（关键是掌握根据成本相等和久期相等列方程求解两种债券权重的方法）}
+
+\section{考点7:Modeling Non-Parallel TermStructureShifts and Hedging 非平行期限结构变动建模与套期保值}
+\setcounter{question}{0}
+
+
+\begin{question}
+    A risk analyst at a bank is evaluating the application of principal component analysis (PCA) in analyzing interest rate changes across various maturities. Which of the following statements regarding PCA is accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item PCA is a parallel movement theory of interest rates and is mainly used to analyze short - term interest rate changes.
+        \item PCA determines the factors of interest rate changes solely by analyzing monthly interest rate data, and all factors have clear and direct economic interpretations.
+        \item Through solving a set of simultaneous linear equations, any changes in \(m\) interest rates can be represented as a linear combination of \(m\) factors.
+        \item PCA factors are correlated with each other, and the last few factors usually explain the majority of the observed daily interest rate movements.
+    \end{choices}
+    
+    \begin{correctanswer}
+    C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{C选项正确。}
+    \begin{itemize}
+    \item 主成分分析（PCA）的原理是通过求解联立线性方程组，将多个利率的变化表示为相应数量主成分（因素）的线性组合 。这是PCA在利率分析中的核心应用方式。
+    \end{itemize}
+    \textbf{A选项错误。}
+    \begin{itemize}
+    \item PCA属于非平行移动理论，并非平行移动理论，它适用于分析不同期限的利率变化，而非仅短期利率变化。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item PCA通常使用日度利率数据来寻找利率变化因素，而且并非所有因素都有明确合理的经济解释 ，存在一些难以直接经济解读的因素。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item PCA的因素之间是相互独立（不相关）的，并且通常是前两到三个因素解释了大部分每日观察到的利率变动，而不是最后几个因素。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{主成分分析（PCA属于非平行移动理论，且因素之间是相互独立的，同时注意并非所有因素都有明确的经济解释）}
+
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating a 4 - year bond with a face value of 100 that offers an annual coupon rate of 3\%. The forward rates are shown in the following table. The investor earns a spread of 60 basis points per year. Assuming that forward rates are realized and the spread is unchanged, calculate the carry roll - down over the first year.
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Period (years) & Forward Rate (\%) \\
+    \hline
+    0 - 1 & 2.8 \\
+    \hline
+    1 - 2 & 3.8 \\
+    \hline
+    2 - 3 & 4.8 \\
+    \hline
+    3 - 4 & 5.8 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{question}
+    
+    \begin{choices}
+        \item 2.87
+        \item 3.12
+        \item 3.35
+        \item 3.68
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算1年债券利息}
+    \begin{itemize}
+    \item 已知债券面值为\(100\)，年 coupon rate 为\(3\%\)，根据利息计算公式\(I = F\times r\)（\(F\)为面值，\(r\)为票面利率），可得一年债券利息\(I = 100\times3\% = 3\)。
+    \end{itemize}
+    \textbf{步骤2：计算\(t = 0\)时的债券价格}
+    \begin{itemize}
+    \item 此时，债券剩余期限为\(4\)年。考虑各期的远期利率加上利差（利差为\(0.6\%\)），根据债券定价公式\(P=\sum_{i = 1}^{n}\frac{C}{(1 + r_i)^i}+\frac{F}{(1 + r_n)^n}\)（\(C\)为票息，\(r_i\)为各期利率，\(n\)为期数，\(F\)为面值），可得：
+    
+    \begin{align*}
+        P_0 &= \frac{3}{(1 + 0.028 + 0.006)} \\
+            &\quad + \frac{3}{(1 + 0.034)(1 + 0.044)} \\
+            &\quad + \frac{3}{(1 + 0.034)(1 + 0.044)(1 + 0.054)} \\
+            &\quad + \frac{103}{(1 + 0.034)(1 + 0.044)(1 + 0.054)(1 + 0.064)} \\
+            &= 93.40
+        \end{align*}
+   
+    \end{itemize}
+    \textbf{步骤3：计算\(t = 1\)时的债券价格}
+    \begin{itemize}
+    \item 此时债券剩余期限为\(3\)年，同样根据债券定价公式：
+
+    \begin{align*}
+        P_1 &= \frac{3}{(1 + 0.044)} \\
+            &\quad + \frac{3}{(1 + 0.044)(1 + 0.054)} \\
+            &\quad + \frac{103}{(1 + 0.044)(1 + 0.054)(1 + 0.064)} \\
+            &= 93.57
+        \end{align*}
+
+    \end{itemize}
+    \textbf{步骤4：计算Carry roll - down}
+    \begin{itemize}
+    \item 根据Carry roll - down的计算方法，它等于\(t = 1\)时债券价格与\(t = 0\)时债券价格的差值加上这一年的利息，即\(Carry\ roll - down=P_1 - P_0 + 3=93.57 - 93.40 + 3 = 3.17\)。
+    \item 此外，可以用\(t = 1\)时的债券价格×(0.038+0.006)近似计算。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{Carry Roll - Down的计算（主要是计算债券利息和债券价格差）}
+
+\begin{question}
+    A fixed - income analyst at an investment firm is decomposing the profit and loss (P\&L) of a bond over the past 6 months. The bond has a 3\% coupon rate, paid semi - annually, and had exactly 2 years remaining until maturity at the start of the 6 - month period. Relevant information about the bond and market rates (semi - annually compounded) is shown below:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    & Beginning & Ending \\
+    \hline
+    Bond price (SGD) & 101.25 & 102.36 \\
+    \hline
+    Bond spread (bps) & 40 & 30 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Forward rates (periods in years) & Beginning & Ending \\
+    \hline
+    0 – 0.5 & 0.9\% & 0.8\% \\
+    \hline
+    0.5 – 1 & 1.5\% & 1.2\% \\
+    \hline
+    1 – 1.5 & 1.9\% & 1.3\% \\
+    \hline
+    1.5 – 2 & 2.2\% & 1.9\% \\
+    \hline
+    \end{tabular}
+    \end{center}
+    The analyst has calculated the bond’s carry roll - down, and under the forward rate assumption made for the purpose of that calculation, the ending value of the bond is SGD 101.71. Given this information, what is the component of the bond’s P\&L attributable to the change in rates over the 6 - month period?
+    \end{question}
+    
+    \begin{choices}
+        \item SGD 0.51
+        \item SGD 0.65
+        \item SGD 0.82
+        \item SGD 0.93
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算基于期末远期利率曲线和期初利差的债券期末价值}
+    \begin{itemize}
+    \item 债券每半年付息\(100\times\frac{3\%}{2}=1.5\) 。
+    \item 计算利率变动的影响是分解债券损益表的第二步，在此之前已经计算了carry roll-down。
+    \item 利率变动的影响通过使用期末远期利率曲线（以及债券期初的利差）计算期末债券价值，减去使用确定利息滚动下降时假设的远期利率（这些利率代表了利率环境“不变”的某种程度）计算的期末债券价值来计算。根据期末远期利率曲线，债券的价值为：
+    \end{itemize}   
+    \begin{align*}
+        &\frac{1.5}{1+\frac{0.8\%}{2}+\frac{0.4\%}{2}} \\
+        &+ \frac{1.5}{(1+\frac{0.8\%}{2}+\frac{0.4\%}{2})(1+\frac{1.2\%}{2}+\frac{0.4\%}{2})} \\
+        &+ \frac{101.5}{(1+\frac{0.8\%}{2}+\frac{0.4\%}{2})(1+\frac{1.2\%}{2}+\frac{0.4\%}{2})(1+\frac{1.3\%}{2}+\frac{0.4\%}{2})}
+        \end{align*}
+    \[
+    \frac{1.5}{1.006}+\frac{1.5}{1.006\times1.008}+\frac{101.5}{1.006\times1.008\times1.0085}=102.22
+    \]
+    
+    \textbf{步骤2：计算利率变化对债券损益的影响}
+    \begin{itemize}
+    \item 利率变化的影响 = 基于期末远期利率曲线和期初利差的债券期末价值 - 计算carry roll - down时假设的债券期末价值。
+    \item 即\(102.22 - 101.71 = 0.51\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券损益分解中利率变化对损益的影响计算（关键在于分解计算步骤，明确利率变化对损益的影响是基于期末远期利率曲线和期初利差计算的债券期末价值与计算carry roll - down时假设的债券期末价值的差额）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is using key rate shifts to assess the impact of spot rate changes on bond prices. The analyst notices that the 12 - year spot rate has increased by 15 basis points, and this shock decreases linearly to zero for the 22 - year spot rate. What is the effect of this shock on the 16 - year spot rate?
+    \end{question}
+    
+    \begin{choices}
+        \item Increase of 15 basis points
+        \item Increase of 3 basis points
+        \item Increase of 9 basis points
+        \item Increase of 0 basis points
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算每年的基点变化率}
+    \begin{itemize}
+        \item 已知12年期即期利率增加了15个基点，到22年期时冲击线性下降到0。
+        \item 时间跨度为\(22 - 12 = 10\)年，基点变化总量为15个基点。
+        \item 所以每年的基点变化率为\(\frac{15}{10}=1.5\)个基点/年。
+    \end{itemize}
+    \textbf{步骤2：计算16年期即期利率的基点变化}
+    \begin{itemize}
+        \item 从12年到16年经过了\(16 - 12 = 4\)年。
+        \item 因为冲击是线性下降的，所以16年期即期利率的基点变化为\(15-1.5\times4 = 9\)个基点。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{利用关键利率变动分析即期利率变化对债券价格的影响（关键是根据线性变化规律计算不同期限即期利率的基点变化）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is evaluating key rate exposures using key rates of 3 - year, 6 - year, 8 - year, and 25 - year. Which of the following assumptions is not made when using these key rates?
+    \end{question}
+    
+    \begin{choices}
+        \item The 3 - year rate will affect the 6 - year rate
+        \item The 6 - year rate will affect the 8 - year rate
+        \item The 8 - year rate will affect the 25 - year rate
+        \item The 3 - year rate will affect the 25 - year rate
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{选项A正确。}
+    \begin{itemize}
+        \item 3年期和6年期是相邻的关键利率，在使用关键利率暴露分析时，通常假设相邻的关键利率之间会相互影响，所以3年期利率会影响6年期利率是合理的假设。
+    \end{itemize}
+    \textbf{选项B正确。}
+    \begin{itemize}
+        \item 6年期和8年期是相邻的关键利率，按照关键利率暴露的假设，相邻的关键利率会相互影响，因此6年期利率会影响8年期利率是符合假设的。
+    \end{itemize}
+    \textbf{选项C正确。}
+    \begin{itemize}
+        \item 8年期和25年期虽然跨度相对较大，但在关键利率暴露分析中，也可以认为相邻的关键利率之间存在影响，所以8年期利率会影响25年期利率是可能的假设。
+    \end{itemize}
+    \textbf{选项D错误。}
+    \begin{itemize}
+        \item 关键利率暴露假设中，通常认为关键利率对相邻的利率有影响，而不是跨越其他关键利率产生影响。3年期和25年期之间间隔了6年期和8年期等关键利率，所以一般不假设3年期利率会直接影响25年期利率。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{关键利率暴露的假设（关键是理解关键利率暴露假设中利率影响的相邻性原则）}
+
+\begin{question}
+    An investment manager is hedging a portfolio using three hedging securities: a 3 - year, 7 - year, and 12 - year bond. The maturities correspond to the three key rates at 3, 7, and 12 years. The key rate ‘01 (KR01) for the bonds are given in the table below, and they are reported per \$100 face value. The KR01s of the underlying portfolio are also provided (reported for the face amount).
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    & \multicolumn{3}{c|}{Key Rate 01s (per \$100 Face)} \\
+    \hline
+    Hedging Securities & 3 - year & 7 - year & 12 - year \\
+    \hline
+    3 - year bond & 0.015 & & \\
+    \hline
+    7 - year bond & 0.015 & 0.050 & \\
+    \hline
+    12 - year bond & 0.015 & 0.060 & 0.120 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    & \multicolumn{3}{c|}{Key Rate 01s (\$)} \\
+    \hline
+    & 3 - year & 7 - year & 12 - year \\
+    \hline
+    Underlying Portfolio & 30.0 & 80.0 & 120.0 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    What is the face value of the three - year (3 - year) hedging bond that is required?
+    \end{question}
+    
+    \begin{choices}
+        \item \$37,500
+        \item \$60,000
+        \item \$112,500
+        \item \$150,000
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算12年期债券所需面值}
+    \begin{itemize}
+        \item 已知12年期债券的KR01为\(0.120\)（每\(100\)面值），基础投资组合12年期的KR01为\(120.0\) 。
+        \item 则12年期债券所需面值\(=\frac{120.0}{0.120}\times100 = 100,000\) 。
+    \end{itemize}
+    \textbf{步骤2：计算7年期债券所需面值}
+    \begin{itemize}
+        \item 设7年期债券面值为\(F(7)\) ，根据方程\(F(7)\times\frac{0.050}{100}+100,000\times\frac{0.060}{100}=80.0\) 。
+        \item \(F(7)=(80-100000*0.06/100)*100/0.05=40,000\) 。
+    \end{itemize}
+    \textbf{步骤3：计算3年期债券所需面值}
+    \begin{itemize}
+        \item 设3年期债券面值为\(F(3)\) ，根据方程\(F(3)\times\frac{0.015}{100}+40,000\times\frac{0.015}{100}+100,000\times\frac{0.015}{100}=30.0\) 。
+        \item \(F(3)=(30-40000*0.015/100-100000*0.015/100)*100/0.015=60,000\) 。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{根据关键利率01计算套期保值债券面值（关键是通过建立方程组，依次求解不同期限套期保值债券的面值）}
+
+\begin{question}
+    An investment analyst at a financial firm is calculating the forward bucket O1 of a bond. The bond pays a 6\% coupon annually, has a face value of CNY 120,000, and matures in 4 years. The analyst observes that the forward rate curve is flat at 4\% (with all forward rates calculated for 1 - year periods), and uses two forward buckets of 0 - 3 years and 3 - 4 years. What is the forward bucket O1 of the bond for the 3 - 4 year bucket, assuming an upward shift in interest rates?
+    \end{question}
+    
+    \begin{choices}
+        \item CNY 13.68
+        \item CNY 21.56
+        \item CNY 10.46
+        \item CNY 30.84
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算债券当前价值}
+    \begin{itemize}
+        \item 每年的息票为\(120000\times6\% = 7200\)元。
+        \item 根据现金流折现公式，债券当前价值\(V_0=\frac{7200}{1 + 0.04}+\frac{7200}{(1 + 0.04)^2}+\frac{7200}{(1 + 0.04)^3}+\frac{120000 + 7200}{(1 + 0.04)^4}\)
+        \item 计算可得\(V_0=128711.75\)元。
+    \end{itemize}
+    \textbf{步骤2：计算3 - 4年远期利率上升1个基点后的债券价值}
+    \begin{itemize}
+        \item 3 - 4年远期利率上升1个基点后变为\(4.01\%\)。
+        \item 此时债券价值：
+\begin{align*}
+V_1 &= \frac{7200}{1 + 0.04} + \frac{7200}{(1 + 0.04)^2} \\
+    &+ \frac{7200}{(1 + 0.04)^3} + \frac{120000 + 7200}{(1 + 0.04)^3\times(1 + 0.0401)}
+\end{align*}
+        \item 计算可得\(V_1=128701.29\)元。
+    \end{itemize}
+    \textbf{步骤3：计算远期桶O1}
+    \begin{itemize}
+        \item 远期桶O1为两个价值的差值，即\(V_0 - V_1=128711.75 - 128701.29 = 10.46\)元。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{债券远期桶O1的计算（关键是掌握现金流折现公式，以及远期利率变动对债券价值的影响）}
+
+\end{document}

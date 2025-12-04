@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0in, bottom=0in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+% {\textbf{解析:}\par}
+% {\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+
+
+
+% 颜色模型支持
+\usepackage{xcolor}
+
+% TikZ 和其扩展库（用于坐标计算与模糊阴影）
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows.blur}
+
+% tcolorbox：加载“most”会自动包含 skins、breakable 等常用库
+\usepackage[most]{tcolorbox}
+
+
+%颜色定义，c0-c4：由深到浅----------------------------
+\definecolor{c0}{HTML}{647382}
+\definecolor{c1}{HTML}{9AA6B2}
+\definecolor{c2}{HTML}{BCCCDC}
+\definecolor{c3}{HTML}{D9EAFD}
+\definecolor{c4}{HTML}{F8FAFC}
+
+
+%定义注释盒子note----------------------------------
+\newtcolorbox{note}[1][]{%
+    enhanced jigsaw,
+    colback=c4,
+    colframe=c1,
+    size=small,
+    boxrule=1pt,
+    title=\textbf{考经},
+    halign title=flush center,
+    coltitle=black,
+    breakable,
+    drop shadow=c2,
+    attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+    minipage boxed title=2cm,
+    boxed title style={%
+        colback=white,
+        size=fbox,
+        boxrule=1pt,
+        boxsep=2pt,
+        underlay={%
+            \coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+            \coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+            \begin{scope}
+                \clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+                \filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+            \end{scope}
+            \begin{scope}[c1]
+                \fill (dotA) circle (2pt);
+                \fill (dotB) circle (2pt);
+            \end{scope}
+        },
+        },
+        #1,
+}
+
+\makeatletter
+\newtcolorbox{boxa}[1]{%
+    enhanced,
+    breakable,
+    colback=c4,
+    colframe=c0,
+    attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+    fonttitle=\bfseries,
+    title={\huge \( \textbf{备用盒子： #1} \)},
+    boxed title size=title,
+    boxed title style={%
+            sharp corners,
+            rounded corners=northwest,
+            colback=c0,
+            boxrule=0pt,
+        },
+    underlay boxed title={%
+            \path[fill=c0] (title.south west)--(title.south east)
+            to[out=0, in=180] ([xshift=5mm]title.east)--
+            (title.center-|frame.east)
+            [rounded corners=\kvtcb@arc] |-
+            (frame.north) -| cycle;
+        }
+}
+\makeatletter
+
+
+\begin{document}
+ \fontsize{22}{31}\selectfont
+ %\tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+\begin{note}
+    欢迎来到本示例文档，在这里演示如何使用 note 环境添加注释文字。您可以在此处为上传的图片、示例内容或其他说明性信息提供详细解释，以便读者快速理解文档结构与功能演示。祝您使用愉快！
+    \begin{itemize}
+        \item 床前明月光
+        \item 疑是地上霜
+        \item 举头望明月
+        \item 低头思故乡
+    \end{itemize}
+\end{note}
+
+
+\begin{boxa}{备用盒子}
+    欢迎来到本示例文档，在这里演示如何使用 note 环境添加注释文字。您可以在此处为上传的图片、示例内容或其他说明性信息提供详细解释，以便读者快速理解文档结构与功能演示。祝您使用愉快！
+    \begin{itemize}
+        \item 床前明月光
+        \item 疑是地上霜
+        \item 举头望明月
+        \item 低头思故乡
+    \end{itemize}
+    欢迎来到本示例文档，在这里演示如何使用 note 环境添加注释文字。您可以在此处为上传的图片、示例内容或其他说明性信息提供详细解释，以便读者快速理解文档结构与功能演示。祝您使用愉快！欢迎来到本示例文档，在这里演示如何使用 note 环境添加注释文字。您可以在此处为上传的图片、示例内容或其他说明性信息提供详细解释，以便读者快速理解文档结构与功能演示。祝您使用愉快！欢迎来到本示例文档，在这里演示如何使用 note 环境添加注释文字。您可以在此处为上传的图片、示例内容或其他说明性信息提供详细解释，以便读者快速理解文档结构与功能演示。祝您使用愉快！
+\end{boxa}
+
+\end{document}

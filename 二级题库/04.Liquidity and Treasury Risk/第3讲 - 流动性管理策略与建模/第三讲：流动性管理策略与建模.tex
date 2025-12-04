@@ -1,0 +1,778 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+\section{考点1:流动性与储备金管理：战略与政策}
+\setcounter{question}{0}
+
+\begin{question}
+    Genny Richards is the liquidity manager for Legend Bank. In evaluating the bank's net liquidity position, Richards anticipates the following amounts:
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|r|}
+            \hline
+            \textbf{Line Item} & \textbf{Amount} \\
+            \hline
+            Asset sales & \$1,325,000 \\
+            Deposit withdrawals & \$1,015,000 \\
+            Dividend payments & \$470,000 \\
+            Incoming deposits & \$2,500,000 \\
+            Loan requests & \$845,000 \\
+            Nondeposit services revenue & \$950,000 \\
+            \hline
+        \end{tabular}
+    \end{table}
+    Legend Bank's net liquidity position is closest to:
+\end{question}
+
+\begin{choices}
+    \item \$2,330,000
+    \item \$2,445,000
+    \item \$3,385,000
+    \item \$3,405,000
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 流动性供给：
+        \begin{itemize}
+        \item 资产出售：\$1,325,000
+        \item 预计存款：\$2,500,000
+        \item 非存款服务收入：\$950,000
+        \end{itemize}
+        \item 流动性需求：
+        \begin{itemize}
+        \item 存款提取：\$1,015,000
+        \item 股息支付：\$470,000
+        \item 贷款申请：\$845,000
+        \end{itemize}
+        \item 净流动性头寸 = (\$1,325,000 + \$2,500,000 + \$950,000) - (\$1,015,000 + \$470,000 + \$845,000) = \$2,445,000
+    \end{itemize}
+
+   
+\end{explanation}
+
+\checklist{净流动性头寸计算}
+
+
+\begin{question}
+    Over the next 24 hours, Golden state Bank estimates that the following cash inflows and outflows (all figures in millions) will occur:
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            Deposit withdrawals                & \$70  \\
+            \hline
+            Deposit inflows                    & \$100 \\
+            \hline
+            Scheduled loan repayments          & \$60  \\
+            \hline
+            Acceptable loan requests           & \$90  \\
+            \hline
+            Borrowing from the money market    & \$80  \\
+            \hline
+            Sales of bank assets               & \$30  \\
+            \hline
+            Stockholder dividend payments      & \$20  \\
+            \hline
+        \end{tabular}
+    \end{table}
+    What is the bank's projected net liquidity position?
+\end{question}
+
+\begin{choices}
+    \item -30.0 million
+    \item +10.0 million
+    \item +40.0 million
+    \item +90.0 million
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 现金流入(总流入：\$280)
+        \begin{itemize}
+        \item 存款流入：\$100
+        \item 贷款还款：\$60
+        \item 货币市场借款：\$80
+        \item 资产出售：\$30
+        \item 非存款服务收入：\$10
+        \end{itemize}
+
+        \item 现金流出(总流出：\$270)
+        \begin{itemize} 
+        \item 存款提取：\$70
+        \item 贷款申请：\$90
+        \item 股息支付：\$20
+        \item 借款偿还：\$50
+        \item 运营费用：\$40
+        \end{itemize}
+        \item 净流动性头寸 = \$280 - \$270 = +10.0 million
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{净流动性头寸计算}
+
+
+\begin{question}
+    Liquidity reserve is the cushion for banks when they are caught in a liquidity problem. A treasurer is calculating the liquidity requirements after divided the deposits and other funds into volatile liabilities, vulnerable funds and stable funds, which of the following statements is NOT true?
+\end{question}
+
+\begin{choices}
+    \item The stable funds, usually long-term deposits, are least possible to flow out
+    \item Volatile liabilities should be weighted the most when calculate liquidity reserves
+    \item Vulnerable funds are those funds might be withdrawn recently
+    \item Stable funds should not be considered in liquidity reserve calculation
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法正确。}
+    \begin{itemize}
+        \item 稳定资金通常是长期存款，最不可能流出；稳定资金包括长期定期存款、核心存款等，客户提取概率低，是银行最稳定的资金来源；因此稳定资金在流动性准备金计算中的权重最低（通常约15\%）。
+    \end{itemize}
+
+    \textbf{B选项说法正确。}
+    \begin{itemize}
+        \item 波动负债在计算流动性准备金时权重最高；波动负债包括大额存单、批发资金、回购协议等，在压力情况下最可能快速流出；因此波动负债需要最高的流动性准备金覆盖率（通常约95\%），反映其高流出风险。
+    \end{itemize}
+
+    \textbf{C选项说法正确。}
+    \begin{itemize}
+        \item 脆弱资金是可能近期提取的资金；脆弱资金包括某些类型的存款和资金，虽然不如波动负债那样容易流出，但在压力情况下仍可能被提取；因此脆弱资金需要中等水平的流动性准备金覆盖率（通常约30\%），反映其中等流出风险。
+    \end{itemize}
+
+    \textbf{D选项说法错误。}
+    \begin{itemize}
+        \item 稳定资金不应在流动性准备金计算中考虑的说法是错误的；虽然稳定资金的流出概率最低，但仍需要纳入流动性准备金计算，只是权重较低（通常约15\%）；即使是最稳定的资金，在极端压力情况下仍可能部分流出，完全忽略稳定资金会导致流动性准备金不足；所有类型的资金都需要在流动性准备金计算中考虑，只是权重不同。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性准备金计算}
+
+
+\begin{question}
+    The liquidity management department of Bank ABC, is estimating liquidity needs for the next month. Liquidity rises as deposits increase and loans decrease and declines when deposits decrease and loans increase, therefore the changes in deposits and loans must be forecasted. For the deposit, the department estimates that the trend component is \$1,200, the seasonal component is \$70, and the cyclical component is -\$38. Which is the estimated deposit should be in next month?
+\end{question}
+
+\begin{choices}
+    \item \$1380
+    \item \$1092
+    \item \$1232
+    \item \$1168
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 趋势性成分：\$1,200
+        \item 季节性成分：\$70
+        \item 周期性成分：-\$38
+        \item 总估计值 = \$1,200 + \$70 - \$38 = \$1,232
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{存款预测分析}
+
+
+\begin{question}
+    A credit analyst is evaluating the liquidity of a small regional bank while preparing a report for a credit committee meeting. With quarterly financial statements, the analyst calculates some relevant liquidity indicators over the past three years. Which of the following trends over this period should the analyst be most concerned about in the credit risk report?
+\end{question}
+
+\begin{choices}
+    \item The bank's average net federal funds and repurchase agreements position has been increasing
+    \item The bank's capacity ratio has been increasing
+    \item The bank's pledged securities ratio has been decreasing
+    \item The bank's loan commitments ratio has been decreasing
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 净联邦基金和回购协议头寸增加是积极的流动性指标；净头寸 = 借出资金 - 借入资金；净头寸增加表明银行有更多流动性资产可用于短期融资，流动性状况改善。
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 能力比率（净贷款和租赁/总资产）增加表明流动性风险上升；贷款和租赁是非流动性资产，难以快速变现；该比率上升意味着资产结构中非流动性资产比例增加，流动性缓冲减少，是需要关注的重要风险信号。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 质押证券比率下降是积极的流动性指标；比率下降意味着有更多证券未被质押，可用于出售、作为抵押品获得融资或用于其他流动性管理目的，流动性状况改善。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 贷款承诺比率下降是积极的流动性指标；未使用的贷款承诺是潜在的流动性需求，比率下降意味着潜在的流动性需求减少，或有流动性风险降低，流动性状况改善。
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行流动性指标分析}
+
+
+\begin{question}
+    Kingstreet Savings is attempting to determine its liquidity requirement. The bank has classified its checking, savings, and nonperson time deposits (which total \$380.0 million in deposits) into three categories: hot money, vulnerable, and stable (aka, core) funds:
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|c|c|c|}
+            \hline
+            \textbf{Millions of dollars} & \textbf{Hot money funds} & \textbf{Vulnerable funds} & \textbf{Stable (core) funds} \\
+            \hline
+            Checkable deposits         & \$30.0 & \$20.0 & \$30.0 \\
+            Savings deposits           & \$10.0 & \$40.0 & \$60.0 \\
+            Nonpersonal time deposits  & \$70.0 & \$70.0 & \$50.0 \\
+            \hline
+            Percentage reserves        & 80.00\% & 50.00\% & 20.00\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|c|}
+            \hline
+            Reserve requirements on checkable deposits & 10.00\% \\
+            \hline
+            Reserve requirements on savings deposits   & 10.00\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    The total liquidity requirement is the sum of the liability and loan requirements, but we are here ignoring the loan liquidity requirement; further, the reserve requirements are not necessarily realistic but instead are rounded for the sake of more convenient calculations. Management has elected to hold an 80.0\% reserve in liquid assets or borrowing capacity for each dollar of hot money deposits, a 50.0\% reserve behind vulnerable deposits, and a 20.0\% reserve for its holdings of core funds. The legal reserve requirement is 10.0\% for both checkable and savings deposits; nonpersonal time deposits have zero legal reserve requirements. Kingstreet Savings is using the Structure of Funds approach to estimating its liquidity requirement. What is Kingstreet's net deposit liquidity requirement for the (total of) vulnerable funds?
+\end{question}
+
+\begin{choices}
+    \item \$13.0 million
+    \item \$30.0 million
+    \item \$62.0 million
+    \item \$177.0 million
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+   
+
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 活期存款：\$20.0 * (1 - 0.10) = \$18.0
+        \item 储蓄存款：\$40.0 * (1 - 0.10) = \$36.0
+        \item 非个人定期存款：\$70.0
+        \item 总脆弱资金：\$18.0 + \$36.0 + \$70.0 = \$124.0
+        \item 流动性要求：50.0\% * \$124.0 = \$62.0 million
+    \end{itemize}
+
+   
+\end{explanation}
+
+\checklist{银行流动性要求计算}
+
+
+\begin{question}
+    A treasury analyst at a large bank is evaluating the impact of different scenarios on the bank's net liquidity position. The analyst considers changes in the sources of liquidity as well as incremental demands on the liquidity of the bank. Which of the following developments would result in the greatest improvement in the bank's net liquidity position?
+\end{question}
+
+\begin{choices}
+    \item The bank rolls over CNY 250 million in repurchase agreements while the haircut on its posted collateral decreases from 20\% to 10\%
+    \item The bank experiences CNY 20 million in withdrawals from wholesale depositors and borrows CNY 40 million from the money market
+    \item The bank accepts CNY 30 million in loan requests while it receives CNY 30 million in retail deposits
+    \item The bank earns CNY 30 million from non-deposit-related services and pays CNY 15 million in dividends
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 银行展期CNY 250 million的回购协议，同时抵押品折扣率从20\%降至10\%；回购协议展期提供CNY 250 million的流动性来源；折扣率从20\%降至10\%意味着同样的抵押品可以释放更多流动性（或需要更少的抵押品来获得相同的融资）；净流动性改善 = CNY 250 million × (20\% - 10\%) = CNY 25 million；这是最大的流动性改善。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 批发存款提取CNY 20 million（流动性需求），从货币市场借款CNY 40 million（流动性来源）；净流动性改善 = CNY 40 million - CNY 20 million = CNY 20 million；改善程度小于A选项的CNY 25 million。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 接受CNY 30 million贷款申请（流动性需求），收到CNY 30 million零售存款（流动性来源）；净流动性改善 = CNY 30 million - CNY 30 million = 0；没有流动性改善，流动性来源和需求相互抵消。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 非存款服务收入CNY 30 million（流动性来源），支付股息CNY 15 million（流动性需求）；净流动性改善 = CNY 30 million - CNY 15 million = CNY 15 million；改善程度小于A选项的CNY 25 million。
+    \end{itemize}
+\end{explanation}
+
+\checklist{银行净流动性头寸分析}
+
+
+
+\section{考点2:流动性监管}
+\setcounter{question}{0}
+
+\begin{question}
+    Consider the following four definitions related to liquidity risk:
+    \begin{itemize}
+        \item Liquidity risk: The event that in the future the bank receives smaller than expected amounts of cash flows to meet its payment obligations.
+        \item Funding cost risk: The event that in the future the bank has to pay greater than expected cost (spread) above the risk-free rate to receive funds from sources of liquidity that are available.
+        \item Liquidity generation capacity: The ability of a bank to generate positive cash flows, beyond contractual ones, from the sources of liquidity available in the balance sheet and off the balance sheet at a given date.
+        \item Cash flow at Risk (CFaR): The amount of economic losses due to the fact that on a given date the algebraic sum of positive and negative cash flows and of existing cash available at that date, is different from some (desired) expected level.
+    \end{itemize}
+    About these definitions, which of the following statements is TRUE?
+\end{question}
+
+\begin{choices}
+    \item Liquidity risk is inaccurate, but the other three are correct
+    \item Funding cost risk is inaccurate, but the other three are correct
+    \item Cash flow at Risk (CFaR) is inaccurate, but the other three are correct
+    \item All four definitions are correct
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{概念I：流动性风险（Liquidity risk）分析}
+    \begin{itemize}
+        \item 定义：银行未来收到的现金流小于预期，无法满足支付义务的事件。
+        \item 该定义准确描述了流动性风险的核心特征，即无法获得足够的现金流来履行支付义务；定义正确。
+    \end{itemize}
+
+    \textbf{概念II：融资成本风险（Funding cost risk）分析}
+    \begin{itemize}
+        \item 定义：银行未来需要支付高于预期的融资成本（超过无风险利率的利差）来获得可用流动性来源的事件。
+        \item 该定义准确描述了融资成本风险，即虽然可以获得融资，但成本上升的风险；定义正确。
+    \end{itemize}
+
+    \textbf{概念III：流动性生成能力（Liquidity generation capacity）分析}
+    \begin{itemize}
+        \item 定义：银行在给定日期从资产负债表内外可用的流动性来源产生正现金流（超出合同约定的）的能力。
+        \item 该定义准确描述了银行通过资产变现、融资等方式生成流动性的能力；定义正确。
+    \end{itemize}
+
+    \textbf{概念IV：现金流风险（Cash flow at Risk, CFaR）分析}
+    \begin{itemize}
+        \item 定义：在给定日期，正负现金流的代数和加上当日可用现金与预期水平不同而导致的经济损失金额。
+        \item 该定义不准确：这实际上是对流动性风险的另一种表述，而非CFaR的标准定义；CFaR应该衡量现金流的不确定性或波动性（类似于VaR衡量价值风险），而不是简单地描述现金流与预期水平的偏差；该定义混淆了流动性风险和CFaR的概念，定义错误。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性风险定义分析}
+
+
+
+
+\begin{question}
+    Which of the following below is best describes the term structure of expected liquidity, aka the TSL(e)?
+\end{question}
+
+\begin{choices}
+    \item TSL(e) is the cumulative change in the term structure of available assets
+    \item TSL(e) is a combination of the term structures of cash flow at risk and liquidity at risk
+    \item TSL(e) is a combination of the term structure of expected cash, change in working capital, and change in deposits
+    \item TSL(e) is a combination of the term structures of cumulative expected cash flows and liquidity generation capacity
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item TSL(e)不是可用资产期限结构的累积变化；该定义过于简单化，只关注资产变化，忽略了流动性需求、负债变化、表外承诺等其他重要因素；TSL(e)需要综合考虑流动性的来源和需求，而非仅资产变化。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item TSL(e)不是现金流风险（CFaR）和流动性风险（LaR）的组合；该定义混淆了风险度量和预期流动性；TSL(e)是关于预期的流动性状况（expected liquidity），而CFaR和LaR是风险度量工具，衡量不确定性或潜在损失；TSL(e)关注预期值，而非风险值。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item TSL(e)不是预期现金、营运资本变化和存款变化的组合；该定义过于具体化，只包含了部分流动性来源（现金、存款），忽略了其他重要的流动性来源（如资产变现、融资能力、表外流动性来源）和流动性需求；TSL(e)需要更全面的流动性来源和需求分析。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item TSL(e)是累积预期现金流（TSECCF，Term Structure of Expected Cumulative Cash Flows）和流动性生成能力（TSCLGC，Term Structure of Liquidity Generation Capacity）的期限结构组合；TSECCF反映银行在未来不同时点的预期累积现金流（包括流入和流出）；TSCLGC反映银行从资产负债表内外可用的流动性来源生成流动性的能力；两者结合完整地描述了银行在未来的预期流动性状况，这是TSL(e)的标准定义。
+    \end{itemize}
+\end{explanation}
+
+\checklist{预期流动性期限结构分析}
+
+
+
+
+\section{考点3:流动资金转让定价： 更好的实践指南}
+\setcounter{question}{0}
+
+\begin{question}
+    Which of the following statements describes the best approach for liquidity transfer pricing?
+\end{question}
+
+\begin{choices}
+    \item Zero cost of funds approach is preferred in cases in which swap rates are unknown and undeterminable
+    \item The pooled average cost of funds approach is more appropriate for banks with numerous business units
+    \item The separate average cost of funds approach is preferred to accurately account for business units with large trading activities
+    \item The matched-maturity marginal approach is preferred because it quantifies liquidity risk premiums across all maturities
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 零资金成本法不是最佳方法，即使互换利率未知也不应使用；该方法假设资金成本为零，完全忽略了流动性风险和融资成本，无法准确反映真实的流动性成本。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 集中平均资金成本法不是最佳方法；该方法使用所有业务单元的平均资金成本，无法反映不同业务单元的风险特征、期限结构差异和流动性需求差异。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 单独平均资金成本法不是最佳方法；虽然按业务单元分别计算，但仍使用平均成本而非边际成本，且无法反映不同期限的流动性风险溢价。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 匹配到期边际法是最佳方法，因为它可以量化所有期限的流动性风险溢价；该方法使用与资产/负债期限匹配的边际融资成本，能够准确反映不同期限的流动性风险差异，为各业务单元和产品提供更精确的流动性成本分配。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性转移定价分析}
+
+\begin{question}
+    Which of the following is considered a best practice of liquidity transfer pricing (LTP)?
+\end{question}
+
+\begin{choices}
+    \item A centralized treasury funding center should be implemented to manage the liquidity cushion across business units
+    \item Banks should rely on external factors to improve LTP by meeting regulatory authority requirements
+    \item Remuneration policies should not be linked to LTP to help incentivize business unit managers to produce longer-term assets
+    \item Contingent collateral calls and derivatives should not be included in the LTP process but managed separately to properly account for risks
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 实施集中资金中心（centralized treasury funding center）来管理各业务单元的流动性缓冲是LTP的最佳实践；集中资金中心统一管理流动性，确保资金在各业务单元间有效分配，批发融资应限制在集团或子公司资金部门；这有助于有效管理LTP流程，确保流动性成本准确分配，并支持薪酬政策的有效性。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 银行不应依赖外部因素（如满足监管要求）来改善LTP；LTP应该基于银行内部的流动性风险管理需求和业务目标，而非仅仅为了满足监管要求；内部因素（如业务战略、风险偏好、成本效益）在LTP管理中更重要，外部监管要求只是最低标准。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 薪酬政策应该与LTP挂钩，而非不挂钩；将薪酬与LTP挂钩可以激励业务单元经理考虑流动性成本，做出更优的资产配置决策（包括长期资产），确保业务决策反映真实的流动性成本；不挂钩会导致业务单元忽视流动性成本，可能产生不合理的长期资产配置。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 或有抵押品赎回权（contingent collateral calls）和衍生品应该包含在LTP流程中，而非单独管理；这些工具是流动性风险的重要来源（如衍生品保证金要求、抵押品追加），需要在LTP中准确核算其流动性成本，确保业务单元承担相应的流动性风险；单独管理会导致流动性成本分配不完整，无法全面反映流动性风险。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性转移定价最佳实践}
+
+
+
+
+\newpage
+
+
+
+
+\section{考点4:美元短缺与套息平价损失}
+\setcounter{question}{0}
+
+\begin{question}
+    Following the collapse of Lehman Brothers in September 2008, many banks faced severe difficulties securing short-term US dollar funding, especially those European banks. Which of the following statements about US dollar shortage is NOT correct?
+\end{question}
+
+\begin{choices}
+    \item Higher cross-currency funding, higher the funding risk banks faced when their hedging requirements and FX swap transactions have to be rolled over
+    \item The US dollar gap faced roll over risk due to the maturity mismatch
+    \item US dollar investment to non-banks with funds from various counterparties, subjected to funding risk
+    \item A help method for release pressure of dollar shortage is selling structed finance product claimed on non-bank entities to other banks cause these products actually had high inside value
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 该说法正确
+        \item 跨币种融资越高，展期风险越大
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 该说法正确
+        \item 期限错配导致展期风险
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 该说法正确
+        \item 非银行投资面临融资风险
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 该说法错误
+        \item 金融危机下结构性金融产品价值大幅下跌
+        \item 出售这些产品会导致巨大损失
+        \item 不能缓解美元短缺压力
+    \end{itemize}
+\end{explanation}
+
+\checklist{美元短缺风险分析}
+
+
+\begin{question}
+    Covered interest parity has been systematically violated since the Great Financial Crisis. Severe interpretations are available towards these puzzling and consistent phenomena. Which of the following is NOT the possible reason led to the violation of CIP?
+\end{question}
+
+\begin{choices}
+    \item Banks' business model be doomed to use currency derivatives, such as FX swap, to hedge the mismatch of currencies
+    \item This circumstance reflects that CIP may be an incorrect theory, more research needs to be done to verify the effectiveness of CIP
+    \item Structural changes in pricing market, credit, counterparty and liquidity risks post-crisis has tightened the limits to arbitrage
+    \item Activities on foreign currency market of institutional investors and non-financial firms induces imbalance on FX swap market
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 该说法正确
+        \item 银行使用货币衍生品对冲货币错配
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 该说法错误
+        \item CIP是国际金融中最接近物理定律的理论
+        \item 违反CIP并不意味着理论错误
+        \item 可以用两个假设解释：货币对冲需求增加和套利限制
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 该说法正确
+        \item 危机后市场结构变化限制了套利
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 该说法正确
+        \item 机构投资者和非金融企业的活动导致外汇互换市场失衡
+    \end{itemize}
+\end{explanation}
+
+\checklist{利率平价理论分析}
+
+
+
+\begin{question}
+    A treasurer at a large US-based manufacturing company is approached by an investment banker who recommends that the firm issue a foreign currency-denominated bond in an offshore market. The company does not have a current need to raise funds in the foreign currency, but the investment banker advises the firm that issuing foreign currency-denominated debt and converting the funds back into US dollars will result interest cost savings as compared to issuing US dollar-denominated debt in its domestic market.
+
+    The treasurer reviews two alternatives to convert foreign currency to US dollars: foreign exchange(FX)swaps and cross-currency swaps. Which of the following statements is correct regarding these two foreign currency hedging instruments and their pricing mechanics?
+\end{question}
+
+\begin{choices}
+    \item FX swaps will always trade equal to the cash market interest rate differentials between the two countries
+    \item At the maturity of a cross-currency swap, the borrowed amounts are exchanged back at a forward exchange rate
+    \item Pricing of FX swaps may not adhere to covered interest parity because of the presence of illiquidity as well as changes in counterparty credit risks in the interbank markets
+    \item Supranational agencies, such as the World Bank,use the repo markets to source cheap funding capital to employ in their covered interest arbitrage activities
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 外汇互换不一定等于两国利率差
+        \item 受市场流动性影响
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 交叉货币互换到期时按即期汇率交换
+        \item 不是远期汇率
+    \end{itemize}
+
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 外汇互换定价可能不遵循利率平价
+        \item 原因包括市场流动性不足
+        \item 以及对手方信用风险变化
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    这个说法不准确：
+    \begin{itemize}
+        \item 超国家机构不使用回购市场
+        \item 不进行利率平价套利
+    \end{itemize}
+\end{explanation}
+
+\checklist{外汇对冲工具分析}
+
+
+
+
+\newpage
+
+
+\end{document}

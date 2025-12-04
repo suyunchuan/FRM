@@ -1,0 +1,879 @@
+
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+%\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+\usepackage{multirow}
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{23}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+%模版
+
+\section{考点1:Sample Space, Event Space, and Events 样本空间、事件空间和事件}
+
+\begin{question}
+    A probability theory professor is teaching fundamental concepts to a class of graduate students. The professor emphasizes that random variables, outcomes, events, and event space are basic concepts in probability theory. Which of the following statements about these concepts is CORRECT?
+    \end{question}
+    
+    \begin{choices}
+        \item A random variable represents the probability distribution of a random phenomenon, which maps from the real number line to the sample space.
+        \item An outcome is a single realization or possible result of a random experiment, such as getting a "3" when rolling a die.
+        \item An event space consists of only the elementary events that cannot be further decomposed into simpler events.
+        \item The event space is a collection of mutually exclusive events that form a partition of the sample space.
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 这个陈述颠倒了随机变量的映射方向。随机变量是从样本空间映射到实数轴上的函数，而不是从实数轴映射到样本空间。
+        \item 例如：掷骰子的点数这个随机变量是将结果（如"出现3点"）映射到数字3，而不是反向映射。
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 这个陈述准确描述了结果（outcome）的概念。
+        \item 结果是随机试验的一个具体实现值或可能出现的单个值。
+        \item 例如：掷骰子时，得到的"3"就是一个结果，而不是整个样本空间{1,2,3,4,5,6}。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这个陈述错误地限制了事件空间的范围。事件空间应包含样本空间的所有子集，而不仅仅是基本事件。
+        \item 事件空间包含了从单个结果构成的事件到复合事件在内的所有可能事件。
+        \item 例如：掷骰子时，"出现偶数"这样的复合事件也是事件空间的元素。
+    \end{itemize}
+    
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 这个陈述错误地要求事件空间中的事件必须互斥且构成划分。实际上，事件空间中的事件可以相交。
+        \item 事件空间是样本空间的幂集，其中的事件之间可以有交集。
+        \item 例如：掷骰子时，"出现偶数"和"大于4的数"这两个事件都在事件空间中，且它们有交集{6}。
+    \end{itemize}
+    \end{explanation}
+
+    
+    \checklist{概率论基本概念（随机变量、结果、事件和事件空间的定义与区别）}
+
+    \begin{question}
+        A risk manager at a global investment bank is reviewing the fundamental principles of probability theory with his team. During the discussion of risk assessment methodologies, he emphasizes that these probability principles are crucial for quantifying market risks and making investment decisions. Which of the following statements does NOT comply with the basic principles of probability?
+    \end{question}
+        
+        \begin{choices}
+            \item The probability value of an event ranges from 0 to 1, including 0 and 1.
+            \item The sum of probabilities for a set of mutually exclusive and exhaustive events may be less than 1.
+            \item The joint probability of two independent events is the product of their individual probabilities.
+            \item The probability function maps events to their probability values.
+        \end{choices}
+        
+        \begin{correctanswer}
+        B
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item 这是概率的基本性质之一：任何事件的概率值都在0到1之间（包括0和1）。
+            \item 其中，0表示不可能事件的概率（如掷骰子出现7点），1表示必然事件的概率（如掷骰子出现1-6点）。
+        \end{itemize}
+        
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 对于互斥且完备的事件组（互斥且遍历），其概率和必须等于1，这是概率的归一性原则。
+            \item 例如：掷骰子时，出现1点、2点、...、6点这些事件互斥且完备，它们的概率和必须等于1。
+            \item 这个选项说概率和可能小于1，违反了概率的归一性原则。
+        \end{itemize}
+        
+        \textbf{C选项正确。}
+        \begin{itemize}
+            \item 这是独立事件的概率乘法原则：两个独立事件的联合概率等于它们各自概率的乘积。
+            \item 例如：连续掷两次硬币，正面向上的概率都是1/2，则两次都正面向上的概率是1/2 × 1/2 = 1/4。
+        \end{itemize}
+        
+        \textbf{D选项正确。}
+        \begin{itemize}
+            \item 概率函数的作用就是将事件映射到其发生的概率值，这是概率论的基本定义。
+            \item 它满足非负性（概率值≥0）和规范性（样本空间的概率=1）等基本性质。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{概率论基本原则（概率的非负性、归一性、独立性和概率函数的基本性质）}
+
+
+        \begin{question}
+            A derivatives trader at an investment bank is evaluating the correlation between credit default events and market volatility spikes in his trading portfolio. To better understand the risk dependencies, he is reviewing the fundamental concepts of probability theory with his team. Which of the following statements about mutually exclusive events and independent events is CORRECT?
+        \end{question}
+        
+        \begin{choices}
+            \item The joint probability of mutually exclusive events equals zero, as these events cannot occur simultaneously.
+            \item The probability of market volatility spikes increases when credit defaults occur, even if these events are independent.
+            \item Two market risk events with positive probabilities can be both mutually exclusive and independent.
+            \item Independent events always share common outcomes in their sample spaces, making their intersection a non-empty set.
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item 这个陈述准确描述了互斥事件的定义：两个事件不能同时发生，即它们的交集为空集。
+            \item 若事件A和B互斥，则 \(P(A\cap B)=0\)，这是互斥事件的基本性质。
+        \end{itemize}
+        
+        \textbf{B选项错误。}
+        \begin{itemize}
+            \item 这个陈述违反了独立性的定义。如果两个事件独立，一个事件的发生不应影响另一个事件的概率。
+            \item 若事件A和B独立，则 \(P(A|B)=P(A)\) 且 \(P(B|A)=P(B)\)，即条件概率等于无条件概率。
+        \end{itemize}
+        
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item 这个陈述违反了互斥性和独立性的基本关系。
+            \item 对于互斥事件，有 \(P(A\cap B)=0\)；对于独立事件，有 \(P(A\cap B)=P(A)P(B)\)。
+            \item 如果两个事件概率都为正，则它们不可能同时满足这两个条件，因为 \(P(A)P(B)>0\) 而 \(P(A\cap B)=0\)。
+        \end{itemize}
+        
+        \textbf{D选项错误。}
+        \begin{itemize}
+            \item 这个陈述错误地理解了独立性的概念。独立性是概率意义上的独立，与样本空间中的交集是否为空无关。
+            \item 独立事件的交集可以为空，只要满足 \(P(A\cap B)=P(A)P(B)\)。
+            \item 例如，当其中一个事件的概率为0时，独立事件的交集可以为空。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{互斥事件和独立事件的概念及其关系（关键是理解互斥性和独立性的定义及其数学表达）}
+
+
+\section{考点2:Important probabilities 重要概率}
+\setcounter{question}{0}
+
+\begin{question}
+    A risk analyst at a hedge fund is studying the relationship between market risk events and credit risk events. The analyst has collected the following probability data.Given events A and B, and conditioning event C:
+    \begin{itemize}
+        \item \(P(A) = 40\%\), \(P(B) = 40\%\), \(P(A \cap B) = 16\%\)
+        \item \(P(A|C) = 50\%\), \(P(B|C) = 50\%\), \(P(A \cap B|C) = 25\%\)
+    \end{itemize}
+    
+    Which of the following statements about unconditional and conditional independence is INCORRECT?
+\end{question}
+
+\begin{choices}
+    \item Events A and B are unconditionally independent.
+    \item Events A and B are conditionally independent given event C.
+    \item Conditional independence is a sufficient but not necessary condition for unconditional independence.
+    \item The concept of conditional independence allows us to analyze the joint behavior of events under specific conditions.
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{A选项正确。}
+\begin{itemize}
+    \item 无条件独立性要求 \(P(A \cap B) = P(A)P(B)\),代入数据：\(P(A)P(B) = 40\% \times 40\% = 16\% = P(A \cap B)\),因此A和B确实是无条件独立的。
+\end{itemize}
+
+\textbf{B选项正确。}
+\begin{itemize}
+    \item 条件独立性要求 \(P(A \cap B|C) = P(A|C)P(B|C)\),代入数据：\(P(A|C)P(B|C) = 50\% \times 50\% = 25\% = P(A \cap B|C)\),因此A和B在给定C的条件下是条件独立的。
+\end{itemize}
+
+\textbf{C选项错误。}
+\begin{itemize}
+    \item 这个陈述颠倒了条件独立性和无条件独立性的关系，实际上，无条件独立性是条件独立性的非充分非必要条件，即如果两个事件无条件独立，则它们不一定是条件独立的；两个事件在某个条件下独立，并不意味着它们一定是无条件独立的。
+\end{itemize}
+
+\textbf{D选项正确。}
+\begin{itemize}
+    \item 这个陈述准确描述了条件独立性的实际应用价值，在风险管理中，我们经常需要在特定市场条件下分析不同风险事件之间的关系，条件独立性为这种分析提供了理论基础。
+\end{itemize}
+\end{explanation}
+
+\checklist{无条件独立性和条件独立性的概念及其关系（关键是理解两者的定义和非充分非必要条件关系）}
+
+
+\begin{question}
+    A financial analyst at an investment firm is studying two events \(A\) and \(B\) related to market movements. The probability of event \(A\) happening is the same as that of event \(B\). The probability that both \(A\) and \(B\) occur, \(P(AB)=5\%\). Given that event \(A\) has occurred, the probability that event \(B\) occurs is \(70\%\). What is the probability that neither event \(A\) nor event \(B\) occurs?
+    \end{question}
+    
+    \begin{choices}
+        \item 83\%
+        \item 87\%
+        \item 91\%
+        \item 95\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{1. 计算\(P(A)\)的值}:
+        \begin{itemize}
+            \item 根据条件概率公式\(P(B|A)=\frac{P(AB)}{P(A)}\)。
+            \item 已知\(P(B|A) = 0.7\)，\(P(AB)=0.05\)，则\(P(A)=\frac{P(AB)}{P(B|A)}=\frac{0.05}{0.7}=\frac{5}{70}=\frac{1}{14}\approx0.0714\)。
+            \item 因为\(P(A)=P(B)\)，所以\(P(B)\approx0.0714\)。
+        \end{itemize}
+    \textbf{2. 计算\(P(A\cup B)\)的值}:
+        \begin{itemize}
+            \item 根据概率的加法公式\(P(A\cup B)=P(A)+P(B)-P(AB)\)。
+            \item 将\(P(A)\approx0.0714\)，\(P(B)\approx0.0714\)，\(P(AB) = 0.05\)代入公式，可得\(P(A\cup B)=0.0714 + 0.0714-0.05=0.0928\)。
+        \end{itemize}
+    \textbf{3. 计算\(P(\overline{A}\cap\overline{B})\)的值}:
+        \begin{itemize}
+            \item 因为\(P(\overline{A}\cap\overline{B})=1 - P(A\cup B)\)。
+            \item 把\(P(A\cup B)=0.0928\)代入，得到\(P(\overline{A}\cap\overline{B})\approx1 - 0.0928 = 0.9072\approx91\%\)。
+        \end{itemize}
+    \end{explanation}
+    
+\checklist{条件概率的基本计算（Addition Rule和Multiplication Rule的运用）}
+
+\begin{question}
+    A junior mortgage analyst at National Savings is evaluating the mortgage applications of Tom and Kathy. The bank's loan - approval decisions are independent among borrowers under normal conditions but not during a recession. In normal times, Tom has a 75\% chance of getting the mortgage, and Kathy has an 85\% chance. During a recession, Tom's probability drops to 25\%, and Kathy's to 30\%. Tom makes the following statements. Which statement is correct?
+    \end{question}
+    
+    \begin{choices}
+        \item There is a probability of 63.75\% that both of them could get mortgages from the bank generally.
+        \item Since the bank’s decisions of making loans are conditionally independent in normal conditions, they are also unconditionally independent.
+        \item There is a probability of 7.5\% that they could get mortgages from the bank when the economy is in recession.
+        \item There is a probability of 52.5\% that neither of them could not get mortgages from the bank when the economy is in recession.
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+    \item 在正常情况下，由于银行对借款人的贷款决策相互独立，根据独立事件概率乘法公式，两人都获得贷款的概率为两人各自获得贷款概率的乘积。即\(P = 0.75\times0.85=63.75\%\)。
+    \end{itemize}
+    \textbf{B选项错误。}
+    \begin{itemize}
+    \item 无条件独立不一定能推出条件独立，条件独立也不一定得到无条件独立。
+    \end{itemize}
+    \textbf{C选项错误。}
+    \begin{itemize}
+    \item 在经济衰退时，银行关于是否发放贷款给Tom和Kathy的决策不再独立，两人都获得贷款的概率不能用独立事件概率乘法公式计算。
+    \end{itemize}
+    \textbf{D选项错误。}
+    \begin{itemize}
+    \item 在经济衰退时，银行关于是否发放贷款给Tom和Kathy的决策不再独立，两人都无法获得贷款的概率不能用独立事件概率乘法公式计算。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{独立事件概率计算以及条件独立性与无条件独立性的区别（无条件独立不一定能推出条件独立，条件独立也不一定得到无条件独立。）}
+
+\begin{question}
+    A risk analyst at a fixed - income investment firm is assessing Bond X and Bond Y. These two bonds have the same rating and probability of default. The estimated probability that both bonds will default within the next year is 8\%. If Bond X defaults next year, there is a 40\% probability that Bond Y will also default. What is the probability that neither Bond X nor Bond Y will default over the next year?
+    \end{question}
+    
+    \begin{choices}
+        \item 32\%
+        \item 68\%
+        \item 52\%
+        \item 48\%
+    \end{choices}
+    
+    \begin{correctanswer}
+    B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确相关概率公式和已知条件}
+    \begin{itemize}
+    \item 根据条件概率公式\(P(Y|X)=\frac{P(X\cap Y)}{P(X)}\)，已知\(P(X\cap Y) = 0.08\)，\(P(Y|X)=0.4\)。
+    \end{itemize}
+    \textbf{步骤2：计算\(P(X)\)和\(P(Y)\)}
+    \begin{itemize}
+    \item 由\(P(Y|X)=\frac{P(X\cap Y)}{P(X)}\)可得\(P(X)=\frac{P(X\cap Y)}{P(Y|X)}=\frac{0.08}{0.4}=0.2\)，因为\(P(X)=P(Y)\)，所以\(P(Y) = 0.2\)。
+    \end{itemize}
+    \textbf{步骤3：计算\(P(X\cup Y)\)}
+    \begin{itemize}
+    \item 根据概率的加法公式\(P(X\cup Y)=P(X)+P(Y)-P(X\cap Y)\)，将\(P(X)=0.2\)，\(P(Y)=0.2\)，\(P(X\cap Y)=0.08\)代入可得\(P(X\cup Y)=0.2 + 0.2-0.08 = 0.32\)。
+    \end{itemize}
+    \textbf{步骤4：计算\(P(\overline{X}\cap\overline{Y})\)}
+    \begin{itemize}
+    \item 因为\(P(\overline{X}\cap\overline{Y})=1 - P(X\cup Y)\)，所以\(P(\overline{X}\cap\overline{Y})=1 - 0.32 = 0.68\)，即\(68\%\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{条件概率、概率加法公式以及对立事件概率的应用（关键是掌握条件概率公式、概率加法公式）}
+
+    \begin{question}
+        A probability theory professor is explaining the concepts of unconditional and conditional independence using a dice game example. Consider a fair six-sided die with numbers from 1 to 6, and define the following events:
+        \begin{itemize}
+            \item Event \(A\): Rolling an odd number 
+            \item Event \(B\): Rolling an even number 
+            \item Event \(C\): Rolling a number greater than 3 
+        \end{itemize}
+        Which of the following statements about the independence of events \(A\) and \(B\) is INCORRECT?
+    \end{question}
+    
+    \begin{choices}
+        \item Events \(A\) and \(B\) are not unconditionally independent because they are mutually exclusive.
+        \item Events \(A\) and \(B\) are not conditionally independent given \(C\) because \(P(A \cap B|C) \neq P(A|C)P(B|C)\).
+        \item Events \(A\) and \(B\) are conditionally independent given \(C\) because \(P(A \cap B|C) = 0\) and \(P(A|C)P(B|C) = 0\).
+        \item Events \(A\) and \(B\) are neither unconditionally independent nor conditionally independent given \(C\).
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item \(P(A) = \frac{3}{6} = \frac{1}{2}\)，\(P(B) = \frac{3}{6} = \frac{1}{2}\)
+        \item \(P(A \cap B) = 0\)（因为奇数和偶数互斥）
+        \item \(P(A)P(B) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}\)
+        \item 因为\(P(A \cap B) \neq P(A)P(B)\)，所以A和B确实不是无条件独立的
+    \end{itemize}
+    
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item \(P(A|C) = \frac{1}{3}\)（在大于3的数中，只有5是奇数）
+        \item \(P(B|C) = \frac{2}{3}\)（在大于3的数中，4和6是偶数）
+        \item \(P(A \cap B|C) = 0\)（奇数和偶数在任何条件下都互斥）
+        \item \(P(A|C)P(B|C) = \frac{1}{3} \times \frac{2}{3} = \frac{2}{9}\)
+        \item 因为\(P(A \cap B|C) \neq P(A|C)P(B|C)\)，所以A和B在给定C条件下确实不是条件独立的
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 虽然\(P(A \cap B|C) = 0\)是正确的（因为A和B互斥）
+        \item 但\(P(A|C)P(B|C) = \frac{2}{9} \neq 0\)
+        \item 因此，不能说A和B在给定C条件下是条件独立的
+        \item 这个错误在于混淆了"两个概率都为0"和"两个概率相等"的概念
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 根据A选项的分析，A和B不是无条件独立的，根据B选项的分析，A和B也不是在给定C条件下的条件独立的，这个结论完整地总结了A和B之间的依赖关系
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{无条件独立性和条件独立性的概念及其关系（关键是理解互斥事件与独立性的关系，以及如何通过概率计算验证独立性）}
+
+
+\begin{question}
+A risk analyst at a global investment bank is studying the correlation between two market events. The analyst has determined that:
+\begin{itemize}
+    \item The probability of event A occurring is 50\%
+    \item The probability of event B occurring is 70\%
+    \item The probability of either event A or event B occurring is 85\%
+\end{itemize}
+Which of the following statements about these events is correct?
+\end{question}
+
+\begin{choices}
+    \item \(P(A\cap B)=35\%\), and events A and B are independent.
+    \item \(P(A\cap B)=85\%\), and events A and B are mutually exclusive.
+    \item \(P(A\cap B)=85\%\), and events A and B are complementary.
+    \item \(P(A\cap B)=35\%\), and events A and B are conditionally independent.
+\end{choices}
+
+\begin{correctanswer}
+A
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{步骤1：利用加法公式计算\(P(A\cap B)\)}
+\begin{itemize}
+    \item 根据概率加法公式：\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)
+    \item 代入已知条件：\(0.85=0.50+0.70-P(A\cap B)\)
+    \item 求解得：\(P(A\cap B)=0.50+0.70-0.85=0.35\)
+\end{itemize}
+
+\textbf{步骤2：验证事件的独立性}
+\begin{itemize}
+    \item 对于独立事件，必须满足：\(P(A\cap B)=P(A)\times P(B)\)
+    \item 代入数值：\(P(A)\times P(B)=0.50\times0.70=0.35=P(A\cap B)\)
+    \item 因此A和B确实是独立事件
+\end{itemize}
+
+\end{explanation}
+
+\checklist{概率的加法公式和事件独立性的判定（关键是理解如何利用加法公式计算交集概率，以及如何验证事件的独立性）}
+
+
+
+\section{考点3:Bayes’ theorem 贝叶斯定理}
+\setcounter{question}{0}
+
+\begin{question}
+A risk analyst at a financial consulting firm is reviewing the application of the law of total probability. The law of total probability is a significant concept in conditional probability, stating that the total probability of an event can be re - constructed using conditional probabilities, given that the sum of the probabilities of the conditioning sets equals 1. Which of the following statements correctly applies the total probability theorem?
+\end{question}
+
+\begin{choices}
+    \item \(P(B|A)=\frac{P(AB)}{[P(A|B)P(B)+P(A|B')P(B')]}\)
+    \item \(P(B|A)=\frac{P(AB)}{[P(B|A)P(A)+P(B|A')P(A')]}\)
+    \item \(P(B|A)=\frac{P(AB)}{[P(A|B)P(A)+P(A|B')P(A')]}\)
+    \item \(P(B|A)=\frac{P(AB)}{[P(B|A)P(B)+P(B|A')P(B')]}\)
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{全概率公式和条件概率公式}:
+    \begin{itemize}
+        \item 条件概率公式为\(P(B|A)=\frac{P(AB)}{P(A)}\)。
+        \item 全概率公式用于计算\(P(A)\)，如果\(B\)和\(B'\)构成一个完备事件组（即\(P(B)+P(B') = 1\)），则\(P(A)=P(A|B)P(B)+P(A|B')P(B')\)。
+        \item \(P(B|A)=\frac{P(AB)}{P(A)}=\frac{P(AB)}{[P(B|A)P(B)+P(B|A')P(B')]}\),所以选项A正确。
+    \end{itemize}
+\end{explanation}
+
+\checklist{全概率公式和条件概率公式的应用（直接公式表达）}
+
+\begin{question}
+    A financial analyst at an investment bank is examining a probability distribution regarding the state of the economy and the market. The analyst has developed the following data:
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Initial Probability \(P(A)\) & Conditional Probability \(P(B|A)\) \\
+    \hline
+    Good economy 70\% & \begin{tabular}{c}Bull market 40\% \\ Normal market 35\% \\ Bear market 25\%\end{tabular} \\
+    \hline
+    Poor economy 30\% & \begin{tabular}{c}Bull market 15\% \\ Normal market 25\% \\ Bear market 60\%\end{tabular} \\
+    \hline
+    \end{tabular}
+    \end{center}
+    Which of the following statements about this probability distribution is least likely accurate?
+    \end{question}
+    
+    \begin{choices}
+        \item The probability of a normal market is 0.32.
+        \item The probability of having a good economy and a bear market is 0.175.
+        \item Given that the economy is poor, the chance of a good economy and a bull market is 0.28.
+        \item Given that the economy is poor, the combined probability of a normal or a bull market is 0.4.
+    \end{choices}
+    
+    \begin{correctanswer}
+        C
+    \end{correctanswer}
+    
+    \begin{explanation}
+        \textbf{A选项正确。}
+        \begin{itemize}
+            \item 根据全概率公式\(P(\text{Normal market})=P(\text{Good economy})\times P(\text{Normal market}|\text{Good economy})\\+P(\text{Poor economy})\times P(\text{Normal market}|\text{Poor economy})\)。
+            \item 已知\(P(\text{Good economy}) = 0.7\)，\(P(\text{Normal market}|\text{Good economy})=0.35\)，\(P(\text{Poor economy}) = 0.3\)，\\ \(P(\text{Normal market}|\text{Poor economy})=0.25\)。
+            \item 则\(P(\text{Normal market})=0.7\times0.35 + 0.3\times0.25=0.245+0.075 = 0.32\)，选项A正确。
+        \end{itemize}
+    
+        \textbf{B选项正确。}
+        \begin{itemize}
+            \item 根据乘法公式\(P(\text{Good economy}\cap\text{Bear market})=P(\text{Good economy})\times P(\text{Bear market}|\text{Good economy})\)。
+            \item 已知\(P(\text{Good economy}) = 0.7\)，\(P(\text{Bear market}|\text{Good economy})=0.25\)。
+            \item 则\(P(\text{Good economy}\cap\text{Bear market})=0.7\times0.25 = 0.175\)，选项B正确。
+        \end{itemize}
+    
+        \textbf{C选项错误。}
+        \begin{itemize}
+            \item  经济条件不好，则经济条件好的概率为0，所以经济好和牛市同时发生的概率为0，选项C错误。
+        \end{itemize}
+    
+        \textbf{D选项正确。}
+        \begin{itemize}
+            \item \(P((\text{Normal market}\cup\text{Bull market})|\text{Poor economy})=P(\text{Normal market}|\text{Poor economy})\\ +P(\text{Bull market}|\text{Poor economy})\)。
+            \item 已知\(P(\text{Normal market}|\text{Poor economy})=0.25\)，\(P(\text{Bull market}|\text{Poor economy})=0.15\)。
+            \item 则\(P((\text{Normal market}\cup\text{Bull market})|\text{Poor economy})=0.25+0.15=0.4\)，选项D正确。
+        \end{itemize}
+    \end{explanation}
+
+\checklist{全概率公式和条件概率公式的应用（分解构成一个完整事件组的所有事件，并加总各事件所对应的概率）}
+
+
+
+
+\begin{question}
+    An investor in country Y is corresponding with a business partner via postal mail. The probability that a letter sent through the postal system in country Y reaches its destination is 3/4. Assume that each postal delivery is independent of every other postal delivery, and assume that if the business partner receives a letter from the investor, the partner will definitely mail a response. Suppose the investor mails a letter to the business partner. If the investor does not receive a response letter from the partner, what is the probability that the partner received his letter?
+    \end{question}
+    
+    \begin{choices}
+        \item 1/5
+        \item 3/7
+        \item 4/7
+        \item 3/4
+    \end{choices}
+    
+    \begin{correctanswer}
+        B
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：定义事件}:
+        \begin{itemize}
+            \item 设事件\(A\)为“合伙人收到信”，\(P(A)=\frac{3}{4}\)；则\(\overline{A}\)为“合伙人未收到信”，\(P(\overline{A}) = 1 - \frac{3}{4}=\frac{1}{4}\)。
+            \item 设事件\(B\)为“投资者未收到回信”。
+        \end{itemize}
+    \textbf{步骤2：计算条件概率\(P(B|A)\)和\(P(B|\overline{A})\)}:
+        \begin{itemize}
+            \item 若合伙人收到信（事件\(A\)发生），合伙人会回信，但回信可能送不到投资者手中，因为一封信送达的概率是\(\frac{3}{4}\)，所以送不到的概率是\(1 - \frac{3}{4}=\frac{1}{4}\)，即\(P(B|A)=\frac{1}{4}\)。
+            \item 若合伙人未收到信（事件\(\overline{A}\)发生），则肯定不会回信，所以投资者肯定收不到回信，即\(P(B|\overline{A}) = 1\)。
+        \end{itemize}
+    \textbf{步骤3：利用全概率公式计算\(P(B)\)}:
+        \begin{itemize}
+            \item 根据全概率公式\(P(B)=P(A)P(B|A)+P(\overline{A})P(B|\overline{A})\)。
+            \item 把\(P(A)=\frac{3}{4}\)，\(P(B|A)=\frac{1}{4}\)，\(P(\overline{A})=\frac{1}{4}\)，\(P(B|\overline{A}) = 1\)代入可得：
+            \item \(P(B)=\frac{3}{4}\times\frac{1}{4}+\frac{1}{4}\times1=\frac{3 + 4}{16}=\frac{7}{16}\)。
+        \end{itemize}
+    \textbf{步骤4：利用贝叶斯公式计算\(P(A|B)\)}:
+        \begin{itemize}
+            \item 根据贝叶斯公式\(P(A|B)=\frac{P(A)P(B|A)}{P(B)}\)。
+            \item 已知\(P(A)P(B|A)=\frac{3}{4}\times\frac{1}{4}=\frac{3}{16}\)，\(P(B)=\frac{7}{16}\)。
+            \item 所以\(P(A|B)=\frac{\frac{3}{16}}{\frac{7}{16}}=\frac{3}{7}\)。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{条件概率、全概率公式和贝叶斯公式的应用（关键是如何定义事件并运用公式求解条件概率）}
+
+\begin{question}
+    An actuary at an insurance company is analyzing the renewal probabilities of policy - holders. The actuary estimates that 30\% of policyholders who have only an auto policy will renew next year, and 70\% of policyholders who have only a homeowner policy will renew next year. Also, 90\% of policyholders who have both an auto and a homeowner policy will renew at least one of those policies next year. Company records indicate that 70\% of policyholders have an auto policy, 40\% of policyholders have a homeowner policy, and 10\% of policyholders have both an auto and a homeowner policy. Using the company's estimates, what is the percentage of policyholders that will renew at least one policy next year?
+    \end{question}
+    
+    \begin{choices}
+        \item 33\%
+        \item 42\%
+        \item 51\%
+        \item 60\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：计算仅拥有汽车保险的客户比例}:
+        \begin{itemize}
+            \item 已知拥有汽车保险的客户比例\(P(A)=70\%\)，同时拥有汽车和房屋保险的客户比例\(P(A\cap H)=10\%\)。
+            \item 那么仅拥有汽车保险的客户比例为\(P(A\cap\overline{H})=P(A)-P(A\cap H)=70\% - 10\% = 60\%\)。
+        \end{itemize}
+    \textbf{步骤2：计算仅拥有房屋保险的客户比例}:
+        \begin{itemize}
+            \item 已知拥有房屋保险的客户比例\(P(H)=40\%\)，同时拥有汽车和房屋保险的客户比例\(P(A\cap H)=10\%\)。
+            \item 那么仅拥有房屋保险的客户比例为\(P(\overline{A}\cap H)=P(H)-P(A\cap H)=40\% - 10\% = 30\%\)。
+        \end{itemize}
+    \textbf{步骤3：分别计算各类客户的续保比例}:
+        \begin{itemize}
+            \item 仅拥有汽车保险且续保的客户比例为\(P(\text{Renew}|A\cap\overline{H})\times P(A\cap\overline{H})=30\%\times60\% = 18\%\)。
+            \item 仅拥有房屋保险且续保的客户比例为\(P(\text{Renew}|\overline{A}\cap H)\times P(\overline{A}\cap H)=70\%\times30\% = 21\%\)。
+            \item 同时拥有两种保险且至少续保一种的客户比例为\(P(\text{Renew}|A\cap H)\times P(A\cap H)=90\%\times10\% = 9\%\)。
+        \end{itemize}
+    \textbf{步骤4：计算至少续保一种保险的客户总比例}:
+        \begin{itemize}
+            \item 将上述三种情况相加，得到至少续保一种保险的客户比例为\(18\%+21\% + 9\%=33\%\)。
+        \end{itemize}
+    \end{explanation}
+    
+    \checklist{概率的加法公式和条件概率的应用（分解构成一个完整事件组的所有事件，并加总各事件所对应的概率）}
+
+\begin{question}
+A junior mortgage analyst is looking at a portfolio which consists of 1200 subprime mortgages and 800 prime mortgages. Among the subprime mortgages, 240 are late on their payments. Among the prime mortgages, 64 are late on their payments. If the analyst randomly picks a mortgage from the portfolio and finds that it is currently late on its payments, what is the probability that it is a subprime mortgage?
+\end{question}
+
+\begin{choices}
+    \item 71\%
+    \item 77\%
+    \item 83\%
+    \item 90\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{步骤1：定义事件}:
+    \begin{itemize}
+        \item 设事件\(A\)为“选中的是次级抵押贷款”，\(P(A)=\frac{1200}{1200 + 800}=\frac{1200}{2000}=0.6\)；则\(\overline{A}\)为“选中的是优质抵押贷款”，\(P(\overline{A})=\frac{800}{1200 + 800}=\frac{800}{2000}=0.4\)。
+        \item 设事件\(B\)为“选中的抵押贷款逾期还款”。
+    \end{itemize}
+\textbf{步骤2：计算条件概率\(P(B|A)\)和\(P(B|\overline{A})\)}:
+    \begin{itemize}
+        \item \(P(B|A)\)表示在次级抵押贷款中逾期还款的概率，\[P(B|A)=\frac{240}{1200}=0.2\]
+        \item \(P(B|\overline{A})\)表示在优质抵押贷款中逾期还款的概率，\[P(B|\overline{A})=\frac{64}{800}=0.08\]
+    \end{itemize}
+\textbf{步骤3：利用全概率公式计算\(P(B)\)}:
+    \begin{itemize}
+        \item 根据全概率公式\(P(B)=P(A)P(B|A)+P(\overline{A})P(B|\overline{A})\)。
+        \item 把\(P(A) = 0.6\)，\(P(B|A)=0.2\)，\(P(\overline{A}) = 0.4\)，\(P(B|\overline{A})=0.08\)代入可得：
+        \item \(P(B)=0.6\times0.2+0.4\times0.08=0.12 + 0.032 = 0.152\)。
+    \end{itemize}
+\textbf{步骤4：利用贝叶斯公式计算\(P(A|B)\)}:
+    \begin{itemize}
+        \item 根据贝叶斯公式\(P(A|B)=\frac{P(A)P(B|A)}{P(B)}\)。
+        \item 已知\(P(A)P(B|A)=0.6\times0.2 = 0.12\)，\(P(B)=0.152\)。
+        \item 所以\(P(A|B)=\frac{0.12}{0.152}\approx0.77 = 77\%\)。
+    \end{itemize}
+\end{explanation}
+
+\checklist{条件概率、全概率公式和贝叶斯公式的应用（关键是定义事件并运用公式求解条件概率）}
+
+
+\begin{question}
+    A junior mortgage analyst is assessing a portfolio of junior unsecured loans. The analyst finds that 15\% of the loans are late on their principal payments. Among the delinquent loans, 70\% have an outstanding balance that surpasses the value of the borrower's projected future income used as a reference for repayment. And among the non-delinquent loans, 20\% have an outstanding balance greater than the projected future income. If the analyst randomly picks a loan from the portfolio and notices that the projected future income is less than the outstanding balance, what is the probability that the loan is delinquent?
+    \end{question}
+    
+    \begin{choices}
+        \item 10.5\%
+        \item 17\%
+        \item 34\%
+        \item 38.2\%
+    \end{choices}
+    
+    \begin{correctanswer}
+        D
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：定义事件}
+    \begin{itemize}
+        \item 设事件\(D\)为"贷款逾期"，\(\overline{D}\)为"贷款未逾期"，\(C\)为"未偿还余额超过预计未来收入"
+        \item 已知条件：\(P(D) = 0.15\), \(P(C|D) = 0.7\), \(P(C|\overline{D}) = 0.2\)
+    \end{itemize}
+    
+    \textbf{步骤2：计算全概率\(P(C)\)}
+    \begin{align*}
+    P(C) &= P(C|D)P(D) + P(C|\overline{D})P(\overline{D}) \\
+         &= 0.7 \times 0.15 + 0.2 \times 0.85 \\
+         &= 0.105 + 0.17 = 0.275
+    \end{align*}
+    
+    \textbf{步骤3：应用贝叶斯定理}
+    \begin{align*}
+    P(D|C) &= \frac{P(C|D)P(D)}{P(C)} \\
+           &= \frac{0.7 \times 0.15}{0.275} \\
+           &= \frac{0.105}{0.275} \approx 0.3818 \ (\text{即} \ 38.2\%)
+    \end{align*}
+
+    \end{explanation}
+    
+    \checklist{条件概率、全概率公式和贝叶斯公式的应用（关键是定义事件并运用公式求解条件概率）}
+    
+\begin{question}
+    A risk analyst at an investment firm is assessing whether the one - year probability of default of a specific annuity bond issued by a financial institution is uncorrelated with returns of the stock market. The analyst creates the following joint probability matrix based on one - year probabilities from the preliminary research:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{Stock market returns}& \multicolumn{2}{c|}{Annuity bond} \\
+    \cline{2 - 3}
+     & No default & Default \\
+    \hline
+    30\% increase & 58\% & 2\% \\
+    \hline
+    30\% decrease & 30\% & 10\% \\
+    \hline
+    \end{tabular}
+    \end{center}
+    What is the probability that the annuity bond defaults in one year given that the market decreases by 30\% over one year?
+    \end{question}
+    
+    \begin{choices}
+        \item 0.25
+        \item 0.10
+        \item 0.33
+        \item 0.75
+    \end{choices}
+    
+    \begin{correctanswer}
+    A
+    \end{correctanswer}
+    
+    \begin{explanation}
+    \textbf{步骤1：明确条件概率公式}：
+    \begin{itemize}
+    \item 条件概率公式为\(P(A|B)=\frac{P(A\cap B)}{P(B)}\)。设事件\(A\)为“年金债券违约”，事件\(B\)为“市场回报下降30\%”。
+    \end{itemize}
+    \textbf{步骤2：从表格中获取相关概率}：
+    \begin{itemize}
+    \item \(P(A\cap B)\)是“市场回报下降30\% 且年金债券违约”的概率，从表格中可知\(P(A\cap B)=10\% = 0.1\)。
+    \item \(P(B)\)是“市场回报下降30\%”的概率，\(P(B)=30\%+10\% = 0.4\)。
+    \end{itemize}
+    \textbf{步骤3：计算条件概率}：
+    \begin{itemize}
+    \item 根据条件概率公式\(P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{0.1}{0.4}=0.25\)。
+    \end{itemize}
+    \end{explanation}
+    
+    \checklist{条件概率的计算（关键是准确从联合概率矩阵中获取相关概率，并正确运用条件概率公式进行计算）}
+
+    \begin{question}
+        A financial analyst at an equity research firm is following a company named GLOBE Inc. In a recent shareholders' meeting, the board states that the company has a 70\% probability of paying a dividend if the economy booms in the next quarter, and a 40\% probability if the economy fluctuates. An economic forecaster predicts that there is a 30\% chance the economy will boom and a 70\% chance it will fluctuate. Given this information, what is the probability that the economy actually booms on the condition that GLOBE Inc. pays a dividend?
+        \end{question}
+        
+        \begin{choices}
+            \item 43\%
+            \item 66\%
+            \item 33\%
+            \item 72\%
+        \end{choices}
+        
+        \begin{correctanswer}
+            A
+        \end{correctanswer}
+        
+        \begin{explanation}
+        \textbf{步骤1：定义事件。}
+        \begin{itemize}
+            \item 设事件\(A\)为“经济繁荣”，\(\overline{A}\)为“经济波动”，事件\(B\)为“公司支付股息”。
+            \item 已知\(P(A) = 0.3\)，\(P(\overline{A}) = 0.7\)，\(P(B|A)=0.7\)，\(P(B|\overline{A}) = 0.4\)。
+        \end{itemize}
+        \textbf{步骤2：使用全概率公式计算\(P(B)\)。}
+        \begin{itemize}
+            \item 根据全概率公式\(P(B)=P(B|A)P(A)+P(B|\overline{A})P(\overline{A})\)。
+            \item 代入数据可得\(P(B)=0.7\times0.3 + 0.4\times0.7=0.21 + 0.28 = 0.49\)。
+        \end{itemize}
+        \textbf{步骤3：使用贝叶斯公式计算\(P(A|B)\)。}
+        \begin{itemize}
+            \item 根据贝叶斯公式\(P(A|B)=\frac{P(B|A)P(A)}{P(B)}\)。
+            \item 代入数据可得\(P(A|B)=\frac{0.7\times0.3}{0.49}=42.86\% \approx 43\%\)。
+        \end{itemize}
+        \end{explanation}
+        
+        \checklist{条件概率、全概率公式和贝叶斯公式的应用（关键是如何定义事件）}
+    
+
+\begin{question}
+    A credit card company evaluates 10 million transactions daily for fraud detection. It is known that 0.001\% of transactions are fraudulent. The company's algorithm can identify 90\% of fraudulent transactions but also incorrectly flags 0.0001\% of legitimate transactions as fraudulent. If a transaction is flagged as suspicious, what is the probability that it is actually fraudulent?
+\end{question}
+
+\begin{choices}
+    \item 0.9\%
+    \item 90\%
+    \item 99\%
+    \item 99.9\%
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{步骤1：定义事件和已知条件}
+\begin{itemize}
+    \item 设事件\(F\)为"交易是欺诈的"，事件\(S\)为"交易被标记为可疑"
+    \item \(P(F) = 0.001\% = 0.00001\)
+    \item \(P(S|F) = 90\% = 0.9\)（真阳性率）
+    \item \(P(S|\overline{F}) = 0.0001\% = 0.000001\)（假阳性率）
+    \item \(P(\overline{F}) = 1 - P(F) = 99.999\% = 0.99999\)
+\end{itemize}
+
+\textbf{步骤2：计算联合概率}
+\begin{itemize}
+    \item 欺诈交易被正确标记的概率：
+    \item \(P(F \cap S) = P(F) \times P(S|F) = 0.00001 \times 0.9 = 0.000009\)
+    \item 合法交易被错误标记的概率：
+    \item \(P(\overline{F} \cap S) = P(\overline{F}) \times P(S|\overline{F}) = 0.99999 \times 0.000001 = 0.0000009999\)
+\end{itemize}
+
+\textbf{步骤3：计算被标记为可疑的总概率}
+\begin{itemize}
+    \item 根据加法公式：\(P(S) = P(F \cap S) + P(\overline{F} \cap S)\)
+    \item \(P(S) = 0.000009 + 0.0000009999 = 0.0000099999\)
+\end{itemize}
+
+\textbf{步骤4：使用贝叶斯公式计算条件概率}
+\begin{itemize}
+    \item 根据贝叶斯公式：\(P(F|S) = \frac{P(F \cap S)}{P(S)} = \frac{P(S|F)P(F)}{P(S)}\)
+    \item \(P(F|S) = \frac{0.000009}{0.0000099999} \approx 0.9 = 90\%\)
+\end{itemize}
+
+\textbf{步骤5：结论}
+\begin{itemize}
+    \item 因此，当一笔交易被标记为可疑时，它实际上是欺诈交易的概率约为90\%
+    \item 这个例子说明即使系统的假阳性率很低（0.0001\%），由于欺诈交易本身很罕见（0.001\%），被标记为可疑的交易仍有10\%是误报
+\end{itemize}
+\end{explanation}
+
+\checklist{条件概率和贝叶斯定理的应用（关键是理解真阳性率、假阳性率在贝叶斯推断中的应用）}
+
+
+
+\end{document}

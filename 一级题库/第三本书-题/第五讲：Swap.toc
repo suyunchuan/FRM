@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}考点1：Basic Concepts 基本概念}{2}{}%
+\contentsline {subsection}{题号1考察: 基于比较优势原理计算利率互换的潜在节省（关键是计算固定利率和浮动利率差值并求差）}{2}{}%
+\contentsline {subsection}{题号2考察: 利率互换中的收益计算（关键在于准确计算固定利率差值和浮动利率差值，并比较得出最大联合收益）}{3}{}%
+\contentsline {section}{\numberline {2}考点2:Types of Swaps 互换类型}{3}{}%
+\contentsline {subsection}{题号1考察: 利率互换现金流计算}{3}{}%
+\contentsline {subsection}{题号2考察: 利率互换现金流计算}{4}{}%
+\contentsline {subsection}{题号3考察: 货币互换在期初、期间和期末现金流支付情况(注意支付方向，期初支出，后面都是收回)}{4}{}%
+\contentsline {subsection}{题号4考察: 波动率互换中现金流的计算（注意是年化波动率，另外注意区分波动率和方差）}{5}{}%
+\contentsline {subsection}{题号5考察: 隔夜指数互换价值计算（关键是掌握互换利率计算方法，确定现金流，运用金融计算机计算年金现值）}{5}{}%
+\contentsline {subsection}{题号6考察: 利率互换价值的计算（关键是计算新的互换利率、每期现金流差值，并运用金融计算机计算年金现值）}{6}{}%
+\contentsline {subsection}{题号7考察: 利率互换的现金流计算（注意区分收到和支付的现金流，以及应选择哪个时间点的利率）}{6}{}%
+\contentsline {subsection}{题号8考察: 货币互换的估值（关键是分别计算两种货币现金流的现值，并根据汇率进行换算）}{7}{}%
+\contentsline {subsection}{题号9考察: 货币互换的估值（关键是根据各期的现金流、远期汇率和折现率计算各期现金流的现值，再求和得到互换的价值）}{8}{}%
+\contentsline {subsection}{题号10考察: 权益互换的净支付计算（关键是计算股票指数回报率，并根据固定利率和名义本金计算净现金流，判断支付方）}{8}{}%
+\contentsline {subsection}{题号11考察: 利率风险管理中的对冲策略（关键是理解不同金融工具在利率上升时的表现，选择合适的对冲工具来降低利率上升对债券头寸的影响）}{9}{}%
+\contentsline {subsection}{题号12考察: 货币互换的机制，包括名义本金交换、利息支付以及盯市价值的影响因素（关键是理解货币互换中名义本金和利息支付的方向关系以及汇率变动对盯市价值的影响）}{9}{}%
+\contentsfinish 

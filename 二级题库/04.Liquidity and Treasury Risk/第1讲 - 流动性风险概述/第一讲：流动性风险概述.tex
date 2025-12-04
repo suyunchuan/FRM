@@ -1,0 +1,545 @@
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+\setCJKmainfont{SourceHanSansCN-Light}[
+    BoldFont=SourceHanSansCN-Medium
+]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录 样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+        \par\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% 新增考察方面命令
+\newcommand{\checklist}[1]{
+    \textbf{考察:} #1 \par % 在题目下方显示考察方面
+    \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+    \vspace{2em} % 添加1em的垂直空间
+}
+
+\graphicspath{{images/}} %统一
+
+
+\begin{document}
+ %\fontsize{22}{31}\selectfont
+ \tableofcontents % 添加目录
+\newpage
+%\pagestyle{empty}
+
+
+
+
+
+\section{考点1:流动性风险和杠杆}
+\setcounter{question}{0}
+
+
+
+\begin{question}
+    An investment bank finds that current market has been highly volatile but its own capital base is large enough. However, the counterparty of this bank asks for higher and higher collateral for the bank’s repo and repo rollover. This phenomenon shows:
+\end{question}
+
+\begin{choices}
+    \item balance sheet risk
+    \item transactions liquidity risk
+    \item systematic risk
+    \item maturity transformation risk
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 这是典型的资产负债表风险（Balance sheet risk），也称为资金流动性风险（Funding liquidity risk）；当市场波动或银行信用状况恶化时，交易对手会要求更高的抵押品以降低自身风险，这导致银行融资成本增加、可用抵押品减少、融资困难；即使银行资本充足，也可能因抵押品要求增加而面临资产负债表风险；回购和回购展期是银行重要的短期融资来源，抵押品要求增加直接影响银行的融资能力和流动性。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易流动性风险（Transactions liquidity risk）指在市场上买卖资产时的困难，与资产的市场流动性相关；本题描述的是融资条件和抵押品要求的变化，而非资产买卖的市场流动性问题；这是融资流动性风险，而非交易流动性风险。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 系统性风险（Systematic risk）指影响整个金融系统的风险，而非单个银行的特定融资问题；虽然市场波动可能具有系统性特征，但本题强调的是单个银行面临的融资条件收紧，更侧重于个体银行的资产负债表风险，而非系统性风险。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 到期转换风险（Maturity transformation risk）指银行用短期负债融资长期资产的结构性风险；本题描述的是抵押品要求增加导致的融资困难，而非到期错配问题；虽然回购是短期融资，但问题的核心是抵押品要求的变化，而非到期期限的错配。
+    \end{itemize}
+\end{explanation}
+
+\checklist{资产负债表风险识别}
+
+
+\begin{question}
+    An investor holds two positions: Long shares worth \$35,000 where the bid-offer spread has a mean and standard deviation of 0.040. Long shares worth \$40,000 where the bid-offer spread has a mean and standard deviation of 0.060. Under 99.0\% confidence, which of the following is the nearest to the worst expected cost of unwinding? (assumed bid-ask spread is normally distributed)
+\end{question}
+
+\begin{choices}
+    \item \$6,327
+    \item \$2,950
+    \item \$3,240
+    \item \$6,500
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 99\%置信下，最坏买卖价差=均值+2.33×标准差
+        \item 第一笔：\$35,000 × (0.040 + 0.040×2.33) = \$4,662
+        \item 第二笔：\$40,000 × (0.060 + 0.060×2.33) = \$7,992
+        \item 平均成本=(4,662+7,992)/2=\$6,327
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{流动性成本最坏情形计算}
+
+
+\begin{question}
+    Each of the following is true about the liquidity risk typology except which is false?
+\end{question}
+
+\begin{choices}
+    \item Liquidity risk has three major types: 1. Transaction (aka, asset, market); 2. Funding (aka, cashflow, balance sheet); and 3. Systemic (aka, crisis)
+    \item Transaction liquidity risk (aka, asset or market liquidity risk) can be modeled by either or both of an exogenous-spread approach or/and an endogenous price approach
+    \item A key example of funding (aka, cash flow or balance sheet) liquidity risk is the rollover risk created by the maturity transformation function in a traditional depository institution
+    \item The liquidity risk typology is well-defined into three buckets because the three major liquidity risk types do not interrelate
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项说法正确。}
+    \begin{itemize}
+        \item 流动性风险有三种主要类型：1. 交易流动性风险（也称为资产或市场流动性风险）；2. 资金流动性风险（也称为现金流或资产负债表流动性风险）；3. 系统性流动性风险（也称为危机流动性风险）；这是流动性风险分类的标准框架。
+    \end{itemize}
+
+    \textbf{B选项说法正确。}
+    \begin{itemize}
+        \item 交易流动性风险可以通过外生利差方法（exogenous-spread approach）或内生价格方法（endogenous price approach）或两者结合进行建模；外生利差方法假设买卖价差是外生的，内生价格方法考虑交易对价格的影响；两种方法都可以用于建模交易流动性风险。
+    \end{itemize}
+
+    \textbf{C选项说法正确。}
+    \begin{itemize}
+        \item 资金流动性风险的一个关键例子是传统存贷款机构中的到期转换功能产生的展期风险；到期转换是指用短期负债融资长期资产，展期风险是指短期负债到期时无法续期的风险；这是资金流动性风险的典型例子。
+    \end{itemize}
+
+    \textbf{D选项说法错误。}
+    \begin{itemize}
+        \item 流动性风险分类明确分为三个类别，但三种主要流动性风险类型是相互关联的，而非互不相关；三类风险可能相互影响并形成因果链，例如：交易流动性风险（资产难以变现）可能导致资金流动性风险（无法获得融资），系统性风险可能同时影响交易和资金流动性；虽然分类有助于理解，但三类风险之间存在密切的相互关系，这是流动性风险管理的重要考量。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性风险类型分析}
+
+
+\begin{question}
+    Allen holds a portfolio with 100,000 shares of a stock and the value of the position is \$4.0 million. The bid price of the stock is \$39 and the offer price is \$41. The stock's daily volatility is 2.59\%. Allen is interesting in calculating the LVaR of the portfolio, Let's assume the stock's arithmetic returns are normally distributed (aka, normal VaR) and the expected daily return rounds to zero. Which is NEAREST to the position's one-day 99.0\% confident liquidity-adjusted value at risk (LVaR)?
+\end{question}
+
+\begin{choices}
+    \item \$123,000
+    \item \$276,000
+    \item \$340,000
+    \item \$400,000
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+   
+
+    \textbf{C选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item 99\% VaR = 0 + 2.59\% × 2.326 × \$4.0 million = \$240,973
+        \item 流动性成本 = (41.00 - 39.00)/40.00 × 0.5 × \$4.0 million = \$100,000
+        \item LVaR = \$240,973 + \$100,000 = \$340,973
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{流动性调整风险价值(LVaR)计算}
+
+
+\begin{question}
+    Lack of liquidity manifests itself in observable, yet hard-to-measure ways. Which of the following refers to "the deterioration in the market price induced by the amount of time it takes to get a trade done?"
+\end{question}
+
+\begin{choices}
+    \item Tightness
+    \item Bid-ask spread
+    \item Adverse price impact
+    \item Slippage
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item 紧度（Tightness）指市场深度，即交易对当前市场价格的影响程度，与交易时间无关；紧度反映的是立即执行交易的成本，而非由于时间延迟导致的价格变化。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 买卖价差（Bid-ask spread）是即时交易的成本，即买入价和卖出价之间的差额，与完成交易所需时间无关；买卖价差是立即执行交易的成本，而非由于交易时间延迟导致的价格恶化。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 价格不利影响（Adverse price impact）指交易活动对均衡价格的影响，通常是由于交易规模（交易量）导致的，而非交易时间；价格不利影响反映的是大额交易对市场价格的冲击，而非时间因素导致的价格变化。
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 滑移（Slippage）是指由于完成交易所需时间导致的市场价格恶化；即使订单量不足以影响市场价格，如果价格在交易执行期间向不利方向变化，也会产生滑移；滑移是时间因素导致的价格变化，反映了市场在执行交易期间的价格波动对交易者的不利影响。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性风险表现形式}
+
+
+
+\section{考点2: Liquidity challenges}
+\setcounter{question}{0}
+
+
+
+\begin{question}
+    A national regulator is developing a set of indicators to serve as warning signs that the liquidity of the stock market could be decreasing. The regulator is particularly concerned about the potential for a "liquidity black hole" to develop which could destabilize the stock market. Which of the following observations would be of greatest concern to the regulator as a signal of a potential liquidity black hole occurring?
+\end{question}
+
+\begin{choices}
+    \item A majority of large investors increasingly follow a trend-following trading strategy
+    \item Portfolio managers sell stocks that have increased in value and reached their price target
+    \item Brokerage firms purchase call options as a hedge against the sale of a large number of put options to institutional investors
+    \item Bid-ask spreads for less liquid stocks become narrower
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项最令人担忧（正确答案）。}
+    \begin{itemize}
+        \item 大多数大型投资者越来越多地采用趋势跟踪交易策略是流动性黑洞的重要预警信号；趋势跟踪策略意味着投资者在市场下跌时同时卖出，在市场上涨时同时买入，导致羊群效应；当市场下跌时，如果大量投资者都采用趋势跟踪策略同时卖出，可能导致流动性黑洞：所有人都想卖出，但没有人想买入，市场流动性突然消失，价格暴跌；这是监管机构最应担心的信号。
+    \end{itemize}
+
+    \textbf{B选项不是令人担忧的信号。}
+    \begin{itemize}
+        \item 投资组合经理卖出已达到价格目标的增值股票是正常的投资行为；这是基于价值的交易决策，而非恐慌性抛售；这种行为不会导致流动性黑洞，因为它是分散的、基于价值的交易，而非同时同向的交易行为。
+    \end{itemize}
+
+    \textbf{C选项不是令人担忧的信号。}
+    \begin{itemize}
+        \item 经纪公司购买看涨期权以对冲向机构投资者出售的大量看跌期权是正常的风险管理行为；这是对冲操作，有助于管理风险，而非导致流动性问题；这种对冲行为实际上有助于稳定市场，而非引发流动性黑洞。
+    \end{itemize}
+
+    \textbf{D选项不是令人担忧的信号。}
+    \begin{itemize}
+        \item 流动性较低的股票的买卖价差收窄表明流动性改善，而非流动性黑洞的预警；价差收窄是积极信号，表明市场流动性改善，交易成本降低；这不是流动性黑洞的信号，而是相反。
+    \end{itemize}
+\end{explanation}
+
+\checklist{流动性黑洞预警指标}
+
+
+\section{考点3: Collateral and leverage}
+\setcounter{question}{0}
+
+\begin{question}
+    On opening day, Master Fund LP has the following economic balance sheet:
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            Cash              & \$100 million  \\
+            \hline
+            Financial assets  & \$200 million  \\
+            \hline
+            Debt              & \$180 million  \\
+            \hline
+            Equity            & \$120 million  \\
+            \hline
+        \end{tabular}
+
+    \end{table}
+    Assume Master Fund LP finances a long position in \$100 million worth of an equity at the margin requirement of 30\%. It invests \$30 million of its own funds and borrows \$70 from a commercial bank, immediately after the trade, its margin account has \$30 million of equity and \$70 million of loan. What is the change in the firm's leverage ratio after this trade?
+\end{question}
+
+\begin{choices}
+    \item From 1.5 to 2.5
+    \item From 2.50 to 3.08
+    \item From 2.5 to 4.11
+    \item From 1.500 to 1.500
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+   
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 初始杠杆率 = 资产/权益 = 300/120 = 2.5
+        \item 交易后资产 = \$70(现金) + \$300(金融资产) = \$370
+        \item 交易后负债 = \$180(债务) + \$70(保证金贷款) = \$250
+        \item 交易后权益 = \$370 - \$250 = \$120
+        \item 交易后杠杆率 = 370/120 = 3.08
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{杠杆率计算}
+
+\begin{question}
+    Given the information below, what is the liquidity-adjusted VAR at the 95\% confidence level assuming the confidence parameter of the spread is equal to 1.96.
+    \begin{itemize}
+        \item Current stock price: \$200
+        \item Stock price standard deviation: 3.0\%
+        \item Bid-ask spread mean: 1.0\%
+        \item Bid-ask spread standard deviation: 0.5\%
+    \end{itemize}
+\end{question}
+
+\begin{choices}
+    \item \$11.73
+    \item \$11.88
+    \item \$13.59
+    \item \$13.74
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{B选项正确。}
+    这个说法正确：
+    \begin{itemize}
+        \item VaR = \$200 × 0.03 × 1.65 = \$9.90
+        \item 流动性成本 = 0.5 × [\$200 × (0.01 + 1.96×0.005)] = \$1.98
+        \item LVaR = \$9.90 + \$1.98 = \$11.88
+    \end{itemize}
+
+\end{explanation}
+
+\checklist{流动性调整风险价值(LVaR)计算}
+
+
+\begin{question}
+    Gilbert has been analyzing bid-ask spreads on over-the-counter equities for the last several years in his job as an equity analyst. He notes that with the exception of the 2007—2008 financial crisis, spreads have generally narrowed over his period of study. If Gilbert is correct, this is an indication that
+\end{question}
+
+\begin{choices}
+    \item Liquidity has improved over the period
+    \item The market has become more resilient over the period
+    \item The depth of the market has improved over the period
+    \item Credit risk has fallen over the period
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+
+    \textbf{A选项正确。}
+    \begin{itemize}
+        \item 买卖价差收窄表明流动性改善；买卖价差是衡量市场流动性的核心指标之一，价差越窄，表明市场流动性越好，交易成本越低，买卖更容易匹配；在2007-2008年金融危机期间价差扩大，之后价差收窄，表明市场流动性从危机中恢复并改善。
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 市场弹性（Resilience）指价格在受到冲击后恢复的速度，与买卖价差收窄没有直接关系；市场弹性反映的是价格恢复能力，而买卖价差反映的是即时交易成本；两者是流动性不同维度的指标，价差收窄不能直接表明市场弹性改善。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 市场深度（Depth）指大额交易对价格的影响程度，与买卖价差收窄没有直接关系；市场深度和买卖价差（紧度，Tightness）是流动性的不同维度；价差反映的是即时交易成本，而深度反映的是大额交易的价格影响；价差收窄不能直接表明市场深度改善。
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
+        \item 买卖价差收窄不能直接表明信用风险下降；买卖价差主要反映流动性成本和市场流动性，而非信用风险；虽然信用风险可能影响价差（信用风险高的资产可能价差更大），但价差收窄主要反映的是流动性改善，而非信用风险的变化。
+    \end{itemize}
+\end{explanation}
+
+\checklist{市场流动性指标分析}
+
+
+\begin{question}
+    On opening day, Lever Brothers Multistrategy Master Fund LP has the following economic balance sheet: \$100 in Cash, \$20 in Debt, and Equity of \$80. Assume Lever Brothers creates a short position in a stock, borrowing \$100 of the security and selling it. It has thus created a liability equal to the value of the borrowed stock, and an asset, equal in value, consisting of the cash proceeds from the short sale. The cash cannot be used to fund other investments, as it is collateral; the broker uses it to ensure that the short stock can be repurchased and returned to the stock lender. It remains in a segregated short account, offset by the value of the borrowed stock. The stock might rise in price, in which case the \$100 of proceeds would not suffice to cover its return to the borrower. Lever Brothers must therefore in addition put up margin of \$50. After the trade, what is the leverage in the firm's economic balance sheet?
+\end{question}
+
+\begin{choices}
+    \item 1.25
+    \item 1.50
+    \item 1.75
+    \item 2.50
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 交易后资产 = \$200 = \$50现金 + \$150经纪人应付款
+        \item 交易后负债 = \$120 = \$20债务 + \$100借入股票
+        \item 权益 = \$80 = \$200 - \$120
+        \item 杠杆率 = 200/80 = 2.50
+    \end{itemize}
+\end{explanation}
+
+\checklist{杠杆率计算}
+
+
+\begin{question}
+    Suppose a firm with a simple capital structure has assets of \$20.0 million and debt of \$10.0 million. Return on assets (ROA) is 9.0\% and cost of debt is 4.0\%, such that the firm's leverage is 2.0 and its return on equity (ROE) is 14.0\%. If the firm borrows an additional \$6.0 million at the same cost of 4.0\%, and asset returns are fixed, what is the firm's new leverage and return on equity (ROE)?
+\end{question}
+
+\begin{choices}
+    \item Leverage = 1.7 and ROE = 13.3\%
+    \item Leverage = 2.0 and ROE = 15.7\%
+    \item Leverage = 2.3 and ROE = 23.5\%
+    \item Leverage = 2.6 and ROE = 17.0\%
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+   
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 新资产 = \$26.0 million
+        \item 新债务 = \$16.0 million
+        \item 权益保持不变 = \$10.0 million
+        \item 新杠杆率 = 26.0/10.0 = 2.60
+        \item 新ROE = (26.0×9\% - 16.0×4\%)/10.0 = 17.0\%
+    \end{itemize}
+\end{explanation}
+
+\checklist{杠杆率与ROE计算}
+
+
+
+
+
+\begin{question}
+    A bank has the following financial metrics: ROE = 18\%, ROA = 12\%, Assets = \$600 million, Equity = \$300 million, and Liabilities = \$300 million. If the bank wants to reduce its ROE to 15\%, which of the following actions would achieve this goal?
+\end{question}
+
+\begin{choices}
+    \item Increase both Assets and Liabilities by \$300 million
+    \item Decrease both Assets and Liabilities by \$300 million
+    \item Increase both Assets and Liabilities by \$150 million
+    \item Decrease both Assets and Liabilities by \$150 million
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+  
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 目标ROE = 15\%
+        \item 目标净利润 = 300 × 15\% = 45
+        \item 资产和负债同时减少150，保持权益不变，降低杠杆率，从而降低ROE。
+    \end{itemize}
+\end{explanation}
+
+\checklist{ROE调整策略}
+
+
+
+\end{document}

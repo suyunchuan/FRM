@@ -3,9 +3,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 
@@ -129,13 +129,35 @@
     \end{center}
 
     If a portfolio consists of Johnson \& Johnson of \$8,000 and Walgreens of \$2,000, which of the following is the expected return and volatility of that portfolio?
+ 
+        假设强生公司（Johnson and Johnson）和沃尔格林公司（Walgreen Company）具有以下预期收益率和波动率，相关系数为22\%：
+    
+        \begin{center}
+            \begin{tabular}{|l|c|c|}
+                \hline
+                \textbf{股票} & \textbf{预期收益率} & \textbf{波动率} \\
+                \hline
+                Johnson \& Johnson & 7\% & 16\% \\
+                \hline
+                Walgreens & 10\% & 20\% \\
+                \hline
+            \end{tabular}
+        \end{center}
+    
+        如果一个投资组合由8,000美元的强生公司股票和2,000美元的沃尔格林公司股票组成，那么该投资组合的预期收益率和波动率是下列哪一项？
+    
 \end{question}
     
+
     \begin{choices}
-        \item Expected return: 7.6\%, Volatility: 14.23\%  
-        \item Expected return: 8.0\%, Volatility: 15.00\%  
-        \item Expected return: 7.6\%, Volatility: 13.50\%  
-        \item Expected return: 8.5\%, Volatility: 16.00\%  
+        \item Expected return: 7.6\%, Volatility: 14.23\%  \\
+        预期收益率：7.6\%，波动率：14.23\%
+        \item Expected return: 8.0\%, Volatility: 15.00\%  \\
+        预期收益率：8.0\%，波动率：15.00\%
+        \item Expected return: 7.6\%, Volatility: 13.50\%  \\
+        预期收益率：7.6\%，波动率：13.50\%
+        \item Expected return: 8.5\%, Volatility: 16.00\%  \\
+        预期收益率：8.5\%，波动率：16.00\%
     \end{choices}
 
     \begin{correctanswer}
@@ -209,14 +231,35 @@
         \end{tabular}
     \end{center}
 
-    If the portfolio changes from an equal-weight allocation to 65\% equities and 35\% fixed income, what is the change in the portfolio's expected return?
+    If the portfolio changes from an equal-weight allocation to 65\% equities and 35\% fixed income, what is the change in the portfolio's expected return?\\
+    一位投资组合经理正在考虑调整一个双资产投资组合的配置。两种资产的当前数据如下：
+
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline
+            \makebox[3cm][l]{\textbf{资产类别}} & \textbf{预期收益率} & \textbf{波动率} \\
+            \hline
+            \makebox[3cm][l]{固定收益} & 4.5\% & 15.0\% \\
+            \hline
+            \makebox[3cm][l]{股票} & 8.5\% & 22.0\% \\
+            \hline
+            \multicolumn{3}{|l|}{资产之间的相关系数 = 0.35} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    如果投资组合从等权重配置变为65\%股票和35\%固定收益，那么投资组合预期收益率的变化是多少？
 \end{question}
 
 \begin{choices}
-    \item No change
-    \item Increase of 0.65\%
-    \item Increase of 1.30\%
-    \item Increase of 1.95\%
+    \item No change\\
+    没有变化
+    \item Increase of 0.65\%\\
+    增加0.65\%
+    \item Increase of 1.30\%\\
+    增加1.30\%
+    \item Increase of 1.95\%\\
+    增加1.95\%
 \end{choices}
 
 \begin{correctanswer}
@@ -254,17 +297,22 @@
 
 \begin{question}
     A portfolio analyst at a mutual fund company is developing a pairs trading strategy using two highly liquid stocks. When analyzing the risk-return characteristics of different portfolio weights, 
-    which of the following statements is MOST accurate?
+    which of the following statements is MOST accurate?\\
+    一位共同基金公司的投资组合分析师正在使用两只高度流动的股票开发对冲交易策略。在分析不同投资组合权重下的风险回报特征时，哪一项陈述是最准确的？
 \end{question}
 
 \begin{choices}
-    \item The diversification benefit reaches its maximum when the correlation coefficient approaches 0.5, assuming other parameters remain constant.
+    \item The diversification benefit reaches its maximum when the correlation coefficient approaches 0.5, assuming other parameters remain constant.\\
+    分散化收益在相关系数接近0.5时达到最大，假设其他参数保持不变。
     
-    \item The risk of any two-asset combination follows a linear relationship with the weights in mean-standard deviation space.
+    \item The risk of any two-asset combination follows a linear relationship with the weights in mean-standard deviation space.\\
+    两资产组合的风险与权重之间呈线性关系。
     
-    \item The risk of a two-asset portfolio with no short selling constraints cannot be lower than that of the less risky asset.
+    \item The risk of a two-asset portfolio with no short selling constraints cannot be lower than that of the less risky asset.\\
+    没有卖空限制的两资产组合的风险不能低于风险较小的资产。
     
-    \item For a two-asset portfolio, the minimum variance weights can be determined through a closed-form solution using variances and correlation.
+    \item For a two-asset portfolio, the minimum variance weights can be determined through a closed-form solution using variances and correlation.\\
+    对于两资产组合，最小方差权重可以通过方差和相关系数通过封闭形式求解。
 \end{choices}
 
 \begin{correctanswer}
@@ -301,14 +349,19 @@
 
 
 \begin{question}
-    A portfolio, invested in two assets with equal weights, has a volatility of 11.18\% when the covariance (and correlation) between the asset returns is zero. If the covariance increases from zero to 0.0160, while the weights and individual asset volatilities remain unchanged, what is the change to portfolio volatility?
+    A portfolio, invested in two assets with equal weights, has a volatility of 11.18\% when the covariance (and correlation) between the asset returns is zero. If the covariance increases from zero to 0.0160, while the weights and individual asset volatilities remain unchanged, what is the change to portfolio volatility? \\
+    一个投资组合，投资于两个具有相等权重的资产，当资产回报之间的协方差（和相关系数）为零时，其波动率为11.18\%。如果协方差从零增加到0.0160，而权重和个别资产的波动率保持不变，那么投资组合波动率的变化是多少？
 \end{question}
 
 \begin{choices}
-    \item Increase by 3.14\%
-    \item Increase by 6.29\%
-    \item Increase by 12.65\%
-    \item Increase by 15.81\%
+    \item Increase by 3.14\%\\
+    增加3.14\%
+    \item Increase by 6.29\%\\
+    增加6.29\%
+    \item Increase by 12.65\%\\
+    增加12.65\%
+    \item Increase by 15.81\%\\
+    增加15.81\%
 \end{choices}
 
 \begin{correctanswer}
@@ -350,17 +403,22 @@
 
 
 \begin{question}
-    In modern portfolio theory, when plotting portfolios on a graph with risk (measured by standard deviation) on the horizontal axis and expected return on the vertical axis, what does the efficient frontier represent?
+    In modern portfolio theory, when plotting portfolios on a graph with risk (measured by standard deviation) on the horizontal axis and expected return on the vertical axis, what does the efficient frontier represent?\\
+    在现代投资组合理论中，当在图表上绘制投资组合时，横轴为风险（以标准差衡量），纵轴为预期收益率，有效前沿代表什么？
 \end{question}
 
 \begin{choices}
-    \item All portfolios that achieve maximum returns regardless of their risk levels
+    \item All portfolios that achieve maximum returns regardless of their risk levels\\
+    所有投资组合，无论风险水平如何，都能实现最大收益
     
-    \item The set of portfolios that offer the highest expected return for each level of risk
+    \item The set of portfolios that offer the highest expected return for each level of risk\\
+    每个风险水平下提供最高预期收益率的投资组合集合
     
-    \item All portfolios with minimum risk levels regardless of their expected returns
+    \item All portfolios with minimum risk levels regardless of their expected returns\\
+    无论预期收益率如何，所有风险水平最低的投资组合
     
-    \item The collection of portfolios with extreme allocations that maximize either risk or return
+    \item The collection of portfolios with extreme allocations that maximize either risk or return\\
+    极端配置的投资组合集合，最大化风险或收益
 \end{choices}
 
 \begin{correctanswer}
@@ -396,7 +454,10 @@
 
 
 \begin{question}
-    Consider the portfolio possibilities curve for stocks and bonds shown below. The expected return on stocks is 18\% (represented by point Z), and the expected return on bonds is 8\% (represented by point Y). Which point on the graph most likely represents a portfolio with a 90\% allocation in stocks and a 10\% allocation in bonds?
+    Consider the portfolio possibilities curve for stocks and bonds shown below. The expected return on stocks is 18\% (represented by point Z), and the expected return on bonds is 8\% (represented by point Y). Which point on the graph most likely represents a portfolio with a 90\% allocation in stocks and a 10\% allocation in bonds?\\
+    \includegraphics[width=0.5\textwidth]{images/有效边界第2题.jpg}
+    
+    考虑下面显示的股票和债券投资组合可能性曲线。股票的预期收益率为18\%（由点Z表示），债券的预期收益率为8\%（由点Y表示）。图表上哪个点最可能代表一个90\%的股票配置和10\%的债券配置的投资组合？
    
     \includegraphics[width=0.5\textwidth]{images/有效边界第2题.jpg}
     
@@ -458,16 +519,38 @@
     \end{center}
 
     If no borrowing and no short selling is permitted, which of the following statements about the potential portfolios constructed from these two stocks is correct?
+    \\
+    一位风险管理师正在分析由两只科技股组合而成的投资组合的特征，这两只股票具有以下属性：
+
+    \begin{center}
+        \begin{tabular}{|l|c|}
+            \hline
+            \textbf{特征} & \textbf{数值} \\
+            \hline
+            股票A标准差 & 16\% \\
+            \hline
+            股票B标准差 & 22\% \\
+            \hline
+            相关系数 & -1 \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    如果不允许借入和卖空，那么下列关于由这两只股票构建的潜在投资组合的陈述中，哪一项是正确的？
 \end{question}
 
 \begin{choices}
-    \item The portfolio's risk level can potentially exceed the volatility of the more risky stock (22\%)
+    \item The portfolio's risk level can potentially exceed the volatility of the more risky stock (22\%)\\
+    投资组合的风险水平可能超过风险最高的股票（22\%）
     
-    \item Through optimal weighting, it is theoretically possible to construct a risk-free portfolio
+    \item Through optimal weighting, it is theoretically possible to construct a risk-free portfolio\\
+    通过最优权重，理论上可以构建一个无风险投资组合
     
-    \item Every possible combination of these stocks will result in an optimal risk-return tradeoff
+    \item Every possible combination of these stocks will result in an optimal risk-return tradeoff\\
+    这些股票的所有可能组合都会导致最优的风险收益权衡
     
-    \item The risk-return combinations of all possible portfolios will plot as a linear relationship
+    \item The risk-return combinations of all possible portfolios will plot as a linear relationship\\
+    所有可能投资组合的风险收益组合将绘制成线性关系
 \end{choices}
 
 \begin{correctanswer}
@@ -520,17 +603,22 @@
 
 
 \begin{question}
-    During a portfolio theory lecture, Professor Zhang draws the portfolio possibilities curve (also known as the minimum-variance frontier) on the board. When discussing the mathematical properties of this curve in risk-return space, a student asks about its shape. Which of the following best describes the geometric characteristics of this curve?
+    During a portfolio theory lecture, Professor Zhang draws the portfolio possibilities curve (also known as the minimum-variance frontier) on the board. When discussing the mathematical properties of this curve in risk-return space, a student asks about its shape. Which of the following best describes the geometric characteristics of this curve?\\
+    在一次投资组合理论讲座中，张教授在黑板上绘制了投资组合可能性曲线（也称为最小方差前沿）。当讨论这条曲线在风险收益空间中的数学性质时，一个学生询问它的形状。哪一项最准确地描述了这条曲线的几何特征？
 \end{question}
 
 \begin{choices}
-    \item The entire curve exhibits a strictly convex shape, bending outward from the origin throughout its length
+    \item The entire curve exhibits a strictly convex shape, bending outward from the origin throughout its length\\
+    整条曲线呈严格凸形，从原点开始向外弯曲
     
-    \item The entire curve demonstrates a strictly concave shape, bending inward toward the origin at all points
+    \item The entire curve demonstrates a strictly concave shape, bending inward toward the origin at all points\\
+    整条曲线呈严格凹形，从原点开始向内弯曲
     
-    \item The curve is convex (bending outward) above the minimum variance portfolio and concave (bending inward) below it
+    \item The curve is convex (bending outward) above the minimum variance portfolio and concave (bending inward) below it\\
+    曲线在最小方差投资组合上方呈凸形（向外弯曲），在最小方差投资组合下方呈凹形（向内弯曲）
     
-    \item The curve is concave (bending inward) above the minimum variance portfolio and convex (bending outward) below it
+    \item The curve is concave (bending inward) above the minimum variance portfolio and convex (bending outward) below it\\
+    曲线在最小方差投资组合上方呈凹形（向内弯曲），在最小方差投资组合下方呈凸形（向外弯曲）
 \end{choices}
 
 \begin{correctanswer}
@@ -567,14 +655,19 @@
 
 
 \begin{question}
-    A portfolio manager is implementing Markowitz portfolio optimization for a new mutual fund. Which of the following inputs is least likely required for constructing the efficient frontier?
+    A portfolio manager is implementing Markowitz portfolio optimization for a new mutual fund. Which of the following inputs is least likely required for constructing the efficient frontier?\\
+    一位投资组合经理正在为一个新的共同基金实施Markowitz投资组合优化。哪一项输入最不可能用于构建有效前沿？
 \end{question}
 
 \begin{choices}
-    \item Expected returns of individual securities in the investment universe
-    \item Correlation matrix between all pairs of securities
-    \item Average risk tolerance level of target investors
-    \item Standard deviations of individual securities in the investment universe
+    \item Expected returns of individual securities in the investment universe\\
+    投资组合中个别证券的预期收益率
+    \item Correlation matrix between all pairs of securities\\
+    所有证券对之间的相关系数矩阵
+    \item Average risk tolerance level of target investors\\
+    目标投资者的平均风险承受能力
+    \item Standard deviations of individual securities in the investment universe\\
+    投资组合中个别证券的标准差
 \end{choices}
 
 \begin{correctanswer}
@@ -610,14 +703,19 @@
 
 
 \begin{question}
-    A portfolio manager is evaluating 15 potential stocks for a new fund launch. To construct the most efficient portfolio, the manager should:
+    A portfolio manager is evaluating 15 potential stocks for a new fund launch. To construct the most efficient portfolio, the manager should:\\
+    一位投资组合经理正在评估15只潜在股票以启动一个新的基金。为了构建最有效的投资组合，经理应该：
 \end{question}
 
 \begin{choices}
-    \item Allocate equal weights to all 15 stocks to maximize diversification.
-    \item Select only stocks with below-average volatility to minimize portfolio risk.
-    \item Identify the combination that provides the highest expected return for a given risk level.
-    \item Exclude stocks that show strong negative correlations with the market.
+    \item Allocate equal weights to all 15 stocks to maximize diversification.\\
+    将等权重分配给所有15只股票以最大化分散化。
+    \item Select only stocks with below-average volatility to minimize portfolio risk.\\
+    仅选择波动率低于平均水平的股票以最小化投资组合风险。
+    \item Identify the combination that provides the highest expected return for a given risk level.\\
+    识别提供给定风险水平下最高预期收益的组合。
+    \item Exclude stocks that show strong negative correlations with the market.\\
+    排除与市场强负相关的股票。
 \end{choices}
 
 \begin{correctanswer}
@@ -652,7 +750,8 @@
 
 
 \begin{question}
-    A portfolio analyst at a pension fund is studying the characteristics of efficient portfolios constructed from two stocks X and Y. The following graph shows four possible portfolio opportunity curves in the mean-standard deviation space:
+    A portfolio analyst at a pension fund is studying the characteristics of efficient portfolios constructed from two stocks X and Y. The following graph shows four possible portfolio opportunity curves in the mean-standard deviation space:\\
+   
 
     \begin{center}
         \begin{tikzpicture}
@@ -673,13 +772,38 @@
     \end{center}
 
     Which curve is least likely to represent the efficient frontier for portfolios combining stocks X and Y?
+    \\
+    一位养老基金的投资组合分析师正在研究由两只股票X和Y构建的有效投资组合的特征。下图显示了四种可能的投资组合机会曲线在均值-标准差空间中：
+    
+    \begin{center}
+        \begin{tikzpicture}
+            % 坐标轴
+            \draw[->] (0,0) -- (6,0) node[right] {$\sigma$};
+            \draw[->] (0,0) -- (0,6) node[above] {$\mu$};
+            
+            % 点Y和X
+            \filldraw (0,1) circle (2pt) node[left] {Y};
+            \filldraw (5,4) circle (2pt) node[right] {X};
+            
+            % 四条曲线及其标签
+            \draw[thick] (0,1) .. controls (2,4) .. (5,4) node[midway, above] {A};
+            \draw[thick] (0,1) .. controls (2,3) .. (5,4) node[midway, above] {B};
+            \draw[thick] (0,1) -- (5,4) node[midway, below] {C};
+            \draw[thick] (0,1) .. controls (3,1.5) .. (5,4) node[midway, below] {D};
+        \end{tikzpicture}
+    \end{center}
+    哪条曲线最不可能代表由股票X和Y构建的有效投资组合的前沿？
 \end{question}
 
 \begin{choices}
-    \item Curve A, which is strongly convex throughout
-    \item Curve B, which is moderately convex
-    \item Curve C, which is linear
-    \item Curve D, which is concave throughout
+    \item Curve A, which is strongly convex throughout\\
+    曲线A，在整个过程中呈强凸形
+    \item Curve B, which is moderately convex\\
+    曲线B，呈中等凸形
+    \item Curve C, which is linear\\
+    曲线C，呈直线形态
+    \item Curve D, which is concave throughout\\
+    曲线D，在整个过程中呈凹形
 \end{choices}
 
 \begin{correctanswer}
@@ -713,14 +837,19 @@
 
 
 \begin{question}
-    A portfolio manager at a pension fund is exploring diversification strategies. She is considering adding a new asset class to an existing portfolio and is particularly interested in how correlation affects the efficient frontier. When the correlation between two assets in a portfolio is reduced, how does this impact the efficient frontier?
+    A portfolio manager at a pension fund is exploring diversification strategies. She is considering adding a new asset class to an existing portfolio and is particularly interested in how correlation affects the efficient frontier. When the correlation between two assets in a portfolio is reduced, how does this impact the efficient frontier?\\
+    一位养老基金的投资组合经理正在探索分散化策略。她正在考虑将一个新的资产类别添加到一个现有的投资组合中，并且特别感兴趣的是相关性如何影响有效前沿。当投资组合中两只资产的相关性降低时，这对有效前沿有何影响？
 \end{question}
 
 \begin{choices}
-    \item The efficient frontier remains stable unless return expectations change, in which case it extends to the upper right with minimal risk impact.
-    \item The efficient frontier shifts down and to the left, indicating increased portfolio risk due to negative correlation.
-    \item The efficient frontier expands to the northwest, reflecting reduced portfolio risk while maintaining or potentially enhancing returns.
-    \item The efficient frontier stays stable unless individual asset volatilities change, as it primarily depends on each asset's standard deviation.
+    \item The efficient frontier remains stable unless return expectations change, in which case it extends to the upper right with minimal risk impact.\\
+    有效前沿保持稳定，除非预期收益发生变化，在这种情况下，它向右上方延伸，风险影响最小。
+    \item The efficient frontier shifts down and to the left, indicating increased portfolio risk due to negative correlation.\\
+    有效前沿向下和向左移动，表明由于负相关性导致的投资组合风险增加。
+    \item The efficient frontier expands to the northwest, reflecting reduced portfolio risk while maintaining or potentially enhancing returns.\\
+    有效前沿向西北方向扩展，反映出组合风险降低，同时可能提高收益。
+    \item The efficient frontier stays stable unless individual asset volatilities change, as it primarily depends on each asset's standard deviation.\\
+    有效前沿保持稳定，除非个别资产的波动率发生变化，因为它主要取决于每个资产的标准差。
 \end{choices}
 
 \begin{correctanswer}
@@ -758,12 +887,17 @@
 
 
 \begin{question}
-    Two investors, Alice and Bob, have different risk preferences. Alice's indifference curve is steeper than Bob's, indicating their varying attitudes towards risk. Both investors prefer less risk to more and seek higher returns. Which of the following accurately describes the optimal portfolio position and risk aversion level for Alice compared to Bob?
+    Two investors, Alice and Bob, have different risk preferences. Alice's indifference curve is steeper than Bob's, indicating their varying attitudes towards risk. Both investors prefer less risk to more and seek higher returns. Which of the following accurately describes the optimal portfolio position and risk aversion level for Alice compared to Bob?\\
+    两位投资者，Alice和Bob有不同的风险偏好。Alice的无差异曲线比Bob的更陡峭，表明他们对风险的不同态度。两位投资者都更喜欢风险较低的投资组合，并寻求更高的回报。哪一项准确描述了Alice相对于Bob的最优投资组合位置和风险厌恶程度？
     \begin{choices}
-        \item Positioned lower on the efficient frontier; Lower risk aversion
-        \item Positioned lower on the efficient frontier; Higher risk aversion
-        \item Positioned higher on the efficient frontier; Higher risk aversion
-        \item Positioned higher on the efficient frontier; Lower risk aversion
+        \item Positioned lower on the efficient frontier; Lower risk aversion\\
+        位于有效前沿的较低位置；较低的风险厌恶程度
+        \item Positioned lower on the efficient frontier; Higher risk aversion\\
+        位于有效前沿的较低位置；较高的风险厌恶程度
+        \item Positioned higher on the efficient frontier; Higher risk aversion\\
+        位于有效前沿的较高位置；较高的风险厌恶程度
+        \item Positioned higher on the efficient frontier; Lower risk aversion\\
+        位于有效前沿的较高位置；较低的风险厌恶程度
     \end{choices}
 \end{question}
 
@@ -801,7 +935,7 @@
 
 
 \begin{question}
-    An investment manager is responsible for the asset allocation for its client. He collects information on all available combinations in the market as follows:
+    An investment manager is responsible for the asset allocation for its client. He collects information on all available combinations in the market as follows:\\
 
     \begin{center}
     \begin{tabular}{|c|c|c|}
@@ -817,12 +951,33 @@
     \end{center}
 
     As a rational investor, which portfolios will be chosen?
-    \begin{choices}
-        \item 1 and 4.
-        \item 1 and 3.
-        \item 2 and 3.
-        \item 3 and 4.
-    \end{choices}
+    \\
+    一位投资经理负责为其客户进行资产配置。他收集了市场上所有可用组合的信息如下：\\
+    
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    投资组合 & 预期收益率 & 标准差 \\
+    \hline
+    1 & 4\% & 2\% \\
+    2 & 6\% & 14\% \\
+    3 & 4\% & 4\% \\
+    4 & 10\% & 14\% \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    作为理性投资者，会选择哪些投资组合？
+  
+   
+       
+        \begin{choices}
+            \item 1 and 4.
+            \item 1 and 3.
+            \item 2 and 3.
+            \item 3 and 4.
+        \end{choices}
+   
 \end{question}
 
 \begin{correctanswer}
@@ -870,16 +1025,22 @@
 
 \begin{question}
     An investment advisor is explaining portfolio optimization to a client. According to the capital asset pricing model (CAPM), which of the following statements about the efficient frontier is MOST accurate?
+    \\
+    一位投资顾问正在向客户解释投资组合优化。根据资本资产定价模型（CAPM），哪一项关于有效前沿的陈述是最准确的？
 \end{question}
 
 \begin{choices}
-    \item The capital market line represents the optimal combination of the risk-free asset and the zero-beta portfolio in mean-variance space.
+        \item The capital market line represents the optimal combination of the risk-free asset and the zero-beta portfolio in mean-variance space.\\
+    资本市场线代表无风险资产和零贝塔组合在均值-方差空间中的最佳组合。
     
-    \item The capital market line's slope primarily reflects market liquidity conditions and trading volume patterns.
+    \item The capital market line's slope primarily reflects market liquidity conditions and trading volume patterns.\\
+    资本市场线的斜率主要反映了市场流动性和交易量模式。
     
-    \item The efficient frontier exhibits perfect linearity in mean-variance space when assets demonstrate strong positive correlations.
+    \item The efficient frontier exhibits perfect linearity in mean-variance space when assets demonstrate strong positive correlations.\\
+    有效前沿在均值-方差空间中呈完美线性关系，当资产表现出强正相关时。
     
-    \item The efficient frontier assumes no transaction costs, no taxes, a common investment horizon for all investors, and that the return distribution has no skewness.
+    \item The efficient frontier assumes no transaction costs, no taxes, a common investment horizon for all investors, and that the return distribution has no skewness.\\
+    有效前沿假设没有交易成本、没有税收、所有投资者都有相同的投资期限，并且收益分布没有偏度。
 \end{choices}
 
 \begin{correctanswer}
@@ -915,16 +1076,22 @@
 
 \begin{question}
     On the capital market line (CML), how is a portfolio positioned to the right of the market portfolio constructed?
+    \\
+    在资本市场线（CML）上，如何构建位于市场组合右侧的投资组合？
 \end{question}
 
 \begin{choices}
-    \item Leveraging to invest more than 100\% in the market portfolio
+    \item Leveraging to invest more than 100\% in the market portfolio\\
+    杠杆投资超过100\%的市场组合
     
-    \item Achieving complete diversification of the portfolio
+    \item Achieving complete diversification of the portfolio\\
+    实现投资组合的完全分散化
     
-    \item Investing primarily in risk-free assets
+    \item Investing primarily in risk-free assets\\
+    主要投资于无风险资产
     
-    \item Combining risk-free assets with the market portfolio in equal proportions
+    \item Combining risk-free assets with the market portfolio in equal proportions\\
+    以相等比例结合无风险资产和市场组合
 \end{choices}
 
 \begin{correctanswer}
@@ -959,16 +1126,22 @@
 
 \begin{question}
     In Capital Market Theory, the optimal market portfolio represents the most efficient combination of all risky assets. According to the theory, how is this market portfolio specifically determined?
+    \\
+    在资本资产定价模型中，最优市场组合代表了所有风险资产的最有效组合。根据理论，这个市场组合是如何具体确定的？
 \end{question}
 
 \begin{choices}
-    \item By drawing a tangent line from any arbitrary point on the expected return axis to the efficient frontier
+    \item By drawing a tangent line from any arbitrary point on the expected return axis to the efficient frontier\\
+    从预期收益率轴上的任意任意点画一条切线到有效前沿
     
-    \item By constructing a straight line from the origin to any portfolio located on the efficient frontier
+    \item By constructing a straight line from the origin to any portfolio located on the efficient frontier\\
+    从原点到有效前沿上的任意组合构造一条直线
     
-    \item By identifying the point where a line from the risk-free rate is tangent to the efficient frontier
+    \item By identifying the point where a line from the risk-free rate is tangent to the efficient frontier\\
+    识别无风险利率点与有效前沿的切点
     
-    \item By locating where the efficient frontier intersects with investors' highest attainable utility curve
+    \item By locating where the efficient frontier intersects with investors' highest attainable utility curve\\
+    定位有效前沿与投资者最高可实现效用曲线的交点
 \end{choices}
 
 \begin{correctanswer}
@@ -1018,17 +1191,30 @@
         \item Subsequently: Borrows 40\% at risk-free rate to invest 140\% in M, resulting in Sharpe ratio $S_2$
     \end{itemize}
 
-    Which of the following statements best describes the impact of this leveraged position on portfolio efficiency and Sharpe ratios?
+    Which of the following statements best describes the impact of this leveraged position on portfolio efficiency and Sharpe ratios?\\
+    一位投资组合经理正在分析杠杆对投资组合效率的影响。考虑以下情景：
+    \begin{itemize}
+        \item 市场组合（M）仅包含风险资产
+        \item 市场中有无风险资产
+        \item 初始：100\%投资于M，夏普比率为$S_1$
+        \item 随后：借入40\%无风险利率资金，投资140\%于M，夏普比率为$S_2$
+    \end{itemize}
+    下列关于这一杠杆头寸对投资组合效率和夏普比率影响的陈述中，哪一项描述得最准确？
 \end{question}
 
 \begin{choices}
-    \item The portfolio becomes inefficient and $S_2$ is lower than $S_1$ due to increased leverage risk
+    \item The portfolio becomes inefficient and $S_2$ is lower than $S_1$ due to increased leverage risk\\
+    由于杠杆风险增加，投资组合变得无效，$S_2$低于$S_1$
     
     \item The portfolio remains efficient but $S_2$ decreases to reflect the higher risk exposure
-    
+    \\
+    投资组合保持有效，但$S_2$降低以反映更高的风险暴露
     \item The portfolio becomes inefficient although $S_2$ equals $S_1$ due to borrowing constraints
-    
+    \\
+    尽管$S_2$等于$S_1$，但由于借贷约束，投资组合变得无效
     \item The portfolio remains efficient and $S_2$ equals $S_1$ despite the increased leverage
+    \\
+    尽管杠杆增加，投资组合保持有效，$S_2$等于$S_1$
 \end{choices}
 
 \begin{correctanswer}
@@ -1087,13 +1273,20 @@
 
 \begin{question}
     A risk analyst at a fixed-income investment firm is currently evaluating various models to optimize portfolio performance. In this context, which of the following is a DIFFERENCE between the capital asset pricing model (CAPM) and the capital market line (CML)?
+    \\
+    一位固定收益投资公司的风险分析师目前正在评估各种模型以优化投资组合表现。在这个背景下，哪一项是资本资产定价模型（CAPM）和资本市场线（CML）之间的区别？
 \end{question}
 
 \begin{choices}
-    \item CML includes risk-free assets, and CAPM also includes risk-free assets.
-    \item CAPM applies only to efficient portfolios, while CML applies to individual securities and all types of portfolios.
-    \item In CAPM, risk is measured as systematic risk (beta), while in CML, risk is measured as total risk (volatility).
+    \item CML includes risk-free assets, and CAPM also includes risk-free assets.\\
+    CML包含无风险资产，CAPM也包含无风险资产。
+    \item CAPM applies only to efficient portfolios, while CML applies to individual securities and all types of portfolios.\\
+    CAPM仅适用于有效投资组合，而CML适用于个别证券和所有类型的投资组合。
+    \item In CAPM, risk is measured as systematic risk (beta), while in CML, risk is measured as total risk (volatility).\\
+    在CAPM中，风险被衡量为系统性风险（贝塔），而在CML中，风险被衡量为总风险（波动性）。
     \item Both CAPM and CML assume that a portfolio is diversified and efficient, but CML in particular represents the risk-return trade-off of an effective portfolio.
+    \\
+    两者都假设投资组合是分散和有效的，但CML特别代表了有效投资组合的风险收益权衡。
 \end{choices}
 
 
@@ -1136,13 +1329,23 @@
 
 \begin{question}
     A portfolio manager is explaining the relationship between the Markowitz efficient frontier and capital market line to junior analysts. When discussing how the efficient frontier changes after introducing risk-free assets, which of the following statements is correct?
+    \\
+    一位投资组合经理正在向初级分析师解释马科维茨有效前沿和资本市场线之间的关系。在讨论引入无风险资产后有效前沿如何变化时，哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
         \item The capital allocation line (CAL) is obtained by combining any risky asset with the risk-free asset, with its slope representing the portfolio's Treynor ratio.
+        \\
+        资本配置线（CAL）是通过将任何风险资产与无风险资产结合得到的，其斜率代表投资组合的特雷诺比率。
         \item Adding risk-free assets to a portfolio will result in lower returns compared to a pure risky asset portfolio, as risk-free returns drag down overall performance.
+        \\
+        将无风险资产添加到投资组合中会导致与纯风险资产投资组合相比收益降低，因为无风险回报拖累了整体表现。
         \item The capital market line (CML) implies that investors should allocate their investments between risk-free assets and the market portfolio.
+        \\
+        资本市场线（CML）意味着投资者应该在无风险资产和市场组合之间分配他们的投资。
         \item The CML is a special case of CAL, with both combining risky and risk-free assets, but the risky component of CML has higher risk than that of CAL.
+        \\
+        CML是CAL的一个特例，结合了风险资产和无风险资产，但CML的风险资产比CAL的风险资产风险更高。
     \end{choices}
     
     \begin{correctanswer}
@@ -1177,16 +1380,23 @@
 
     \begin{question}
         A wealth management firm is developing an automated portfolio advisory platform for their clients. In the algorithm design phase, the team is discussing how to incorporate the efficient frontier concept. When explaining to stakeholders how the platform will optimize client portfolios, which of the following statements about the efficient frontier would be most accurate?
+        \\
+        一家财富管理公司正在为其客户开发一个自动投资组合咨询平台。在算法设计阶段，团队正在讨论如何纳入有效前沿概念。当向利益相关者解释平台如何优化客户投资组合时，哪一项关于有效前沿的陈述最准确？
     \end{question}
 
 \begin{choices}
     \item Markowitz's theory assumes perfect capital markets where all traders can access available information costlessly, thus eliminating the need for return distribution assumptions.
-
+    \\
+    马科维茨理论假设完美资本市场，所有交易者可以无成本地获取可用信息，因此不需要对收益率分布做出假设。
     \item The Capital Market Line (CML) is a straight line connecting the risk-free asset with the zero-beta portfolio in the risk-return space.
-
+    \\
+    资本市场线（CML）是一条连接无风险资产和零贝塔组合的直线，在风险收益空间中。
     \item A portfolio composed of two risky assets will necessarily outperform a portfolio consisting of one risky asset and one risk-free asset.
-
+    \\
+    一个由两个风险资产组成的组合必定优于一个由一个风险资产和一个无风险资产组成的组合。
     \item When investors move beyond the market portfolio point on the CML, they borrow at the risk-free rate to increase their investment position, aiming to achieve higher expected returns while taking on greater risk.
+    \\
+    当投资者超越CML上的市场组合点时，他们以无风险利率借款以增加投资头寸，旨在获得更高的预期回报，同时承担更大的风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -1223,16 +1433,23 @@
 
 \begin{question}
     A risk analyst at a fixed-income investment firm states that the efficient frontier refers to the set of portfolios that maximizes expected return at each level of volatility. According to the Capital Asset Pricing Model (CAPM), which of the following statements regarding the efficient frontier are correct?
+    \\
+    一位固定收益投资公司的风险分析师表示，有效前沿是指在每个波动水平下最大化预期收益的投资组合集合。根据资本资产定价模型（CAPM），哪一项关于有效前沿的陈述是正确的？
 \end{question}
 
 \begin{choices}
     \item The slope of the Capital Market Line (CML) is always negative, with its steepness determined by the market risk premium and the volatility of the market portfolio.
-    
+    \\
+    资本市场线（CML）的斜率总是负的，其陡峭程度由市场风险溢价和市场组合的波动性决定。
     \item The CML suggests that the allocation between risk-free assets and the market portfolio depends on the investor's risk tolerance.
-    
+    \\
+    CML表明无风险资产和市场组合之间的配置取决于投资者的风险承受能力。
     \item Investors with the lowest risk aversion typically hold the risk asset portfolio with the minimum standard deviation on the efficient frontier.
-    
+    \\
+    风险厌恶程度最低的投资者通常持有有效前沿上标准差最低的风险资产组合。
     \item The efficient frontier allows for the possibility that the returns of different assets in a portfolio may not exhibit a consistent correlation.
+    \\
+    有效边界允许投资组合中不同资产的回报率可能不表现出一致的相关性。
 \end{choices}
 
 \begin{correctanswer}
@@ -1278,6 +1495,8 @@
 
 \begin{question}
     Suppose that the correlation of the return of a portfolio with the return of its benchmark is 0.6, the volatility of the return of the portfolio is 7\%, and the volatility of the return of the benchmark is 5\%. What is the beta of the portfolio?
+    \\
+    假设一个投资组合的回报与基准的回报之间的相关性为0.6，投资组合的回报波动率为7\%，基准的回报波动率为5\%。这个投资组合的贝塔值是多少？
 \end{question}
 
 \begin{choices}
@@ -1317,13 +1536,23 @@
 
 \begin{question}
     In a financial seminar, a group of investors discusses their strategies based on the Capital Asset Pricing Model (CAPM). They are particularly interested in understanding how they can optimize their investment decisions over a single time period. According to CAPM, what do these investors seek to maximize in their investment strategies?
+    \\
+    在一场金融研讨会上，一群投资者讨论了基于资本资产定价模型（CAPM）的投资策略。他们特别感兴趣的是了解如何在单个时期内优化他们的投资决策。根据CAPM，这些投资者在他们的投资策略中寻求最大化什么？
 \end{question}
 
 \begin{choices}
     \item The investors aim to grow their wealth significantly while also being cautious about extreme losses in their return distributions.
+    \\
+    投资者旨在显著增加财富，同时对回报分布中的极端损失保持谨慎。
     \item The investors focus on increasing their wealth without worrying about the potential for extreme losses in their return distributions.
+    \\
+    投资者专注于增加财富，而不担心回报分布中的极端损失的可能性。
     \item The investors strive to maximize their expected utility while being mindful of the risks associated with extreme outcomes in their return distributions.
+    \\
+    投资者努力最大化他们的期望效用，同时意识到回报分布中的极端结果的风险。
     \item The investors prioritize maximizing their expected utility without concern for the risks of extreme outcomes in their return distributions.
+    \\
+    投资者优先最大化他们的期望效用，而不担心回报分布中的极端结果的风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -1379,6 +1608,28 @@
     \end{itemize}
 
     The volatility of the Portfolio is nearest to which value?
+    \\    一位风险分析师Robert使用双因子模型来估计投资组合的波动率。因子的协方差矩阵如下：
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            & 股票因子 & 债券因子 \\
+            \hline
+            股票因子 & 0.04000 & 0.01800 \\
+            \hline
+            债券因子 & 0.01800 & 0.09000 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    该投资组合具有以下因子敏感性（即贝塔值）：
+    \begin{itemize}
+        \item 对全球股票因子的敏感性为0.80
+        \item 对全球债券因子的敏感性为0.40
+    \end{itemize}
+
+    该投资组合的波动率最接近哪个值？
 \end{question}
 
 \begin{choices}
@@ -1449,17 +1700,23 @@
 
 
 \begin{question}
-    A portfolio manager at a large pension fund is reviewing their diversification strategy across different asset classes and correlations. Which of the following statements about diversification is NOT correct?
+    A portfolio manager at a large pension fund is reviewing their diversification strategy across different asset classes and correlations. Which of the following statements about diversification is NOT correct?\\
+    一位大型养老基金的组合经理正在审查他们 across different asset classes and correlations. Which of the following statements about diversification is NOT correct?
 \end{question}
 
 \begin{choices}
     \item By holding a sufficiently large and diversified portfolio, investors can reduce or eliminate company-specific risks through proper security selection.
-    
+    \\
+    通过持有充分分散的投资组合，投资者可以通过适当的证券选择显著降低或消除公司特定风险。
     \item A well-diversified portfolio reduces the importance of events affecting individual stocks, leaving the portfolio primarily exposed to general market risk.
-    
+    \\
+    一个充分分散的投资组合降低了影响个别股票的事件的重要性，使得投资组合主要暴露于一般市场风险。
     \item Since diversification can be achieved at little or no cost, investors should not expect compensation for unnecessary exposure to firm-specific risks.
-    
+    \\
+    由于分散投资可以以低成本甚至无成本实现，投资者不应期望因不必要的公司特定风险暴露而获得补偿。
     \item Diversification should be considered a risk transfer strategy as it shifts investment risks across different assets, thereby reducing exposure to any single asset.
+    \\
+    分散投资应被视为一种风险转移策略，因为它将投资风险分散到不同的资产上，从而降低对任何单个资产的暴露。
 \end{choices}
 
 \begin{correctanswer}
@@ -1510,6 +1767,8 @@
 
 \begin{question}
     Assume two portfolios, (A) and (B), are each well-diversified and the economy has only one factor. The expected return of portfolio (A) is 8.0\% and its beta is 1.30. The expected return of portfolio (B) is 6.0\% and its beta is 0.90. What is the implied risk-free rate?
+    \\
+    假设两个投资组合（A）和（B）都是充分分散的，经济只有一个因子。投资组合（A）的预期收益率为8.0\%，其贝塔值为1.30。投资组合（B）的预期收益率为6.0\%，其贝塔值为0.90。隐含的无风险利率是多少？
 \end{question}
 
 \begin{choices}
@@ -1553,7 +1812,8 @@
 
 
 \begin{question}
-    A newly launched hedge fund, the Global Alpha Fund, reports an expected annual return of 9.2\% with a volatility of 9.5\%. The fund uses the MSCI World Index as its benchmark, which has an expected annual return of 8.0\% and volatility of 11.2\%. If the risk-free rate is 2.5\% per year, what is the beta of the Global Alpha Fund according to the Capital Asset Pricing Model (CAPM)?
+    A newly launched hedge fund, the Global Alpha Fund, reports an expected annual return of 9.2\% with a volatility of 9.5\%. The fund uses the MSCI World Index as its benchmark, which has an expected annual return of 8.0\% and volatility of 11.2\%. If the risk-free rate is 2.5\% per year, what is the beta of the Global Alpha Fund according to the Capital Asset Pricing Model (CAPM)?\\
+    一家新成立的对冲基金，Global Alpha Fund，报告的年化预期收益率为9.2\%，波动率为9.5\%。该基金使用MSCI世界指数作为基准，该指数的年化预期收益率为8.0\%，波动率为11.2\%。如果无风险利率为2.5\%每年，根据资本资产定价模型（CAPM），Global Alpha Fund的贝塔值是多少？
 \end{question}
 
 \begin{choices}
@@ -1605,16 +1865,23 @@
 
 \begin{question}
     In the Capital Asset Pricing Model (CAPM), beta measures a stock's systematic risk relative to the market. When analyzing a stock's beta coefficient, which of the following statements is TRUE? A beta greater than one:
+    \\
+    在资本资产定价模型（CAPM）中，贝塔值衡量股票相对于市场的系统性风险。当分析股票的贝塔系数时，哪一项陈述是正确的？一个大于1的贝塔值：
 \end{question}
 
 \begin{choices}
     \item Indicates the stock is risky and should be avoided, while a beta less than one indicates the stock is risk-free and safe for investment
-    
+    \\
+    表示股票风险较大，应避免投资，而beta小于1表示股票风险较小，适合投资。
     \item Indicates the stock is more sensitive to market movements than average, while a beta less than one indicates less sensitivity to market movements
-    
+    \\
+    表示股票对市场变动的敏感度高于平均水平，而beta小于1表示对市场变动的敏感度较低。
     \item Suggests the stock is trading above its intrinsic value, while a beta less than one suggests the stock is trading below its intrinsic value
-    
+    \\
+    表示股票交易价格高于其内在价值，而beta小于1表示股票交易价格低于其内在价值。
     \item Implies the stock will outperform in all market conditions, while a beta less than one implies consistent underperformance
+    \\
+    表示股票在所有市场条件下都能表现良好，而beta小于1表示在所有市场条件下都能表现良好。
 \end{choices}
 
 \begin{correctanswer}
@@ -1659,17 +1926,24 @@
 
 
 \begin{question}
-    An analyst at CAPM Research Inc. is projecting a return of 21\% on Portfolio A. The market risk premium is 11\%, the volatility of the market portfolio is 14\%, and the risk-free rate is 4.5\%. Portfolio A has a beta of 1.5. According to the Capital Asset Pricing Model (CAPM), which of the following statements is true?
+    An analyst at CAPM Research Inc. is projecting a return of 21\% on Portfolio A. The market risk premium is 11\%, the volatility of the market portfolio is 14\%, and the risk-free rate is 4.5\%. Portfolio A has a beta of 1.5. According to the Capital Asset Pricing Model (CAPM), which of the following statements is true?\\
+    
+    CAPM Research Inc.的一位分析师正在预测投资组合A的收益率。市场风险溢价为11\%，市场组合的波动率为14\%，无风险利率为4.5\%。投资组合A的贝塔值为1.5。根据资本资产定价模型（CAPM），哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
     \item The expected return of Portfolio A is greater than the expected return of the market portfolio
-    
+    \\
+    投资组合A的预期收益率大于市场组合的预期收益率   
     \item The expected return of Portfolio A is less than the expected return of the market portfolio
-    
+    \\
+    投资组合A的预期收益率小于市场组合的预期收益率
     \item The return of Portfolio A has lower volatility than the market portfolio
-    
+    \\
+    投资组合A的收益率的波动率小于市场组合的收益率的波动率
     \item The expected return of Portfolio A is equal to the expected return of the market portfolio
+    \\
+    投资组合A的预期收益率等于市场组合的预期收益率
 \end{choices}
 
 \begin{correctanswer}
@@ -1706,16 +1980,23 @@
 
 \begin{question}
     At a prestigious investment conference, Dr. Zhang presents his research on applying the Capital Asset Pricing Model (CAPM) to the Chinese A-share market. During the Q\&A session, four researchers share their market observations. Which of the following observations would be MOST consistent with the fundamental assumptions of CAPM?
+    \\
+    在一场著名的投资会议上，张博士展示了他将资本资产定价模型（CAPM）应用于中国A股市场的研究。在问答环节，四位研究人员分享了他们的市场观察。哪一项观察最符合CAPM的基本假设？
 \end{question}
 
 \begin{choices}
     \item My research shows that stock returns in our market follow heavy-tailed distributions, unlike the bell-shaped normal distribution
-    
+    \\
+    我的研究显示，我们的市场中的股票收益率遵循重尾分布，而不是钟形正态分布
     \item Based on our survey, institutional investors and retail investors have significantly different return expectations for the same stocks
-    
+    \\
+    根据我们的调查，机构投资者和散户投资者对同一只股票的预期收益率有显著差异
     \item Our data indicates that even large block trades by major institutions have minimal impact on stock prices in liquid stocks
-    
+    \\
+    我们的数据表明，即使是大型机构的大宗交易，对流动性股票的股价影响也很小
     \item According to our study, investors face significant market frictions including high transaction costs and strict short-selling restrictions
+    \\
+    根据我们的研究，投资者面临显著的市场摩擦，包括高交易成本和严格的卖空限制
 \end{choices}
 
 \begin{correctanswer}
@@ -1754,16 +2035,23 @@
 
 \begin{question}
     During a portfolio theory seminar, Professor Chen discusses investor behavior assumptions in the Capital Asset Pricing Model (CAPM). When a student asks about what investors try to maximize in the model over a single period, Professor Chen explains that according to CAPM, investors seek to maximize their:
+    \\
+    在一场投资组合理论研讨会上，陈教授讨论了资本资产定价模型（CAPM）中的投资者行为假设。当学生问及投资者在单个时期内试图在模型中最大化什么时，陈教授解释说，根据CAPM，投资者试图最大化他们的：
 \end{question}
 
 \begin{choices}
     \item total wealth while carefully considering extreme market events and tail risks
-    
+    \\
+    总财富，同时仔细考虑极端市场事件和尾部风险
     \item total wealth while focusing only on average market conditions
-    
+    \\
+    总财富，只关注平均市场条件
     \item expected utility while incorporating the probability of extreme market events
-    
+    \\
+    预期效用，同时考虑极端市场事件的概率
     \item expected utility while considering only the mean and variance of returns
+    \\
+    预期效用，只考虑收益的均值和方差
 \end{choices}
 
 \begin{correctanswer}
@@ -1799,17 +2087,24 @@
 
 
 \begin{question}
-    At a CFA review session, the instructor is discussing the Capital Asset Pricing Model (CAPM). To test students' understanding, she asks them to identify which of the following statements is NOT one of the fundamental assumptions of CAPM:
+    At a CFA review session, the instructor is discussing the Capital Asset Pricing Model (CAPM). To test students' understanding, she asks them to identify which of the following statements is NOT one of the fundamental assumptions of CAPM:\\
+    
+    在一场CFA复习课上，讲师正在讨论资本资产定价模型（CAPM）。为了测试学生的理解，她要求他们识别哪一项陈述不是CAPM的基本假设之一：
 \end{question}
 
 \begin{choices}
     \item Investors make decisions based solely on two factors in return distributions: the expected return and its variance
-    
+    \\
+    投资者仅基于两个因素做出决策：预期收益和其方差
     \item All market participants share identical views about expected returns, variances, and correlations of all assets
-    
+    \\
+    所有市场参与者对所有资产的预期收益、方差和相关性持有相同的看法
     \item All investors choose to hold only the market portfolio, avoiding any individual stock selection
-    
+    \\
+    所有投资者选择只持有市场组合，避免任何个别股票的选择
     \item Markets operate without friction: no taxes or transaction costs exist, and all assets can be freely traded in any quantity
+    \\
+    市场运作没有摩擦：不存在税收或交易成本，所有资产可以自由交易，无论数量多少
 \end{choices}
 
 \begin{correctanswer}
@@ -1843,16 +2138,23 @@
 
 \begin{question}
     A portfolio manager at a mutual fund company is training new analysts on the Capital Asset Pricing Model (CAPM). During the discussion of the security market line (SML), she asks the team to identify which of the following statements about the SML is MOST accurate?
+    \\
+    一位共同基金公司的组合经理正在培训新分析师资本资产定价模型（CAPM）。在讨论证券市场线（SML）时，她要求团队识别哪一项关于SML的陈述最准确：
 \end{question}
 
 \begin{choices}
     \item The market portfolio primarily consists of large-cap stocks and government bonds, as these represent the most significant portion of market value.
-    
+    \\
+    市场组合主要由大型市值股票和政府债券组成，因为这些代表了市场价值中最重要的部分。
     \item Securities plotting above the SML indicate potential undervaluation and investment opportunities.
-    
+    \\
+    证券位于SML上方表示潜在低估和投资机会。
     \item The vertical axis intercept of the SML varies with market volatility, reflecting changing risk perceptions.
-    
+    \\
+    SML的垂直轴截距随市场波动率变化，反映了风险感知的变化。
     \item Securities positioned exactly on the SML represent temporary equilibrium points that require regular portfolio rebalancing.
+    \\
+    证券正好位于SML上表示临时均衡点，需要定期重新平衡投资组合。
 \end{choices}
 
 \begin{correctanswer}
@@ -1889,14 +2191,23 @@
 
 \begin{question}
     In a financial seminar, a speaker discusses the implications of changes in the risk-free rate and market risk premium according to the Capital Asset Pricing Model (CAPM). What impact will these changes have on the Security Market Line (SML)?
-    
+    \\
+    在一场金融研讨会上，一位演讲者讨论了资本资产定价模型（CAPM）中无风险利率和市场风险溢价变化的影响。这些变化对证券市场线（SML）有什么影响？
     \end{question}
     
     \begin{choices}
         \item  An increase in the risk-free rate will increase the slope of the SML.  
+        \\
+        无风险利率的增加将增加SML的斜率。
         \item  An increase in the market risk premium will lower stock returns.  
+        \\
+        市场风险溢价的增加将降低股票收益。
         \item  A decrease in the risk-free rate will increase stock returns.  
+        \\
+        无风险利率的降低将增加股票收益。
         \item  A decrease in the market risk premium will lower the slope of the SML.  
+        \\
+        市场风险溢价的降低将降低SML的斜率。
     \end{choices}
     
     \begin{correctanswer}
@@ -1943,6 +2254,15 @@
         \item Correlation between ETF and index = 1
     \end{itemize}
     Calculate the expected return of the ETF using CAPM.
+    一位投资组合经理正在评估一只杠杆ETF，该ETF旨在复制日经225指数每日收益率的两倍。给定：
+    \begin{itemize}
+        \item 日经225指数预期年收益率 = 11.5\%
+        \item 日经225指数波动率 = 18.0\%
+        \item 无风险利率 = 每年2.0\%
+        \item ETF波动率 = 36.0\%（指数的两倍）
+        \item ETF与指数之间的相关系数 = 1
+    \end{itemize}
+    使用CAPM计算ETF的预期收益率。
 \end{question}
 
 \begin{choices}
@@ -1990,13 +2310,23 @@
 
 \begin{question}
     A risk analyst at an investment bank is explaining CAPM concepts to junior analysts. Which of the following statements about systematic and unsystematic risk in CAPM is MOST accurate?
+    \\
+    一位投资银行的风险分析师正在向初级分析师解释CAPM概念。哪一项关于CAPM中的系统性风险和非系统性风险陈述最准确？
 \end{question}
 
 \begin{choices}
     \item Unsystematic risk carries a higher risk premium than systematic risk because it is specific to individual securities
+    \\
+    非系统性风险比系统性风险承担更高的风险溢价，因为它与个别证券有关
     \item Both systematic and unsystematic risks are compensated proportionally to their contribution to total portfolio risk
+    \\
+    系统性风险和非系统性风险都按其对总投资组合风险贡献的比例得到补偿
     \item The market risk premium is determined by the weighted average of systematic and unsystematic risks
+    \\
+    市场风险溢价由系统性风险和非系统性风险的加权平均决定
     \item Only systematic risk is priced in equilibrium, while unsystematic risk can be eliminated through diversification
+    \\
+    只有在均衡时，系统性风险被定价，而非系统性风险可以通过分散化消除
 \end{choices}
 
 \begin{correctanswer}
@@ -2030,17 +2360,24 @@
 
 
 \begin{question}
-    A risk analyst at an investment firm is evaluating the application of the Capital Asset Pricing Model (CAPM) and the Securities Market Line (SML) to optimize portfolio strategies. Which of the following statements MOST LIKELY misrepresents the Capital Asset Pricing Model (CAPM) and the Securities Market Line (SML)?
+    A risk analyst at an investment firm is evaluating the application of the Capital Asset Pricing Model (CAPM) and the Securities Market Line (SML) to optimize portfolio strategies. Which of the following statements MOST LIKELY misrepresents the Capital Asset Pricing Model (CAPM) and the Securities Market Line (SML)?\\
+    
+    一位投资公司的风险分析师正在评估资本资产定价模型（CAPM）和证券市场线（SML）在优化投资组合策略中的应用。哪一项陈述最有可能错误地代表了资本资产定价模型（CAPM）和证券市场线（SML）？
 \end{question}
 
 \begin{choices}
     \item When beta (\(\beta\)) is zero, the intercept shows no systematic risk. The only asset is risk-free, unrelated to market changes, providing a guaranteed return.
-
+    \\
+    当贝塔值（\(\beta\)）为零时，截距显示没有系统性风险。唯一的资产是无风险资产，与市场变化无关，提供保证回报。
     \item The expected return is a linear function of beta: \(E(R_P) = a + m \times \beta_P\), where \(a\) is the intercept and \(m\) is the slope.
-
+    \\
+    预期回报是贝塔值的线性函数：\(E(R_P) = a + m \times \beta_P\)，其中\(a\)是截距，\(m\)是斜率。
     \item Assets with the same beta can achieve different returns due to other influencing factors affecting performance.
-
+    \\
+    具有相同贝塔值的资产由于其他影响因素导致绩效不同，可以获得不同的回报。
     \item The slope of the Security Market Line (SML) is the market risk premium (MRP), calculated as \(m = (R_M - R_F) = \text{MRP}\).
+    \\
+    SML的斜率是市场风险溢价（MRP），计算为\(m = (R_M - R_F) = \text{MRP}\)。
 \end{choices}
 
 \begin{correctanswer}
@@ -2074,7 +2411,9 @@
 
 
 \begin{question}
-    A security will pay \$120 at the end of each of the next two years. The risk-free rate is 4\%, and the Market’s expected return is 9\%. The security’s volatility is 22\%, and the Market’s volatility is 16\%. The correlation between the security and the Market is 0.65. What is the present value of the security using CAPM?
+    A security will pay \$120 at the end of each of the next two years. The risk-free rate is 4\%, and the Market’s expected return is 9\%. The security’s volatility is 22\%, and the Market’s volatility is 16\%. The correlation between the security and the Market is 0.65. What is the present value of the security using CAPM?\\
+    \\
+    一只证券将在未来两年年底支付\$120。无风险利率为4\%，市场预期收益率为9\%。证券的波动率为22\%，市场的波动率为16\%。证券与市场的相关系数为0.65。使用CAPM计算证券的现值。
 \end{question}
 
 \begin{choices}
@@ -2111,17 +2450,24 @@
 
 
 \begin{question}
-    A financial advisor is preparing a seminar on the capital asset pricing model (CAPM) to help clients make informed investment decisions. Which of the following statements is MOST accurate?
+    A financial advisor is preparing a seminar on the capital asset pricing model (CAPM) to help clients make informed investment decisions. Which of the following statements is MOST accurate?\\
+    
+    一位金融顾问正在准备一场关于资本资产定价模型（CAPM）的研讨会，帮助客户做出明智的投资决策。哪一项陈述最准确？
 \end{question}
 
 \begin{choices}
     \item The Market portfolio primarily consists of actively traded securities, as they represent the most liquid portion of investable assets.
-    
+    \\
+    市场组合主要由活跃交易证券组成，因为它们代表了可投资资产中最具流动性的部分。
     \item Every portfolio and risky asset must be positioned on the capital market line (CML) without exception.
-    
+    \\
+    每个投资组合和风险资产都必须位于资本市场线（CML）上，没有例外。
     \item The Market portfolio's position on the efficient frontier varies with market conditions and investor sentiment.
-    
+    \\
+    市场组合在有效前沿上的位置随市场条件和投资者情绪而变化。
     \item The security market line (SML) indicates that expected return differences between assets are due to Beta differences; higher Beta leads to higher equilibrium return, in a linear fashion.
+    \\
+    证券市场线（SML）表明，资产之间的预期回报差异是由于贝塔值差异造成的；较高的贝塔值导致更高的均衡回报，呈线性关系。
 \end{choices}
 
 \begin{correctanswer}
@@ -2161,16 +2507,23 @@
 
 \begin{question}
     A risk analyst at a fixed-income investment firm is reviewing the capital asset pricing model (CAPM) to enhance their understanding of market dynamics. Which of the following is strictly true about the standard version of the CAPM?
+    \\
+    一位固定收益投资公司的风险分析师正在审查资本资产定价模型（CAPM），以增强他们对市场动态的理解。哪一项关于标准版本的CAPM的陈述是严格正确的？
 \end{question}
 
 \begin{choices}
     \item The Security Market Line (SML) indicates that the expected return of any security is the risk-free rate plus the market risk premium multiplied by the security's or portfolio's risk level.
-
+    \\
+    证券市场线（SML）表明，任何证券的预期收益等于无风险利率加上市场风险溢价乘以该证券或投资组合的风险水平。
     \item If the CAPM holds true, then in any given calendar year, high-beta stocks should yield higher returns than low-beta stocks, as they bear greater market risk and thus earn a higher risk premium.
-    
+    \\
+    如果CAPM成立，那么在任何给定的日历年中，高贝塔股票应该比低贝塔股票获得更高的回报，因为它们承担更大的市场风险，因此获得更高的风险溢价。
     \item All else being equal, the Security Market Line (SML) suggests that higher unsystematic (idiosyncratic) risk should lead to higher expected returns.
-    
+    \\
+    在其他条件相同的情况下，证券市场线（SML）表明，更高的非系统性（特质）风险应导致更高的预期回报。
     \item While the CAPM describes equilibrium from a return perspective, it cannot be directly applied to prices, as prices are influenced by market sentiment and other unsystematic factors.
+    \\
+    虽然CAPM从回报的角度描述了均衡，但它不能直接应用于价格，因为价格受到市场情绪和其他非系统性因素的影响。
 \end{choices}
 
 
@@ -2235,11 +2588,41 @@ The analyst believes historical betas are not reliable and uses this formula to 
 \]
 The analyst predicts the stock's return will be 9\%. What is the required return for the stock, and is it undervalued or overvalued?
 
+
+    一位分析师使用资本资产定价模型（CAPM）来评估一只股票。以下是市场和该股票的信息：
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        预期市场风险溢价 & 6\% \\
+        \hline
+        无风险利率 & 4\% \\
+        \hline
+        该股票的历史贝塔值 & 1.20 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+该分析师认为历史贝塔值不可靠，并使用以下公式来预测贝塔值： 
+\[
+\text{预测贝塔值} = 0.90 + 0.15 \times \text{历史贝塔值}
+\]
+该分析师预测该股票的收益率将为9\%。该股票的要求收益率是多少？它是被低估还是被高估？
 \begin{choices}
     \item Overvalued, required return 7.5\%
+    \\
+    高估，要求回报率为7.5\%
     \item Overvalued, required return 10.48\%
+    \\
+    高估，要求回报率为10.48\%
     \item Undervalued, required return 7.5\%
+    \\
+    低估，要求回报率为7.5\%
     \item Undervalued, required return 10.48\%
+    \\
+    低估，要求回报率为10.48\%
 \end{choices}
 
 \begin{correctanswer}
@@ -2272,16 +2655,23 @@ The analyst predicts the stock's return will be 9\%. What is the required return
 
 \begin{question}
     An investment analyst is reviewing risk factors in portfolio management. Which of the following statements about systematic and unsystematic risk is least accurate?
+    \\
+    一位投资分析师正在审查投资组合管理中的风险因素。哪一项关于系统性风险和非系统性风险的陈述最不准确？
 \end{question}
 
 \begin{choices}
     \item The advantage of the CAPM model is its focus on systematic risk, ignoring unsystematic risk, which aligns with real-world investment scenarios.
-
+    \\
+    CAPM模型的优势在于其专注于系统性风险，忽略了非系统性风险，这与现实投资情况一致。
     \item Increasing the number of stocks in a portfolio does not alter systematic risk, as it is inherent to the market.
-    
+    \\
+    增加投资组合中的股票数量不会改变系统性风险，因为它是由市场固有的特性决定的。
     \item The total risk of a portfolio is composed of both systematic and unsystematic risks.
-    
+    \\
+    投资组合的总风险由系统性风险和非系统性风险组成。
     \item A well-diversified portfolio effectively reduces unsystematic risk compared to a less diversified one.
+    \\
+    一个高度分散的投资组合相对于一个低度分散的投资组合，能够有效地降低非系统性风险。
 \end{choices}
 
 
@@ -2317,13 +2707,23 @@ The analyst predicts the stock's return will be 9\%. What is the required return
 
 \begin{question}
     A portfolio manager is explaining modern portfolio theory to new analysts. During the discussion about the relationship between efficient frontier and CAPM, which of the following statements is correct?
+    \\
+    一位投资组合经理正在向新分析师解释现代投资组合理论。在讨论有效边界和CAPM之间的关系时，哪一项陈述是正确的？
 \end{question}
     
     \begin{choices}
         \item Securities with the same beta coefficient will generate different expected returns due to their unique risks.
+        \\
+        具有相同贝塔系数的证券由于其独特的风险，将产生不同的预期回报。
         \item Both efficient frontier and CAPM are based on assumptions including no transaction costs, no taxes, and identical investment horizons for all investors.
+        \\
+        有效边界和CAPM都基于以下假设：无交易成本、无税收、所有投资者具有相同的投资期限。
         \item The market risk premium is calculated by multiplying beta by the difference between individual security return and risk-free rate.
+        \\
+        市场风险溢价是通过将贝塔值乘以个别证券收益与无风险利率之间的差值来计算的。
         \item The efficient frontier varies among investors because they have different risk aversion levels and thus construct different optimal portfolios.
+        \\
+        有效边界因投资者的风险厌恶程度不同而有所不同，因此构造不同的最优投资组合。
     \end{choices}
     
     \begin{correctanswer}
@@ -2361,14 +2761,23 @@ The analyst predicts the stock's return will be 9\%. What is the required return
 
     \begin{question}
         In financial risk management, when assessing the systematic risk of a security, is the beta coefficient estimated from historical returns equivalent to the true beta of the security? Choose the most accurate description from the following options.
-        
+        \\
+        在金融风险管理中，当评估证券的系统性风险时，历史回报估计的贝塔系数是否等同于证券的真实贝塔？从以下选项中选择最准确的描述。
         \end{question}
         
         \begin{choices}
             \item The historical beta coefficient is identical to the true beta of the security because historical data can fully capture future market behavior.  
+            \\
+            历史贝塔系数与证券的真实贝塔相同，因为历史数据可以完全捕捉未来的市场行为。
             \item The historical beta coefficient is an unbiased estimate of the true beta of the security, and thus the two are statistically equivalent.  
+            \\
+            历史贝塔系数是对证券真实贝塔的无偏估计，因此两者在统计上是等价的。
             \item The historical beta coefficient is an estimate of the true beta of the security, which may be affected by statistical estimation errors, so the two are not exactly the same.  
+            \\
+            历史贝塔系数是对证券真实贝塔的估计，可能受到统计估计误差的影响，因此两者不完全相同。
             \item The historical beta coefficient is unrelated to the true beta of the security because the true beta is unobservable.  
+            \\
+            历史贝塔系数与证券的真实贝塔无关，因为真实贝塔是不可观测的。
         \end{choices}
         
         \begin{correctanswer}
@@ -2426,7 +2835,7 @@ The analyst predicts the stock's return will be 9\%. What is the required return
 \setcounter{question}{0}
 \begin{question}
     A high net worth investor is monitoring the performance of an index tracking fund in which she has invested. The performance figures of the fund and the benchmark portfolio are summarized in the table below:
-
+   
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|}
@@ -2443,6 +2852,24 @@ The analyst predicts the stock's return will be 9\%. What is the required return
 \end{table}
 
 What is the tracking error of the fund over this period?
+\\一位高净值投资者正在监控她投资的指数跟踪基金的表现。该基金和基准投资组合的表现数据总结如下：
+   
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        年份 & 基准收益率 & 基金收益率 \\
+        \hline
+        2005 & 9\% & 1\% \\
+        2006 & 7\% & 3\% \\
+        2007 & 7\% & 5\% \\
+        2008 & 5\% & 4\% \\
+        2009 & 2\% & 1.5\% \\
+        \hline
+    \end{tabular}
+\end{table}
+
+该基金在此期间跟踪误差是多少？
 \end{question}
 
 
@@ -2518,6 +2945,8 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     Portfolio A has an expected return of 8\%, volatility of 20\%, and beta of 0.5. Assume that the market has an expected return of 10\% and volatility of 25\%. Also, assume a risk-free rate of 5\%. What is Jensen's alpha for portfolio A?
+    \\
+    投资组合A的预期收益率为8\%，波动率为20\%，贝塔值为0.5。假设市场预期收益率为10\%，波动率为25\%。假设无风险利率为5\%。投资组合A的Jensen's alpha是多少？
 \end{question}
 
 
@@ -2588,13 +3017,39 @@ What is the tracking error of the fund over this period?
     \end{table}
 
     Based on the information ratio, Sharpe ratio, and maximum drawdown, which fund performed better in terms of overall risk-adjusted returns?
+   \\ Gregory正在分析两只商品基金的历史表现，这两只基金以路透/杰富瑞-CRB指数（CRB）作为基准。他决定不仅仅依赖信息比率（IR），而是基于信息比率、夏普比率和最大回撤的组合来评估基金，以判断哪只基金实现了更高的风险调整后收益。数据如下：
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            指标                     & 基金I & 基金II \\
+            \hline
+            平均月度收益率     & 1.49\% & 1.47\%  \\
+            平均超额收益率      & 0.07\% & 0.05\%  \\
+            收益率标准差  & 0.29\% & 0.24\%  \\
+            跟踪误差              & 0.34\% & 0.34\%  \\
+            最大回撤            & 5.0\%  & 4.0\%   \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    基于信息比率、夏普比率和最大回撤，哪只基金在整体风险调整后收益方面表现更好？
 \end{question}
 
 \begin{choices}
     \item Fund I performed better due to a higher information ratio and lower maximum drawdown.
+    \\
+    基金I表现更好，因为它具有更高的信息比率和更低的最大回撤。
     \item Fund II performed better due to a lower maximum drawdown despite a lower information ratio.
+    \\
+    基金II表现更好，因为它具有更低的最大回撤，尽管信息比率较低。
     \item Fund I performed better overall due to a higher Sharpe ratio and lower maximum drawdown.
+    \\
+    基金I总体表现更好，因为它具有更高的夏普比率和更低的最大回撤。
     \item Fund II performed better overall due to a higher information ratio and lower standard deviation.
+    \\
+    基金II总体表现更好，因为它具有更高的信息比率和更低的标准差。
 \end{choices}
 
 \begin{correctanswer}
@@ -2662,13 +3117,39 @@ What is the tracking error of the fund over this period?
     \end{table}
 
     Is there an arbitrage opportunity?
+    \\    考虑以下存在于单因子经济中的三个充分分散的投资组合：
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            无风险利率 & 1.0\% \\ 
+            \hline
+            投资组合 & E(r) & 贝塔值 \\
+            \hline
+            A & 9.0\% & 1.60 \\
+            B & 7.0\% & 1.10 \\
+            C & 4.0\% & 0.60 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    是否存在套利机会？
 \end{question}
 
 \begin{choices}
     \item No, all three well-diversified portfolios plot on the security market line.
+    \\
+    没有，所有三个充分分散的投资组合都位于证券市场线上。
     \item Yes, an arbitrage includes buying portfolio (A) and selling a combination of (B) and (C).
+    \\
+    是的，套利包括购买投资组合（A）并出售投资组合（B）和（C）的组合。
     \item Yes, an arbitrage includes buying portfolio (B) and selling a combination of (A) and (C).
+    \\
+    是的，套利包括购买投资组合（B）并出售投资组合（A）和（C）的组合。
     \item Yes, an arbitrage includes buying portfolio (C) and selling a combination of (A) and (B).
+    \\
+    是的，套利包括购买投资组合（C）并出售投资组合（A）和（B）的组合。
 \end{choices}
 
 \begin{correctanswer}
@@ -2737,7 +3218,27 @@ What is the tracking error of the fund over this period?
         \end{tabular}
     \end{table}
 
-    You discover there is NOT an arbitrage strategy among these three portfolios. In this case, what should be the expected return of Portfolio C?
+    You discover there is NOT an arbitrage strategy among these three portfolios. In this case, what should be the expected return of Portfolio C?\\
+    在单因子经济中，以下每个投资组合（A、B和C）都是充分分散的：
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{无风险利率} & \multicolumn{2}{c|}{3.0\%} \\
+            \hline
+            \multicolumn{2}{|c|}{市场指数波动率，$\sigma[M]$} & \multicolumn{2}{c|}{30.0\%} \\
+            \hline
+            投资组合 & $\beta$ & $E[R(i)]$ & $\sigma[e(i)]$ \\
+            \hline
+            A & 0.60 & 12.0\% & 10.0\% \\
+            B & 0.80 & 15.0\% & 25.0\% \\
+            C & 1.20 & ??? & 42.0\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    你发现这三个投资组合之间不存在套利策略。在这种情况下，投资组合C的预期收益率应该是多少？\\
 \end{question}
 
 \begin{choices}
@@ -2794,6 +3295,8 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     While the risk-free rate was 4.0\%, a portfolio's realized return of 14.0\% exactly matched the return of its benchmark, the market index, which also returned 14.0\%. The portfolio's covariance (of returns) with the market index was 0.01440 and the market's volatility was 20.0\%. What was the Jensen's alpha of the portfolio?
+    \\
+    当无风险利率为4.0\%时，一个投资组合的实际收益率为14.0\%，恰好与其基准、市场指数的收益率相同，该市场指数也返回了14.0\%。投资组合与市场指数的收益率协方差为0.01440，市场指数的波动率为20.0\%。投资组合的Jensen's alpha是多少？
 \end{question}
 
 \begin{choices}
@@ -2841,13 +3344,23 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     The ST Fund is a mutual fund that is benchmarked to the S\&P 500 index. It contains equally weighted holdings of 10 stocks from the index, with an average annual portfolio return of 11\% and a volatility of returns of 16\%. Over the same time period, the average annual return on the S\&P 500 has been 12\%, with a volatility of returns of 9\%. The annual risk-free rate is 3\%. ST Fund's portfolio manager is planning to diversify the fund by increasing its holdings to 100 stocks in the S\&P 500, all equally weighted. Because of this change, ST Fund's Sharpe ratio will most likely:
+    \\
+    ST基金是一个以标普500指数为基准的共同基金。它包含指数中10只股票的等权重持有，平均年收益率为11\%，收益波动率为16\%。在同一时期，标普500指数的平均年收益率为12\%，收益波动率为9\%。年无风险利率为3\%。ST基金的基金经理计划通过增加其在标普500指数中的持股数量来多样化基金，所有持股均等权重。由于这一变化，ST基金的夏普比率最有可能：
 \end{question}
 
 \begin{choices}
     \item Decrease toward 0
+    \\
+    减少到0
     \item Decrease toward 1
+    \\
+    减少到1
     \item Increase toward 1
+    \\
+    增加到1
     \item Increase above 1
+    \\
+    增加到1以上
 \end{choices}
 
 \begin{correctanswer}
@@ -2911,7 +3424,21 @@ What is the tracking error of the fund over this period?
         \hline
     \end{tabular}
 
-    Which portfolio does not lie on the efficient frontier?
+    Which portfolio does not lie on the efficient frontier?\\
+    一位投资组合经理正在评估四种投资策略。下表显示了它们的预期收益率和标准差：
+
+    \begin{tabular}{|c|c|c|}
+        \hline
+        投资组合 & 预期收益率 (\%) & 标准差 (\%) \\
+        \hline
+        A & 8 & 6 \\
+        B & 10 & 14 \\
+        C & 12 & 11 \\
+        D & 16 & 16 \\
+        \hline
+    \end{tabular}
+
+    哪个投资组合不在有效前沿上？\\
 \end{question}
 
 \begin{choices}
@@ -2962,16 +3489,23 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A portfolio manager is evaluating several mutual funds that track different market sectors. Given that her primary concern is systematic risk exposure, which of the following statements best describes the most appropriate performance measure for ranking these funds?
+    \\
+    一位投资组合经理正在评估几种跟踪不同市场部门的共同基金。鉴于她的主要关注点是系统性风险暴露，哪一项陈述最准确地描述了最适合这些基金排名的绩效衡量标准？
 \end{question}
 
 \begin{choices}
     \item "We should use a measure that compares excess returns to beta, as this directly addresses how well the fund is compensated for its systematic risk exposure"
-    
+    \\
+    我们应该使用一个衡量超额收益与贝塔值的指标，因为这直接解决了基金对其系统性风险暴露的补偿程度。
     \item "The best approach is to compare excess returns to total volatility, since this captures both systematic and unsystematic risk"
-    
+    \\
+    最好的方法是对比超额收益与总波动率，因为这同时考虑了系统性风险和非系统性风险。
     \item "We should focus on the fund's performance relative to its benchmark, as this shows how much value the manager has added through active management"
-    
+    \\
+    我们应该关注基金相对于基准的表现，因为这显示了经理通过主动管理增加了多少价值。
     \item "The most appropriate measure is one that compares returns to downside risk, as this better reflects investors' actual concerns"
+    \\
+    最合适的衡量标准是对比收益与下行风险，因为这更好地反映了投资者的实际担忧。
 \end{choices}
 
 \begin{correctanswer}
@@ -3040,6 +3574,25 @@ What is the tracking error of the fund over this period?
     \end{center}
 
     What is the Sharpe ratio for this portfolio?
+    \\    一位分析师正在评估一只墨西哥股票投资组合的表现，该投资组合以IPC指数为基准。已收集以下数据：
+
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline
+            \textbf{指标} & \textbf{投资组合} & \textbf{IPC指数} \\
+            \hline
+            预期收益率 & 7.8\% & 5.2\% \\
+            \hline
+            波动率 & 15.4\% & 9.6\% \\
+            \hline
+            相对于IPC的贝塔值 & \multicolumn{2}{c|}{1.4} \\
+            \hline
+            无风险利率 & \multicolumn{2}{c|}{2.5\%} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    该投资组合的夏普比率是多少？
 \end{question}
 
 \begin{choices}
@@ -3111,6 +3664,27 @@ What is the tracking error of the fund over this period?
     \end{itemize}
 
     The portfolio's Sortino ratio is closest to:
+    \\    一位投资组合经理正在评估一只基金过去四年的表现。已收集以下数据：
+
+    \begin{center}
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            \textbf{年份} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+            \hline
+            投资组合收益率 & 8\% & 11\% & 5\% & 14\% \\
+            \hline
+            基准收益率 & 9\% & 12\% & 5\% & 16\% \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    附加信息：
+    \begin{itemize}
+        \item 无风险利率：8\%
+        \item 相对于最低收益率的均方偏差：3.2
+    \end{itemize}
+
+    该投资组合的索提诺比率最接近：
 \end{question}
 
 \begin{choices}
@@ -3154,7 +3728,8 @@ What is the tracking error of the fund over this period?
 
 
 \begin{question}
-    A portfolio analyst is evaluating a fund that has a Jensen's alpha of 4.75\% and an actual return of 14.2\%. The risk-free rate is 4.25\% and the equity risk premium is 6.0\%. Based on the information provided, what is the portfolio's beta?
+    A portfolio analyst is evaluating a fund that has a Jensen's alpha of 4.75\% and an actual return of 14.2\%. The risk-free rate is 4.25\% and the equity risk premium is 6.0\%. Based on the information provided, what is the portfolio's beta?\\
+    一位投资组合分析师正在评估一只基金，该基金的Jensen's alpha为4.75\%，实际收益率为14.2\%。无风险利率为4.25\%，股票风险溢价为6.0\%。根据提供的信息，该投资组合的贝塔值是多少？
 \end{question}
 
 \begin{choices}
@@ -3213,6 +3788,14 @@ What is the tracking error of the fund over this period?
         \item Security's beta = 0.40
     \end{itemize}
     Calculate the security's Treynor measure.
+    \\    一位投资组合分析师正在评估一只证券的绩效指标。已收集以下数据：
+    \begin{itemize}
+        \item 证券市场线（SML）斜率 = 0.075
+        \item 无风险利率 = 2.5\%
+        \item 证券的alpha = 2.80\%
+        \item 证券的beta = 0.40
+    \end{itemize}
+    计算证券的特雷诺比率。
 \end{question}
 
 \begin{choices}
@@ -3289,6 +3872,15 @@ What is the tracking error of the fund over this period?
     \end{itemize}
 
     The SER represents the tracking error as it measures the square root of the variance of the regression's residual (prediction error). Which value is nearest to the residual-based information ratio (IR)?
+\\
+    一位投资组合分析师在一只共同基金中进行了一项回归分析，分析了过去12个月投资组合P的超额收益与其基准M的超额收益。回归分析得出了以下结果：
+
+    \begin{itemize}
+        \item 回归方程：$P = 0.0171 + 0.8195M$
+        \item R-squared ($R^2$): 0.8995
+        \item 回归的标准误差(SER): 0.0180
+    \end{itemize}
+     回归的标准误差(SER)代表跟踪误差，因为它测量了回归残差的方差（预测误差）的平方根。哪一个值最接近基于残差的（IR）信息比率？
 \end{question}
 
 \begin{choices}
@@ -3351,6 +3943,13 @@ What is the tracking error of the fund over this period?
     \end{itemize}
 
     Which is nearest to the annualized ex-post (active-based) information ratio (IR)?
+    \\    一位投资组合经理正在计算一只投资组合的年化事后（主动管理）信息比率（IR）。过去12个月月度回报统计显示：
+    \begin{itemize}
+        \item 月度平均超额收益（P-B）：0.44\%
+        \item 月度超额收益标准差：2.34\%
+    \end{itemize}
+    哪一个是年化事后（主动管理）信息比率（IR）最接近的值？
+
 \end{question}
 
 \begin{choices}
@@ -3393,14 +3992,21 @@ What is the tracking error of the fund over this period?
 
 
 \begin{question}
-    A portfolio analyst at a mutual fund is evaluating the performance of several actively managed portfolios. She notices that Portfolio X has consistently shown positive Jensen's alpha over the past three years, while maintaining the same systematic risk level as its benchmark. Which of the following statements BEST explains the implications of this observation?
+    A portfolio analyst at a mutual fund is evaluating the performance of several actively managed portfolios. She notices that Portfolio X has consistently shown positive Jensen's alpha over the past three years, while maintaining the same systematic risk level as its benchmark. Which of the following statements BEST explains the implications of this observation?\\
+    一位共同基金的投资组合分析师正在评估几只主动管理型投资组合的表现。她注意到投资组合X在过去三年中持续显示出正的詹森阿尔法值，同时保持与其基准相同的系统性风险水平。下列关于这一观察结果的陈述中，哪一项最能解释其含义？
 \end{question}
 
 \begin{choices}
-    \item The portfolio's superior performance is primarily due to successful market timing, as indicated by its stable systematic risk level
-    \item The portfolio manager has demonstrated stock selection ability by generating returns above what CAPM would predict for its risk level
-    \item The portfolio's performance can be attributed to increased diversification, as shown by its consistent beta relative to the market
-    \item The positive alpha is likely temporary and will disappear when the market reaches equilibrium, regardless of the manager's skill
+    \item The portfolio's superior performance is primarily due to successful market timing, as indicated by its stable systematic risk level\\
+    投资组合的出色表现主要是由于成功的市场时机，这由其稳定的系统性风险水平表明。
+    \item The portfolio manager has demonstrated stock selection ability by generating returns above what CAPM would predict for its risk level\\
+    投资组合经理通过产生超过CAPM预期收益的回报，展示了选股能力。
+    \item The portfolio's performance can be attributed to increased diversification, as shown by its consistent beta relative to the market\\
+    投资组合的表现可以归因于增加的分散化，这由其相对于市场的恒定贝塔值表明。
+    \item The positive alpha is likely temporary and will disappear when the market reaches equilibrium, regardless of the manager's skill\\
+    正的alpha可能是暂时的，当市场达到均衡时，无论管理者的技能如何，都会消失。
+    \item The positive alpha is likely temporary and will disappear when the market reaches equilibrium, regardless of the manager's skill\\
+    正的alpha可能是暂时的，当市场达到均衡时，无论管理者的技能如何，都会消失。
 \end{choices}
 
 \begin{correctanswer}
@@ -3435,7 +4041,8 @@ What is the tracking error of the fund over this period?
 
 
 \begin{question}
-    A portfolio with a volatility of 30.0\% has a Treynor measure of 0.080. The portfolio has a correlation of 0.50 with the market index which itself has a volatility of 20.0\%. What is the portfolio’s Sharpe measure?
+    A portfolio with a volatility of 30.0\% has a Treynor measure of 0.080. The portfolio has a correlation of 0.50 with the market index which itself has a volatility of 20.0\%. What is the portfolio’s Sharpe measure?\\
+    一只波动率为30.0\%的投资组合的特雷诺比率为0.080。该投资组合与市场指数的相关系数为0.50，市场指数的波动率为20.0\%。该投资组合的夏普比率是多少？
 \end{question}
 
 \begin{choices}
@@ -3475,14 +4082,19 @@ What is the tracking error of the fund over this period?
 
 
 \begin{question}
-    During the most recent period, a Portfolio returned 10.3\% when the Market return was only 8.0\%. The risk-free rate was 2.0\%. The Market’s return was 8.0\% with volatility of 29.0\%. Finally, the covariance between the portfolio and Market was 0.134560. Under the CAPM, did the portfolio outperform?
+    During the most recent period, a Portfolio returned 10.3\% when the Market return was only 8.0\%. The risk-free rate was 2.0\%. The Market’s return was 8.0\% with volatility of 29.0\%. Finally, the covariance between the portfolio and Market was 0.134560. Under the CAPM, did the portfolio outperform?\\
+    在最近一个时期，一个投资组合在市场回报仅为8.0\%时回报了10.3\%。无风险利率为2.0\%。市场回报为8.0\%，波动率为29.0\%。最后，投资组合与市场的协方差为0.134560。在CAPM模型下，投资组合是否超越了市场？
 \end{question}
 
 \begin{choices}
-    \item No, Jensen’s alpha is -1.30\%.
-    \item No, Jensen’s alpha is -0.50\%.
-    \item Yes, Jensen’s alpha is +0.50\%.
-    \item Yes, Jensen’s alpha is +1.30\%.
+    \item No, Jensen’s alpha is -1.30\%.\\
+    否，詹森阿尔法为-1.30\%。
+    \item No, Jensen’s alpha is -0.50\%.\\
+    否，詹森阿尔法为-0.50\%。
+    \item Yes, Jensen’s alpha is +0.50\%.\\
+    是，詹森阿尔法为+0.50\%。
+    \item Yes, Jensen’s alpha is +1.30\%.\\
+    是，詹森阿尔法为+1.30\%。
 \end{choices}
 
 \begin{correctanswer}
@@ -3542,12 +4154,40 @@ What is the tracking error of the fund over this period?
         \hline
     \end{tabular}
 \end{table}
+一位投资者正在分析由不同公司管理的4只共同基金，将它们与预期收益率为7.4\%、波动率为14\%的基准投资组合进行比较。该投资者的目标是选择信息比率最高且满足以下条件的基金：
+\begin{enumerate}
+    \item 预期超额收益率必须至少为2\%。
+    \item 相对于基准的残差风险必须低于2.5\%。
+\end{enumerate}
+根据以下数据，应该选择哪只基金？
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    基金 & 预期收益率 & 波动率 & 残差风险 & 信息比率 \\
+    \hline
+    A & 9.3\% & 15.3\% & - & 0.8 \\
+    \hline
+    B & - & 16.4\% & 2.4\% & 0.9 \\
+    \hline
+    C & - & 15.8\% & 1.5\% & 1.3 \\
+    \hline
+    D & 9.4\% & - & 1.8\% & - \\
+    \hline
+\end{tabular}
+\end{table}
 
 \begin{choices}
-    \item Fund A
-    \item Fund B
-    \item Fund C
-    \item Fund D
+    \item Fund A\\
+    基金A
+    \item Fund B\\
+    基金B
+    \item Fund C\\
+    基金C
+    \item Fund D\\
+    基金D
 \end{choices}
 
 \begin{correctanswer}
@@ -3585,7 +4225,8 @@ What is the tracking error of the fund over this period?
 
 
 \begin{question}
-    Assume the market index return is 9.0\% while the risk-free rate is 2.5\%. A portfolio with a volatility of 10.0\% has a Sharpe measure of 0.60 and a Treynor measure of 0.25. What is the portfolio’s alpha?
+    Assume the market index return is 9.0\% while the risk-free rate is 2.5\%. A portfolio with a volatility of 10.0\% has a Sharpe measure of 0.60 and a Treynor measure of 0.25. What is the portfolio’s alpha?\\
+    假设市场指数收益率为9.0\%，无风险利率为2.5\%。一只波动率为10.0\%的投资组合的夏普比率为0.60，特雷诺比率为0.25。该投资组合的詹森阿尔法是多少？
 \end{question}
 
 \begin{choices}
@@ -3641,6 +4282,24 @@ What is the tracking error of the fund over this period?
 
     Based on the above information, what are the Traynor performance index for the equity fund and the S\&P 500?
 
+
+    一位分析师收集了关于一只股票基金和标普500指数在同一时间段内的表现信息。无风险利率为5.00\%。
+
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    & \text{股票基金} & \text{S\&P 500} \\
+    \hline
+    \text{收益率} & -10\% & -14\% \\
+    \text{标准差} & 14\% & 18\% \\
+    \text{贝塔值} & 1.10 & 1.00 \\
+    \text{跟踪误差} & 9\% & \text{N/A} \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    根据以上信息，股票基金和标普500的特雷诺业绩指数分别是多少？
+
     \begin{choices}
         \item -0.14 and -0.19
         \item -0.13 and -0.19
@@ -3680,13 +4339,18 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A portfolio manager is evaluating the performance of various investment strategies and is particularly interested in understanding the concepts of tracking error and information ratio. Which of the following statements about tracking error and information ratio is most likely to be incorrect?
+    \\    一位投资组合经理正在评估各种投资策略的表现，特别关注跟踪误差和信息比率的概念。下列关于跟踪误差和信息比率的陈述中，哪一项最有可能不正确？
 \end{question}
 
 \begin{choices}
-    \item Both are used to measure portfolios versus benchmarks.
-    \item Tracking error is the standard deviation of the return difference between the portfolio and benchmark, which can be used to measure active risk.
-    \item The information ratio measures the active return per unit of active risk.
-    \item The tracking error of the benchmark portfolio is 0.
+    \item Both are used to measure portfolios versus benchmarks.\\
+    两者都用于衡量投资组合相对于基准的表现。
+    \item Tracking error is the standard deviation of the return difference between the portfolio and benchmark, which can be used to measure active risk.\\
+    跟踪误差是投资组合收益率与基准收益率之间差异的标准差，可用于衡量主动风险。
+    \item The information ratio measures the active return per unit of active risk.\\
+    信息比率衡量每单位主动风险所获得的主动回报。
+    \item The tracking error of the benchmark portfolio is 0.\\
+    基准投资组合的跟踪误差为0。
 \end{choices}
 
 \begin{correctanswer}
@@ -3728,14 +4392,19 @@ What is the tracking error of the fund over this period?
 
 
 \begin{question}
-    During a financial seminar, an analyst presents a report comparing the performance of various investment strategies using both Treynor ratio and Sharpe ratio. Which one is inappropriate for the evaluation of these two ratios?
+    During a financial seminar, an analyst presents a report comparing the performance of various investment strategies using both Treynor ratio and Sharpe ratio. Which one is inappropriate for the evaluation of these two ratios?\\
+    在一次金融研讨会上，一位分析师使用特雷诺比率和夏普比率比较了各种投资策略的表现。哪一项不适合评估这两种比率？
 \end{question}
 
 \begin{choices}
-    \item Treynor ratio uses beta as denominator while Sharpe ratio uses total volatility as denominator.
-    \item Treynor ratio only considers systematic risk while Sharpe ratio considers total risk.
-    \item Treynor ratio could be fitted to well-diversified portfolio while Sharpe ratio could not.
-    \item Treynor ratio is best used to evaluate the performance of the index fund.
+    \item Treynor ratio uses beta as denominator while Sharpe ratio uses total volatility as denominator.\\
+    特雷诺比率使用贝塔作为分母，而夏普比率使用总波动率作为分母。
+    \item Treynor ratio only considers systematic risk while Sharpe ratio considers total risk.\\
+    特雷诺比率只考虑系统性风险，而夏普比率考虑总风险。
+    \item Treynor ratio could be fitted to well-diversified portfolio while Sharpe ratio could not.\\
+    特雷诺比率可以拟合到充分分散的投资组合，而夏普比率不能。
+    \item Treynor ratio is best used to evaluate the performance of the index fund.\\
+    特雷诺比率最适合评估指数基金的表现。
 \end{choices}
 
 \begin{correctanswer}
@@ -3794,14 +4463,32 @@ What is the tracking error of the fund over this period?
     D        & 13                     & 7                                & 1.0  \\ \hline
     \end{tabular}
     \end{table}
+    给定四个充分分散的投资组合，该分析师决定使用Sharperatio或特雷诺比率来评估这四个投资组合。如果无风险利率为2\%，使用最合适的测量方法，哪个是表现最好的投资组合？
+
+    
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    投资组合 & 预期收益率 (\%) & 收益率标准差 (\%) & 贝塔值 \\ \hline
+    A        & 20                     & 10                               & 1.6  \\ \hline
+    B        & 18                     & 11                               & 1.4  \\ \hline
+    C        & 15                     & 8                                & 1.2  \\ \hline
+    D        & 13                     & 7                                & 1.0  \\ \hline
+    \end{tabular}
+    \end{table}
     
     \end{question}
     
     \begin{choices}
-        \item Portfolio A  
-        \item Portfolio B  
-        \item Portfolio C  
-        \item Portfolio D  
+        \item Portfolio A  \\
+        投资组合A
+        \item Portfolio B  \\
+        投资组合B
+        \item Portfolio C  \\
+        投资组合C
+        \item Portfolio D  \\
+        投资组合D
     \end{choices}
     
     \begin{correctanswer}
@@ -3856,16 +4543,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     In a financial workshop, participants are discussing various performance metrics for investment portfolios. One of the topics is the Sortino ratio. Which of the following statements about the Sortino ratio is MOST accurate?
+    \\    在一次金融研讨会上，参与者讨论了各种投资组合的绩效指标。其中一个主题是索提诺比率。下列关于索提诺比率的陈述中，哪一项最准确？
 \end{question}
 
 \begin{choices}
     \item The Sortino ratio primarily focuses on measuring upside potential, as it considers returns above the minimum acceptable return (MAR) to evaluate portfolio performance.
-    
+    \\
+    索提诺比率主要关注上行潜力，因为它考虑了高于最低可接受收益率(MAR)的回报来评估投资组合表现。
     \item The Sortino ratio considers the volatility of all returns and losses, not just losses.
-    
+    \\
+    索提诺比率考虑了所有回报和损失的波动性，而不仅仅是损失。
     \item In the calculation of the Sortino ratio, the denominator is the semi-standard deviation, which only considers returns below the MAR.
-    
+    \\
+    在索提诺比率的计算中，分母是半标准差，它只考虑低于MAR的回报。
     \item The Sortino ratio dynamically adjusts its risk assessment based on market conditions to maintain consistency across different market cycles.
+    \\
+    索提诺比率根据市场条件动态调整其风险评估，以保持不同市场周期的一致性。
 \end{choices}
 
 \begin{correctanswer}
@@ -3919,13 +4612,29 @@ What is the tracking error of the fund over this period?
     \]
 
     Under baseline expectations, with industrial production growth of 3\% and an interest rate of 1.5\%, the expected return for Stock A is estimated to be 5\%. If the economic research department forecasts that industrial production will increase to 4.5\% and interest rates will rise to 2.0\%, what impact will these new forecasts have on the expected return for Stock A?
+    \\    一位投资顾问正在评估股票A对宏观经济因素的敏感性。他准备了以下因子贝塔的估计：
+    \[
+    \beta_{\text{工业生产}} = 1.3
+    \]
+    \[
+    \beta_{\text{利率}} = -0.75
+    \]
+    在基准预期下，工业生产增长3\%，利率为1.5\%，股票A的预期收益估计为5\%。如果经济研究部门预测工业生产将增加到4.5\%，利率将上升到2.0\%，这些新预测对股票A的预期收益有何影响？
 \end{question}
 
 \begin{choices}
     \item Decrease of 0.5\%
+    \\
+    减少0.5\%
     \item Increase of 1.0\%
+    \\
+    增加1.0\%
     \item Increase of 1.5\%
+    \\
+    增加1.5\%
     \item Increase of 2.0\%
+    \\
+    增加2.0\%
 \end{choices}
 
 \begin{correctanswer}
@@ -3973,6 +4682,7 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     Suppose three factors have been identified for the U.S. economy: the growth rate of industrial production (IP), the inflation rate (IR), and the excess return of 30-year Treasury bonds over T-bills (TB). IP is expected to be 4.0\%, IR is expected to be 3.0\%, and TB is expected to be 2.0\%. A stock that is expected to provide a rate of return of 9.0\% has a beta of 0.8 on IP, a beta of 0.6 on IR, and a beta of 0.5 on TB. If industrial production (IP) actually grows by 5.0\%, the inflation rate (IR) turns out to be 2.0\%, and the excess long-term Treasury bond (TB) is realized as 2.0\%, what is the revised estimate of the expected rate of return on the stock?
+    \\    假设美国经济中已经确定了三个因素：工业生产增长率(IP)、通货膨胀率(IR)和30年期国债相对于T-国债的超额回报(TB)。IP预计为4.0\%，IR预计为3.0\%，TB预计为2.0\%。一只股票预计提供9.0\%的收益率，在IP上的贝塔值为0.8，在IR上的贝塔值为0.6，在TB上的贝塔值为0.5。如果工业生产(IP)实际上增长了5.0\%，通货膨胀率(IR)实际上为2.0\%，30年期国债的超额回报(TB)实际上为2.0\%，股票的预期收益率是多少？
 \end{question}
 
 \begin{choices}
@@ -4033,16 +4743,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     In a university finance class, a professor is discussing the assumptions of the arbitrage pricing model (APM) with students to deepen their understanding of asset pricing. Each of the following is an assumption of the arbitrage pricing model (APM) EXCEPT for:
+    \\    在一次大学金融课程中，一位教授与学生讨论了套利定价模型(APM)的假设，以加深他们对资产定价的理解。下列哪一项是套利定价模型(APM)的假设，除了：
 \end{question}
 
 \begin{choices}
     \item Investors have homogeneous expectations regarding future returns.
-    
+    \\
+    投资者对未来收益的预期是均匀的。
     \item A security's return is linearly related to a set of risk factors or indexes.
-    
+    \\
+    证券的收益与一组风险因素或指数之间存在线性关系。
     \item Investors operate within a mean-variance optimization framework.
-    
+    \\
+    投资者在均值-方差优化框架内运作。
     \item The error terms associated with the model are uncorrelated.
+    \\
+    模型中的误差项是无相关的。
 \end{choices}
 
 \begin{correctanswer}
@@ -4076,13 +4792,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     An analyst should consider buying a security if its market price falls below the APT's prediction due to unexpected factors, and shorting a stock if its price exceeds the APT-calculated return. Which of the following statements about this approach is correct?
+    \\    一位分析师应该考虑在由于意外因素导致的市场价格低于APT预测时购买证券，并在市场价格超过APT计算的回报时卖空股票。下列关于这种方法的陈述中，哪一项是正确的？
 \end{question}
 
 \begin{choices}
     \item This approach is feasible and can guarantee consistent profits regardless of market conditions.
+    \\
+    这种方法是可行的，并且可以在任何市场条件下保证持续的利润。
     \item This approach introduces model risk and emphasizes the need for regular updates to model coefficients to maintain robustness.
+    \\
+    这种方法引入了模型风险，并强调了定期更新模型系数以保持稳健性的必要性。
     \item This approach is not feasible because the actual returns of stocks are unlikely to deviate significantly from the APT's pricing.
+    \\
+    这种方法不可行，因为股票的实际收益不太可能显著偏离APT的定价。
     \item This approach relies on historical data rather than considering current market dynamics.
+    \\
+    这种方法依赖于历史数据，而不是考虑当前市场动态。
 \end{choices}
 
 \begin{correctanswer}
@@ -4118,16 +4843,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A risk manager at an investment bank is analyzing different asset pricing models to better understand how they can be applied to their trading strategies. What are the key differences between Arbitrage Pricing Theory (APT) and the Capital Asset Pricing Model (CAPM)?
+    \\    一位投资银行的风险经理正在分析不同的资产定价模型，以更好地理解它们如何应用于他们的交易策略。套利定价理论(APT)和资本资产定价模型(CAPM)之间的关键区别是什么？
 \end{question}
 
 \begin{choices}
     \item APT is a non-linear model that establishes a relationship between expected returns and multiple risk factors, while CAPM focuses on the market factor.
-
+    \\
+    APT是一个非线性模型，建立了预期收益与多个风险因素之间的关系，而CAPM专注于市场因素。
     \item APT is a multi-factor model that considers several systematic risk factors, whereas CAPM is a one-factor model that relies only on market risk.
-
+    \\
+    APT是一个多因素模型，考虑了多个系统性风险因素，而CAPM是一个单因素模型，仅依赖于市场风险。
     \item APT can not incorporate  the market-related factor (beta) to assess risk，but CAPM can.
-
+    \\
+    APT不能将市场相关因素（贝塔）纳入风险评估，而CAPM可以。
     \item APT offers more flexibility than CAPM because it requires the identification of a complete market portfolio rather than a pricing analysis of a subset of securities, whereas CAPM requires an observable and mean-variance efficient market portfolio as a benchmark.
+    \\
+    APT比CAPM更灵活，因为它需要识别完整的市场投资组合，而不是对证券子集进行定价分析，而CAPM需要一个可观察的和均值-方差有效的市场投资组合作为基准。
 \end{choices}
 
 \begin{correctanswer}
@@ -4182,6 +4913,21 @@ What is the tracking error of the fund over this period?
     \]
     
     Which is the specification of the model?
+    \\    一个套利定价模型(APT)将超额证券收益表示为两个指数I(1)和I(2)的线性函数。证券的超额回报(ER(i))以百分比表示，给出如下：
+    \[
+    ER(i) = R(i) - R_f = a + b(1) \cdot I(1) + b(2) \cdot I(2)
+    \]
+    其中b(i)是指数I(i)的因子敏感度。我们观察到三个证券符合APT模型：
+    \[
+    \text{Security 1: } ER(1) = a + 1.0 \cdot I(1) + 2.0 \cdot I(2) = 6.0
+    \]
+    \[
+    \text{Security 2: } ER(2) = a + 3.0 \cdot I(1) + 1.5 \cdot I(2) = 4.5
+    \]
+    \[
+    \text{Security 3: } ER(3) = a + 2.0 \cdot I(1) - 1.0 \cdot I(2) = -3.0
+    \]
+    模型的规格是什么？
 \end{question}
 
 \begin{choices}
@@ -4253,16 +4999,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A junior risk analyst at a hedge fund is developing a multifactor APT model for portfolio risk assessment. His supervisor has provided several guidelines about factor selection. Which of the following guidelines is appropriate for constructing a multifactor APT model?
+    \\    一位对冲基金的初级风险分析师正在开发一个多因子APT模型来进行投资组合风险评估。他的主管提供了关于因子选择的几条指导原则。哪一条指导原则最适合构建一个多因子APT模型？
 \end{question}  
 
 \begin{choices}
     \item He should select as many system factors as possible to make the model show significant power in explaining security returns.
-    
+    \\
+    他应该选择尽可能多的系统性因子，以使模型在解释证券回报时显示出显著的解释力。
     \item He should focus on the macroeconomic factors that represent the main sources of market uncertainty, where investors demand a substantial risk premium.
-    
+    \\
+    他应该关注代表市场不确定性主要来源的宏观经济因素，投资者需要承担相当大的风险溢价。
     \item He should eliminate any factors that generate negative risk premiums, as they lack economic justification.
-    
+    \\
+    他应该消除任何产生负风险溢价的因子，因为它们缺乏经济依据。
     \item He should maintain a firm-specific (non-systemic) component in the model, similar to the single-index model, with an expected value of zero.
+    \\
+    他应该在模型中保持一个公司特定（非系统性）成分，类似于单指数模型，期望值为零。
 \end{choices}
 
 \begin{correctanswer}
@@ -4320,16 +5072,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A quantitative analyst at a pension fund is evaluating whether to upgrade their risk modeling framework from a single-factor CAPM to a multi-factor APT model. During a team meeting, she presents several statements to her colleagues about the differences between these two models. Which of her following statements about the model comparison is NOT correct?
+    \\    一位养老金基金的定量分析师正在评估是否将风险建模框架从单因子CAPM升级为多因子APT模型。在一次团队会议上，她向同事们介绍了这两种模型的差异。下列关于模型比较的陈述中，哪一项是不正确的？
 \end{question}
 
 \begin{choices}
     \item She should understand that APT can incorporate the market portfolio as one factor and extend to multiple periods, while CAPM is typically restricted to a single period.
-    
+    \\
+    她应该理解APT可以将市场组合作为一个因子，并扩展到多个时期，而CAPM通常局限于单期分析。
     \item She should note that CAPM requires a mean-variance efficient market portfolio and normal returns, while APT relaxes these restrictive assumptions.
-    
+    \\
+    她应该注意到CAPM需要均值-方差有效的市场组合和正态分布的收益率，而APT放松了这些限制性假设。
     \item She should expect APT to consistently deliver higher risk-adjusted returns than CAPM due to its more sophisticated framework.
-    
+    \\
+    她应该期望APT由于其更复杂的框架， consistently deliver higher risk-adjusted returns than CAPM。
     \item She should recognize that APT offers flexibility in selecting both the number and types of risk factors, unlike CAPM's single market factor approach.
+    \\
+    她应该认识到APT提供了在选择风险因子和类型方面的灵活性，而CAPM的单市场因子方法则不灵活。
 \end{choices}
 
 
@@ -4369,16 +5127,22 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A quantitative researcher is analyzing the theoretical relationship between the Capital Asset Pricing Model (CAPM) and the Arbitrage Pricing Theory (APT). Which of the following statements is TRUE regarding the relationship between these two models?
+    \\    一位定量研究人员正在分析资本资产定价模型(CAPM)和套利定价理论(APT)之间的理论关系。下列关于这两种模型之间关系的陈述中，哪一项是正确的？
 \end{question}
 
 \begin{choices}
     \item CAPM assumes that market risk is the sole source of covariance between asset returns, while APT allows for multiple sources.
-    
+    \\
+    CAPM假设市场风险是资产收益协方差的唯一来源，而APT允许多种来源。
     \item The identification of multiple significant common factors through the Roll and Ross procedure provides sufficient evidence to reject the validity of CAPM.
-    
+    \\
+    通过Roll和Ross程序发现多个统计显著的公共因子（与零显著不同），这一发现本身并不足以拒绝CAPM。
     \item Like CAPM, testing the APT requires the identification and measurement of a comprehensive market portfolio containing all risky assets.
-    
+    \\
+    与CAPM类似，测试APT需要识别和测量包含所有风险资产的综合市场投资组合。
     \item A properly specified multi-factor APT model can be shown to be mathematically consistent with the fundamental form of CAPM.
+    \\
+    一个 properly specified multi-factor APT模型可以被证明在数学上与CAPM的基本形式一致。
 \end{choices}
 
 \begin{correctanswer}
@@ -4432,6 +5196,7 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A portfolio manager is using a multi-factor APT model to forecast expected returns. Given the following data:
+ 
 
     \begin{center}
         \begin{tabular}{|l|c|c|c|c|c|}
@@ -4461,6 +5226,35 @@ What is the tracking error of the fund over this period?
     \end{center}
 
     What is the APT forecast for AT\&T's expected excess return?
+  
+    一位投资组合经理正在使用一个多因子APT模型来预测预期回报。给定以下数据：
+    \begin{center}
+        \begin{tabular}{|l|c|c|c|c|c|}
+            \hline
+            \multicolumn{5}{|c|}{因子预测 (\%)} \\
+            \hline
+            增长 & 债券 & 规模 & ROE & ERP \\ \hline
+            2.0 & 2.5 & -1.5 & 0.0 & 6.0 \\ \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{center}
+        \begin{tabular}{|l|l|c|c|c|c|c|c|}
+            \hline
+            \multicolumn{8}{|c|}{因子载荷（标准化敞口）} \\
+            \hline
+            股票 & 行业 & 预期收益率 & 增长 & 债券 & 规模 & ROE & 贝塔值 \\
+            \hline
+            Amex & FinServices & 6.0\% & 0.20 & -0.10 & 0.20 & -0.30 & 1.20 \\
+            AT\&T & Telephones & 6.0\% & -0.20 & 0.80 & 1.50 & -0.60 & 0.80 \\
+            Chevron & Energy & 6.0\% & -0.60 & -0.30 & 0.90 & -0.70 & 0.70 \\
+            Coca-Cola & Food & 6.0\% & 0.00 & 0.30 & 1.40 & 1.50 & 1.00 \\
+            Disney & Entertain & 6.0\% & 0.10 & -0.90 & 0.70 & 0.40 & 1.10 \\
+            Dow & Chemical & 8.0\% & -0.60 & -0.90 & 0.50 & 0.20 & 1.10 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    AT\&T的预期超额回报是多少？
 \end{question}
 
 \begin{choices}
@@ -4545,6 +5339,33 @@ What is the tracking error of the fund over this period?
     \end{center}
 
     Using the 2-factor model with the revised data, what is BBC's expected return?
+    \\假设一位分析师使用双因子模型来检验宽带公司（BBC）的预期收益率。给定以下数据：
+
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline
+            \multicolumn{3}{|c|}{初始数据} \\
+            \hline
+            项目 & 预测值 & 实际值 \\ \hline
+            初始预期收益率 & 10\% & 5\% \\ \hline
+            GDP增长率 & 6\% & 5\% \\ \hline
+            利率 & 3\% & 4\% \\ \hline
+            公司特定收益率 & - & -2\% \\ \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{center}
+        \begin{tabular}{|l|c|}
+            \hline
+            \multicolumn{2}{|c|}{因子贝塔值} \\
+            \hline
+            GDP因子贝塔值 & 1.50 \\ \hline
+            利率因子贝塔值 & -1.00 \\ \hline
+        \end{tabular}
+    \end{center}
+
+    使用修订后的数据，采用双因子模型，BBC的预期收益率是多少？   
+   
 \end{question}
 
 \begin{choices}
@@ -4603,6 +5424,26 @@ What is the tracking error of the fund over this period?
     \end{table}
 
     If we include the "surprises" in the macro factors, what is the expected rate of return for the stock?
+    \\考虑以下某只股票证券收益的多因子（APT）模型，以及三个宏观因子的实际与预期变化率：
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            \multicolumn{5}{|c|}{无风险利率 = 3.0\%} \\
+            \hline
+            & & 因子 & \multicolumn{2}{c|}{变化率} \\
+            \cline{3-5}
+            因子 & 贝塔值 & 风险溢价 & 预期 & 实际 \\
+            \hline
+            通货膨胀 & 1.50 & 2.5\% & 2.0\% & 3.5\% \\
+            工业生产 & 0.80 & 3.0\% & 3.0\% & 4.5\% \\
+            石油价格 & 0.40 & 2.0\% & 2.5\% & 1.0\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    如果我们包含宏观因子中的"意外"，该股票的预期收益率是多少？
 \end{question}
 
 \begin{choices}
@@ -4666,6 +5507,26 @@ What is the tracking error of the fund over this period?
     \end{table}
 
     What is the expected rate of return on the security?
+    考虑以下某只股票证券收益的多因子（APT）模型。除了因子贝塔值和风险溢价外，其中两个因子出现了"意外"。具体而言，虽然利率按预期变化，但实际通货膨胀率为+3.0\%（相比预期的+1.5\%），实际GDP增长率为+2.5\%（相比预期的+1.0\%）：
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            \multicolumn{5}{|c|}{无风险利率 = 2.5\%} \\
+            \hline
+            & & 因子 & \multicolumn{2}{c|}{变化率} \\
+            \cline{3-5}
+            因子 & 贝塔值 & 风险溢价 & 预期 & 实际 \\
+            \hline
+            Δ 通货膨胀 (Δi) & 1.20 & 2.5\% & 1.5\% & 3.0\% \\
+            Δ 利率 (Δr) & (0.60) & 1.5\% & 1.0\% & 1.0\% \\
+            ΔGDP & 1.50 & 3.5\% & 1.0\% & 2.5\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    该证券的预期收益率是多少？
 \end{question}
 
 \begin{choices}
@@ -4726,6 +5587,22 @@ What is the tracking error of the fund over this period?
     \end{table}
 
     If the risk-free rate is 2.5\%, what is the expected return for this stock using the arbitrage pricing theory (APT) model?
+    \\    一位投资者认为有三个重要因子决定普通股的预期收益率。该投资者使用以下因子贝塔值和因子风险溢价：
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|c|c|}
+            \hline
+            因子 & 因子贝塔值 & 因子风险溢价 \\
+            \hline
+            1 & 0.9 & 2.0\% \\
+            2 & 1.4 & 3.5\% \\
+            3 & -0.2 & 4.5\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    如果无风险利率为2.5\%，使用套利定价理论（APT）模型，该股票的预期收益率是多少？
 \end{question}
 
 \begin{choices}
@@ -4775,12 +5652,28 @@ What is the tracking error of the fund over this period?
 
     After that, he assumes that the return cannot be explained by the model is 0.4\% and the risk-free rate is 2.5\%. According to the above information, what is the expected return of the company?
 
-    \begin{choices}
-        \item 18.2\%
-        \item 17.7\%
-        \item 19.1\%
-        \item 18.5\%
-    \end{choices}
+  一位分析师认为可以使用法玛-弗伦奇三因子模型来估计一只股票明年的收益率。经过分析，他得出了以下数据：
+
+  \begin{center}
+  \begin{tabular}{|c|c|c|}
+  \hline
+  \text{系统性风险因子} & \text{贝塔值} & \text{风险溢价} \\
+  \hline
+  \text{市场} & 1.3 & 6\% \\
+  \text{SMB} & 0.9 & 4\% \\
+  \text{HML} & 0.6 & 3\% \\
+  \text{通货膨胀} & 0.7 & 2\% \\
+  \hline
+  \end{tabular}
+  \end{center}
+
+  之后，他假设模型无法解释的收益率为0.4\%，无风险利率为2.5\%。根据以上信息，该公司的预期收益率是多少？
+  \begin{choices}
+      \item 18.2\%
+      \item 17.7\%
+      \item 19.1\%
+      \item 18.5\%
+  \end{choices}
 \end{question}
 
 \begin{correctanswer}
@@ -4846,12 +5739,35 @@ What is the tracking error of the fund over this period?
     \hline
     \end{tabular}
     \end{center}
+    一位风险分析师正在使用多因子模型评估股票收益率对宏观经济因子变化的敏感性。该分析师得出以下因子贝塔值的估计值：
 
+    \[
+    \beta (\text{GDP}) = 0.8, \quad \beta (\text{利率}) = -1.2
+    \]
+
+    在GDP增长率为4.0\%、利率为2.5\%的基准预期下，该股票的预期收益率估计为5.5\%。在以下哪种情景下，该股票将获得最高收益率？
+
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \text{情景} & \text{GDP增长率（实际）\%} & \text{利率（实际）\%} \\
+    \hline
+    \text{A} & -5.0 & 0.0 \\
+    \text{B} & -3.0 & 1.5 \\
+    \text{C} & 2.0 & 4.0 \\
+    \text{D} & 5.0 & 6.0 \\
+    \hline
+    \end{tabular}
+    \end{center}
     \begin{choices}
-        \item Scenario A
-        \item Scenario B
-        \item Scenario C
-        \item Scenario D
+        \item Scenario A\\
+        情景A
+        \item Scenario B\\
+        情景B
+        \item Scenario C\\
+        情景C
+        \item Scenario D\\
+        情景D
     \end{choices}
 \end{question}
 
@@ -4896,14 +5812,19 @@ What is the tracking error of the fund over this period?
 
 \begin{question}
     A bank's investment analyst is preparing to value several equities in the bank's portfolio and is comparing different theories related to the discount rate that should be applied to equity cash flows. Which of the following statements is correct with respect to the arbitrage pricing theory (APT)?
+    \\    一位银行的投资分析师正在准备评估银行投资组合中的几只股票，并比较应用于股票现金流的不同理论的折现率。下列关于套利定价理论（APT）的陈述中，哪一项是正确的？
 \end{question}
 
 
     \begin{choices}
-        \item When an APT factor beta is positive, an increase in the risk premium will lead to a decrease in the asset's expected return.  
-        \item The APT assumes all company-specific risks can be completely diversified away in a portfolio.  
-        \item In an APT model, the factor betas for the market portfolio are typically equal to 1.  
-        \item The APT assumes that all investors hold mean-variance efficient portfolios and will make small portfolio changes when a mispriced security exists.  
+        \item When an APT factor beta is positive, an increase in the risk premium will lead to a decrease in the asset's expected return.  \\
+        当APT因子beta为正时，风险溢价的增加会导致资产预期收益的减少。
+        \item The APT assumes all company-specific risks can be completely diversified away in a portfolio.  \\
+        APT假设所有公司特定风险都可以在投资组合中完全分散。
+        \item In an APT model, the factor betas for the market portfolio are typically equal to 1.  \\
+        APT模型中，市场组合的因子beta通常等于1。
+        \item The APT assumes that all investors hold mean-variance efficient portfolios and will make small portfolio changes when a mispriced security exists.  \\
+        APT假设所有投资者持有均值-方差有效的投资组合，当存在错误定价的证券时，会进行小规模的投资组合调整。
     \end{choices}
     
     \begin{correctanswer}

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -105,6 +105,19 @@
     \end{tabular}
     \end{center}
     Based on the comparative advantage principle, what is the total potential savings for X and Y if they engage in an interest rate swap?
+    \\    一位商业银行的风险分析师正在评估两家公司X和Y的借款机会。这两家公司的借款利率如下表所示：
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    公司 & 固定利率借款 & 浮动利率借款 \\
+    \hline
+    X & 8\% & SOFR + 30bps \\
+    \hline
+    Y & 10\% & SOFR + 80bps \\
+    \hline
+    \end{tabular}
+    \end{center}
+    基于比较优势原理，X和Y如果进行利率互换，总潜在节省是多少？
     \end{question}
     
     \begin{choices}
@@ -143,13 +156,32 @@
     \end{tabular}
     \end{center}
     A swap between the client and which firm offers the greatest possible combined benefit compared with the client directly issuing a floating debt and the counterparty financing with a fixed rate?
+    \\一位商品交易公司的风险分析师有一个客户，客户发行了3亿美元固定利率债务，年利率为3.5\%，用于扩张项目。客户现在希望通过互换将这笔债务转换为浮动利率债务。分析师已经识别出四家有兴趣将债务从浮动利率转换为固定利率的公司。以下表格显示了客户和每家公司的贷款利率：
+    \begin{center}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    公司 & 固定利率(\%) & 浮动利率(\%) \\
+    \hline
+    Client & 3.5 & 6 - month LIBOR + 1.2 \\
+    \hline
+    Firm X & 3.0 & 6 - month LIBOR + 0.8 \\
+    \hline
+    Firm Y & 5.5 & 6 - month LIBOR + 2.8 \\
+    \hline
+    Firm Z & 5.0 & 6 - month LIBOR + 2.2 \\
+    \hline
+    Firm W & 4.0 & 6 - month LIBOR + 1.8 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    客户和哪家公司进行互换，与客户直接发行浮动债务和对手方以固定利率融资相比，可能获得的联合收益最大？
     \end{question}
     
     \begin{choices}
-        \item Firm X
-        \item Firm Y
-        \item Firm Z
-        \item Firm W
+        \item Firm X\\公司X
+        \item Firm Y\\公司Y
+        \item Firm Z\\公司Z
+        \item Firm W\\公司W
     \end{choices}
     
     \begin{correctanswer}
@@ -174,13 +206,14 @@
 \setcounter{question}{0}
 \begin{question}
     A risk analyst at a bank is analyzing an interest rate swap and a currency swap. In an interest rate swap, the fixed rate is 3\%, the principal is \$10,000,000, and the SOFR for a particular period is 2.5\%. The number of days in the period is 90. In a currency swap with a principal of €5,000,000 exchanged for \$6,000,000, the interest rate on the euro side is 1.5\% and on the dollar side is 2\%. Calculate the net payment for the interest rate swap and the interest payment in dollars for the currency swap for this period.
+    \\一位银行的风险分析师正在分析利率互换和货币互换。在利率互换中，固定利率为3\%，本金为1000万美元，特定时期的SOFR为2.5\%。期间的天数为90天。在欧元5000万美元兑换美元6000万美元的货币互换中，欧元侧的利率为1.5\%，美元侧的利率为2\%。计算利率互换的净支付和货币互换的美元利息支付。
     \end{question}
     
     \begin{choices}
-        \item Interest rate swap net payment: \$12,500; Currency swap dollar interest payment: \$30,000
-        \item Interest rate swap net payment: \$12,500; Currency swap dollar interest payment: \$20,000
-        \item Interest rate swap net payment: \$10,000; Currency swap dollar interest payment: \$30,000
-        \item Interest rate swap net payment: \$10,000; Currency swap dollar interest payment: \$20,000
+        \item Interest rate swap net payment: \$12,500; Currency swap dollar interest payment: \$30,000\\利率互换净支付: 12500美元；货币互换美元利息支付: 30000美元
+        \item Interest rate swap net payment: \$12,500; Currency swap dollar interest payment: \$20,000\\利率互换净支付: 12500美元；货币互换美元利息支付: 20000美元
+        \item Interest rate swap net payment: \$10,000; Currency swap dollar interest payment: \$30,000\\利率互换净支付: 10000美元；货币互换美元利息支付: 30000美元
+        \item Interest rate swap net payment: \$10,000; Currency swap dollar interest payment: \$20,000\\利率互换净支付: 10000美元；货币互换美元利息支付: 20000美元
     \end{choices}
     
     \begin{correctanswer}
@@ -204,6 +237,7 @@
 
     \begin{question}
         A junior trader on a derivatives trading desk is dealing with a two - year interest rate swap. The fixed rate payer has a fixed rate of 3.5\%. The principal amount is $8,000,000$. The floating rates for the last period are as follows: SOFR for the last period is 3.2\%, and the number of days in the last period is 90. What is the net payment for the fixed - rate payer in the last period?
+        \\一位初级衍生品交易员在处理一个两年期的利率互换。固定利率支付方固定利率为3.5\%，本金为8000000美元。最后一期的浮动利率为：SOFR为3.2\%，期间天数为90天。计算固定利率支付方在最后一期的净支付。
         \end{question}
         
         \begin{choices}
@@ -233,13 +267,18 @@
 
 \begin{question}
     A company borrows 30 million euros at an interest rate of 3\% and enters into a currency swap with a counterparty. In the swap, it pays 30 million euros and receives 25 million British pounds. The interest rates in the currency swap are 3\% for the euro and 4\% for the British pound. How does the company make payments at the beginning, during the swap period, and at the end?
+    \\一家公司以3\%的利率借入3000万欧元，并进入与对手方的货币互换。在互换中，公司支付3000万欧元，收到2500万英镑。货币互换的利率为3\%的欧元和4\%的英镑。公司如何进行期初、期间和期末的支付？
     \end{question}
     
     \begin{choices}
-        \item At the beginning, receive euros and pay pounds; during the period, receive euro interest and pay pound interest; at the end, pay euros and receive pounds.
-        \item At the beginning, pay euros and receive pounds; during the period, pay euro interest and receive pound interest; at the end, receive euros and pay pounds.
-        \item At the beginning, pay euros and receive pounds; during the period, receive euro interest and pay pound interest; at the end, receive euros and pay pounds.
-        \item At the beginning, receive euros and pay pounds; during the period, pay euro interest and receive pound interest; at the end, pay euros and receive pounds.
+        \item At the beginning, receive euros and pay pounds; during the period, receive euro interest and pay pound interest; at the end, pay euros and receive pounds.\\
+        期初：公司收到欧元，支付英镑；期间：公司收到欧元利息，支付英镑利息；期末：公司支付欧元，收到英镑。
+        \item At the beginning, pay euros and receive pounds; during the period, pay euro interest and receive pound interest; at the end, receive euros and pay pounds.\\
+        期初：公司支付欧元，收到英镑；期间：公司支付欧元利息，收到英镑利息；期末：公司收到欧元，支付英镑。
+        \item At the beginning, pay euros and receive pounds; during the period, receive euro interest and pay pound interest; at the end, receive euros and pay pounds.\\
+        期初：公司支付欧元，收到英镑；期间：公司收到欧元利息，支付英镑利息；期末：公司收到欧元，支付英镑。
+        \item At the beginning, receive euros and pay pounds; during the period, pay euro interest and receive pound interest; at the end, pay euros and receive pounds.\\
+        期初：公司收到欧元，支付英镑；期间：公司支付欧元利息，收到英镑利息；期末：公司支付欧元，收到英镑。
     \end{choices}
     
     \begin{correctanswer}
@@ -259,6 +298,7 @@
 
     \begin{question}
         A hedge fund manager is analyzing a volatility swap between Company X and Company Y. The first settlement is due after 2 years. Company X will pay a pre - specified volatility of 8\% annually to Company Y, while Company Y will pay the observed historical volatility of 10\% annually to Company X. Given a principal of 150 million, what is the cash flow in the first settlement for Company X?
+        \\一位对冲基金经理正在分析公司X和公司Y之间的波动率互换。第一笔结算将在2年后到期。公司X将按每年8\%的预先指定的波动率支付给公司Y，而公司Y将按每年10\%的观察到的历史波动率支付给公司X。给定本金为1.5亿美元，公司X在第一笔结算中的现金流是多少？
         \end{question}
         
         \begin{choices}
@@ -288,6 +328,7 @@
 
 \begin{question}
     You are tasked with estimating the value of an overnight indexed swap that has two years left in its life. The swap involves paying a fixed rate of 4.5\% at the end of each quarter and receiving the rate implied by the overnight rate when it is compounded day - by - day during the quarter. The notional principal is USD 15 million. The current quote for a two - year overnight index swap is bid 3.60, ask 3.68. The risk - free rate is 3.2\% for all maturities, and all rates are compounded quarterly.
+    \\你被要求估计一个隔夜指数互换的价值，该互换还有两年到期。互换涉及每个季度末支付固定利率4.5\%，并收到隔夜利率在每个季度内按日计复利计算的利率。本金为1500万美元。目前两年期隔夜指数互换的买入价为3.60，卖出价为3.68。无风险利率为3.2\%，所有利率按季度复利计算。
     \end{question}
     
     \begin{choices}
@@ -321,6 +362,7 @@
 
     \begin{question}
         A financial analyst at a bank is tasked with estimating the value of an interest rate swap that has 3.5 years remaining in its life. The swap involves paying a fixed rate of 6\% and receiving Libor every three months. The notional principal is USD 25 million. Currently, a new 3 - year swap can be found where 3.1\% is received and Libor is paid, and a new 4 - year swap with a swap rate of 3.25\%. Assume the risk - free rate is 3.8\% for all maturities, and all rates are compounded quarterly. What is the value of the interest rate swap?
+        \\一位银行的风险分析师被要求估计一个利率互换的价值，该互换还有3.5年到期。互换涉及每个季度末支付固定利率6\%，并收到Libor。本金为2500万美元。目前，一个新的3年期互换可以找到，其中收到3.1\%，支付Libor，以及一个新的4年期互换，互换利率为3.25\%。假设无风险利率为3.8\%，所有利率按季度复利计算。利率互换的价值是多少？
         \end{question}
         
         \begin{choices}
@@ -367,6 +409,20 @@
     \end{tabular}
     \end{center}
     Assuming no default, how much did the bank receive on September 1, 2011?
+    \\一位区域银行的信用分析师正在评估一个银行在2009年9月1日签订的3年期互换协议。在互换中，银行收到3.50\%的固定利率，支付SOFR加1.00\%，本金为500万美元。支付每6个月进行一次。下表显示了3年期期间实际的6个月SOFR利率。假设没有违约，银行在2011年9月1日收到多少金额？
+    \begin{center}
+        \begin{tabular}{|l|l|}
+        \hline
+        日期 & 6个月SOFR \\ \hline
+        2009年9月1日 & 2.80\% \\ \hline
+        2010年3月1日 & 1.50\% \\ \hline
+        2010年9月1日 & 0.70\% \\ \hline
+        2011年3月1日 & 0.30\% \\ \hline
+        2011年9月1日 & 0.40\% \\ \hline
+        2012年3月1日 & 0.60\% \\ \hline
+        \end{tabular}
+        \end{center}
+        假设没有违约，银行在2011年9月1日收到多少金额？
     \end{question}
     
     \begin{choices}
@@ -395,6 +451,7 @@
 
 \begin{question}
     A risk analyst at an international bank is evaluating a 4 - year currency swap. The swap entails exchanging annual interest of 3.25\% on 12 million US dollars for 4.25\% on 18 million Canadian dollars. The current spot rate is 1.55 CAD per USD. The term structure is flat in both countries. If the interest rates (with continuous compounding) in Canada are 5.5\% and in the United States are 4.5\%, what is the value of the swap in USD, rounded to the nearest dollar?
+    \\一位国际银行的信用分析师正在评估一个4年期的货币互换。互换涉及每年支付1200万美元的3.25\%利息，收到1800万加元的4.25\%利息。当前的即期汇率为1.55加元每美元。两国利率期限结构均为平坦。如果加拿大和美国（连续复利）的利率分别为5.5\%和4.5\%，互换的价值是多少？
     \end{question}
     
     \begin{choices}
@@ -433,6 +490,7 @@
 
 \begin{question}
     A risk analyst at a multinational bank is assessing a currency swap. In this swap, the analyst's institution pays interest on Australian dollars at a rate of 3.5\% and receives interest on Japanese yen at 2.2\%. The Australian dollar principal is 1.2 million AUD, and the Japanese yen principal is 95 million JPY. The most recent exchange has just taken place, and interest is exchanged every six months. There are 2.5 years remaining in the life of the swap. The current exchange rate is 80 JPY per AUD. The forward exchange rates (JPY per AUD) for 0.5, 1, 1.5, 2, and 2.5 years are 79.2, 78.4, 77.6, 76.8, and 76 respectively. The risk - free rates in AUD are 2.8\% compounded semi - annually. What is the value of the swap (AUD Paid) in Australian dollars?
+    \\一位跨国银行的信用分析师正在评估一个货币互换。在互换中，分析师的机构每年支付3.5\%的澳元利息，收到2.2\%的日元利息。澳元本金为1200万澳元，日元本金为9500万日元。最近一次交换刚刚发生，利息每6个月交换一次。互换还有2.5年到期。当前的即期汇率为80日元每澳元。0.5年、1年、1.5年、2年和2.5年的远期汇率（日元每澳元）分别为79.2、78.4、77.6、76.8和76。澳元（澳元支付）的无风险利率为2.8\%，半年复利。互换的价值是多少？
     \end{question}
     
     \begin{choices}
@@ -472,13 +530,14 @@
 
 \begin{question}
     A portfolio manager at an investment firm, Tom Brown, wants to adjust his portfolio. He aims to decrease his exposure to fixed - income securities and increase his exposure to mid - cap stocks. He enters into an equity swap with a dealer. Under the terms of the swap, he will pay the dealer a fixed rate of 4.5\% and receive the return on the mid - cap stock index. The payments are made annually, and the notional principal is EUR 60 million. The mid - cap stock index had a value of 12,500 at the start of the year and 13,800 at the end of the year. What is the net payment made at the end of the year, and which party makes the net payment?
+    \\一位投资公司的组合经理Tom Brown想要调整他的投资组合。他希望减少对固定收益证券的暴露，增加对中型股票的暴露。他进入了一个股权互换，与经销商签订了互换协议。根据互换条款，他将支付经销商4.5\%的固定利率，并收到中型股票指数的回报。支付每年进行一次，名义本金为6000万欧元。中型股票指数年初价值为12500，年末价值为13800。年末的净支付是多少，哪一方进行净支付？
     \end{question}
     
     \begin{choices}
-        \item EUR 3.54 million, Portfolio manager
-        \item EUR 3.72 million, Dealer
-        \item EUR 3.54 million, Dealer
-        \item EUR 3.72 million, Portfolio manager
+        \item EUR 3.54 million, Portfolio manager\\354万欧元，组合经理
+        \item EUR 3.72 million, Dealer\\372万欧元，经销商
+        \item EUR 3.54 million, Dealer\\354万欧元，经销商
+        \item EUR 3.72 million, Portfolio manager\\372万欧元，组合经理
     \end{choices}
     
     \begin{correctanswer}
@@ -503,13 +562,14 @@
 
     \begin{question}
         A risk analyst at a bond investment firm is monitoring a portfolio manager's position. The portfolio manager holds a long position in 12 - year Treasury bonds, which are financed via short - term repurchase agreements. Given that the yield curve is currently upward - sloping and there's a concern that market rates may rise further, potentially reducing the market value of the position. Which of the following hedges can be used to minimize the position's exposure to rising rates?
+        \\一位债券投资公司的风险分析师正在监控一个组合经理的头寸。组合经理持有12年期国债的多头头寸，通过短期回购协议融资。假设收益率曲线目前向上倾斜，并且存在市场利率可能进一步上升的担忧，可能会降低头寸的市场价值。哪一种对冲可以用来最小化头寸对利率上升的暴露？
         \end{question}
         
         \begin{choices}
-            \item Enter into a 12 - year receive - fixed and pay - floating interest rate swap.
-            \item Establish a long position in 12 - year Treasury bond futures.
-            \item Buy a put option on 12 - year Treasury bond futures.
-            \item Enter into a 12 - year pay - fixed and receive - floating interest rate swap.
+            \item Enter into a 12 - year receive - fixed and pay - floating interest rate swap.\\进入一个12年期的收取固定利率并支付浮动利率的利率互换。
+            \item Establish a long position in 12 - year Treasury bond futures.\\建立一个12年期的国债期货多头头寸。
+            \item Buy a put option on 12 - year Treasury bond futures.\\购买一个12年期的国债期货看跌期权。
+            \item Enter into a 12 - year pay - fixed and receive - floating interest rate swap.\\进入一个12年期的支付固定利率并收取浮动利率的利率互换。
         \end{choices}
         
         \begin{correctanswer}
@@ -558,13 +618,32 @@
     \end{tabular}
     \end{center}
     Assuming the trading desk receives interest in JPY, which of the following statements is most likely correct?
+    \\一位初级衍生品交易员在解释货币互换的特征给新实习生。交易员举了一个固定对固定欧元对日元的货币互换的例子，互换条款如下：
+    \begin{center}
+        \begin{tabular}{|c|c|}
+        \hline
+        欧元名义本金 & EUR 8 million \\
+        \hline
+        日元名义本金 & JPY 800 million \\
+        \hline
+        欧元利率 & 1.5\% \\
+        \hline
+        日元利率 & 3.0\% \\
+        \hline
+        到期时间 & 3年 \\
+        \hline
+        利息支付频率 & 每年 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        假设交易台收到日元利息，以下哪项陈述最可能是正确的？
     \end{question}
     
     \begin{choices}
-        \item The mark - to - market value of the swap will be negative at the initiation of the swap.
-        \item The trading desk will pay JPY 800 million and receive EUR 8 million at the initiation of the swap.
-        \item Interest payments will be exchanged, but the notional amounts will remain with their original holders throughout the swap.
-        \item If the JPY appreciates against the EUR, the mark - to - market value of the swap will decrease for the trading desk.
+        \item The mark - to - market value of the swap will be negative at the initiation of the swap.\\在互换开始时，互换的盯市价值将为负。
+        \item The trading desk will pay JPY 800 million and receive EUR 8 million at the initiation of the swap.\\在互换开始时，交易台将支付8亿日元并收到800万欧元。
+        \item Interest payments will be exchanged, but the notional amounts will remain with their original holders throughout the swap.\\利息支付将交换，但名义本金将保持在其原始持有者手中 throughout the swap.
+        \item If the JPY appreciates against the EUR, the mark - to - market value of the swap will decrease for the trading desk.\\如果日元相对于欧元升值，交易台的互换盯市价值将减少。
     \end{choices}
     
     \begin{correctanswer}

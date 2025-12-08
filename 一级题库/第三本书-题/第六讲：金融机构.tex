@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -22,7 +22,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}  % 提供数学符号，包括\therefore
 \usetikzlibrary{positioning}
-
+\usepackage{float}
 
 %目录设定
 
@@ -101,13 +101,14 @@
 
 \begin{question}
     A risk manager at a major bank is tasked with determining the capital levels necessary to protect against unexpected financial losses. This involves using the bank's proprietary risk models and internal assessments, often resulting in a capital figure lower than regulatory requirements. What is this type of capital called?
+    \\一位大型银行的信用风险经理被要求确定保护银行免受意外财务损失所需的资本水平。这涉及使用银行的风险模型和内部评估，通常导致资本水平低于监管要求。这种类型的资本被称为什么？
 \end{question}
     
 \begin{choices}
-    \item Equity capital.
-    \item Financial capital.
-    \item Economic capital.
-    \item Regulatory capital.
+    \item Equity capital.\\股本资本。
+    \item Financial capital.\\财务资本。
+    \item Economic capital.\\经济资本。
+    \item Regulatory capital.\\监管资本。
 \end{choices}
     
     \begin{correctanswer}
@@ -141,14 +142,15 @@
     \checklist{Economic capital的定义和特点。（区分四种资本：equity capital、financial capital、economic capital和regulatory capital）}
 
     \begin{question}
-        A central bank is concerned about moral hazard in the banking system, where banks might take excessive risks due to the safety net provided by deposit insurance. To mitigate this issue, the central bank is considering several policy actions. Which of the following actions is most likely intended to address the problem of moral hazard?
+        A central bank is concerned about moral hazard in the banking system, where banks might take excessive risks due to the safety net provided by deposit insurance. To mitigate this issue, the central bank is considering several policy actions. Which of the following actions is most likely intended to address the problem of moral hazard?\\
+        一个中央银行担心银行系统中的道德风险，其中银行可能因存款保险提供的保障而采取过度风险行为。为了解决这个问题，中央银行正在考虑采取一些政策行动。以下哪项行动最有可能旨在解决道德风险问题？
         \end{question}
         
         \begin{choices}
-            \item Implementing risk-based premiums for deposit insurance.
-            \item Encouraging banks to increase loans to higher-risk borrowers.
-            \item Expanding government-backed deposit insurance programs.
-            \item Allowing banks to offer higher interest rates to attract more deposits.
+            \item Implementing risk-based premiums for deposit insurance.\\实施基于风险的存款保险费率。
+            \item Encouraging banks to increase loans to higher-risk borrowers.\\鼓励银行向高风险借款人增加贷款。
+            \item Expanding government-backed deposit insurance programs.\\扩大政府支持的存款保险计划。
+            \item Allowing banks to offer higher interest rates to attract more deposits.\\允许银行提供更高的利率以吸引更多存款。
         \end{choices}
         
         \begin{correctanswer}
@@ -188,13 +190,14 @@
 
  \begin{question}
     A national bank has introduced a new policy to fully insure all depositor funds, regardless of the bank's risk profile, to boost public confidence. However, this policy might lead to unintended consequences. Which of the following scenarios best illustrates the potential moral hazard problem arising from this policy?
+    \\一个国家银行推出了一项新政策，完全保障所有存款人的资金，无论银行的信用风险如何，以增强公众信心。然而，这项政策可能会导致意想不到的后果。以下哪个场景最能说明这项政策可能引发的道德风险问题？
     \end{question}
     
     \begin{choices}
-        \item A bank tightens its lending criteria to reduce exposure to high-risk loans.
-        \item A bank pays higher insurance premiums due to its increased risk-taking activities.
-        \item A bank increases its capital reserves to cover potential losses from risky investments.
-        \item A bank aggressively expands into high-risk markets, knowing depositors are fully protected.
+        \item A bank tightens its lending criteria to reduce exposure to high-risk loans.\\一个银行收紧其贷款标准以减少对高风险贷款的风险暴露。
+        \item A bank pays higher insurance premiums due to its increased risk-taking activities.\\一个银行因增加风险承担活动而支付更高的保险费。
+        \item A bank increases its capital reserves to cover potential losses from risky investments.\\一个银行增加其资本储备以覆盖高风险投资的潜在损失。
+        \item A bank aggressively expands into high-risk markets, knowing depositors are fully protected.\\一个银行积极扩张到高风险市场，知道存款人完全受到保护。
     \end{choices}
     
     \begin{correctanswer}
@@ -234,13 +237,14 @@
 
 \begin{question}
     A financial regulator is reviewing the historical development and regulatory framework of commercial and investment banking sectors. Which of the following statements is CORRECT regarding the business scope and supervision of commercial banks and investment banks?
+    \\一位金融监管者正在审查商业银行和投资银行的历史发展和监管框架。以下哪项陈述关于商业银行和投资银行的业务范围和监管是正确的？
 \end{question}
 
 \begin{choices}
-    \item Commercial banks' retail business primarily focuses on large corporate clients, with transaction amounts comparable to wholesale banking operations.
-    \item Wholesale banks maintain high administrative costs due to their specialized transaction processing requirements and complex risk management systems.
-    \item The role of investment banks in ipos is more about providing professional services and using their network resources, rather than focusing on pricing through market mechanisms like the Dutch auction.
-    \item Prior to the 2007-2008 financial crisis, U.S. investment banks and commercial banks were free to engage in each other's business activities.
+    \item Commercial banks' retail business primarily focuses on large corporate clients, with transaction amounts comparable to wholesale banking operations.\\商业银行的零售业务主要面向大型企业客户，交易金额与批发银行业务相当。
+    \item Wholesale banks maintain high administrative costs due to their specialized transaction processing requirements and complex risk management systems.\\批发银行由于其专业交易处理要求和复杂的风险管理系统，维持较高的行政成本。
+    \item The role of investment banks in ipos is more about providing professional services and using their network resources, rather than focusing on pricing through market mechanisms like the Dutch auction.\\投资银行在IPO中的角色更多的是提供专业服务和利用其网络资源，而不是通过市场机制如荷兰拍卖来定价。
+    \item Prior to the 2007-2008 financial crisis, U.S. investment banks and commercial banks were free to engage in each other's business activities.\\在2007-2008金融危机之前，美国投资银行和商业银行可以自由地从事彼此的业务活动。
 \end{choices}
 
 
@@ -279,13 +283,14 @@
 
 \begin{question}
     A risk management team at a major international bank is reviewing their market risk management practices. Which of the following statements about bank market risk management is CORRECT?
+    \\一个国际大型银行的风险管理团队正在审查他们的市场风险管理实践。以下哪项陈述关于银行市场风险管理是正确的？
 \end{question}
 
 \begin{choices}
-    \item Market variables primarily respond to domestic economic indicators, with limited influence from international political events.
-    \item Due to the prohibition of proprietary trading in the US, banks' market risk does not primarily stem from their trading operations.
-    \item Banks' bid-ask spread mechanisms serve as a comprehensive risk management tool, effectively eliminating market risks in trading operations.
-    \item Banks provide clients with various financial products related to market variable prices, including spot, forward, and option transactions.
+    \item Market variables primarily respond to domestic economic indicators, with limited influence from international political events.\\市场变量主要响应国内经济指标，国际政治事件的影响有限。
+    \item Due to the prohibition of proprietary trading in the US, banks' market risk does not primarily stem from their trading operations.\\由于美国禁止自营交易，银行的市场风险主要不来自于他们的交易操作。
+    \item Banks' bid-ask spread mechanisms serve as a comprehensive risk management tool, effectively eliminating market risks in trading operations.\\银行买卖价差机制作为全面风险管理工具，有效地消除交易操作中的市场风险。
+    \item Banks provide clients with various financial products related to market variable prices, including spot, forward, and option transactions.\\银行提供与市场变量价格相关的各种金融产品，包括即期、远期和期权交易。
 \end{choices}
 
 \begin{correctanswer}
@@ -319,13 +324,14 @@
 
 \begin{question}
     A derivatives trader at a major bank is preparing a risk assessment report focusing on credit risk in derivatives trading. Which of the following statements about credit risk in bank derivatives trading is CORRECT?
+    \\一位大型银行衍生品交易员正在准备一份风险评估报告，重点关注银行衍生品交易中的信用风险。以下哪项陈述关于银行衍生品交易中的信用风险是正确的？
 \end{question}
 
 \begin{choices}
-    \item Derivatives trading market risk primarily stems from operational factors, with underlying market variables playing a secondary role in value determination.
-    \item Derivatives trading credit risk management focuses on collateral collection, with counterparty creditworthiness assessment being a supplementary consideration.
-    \item The credit risk in derivatives arises from the possibility that counterparties may default when the trade has a positive value to the bank (and thus a negative value to the counterparty).
-    \item Credit risk exposure in derivatives remains constant throughout the life of the contract due to the initial pricing mechanisms.
+    \item Derivatives trading market risk primarily stems from operational factors, with underlying market variables playing a secondary role in value determination.\\衍生品交易市场风险主要来源于运营因素，底层市场变量在价值决定中起次要作用。
+    \item Derivatives trading credit risk management focuses on collateral collection, with counterparty creditworthiness assessment being a supplementary consideration.\\衍生品交易信用风险管理主要关注抵押品收集，交易对手信用评估是补充考虑因素。
+    \item The credit risk in derivatives arises from the possibility that counterparties may default when the trade has a positive value to the bank (and thus a negative value to the counterparty).\\衍生品信用风险来源于交易对手可能在交易对银行有正值时（即对手方有负值）违约的可能性。
+    \item Credit risk exposure in derivatives remains constant throughout the life of the contract due to the initial pricing mechanisms.\\衍生品信用风险暴露在整个合同生命周期内保持不变，由于初始定价机制。
 \end{choices}
 
 \begin{correctanswer}
@@ -359,13 +365,14 @@
 
 \begin{question}
     An internal auditor at a commercial bank is training new staff about operational risk management. During the training session, several common misconceptions about operational risk emerge from the discussion. Which of the following statements represents a misconception about the nature and management of operational risk in banking?
+    \\一家商业银行的内部审计员正在培训新员工关于操作风险管理。在培训期间，讨论了几种常见的关于操作风险的认识误区。以下哪项陈述代表了对银行操作风险性质和管理方法的误解？
 \end{question}
 
 \begin{choices}
-    \item Operational risk is the risk of loss resulting from inadequate or failed internal processes, people and systems, or from external events.
-    \item Operational risk includes all risks that are not market or credit risks, but excludes strategic and reputational risks.
-    \item The quantification of operational risk in banks is simpler than that of market or credit risk.
-    \item Important sources of bank operational risk include cyber risk, legal risk, and compliance risk.
+    \item Operational risk is the risk of loss resulting from inadequate or failed internal processes, people and systems, or from external events.\\操作风险是损失风险，源于内部流程、人员和系统的不当或失败，或外部事件。
+    \item Operational risk includes all risks that are not market or credit risks, but excludes strategic and reputational risks.\\操作风险包括所有不是市场或信用风险的风险，但排除战略和声誉风险。
+    \item The quantification of operational risk in banks is simpler than that of market or credit risk.\\银行操作风险的量化比市场或信用风险更简单。
+    \item Important sources of bank operational risk include cyber risk, legal risk, and compliance risk.\\银行操作风险的重要来源包括网络风险、法律风险和合规风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -398,13 +405,14 @@
 
 \begin{question}
     A bank examiner is evaluating different types of capital requirements and their roles in maintaining bank stability. Which of the following statements about bank capital types and their functions is CORRECT?
+    \\一位银行监管者正在评估不同类型的资本要求及其在维持银行稳定性中的作用。以下哪项陈述关于银行资本类型及其功能是正确的？
 \end{question}
 
 \begin{choices}
-    \item Equity capital primarily serves as a buffer against systematic market risks, while debt capital actively absorbs operational losses during normal business conditions.
-    \item Economic capital focuses on meeting external regulatory requirements, while regulatory capital reflects the bank's internal assessment of risk exposures.
-    \item Debt capital provides additional protection for depositors as it faces risk only after equity is depleted, while economic capital is the bank's own estimate of required capital.
-    \item Regulatory capital represents a dynamic measure that automatically adjusts to market conditions, ensuring optimal capital allocation across all risk types.
+    \item Equity capital primarily serves as a buffer against systematic market risks, while debt capital actively absorbs operational losses during normal business conditions.\\股本资本主要是为了缓冲系统性市场风险，而债务资本在正常经营条件下积极吸收运营损失。
+    \item Economic capital focuses on meeting external regulatory requirements, while regulatory capital reflects the bank's internal assessment of risk exposures.\\经济资本专注于满足外部监管要求，而监管资本反映了银行对风险暴露的内部评估。
+    \item Debt capital provides additional protection for depositors as it faces risk only after equity is depleted, while economic capital is the bank's own estimate of required capital.\\债务资本为存款人提供额外保护，因为它在股本耗尽后才面临风险，而经济资本是银行对自己所需资本的估计。
+    \item Regulatory capital represents a dynamic measure that automatically adjusts to market conditions, ensuring optimal capital allocation across all risk types.\\监管资本代表一个动态指标，自动调整以适应市场条件，确保在所有风险类型中进行最佳资本分配。
 \end{choices}
 
 \begin{correctanswer}
@@ -439,13 +447,14 @@
 
 \begin{question}
     A bank compliance officer is conducting a training session for new employees about the Basel Accords. During the discussion, several common misconceptions about the evolution of capital requirements emerge. Which of the following statements represents a misconception about the development and implementation of the Basel Accords?
+    \\一位银行合规官员正在为新员工培训关于巴塞尔协议的演变。在讨论中，出现了关于资本要求发展的几个常见误解。以下哪项陈述代表了对巴塞尔协议发展和实施的误解？
 \end{question}
 
 \begin{choices}
-    \item Basel I required banks to calculate capital requirements in a uniform way, primarily to cover losses from loan and derivative contract defaults.
-    \item Basel II allows banks to use internal modeling to determine credit risk capital and operational risk capital. After the subprime crisis, the Basel Committee decided to strengthen banks' reliance on internal modelling.
-    \item Basel II.5 was revised after the 2007-2008 financial crisis to strengthen market risk capital calculation rules.
-    \item Basel III decided to increase banks' equity capital requirements and is expected to be fully implemented by 2027.
+    \item Basel I required banks to calculate capital requirements in a uniform way, primarily to cover losses from loan and derivative contract defaults.\\巴塞尔I要求银行以统一方式计算资本要求，主要是为了覆盖贷款和衍生品合约违约可能带来的损失。
+    \item Basel II allows banks to use internal modeling to determine credit risk capital and operational risk capital. After the subprime crisis, the Basel Committee decided to strengthen banks' reliance on internal modelling.\\巴塞尔II允许银行使用内部模型来确定信用风险资本和操作风险资本。在次贷危机之后，巴塞尔委员会决定加强银行对内部模型的依赖。
+    \item Basel II.5 was revised after the 2007-2008 financial crisis to strengthen market risk capital calculation rules.\\巴塞尔II.5是在2007-2008年金融危机后修订的，以加强市场风险资本计算规则。
+    \item Basel III decided to increase banks' equity capital requirements and is expected to be fully implemented by 2027.\\巴塞尔III决定增加银行的股本资本要求，并预计将于2027年全面实施。
 \end{choices}
 
 \begin{correctanswer}
@@ -478,13 +487,14 @@
 
 \begin{question}
     A regulatory compliance specialist at a global bank is evaluating the application of standardized and internal models under the Basel II framework. Which of the following statements about the application of standardized and internal models under Basel II is CORRECT?
+    \\一位全球银行的合规专家正在评估标准化和内部模型在巴塞尔II框架下的应用。以下哪项陈述关于标准化和内部模型在巴塞尔II框架下的应用是正确的？
 \end{question}
 
 \begin{choices}
-    \item The standardized models provide banks with flexibility in risk calculation methodologies, allowing them to adapt the models based on their specific business needs and risk profiles.
-    \item Internal models serve as supplementary tools to standardized approaches, with their primary function being the validation of standardized model results.
-    \item After the financial crisis, the Basel Committee reduced reliance on internal models, believing banks had too much freedom in choosing models that produced minimum capital requirements.
-    \item The Basel Committee encourages banks to develop sophisticated internal models for operational risk calculation to better reflect their unique operational environments.
+    \item The standardized models provide banks with flexibility in risk calculation methodologies, allowing them to adapt the models based on their specific business needs and risk profiles.\\标准化模型提供了银行在风险计算方法上的灵活性，允许他们根据自身的业务需求和风险状况调整模型。
+    \item Internal models serve as supplementary tools to standardized approaches, with their primary function being the validation of standardized model results.\\内部模型作为标准化方法的补充工具，其主要功能是验证标准化模型结果。
+    \item After the financial crisis, the Basel Committee reduced reliance on internal models, believing banks had too much freedom in choosing models that produced minimum capital requirements.\\在金融危机之后，巴塞尔委员会减少了内部模型的依赖，认为银行在选择产生最低资本要求的模型时有过多自由度。
+    \item The Basel Committee encourages banks to develop sophisticated internal models for operational risk calculation to better reflect their unique operational environments.\\巴塞尔委员会鼓励银行开发复杂的内部模型用于操作风险计算，以更好地反映其独特的运营环境。
 \end{choices}
 
 \begin{correctanswer}
@@ -517,13 +527,14 @@
 
 \begin{question}
     A bank examiner is reviewing the distinction between banking book and trading book classifications at a major financial institution. Which of the following statements about the differences between banking book and trading book is CORRECT?
+    \\一位银行监管者正在审查一家大型金融机构的银行账簿和交易账簿的分类。以下哪项陈述关于银行账簿和交易账簿的区别是正确的？
 \end{question}
 
 \begin{choices}
-    \item The banking book primarily focuses on short-term market opportunities, while the trading book emphasizes stable interest income generation through long-term holdings.
-    \item The banking book's capital requirements are primarily determined by market risk factors, reflecting the dynamic nature of its portfolio management approach.
-    \item Banks tend to exploit the unclear boundaries between books by placing trades in whichever book results in lower capital requirements.
-    \item The Fundamental Review of the Trading Book (FRTB) enhances risk management through flexible capital calculation approaches tailored to each bank's trading strategies.
+    \item The banking book primarily focuses on short-term market opportunities, while the trading book emphasizes stable interest income generation through long-term holdings.\\银行账簿主要专注于短期市场机会，而交易账簿强调通过长期持有稳定利息收入。
+    \item The banking book's capital requirements are primarily determined by market risk factors, reflecting the dynamic nature of its portfolio management approach.\\银行账簿的资本要求主要由市场风险因素决定，反映了其投资组合管理方法的动态性质。
+    \item Banks tend to exploit the unclear boundaries between books by placing trades in whichever book results in lower capital requirements.\\银行倾向于利用账簿之间的模糊界限，将交易放在资本要求较低的账簿中。
+    \item The Fundamental Review of the Trading Book (FRTB) enhances risk management through flexible capital calculation approaches tailored to each bank's trading strategies.\\交易账簿基本审查（FRTB）通过针对每个银行交易策略定制的灵活资本计算方法增强了风险管理。
 \end{choices}
 
 \begin{correctanswer}
@@ -554,14 +565,19 @@
 
 \checklist{银行账簿和交易账簿的区别。（了解两者的基本特征和风险管理要求）}
 \begin{question}
-    A mortgage market analyst is examining the Originate-to-Distribute (OTD) model used by banks in subprime mortgage lending during the pre-2008 period. Which of the following statements about banks' OTD model in subprime mortgage lending is CORRECT?
+    A mortgage market analyst is examining the Originate-to-Distribute (OTD) model used by banks in subprime mortgage lending during the pre-2008 period. Which of the following statements about banks' OTD model in subprime mortgage lending is CORRECT?\\
+    一位抵押贷款市场分析师正在审查2008年之前次级抵押贷款市场中银行使用的发起并分配（OTD）模型。以下哪项陈述关于银行在次级抵押贷款中的OTD模型是正确的？
 \end{question}
 
 \begin{choices}
-    \item Subprime borrowers maintained stable mortgage payments throughout the loan term due to the fixed-rate structure of their initial mortgages.
-    \item Through securitization of subprime mortgages, banks created pools of assets that were primarily rated below investment grade and sold these assets to investors.
-    \item The growth in subprime mortgage lending primarily resulted from improved borrower creditworthiness and enhanced property valuation methods.
-    \item Under the OTD model, losses on subprime mortgages were borne by the ultimate investors rather than the banks that originally made the loans.
+    \item Subprime borrowers maintained stable mortgage payments throughout the loan term due to the fixed-rate structure of their initial mortgages.\\
+    次级贷款借款人由于初始抵押贷款的固定利率结构，在整个贷款期间保持稳定的抵押贷款支付。
+    \item Through securitization of subprime mortgages, banks created pools of assets that were primarily rated below investment grade and sold these assets to investors.\\
+    通过次级抵押贷款的证券化，银行创建了主要是投资级以下的资产池，并将这些资产出售给投资者。
+    \item The growth in subprime mortgage lending primarily resulted from improved borrower creditworthiness and enhanced property valuation methods.\\
+    次级抵押贷款市场的增长主要是由于借款人信用质量的提升和财产估值方法的改进。
+    \item Under the OTD model, losses on subprime mortgages were borne by the ultimate investors rather than the banks that originally made the loans.\\
+    在OTD模型下，次级抵押贷款的损失由最终投资者而不是最初发放贷款的银行承担。
 \end{choices}
 
 \begin{correctanswer}
@@ -594,14 +610,19 @@
 
 
 \begin{question}
-    An investment banking analyst is reviewing different securities issuance methods and the bank's role in each. Which of the following statements about banks' roles in securities issuance is CORRECT?
+    An investment banking analyst is reviewing different securities issuance methods and the bank's role in each. Which of the following statements about banks' roles in securities issuance is CORRECT?\\
+    一位投资银行分析师正在审查不同的证券发行方法以及银行在每种方法中的角色。以下哪项陈述关于银行在证券发行中的角色是正确的？
 \end{question}
 
 \begin{choices}
-    \item Private placement primarily targets retail investors through extensive marketing campaigns, providing them with direct access to new securities offerings.
-    \item Public offerings typically rely on standardized pricing mechanisms, with banks acting mainly as administrative intermediaries in the distribution process.
-    \item In a best efforts arrangement, banks provide price support services to maintain the securities' market value throughout the distribution period.
-    \item In an underwriting arrangement, banks guarantee to sell securities above market price to ensure profits for the issuing company.
+    \item Private placement primarily targets retail investors through extensive marketing campaigns, providing them with direct access to new securities offerings.\\
+    私人配售主要通过广泛的营销活动面向零售投资者，为他们提供直接访问新的证券发行。
+    \item Public offerings typically rely on standardized pricing mechanisms, with banks acting mainly as administrative intermediaries in the distribution process.\\
+    公开发行通常依赖标准化定价机制，银行主要作为分销过程中的行政中介。
+    \item In a best efforts arrangement, banks provide price support services to maintain the securities' market value throughout the distribution period.\\
+    在最佳努力安排中，银行提供价格支持服务，以在整个分销期间维持证券的市场价值。
+    \item In an underwriting arrangement, banks guarantee to sell securities above market price to ensure profits for the issuing company.\\
+    在承销安排中，银行保证以高于市场价格销售证券，以确保发行公司的利润。
 \end{choices}
 
 \begin{correctanswer}
@@ -633,14 +654,19 @@
 \checklist{投行offerings(了解Best efforts和Firm commitment的特点)}
 
 \begin{question}
-    An investment bank is evaluating different securities offering methods to determine which approach provides the highest potential for trading revenue. Which of the following methods is most likely to generate direct trading profits for the investment bank?
+    An investment bank is evaluating different securities offering methods to determine which approach provides the highest potential for trading revenue. Which of the following methods is most likely to generate direct trading profits for the investment bank?\\
+    一家投资银行正在评估不同的证券发行方法，以确定哪种方法提供最高的交易收入潜力。以下哪种方法最有可能为投资银行直接带来交易利润？
 \end{question}
     
 \begin{choices}
-    \item Acting as an auction agent in a Dutch auction IPO, where the bank's role is limited to facilitating the bidding process and price discovery.
-    \item Conducting a private placement, where the bank's revenue primarily comes from arrangement fees and advisory services.
-    \item Managing a best efforts offering, where the bank acts as a selling agent without taking ownership of the securities.
-    \item Executing a firm commitment underwriting, where the bank purchases the securities at a discount and resells them at a markup.
+    \item Acting as an auction agent in a Dutch auction IPO, where the bank's role is limited to facilitating the bidding process and price discovery.\\
+    作为荷兰式拍卖IPO的拍卖代理人，银行的职责仅限于促进投标过程和价格发现。
+    \item Conducting a private placement, where the bank's revenue primarily comes from arrangement fees and advisory services.\\
+    进行私募发行，银行的主要收入来自安排费和咨询服务。
+    \item Managing a best efforts offering, where the bank acts as a selling agent without taking ownership of the securities.\\
+    管理最佳努力发行，银行作为销售代理人，不拥有证券的所有权。
+    \item Executing a firm commitment underwriting, where the bank purchases the securities at a discount and resells them at a markup.\\
+    执行包销承诺承销，银行以折扣价购买证券，并以溢价转售。
 \end{choices}
     
 \begin{correctanswer}
@@ -693,7 +719,25 @@
         \end{center}
         
         At what price are the shares sold, and how many shares does each bidder receive if the auctioneer prioritizes higher bids first?
+        在一次出售20,000股的荷兰式拍卖中，收到了以下投标。拍卖人必须确定所有股票将被出售的清算价格。考虑这些投标并确定股票出售的每股价格，确保出售的股票总数不超过20,000。
         
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{投标人} & \textbf{股票数量} & \textbf{价格（美元）} \\
+        \hline
+        A & 3,000 & 80 \\
+        B & 2,000 & 73 \\
+        C & 5,000 & 90 \\
+        D & 6,000 & 85 \\
+        E & 9,000 & 70 \\
+        F & 4,000 & 84 \\
+        G & 8,000 & 86 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        
+        如果拍卖人优先考虑较高投标，股票以什么价格出售，每个投标人收到多少股？
         \end{question}
         
         \begin{choices}
@@ -742,14 +786,15 @@
         
         \checklist{理解荷兰拍卖的清算价格和分配机制。（价格从高到低）}
 \begin{question}
-    An internal auditor working for an investment bank is evaluating the bank's internal controls to ensure that conflicts of interest and information sharing are effectively prevented when providing commercial banking, investment banking and securities services. He is reviewing the bank's compliance documents to confirm compliance with regulatory requirements. Which of the following statements is correct?
+    An internal auditor working for an investment bank is evaluating the bank's internal controls to ensure that conflicts of interest and information sharing are effectively prevented when providing commercial banking, investment banking and securities services. He is reviewing the bank's compliance documents to confirm compliance with regulatory requirements. Which of the following statements is correct?\\
+    一位投资银行的内部审计员正在评估银行的内部控制，以确保在提供商业银行、投资银行业务和证券服务时有效地防止利益冲突和信息共享。他正在审查银行的合规文件，以确认是否符合监管要求。以下哪项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The integration of commercial banking and investment banking services naturally promotes information transparency and reduces potential conflicts through shared knowledge.
-    \item Banks' internal control systems primarily focus on maximizing synergies between different divisions by encouraging open communication channels across departments.
-    \item Regulators require a degree of separation between commercial banking, securities services, and investment banking to prevent conflicts of interest.
-    \item The implementation of information barriers in banks serves mainly to streamline decision-making processes and enhance operational efficiency.
+    \item The integration of commercial banking and investment banking services naturally promotes information transparency and reduces potential conflicts through shared knowledge.\\商业银行和投资银行业务的整合自然促进了信息透明度，并通过共享知识减少了潜在的利益冲突。
+    \item Banks' internal control systems primarily focus on maximizing synergies between different divisions by encouraging open communication channels across departments.\\银行的内部控制系统主要专注于通过鼓励跨部门开放沟通渠道最大化不同部门之间的协同效应。
+    \item Regulators require a degree of separation between commercial banking, securities services, and investment banking to prevent conflicts of interest.\\监管机构要求商业银行、证券服务和投资银行之间保持适当的分离，以防止利益冲突。
+    \item The implementation of information barriers in banks serves mainly to streamline decision-making processes and enhance operational efficiency.\\银行的信息隔离措施主要目的是简化决策过程并提高运营效率。
 \end{choices}
 
 \begin{correctanswer}
@@ -783,14 +828,19 @@
 
 
 \begin{question}
-    A risk analyst at a fixed-income investment firm is evaluating the bank's lending strategy. He found that banks had adopted an "originate-distribution" model, which was widely discussed in financial markets. He needs to analyse the impact of this model on credit standards.What is a significant consequence of the originate-to-distribute banking model?
+    A risk analyst at a fixed-income investment firm is evaluating the bank's lending strategy. He found that banks had adopted an "originate-distribution" model, which was widely discussed in financial markets. He needs to analyse the impact of this model on credit standards.What is a significant consequence of the originate-to-distribute banking model?\\
+    一位固定收益投资公司的风险分析师正在评估银行的贷款策略。他发现银行采用了“发起-分销”模式，这在金融市场上被广泛讨论。他需要分析这种模式对信贷标准的影响。什么是“发起-分销”银行模式的重要后果？
 \end{question}
 
 \begin{choices}
-    \item Lack of liquidity limits market transactions, but the "originate-distribution" model typically increases liquidity through securitized loans.
+    \item Lack of liquidity limits market transactions, but the "originate-distribution" model typically increases liquidity through securitized loans.\\
+    缺乏流动性限制市场交易，但“发起-分销”模式通常通过证券化贷款增加流动性。
     \item Excess liquidity can lead to asset bubbles, but this pattern of increased liquidity does not mean excess.
+    过剩流动性可能导致资产泡沫，但这种流动性增加的模式并不意味着过剩。
     \item Credit standards were relaxed in some areas, notably residential mortgages, as banks quickly sold loans, reducing the rigor of credit assessments.
+    在一些地区，特别是住宅抵押贷款领域，信贷标准放松了，因为银行迅速出售贷款，减少了信贷评估的严格性。
     \item Tighter credit standards may restrict access to loans, but this model does not lead to tighter credit standards and may reduce audit rigor.
+    更严格的信贷标准可能限制贷款获取，但这种模式不会导致更严格的信贷标准，可能降低审计严格性。
 \end{choices}
 
 \begin{correctanswer}
@@ -824,13 +874,14 @@
 
 
 \begin{question}
-    A compliance officer at a universal bank is evaluating potential conflicts of interest between investment banking and commercial banking divisions. Which of the following situations does NOT represent a conflict of interest between investment banking and commercial banking operations?
+    A compliance officer at a universal bank is evaluating potential conflicts of interest between investment banking and commercial banking divisions. Which of the following situations does NOT represent a conflict of interest between investment banking and commercial banking operations?\\
+    一位全能银行的合规官员正在评估投资银行和商业银行部门之间的潜在利益冲突。以下哪项情况不代表投资银行和商业银行运营之间的利益冲突？
 \end{question}
 \begin{choices}
-    \item Investment banks may use commercial bank brokers to recommend securities purchases to clients during new stock issues.
-    \item In merger transactions, investment banks may obtain confidential information about target companies from commercial banks.
-    \item Investment banks require research analysts to issue "buy" recommendations to please company management.
-    \item Commercial banks recommend bond issuance to replace loans to increase profits for the investment banking division.
+    \item Investment banks may use commercial bank brokers to recommend securities purchases to clients during new stock issues.投资银行可能在新的股票发行期间使用商业银行经纪人向客户推荐证券购买。
+    \item In merger transactions, investment banks may obtain confidential information about target companies from commercial banks.在合并交易中，投资银行可能从商业银行获得目标公司的机密信息。
+    \item Investment banks require research analysts to issue "buy" recommendations to please company management.投资银行要求研究分析师发布“购买”推荐以取悦公司管理层。
+    \item Commercial banks recommend bond issuance to replace loans to increase profits for the investment banking division.商业银行建议债券发行以替换贷款，以增加投资银行部门的利润。
 \end{choices}
 
 \begin{correctanswer}
@@ -881,9 +932,10 @@
 
 \begin{question}
     The relevant interest rate for insurance contracts is 2\% per annum (with semiannual compounding), and all premiums are paid annually at the beginning of the year. A \$2,000,000 term insurance contract is being proposed for a 40-year-old male in average health. Assume that payouts occur halfway through the year. Using the mortality rates estimated by the U.S. Social Security Administration, which of the following amounts is closest to the insurance company’s breakeven premium for a two-year term?
+
 \end{question}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -892,6 +944,17 @@
 41 & 0.002240 & 0.95708 & 37.61 \\ \hline
 \end{tabular}
 \end{table}
+
+    保险合同的相关利率为每年2\%（半年复利），所有保费每年年初支付。一项针对40岁男性平均健康状况的200万美元定期保险合同正在提出。假设赔付发生在年中。使用美国社会保障管理局估计的死亡率，以下哪项金额最接近保险公司的盈亏平衡保费为两年期？
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{年龄} & \textbf{一年内死亡概率} & \textbf{生存概率} & \textbf{预期寿命} \\ \hline
+        40 & 0.002092 & 0.95908 & 38.53 \\ \hline
+        41 & 0.002240 & 0.95708 & 37.61 \\ \hline
+        \end{tabular}
+        \end{table}
 
 \begin{choices}
     \item \$4,246
@@ -959,6 +1022,21 @@
     \end{center}
 
     Assuming all claims are paid at the end of the year, which of the following values is closest to the expected claim amount for this policy?
+    一位寿险公司的精算师正在验证一个新实施的模型，该模型用于计算定期寿险保单的预期未来理赔。精算师使用一个71岁保单持有人的例子来检查该模型的计算。保单规定，如果被保险人在73岁之前死亡，则支付\$350,000，否则不支付。精算师使用以下死亡率数据：
+
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    年龄 & 一年死亡概率 & 累积生存概率 \\
+    \hline
+    71 & 0.01700 & 0.81301 \\
+    72 & 0.01886 & 0.79911 \\
+    73 & 0.02070 & 0.78040 \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    假设所有理赔都在年末支付，以下哪项数值最接近该保单的预期理赔金额？
 \end{question}
 
 \begin{choices}
@@ -1005,14 +1083,18 @@
 
 
 \begin{question}
-    An insurance advisor is explaining different types of insurance contracts to a new client who is unfamiliar with insurance products. Which of the following statements MOST LIKELY misrepresents the characteristics of insurance contract?
+    An insurance advisor is explaining different types of insurance contracts to a new client who is unfamiliar with insurance products. Which of the following statements MOST LIKELY misrepresents the characteristics of insurance contract?\\
+    一位保险顾问正在向一位不熟悉保险产品的客户解释不同类型的保险合同。以下哪项陈述最有可能误解保险合同的特征？
 \end{question}
 
 \begin{choices}
-    \item Life insurance contracts require policyholders to pay periodic premiums during their lifetime to ensure a lump-sum payment to beneficiaries upon death.
-    \item Property and casualty insurance typically has a one-year term and provides compensation for losses due to accidents, fire, theft, and similar events.
-    \item Life insurance contracts require only a one-time premium payment with no need for annual renewal.
-    \item Pension plans share similarities with contracts offered by life insurance companies.
+    \item Life insurance contracts require policyholders to pay periodic premiums during their lifetime to ensure a lump-sum payment to beneficiaries upon death.\\
+    人寿保险合同要求投保人在生存期间按照约定（通常是每月、每季度或每年）支付保费，以确保在被保险人身故时向受益人支付一次性赔付金额。
+    \item Property and casualty insurance typically has a one-year term and provides compensation for losses due to accidents, fire, theft, and similar events.\\财产和意外保险通常有一年期限，并提供因事故、火灾、盗窃等事件导致的损失赔偿。
+    \item Life insurance contracts require only a one-time premium payment with no need for annual renewal.\\
+    人寿保险合同只需要一次性支付保费，不需要每年续保。
+    \item Pension plans share similarities with contracts offered by life insurance companies.\\
+    养老金计划与人寿保险公司的合同有很多相似之处。
 \end{choices}
 
 \begin{correctanswer}
@@ -1044,14 +1126,15 @@
 \checklist{保险合同的主要特征（养老金计划和人寿保险确实有很多共同点）}
 
 \begin{question}
-    A risk management consultant is analyzing the major risks faced by insurance companies. During a presentation to the board of directors, which of the following statements about insurance company risks is correct?
+    A risk management consultant is analyzing the major risks faced by insurance companies. During a presentation to the board of directors, which of the following statements about insurance company risks is correct?\\
+    一位风险管理顾问正在分析保险公司面临的主要风险。在向董事会成员汇报时，以下哪项陈述关于保险公司风险是正确的？
 \end{question}
 
 \begin{choices}
-    \item Insurance companies maintain stable fund levels through premium income, with actuarial calculations ensuring precise matching of assets and liabilities.
-    \item Insurance companies' investment portfolios primarily focus on fixed-income securities to ensure stable cash flows and match their long-term liability structures.
-    \item Insurance companies manage counterparty risk through diversified reinsurance arrangements, making default risk minimal in the industry.
-    \item Insurance companies face unique operational risks that differ fundamentally from banks, as their business model focuses on long-term risk assessment and claims processing.
+    \item Insurance companies maintain stable fund levels through premium income, with actuarial calculations ensuring precise matching of assets and liabilities.\\保险公司通过保费收入维持稳定的资金水平，精算计算确保资产和负债的精确匹配。
+    \item Insurance companies' investment portfolios primarily focus on fixed-income securities to ensure stable cash flows and match their long-term liability structures.\\保险公司投资组合主要专注于固定收益证券，以确保稳定的现金流并匹配其长期负债结构。
+    \item Insurance companies manage counterparty risk through diversified reinsurance arrangements, making default risk minimal in the industry.\\保险公司通过分散再保险安排管理交易对手信用风险，使违约风险在行业内最小化。
+    \item Insurance companies face unique operational risks that differ fundamentally from banks, as their business model focuses on long-term risk assessment and claims processing.\\保险公司面临独特的运营风险，与银行不同，因为它们的业务模式专注于长期风险评估和理赔处理。
 \end{choices}
 
 \begin{correctanswer}
@@ -1084,14 +1167,19 @@
 
 
 \begin{question}
-    A pension fund manager is reviewing various retirement products for their clients' portfolios. During an assessment of annuity contracts, which of the following statements about annuity contract characteristics and operations is correct?
+    A pension fund manager is reviewing various retirement products for their clients' portfolios. During an assessment of annuity contracts, which of the following statements about annuity contract characteristics and operations is correct?\\
+    一位养老金基金经理正在审查各种退休产品，以评估客户的投资组合。在评估年金合同时，以下哪项陈述关于年金合同特征和运营是正确的？
 \end{question}
 
 \begin{choices}
-    \item Annuity contracts primarily serve as short-term investment vehicles, focusing on market-based returns through active portfolio management.
-    \item Taxes on annuity contracts are usually paid when annuity payments are received, which helps with tax deferral.
-    \item The accumulated value of an annuity contract can be withdrawn at any time without penalties.
-    \item Annuity contracts generate returns mainly through high-frequency trading strategies in the secondary market.
+    \item Annuity contracts primarily serve as short-term investment vehicles, focusing on market-based returns through active portfolio management.\\
+    年金合同主要是作为短期投资工具，通过积极的投资组合管理专注于市场回报。
+    \item Taxes on annuity contracts are usually paid when annuity payments are received, which helps with tax deferral.\\
+    年金合同的税款通常在年金支付时支付，这有助于税收递延。
+    \item The accumulated value of an annuity contract can be withdrawn at any time without penalties.\\
+    年金合同的累积价值可以在任何时间 
+    \item Annuity contracts generate returns mainly through high-frequency trading strategies in the secondary market.\\
+    年金合同主要通过二级市场的高频交易策略产生回报。
 \end{choices}
 
 \begin{correctanswer}
@@ -1125,14 +1213,19 @@
 
 
 \begin{question}
-    A life insurance agent is explaining different types of life insurance policies to a family seeking comprehensive coverage. While reviewing various policy options, which of the following statements MOST LIKELY misrepresents the characteristics of different types of life insurance?
+    A life insurance agent is explaining different types of life insurance policies to a family seeking comprehensive coverage. While reviewing various policy options, which of the following statements MOST LIKELY misrepresents the characteristics of different types of life insurance?\\
+    一位人寿保险代理人正在向一个寻求全面保障的家庭解释不同类型的人寿保险政策。在审查各种政策选项时，以下哪项陈述最有可能误解不同类型的人寿保险的特征？
 \end{question}
 
 \begin{choices}
-    \item Whole life insurance provides lifelong coverage with periodic premium payments and pays the face value to beneficiaries upon death.
-    \item Term life insurance provides coverage for a specific period and pays the face value if the insured dies during this period.
-    \item Endowment insurance pays out at the end of the contract term regardless of whether the insured is alive.
-    \item Group life insurance is typically purchased by companies for their employees, with premiums potentially shared between the company and employees.
+    \item Whole life insurance provides lifelong coverage with periodic premium payments and pays the face value to beneficiaries upon death.\\
+    终身寿险提供终身保障，定期支付保费，并在被保险人身故时向受益人支付约定的保险金额。
+    \item Term life insurance provides coverage for a specific period and pays the face value if the insured dies during this period.\\
+    定期寿险提供特定期限内的保障，如果被保险人在保险期间内身故，保险公司将支付约定的保险金额。
+    \item Endowment insurance pays out at the end of the contract term regardless of whether the insured is alive.\\
+    终寿险在合同期满时支付，无论被保险人是否在世。
+    \item Group life insurance is typically purchased by companies for their employees, with premiums potentially shared between the company and employees.\\
+    团体寿险通常由公司为其员工购买，保费可能由公司和员工共同分担。
 \end{choices}
 
 \begin{correctanswer}
@@ -1166,14 +1259,19 @@
 
 
 \begin{question}
-    An actuary at a life insurance company is analyzing longevity and mortality risks in their insurance portfolio. During the risk assessment presentation, which of the following statements about longevity and mortality risks faced by life insurance companies is INCORRECT?
+    An actuary at a life insurance company is analyzing longevity and mortality risks in their insurance portfolio. During the risk assessment presentation, which of the following statements about longevity and mortality risks faced by life insurance companies is INCORRECT?\\
+    一位寿险公司的精算师正在分析其保险组合中的长寿和死亡风险。在风险评估演示中，以下哪项陈述关于寿险公司面临的长寿和死亡风险是错误的？
 \end{question}
 
 \begin{choices}
-    \item Improvements in medical conditions and nutrition lead to longer life expectancy, which is favorable for annuity insurance.
-    \item Factors such as wars and epidemics may cause earlier-than-expected deaths, which is favorable for whole life insurance.
-    \item Annuity insurance faces longevity risk because longer policyholder lifespans result in more annuity payments.
-    \item Whole life insurance faces mortality risk because when policyholders die young, insurance companies need to pay higher claims.
+    \item Improvements in medical conditions and nutrition lead to longer life expectancy, which is favorable for annuity insurance.\\
+    医疗条件和营养改善导致更长的预期寿命，这对年金保险是有利的。
+    \item Factors such as wars and epidemics may cause earlier-than-expected deaths, which is favorable for whole life insurance.\\
+    战争和流行病等事件可能导致预期死亡提前，这对终身寿险是有利的。
+    \item Annuity insurance faces longevity risk because longer policyholder lifespans result in more annuity payments.\\
+    年金保险面临长寿风险，因为投保人寿命延长导致更多的年金支付。
+    \item Whole life insurance faces mortality risk because when policyholders die young, insurance companies need to pay higher claims.\\
+    终身寿险面临死亡风险，因为当投保人过早死亡时，保险公司需要支付更高的赔付。
 \end{choices}
 
 \begin{correctanswer}
@@ -1223,6 +1321,21 @@
     \end{center}
 
     Based on the information provided, what is this company's operating ratio?
+    一位财产和意外保险公司的风险分析师正在审查关键绩效指标。公司报告了以下指标：
+    \begin{center}
+        \begin{tabular}{|l|c|}
+        \hline
+        组成部分 & 比率 \\
+        \hline
+        投资收益 & 6\% \\
+        股息 & 3\% \\
+        损失率 & 71\% \\
+        费用率 & 25\% \\
+        \hline
+        \end{tabular}
+        \end{center}
+    
+        根据提供的信息，该公司的营业比率是多少？
 \end{question}
 
 \begin{choices}
@@ -1264,14 +1377,19 @@
 \checklist{保险公司比率分析（运营比率计算、综合比率计算、股息影响评估）}
 
 \begin{question}
-    A chief underwriter at a life insurance company is discussing risk assessment challenges with the actuarial team. During their review of adverse selection issues, which of the following statements about adverse selection in life insurance is correct?
+    A chief underwriter at a life insurance company is discussing risk assessment challenges with the actuarial team. During their review of adverse selection issues, which of the following statements about adverse selection in life insurance is correct?\\
+    一位寿险公司的首席承保人正在与精算团队讨论风险评估挑战。在审查逆向选择问题时，以下哪项陈述关于人寿保险中的逆向选择是正确的？
 \end{question}
 
 \begin{choices}
-    \item Adverse selection primarily affects insurance companies through their ability to accurately price risk based on comprehensive market data.
-    \item Adverse selection in life insurance leads to a balanced distribution of risk profiles among policyholders through natural market mechanisms.
-    \item Adverse selection can be mitigated by requiring medical examinations from insurance applicants.
-    \item Adverse selection presents similar challenges across all insurance types due to standardized information collection processes.
+    \item Adverse selection primarily affects insurance companies through their ability to accurately price risk based on comprehensive market data.\\
+    逆向选择主要是由于保险公司无法获得完整的个人风险信息，而不是市场数据不足。即使有全面的市场数据，个体层面的信息不对称问题仍然存在，这才是导致逆向选择的根本原因。
+    \item Adverse selection in life insurance leads to a balanced distribution of risk profiles among policyholders through natural market mechanisms.\\
+    逆向选择在人寿保险中通过自然市场机制在投保人之间平衡风险分布。
+    \item Adverse selection can be mitigated by requiring medical examinations from insurance applicants.\\
+    逆向选择可以通过要求保险申请人进行体检来缓解。
+    \item Adverse selection presents similar challenges across all insurance types due to standardized information collection processes.\\
+    逆向选择在所有保险类型中都面临类似挑战，因为标准化信息收集过程导致信息不对称。
 \end{choices}
 
 \begin{correctanswer}
@@ -1305,14 +1423,19 @@
 
 
 \begin{question}
-    A portfolio manager at an investment firm is analyzing catastrophe (CAT) bonds using the Capital Asset Pricing Model (CAPM). During a client presentation about alternative investments, which of the following statements represents a misconception about CAPM and CAT bonds?
+    A portfolio manager at an investment firm is analyzing catastrophe (CAT) bonds using the Capital Asset Pricing Model (CAPM). During a client presentation about alternative investments, which of the following statements represents a misconception about CAPM and CAT bonds?\\
+    一位投资公司的投资组合经理正在使用资本资产定价模型（CAPM）分析巨灾（CAT）债券。在客户关于替代投资的演示中，以下哪项陈述代表了关于CAPM和CAT债券的误解？
 \end{question}
 
 \begin{choices}
-    \item CAT bonds may have risks that are uncorrelated or nearly uncorrelated with risks in other portfolios, thus providing diversification benefits.
-    \item CAT bonds, due to their risk characteristics, provide lower returns than suggested by the Capital Asset Pricing Model.
-    \item The Capital Asset Pricing Model suggests that when a security's returns are uncorrelated with market returns, its expected return should be the risk-free rate.
-    \item CAT bonds attract investors with their potentially high returns, even though they may involve higher risks.
+    \item CAT bonds may have risks that are uncorrelated or nearly uncorrelated with risks in other portfolios, thus providing diversification benefits.\\
+    CAT债券可能具有与其它投资组合中的风险几乎不相关的风险，因此提供多样化收益。
+    \item CAT bonds, due to their risk characteristics, provide lower returns than suggested by the Capital Asset Pricing Model.\\
+    CAT债券由于其风险特征，提供的回报低于资本资产定价模型建议的回报。
+    \item The Capital Asset Pricing Model suggests that when a security's returns are uncorrelated with market returns, its expected return should be the risk-free rate.\\
+    CAPM模型建议，当一个证券的收益与市场收益完全不相关时（即$\beta=0$），其预期收益率应等于无风险利率。
+    \item CAT bonds attract investors with their potentially high returns, even though they may involve higher risks.\\
+    CAT债券吸引投资者，即使它们可能涉及更高的风险，也提供潜在的高回报。
 \end{choices}
 
 \begin{correctanswer}
@@ -1348,14 +1471,16 @@
 
 
 \begin{question}
-    A risk management consultant is discussing moral hazard issues across different insurance products with a group of insurance executives. All of the following statements about moral hazard and its effects are correct EXCEPT:
+    A risk management consultant is discussing moral hazard issues across different insurance products with a group of insurance executives. All of the following statements about moral hazard and its effects are correct EXCEPT:\\
+    一位风险管理顾问正在与一群保险高管讨论不同保险产品中的道德风险问题。以下哪项陈述关于道德风险及其影响是正确的，除了：
 \end{question}
 
 \begin{choices}
-    \item Banks may tend to adopt riskier strategies when depositors have government insurance, as insurance reduces the likelihood of depositors moving their funds elsewhere.
-    \item When house insurance fully protects against theft, policyholders may become less willing to install alarm systems and cameras.
-    \item Due to having health insurance, policyholders may visit doctors more frequently.
-    \item Moral hazard is a major concern in life insurance because people might pursue risky activities like skydiving after purchasing life insurance.
+    \item Banks may tend to adopt riskier strategies when depositors have government insurance, as insurance reduces the likelihood of depositors moving their funds elsewhere.\\
+    当存款人有政府保险时，银行可能会倾向于采取更激进的投资策略，因为保险降低了存款人将资金转移到其他地方的可能性。
+    \item When house insurance fully protects against theft, policyholders may become less willing to install alarm systems and cameras.\\当房屋保险完全保护盗窃损失时，投保人可能会减少安装报警系统和摄像头的意愿。
+    \item Due to having health insurance, policyholders may visit doctors more frequently.\\由于有健康保险，投保人可能会更频繁地访问医生。
+    \item Moral hazard is a major concern in life insurance because people might pursue risky activities like skydiving after purchasing life insurance.\\道德风险是寿险行业的主要关注点，因为人们可能会在购买寿险后从事诸如跳伞等危险活动。
 \end{choices}
 
 \begin{correctanswer}
@@ -1387,14 +1512,19 @@
 \checklist{道德风险分析。（人寿保险中的道德风险相对较小）}
 
 \begin{question}
-    An insurance company's risk management team is reviewing various methods to reduce moral hazard in their insurance products. Which of the following statements about methods to reduce moral hazard is correct?
+    An insurance company's risk management team is reviewing various methods to reduce moral hazard in their insurance products. Which of the following statements about methods to reduce moral hazard is correct?\\
+    一位保险公司的风险管理团队正在审查各种方法，以减少其保险产品中的道德风险。以下哪项陈述关于减少道德风险的方法是正确的？
 \end{question}
 
 \begin{choices}
-    \item Insurance companies primarily rely on risk education and awareness programs to address moral hazard concerns in their insurance products.
-    \item Insurance companies reduce moral hazard through coinsurance mechanisms, paying only a certain percentage of losses.
-    \item Insurance companies focus on comprehensive coverage policies to build trust and reduce moral hazard through enhanced customer relationships.
-    \item Insurance companies utilize medical examinations and health disclosures as their primary tools for controlling moral hazard in health insurance products.
+    \item Insurance companies primarily rely on risk education and awareness programs to address moral hazard concerns in their insurance products.\\
+    保险公司主要依靠风险教育和意识培养计划来解决保险产品中的道德风险问题。
+    \item Insurance companies reduce moral hazard through coinsurance mechanisms, paying only a certain percentage of losses.\\
+    保险公司通过共同保险机制减少道德风险，只支付一定比例的损失。
+    \item Insurance companies focus on comprehensive coverage policies to build trust and reduce moral hazard through enhanced customer relationships.\\
+    保险公司专注于全面保障政策，通过增强客户关系建立信任并减少道德风险。
+    \item Insurance companies utilize medical examinations and health disclosures as their primary tools for controlling moral hazard in health insurance products.\\
+    保险公司利用体检和健康告知作为控制健康保险产品中道德风险的主要工具。
 \end{choices}
 
 \begin{correctanswer}
@@ -1425,14 +1555,19 @@
 \checklist{控制道德风险。(别与逆向选择混了)}
 
 \begin{question}
-    A banking regulator is evaluating different policies to strengthen the stability of the banking system. Which of the following actions in the banking system is most likely intended to address the problem of moral hazard?
+    A banking regulator is evaluating different policies to strengthen the stability of the banking system. Which of the following actions in the banking system is most likely intended to address the problem of moral hazard?\\
+    一位银行监管者正在评估不同的政策，以加强银行系统的稳定性。以下哪项银行系统的行动最有可能旨在解决道德风险问题？
 \end{question}
 
 \begin{choices}
-    \item Deposit insurers charge risk-based premiums.
-    \item Banks increase loans to higher-risk borrowers.
-    \item Governments implement deposit insurance programs.
-    \item Banks increase the interest rates they offer to depositors.
+    \item Deposit insurers charge risk-based premiums.\\
+    存款保险公司收取基于风险的保费。
+    \item Banks increase loans to higher-risk borrowers.\\
+    银行增加对高风险借款人的贷款。
+    \item Governments implement deposit insurance programs.\\
+    政府实施存款保险计划。
+    \item Banks increase the interest rates they offer to depositors.\\
+    银行提高他们向存款人提供的利率。
 \end{choices}
 
 \begin{correctanswer}
@@ -1465,14 +1600,19 @@
 
 
 \begin{question}
-    A human resources director at a mid-sized technology company is evaluating unemployment insurance coverage for their employees. Due to recent industry volatility and increasing layoffs in the tech sector, the company is considering implementing a comprehensive unemployment insurance program. When considering this type of insurance, which of the following risks are applicable for the company?
+    A human resources director at a mid-sized technology company is evaluating unemployment insurance coverage for their employees. Due to recent industry volatility and increasing layoffs in the tech sector, the company is considering implementing a comprehensive unemployment insurance program. When considering this type of insurance, which of the following risks are applicable for the company?\\
+    一位中型科技公司的人力资源总监正在评估失业保险覆盖其员工。由于最近行业波动和科技行业裁员增加，公司正在考虑实施全面的失业保险计划。在考虑这种保险类型时，以下哪项风险适用于公司？
 \end{question}
 
 \begin{choices}
-    \item Only Moral hazard
-    \item Only Adverse selection
-    \item Both Moral hazard and adverse selection
-    \item Neither moral hazard nor adverse selection
+    \item Only Moral hazard\\
+    只有道德风险
+    \item Only Adverse selection\\
+    只有逆向选择
+    \item Both Moral hazard and adverse selection\\
+    道德风险和逆向选择
+    \item Neither moral hazard nor adverse selection\\
+    既没有道德风险也没有逆向选择
 \end{choices}
 
 \begin{correctanswer}
@@ -1501,14 +1641,19 @@
 \checklist{道德风险识别和逆向选择分析（失业保险风险：道德风险和逆向选择）}
 
 \begin{question}
-    A compliance officer at an insurance company is reviewing the capital requirements under the Solvency II framework. During a training session for new employees, which of the following statements about the capital requirements is correct?
+    A compliance officer at an insurance company is reviewing the capital requirements under the Solvency II framework. During a training session for new employees, which of the following statements about the capital requirements is correct?\\
+    一位保险公司的合规官员正在审查Solvency II框架下的资本要求。在为新员工进行培训时，以下哪项陈述关于资本要求是正确的？
 \end{question}
 
 \begin{choices}
-    \item Insurance companies maintain flexible capital thresholds under SCR, allowing for temporary capital adjustments based on market conditions.
-    \item The MCR serves as a strategic planning tool, providing insurance companies with guidance for optimal capital allocation.
-    \item The MCR is typically between 25\% and 45\% of the SCR, ensuring insurance companies maintain adequate capital buffers.
-    \item The Solvency II framework emphasizes market risk management through dynamic capital requirements that adapt to economic cycles.
+    \item Insurance companies maintain flexible capital thresholds under SCR, allowing for temporary capital adjustments based on market conditions.\\
+    保险公司在SCR下保持灵活的资本阈值，允许根据市场条件进行临时资本调整。
+    \item The MCR serves as a strategic planning tool, providing insurance companies with guidance for optimal capital allocation.\\
+    MCR作为战略规划工具，为保险公司提供最佳资本分配的指导。
+    \item The MCR is typically between 25\% and 45\% of the SCR, ensuring insurance companies maintain adequate capital buffers.\\
+    MCR通常在SCR的25\%到45\%之间，确保保险公司维持足够的资本缓冲。
+    \item The Solvency II framework emphasizes market risk management through dynamic capital requirements that adapt to economic cycles.\\
+    Solvency II框架强调通过动态资本要求适应经济周期来管理市场风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -1539,14 +1684,19 @@
 
 \checklist{Solvency II框架（SCR和MCR的资本要求比例关系）}
 \begin{question}
-    A pension fund manager at a large investment firm is currently evaluating the differences between defined benefit plans and defined contribution plans for their clients. The manager is particularly focused on understanding the risk allocation and account structures associated with each type of plan. Based on the descriptions provided, which of the following statements is correct?
+    A pension fund manager at a large investment firm is currently evaluating the differences between defined benefit plans and defined contribution plans for their clients. The manager is particularly focused on understanding the risk allocation and account structures associated with each type of plan. Based on the descriptions provided, which of the following statements is correct?\\
+    一位大型投资公司的养老金基金经理正在评估其客户的不同退休计划。经理特别关注理解每种计划相关的风险分配和账户结构。基于提供的描述，以下哪项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item In defined benefit plans, investment performance directly impacts employee benefits, while in defined contribution plans, the employer guarantees a minimum return regardless of market conditions.
-    \item Defined benefit plans maintain separate investment accounts for each participant to ensure personalized risk management, while defined contribution plans pool all assets into a common fund.
-    \item Defined contribution plans involve individual accounts associated with each employee, whereas defined benefit plans involve a pooled account for all employees, with all contributions going into this common account.
-    \item The risk in defined benefit plans is shared equally between employer and employee through a dynamic allocation mechanism that adjusts based on funding status.
+    \item In defined benefit plans, investment performance directly impacts employee benefits, while in defined contribution plans, the employer guarantees a minimum return regardless of market conditions.\\
+    在确定福利计划中，投资表现直接影响员工福利，而在确定缴费计划中，雇主保证无论市场条件如何，都支付最低回报。
+    \item Defined benefit plans maintain separate investment accounts for each participant to ensure personalized risk management, while defined contribution plans pool all assets into a common fund.\\
+    确定福利计划为每个参与者维护单独的投资账户，以确保个性化风险管理，而确定缴费计划将所有资产汇集到一个共同基金中。
+    \item Defined contribution plans involve individual accounts associated with each employee, whereas defined benefit plans involve a pooled account for all employees, with all contributions going into this common account.\\
+    确定缴费计划涉及与每个员工相关的个人账户，而确定福利计划涉及一个为所有员工汇集的账户，所有贡献都进入这个共同账户。
+    \item The risk in defined benefit plans is shared equally between employer and employee through a dynamic allocation mechanism that adjusts based on funding status.\\
+    确定福利计划中的风险在雇主和员工之间通过动态分配机制平均分配，该机制根据资金状况调整。
 \end{choices}
 
 \begin{correctanswer}
@@ -1579,14 +1729,19 @@
 
 
 \begin{question}
-    A financial analyst at a regulatory agency is comparing the capital requirements, risk management practices, capital calculation methods, regulatory frameworks, and transparency and disclosure between banks and insurance companies. Based on the descriptions provided, which of the following statements is correct?
+    A financial analyst at a regulatory agency is comparing the capital requirements, risk management practices, capital calculation methods, regulatory frameworks, and transparency and disclosure between banks and insurance companies. Based on the descriptions provided, which of the following statements is correct?\\
+    一位金融分析师正在比较银行和保险公司的资本要求、风险管理实践、资本计算方法、监管框架和透明度和披露。基于提供的描述，以下哪项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Insurers are not allowed to use internal models to calculate capital requirements, as banks do, but only standardised models approved by regulators.
-    \item The regulatory frameworks for both banks and insurance companies emphasize similar risk categories, with credit risk being the primary focus for both sectors.
-    \item Banks are required to disclose more information than insurance companies, including capital status, risk management practices, and financial conditions.
-    \item Insurance companies worldwide follow a unified regulatory approach through the International Insurance Standards, providing consistent oversight across all major markets.
+    \item Insurers are not allowed to use internal models to calculate capital requirements, as banks do, but only standardised models approved by regulators.\\
+    保险公司不被允许像银行一样使用内部模型来计算资本要求，但只能使用监管机构批准的标准化模型。
+    \item The regulatory frameworks for both banks and insurance companies emphasize similar risk categories, with credit risk being the primary focus for both sectors.\\
+    银行和保险公司的监管框架都强调类似的风险类别，信用风险是两个行业的重点。
+    \item Banks are required to disclose more information than insurance companies, including capital status, risk management practices, and financial conditions.\\
+    银行需要披露比保险公司更多的信息，包括资本状况、风险管理实践和财务状况。
+    \item Insurance companies worldwide follow a unified regulatory approach through the International Insurance Standards, providing consistent oversight across all major markets.\\
+    保险公司在全世界都遵循国际保险标准，提供一致的监督 across all major markets.
 \end{choices}
 
 \begin{correctanswer}
@@ -1618,7 +1773,8 @@
 
 \checklist{银行和保险公司资本要求和风险管理实践的比较。（信息披露要求的差异）}
 \begin{question}
-    Suppose that in a certain defined benefit plan the following simple situation exists. Employees work for 40 years with a salary that increases exactly in line with inflation. The pension is 60\% of the final salary and increases exactly in line with inflation. Employees always live for 25 years after retirement. The funds in the pension plan are invested in bonds that earn the inflation rate. Which of the following is the best estimate of the percentage of the employee's salary that must be contributed to the pension plan? (Hint: You should do all calculations in real rather than nominal terms so that salaries and pensions are constant and the interest earned is zero.)
+    Suppose that in a certain defined benefit plan the following simple situation exists. Employees work for 40 years with a salary that increases exactly in line with inflation. The pension is 60\% of the final salary and increases exactly in line with inflation. Employees always live for 25 years after retirement. The funds in the pension plan are invested in bonds that earn the inflation rate. Which of the following is the best estimate of the percentage of the employee's salary that must be contributed to the pension plan? (Hint: You should do all calculations in real rather than nominal terms so that salaries and pensions are constant and the interest earned is zero.)\\
+    假设在一个特定的确定福利计划中存在以下简单情况。员工工作40年，工资与通胀完全同步增长。养老金是最终工资的60\%，与通胀完全同步增长。员工退休后总是活25年。养老金计划中的资金投资于收益率为通胀率的债券。以下哪项是对员工工资中必须贡献到养老金计划的最佳估计百分比？（提示：你应该在实际而非名义条件下进行所有计算，以便工资和养老金保持不变，并且获得的利息为零。）
 \end{question}
 
 \begin{choices}
@@ -1662,14 +1818,19 @@
 
 
 \begin{question}
-    A compliance officer at an insurance company is reviewing the capital requirements under the Solvency II framework. During a training session for new employees, which of the following statements about the Solvency II framework is true?
+    A compliance officer at an insurance company is reviewing the capital requirements under the Solvency II framework. During a training session for new employees, which of the following statements about the Solvency II framework is true?\\
+    一位保险公司的合规官员正在审查Solvency II框架下的资本要求。在为新员工进行培训时，以下哪项陈述关于Solvency II框架是正确的？
 \end{question}
 
 \begin{choices}
-    \item If capital falls below the solvency capital requirement, an insurance company is not allowed to take on further business.
-    \item If capital falls below the solvency capital requirement, an insurance company's policies may be transferred to another insurance company.
-    \item Insurance companies are only required to formulate a solvency capital plan if capital falls below the minimum capital requirement.
-    \item None of the above
+    \item If capital falls below the solvency capital requirement, an insurance company is not allowed to take on further business.\\
+    如果资本低于偿付能力资本要求，保险公司不被允许承接更多业务。
+    \item If capital falls below the solvency capital requirement, an insurance company's policies may be transferred to another insurance company.\\
+    如果资本低于偿付能力资本要求，保险公司的保单可能会被转移到另一家保险公司。
+    \item Insurance companies are only required to formulate a solvency capital plan if capital falls below the minimum capital requirement.\\
+    保险公司只有在资本低于最低资本要求时才需要制定偿付能力资本计划。
+    \item None of the above\\
+    以上都不是
 \end{choices}
 
 \begin{correctanswer}
@@ -1719,7 +1880,8 @@
     Consider an open-end mutual fund that owns \$900 million in equities, \$400 million in 
     bonds, and \$50 million in cash. They owe \$2 million in management fees payable at 
     this point in the quarter and they have 45 million shares outstanding. What is this 
-    fund's NAV?
+    fund's NAV?\\
+    考虑一个开放式共同基金，拥有\$900 million的股票资产，\$400 million的债券资产，和\$50 million的现金。他们欠\$2 million的管理费，在季度末支付。他们有45百万股流通在外。这个基金的NAV是多少？
 \end{question}
 
 \begin{choices}
@@ -1773,7 +1935,8 @@
 
 
 \begin{question}
-    A hedge fund manager is currently evaluating the performance fees and management fees structure of their fund. The manager is particularly focused on understanding how these fees impact the net returns for investors. During a strategy meeting, the manager poses the following question: If the hedge fund charges a 2\% management fee and a 20\% performance fee, and an investor desires a net return of 20\% after all fees, what gross return must the hedge fund achieve to meet this target? Assume the performance fee is calculated on the net gain after the management fee.
+    A hedge fund manager is currently evaluating the performance fees and management fees structure of their fund. The manager is particularly focused on understanding how these fees impact the net returns for investors. During a strategy meeting, the manager poses the following question: If the hedge fund charges a 2\% management fee and a 20\% performance fee, and an investor desires a net return of 20\% after all fees, what gross return must the hedge fund achieve to meet this target? Assume the performance fee is calculated on the net gain after the management fee.\\
+    一位对冲基金经理正在评估其基金的业绩费和管理费结构。经理特别关注理解这些费用如何影响投资者的净回报。在策略会议上，经理提出了以下问题：如果对冲基金收取2\%的管理费和20\%的业绩费，投资者希望在所有费用后获得20\%的净回报，对冲基金必须实现多少总回报才能达到这一目标？假设业绩费是在扣除管理费后的净收益基础上计算的。
 \end{question}
 
 \begin{choices}
@@ -1819,14 +1982,19 @@
 
 
 \begin{question}
-    Starbright Investments is a mutual fund based in the United States, with annual returns over the past five years of: +6.5\%, +14.0\%, +19.0\%, +4.5\%, +17.5\%. Which of the following statements about this mutual fund is correct?
+    Starbright Investments is a mutual fund based in the United States, with annual returns over the past five years of: +6.5\%, +14.0\%, +19.0\%, +4.5\%, +17.5\%. Which of the following statements about this mutual fund is correct?\\
+    Starbright Investments是一家位于美国的共同基金，过去五年的年回报率为：+6.5\%，+14.0\%，+19.0\%，+4.5\%，+17.5\%。以下哪项陈述关于这个共同基金是正确的？
 \end{question}
 
 \begin{choices}
-    \item The geometric average return calculation suggests that Starbright's five-year performance indicates strong market outperformance with returns exceeding 12.5\%.
-    \item Starbright maintains flexible disclosure requirements and leverage usage policies similar to private equity funds, while providing quarterly NAV calculations for investor reference.
-    \item Starbright's consistent above-market returns suggest potential operational irregularities in its investment process, raising concerns about risk management practices and compliance standards.
-    \item Starbright is primarily regulated by the Securities and Exchange Commission (SEC), which prohibits illegal "late trading" practices while permitting market timing based on public information.
+    \item The geometric average return calculation suggests that Starbright's five-year performance indicates strong market outperformance with returns exceeding 12.5\%.\\
+    几何平均回报率计算表明，Starbright的五年表现表明市场超额回报率超过12.5\%。
+    \item Starbright maintains flexible disclosure requirements and leverage usage policies similar to private equity funds, while providing quarterly NAV calculations for investor reference.\\
+    Starbright保持灵活的披露要求和杠杆使用政策，类似于私募股权基金，同时为投资者提供季度NAV计算。
+    \item Starbright's consistent above-market returns suggest potential operational irregularities in its investment process, raising concerns about risk management practices and compliance standards.\\
+    Starbright的一致高于市场的回报率表明其投资过程中可能存在运营违规，引发对风险管理实践和合规标准的担忧。
+    \item Starbright is primarily regulated by the Securities and Exchange Commission (SEC), which prohibits illegal "late trading" practices while permitting market timing based on public information.\\
+    Starbright主要由证券交易委员会（SEC）监管，禁止非法的“延迟交易”实践，同时允许基于公开信息的市场时机交易。
 \end{choices}
 
 \begin{correctanswer}
@@ -1861,14 +2029,19 @@
 
 
 \begin{question}
-    An investment advisor at a financial services firm is discussing different types of investment funds with a group of new clients. During the session, the advisor poses the following question: Which of the following statements is correct regarding investment funds available to all investors?
+    An investment advisor at a financial services firm is discussing different types of investment funds with a group of new clients. During the session, the advisor poses the following question: Which of the following statements is correct regarding investment funds available to all investors?\\
+    一位金融服务公司的投资顾问正在与一群新客户讨论不同类型的投资基金。在会议上，顾问提出了以下问题：以下哪项陈述关于所有投资者可用的投资基金是正确的？
 \end{question}
 
 \begin{choices}
-    \item Open-end mutual funds provide flexible trading options through dynamic pricing mechanisms that allow investors to set specific execution prices.
-    \item Stop orders can be used on closed-end funds.
-    \item Open-end mutual funds utilize real-time pricing systems that enable continuous trading throughout market hours.
-    \item ETFs maintain strict trading limitations that prevent short selling to ensure market stability and protect investor interests.
+    \item Open-end mutual funds provide flexible trading options through dynamic pricing mechanisms that allow investors to set specific execution prices.\\
+    开放式共同基金通过动态定价机制提供灵活的交易选项，允许投资者设定具体的执行价格。
+    \item Stop orders can be used on closed-end funds.\\
+    止损订单可以在封闭式基金上使用。
+    \item Open-end mutual funds utilize real-time pricing systems that enable continuous trading throughout market hours.\\
+    开放式共同基金利用实时定价系统，允许在整个市场交易时段内连续交易。
+    \item ETFs maintain strict trading limitations that prevent short selling to ensure market stability and protect investor interests.\\
+    ETF维持严格的交易限制，防止卖空，确保市场稳定并保护投资者利益。
 \end{choices}
 
 \begin{correctanswer}
@@ -1902,13 +2075,18 @@
 
 
 \begin{question}
-    A financial advisor at a wealth management firm is conducting a seminar for new investors on the topic of mutual funds. During the presentation, she notices that many participants are confused about the differences between open-end and closed-end funds. To clarify these concepts, she presents several statements about fund characteristics to her audience. Looking at their puzzled expressions, she asks them to identify which of these statements accurately describes the fundamental differences between these two investment vehicles?
+    A financial advisor at a wealth management firm is conducting a seminar for new investors on the topic of mutual funds. During the presentation, she notices that many participants are confused about the differences between open-end and closed-end funds. To clarify these concepts, she presents several statements about fund characteristics to her audience. Looking at their puzzled expressions, she asks them to identify which of these statements accurately describes the fundamental differences between these two investment vehicles?\\
+    一位财富管理公司的投资顾问正在为新投资者举办关于共同基金的研讨会。在演示过程中，她注意到许多参与者对开放式和封闭式基金之间的差异感到困惑。为了澄清这些概念，她向观众介绍了几种关于基金特征的陈述。看着他们困惑的表情，她问他们识别出哪项陈述准确描述了这两种投资工具之间的基本差异？
 \end{question}
 \begin{choices}
-    \item Open-end funds maintain a stable share structure through market-based pricing mechanisms, while closed-end funds adjust their shares based on daily investor flows.
-    \item Open-end funds trade at market-determined prices that reflect supply and demand dynamics, similar to exchange-traded securities.
-    \item Open-end funds can subscribe and redeem at their net asset value (NAV), while closed-end funds trade on exchanges with prices that may differ from their NAV.
-    \item Both open-end and closed-end funds are subject to the same regulatory frameworks, such as the Basel Accords or Solvency II framework.
+    \item Open-end funds maintain a stable share structure through market-based pricing mechanisms, while closed-end funds adjust their shares based on daily investor flows.\\
+    开放式基金通过市场定价机制维持稳定的股份结构，而封闭式基金根据每日投资者流量调整其股份。
+    \item Open-end funds trade at market-determined prices that reflect supply and demand dynamics, similar to exchange-traded securities.\\
+    开放式基金以市场决定的价格交易，反映供需动态，类似于交易所交易证券。
+    \item Open-end funds can subscribe and redeem at their net asset value (NAV), while closed-end funds trade on exchanges with prices that may differ from their NAV.\\
+    开放式基金可以按照其净资产价值（NAV）申购和赎回，而封闭式基金在交易所交易，其价格可能与NAV不同。
+    \item Both open-end and closed-end funds are subject to the same regulatory frameworks, such as the Basel Accords or Solvency II framework.\\
+    开放式和封闭式基金都受相同的监管框架约束，如巴塞尔协议或Solvency II框架。
 \end{choices}
 
 \begin{correctanswer}
@@ -1940,14 +2118,19 @@
 \checklist{开放式和封闭式基金的特点。（对比这两者的交易机制和定价特点）}
 
 \begin{question}
-    A risk analyst at a fixed-income investment firm is conducting a training session on market misconduct. When discussing various types of improper trading practices, which of the following statements represents a misunderstanding of these practices?
+    A risk analyst at a fixed-income investment firm is conducting a training session on market misconduct. When discussing various types of improper trading practices, which of the following statements represents a misunderstanding of these practices?\\
+    一位固定收益投资公司的风险分析师正在进行市场不当行为的培训。在讨论各种不当交易行为时，以下哪项陈述代表了对这些行为的误解？
 \end{question}
 
 \begin{choices}
-    \item Late trading involves accepting orders after the market close, potentially reversing trades based on post-close events, and is illegal.
-    \item Market timing occurs when fund assets are infrequently traded, leading to stale pricing in NAV calculations, which may attract regulatory scrutiny but is not inherently illegal.
-    \item Front-running involves trading ahead of known upcoming transactions, potentially causing price movements, and is illegal and prosecutable.
-    \item Directed brokerage involves an implicit agreement where mutual funds direct trades to brokers in exchange for brokers investing their clients in the mutual funds, a strongly discouraged practice considered illegal.
+    \item Late trading involves accepting orders after the market close, potentially reversing trades based on post-close events, and is illegal.\\
+    延迟交易涉及在市场关闭后接受订单，可能基于市场关闭后的事件逆转交易，并且是非法的。
+    \item Market timing occurs when fund assets are infrequently traded, leading to stale pricing in NAV calculations, which may attract regulatory scrutiny but is not inherently illegal.\\
+    市场时机选择发生在基金资产不活跃交易时，导致净资产价值（NAV）计算中出现陈旧定价。这种行为可能引起监管机构的关注，因为它可能导致投资者的利益受损，但本身并不违法，除非涉及到利用非公开信息。
+    \item Front-running involves trading ahead of known upcoming transactions, potentially causing price movements, and is illegal and prosecutable.\\
+    前瞻性交易涉及在已知即将发生的交易之前进行交易，可能导致价格波动，并且是非法的和可起诉的。
+    \item Directed brokerage involves an implicit agreement where mutual funds direct trades to brokers in exchange for brokers investing their clients in the mutual funds, a strongly discouraged practice considered illegal.\\
+    指定经纪涉及一种默契协议，其中共同基金会将直接交易导向特定经纪人，以换取经纪人将其客户投资于共同基金。这种做法虽然不违法，但被认为是不道德的，因为它可能导致利益冲突，并且不符合最佳执行的原则。
 \end{choices}
 
 \begin{correctanswer}
@@ -1978,14 +2161,19 @@
 \checklist{不良交易行为。(不是每个都非法)}
 
 \begin{question}
-    A portfolio manager at a hedge fund is explaining the differences between hedge funds and mutual funds to a group of potential investors. The manager highlights the unique characteristics and regulatory requirements of each type of fund. Which of the following statements about hedge funds and mutual funds is incorrect?
+    A portfolio manager at a hedge fund is explaining the differences between hedge funds and mutual funds to a group of potential investors. The manager highlights the unique characteristics and regulatory requirements of each type of fund. Which of the following statements about hedge funds and mutual funds is incorrect?\\
+    一位对冲基金的组合经理正在向一群潜在投资者解释对冲基金和共同基金之间的差异。经理强调了每种基金类型的独特特征和监管要求。以下哪项陈述关于对冲基金和共同基金是错误的？
 \end{question}
 
 \begin{choices}
-    \item Hedge funds do not require daily calculation of net asset value (NAV), whereas mutual funds do.
-    \item Hedge funds can be sold to all types of investors, including ordinary retail investors.
-    \item Hedge funds can use leverage and long-short strategies, whereas mutual funds typically cannot use leverage.
-    \item Hedge funds may charge additional incentive fees, whereas mutual funds typically do not charge such fees.
+    \item Hedge funds do not require daily calculation of net asset value (NAV), whereas mutual funds do.\\
+    对冲基金不需要每日计算净资产价值（NAV），而共同基金需要。
+    \item Hedge funds can be sold to all types of investors, including ordinary retail investors.\\
+    对冲基金可以销售给所有类型的投资者，包括普通零售投资者。
+    \item Hedge funds can use leverage and long-short strategies, whereas mutual funds typically cannot use leverage.\\
+    对冲基金可以使用杠杆和长短仓策略，而共同基金通常不能使用杠杆。这使得对冲基金能够在市场波动中灵活调整投资组合。
+    \item Hedge funds may charge additional incentive fees, whereas mutual funds typically do not charge such fees.\\
+    对冲基金可能会收取额外的激励费用，而共同基金通常不收取此类费用。激励费用通常与基金的业绩挂钩，旨在激励基金经理实现更高的回报。
 \end{choices}
 
 \begin{correctanswer}
@@ -2018,14 +2206,19 @@
 
 
 \begin{question}
-    A hedge fund manager is explaining the rationale behind implementing a one-year lock-up period to a group of potential investors. The manager highlights the importance of this policy in relation to the fund's investment strategy and asset liquidity. Considering the characteristics of hedge fund investments, what is the primary reason for implementing a lock-up period?
+    A hedge fund manager is explaining the rationale behind implementing a one-year lock-up period to a group of potential investors. The manager highlights the importance of this policy in relation to the fund's investment strategy and asset liquidity. Considering the characteristics of hedge fund investments, what is the primary reason for implementing a lock-up period?\\
+    一位对冲基金经理正在向一群潜在投资者解释实施一年锁定期的原因。经理强调了这一政策在基金投资策略和资产流动性方面的的重要性。考虑到对冲基金投资的特点，实施锁定期政策的主要原因是什么？
 \end{question}
 
 \begin{choices}
-    \item Hedge funds primarily invest in highly liquid assets, and the lock-up period is implemented to reduce frequent trading by investors.
-    \item Hedge funds include some illiquid assets in their portfolio, and the lock-up period is implemented to avoid forced sales under unfavorable conditions, as many hedge fund investments cannot be unwound quickly.
-    \item Hedge fund strategies mainly rely on short-term market fluctuations, and the lock-up period is implemented to ensure investors do not redeem during market volatility.
-    \item Hedge fund investments are entirely based on publicly traded stocks, and the lock-up period is implemented to encourage long-term investment by investors.
+    \item Hedge funds primarily invest in highly liquid assets, and the lock-up period is implemented to reduce frequent trading by investors.\\
+    对冲基金主要投资于高流动性资产，锁定期政策的实施是为了减少投资者的频繁交易。
+    \item Hedge funds include some illiquid assets in their portfolio, and the lock-up period is implemented to avoid forced sales under unfavorable conditions, as many hedge fund investments cannot be unwound quickly.\\
+    对冲基金投资组合中包含一些流动性较差的资产，锁定期政策的实施是为了避免在不利条件下被迫出售这些资产，因为许多对冲基金投资不易在短时间内解除。
+    \item Hedge fund strategies mainly rely on short-term market fluctuations, and the lock-up period is implemented to ensure investors do not redeem during market volatility.\\
+    对冲基金策略主要依赖于短期市场波动，锁定期政策的实施是为了确保投资者在市场波动期间不赎回。
+    \item Hedge fund investments are entirely based on publicly traded stocks, and the lock-up period is implemented to encourage long-term investment by investors.\\
+    对冲基金投资完全基于公开交易的股票，锁定期政策的实施是为了鼓励投资者进行长期投资。
 \end{choices}
 
 \begin{correctanswer}
@@ -2057,14 +2250,19 @@
 \checklist{对冲基金的锁定期（不用马上平仓）}
 
 \begin{question}
-    A hedge fund manager is discussing the fee structure of their fund with a group of potential investors. The manager emphasizes the importance of understanding various clauses that impact investor returns. Which of the following statements about hedge fund fee structures is correct?
+    A hedge fund manager is discussing the fee structure of their fund with a group of potential investors. The manager emphasizes the importance of understanding various clauses that impact investor returns. Which of the following statements about hedge fund fee structures is correct?\\
+    一位对冲基金经理正在与一群潜在投资者讨论其基金的费用结构。经理强调了理解影响投资者回报的各种条款的重要性。以下哪项陈述关于对冲基金费用结构是正确的？
 \end{question}
 
 \begin{choices}
-    \item The hurdle rate serves as a performance benchmark that automatically adjusts based on market conditions to ensure fair compensation for fund managers.
-    \item The high-water mark clause primarily functions to maintain consistent fee structures across market cycles, with losses being reset annually.
-    \item The clawback clause allows fund managers to directly return a portion of incentive fees to investors to compensate for future losses.
-    \item The proportional adjustment clause is part of the high-water mark clause, specifying that previous loss recovery amounts must be proportionally adjusted when investors redeem.
+    \item The hurdle rate serves as a performance benchmark that automatically adjusts based on market conditions to ensure fair compensation for fund managers.\\
+    门槛收益率是一个固定的最低回报要求，而不是根据市场条件自动调整的基准。它是在基金成立时就确定的固定比率，用于确定是否收取激励费用的标准。
+    \item The high-water mark clause primarily functions to maintain consistent fee structures across market cycles, with losses being reset annually.\\
+    高水位线条款的主要功能是确保基金在弥补之前的亏损前不收取业绩费，而不是维持一致的费用结构。亏损也不会年度重置，而是持续累积直到被新的收益完全弥补。
+    \item The clawback clause allows fund managers to directly return a portion of incentive fees to investors to compensate for future losses.\\
+    回拨条款实际上允许投资者将部分或全部先前的激励费用应用于当前亏损，而不是基金经理直接返还给投资者。这部分费用是保留在回收账户中，用于补偿投资者未来亏损的一定比例。
+    \item The proportional adjustment clause is part of the high-water mark clause, specifying that previous loss recovery amounts must be proportionally adjusted when investors redeem.\\
+    比例调整条款是高水位线条款的一部分，它规定了在投资者撤资时，需要按比例调整回收的先前亏损金额，这是为了公平地分配亏损回收的责任。
 \end{choices}
 
 \begin{correctanswer}
@@ -2098,14 +2296,19 @@
 
 
 \begin{question}
-    A financial analyst at a large investment firm is tasked with educating new employees on the distinctions between hedge funds and mutual funds. During a training session, the analyst presents the following question to assess their understanding: Which of the following statements should be considered correct regarding the differences between hedge funds and mutual funds?
+    A financial analyst at a large investment firm is tasked with educating new employees on the distinctions between hedge funds and mutual funds. During a training session, the analyst presents the following question to assess their understanding: Which of the following statements should be considered correct regarding the differences between hedge funds and mutual funds?\\
+    一位大型投资公司的金融分析师被任命为教育新员工关于对冲基金和共同基金之间的区别。在培训会议上，分析师提出了以下问题来评估他们的理解：以下哪项陈述关于对冲基金和共同基金之间的区别是正确的？
 \end{question}
 
 \begin{choices}
-    \item Unlike mutual funds, hedge funds do not need to provide the redemption of shares at any time the investor chooses or a daily calculated net asset value.
-    \item Mutual funds offer professional management, instant diversification, and the ability to commingle funds with other investors, while hedge funds do not offer all of these features.
-    \item Hedge funds are marketed to any and all investors, while mutual funds are restricted to only wealthy and sophisticated investors.
-    \item Both mutual funds and hedge funds are permitted to use leverage.
+    \item Unlike mutual funds, hedge funds do not need to provide the redemption of shares at any time the investor chooses or a daily calculated net asset value.\\
+    与共同基金不同，对冲基金不需要提供投资者随时选择赎回份额的权利，也不需要每日计算净资产价值（NAV）。这使得对冲基金在流动性管理上更加灵活，因为它们可以投资于流动性较低的资产，而不必担心每日赎回的压力。
+    \item Mutual funds offer professional management, instant diversification, and the ability to commingle funds with other investors, while hedge funds do not offer all of these features.\\
+    共同基金提供专业管理、即时分散投资以及与其他投资者混合资金的能力。这些特性使得共同基金成为普通投资者的理想选择，因为它们提供了多样化和专业管理的优势。
+    \item Hedge funds are marketed to any and all investors, while mutual funds are restricted to only wealthy and sophisticated investors.\\
+    对冲基金面向任何和所有投资者，而共同基金则仅限于富裕和成熟的投资者。
+    \item Both mutual funds and hedge funds are permitted to use leverage.\\
+    共同基金和对冲基金都允许使用杠杆。
 \end{choices}
 
 \begin{correctanswer}
@@ -2138,14 +2341,19 @@
 
 
 \begin{question}
-    A financial analyst is evaluating the reliability of performance reports from hedge funds. Understanding the biases in these reports is crucial for assessing their true performance. Based on the descriptions provided, which of the following statements about hedge fund performance reporting biases is incorrect?
+    A financial analyst is evaluating the reliability of performance reports from hedge funds. Understanding the biases in these reports is crucial for assessing their true performance. Based on the descriptions provided, which of the following statements about hedge fund performance reporting biases is incorrect?\\
+    一位金融分析师正在评估对冲基金绩效报告的可靠性。理解这些报告中存在的偏差对于评估其真实绩效至关重要。基于提供的描述，以下哪项陈述关于对冲基金绩效报告偏差是错误的？
 \end{question}
 
 \begin{choices}
-    \item Hedge fund performance reports may exhibit measurement bias because funds can choose whether to report their performance.
-    \item Backfill bias occurs when a hedge fund begins reporting its returns, and its previous historical return data is added to the database.
-    \item Hedge fund performance reports are generally more reliable than mutual fund performance reports because they are passively managed.
-    \item Hedge fund backfill bias may lead to an inaccurate reflection of a fund's historical performance, affecting the reliability of benchmarks.
+    \item Hedge fund performance reports may exhibit measurement bias because funds can choose whether to report their performance.\\
+    对冲基金绩效报告可能存在测量偏差，因为基金可以选择是否报告其绩效，这可能导致只有表现好的基金才报告数据。
+    \item Backfill bias occurs when a hedge fund begins reporting its returns, and its previous historical return data is added to the database.\\
+    回填偏差发生在对冲基金开始报告其回报时，其先前的历史回报数据被添加到数据库中，这可能导致对冲基金基准的可靠性问题。
+    \item Hedge fund performance reports are generally more reliable than mutual fund performance reports because they are passively managed.\\
+    对冲基金绩效报告通常不如共同基金绩效报告可靠，因为它们是自愿报告的，并且可能存在回填偏差，而不是因为它们是被动管理的。
+    \item Hedge fund backfill bias may lead to an inaccurate reflection of a fund's historical performance, affecting the reliability of benchmarks.\\
+    对冲基金的回填偏差可能导致基金的历史表现被不准确地反映，从而影响基准的可靠性。
 \end{choices}
 
 \begin{correctanswer}
@@ -2178,13 +2386,18 @@
 
 
 \begin{question}
-    A hedge fund analyst is preparing educational materials for a client presentation on various investment strategies. During their research, they encounter several descriptions of hedge fund approaches in industry literature. While most of these descriptions accurately reflect common practices, one of them represents a misconception about how these strategies actually work. Which of these descriptions reflects a misunderstanding of hedge fund strategies?
+    A hedge fund analyst is preparing educational materials for a client presentation on various investment strategies. During their research, they encounter several descriptions of hedge fund approaches in industry literature. While most of these descriptions accurately reflect common practices, one of them represents a misconception about how these strategies actually work. Which of these descriptions reflects a misunderstanding of hedge fund strategies?\\
+    一位对冲基金分析师正在准备教育材料，为客户介绍各种投资策略。在他们的研究过程中，他们遇到了行业文献中关于对冲基金方法的几个描述。虽然大多数描述准确反映了共同做法，但其中一个描述代表了对这些策略实际工作方式的误解。哪项描述反映了对冲基金策略的误解？
 \end{question}
 \begin{choices}
-    \item Long-short equity hedge funds invest by identifying undervalued and overvalued stocks through fundamental analysis.
-    \item Dedicated short hedge funds typically seek out companies with poor financial performance that the market has not yet recognized and short their stocks.
-    \item Distressed debt hedge funds usually purchase bonds of companies nearing bankruptcy, expecting high returns after the company restructures.
-    \item Merger arbitrage hedge funds primarily rely on insider information to trade, aiming to profit once the merger is completed.
+    \item Long-short equity hedge funds invest by identifying undervalued and overvalued stocks through fundamental analysis.\\
+    多空股票对冲基金通过基本面分析识别被低估和被高估的股票进行投资。
+    \item Dedicated short hedge funds typically seek out companies with poor financial performance that the market has not yet recognized and short their stocks.\\
+    专门做空对冲基金通常寻找财务表现不佳但未被市场捕捉的公司并做空其股票。
+    \item Distressed debt hedge funds usually purchase bonds of companies nearing bankruptcy, expecting high returns after the company restructures.\\
+    困境债务对冲基金通常在公司接近破产时购买其债券，以期待公司重组后获得高额回报。
+    \item Merger arbitrage hedge funds primarily rely on insider information to trade, aiming to profit once the merger is completed.\\
+    合并套利对冲基金主要依赖内部信息进行交易，旨在在合并完成后获利。
 \end{choices}
 
 \begin{correctanswer}
@@ -2228,17 +2441,22 @@
 
 
 \begin{question}
-    A junior trader on a derivatives desk at Quantum Securities is reviewing different execution venues for their interest rate swaps portfolio. His supervisor suggests moving some vanilla swaps from OTC to exchange trading to improve operational efficiency. Which of the following statements correctly describes an advantage of exchange trading systems?
+    A junior trader on a derivatives desk at Quantum Securities is reviewing different execution venues for their interest rate swaps portfolio. His supervisor suggests moving some vanilla swaps from OTC to exchange trading to improve operational efficiency. Which of the following statements correctly describes an advantage of exchange trading systems?\\
+    一位量子证券的衍生品交易员正在审查不同执行场所的利率互换投资组合。他的主管建议将一些普通互换从场外交易（OTC）转移到交易所交易，以提高运营效率。以下哪项陈述正确描述了交易所交易系统的优势？
     \end{question}
     
     \begin{choices}
-        \item Contract terms can be flexibly customized to meet specific trading needs.
+        \item Contract terms can be flexibly customized to meet specific trading needs.\\
+        合约条款可以灵活定制，以满足特定交易需求。
         
-        \item Central clearing and standardized margining systems help minimize counterparty risk.
+        \item Central clearing and standardized margining systems help minimize counterparty risk.\\
+        中央清算和标准化保证金系统有助于最小化交易对手风险。
         
-        \item Traders can directly negotiate prices and quantities with their preferred counterparties.
+        \item Traders can directly negotiate prices and quantities with their preferred counterparties.\\
+        交易员可以直接与他们首选的交易对手协商价格和数量。
         
-        \item Voice trading records provide documentation in case of trade disputes.
+        \item Voice trading records provide documentation in case of trade disputes.\\
+        语音交易记录在交易争议情况下提供文档。
     \end{choices}
     
     \begin{correctanswer}
@@ -2274,17 +2492,22 @@
 
 
 \begin{question}
-    A derivatives risk analyst at Global Securities is evaluating the risks of their bilateral OTC derivatives portfolio following a major counterparty's credit rating downgrade. Which of the following statements correctly describes a characteristic of bilaterally cleared OTC derivatives trades?
+    A derivatives risk analyst at Global Securities is evaluating the risks of their bilateral OTC derivatives portfolio following a major counterparty's credit rating downgrade. Which of the following statements correctly describes a characteristic of bilaterally cleared OTC derivatives trades?\\
+    一位Global证券的衍生品风险分析师正在评估双边场外衍生品投资组合的风险，因为主要交易对手的信用评级下调。以下哪项陈述正确描述了双边清算场外衍生品交易的特点？
 \end{question}
     
 \begin{choices}
-    \item The standardized documentation in bilateral contracts ensures consistent valuation methodologies across market participants.
+    \item The standardized documentation in bilateral contracts ensures consistent valuation methodologies across market participants.\\
+    双边合约中的标准化文档确保了市场参与者之间的一致估值方法。
     
-    \item The bilateral clearing structure promotes market stability through its integrated risk-sharing mechanisms among participants.
+    \item The bilateral clearing structure promotes market stability through its integrated risk-sharing mechanisms among participants.\\
+    双边清算结构通过参与者之间的整合风险分担机制促进市场稳定。
     
-    \item Position unwinding during market stress can be difficult due to limited liquidity.
+    \item Position unwinding during market stress can be difficult due to limited liquidity.\\
+    在市场压力期间，由于流动性有限，头寸解除可能很困难。
     
-    \item The bilateral market structure enables efficient price discovery through transparent trading mechanisms.
+    \item The bilateral market structure enables efficient price discovery through transparent trading mechanisms.\\
+    双边市场结构通过透明交易机制实现高效价格发现。
 \end{choices}
 
 \begin{correctanswer}
@@ -2317,17 +2540,22 @@
 
 
 \begin{question}
-    A compliance officer at Pacific Trading is reviewing the operational differences between exchange-traded and OTC markets. She needs to explain to new traders which functions are typically performed by exchanges. Which of the following statements about exchange functions is correct?
+    A compliance officer at Pacific Trading is reviewing the operational differences between exchange-traded and OTC markets. She needs to explain to new traders which functions are typically performed by exchanges. Which of the following statements about exchange functions is correct?\\
+    一位太平洋交易公司的合规官正在审查交易所交易和场外交易市场的运营差异。她需要向新交易员解释交易所通常执行哪些功能。以下哪项陈述关于交易所功能是正确的？
 \end{question}
     
 \begin{choices}
-    \item Exchange trading systems primarily focus on customized contract specifications to meet diverse trading needs through flexible arrangements.
+    \item Exchange trading systems primarily focus on customized contract specifications to meet diverse trading needs through flexible arrangements.\\
+    交易所交易系统主要专注于定制化合约规范，通过灵活安排满足多样化的交易需求。
     
-    \item Facilitating direct price negotiations between buyers and sellers through private channels.
+    \item Facilitating direct price negotiations between buyers and sellers through private channels.\\
+    通过私人渠道促进买家和卖家之间的直接价格谈判。
     
-    \item Exchange membership requirements are designed to be inclusive, allowing broad market participation through simplified registration processes.
+    \item Exchange membership requirements are designed to be inclusive, allowing broad market participation through simplified registration processes.\\
+    交易所会员资格要求旨在包容，通过简化注册流程允许广泛的市场参与。
     
-    \item Disseminating real-time price information through official market data feeds.
+    \item Disseminating real-time price information through official market data feeds.\\
+    通过官方市场数据渠道传播实时价格信息。
 \end{choices}
 
 \begin{correctanswer}
@@ -2360,17 +2588,22 @@
 
 
             \begin{question}
-                Sarah Chen, a risk manager at Pacific Investment Bank, is analyzing potential issues with the mandatory central clearing requirement for standardized derivatives. She identifies two main concerns: (1) clearing members might reduce their risk monitoring efforts since the CCP bears most risks, and (2) CCPs tend to raise collateral requirements significantly during market turbulence. Which of the following concepts best describe Chen's concerns?
+                Sarah Chen, a risk manager at Pacific Investment Bank, is analyzing potential issues with the mandatory central clearing requirement for standardized derivatives. She identifies two main concerns: (1) clearing members might reduce their risk monitoring efforts since the CCP bears most risks, and (2) CCPs tend to raise collateral requirements significantly during market turbulence. Which of the following concepts best describe Chen's concerns?\\
+                一位太平洋投资银行的Risk Manager Sarah Chen正在分析标准化衍生品强制中央清算要求可能存在的问题。她识别出两个主要问题：(1) 清算会员可能因为CCP承担大部分风险而减少风险监控努力，(2) CCP在市场动荡期间倾向于显著提高保证金要求。以下哪个概念最能描述Chen的问题？
             \end{question}
                 
                 \begin{choices}
-                    \item For the risk monitoring issue: moral hazard; for the collateral requirement issue: procyclicality.
+                    \item For the risk monitoring issue: moral hazard; for the collateral requirement issue: procyclicality.\\
+                    对于风险监控问题：道德风险；对于保证金要求问题：顺周期性。
                     
-                    \item For the risk monitoring issue: adverse selection; for the collateral requirement issue: offsetting.
+                    \item For the risk monitoring issue: adverse selection; for the collateral requirement issue: offsetting.\\
+                    对于风险监控问题：逆向选择；对于保证金要求问题：对冲。
                     
-                    \item For the risk monitoring issue: moral hazard; for the collateral requirement issue: offsetting.
+                    \item For the risk monitoring issue: moral hazard; for the collateral requirement issue: offsetting.\\
+                    对于风险监控问题：道德风险；对于保证金要求问题：对冲。
                     
-                    \item For the risk monitoring issue: adverse selection; for the collateral requirement issue: procyclicality.
+                    \item For the risk monitoring issue: adverse selection; for the collateral requirement issue: procyclicality.\\
+                    对于风险监控问题：逆向选择；对于保证金要求问题：顺周期性。
                 \end{choices}
                 
                 \begin{correctanswer}
@@ -2406,17 +2639,22 @@
 
 
                 \begin{question}
-                    A junior risk analyst at an asset management firm is evaluating different financial obligations related to their clearinghouse membership. The analyst needs to understand which contribution ensures the clearinghouse can cover defaults by any member and cannot be withdrawn while the firm remains a member. Which statement about these financial obligations is correct?
+                    A junior risk analyst at an asset management firm is evaluating different financial obligations related to their clearinghouse membership. The analyst needs to understand which contribution ensures the clearinghouse can cover defaults by any member and cannot be withdrawn while the firm remains a member. Which statement about these financial obligations is correct?\\
+                    一位资产管理公司的初级风险分析师正在评估与清算所会员资格相关的不同财务义务。分析师需要理解哪项贡献确保清算所可以覆盖任何会员的违约，并且在公司仍然是会员时不能被提取。以下哪项陈述关于这些财务义务是正确的？
                     \end{question}
                     
                     \begin{choices}
-                        \item Maintenance margin is a long-term contribution that cannot be withdrawn and is used to cover defaults.
+                        \item Maintenance margin is a long-term contribution that cannot be withdrawn and is used to cover defaults.\\
+                        维持保证金是一种长期贡献，不能被提取，用于覆盖违约。
                         
-                        \item Initial margin is a permanent fund that supports the clearinghouse in case of member defaults.
+                        \item Initial margin is a permanent fund that supports the clearinghouse in case of member defaults.\\
+                        初始保证金是一种永久基金，用于支持清算所在会员违约时的情况。
                         
-                        \item Membership fee is a refundable deposit that acts as a financial safeguard for the clearinghouse.
+                        \item Membership fee is a refundable deposit that acts as a financial safeguard for the clearinghouse.\\
+                        会员费是一种可退还存款，作为清算所的财务保障。
                         
-                        \item Guaranty fund is a non-withdrawable contribution that ensures financial stability in case of defaults.
+                        \item Guaranty fund is a non-withdrawable contribution that ensures financial stability in case of defaults.\\
+                        担保基金是一种不可提取的贡献，确保在违约情况下保持财务稳定。
                     \end{choices}
                     
                     \begin{correctanswer}
@@ -2452,17 +2690,22 @@
 
 
 \begin{question}
-    The futures desk at an investment bank is preparing for the delivery of a physical commodity from a long futures position. The team needs to understand the role of the clearinghouse in this process. Which of the following statements best describes the clearinghouse's role in facilitating this delivery?
+    The futures desk at an investment bank is preparing for the delivery of a physical commodity from a long futures position. The team needs to understand the role of the clearinghouse in this process. Which of the following statements best describes the clearinghouse's role in facilitating this delivery?\\
+    一家投资银行的期货部门正在准备交付实物商品的交割，从长期期货头寸。团队需要理解清算所在这一过程中的角色。以下哪项陈述最准确地描述了清算所在促进这一交割中的角色？
     \end{question}
     
     \begin{choices}
-        \item The clearinghouse will coordinate the settlement with any eligible short position holders.
+        \item The clearinghouse will coordinate the settlement with any eligible short position holders.\\
+        清算所将协调与任何合格空头头寸持有者的结算。
         
-        \item The team must directly contact the clearinghouse to arrange delivery with a specific short seller.
+        \item The team must directly contact the clearinghouse to arrange delivery with a specific short seller.\\
+        团队必须直接联系清算所安排与特定卖方的交割。
         
-        \item The team needs to settle the position directly with the original counterparty.
+        \item The team needs to settle the position directly with the original counterparty.\\
+        团队需要直接与原始对手方结算头寸。
         
-        \item The clearinghouse will only coordinate the settlement with the original counterparty.
+        \item The clearinghouse will only coordinate the settlement with the original counterparty.\\
+        清算所只会协调与原始对手方的结算。
     \end{choices}
     
     \begin{correctanswer}
@@ -2496,14 +2739,19 @@
     
     \checklist{期货市场实物交割中清算所的作用。（期货交割流程：清算所角色、交割协调、交易对手管理）}
        \begin{question}
-        A senior risk manager is conducting a training session on Central Counterparties (CCPs) for new analysts. During the session, several statements are made about CCPs' role in financial markets. Which of the following represents a common misconception about CCPs and their functions in the derivatives market?
+        A senior risk manager is conducting a training session on Central Counterparties (CCPs) for new analysts. During the session, several statements are made about CCPs' role in financial markets. Which of the following represents a common misconception about CCPs and their functions in the derivatives market?\\
+        一位高级风险经理正在为新分析师进行中央对手方（CCPs）的培训。在培训期间，几位关于CCPs在金融市场中的角色的陈述被提出。以下哪项代表了对CCPs及其在衍生品市场中的功能的一个常见误解？
     \end{question}
     
     \begin{choices}
-        \item A key advantage of CCPs is that they enable market participants to exit CCP trades more easily than bilateral clearing trades, potentially enhancing liquidity in the OTC market.
-        \item CCPs manage margin, netting, settlement, and default resolution, but any operational issues with CCPs can have widespread impacts because they handle more transactions than any single market participant.
-        \item An advantage of central clearing is that it encourages the development of standardized documentation for OTC derivatives, which helps improve transparency and efficiency in trading.
-        \item While CCPs introduce moral hazard and adverse selection risks, they provide countercyclical benefits that help reduce market volatility.
+        \item A key advantage of CCPs is that they enable market participants to exit CCP trades more easily than bilateral clearing trades, potentially enhancing liquidity in the OTC market.\\
+        CCPs的一个关键优势是它们使市场参与者能够更容易地退出CCP交易，相比于双边清算交易，这可能提高OTC市场的流动性。
+        \item CCPs manage margin, netting, settlement, and default resolution, but any operational issues with CCPs can have widespread impacts because they handle more transactions than any single market participant.\\
+        CCPs负责管理保证金、净额结算、结算和违约解决。然而，CCPs的任何运营问题可能会产生广泛影响，因为CCPs负责的交易数量远多于任何单一市场参与者。
+        \item An advantage of central clearing is that it encourages the development of standardized documentation for OTC derivatives, which helps improve transparency and efficiency in trading.\\
+        中央清算的一个积极方面是，它鼓励了场外衍生品交易的标准文件化发展，这有助于提高交易的透明度和效率。
+        \item While CCPs introduce moral hazard and adverse selection risks, they provide countercyclical benefits that help reduce market volatility.\\
+        中央清算的一个积极方面是，它鼓励了场外衍生品交易的标准文件化发展，这有助于提高交易的透明度和效率。
     \end{choices}
     
     \begin{correctanswer}
@@ -2537,14 +2785,19 @@
 
 
 \begin{question}
-    In the context of Central Counterparties (CCPs) and their exposure to model risk, consider the pricing of over-the-counter (OTC) derivatives using valuation models that employ mark-to-market functions. In this scenario, model risk could arise due to errors related to all of the following except:
+    In the context of Central Counterparties (CCPs) and their exposure to model risk, consider the pricing of over-the-counter (OTC) derivatives using valuation models that employ mark-to-market functions. In this scenario, model risk could arise due to errors related to all of the following except:\\
+    在中央对手方（CCPs）和它们对模型风险的影响的背景下，考虑使用估值模型，这些模型采用了盯市功能，对场外衍生品进行定价。在这个场景中，模型风险可能由于以下所有原因而产生，除了：
 \end{question}
 
 \begin{choices}
-    \item Tail risk.
-    \item Volatility.
-    \item Complex dependencies.
-    \item Right-way risk.
+    \item Tail risk.\\
+    尾部风险。
+    \item Volatility.\\
+    波动性。
+    \item Complex dependencies.\\
+    复杂依赖。
+    \item Right-way risk.\\
+    正向风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -2579,14 +2832,19 @@
 
 
 \begin{question}
-    In the event that a clearinghouse member is unable to fulfill its obligations in a transaction with another clearinghouse member, the clearinghouse will resort to a number of measures to ensure that contracts executed among members are made good. Which of the following presents the preferred method followed by clearinghouses?
+    In the event that a clearinghouse member is unable to fulfill its obligations in a transaction with another clearinghouse member, the clearinghouse will resort to a number of measures to ensure that contracts executed among members are made good. Which of the following presents the preferred method followed by clearinghouses?\\
+    在清算所成员无法履行与另一清算所成员的交易义务的情况下，清算所将采取一系列措施，确保成员之间执行的合同得到履行。以下哪项代表了清算所首选的方法？
 \end{question}
 
 \begin{choices}
-    \item Under-margined positions at the defaulting member firm are liquidated along with all of the member's proprietary positions and if that is insufficient, the defaulting firm's membership may be sold and its deposit liquidated.
-    \item The member's deposit is liquidated and if that is insufficient, the clearinghouse draws down on a credit facility at a pre-designated bank, the cost of which is borne equally by all members of the exchange.
-    \item The member's deposit is liquidated and, if necessary, other member's deposits are liquidated on an equal percentage basis; if that is insufficient, the clearinghouse then draws down on a credit facility.
-    \item The clearinghouse has a credit facility at a pre-designated bank that allows it to make good on all contracts, the cost of which is allocated across all members of the exchange using a weighting scheme based on the outstanding positions held by the member.
+    \item Under-margined positions at the defaulting member firm are liquidated along with all of the member's proprietary positions and if that is insufficient, the defaulting firm's membership may be sold and its deposit liquidated.\\
+    违约成员公司的未满足保证金头寸与该成员的所有自有头寸一起清算，如果这些措施仍然不足以弥补损失，违约成员的会员资格可能会被出售并清算其存款。
+    \item The member's deposit is liquidated and if that is insufficient, the clearinghouse draws down on a credit facility at a pre-designated bank, the cost of which is borne equally by all members of the exchange.\\
+    该成员的存款被清算，如果这些措施仍然不足以弥补损失，清算所可以从预先指定的银行获得信贷额度，该费用由交易所的所有成员平均分担。
+    \item The member's deposit is liquidated and, if necessary, other member's deposits are liquidated on an equal percentage basis; if that is insufficient, the clearinghouse then draws down on a credit facility.\\
+    该成员的存款被清算，如果必要的话，其他成员的存款按相同比例清算；如果这些措施仍然不足以弥补损失，清算所可以从预先指定的银行获得信贷额度。
+    \item The clearinghouse has a credit facility at a pre-designated bank that allows it to make good on all contracts, the cost of which is allocated across all members of the exchange using a weighting scheme based on the outstanding positions held by the member.\\
+    清算所可以在预先指定的银行获得信贷额度，允许其履行所有合同，该费用由交易所的所有成员平均分担，使用基于成员持有未平仓头寸的加权方案。
 \end{choices}
 
 \begin{correctanswer}
@@ -2631,14 +2889,31 @@
     \hline
     \end{tabular}
 
-    If the exchange has an automatic netting arrangement in place, what is the variation margin for the member at the end of day 2?
+    If the exchange has an automatic netting arrangement in place, what is the variation margin for the member at the end of day 2?\\
+    商品交易所的会员在连续几天内持有多个大豆期货合约的头寸。一份大豆期货合约代表5,000蒲式耳。期货头寸和每日结算价格的信息如下：
+
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    头寸 & 结算价格（美元/蒲式耳） \\
+    \hline
+    做多11月大豆合约 & Day 1: 10.00, Day 2: 10.20, Day 3: 10.10 \\
+    做空1月大豆合约 & Day 1: 10.50, Day 2: 10.70, Day 3: 10.60 \\
+    \hline
+    \end{tabular}
+
+    如果交易所实施了自动净额结算安排，该会员在第2日末的变动保证金是多少？\\
+
 \end{question}
 
 \begin{choices}
-    \item The member pays USD 500.
-    \item The member neither pays nor receives any USD.
-    \item The member receives USD 250.
-    \item The member receives USD 1,000.
+    \item The member pays USD 500. \\
+    该会员支付USD 500。
+    \item The member neither pays nor receives any USD.\\
+    该会员既不支付也不收到任何USD。
+    \item The member receives USD 250. \\
+    该会员收到USD 250。
+    \item The member receives USD 1,000. \\
+    该会员收到USD 1,000。
 \end{choices}
 
 \begin{correctanswer}

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -90,7 +90,8 @@
 \section{考点1：Basic Concepts 基础概念}
 \setcounter{question}{0}
 \begin{question}
-    An options trader is analyzing the profit equivalence of different trading strategies. Consider a European call option with a strike price of $K = 45$ and a premium of $C = 5$. Also, consider a forward contract with a forward price of $F = 50$. At what underlying asset price will the profit of the call option strategy and the forward contract strategy be equal?
+    An options trader is analyzing the profit equivalence of different trading strategies. Consider a European call option with a strike price of $K = 45$ and a premium of $C = 5$. Also, consider a forward contract with a forward price of $F = 50$. At what underlying asset price will the profit of the call option strategy and the forward contract strategy be equal?\\
+    一位期权交易员正在分析不同交易策略的利润等价性。考虑一个欧式看涨期权，执行价格为$K = 45$，期权费为$C = 5$。同时，考虑一个远期合约，远期价格为$F = 50$。在什么标的资产价格下，看涨期权策略和远期合约策略的利润相等？
     \end{question}
     
     \begin{choices}
@@ -121,6 +122,7 @@
 
     \begin{question}
         A financial advisor is analyzing a long put option. The strike price ($K$) of the put option is $60$, and the premium ($p$) paid is $5$. If the underlying asset price at expiration ($S_T$) is $50$, what is the payoff of this long put option?
+        \\一位金融顾问正在分析多头看跌期权。看跌期权的执行价格($K$)为60，支付的期权费($p$)为5。如果到期时标的资产价格($S_T$)为50，多头看跌期权的收益是多少？
         \end{question}
         
         \begin{choices}
@@ -148,14 +150,19 @@
         \checklist{多头看跌期权收益计算（注意看计算的是payoff还是profit）}
 
 \begin{question}
-    A junior trader on a derivatives trading desk has 1200 share - based options with a strike price of 90. If a stock dividend of 15\% is issued, what will be the adjusted number of options and the strike price?
+    A junior trader on a derivatives trading desk has 1200 share - based options with a strike price of 90. If a stock dividend of 15\% is issued, what will be the adjusted number of options and the strike price?\\
+    一位初级交易员在衍生品交易台拥有1200份基于股票的期权，执行价格为90。如果股票股息为15\%，调整后的期权份数和执行价格是多少？
     \end{question}
     
     \begin{choices}
-        \item The investor's position is changed to options on 1380 shares with a strike price of USD 78.26.
-        \item The investor's position is changed to options on 1043 shares with a strike price of USD 103.50.
-        \item The investor's position is changed to options on 1380 shares with a strike price of USD 90.
-        \item The investor's position is changed to options on 1200 shares with a strike price of USD 78.26.
+        \item The investor's position is changed to options on 1380 shares with a strike price of USD 78.26.\\
+        投资者的头寸变为1380股期权，执行价格为USD 78.26。
+        \item The investor's position is changed to options on 1043 shares with a strike price of USD 103.50.\\
+        投资者的头寸变为1043股期权，执行价格为USD 103.50。
+        \item The investor's position is changed to options on 1380 shares with a strike price of USD 90.\\
+        投资者的头寸变为1380股期权，执行价格为USD 90。
+        \item The investor's position is changed to options on 1200 shares with a strike price of USD 78.26.\\
+        投资者的头寸变为1200股期权，执行价格为USD 78.26。
     \end{choices}
     
     \begin{correctanswer}
@@ -179,13 +186,18 @@
 
     \begin{question}
         A financial advisor is analyzing options on a non - dividend - paying stock. The current stock price ($S_0$) is 80, the strike price ($X$) is 85, the risk - free interest rate ($r$) is 4\% per annum, and the time to expiration ($T$) is 0.5 years. Which of the following calculations of option bounds is correct?
+        \\一位金融顾问正在分析无股息股票的期权。当前股票价格($S_0$)为80，执行价格($X$)为85，无风险利率($r$)为4\%每年，到期时间($T$)为0.5年。哪一项期权上下限的计算是正确的？
         \end{question}
         
         \begin{choices}
-            \item The maximum value of a European call option is 83.32
-            \item The minimum value of an American call option is 3.32
-            \item The maximum value of a European put option is 83.32
-            \item The minimum value of an American put option is 0
+            \item The maximum value of a European call option is 83.32\\
+            欧洲看涨期权的最大值为83.32。
+            \item The minimum value of an American call option is 3.32\\
+            美国看涨期权的最小值为3.32。
+            \item The maximum value of a European put option is 83.32\\
+            欧洲看跌期权的最大值为83.32。
+            \item The minimum value of an American put option is 0\\
+            美国看跌期权的最小值为0。
         \end{choices}
         
         \begin{correctanswer}
@@ -214,14 +226,19 @@
         \checklist{不同类型期权上下限计算（尤其注意美式看跌期权最小值的计算公式）}
 
 \begin{question}
-    A risk analyst for an equity hedge fund is evaluating options. Consider a European call option and a European put option on a non - dividend - paying stock. The call option has a strike price of $K_{call}=50$, and the put option has a strike price of $K_{put}=50$. The current stock price is $S_0 = 45$, and the time to expiration is $T = 0.5$ years with a risk - free interest rate of $r = 3\%$. Which of the following statements is correct regarding exercise at expiration?
+    A risk analyst for an equity hedge fund is evaluating options. Consider a European call option and a European put option on a non - dividend - paying stock. The call option has a strike price of $K_{call}=50$, and the put option has a strike price of $K_{put}=50$. The current stock price is $S_0 = 45$, and the time to expiration is $T = 0.5$ years with a risk - free interest rate of $r = 3\%$. Which of the following statements is correct regarding exercise at expiration?\\
+    一位股权对冲基金的风险分析师正在评估期权。考虑一个欧式看涨期权和一个欧式看跌期权，标的资产为无股息股票。看涨期权的执行价格为$K_{call}=50$，看跌期权的执行价格为$K_{put}=50$。当前股票价格为$S_0 = 45$，到期时间为$T = 0.5$年，无风险利率为$r = 3\%$。哪一项陈述关于到期行权是正确的？
     \end{question}
     
     \begin{choices}
-        \item The European call option will be exercised, and the European put option will not be exercised.
-        \item The European call option will not be exercised, and the European put option will be exercised.
-        \item Both the European call option and the European put option will be exercised.
-        \item Neither the European call option nor the European put option will be exercised.
+        \item The European call option will be exercised, and the European put option will not be exercised.\\
+        欧式看涨期权会行权，欧式看跌期权不会行权。
+        \item The European call option will not be exercised, and the European put option will be exercised.\\
+        欧式看涨期权不会行权，欧式看跌期权会行权。
+        \item Both the European call option and the European put option will be exercised.\\
+        欧式看涨期权和欧式看跌期权都会行权。
+        \item Neither the European call option nor the European put option will be exercised.\\
+        欧式看涨期权和欧式看跌期权都不会行权。
     \end{choices}
     
     \begin{correctanswer}
@@ -240,14 +257,19 @@
     \checklist{欧洲看涨期权和欧洲看跌期权在给定条件下到期是否行权的判断}
 
 \begin{question}
-    Which of the following will not cause a decrease in the value of a European call option position on ABC stock?
+    Which of the following will not cause a decrease in the value of a European call option position on ABC stock?\\
+    哪一项不会导致ABC股票的欧式看涨期权价值下降？
     \end{question}
     
     \begin{choices}
-        \item ABC declares a 2 - for - 1 stock split.
-        \item ABC raises its quarterly dividend from $0.10 per share to $0.12 per share.
-        \item The central bank lowers interest rates by 0.2\% to boost the economy.
-        \item Analysts believe that the volatility of ABC stock has increased.
+        \item ABC declares a 2 - for - 1 stock split.\\
+        ABC宣布2拆1股票拆分。
+        \item ABC raises its quarterly dividend from $0.10 per share to $0.12 per share.\\
+        ABC提高季度股息从$0.10每股到$0.12每股。
+        \item The central bank lowers interest rates by 0.2\% to boost the economy.\\
+        央行降低利率0.2\%以刺激经济。
+        \item Analysts believe that the volatility of ABC stock has increased.\\
+        分析师认为ABC股票的波动率增加了。
     \end{choices}
     
     \begin{correctanswer}
@@ -276,14 +298,19 @@
     \checklist{影响欧式看涨期权价值的因素（包括股票拆分、股息变化、利率变动和波动率变化）}  
 
 \begin{question}
-Which of the following will not cause a decrease in the value of a European call option position on ABC stock?
+Which of the following will not cause a decrease in the value of a European call option position on ABC stock?\\
+哪一项不会导致ABC股票的欧式看涨期权价值下降？
 \end{question}
 
 \begin{choices}
-    \item ABC declares a 2 - for - 1 stock split.
-    \item ABC raises its quarterly dividend from $0.10 per share to $0.12 per share.
-    \item The central bank lowers interest rates by 0.2% to boost the economy.
-    \item Analysts believe that the volatility of ABC stock has increased.
+    \item ABC declares a 2 - for - 1 stock split.\\
+    ABC宣布2拆1股票拆分。
+    \item ABC raises its quarterly dividend from $0.10 per share to $0.12 per share.\\
+    ABC提高季度股息从$0.10每股到$0.12每股。
+    \item The central bank lowers interest rates by 0.2% to boost the economy.\\
+    央行降低利率0.2\%以刺激经济。
+    \item Analysts believe that the volatility of ABC stock has increased.\\
+    分析师认为ABC股票的波动率增加了。
 \end{choices}
 
 \begin{correctanswer}
@@ -312,7 +339,8 @@ D
 \checklist{考查影响欧式看涨期权价值的因素，包括股票拆分、股息变化、利率变动和波动率变化。}
 
 \begin{question}
-    A risk analyst is evaluating American call and put options on a non - dividend - paying stock. The current stock price ($S_0$) is 100, the strike price ($K$) is 95, the risk - free interest rate ($r$) is 4\% per annum, and the time to expiration ($T$) is 0.5 years. Which of the following values for the difference between the American call option price ($C$) and the American put option price ($P$) is within the acceptable range?
+    A risk analyst is evaluating American call and put options on a non - dividend - paying stock. The current stock price ($S_0$) is 100, the strike price ($K$) is 95, the risk - free interest rate ($r$) is 4\% per annum, and the time to expiration ($T$) is 0.5 years. Which of the following values for the difference between the American call option price ($C$) and the American put option price ($P$) is within the acceptable range?\\
+    一位风险分析师正在评估无股息股票的美式看涨期权和美式看跌期权。当前股票价格($S_0$)为100，执行价格($K$)为95，无风险利率($r$)为4\%每年，到期时间($T$)为0.5年。哪一项是美式看涨期权价格($C$)和美式看跌期权价格($P$)的差值的可接受范围内？
     \end{question}
     
     \begin{choices}
@@ -347,7 +375,8 @@ D
     \checklist{美式看涨期权和美式看跌期权价格差异上下限(无股息)}
 
     \begin{question}
-        A financial analyst is examining American call and put options on a stock that pays dividends. The current stock price ($S_0$) is 120, the strike price ($K$) is 110. The stock is expected to pay a dividend of $D = 3$ in 0.25 years, and the risk - free interest rate ($r$) is 3\% per annum. The time to expiration ($T$) of the options is 0.5 years. Which of the following values for the difference between the American call option price ($C$) and the American put option price ($P$) is within the acceptable range?
+        A financial analyst is examining American call and put options on a stock that pays dividends. The current stock price ($S_0$) is 120, the strike price ($K$) is 110. The stock is expected to pay a dividend of $D = 3$ in 0.25 years, and the risk - free interest rate ($r$) is 3\% per annum. The time to expiration ($T$) of the options is 0.5 years. Which of the following values for the difference between the American call option price ($C$) and the American put option price ($P$) is within the acceptable range?\\
+        一位金融分析师正在评估有股息股票的美式看涨期权和美式看跌期权。当前股票价格($S_0$)为120，执行价格($K$)为110。股票预计在0.25年后支付股息$D = 3$，无风险利率($r$)为3\%每年。期权到期时间($T$)为0.5年。哪一项是美式看涨期权价格($C$)和美式看跌期权价格($P$)的差值的可接受范围内？
         \end{question}
         
         \begin{choices}
@@ -388,7 +417,8 @@ D
         \checklist{美式看涨期权和美式看跌期权价格差异上下限（有股息）}
     
         \begin{question}
-            Suppose that the current stock price is \$60 and the risk - free rate is 4\%. You have found a quote for a six - month put option with an exercise price of \$55. The put price is \$2.00, but due to low trading volume in the call options, there is no listed quote for the six - month, \$55 call. Estimate the price of the six - month call option.
+            Suppose that the current stock price is \$60 and the risk - free rate is 4\%. You have found a quote for a six - month put option with an exercise price of \$55. The put price is \$2.00, but due to low trading volume in the call options, there is no listed quote for the six - month, \$55 call. Estimate the price of the six - month call option.\\
+            假设当前股票价格为\$60，无风险利率为4\%。你找到了一份六个月看跌期权，执行价格为\$55。看跌期权价格为\$2.00，但由于看涨期权交易量较低，六个月，\$55看涨期权没有报价。估计六个月看涨期权的价格。
             \end{question}
             
             \begin{choices}
@@ -424,14 +454,19 @@ D
             \checklist{买卖权平价定理（计算看涨期权价格）}
     
 \begin{question}
-    A risk analyst at an investment bank is computing the lowest possible price for six - month American and European 70 puts on a stock that is currently trading at 67, with a risk - free rate of 4\%. What is the lowest price for these puts?
+    A risk analyst at an investment bank is computing the lowest possible price for six - month American and European 70 puts on a stock that is currently trading at 67, with a risk - free rate of 4\%. What is the lowest price for these puts?\\
+    一位投资银行的风险分析师正在计算六个月美式和欧式70看跌期权在当前交易价格为67的股票上的最低可能价格，无风险利率为4\%。六个月看跌期权的最低价格是多少？
     \end{question}
     
     \begin{choices}
-        \item The lowest price for the American put is \$3 and for the European put is \$1.64.
-        \item The lowest price for the American put is \$3 and for the European put is \$3.
-        \item The lowest price for the American put is \$1.64 and for the European put is \$3.
-        \item The lowest price for the American put is \$0 and for the European put is \$1.64.
+        \item The lowest price for the American put is \$3 and for the European put is \$1.64.\\
+        美式看跌期权的最低价格为\$3，欧式看跌期权的最低价格为\$1.64。
+        \item The lowest price for the American put is \$3 and for the European put is \$3.\\
+        美式看跌期权的最低价格为\$3，欧式看跌期权的最低价格为\$3。
+        \item The lowest price for the American put is \$1.64 and for the European put is \$3.\\
+        美式看跌期权的最低价格为\$1.64，欧式看跌期权的最低价格为\$3。
+        \item The lowest price for the American put is \$0 and for the European put is \$1.64.\\
+        美式看跌期权的最低价格为\$0，欧式看跌期权的最低价格为\$1.64。
     \end{choices}
     
     \begin{correctanswer}
@@ -453,14 +488,19 @@ D
     \checklist{美式和欧式看跌期权最低价格的计算}
 
 \begin{question}
-    A junior trader on a derivatives trading desk is tasked with computing the lowest possible price for five - month American and European 70 calls on a stock that is currently trading at 73, with a risk - free rate of 4.5\%. What is the lowest price for these calls?
+    A junior trader on a derivatives trading desk is tasked with computing the lowest possible price for five - month American and European 70 calls on a stock that is currently trading at 73, with a risk - free rate of 4.5\%. What is the lowest price for these calls?\\
+    一位初级交易员在衍生品交易台被要求计算五个月美式和欧式70看涨期权在当前交易价格为73的股票上的最低可能价格，无风险利率为4.5\%。五个月看涨期权的最低价格是多少？
     \end{question}
     
     \begin{choices}
-        \item The lowest price for the American call is \$3.27 and for the European call is \$3.27.
-        \item The lowest price for the American call is \$3 and for the European call is \$3.27.
-        \item The lowest price for the American call is \$3.27 and for the European call is \$3.
-        \item The lowest price for the American call is \$3 and for the European call is \$3.
+        \item The lowest price for the American call is \$3.27 and for the European call is \$3.27.\\
+        美式看涨期权的最低价格为\$3.27，欧式看涨期权的最低价格为\$3.27。
+        \item The lowest price for the American call is \$3 and for the European call is \$3.27.\\
+        美式看涨期权的最低价格为\$3，欧式看涨期权的最低价格为\$3.27。
+        \item The lowest price for the American call is \$3.27 and for the European call is \$3.\\
+        美式看涨期权的最低价格为\$3.27，欧式看涨期权的最低价格为\$3。
+        \item The lowest price for the American call is \$3 and for the European call is \$3.\\
+        美式看涨期权的最低价格为\$3，欧式看涨期权的最低价格为\$3。
     \end{choices}
     
     \begin{correctanswer}
@@ -483,7 +523,8 @@ D
     \checklist{美式和欧式看涨期权最低价格计算}
 
 \begin{question}
-    A financial advisor is analyzing a European put option on a stock that is currently trading at \$55. The put option has an expiration of eight months, a strike price of \$45, and a risk - free rate of 4\%. What are the closest values for the lower bound and upper bound on this put option?
+    A financial advisor is analyzing a European put option on a stock that is currently trading at \$55. The put option has an expiration of eight months, a strike price of \$45, and a risk - free rate of 4\%. What are the closest values for the lower bound and upper bound on this put option?\\
+    一位金融顾问正在分析一个欧式看跌期权，标的资产当前交易价格为\$55。看跌期权有八个月到期，执行价格为\$45，无风险利率为4\%。哪一项是看跌期权的下限和上限的最接近值？
     \end{question}
     
     \begin{choices}
@@ -508,7 +549,8 @@ D
     \checklist{欧式看跌期权上下限的计算}
 
 \begin{question}
-    A risk analyst at an equity hedge fund is analyzing a one - year European put option that is currently valued at \$6 on a \$30 stock with a strike price of \$32.50. The one - year risk - free rate is 5\%. Which of the following amounts is closest to the value of the corresponding call option?
+    A risk analyst at an equity hedge fund is analyzing a one - year European put option that is currently valued at \$6 on a \$30 stock with a strike price of \$32.50. The one - year risk - free rate is 5\%. Which of the following amounts is closest to the value of the corresponding call option?\\
+    一位股权对冲基金的风险分析师正在分析一个一年欧式看跌期权，当前价值为\$6，标的资产为\$30股票，执行价格为\$32.50。一年无风险利率为5\%。哪一项是最接近的对应看涨期权的价值？
     \end{question}
     
     \begin{choices}
@@ -538,13 +580,18 @@ D
 
 \begin{question}
     A financial advisor is explaining the put - call parity for European options. According to put - call parity, purchasing a put option on XYZ stock would be equivalent to which of the following combinations?
+    \\一位金融顾问正在解释欧式期权的买卖权平价。根据买卖权平价，购买XYZ股票的看跌期权等价于哪一种组合？
     \end{question}
     
     \begin{choices}
-        \item Buying a call, buying XYZ stock, and selling a zero - coupon bond.
-        \item Buying a call, selling XYZ stock, and buying a zero - coupon bond.
-        \item Selling a call, buying XYZ stock, and buying a zero - coupon bond.
-        \item Selling a call, selling XYZ stock, and selling a zero - coupon bond.
+        \item Buying a call, buying XYZ stock, and selling a zero - coupon bond.\\
+        购买一个看涨期权，购买XYZ股票，并卖出一个零息债券。
+        \item Buying a call, selling XYZ stock, and buying a zero - coupon bond.\\
+        购买一个看涨期权，卖出XYZ股票，并购买一个零息债券。
+        \item Selling a call, buying XYZ stock, and buying a zero - coupon bond.\\
+        卖出一个看涨期权，购买XYZ股票，并购买一个零息债券。
+        \item Selling a call, selling XYZ stock, and selling a zero - coupon bond.\\
+        卖出一个看涨期权，卖出XYZ股票，并卖出一个零息债券。
     \end{choices}
     
     \begin{correctanswer}
@@ -561,7 +608,8 @@ D
     \checklist{欧式期权平价公式的变形应用(如何构造复制组合，注意理解正负数含义)}
 
     \begin{question}
-        A risk analyst for an equity hedge fund is evaluating the maximum possible prices of options on a particular stock. The current stock price of a share is USD 120, and the continuously compounding risk - free rate is 10\% per year. The analyst is considering a 6 - month European call option, American call option, European put option, and American put option, all with a strike price of USD 110. What are the maximum possible prices for these options?
+        A risk analyst for an equity hedge fund is evaluating the maximum possible prices of options on a particular stock. The current stock price of a share is USD 120, and the continuously compounding risk - free rate is 10\% per year. The analyst is considering a 6 - month European call option, American call option, European put option, and American put option, all with a strike price of USD 110. What are the maximum possible prices for these options?\\
+        一位股权对冲基金的风险分析师正在评估特定股票的期权最大可能价格。当前股票价格为USD 120，连续复利无风险利率为10\%每年。分析师正在考虑一个六个月欧式看涨期权，一个美式看涨期权，一个欧式看跌期权，一个美式看跌期权，所有期权执行价格均为USD 110。这些期权的最大可能价格是多少？
         \end{question}
         
         \begin{choices}
@@ -603,6 +651,16 @@ D
     \item Put price :  USD 17
     \end{itemize}
     What is the continuous implied dividend yield of the stock?
+    \\一位金融机构的期权交易员Lily正在尝试确定一只股票的隐含股息收益率。她正在分析该股票4年期欧式看跌和看涨期权的场外交易价格。可用数据如下：
+    \begin{itemize}
+    \item 初始股票价格：USD 92 
+    \item 执行价格：USD 98 
+    \item 连续无风险利率：4.5\% 
+    \item 标的股票波动率：未知 
+    \item 看涨期权价格：USD 12 
+    \item 看跌期权价格：USD 17
+    \end{itemize}
+    该股票的连续隐含股息收益率是多少？
     \end{question}
     
     \begin{choices}
@@ -629,6 +687,7 @@ D
 
 \begin{question}
     A financial advisor is helping a client analyze the relationship between call and put options on a particular stock. The price of a nine - month, USD 30 strike price, European call option on the stock is USD 4. The stock price is USD 28. A dividend of USD 1.5 is expected in four months. The continuously compounded risk - free rate for all maturities is 4\% per year. What is the approximate value of a put option on the same underlying stock with a strike price of USD 30 and a time to maturity of nine months?
+    \\一位金融顾问正在帮助客户分析特定股票的看涨期权和看跌期权之间的关系。该股票九个月期，执行价格为USD 30的欧式看涨期权价格为USD 4。股票价格为USD 28。预计四个月后支付USD 1.5的股息。所有期限的连续复利无风险利率为4\%每年。九个月期，执行价格为USD 30的看跌期权的近似价值是多少？
     \end{question}
     
     \begin{choices}
@@ -664,14 +723,19 @@ D
     \checklist{买卖期权平价公式的应用（注意是包含股息的期权平价公式，且需要计算股息的现值）}
 
 \begin{question}
-    A risk analyst at an options trading firm is evaluating the influence of dividends on option values. Which of the following statements accurately describes the impact of dividends on different types of options?
+    A risk analyst at an options trading firm is evaluating the influence of dividends on option values. Which of the following statements accurately describes the impact of dividends on different types of options?\\
+    一位期权交易公司的风险分析师正在评估股息对期权价值的影响。哪一项陈述准确描述了股息对不同类型期权的影响？
     \end{question}
     
     \begin{choices}
-        \item Dividends increase the value of both European and American call options, but the value of European put options is unaffected.
-        \item Dividends have no impact on the value of American put options but reduce the value of European put options.
-        \item Dividends decrease the value of both European and American call options, and increase the value of American put options.
+        \item Dividends increase the value of both European and American call options, but the value of European put options is unaffected.\\
+        股息增加欧式和美式看涨期权的价值，但欧式看跌期权的价值不受影响。
+        \item Dividends have no impact on the value of American put options but reduce the value of European put options.\\
+        股息对美式看跌期权价值没有影响，但减少欧式看跌期权的价值。
+        \item Dividends decrease the value of both European and American call options, and increase the value of American put options.\\
+        股息降低欧式和美式看涨期权的价值，并增加美式看跌期权的价值。
         \item Dividends increase the value of European call options but decrease the value of American put options.
+        \\股息增加欧式看涨期权的价值，但降低美式看跌期权的价值。
     \end{choices}
     
     \begin{correctanswer}
@@ -702,14 +766,19 @@ D
 \section{考点2:Trading Strategies 交易策略}
 \setcounter{question}{0}
 \begin{question}
-    A risk analyst at a fixed - income investment firm is explaining option strategies. A covered call position is defined as:
+    A risk analyst at a fixed - income investment firm is explaining option strategies. A covered call position is defined as:\\
+    一位固定收益投资公司的风险分析师正在解释期权策略。备兑看涨期权头寸定义为：
     \end{question}
     
     \begin{choices}
-        \item The simultaneous purchase of a put and the underlying asset.
-        \item The purchase of a share of stock with a simultaneous sale of a call on that stock.
-        \item The purchase of a share of stock with a simultaneous sale of a put on that stock.
-        \item The short sale of a stock with a simultaneous sale of a call on that stock.
+        \item The simultaneous purchase of a put and the underlying asset.\\
+        同时购买看跌期权和标的资产。
+        \item The purchase of a share of stock with a simultaneous sale of a call on that stock.\\
+        同时购买股票并卖出看涨期权。
+        \item The purchase of a share of stock with a simultaneous sale of a put on that stock.\\
+        同时购买股票并卖出看跌期权。
+        \item The short sale of a stock with a simultaneous sale of a call on that stock.\\
+        卖空股票并卖出看涨期权。
     \end{choices}
     
     \begin{correctanswer}
@@ -726,14 +795,19 @@ D
     \checklist{备兑看涨期权头寸(股票多头+看涨期权空头)}
 
 \begin{question}
-    An investor holds a stock and anticipates that the stock's price will stay relatively stable in the near term while being bullish in the long run. Which of the following strategies is most suitable for this investor?
+    An investor holds a stock and anticipates that the stock's price will stay relatively stable in the near term while being bullish in the long run. Which of the following strategies is most suitable for this investor?\\
+    一位投资者持有股票，预计短期内股价相对稳定，长期看涨。哪一种策略最适合这位投资者？
     \end{question}
     
     \begin{choices}
-        \item A covered call.
-        \item A protective put.
-        \item A long - call butterfly spread.
-        \item A short - call condor spread.
+        \item A covered call.\\
+        备兑看涨期权。
+        \item A protective put.\\
+        保护性看跌期权。
+        \item A long - call butterfly spread.\\
+        多头看涨期权蝶式价差。
+        \item A short - call condor spread.\\
+        空头看涨期权秃鹰价差。
     \end{choices}
     
     \begin{correctanswer}
@@ -769,13 +843,24 @@ D
         \item Statement III: A collar strategy can be structured as long a stock, short a European call option, and long a European put option. This strategy is mainly for yield enhancement without protecting against stock downside risk.
         \end{itemize}
         Which of the following is most likely correct?
+        一位股票对冲基金的风险分析师正在评估不同的基于期权的交易策略。考虑以下关于单一期权策略的三项陈述：
+        \begin{itemize}
+        \item 陈述I：备兑看涨期权策略可以构建为做多股票和做空欧式看涨期权。该策略的潜在利润有限，且面临股票的下行风险。
+        \item 陈述II：本金保护票据可以构建为做多政府债券和做空欧式看跌期权。该策略确保投资者在到期日不会损失本金。
+        \item 陈述III：领子策略可以构建为做多股票、做空欧式看涨期权和做多欧式看跌期权。该策略主要用于收益增强，而不保护股票下行风险。
+        \end{itemize}
+        以下哪一项最可能是正确的？
         \end{question}
         
         \begin{choices}
-            \item Only Statement I is correct.
-            \item Only Statement II is correct.
-            \item Only Statement III is correct.
-            \item All of the statements are incorrect.
+            \item Only Statement I is correct.\\
+            只有陈述I是正确的。
+            \item Only Statement II is correct.\\
+            只有陈述II是正确的。
+            \item Only Statement III is correct.\\
+            只有陈述III是正确的。
+            \item All of the statements are incorrect.\\
+            所有陈述都是错误的。
         \end{choices}
         
         \begin{correctanswer}
@@ -794,7 +879,8 @@ D
         \checklist{备兑看涨期权、本金保护型票据、领子期权等单期权策略的构造及特点(关注各策略中期权和股票的买卖方向)}
 
 \begin{question}
-    A financial advisor is analyzing a bull call spread strategy for a client. The investor purchases a call option for \$4.00 with a strike price of \$45 and sells a call option for \$1.50 with a strike price of \$55. Compute the profit of this bull call spread strategy when the stock price is at \$50.
+    A financial advisor is analyzing a bull call spread strategy for a client. The investor purchases a call option for \$4.00 with a strike price of \$45 and sells a call option for \$1.50 with a strike price of \$55. Compute the profit of this bull call spread strategy when the stock price is at \$50.\\
+    一位金融顾问正在分析一个牛市价差期权策略的客户。投资者购买一个执行价格为\$45的看涨期权，价格为\$4.00，卖出一个执行价格为\$55的看涨期权，价格为\$1.50。当股票价格为\$50时，这个牛市价差期权策略的利润是多少？
     \end{question}
     
     \begin{choices}
@@ -820,7 +906,8 @@ D
     \checklist{牛市价差期权策略的利润计算(买入行权价较低的看涨期权+卖出行权价较高的看涨期权)}
 
     \begin{question}
-        A junior trader on a derivatives trading desk is analyzing a bear put spread strategy. The trader sells a put option for \$3.50 with a strike price of \$25 and purchases a put option for \$5.00 with a strike price of \$45. Compute the profit of this bear put spread strategy when the stock price is at \$30.
+        A junior trader on a derivatives trading desk is analyzing a bear put spread strategy. The trader sells a put option for \$3.50 with a strike price of \$25 and purchases a put option for \$5.00 with a strike price of \$45. Compute the profit of this bear put spread strategy when the stock price is at \$30.\\
+        一位初级交易员在衍生品交易台分析一个熊市看跌期权价差策略。交易员卖出一个执行价格为\$25的看跌期权，价格为\$3.50，购买一个执行价格为\$45的看跌期权，价格为\$5.00。当股票价格为\$30时，这个熊市看跌期权价差策略的利润是多少？
         \end{question}
         
         \begin{choices}
@@ -861,13 +948,32 @@ D
     \end{tabular}
     \end{center}
     What arbitrage opportunity exists given these prices?
-    \end{question}
+    期权刚刚开始交易一只不支付股息的股票。该股票的交易价格为USD 55。无风险利率为每年2\%。该股票的一些1年期欧式期权的价格如下表所示：
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    期权类型 & 执行价格（USD） & 价格（USD） \\
+    \hline
+    看涨期权 & 45 & 12 \\
+    \hline
+    看涨期权 & 55 & 9.25 \\
+    \hline
+    看涨期权 & 65 & 6 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    给定这些价格，存在什么套利机会？
+\end{question}
     
     \begin{choices}
-        \item Sell two calls with strike USD 45; buy one call with strike USD 55; sell one call with strike USD 65.
-        \item Buy one call with strike USD 45; sell two calls with strike USD 55; buy one call with strike USD 65.
-        \item Sell two calls with strike USD 45; buy one call with strike USD 55; buy one call with strike USD 65.
-        \item Buy one call with strike USD 45; sell two calls with strike USD 55; sell one call with strike USD 65.
+        \item Sell two calls with strike USD 45; buy one call with strike USD 55; sell one call with strike USD 65.\\
+        卖出两个执行价格为USD 45的看涨期权，购买一个执行价格为USD 55的看涨期权，卖出一个执行价格为USD 65的看涨期权。
+        \item Buy one call with strike USD 45; sell two calls with strike USD 55; buy one call with strike USD 65.\\
+        购买一个执行价格为USD 45的看涨期权，卖出两个执行价格为USD 55的看涨期权，购买一个执行价格为USD 65的看涨期权。
+        \item Sell two calls with strike USD 45; buy one call with strike USD 55; buy one call with strike USD 65.\\
+        卖出两个执行价格为USD 45的看涨期权，购买一个执行价格为USD 55的看涨期权，购买一个执行价格为USD 65的看涨期权。
+        \item Buy one call with strike USD 45; sell two calls with strike USD 55; sell one call with strike USD 65.\\
+        购买一个执行价格为USD 45的看涨期权，卖出两个执行价格为USD 55的看涨期权，卖出一个执行价格为USD 65的看涨期权。
     \end{choices}
     
     \begin{correctanswer}
@@ -897,6 +1003,13 @@ D
         \item Sells two call options with \(C_{M0}=\$4.50\) and \(X_{M}=\$57\).
     \end{itemize}
     Compute the profit of this butterfly spread strategy with call options when the stock price is at \$57.
+    \\一位初级交易员在衍生品交易台分析一个蝶式价差策略。投资者在看涨期权上进行以下交易：
+    \begin{itemize}
+        \item 购买一个执行价格为\$52的看涨期权，价格为\$8.50。
+        \item 购买一个执行价格为\$62的看涨期权，价格为\$2.50。
+        \item 卖出两个执行价格为\$57的看涨期权，价格为\$4.50。
+    \end{itemize}
+    当股票价格为\$57时，这个蝶式价差策略的利润是多少？
     \end{question}
     
     \begin{choices}
@@ -924,13 +1037,18 @@ D
 
 \begin{question}
     Company X has just announced a takeover offer for Company Y. The outcome of this takeover attempt is uncertain. If successful, Company Y's stock price is expected to increase significantly. If unsuccessful, a significant decrease is anticipated. An investor aims to profit from this situation while minimizing transaction costs. Which of the following options trading strategies should the investor choose?
+    \\公司X刚刚宣布对公司Y的收购要约。收购结果不确定。如果成功，公司Y的股价预计将显著上涨。如果不成功，股价预计将显著下跌。一位投资者旨在从这种情况中获利，同时最小化交易成本。哪一种期权交易策略最适合这位投资者？
     \end{question}
     
     \begin{choices}
-        \item Long straddle
-        \item Long butterfly
-        \item Long strangle
-        \item Short bull call spread
+        \item Long straddle.\\
+        多头跨式组合。
+        \item Long butterfly.\\
+        多头蝶式价差。
+        \item Long strangle.\\
+        多头宽跨式组合。
+        \item Short bull call spread.\\
+        空头牛市价差。
     \end{choices}
     
     \begin{correctanswer}
@@ -959,7 +1077,8 @@ D
     \checklist{不同期权交易策略在股价波动预期下的应用（宽跨式组合比跨式组合成本低，且在股价大幅波动时都能盈利）}
 
 \begin{question}
-    A risk analyst at an investment bank is evaluating a straddle strategy. An investor buys a call option on a stock with an exercise price of \$50 and a premium of \$4, and buys a put option with the same maturity and an exercise price of \$50 and a premium of \$3. Compute the profit of this straddle strategy when the stock price is at \$40.
+    A risk analyst at an investment bank is evaluating a straddle strategy. An investor buys a call option on a stock with an exercise price of \$50 and a premium of \$4, and buys a put option with the same maturity and an exercise price of \$50 and a premium of \$3. Compute the profit of this straddle strategy when the stock price is at \$40.\\
+    一位投资银行的风险分析师正在评估一个跨式期权策略。投资者购买一个执行价格为\$50的看涨期权，价格为\$4，购买一个执行价格为\$50的看跌期权，价格为\$3。当股票价格为\$40时，这个跨式期权策略的利润是多少？
     \end{question}
     
     \begin{choices}
@@ -986,7 +1105,8 @@ D
     \checklist{跨式期权策略的利润计算，关键是牢记计算公式并正确代入数据进行计算(买入相同价格的看涨期权和看跌期权)}
 
 \begin{question}
-    A financial advisor is analyzing a strangle strategy for a client. The investor buys a call option on a stock with an exercise price of \$60 and a premium of \$2.50, and buys a put option with the same maturity and an exercise price of \$35 and a premium of \$3.00. Compute the profit of this strangle strategy when the stock price is at \$25.
+    A financial advisor is analyzing a strangle strategy for a client. The investor buys a call option on a stock with an exercise price of \$60 and a premium of \$2.50, and buys a put option with the same maturity and an exercise price of \$35 and a premium of \$3.00. Compute the profit of this strangle strategy when the stock price is at \$25.\\
+    一位金融顾问正在分析一个宽跨式期权策略的客户。投资者购买一个执行价格为\$60的看涨期权，价格为\$2.50，购买一个执行价格为\$35的看跌期权，价格为\$3。当股票价格为\$25时，这个宽跨式期权策略的利润是多少？
     \end{question}
     
     \begin{choices}
@@ -1014,13 +1134,18 @@ D
 
 \begin{question}
     An investor anticipates that a stock's price will experience a substantial change in the coming months, but is unsure about the direction of the price movement. Which of the following strategies is most likely to yield a profit if the stock price moves as expected?
+    \\一位投资者预计股票价格在未来几个月将经历重大变化，但不确定价格变动方向。哪一种策略最有可能在股票价格变动符合预期时获利？
     \end{question}
     
     \begin{choices}
-        \item Long calendar spread.
-        \item Long straddle.
-        \item Long butterfly spread.
-        \item Bearish calendar spread.
+        \item Long calendar spread.\\
+        多头日历价差。
+        \item Long straddle.\\
+        多头跨式组合。
+        \item Long butterfly spread.\\
+        多头蝶式价差。
+        \item Bearish calendar spread.\\
+        空头日历价差。
     \end{choices}
     
     \begin{correctanswer}
@@ -1050,13 +1175,18 @@ D
 
 \begin{question}
     An investor is looking to implement an option trading strategy that will profit from a downward movement in the price of an underlying stock. Which of the following option trading strategies will create a bear spread?
+    \\一位投资者正在寻找一种期权交易策略，以从标的股票价格下跌中获利。哪一种期权交易策略将创建一个熊市价差？
     \end{question}
     
     \begin{choices}
-        \item Buy a call with a strike price of \(X = 50\) and sell a call with a strike price of \(X = 55\).
-        \item Buy a call with a strike price of \(X = 55\) and buy a put with a strike price of \(X = 60\).
-        \item Buy a put with a strike price of \(X = 50\) and sell a put with a strike price of \(X = 55\).
-        \item Buy a call with a strike price of \(X = 55\) and sell a call with a strike price of \(X = 50\).
+        \item Buy a call with a strike price of \(X = 50\) and sell a call with a strike price of \(X = 55\).\\
+        购买一个执行价格为\(X = 50\)的看涨期权，卖出一个执行价格为\(X = 55\)的看涨期权。
+        \item Buy a call with a strike price of \(X = 55\) and buy a put with a strike price of \(X = 60\).\\
+        购买一个执行价格为\(X = 55\)的看涨期权，购买一个执行价格为\(X = 60\)的看跌期权。
+        \item Buy a put with a strike price of \(X = 50\) and sell a put with a strike price of \(X = 55\).\\
+        购买一个执行价格为\(X = 50\)的看跌期权，卖出一个执行价格为\(X = 55\)的看跌期权。
+        \item Buy a call with a strike price of \(X = 55\) and sell a call with a strike price of \(X = 50\).\\
+        购买一个执行价格为\(X = 55\)的看涨期权，卖出一个执行价格为\(X = 50\)的看涨期权。
     \end{choices}
     
     \begin{correctanswer}
@@ -1088,6 +1218,7 @@ D
 
     \begin{question}
         A junior trader on a derivatives trading desk constructs an option strategy. The trader buys one call option with an exercise price of \$65 for \$9, sells two call options with an exercise price of \$70 for \$6, and buys one call option with an exercise price of \$75 for \$4. If the stock price drops to \$32, what will be the profit or loss on this strategy?
+        \\一位初级交易员在衍生品交易台构造一个期权策略。交易员购买一个执行价格为\$65的看涨期权，价格为\$9，卖出两个执行价格为\$70的看涨期权，价格为\$6，购买一个执行价格为\$75的看涨期权，价格为\$4。当股票价格降至\$32时，这个策略的利润或损失是多少？
         \end{question}
         
         \begin{choices}
@@ -1119,13 +1250,18 @@ D
 
 \begin{question}
     A risk analyst for an equity hedge fund is assessing option strategies for a client who anticipates that a stock's value will experience a significant upward or downward movement in the coming months, with a downward move being more probable. Which of the following strategies would be most suitable for this client?
+    \\一位股票对冲基金的风险分析师正在评估针对客户的期权策略。客户预计股票价值在未来几个月将经历显著的上涨或下跌，下跌的可能性更大。哪一种策略最适合这位客户？
     \end{question}
     
     \begin{choices}
-        \item A bearish calendar spread.
-        \item An at - the - money strap.
-        \item An at - the - money strip.
-        \item A protective call.
+        \item A bearish calendar spread.\\
+        空头日历价差。
+        \item An at - the - money strap.\\
+        带式策略。
+        \item An at - the - money strip.\\
+        条式策略。
+        \item A protective call.\\
+        保护性看涨期权。
     \end{choices}
     
     \begin{correctanswer}
@@ -1155,13 +1291,18 @@ D
 
 \begin{question}
     A junior trader on a derivatives trading desk is analyzing a bearish option strategy. The strategy consists of buying one at-the-money put option with a strike price of \$48 for \$7, selling two puts with a strike price of \$42 for \$5 each, and buying one put with a strike price of \$36 for \$2. If the stock price drops to \$24 at expiration, what is the net profit or loss per share of this option strategy?
+    \\一位初级交易员在衍生品交易台分析一个熊市看跌期权策略。该策略包括购买一个平值看跌期权，执行价格为\$48，价格为\$7，卖出两个看跌期权，执行价格为\$42，价格为\$5，购买一个看跌期权，执行价格为\$36，价格为\$2。当股票价格降至\$24时，这个期权策略的每股净利润或损失是多少？
     \end{question}
     
     \begin{choices}
-        \item -1.00 per share
-        \item 0.00 per share (no profit or loss)
-        \item 3.00 per share
-        \item 1.00 per share
+        \item -1.00 per share.\\
+        每股-1.00美元
+        \item 0.00 per share (no profit or loss).\\
+        每股0.00美元（无利润或损失）
+        \item 3.00 per share.\\
+        每股3.00美元
+        \item 1.00 per share.\\
+        每股1.00美元
     \end{choices}
     
     \begin{correctanswer}
@@ -1191,13 +1332,18 @@ D
 
 \begin{question}
     A junior trader on a derivatives trading desk is looking for an option combination that can closely mimic the economic characteristics of a short position in a futures contract. Which of the following option combinations is the most appropriate?
+    \\一位初级交易员在衍生品交易台寻找一种期权组合，可以最接近模拟期货空头头寸的经济特征。哪一种期权组合最合适？
     \end{question}
     
     \begin{choices}
-        \item Profit of a long put plus a short call
-        \item Payoff of a long call plus a short put
-        \item Payoff of a long put plus a short call
-        \item Profit of a long call plus a short put
+        \item Profit of a long put plus a short call.\\
+        多头看跌期权加空头看涨期权的利润
+        \item Payoff of a long call plus a short put.\\
+        多头看涨期权加空头看跌期权的收益
+        \item Payoff of a long put plus a short call.\\
+        多头看跌期权加空头看涨期权的收益
+        \item Profit of a long call plus a short put.\\
+        多头看涨期权加空头看跌期权的利润
     \end{choices}
     
     \begin{correctanswer}
@@ -1217,13 +1363,18 @@ D
 
 \begin{question}
     An options trader at an investment bank is explaining a butterfly spread strategy to a new team member. A butterfly spread is constructed by taking positions in options with three distinct strike prices. It is formed by buying a call option with a low strike price of \(X_1\); buying a call option with a high strike price of \(X_3\); and selling two call options with a strike price of \(X_2\), where \(X_2\) is the mid - point between \(X_1\) and \(X_3\). What can be inferred about the upside and downside potential of this strategy?
+    \\一位投资银行期权交易员正在向新团队成员解释一个蝶式价差策略。蝶式价差策略是通过买入两个不同执行价格的看涨期权，同时卖出一个执行价格为中间值的看涨期权构建的。买入一个执行价格较低的看涨期权，买入一个执行价格较高的看涨期权，同时卖出两个执行价格为中间值的看涨期权。这个策略的上下行潜力是什么？
     \end{question}
     
     \begin{choices}
-        \item The upside potential is limited, but the downside potential is unlimited.
-        \item Both the upside and downside potential are limited.
-        \item The upside potential is unlimited, and the downside potential is also unlimited.
-        \item The upside potential is unlimited, but the downside potential is limited.
+        \item The upside potential is limited, but the downside potential is unlimited.\\
+        上行潜力有限，下行潜力无限。
+        \item Both the upside and downside potential are limited.\\
+        上行潜力和下行潜力都有限。
+        \item The upside potential is unlimited, and the downside potential is also unlimited.\\
+        上行潜力无限，下行潜力也无限。
+        \item The upside potential is unlimited, but the downside potential is limited.\\
+        上行潜力无限，下行潜力有限。
     \end{choices}
     
     \begin{correctanswer}
@@ -1241,13 +1392,18 @@ D
 
 \begin{question}
     A financial advisor is explaining option strategies to a client. The advisor mentions that the payoff of a particular option strategy is quite similar to another well - known strategy. The advisor is referring to a calendar spread, which is constructed by trading two options with the same strike price but different expiration dates, selling the short - dated option and buying the long - dated option. The client wants to know which option strategy has the most similar payoff to the calendar spread.
+    \\一位金融顾问正在向客户解释期权策略。顾问提到某种期权策略的收益与另一种广为人知的策略非常相似。顾问提到的策略是日历价差策略，是通过买卖两个执行价格相同、到期日不同的期权构建的。卖出短期期权，买入长期期权。客户想知道哪种期权策略与日历价差策略的收益最相似？
     \end{question}
     
     \begin{choices}
-        \item Long straddle
-        \item Bull spread
-        \item Butterfly spread
-        \item Bear spread
+        \item Long straddle.\\
+        多头跨式组合。
+        \item Bull spread.\\
+        牛市价差。
+        \item Butterfly spread.\\
+        蝶式价差。
+        \item Bear spread.\\
+        熊市价差。
     \end{choices}
     
     \begin{correctanswer}
@@ -1278,13 +1434,18 @@ D
 
 \begin{question}
     An investor sells a June 2025 call on the stock of ABC Corporation with a strike price of USD 55 for USD 12, and buys a June 2025 call on the same underlying stock with a strike price of USD 65 for USD 3. What is the name of this strategy, and what are the maximum profit and loss the investor could incur at expiration?
+    \\一位投资者卖出一个2025年6月的ABC公司股票看涨期权，执行价格为USD 55，价格为USD 12，买入一个2025年6月的ABC公司股票看涨期权，执行价格为USD 65，价格为USD 3。这个策略的名称是什么，投资者在到期时的最大利润和最大损失是多少？
     \end{question}
     
     \begin{choices}
-        \item Bear spread: Maximum Profit - USD 9; Maximum Loss - USD 1
-        \item Bull spread: Maximum Profit - USD 9; Unlimited Maximum Loss
-        \item Bear spread: Unlimited Maximum Profit; Maximum Loss - USD 1
-        \item Bull spread: Maximum Profit - USD 9; Maximum Loss - USD 1
+        \item Bear spread: Maximum Profit - USD 9; Maximum Loss - USD 1.\\
+        熊市价差：最大利润 - USD 9；最大损失 - USD 1。
+        \item Bull spread: Maximum Profit - USD 9; Unlimited Maximum Loss.\\
+        牛市价差：最大利润 - USD 9；无限最大损失。
+        \item Bear spread: Unlimited Maximum Profit; Maximum Loss - USD 1.\\
+        熊市价差：无限最大利润；最大损失 - USD 1。
+        \item Bull spread: Maximum Profit - USD 9; Maximum Loss - USD 1.\\
+        牛市价差：最大利润 - USD 9；最大损失 - USD 1。
     \end{choices}
     
     \begin{correctanswer}
@@ -1318,13 +1479,18 @@ D
 
 \begin{question}
     A risk analyst at a multinational company XYZ is assessing the company's existing FX exposures as of July 1, 2024. The analyst decides to hedge a net receivable of GBP 6,000,000 due on January 1, 2025. On July 1, 2024, the GBP spot rate is USD 1.25 per GBP 1, and the 6 - month GBP forward rate is USD 1.28 per GBP 1. The analyst is considering whether it is better to lock in the exchange rate by taking a position in the forward contract and locking the selling price in 6 months or to sell a 6 - month GBP 6,000,000 call option with a strike price of USD 1.25 per GBP 1. Which of the following statements is most likely correct?
+    \\一位跨国公司XYZ的风险分析师正在评估公司在2024年7月1日的外汇风险敞口。分析师决定对2025年1月1日到期的600万英镑的应收账款进行对冲。2024年7月1日，英镑兑美元的即期汇率为USD 1.25 per GBP 1，六个月远期汇率为USD 1.28 per GBP 1。分析师正在考虑是采取远期合约锁定汇率，还是卖出一个六个月到期的600万英镑看涨期权，执行价格为USD 1.25 per GBP 1。哪一项陈述最有可能正确？
     \end{question}
     
     \begin{choices}
-        \item XYZ would be better off by selling an option contract regardless of how large the change in the FX rate is and in which direction GBP moves relative to USD.
-        \item XYZ would be better off by entering into a forward contract if GBP appreciates against USD by an amount significantly larger than USD 0.03 per GBP 1 and the call option premium is more than 0.03.
-        \item XYZ would be better off by entering into a forward contract if GBP appreciates against USD by less than USD 0.03 per GBP 1.
-        \item XYZ would be better off by entering into a forward contract if GBP depreciates against USD by an amount significantly larger than USD 0.03 per GBP 1 and the call option premium is less than 0.06.
+        \item XYZ would be better off by selling an option contract regardless of how large the change in the FX rate is and in which direction GBP moves relative to USD.\\
+        XYZ会通过卖出期权合约无论汇率如何变化和英镑相对于美元的升值或贬值都会获利。
+        \item XYZ would be better off by entering into a forward contract if GBP appreciates against USD by an amount significantly larger than USD 0.03 per GBP 1 and the call option premium is more than 0.03.\\
+        XYZ会通过进入远期合约获利，如果英镑相对于美元升值超过USD 0.03 per GBP 1，并且看涨期权费大于0.03。
+        \item XYZ would be better off by entering into a forward contract if GBP appreciates against USD by less than USD 0.03 per GBP 1.\\
+        XYZ会通过进入远期合约获利，如果英镑相对于美元升值小于USD 0.03 per GBP 1。
+        \item XYZ would be better off by entering into a forward contract if GBP depreciates against USD by an amount significantly larger than USD 0.03 per GBP 1 and the call option premium is less than 0.06.\\
+        XYZ会通过进入远期合约获利，如果英镑相对于美元贬值超过USD 0.03 per GBP 1，并且看涨期权费小于0.06。
     \end{choices}
     
     \begin{correctanswer}
@@ -1358,13 +1524,18 @@ D
 \setcounter{question}{0}
 \begin{question}
     A corporate governance advisor is collaborating with the board of directors of a German automotive firm to design an incentive plan for senior managers and key engineers. The goal is to encourage these individuals to enhance company performance rather than engage in stock price manipulation. Which of the following options would be most appropriate to grant?
+    \\一位企业治理顾问正在与德国汽车公司的董事会合作，设计一个激励计划，鼓励高级管理人员和关键工程师提升公司业绩，而不是参与股价操纵。哪一种期权最合适授予？
     \end{question}
     
     \begin{choices}
-        \item A lookback put option with an exercise period spanning the incentive period.
-        \item A European call option with an exercise date set on the last day of the fiscal year.
-        \item A compound option with the second - stage exercise date on the final day of the incentive period.
-        \item An Asian put option with the settlement price based on the arithmetic average price during the incentive period.
+        \item A lookback put option with an exercise period spanning the incentive period.\\
+        回望看跌期权，执行期涵盖激励期。
+        \item A European call option with an exercise date set on the last day of the fiscal year.\\
+        欧式看涨期权，执行日期设定在财政年度最后一天。
+        \item A compound option with the second - stage exercise date on the final day of the incentive period.\\
+        复合期权，第二阶段执行日期在激励期最后一天。
+        \item An Asian put option with the settlement price based on the arithmetic average price during the incentive period.\\
+        亚式看跌期权，结算价格基于激励期内的算术平均价格。
     \end{choices}
     
     \begin{correctanswer}
@@ -1395,13 +1566,18 @@ D
 
 \begin{question}
     A derivatives trader at an investment bank is evaluating exotic options to meet a client's specific hedging needs. Which of the following statements regarding exotic options is accurate?
+    \\一位投资银行衍生品交易员正在评估奇异期权，以满足客户特定的对冲需求。哪一种关于奇异期权的陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item Gap options, similar to binary options, have continuous payoffs and are generally more expensive than regular options.
-        \item A long position in a European put option can be replicated by a long position in an asset - or - nothing put and a short position in a cash - or - nothing put with a payoff equal to the strike price.
-        \item A long position in a European call option is a combination of a long position in a down - and - in call and a short position in an up - and - out call with a payoff equal to the strike price.
-        \item Lookback options are typically less costly than regular options as they offer fewer benefits to the holder.
+        \item Gap options, similar to binary options, have continuous payoffs and are generally more expensive than regular options.\\
+        缺口期权，类似于二元期权，具有连续收益，通常比普通期权更贵。
+        \item A long position in a European put option can be replicated by a long position in an asset - or - nothing put and a short position in a cash - or - nothing put with a payoff equal to the strike price.\\
+        欧式看跌期权多头可以由资产或无价值看跌期权多头和现金或无价值看跌期权空头组合复制，收益等于执行价格。
+        \item A long position in a European call option is a combination of a long position in a down - and - in call and a short position in an up - and - out call with a payoff equal to the strike price.\\
+        欧式看涨期权多头可以由向下敲入看涨期权多头和向上敲出看涨期权空头组合构造，收益等于执行价格。
+        \item Lookback options are typically less costly than regular options as they offer fewer benefits to the holder.\\
+        回望期权通常比普通期权更便宜，因为它们提供的权益较少。
     \end{choices}
     
     \begin{correctanswer}
@@ -1431,13 +1607,18 @@ D
      
 \begin{question}
     All else being equal, which of the following options would cost more than plain - vanilla options that are currently at - the - money?
+    \\所有其他条件相同，哪一种期权比平值普通期权成本更高？
     \end{question}
     
     \begin{choices}
-        \item Lookback options
-        \item Forward - start options
-        \item Digital options
-        \item Chooser options
+        \item Lookback options.\\
+        回望期权。
+        \item Forward - start options.\\
+        远期启动期权。
+        \item Digital options.\\
+        数字期权。
+        \item Chooser options.\\
+        任选期权。
     \end{choices}
     
     \begin{correctanswer}
@@ -1467,13 +1648,18 @@ D
 
 \begin{question}
     A derivatives trader is evaluating different option types. Which of the following best describes a Bermudan option?
+    \\一位衍生品交易员正在评估不同类型的期权。哪一种期权最符合百慕大期权的描述？
     \end{question}
     
     \begin{choices}
-        \item The option's value is assumed to be based on a fixed volatility level.
-        \item Exercise is permitted only on specific pre - defined dates.
-        \item The strike price is adjusted to double the initial stock price halfway through the option's life.
-        \item The strike price is set as the median of the highest and lowest stock prices over the option's life.
+        \item The option's value is assumed to be based on a fixed volatility level.\\
+        期权的价值假设基于固定波动率水平。
+        \item Exercise is permitted only on specific pre - defined dates.\\
+        行权仅限于特定预定义日期。
+        \item The strike price is adjusted to double the initial stock price halfway through the option's life.\\
+        执行价格在期权有效期中途调整为初始股价的两倍。
+        \item The strike price is set as the median of the highest and lowest stock prices over the option's life.\\
+        执行价格设定为期权有效期内最高和最低股价的中位数。
     \end{choices}
     
     \begin{correctanswer}
@@ -1503,13 +1689,18 @@ D
 
 \begin{question}
     A risk analyst at a hedge fund is assessing barrier options. A down - and - in call option is an option that becomes active only when:
+    \\一位对冲基金的风险分析师正在评估障碍期权。向下敲入看涨期权是一种只有在以下情况下才会生效的期权：
     \end{question}
     
     \begin{choices}
-        \item The underlying asset price increases to a pre - determined fixed barrier level.
-        \item The underlying asset price decreases to a pre - determined fixed barrier level.
-        \item The underlying asset price decreases to an average barrier level calculated over a specific period.
-        \item The underlying asset price increases to an average barrier level calculated over a specific period.
+        \item The underlying asset price increases to a pre - determined fixed barrier level.\\
+        标的资产价格上升到预先确定的固定障碍水平。
+        \item The underlying asset price decreases to a pre - determined fixed barrier level.\\
+        标的资产价格下降到预先确定的固定障碍水平。
+        \item The underlying asset price decreases to an average barrier level calculated over a specific period.\\
+        标的资产价格下降到特定时期内计算得出的平均障碍水平。
+        \item The underlying asset price increases to an average barrier level calculated over a specific period.\\
+        标的资产价格上升到特定时期内计算得出的平均障碍水平。
     \end{choices}
     
     \begin{correctanswer}
@@ -1539,13 +1730,18 @@ D
 
 \begin{question}
     A financial analyst is reviewing different types of options. A cash - or - nothing put option has a payoff profile equivalent to zero or:
+    \\一位金融分析师正在审查不同类型的期权。现金或无价值看跌期权具有以下收益特征：
     \end{question}
     
     \begin{choices}
-        \item The market price of the underlying asset if the asset price at expiration is above the strike price.
-        \item A fixed amount if the asset price at expiration is below the strike price.
-        \item The intrinsic value of the underlying asset if the asset price at expiration is below the strike price.
-        \item A fixed amount if the asset price at expiration is above the strike price.
+        \item The market price of the underlying asset if the asset price at expiration is above the strike price.\\
+        如果到期资产价格高于执行价格，则为标的资产的市场价格。
+        \item A fixed amount if the asset price at expiration is below the strike price.\\
+        如果到期资产价格低于执行价格，则为固定金额。
+        \item The intrinsic value of the underlying asset if the asset price at expiration is below the strike price.\\
+        如果到期资产价格低于执行价格，则为标的资产的内在价值。
+        \item A fixed amount if the asset price at expiration is above the strike price.\\
+        如果到期资产价格高于执行价格，则为固定金额。
     \end{choices}
     
     \begin{correctanswer}
@@ -1575,13 +1771,18 @@ D
 
     \begin{question}
         A derivatives trader is considering hedging strategies for options. An Asian option can be dynamically hedged because:
+        \\一位衍生品交易员正在考虑期权的对冲策略。亚式期权可以动态对冲的原因是：
         \end{question}
         
         \begin{choices}
-            \item The average value of the underlying asset price over time reduces uncertainty as the option approaches expiration.
-            \item The average value of the underlying asset price over time increases uncertainty as the option approaches expiration.
-            \item The maximum value of the underlying asset price over time reduces uncertainty as the option approaches expiration.
-            \item The minimum value of the underlying asset price over time increases uncertainty as the option approaches expiration.
+            \item The average value of the underlying asset price over time reduces uncertainty as the option approaches expiration.\\
+            随着期权临近到期，标的资产价格在一段时间内的平均值逐渐确定，降低了价格的不确定性，使得动态对冲成为可能。
+            \item The average value of the underlying asset price over time increases uncertainty as the option approaches expiration.\\
+            随着期权临近到期，标的资产价格在一段时间内的平均值逐渐确定，增加了价格的不确定性，使得动态对冲成为可能。
+            \item The maximum value of the underlying asset price over time reduces uncertainty as the option approaches expiration.\\
+            随着期权临近到期，标的资产价格在一段时间内的最大值逐渐确定，降低了价格的不确定性，使得动态对冲成为可能。
+            \item The minimum value of the underlying asset price over time increases uncertainty as the option approaches expiration.\\
+            随着期权临近到期，标的资产价格在一段时间内的最小值逐渐确定，增加了价格的不确定性，使得动态对冲成为可能。
         \end{choices}
         
         \begin{correctanswer}
@@ -1611,13 +1812,18 @@ D
 
 \begin{question}
     A risk analyst is evaluating the vega characteristics of various options. Which of the following options is most likely to exhibit a negative vega?
+    \\一位风险分析师正在评估不同期权的vega特性。哪一种期权最有可能表现出负vega？
     \end{question}
     
     \begin{choices}
-        \item A chooser option well into its life but far from expiration.
-        \item A forward - start call option just after its start date.
-        \item A European put option near the end of its life.
-        \item A down - and - in call option when the stock price is close to the barrier.
+        \item A chooser option well into its life but far from expiration.\\
+        任选期权，在其生命期内但距离到期日还较远时。
+        \item A forward - start call option just after its start date.\\
+        远期启动看涨期权，刚刚开始生效后。
+        \item A European put option near the end of its life.\\
+        欧式看跌期权，临近到期时。
+        \item A down - and - in call option when the stock price is close to the barrier.\\
+        向下敲入看涨期权，当股价接近障碍水平时。
     \end{choices}
     
     \begin{correctanswer}
@@ -1647,13 +1853,18 @@ D
 
 \begin{question}
     A derivatives trader is analyzing the value of an up - and - out call option. Under which of the following scenarios would the value of an up - and - out call option be zero?
+    \\一位衍生品交易员正在分析向上敲出看涨期权的价值。在以下哪种情况下，向上敲出看涨期权的价值为0？
     \end{question}
     
     \begin{choices}
-        \item The strike price is significantly lower than the barrier price.
-        \item The stock price remains consistently above the barrier price.
-        \item The stock price is marginally above the strike price.
-        \item The stock price is well below the strike price but above the barrier price.
+        \item The strike price is significantly lower than the barrier price.\\
+        执行价格显著低于障碍价格。
+        \item The stock price remains consistently above the barrier price.\\
+        股票价格始终保持在障碍价格之上。
+        \item The stock price is marginally above the strike price.\\
+        股票价格略高于执行价格。
+        \item The stock price is well below the strike price but above the barrier price.\\
+        股票价格远低于执行价格但高于障碍价格。
     \end{choices}
     
     \begin{correctanswer}
@@ -1683,13 +1894,18 @@ D
 
 \begin{question}
     An options trader at a hedge fund is currently evaluating the cost - effectiveness of the fund's option portfolio. The trader is seeking ways to convert a long option position into a zero - cost derivative product. Which of the following methods can achieve this goal?
+    \\一位对冲基金的期权交易员正在评估基金的期权组合的成本效益。交易员正在寻找将长期期权头寸转化为零成本衍生品产品的方法。哪一种方法可以实现这一目标？
     \end{question}
     
     \begin{choices}
-        \item Purchasing the option and selling the underlying asset to make the net upfront cash flow zero, while expecting the payoff to be the same as the original option.
-        \item Combining the purchase of the option with the sale of other options so that the net premium is zero, assuming the combined payoff is the same as the original option.
-        \item Arranging with the option seller to pay an amount equivalent to the upfront option premium at the option's maturity instead of at the start.
-        \item Entering into an agreement to buy the payoff of the option at maturity for an amount equal to the future value of the current option premium.
+        \item Purchasing the option and selling the underlying asset to make the net upfront cash flow zero, while expecting the payoff to be the same as the original option.\\
+        购买期权并卖出标的资产，使前期净现金流为零，同时期望收益与原期权相同。
+        \item Combining the purchase of the option with the sale of other options so that the net premium is zero, assuming the combined payoff is the same as the original option.\\
+        购买期权并卖出其他期权，使净期权费为零，假设组合收益与原期权相同。
+        \item Arranging with the option seller to pay an amount equivalent to the upfront option premium at the option's maturity instead of at the start.\\
+        与期权卖方协商，在期权到期时支付相当于期权费的一次性金额，而不是在期权开始时支付。
+        \item Entering into an agreement to buy the payoff of the option at maturity for an amount equal to the future value of the current option premium.\\
+        同意在到期时以等于当前期权费终值的金额购买期权的收益，这种方式下，前期无需支付现金，实现了零成本的效果。
     \end{choices}
     
     \begin{correctanswer}
@@ -1735,6 +1951,23 @@ D
     \end{tabular}
     \end{center}
     All these options share the same strike price. Given that the risk - free rate is 3\% per annum, what is the common strike price of these options?
+    \\一位初级交易员在衍生品交易台处理一系列一年期的欧式风格障碍期权，涉及一个不支付股息的股票，当前价格为EUR 42.15。交易员写下了以下期权作为对股票重大价格变动的对冲：
+    \begin{center}
+        \begin{tabular}{|c|c|}
+        \hline
+        期权类型 & 价格（EUR） \\
+        \hline
+        向上敲入障碍看涨期权，障碍价格为EUR 47 & 3.88 \\
+        \hline
+        向上敲出障碍看涨期权，障碍价格为EUR 47 & 1.36 \\
+        \hline
+        向下敲入障碍看跌期权，障碍价格为EUR 36 & 2.15 \\
+        \hline
+        向下敲出障碍看跌期权，障碍价格为EUR 36 & 1.12 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        所有这些期权共享相同的执行价格。假设无风险利率为每年3\%，这些期权的共同执行价格是多少？
     \end{question}
     
     \begin{choices}
@@ -1766,13 +1999,18 @@ D
 
 \begin{question}
     A risk manager at a financial institution is reviewing the options portfolio of a trader, Mr. Zhang. The risk manager notices that Mr. Zhang's options book only contains long positions but has a negative delta. He asks you to provide a possible explanation for this situation. Which of the following could be a valid explanation?
+    \\一位金融机构的风险经理正在审查交易员张先生的期权组合。风险经理注意到张先生的期权组合只有多头头寸，但整体delta为负。他请你提供一个可能的解释。哪一种解释可能是正确的？
     \end{question}
     
     \begin{choices}
-        \item The portfolio has a long position in up-and-in put options.
-        \item The portfolio has a long position in digital call options.
-        \item The portfolio has a long position in up-and-out put options.
-        \item The portfolio has a long position in down-and-out put options.
+        \item The portfolio has a long position in up-and-in put options.\\
+        组合中有向上敲入看跌期权的多头头寸。
+        \item The portfolio has a long position in digital call options.\\
+        组合中有数字看涨期权的多头头寸。
+        \item The portfolio has a long position in up-and-out put options.\\
+        组合中有向上敲出看跌期权的多头头寸。
+        \item The portfolio has a long position in down-and-out put options.\\
+        组合中有向下敲出看跌期权的多头头寸。
     \end{choices}
     
     \begin{correctanswer}
@@ -1802,13 +2040,18 @@ D
 
 \begin{question}
     An options trader is analyzing the impact of stock price changes on different types of options. Given that the current stock price is \$120 and the barrier has not been crossed yet, among the following options, which one does not gain from an increase in the stock price?
+    \\一位期权交易员正在分析股票价格变化对不同类型期权的影响。假设当前股票价格为\$120，障碍尚未被突破，在以下期权中，哪一种不会从股票价格的上升中获益？
     \end{question}
     
     \begin{choices}
-        \item A down-and-out call with a barrier at \$110 and a strike at \$130.
-        \item A down-and-in call with a barrier at \$110 and a strike at \$130.
-        \item An up-and-in put with a barrier at \$130 and a strike at \$120.
-        \item An up-and-in call with a barrier at \$130 and a strike at \$120.
+        \item A down-and-out call with a barrier at \$110 and a strike at \$130.\\
+        一个向下敲出看涨期权，障碍价格为\$110，执行价格为\$130。
+        \item A down-and-in call with a barrier at \$110 and a strike at \$130.\\
+        一个向下敲入看涨期权，障碍价格为\$110，执行价格为\$130。
+        \item An up-and-in put with a barrier at \$130 and a strike at \$120.\\
+        一个向上敲入看跌期权，障碍价格为\$130，执行价格为\$120。
+        \item An up-and-in call with a barrier at \$130 and a strike at \$120.\\
+        一个向上敲入看涨期权，障碍价格为\$130，执行价格为\$120。
     \end{choices}
     
     \begin{correctanswer}
@@ -1838,6 +2081,7 @@ D
 
 \begin{question}
     A junior trader on a derivatives trading desk is comparing the payoffs of two different lookback call options. Trader C bought a 4 - month floating lookback call option on XYZ stock four months ago, and Trader D bought a 4 - month fixed lookback call option on the same stock at the same time. At the end of the four - month option period, the XYZ stock price settled at \$55. The initial strike price was set at \$45. Over the investment period, the minimum stock price was \$38, and the maximum stock price was \$58. What is the closest value to the payoff difference between the floating lookback call and the fixed lookback call?
+    \\一位初级交易员在衍生品交易台比较两种不同的回望看涨期权。交易员C在四个月前购买了一个4个月的浮动回望看涨期权，交易员D在同一时间购买了一个4个月的固定回望看涨期权。在四个月期权期限结束时，XYZ股票价格为\$55。初始执行价格为\$45。投资期间，最低股票价格为\$38，最高股票价格为\$58。浮动回望看涨期权和固定回望看涨期权的收益差异最接近的值是多少？
     \end{question}
     
     \begin{choices}
@@ -1873,6 +2117,7 @@ D
 
 \begin{question}
     A risk analyst at an investment firm is evaluating the payoff of an asset-or-nothing put option position. The analyst has a position on 6,000 shares of stock XYZ. The stock is currently trading at USD 58 per share. The option has a strike price of USD 55 and a maturity of 2 months. If the price of the stock at expiration is USD 51, which of the following is the best estimate of the payoff of the asset-or-nothing put option position?
+    \\一位投资公司的风险分析师正在评估资产或无值看跌期权头寸的收益。分析师持有6,000股XYZ股票的看跌期权头寸。股票当前交易价格为USD 58每股。期权执行价格为USD 55，期限为2个月。如果到期时股票价格为USD 51，哪一项是对资产或无值看跌期权头寸收益的最佳估计？
     \end{question}
     
     \begin{choices}
@@ -1897,13 +2142,18 @@ D
 
     \begin{question}
         A risk analyst at an investment firm is evaluating a portfolio filled with various option contracts. The portfolio contains a significant number of both exchange - traded and OTC option positions. The analyst is now concentrating on discerning the disparities between these two types of options. Which of the following is most likely to be recognized as a difference between exchange - traded options and OTC options?
+        \\一位投资公司的风险分析师正在评估一个包含各种期权合约的组合。组合中包含大量的交易所交易期权和场外交易期权。分析师现在正在区分这两种期权类型的差异。哪一项最有可能被认为是交易所交易期权和场外交易期权之间的差异？
         \end{question}
         
         \begin{choices}
-            \item Options on individual equities are mainly OTC, while foreign exchange and interest rate options are mostly exchange - traded.
-            \item OTC options usually have shorter maturities compared to exchange - traded options.
-            \item Exchange - traded options have standardized terms, whereas OTC options can be customized according to clients' specific requirements.
-            \item Most exchange - traded options are European - style, and most OTC options are American - style.
+            \item Options on individual equities are mainly OTC, while foreign exchange and interest rate options are mostly exchange - traded.\\
+            个股期权主要在场外交易，而外汇和利率期权主要在交易所交易。
+            \item OTC options usually have shorter maturities compared to exchange - traded options.\\
+            场外交易期权通常比交易所交易期权有更短的到期期限。
+            \item Exchange - traded options have standardized terms, whereas OTC options can be customized according to clients' specific requirements.\\
+            交易所交易期权具有标准化条款，而场外交易期权可以根据客户的具体需求进行定制。
+            \item Most exchange - traded options are European - style, and most OTC options are American - style.\\
+            大多数交易所交易期权是欧式期权，大多数场外交易期权是美式期权。
         \end{choices}
         
         \begin{correctanswer}
@@ -1934,13 +2184,18 @@ D
 
 \begin{question}
     A financial advisor is helping a multinational corporation to hedge its foreign exchange exposures with various maturity dates. The corporation is currently considering a range of options for this hedging purpose. Which of the following hedging instruments is most likely to offer a more cost - effective solution?
+    \\一位金融顾问正在帮助一家跨国公司对不同到期日的外汇风险敞口进行对冲。公司目前正在考虑一系列对冲工具。哪一种对冲工具最有可能提供更具成本效益的解决方案？
     \end{question}
     
     \begin{choices}
-        \item Futures contracts, which oblige the parties to buy or sell a currency at a set price on a given future date.
-        \item Swaps, which enable the exchange of two currencies at a pre - arranged rate for a particular time frame.
-        \item Asian options, which base their payoff on the average exchange rate over a defined period and are often more affordable.
-        \item Forward contracts, which fix a future exchange rate for a specific quantity of currency.
+        \item Futures contracts, which oblige the parties to buy or sell a currency at a set price on a given future date.\\
+        期货合约，要求交易双方在未来的特定日期以固定价格买卖货币。
+        \item Swaps, which enable the exchange of two currencies at a pre - arranged rate for a particular time frame.\\
+        互换，允许在预先安排的利率下交换两种货币。
+        \item Asian options, which base their payoff on the average exchange rate over a defined period and are often more affordable.\\
+        亚式期权，其收益基于特定时期内的平均汇率，通常更具成本效益。
+        \item Forward contracts, which fix a future exchange rate for a specific quantity of currency.\\
+        远期合约，固定未来的汇率，用于特定数量的货币。
     \end{choices}
     
     \begin{correctanswer}
@@ -1974,13 +2229,18 @@ D
 
     \begin{question}
         A financial advisor is assisting a client who is interested in options but is concerned about their high costs. The client wants to know which type of option generally has the highest cost. Which of the following options should the financial advisor recommend as the most expensive to purchase?
+        \\一位金融顾问正在帮助一位对期权感兴趣但担心成本的客户。客户想知道哪种类型的期权通常成本最高。哪一种期权最昂贵？
         \end{question}
         
         \begin{choices}
             \item Asian options
-            \item Standard European options
-            \item Lookback options
-            \item Barrier options
+            亚式期权。
+            \item Standard European options\\
+            标准欧式期权。
+            \item Lookback options\\
+            回望期权。
+            \item Barrier options\\
+            障碍期权。
         \end{choices}
         
         \begin{correctanswer}

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -95,7 +95,8 @@
 
 
 \begin{question}
-    A risk manager is considering writing a 6-month American put option on a non-dividend paying stock. The current stock price is USD 50 and the strike price of the option is USD 52. To find the no-arbitrage price, the manager uses a two-step binomial tree model where the stock price can go up or down by 20\% each period. The annual risk-free rate is 12\% with continuous compounding. What is the risk-neutral probability of the stock price going up in a single step?
+    A risk manager is considering writing a 6-month American put option on a non-dividend paying stock. The current stock price is USD 50 and the strike price of the option is USD 52. To find the no-arbitrage price, the manager uses a two-step binomial tree model where the stock price can go up or down by 20\% each period. The annual risk-free rate is 12\% with continuous compounding. What is the risk-neutral probability of the stock price going up in a single step?\\
+    一位风险经理正在考虑写一个6个月的美式看跌期权，标的股票不支付股息。当前股票价格为USD 50，期权的行权价为USD 52。为了找到无套利价格，经理使用一个两步二叉树模型，其中股票价格可以上涨或下跌20\%每个周期。年无风险利率为12\%，连续复利。股票价格在单步中上涨的风险中性概率是多少？
 \end{question}
 
 \begin{choices}
@@ -142,14 +143,19 @@
 
 
 \begin{question}
-    John used a four-step binomial model to value a (long-term) call option with four years to maturity; i.e., each time step is one year. While the risk-free rate is 5.0\%, the underlying asset's volatility is 30.000\%. Using these assumptions, he was surprised to find that the risk-neutral probability of up movement in his model was 50.0\%; i.e., \( p = d = 0.50 \). However, he forgot to include the assumption that the asset will pay a continuous dividend of 3.0\% per annum. By how much will this assumption change his model's risk-neutral probability of a down (d) movement?
+    John used a four-step binomial model to value a (long-term) call option with four years to maturity; i.e., each time step is one year. While the risk-free rate is 5.0\%, the underlying asset's volatility is 30.000\%. Using these assumptions, he was surprised to find that the risk-neutral probability of up movement in his model was 50.0\%; i.e., \( p = d = 0.50 \). However, he forgot to include the assumption that the asset will pay a continuous dividend of 3.0\% per annum. By how much will this assumption change his model's risk-neutral probability of a down (d) movement?\\
+    John使用四步二叉树模型对一个四年到期的看涨期权进行估值；即，每个时间步长为一年。无风险利率为5.0\%，标的资产的波动率为30.000\%。使用这些假设，他惊讶地发现模型中上涨的概率为50.0\%；即，\( p = d = 0.50 \)。然而，他忘记包括标的资产将支付连续股息3.0\%每年的假设。这个假设会改变他的模型中下跌（d）运动的概率多少？
 \end{question}
 
 \begin{choices}
-    \item Decrease probability of down movement, (d), by about 8.50 percentage points
-    \item Decrease probability of down movement, (d), by about 4.25 percentage points
-    \item Increase probability of down movement, (d), by about 4.12 percentage points
-    \item Increase probability of down movement, (d), by about 8.50 percentage points
+    \item Decrease probability of down movement, (d), by about 8.50 percentage points\\
+    下跌概率（d）减少约8.50个百分点。
+    \item Decrease probability of down movement, (d), by about 4.25 percentage points\\
+    下跌概率（d）减少约4.25个百分点。
+    \item Increase probability of down movement, (d), by about 4.12 percentage points\\
+    下跌概率（d）增加约4.12个百分点。
+    \item Increase probability of down movement, (d), by about 8.50 percentage points\\
+    下跌概率（d）增加约8.50个百分点。
 \end{choices}
 
 \begin{correctanswer}
@@ -203,7 +209,8 @@
 
 
 \begin{question}
-    The current price of a stock is \$10, and it is known that at the end of three months the stock's price will be either \$13 or \$7. The risk-free rate is 4\% per annum. What is the implied no-arbitrage price of a three-month (T = 0.25) European call option on the stock with a strike price of \$10? (Note: this does not include an assumption about the stock's volatility).
+    The current price of a stock is \$10, and it is known that at the end of three months the stock's price will be either \$13 or \$7. The risk-free rate is 4\% per annum. What is the implied no-arbitrage price of a three-month (T = 0.25) European call option on the stock with a strike price of \$10? (Note: this does not include an assumption about the stock's volatility).\\
+    当前股票价格为\$10，已知三个月后股票价格将为\$13或\$7。无风险利率为4\%每年。三个月（T = 0.25）欧式看涨期权在股票上的无套利价格是多少？（注意：这不包括关于股票波动率的假设）
 \end{question}
 
 \begin{choices}
@@ -265,7 +272,8 @@
 A trader has an American put option with strike price of \$50. The underlying asset is 
 stock with a spot price of \$40. Using an one-step binomial tree to evaluate the option. 
 Suppose the stock price will go up or down by \$8 in 6 month, the risk-free rate is 6.2\%, 
-what is the value of this American put? 
+what is the value of this American put? \\
+一位交易员持有执行价格为\$50的美式看跌期权。标的资产为股票，当前价格为\$40。使用一个一步二叉树模型评估期权。假设股票价格将在6个月内上涨或下跌\$8，无风险利率为6.2\%，这个美式看跌期权的价值是多少？
 \end{question}
 
 \begin{choices}
@@ -331,6 +339,7 @@ A stock with a current price of \$32 and volatility of 15\% pays a dividend of 2
 annum (with continuous compounding). The riskless rate is 2.0\%. We use a twelve-step 
 binomial model to price an American put option with one year to expiration; i.e., each 
 step is one month. What is the risk-neutral probability of a down movement (1-p)? 
+\\一只股票当前价格为\$32，波动率为15\%，每年支付2.0\%的股息（连续复利）。无风险利率为2.0\%。我们使用一个十二步二叉树模型对一个一年到期的美国看跌期权进行估值；即，每个时间步长为一个月。风险中性概率下跌（1-p）是多少？
 \end{question}
 
 \begin{choices}
@@ -387,6 +396,7 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 \begin{question}
     A technology company's stock has a current price of \$45 and a volatility of 20\%. The company is expected to pay a continuous dividend yield of 1.5\% per annum over the next two years. We use a two-step binomial model to value a two-year European call option on the stock; i.e., each time step is one year. The risk-free rate is 5.0\%. What is the stock price at the node with the lowest stock price in the binomial tree?
+    \\一家科技公司的股票当前价格为\$45，波动率为20\%。公司预计在未来两年内支付连续股息收益率1.5\%每年。我们使用一个两步二叉树模型对一个两年到期的欧式看涨期权进行估值；即，每个时间步长为一年。无风险利率为5.0\%。二叉树模型中最低股价的节点股价是多少？
 \end{question}
 
 \begin{choices}
@@ -424,7 +434,8 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 \checklist{二叉树模型的最低节点(对二叉树节点的逻辑要清楚)}
 
 \begin{question}
-    A non-dividend paying stock currently trades at \$100. The annual volatility of the stock is 25\%, and the continuously compounded risk-free interest rate is 4\%. A 4-year European call option exists with a strike price of \$120. Assuming that the price of the stock will rise or fall by a proportional amount each year, and the risk-neutral probability that the stock will rise is approximately 55\%, what is the value of the European call option?
+    A non-dividend paying stock currently trades at \$100. The annual volatility of the stock is 25\%, and the continuously compounded risk-free interest rate is 4\%. A 4-year European call option exists with a strike price of \$120. Assuming that the price of the stock will rise or fall by a proportional amount each year, and the risk-neutral probability that the stock will rise is approximately 55\%, what is the value of the European call option?\\
+    一只不支付股息的股票当前交易价格为\$100，股票的年波动率为25\%，连续复利无风险利率为4\%。存在一个四年到期的欧式看涨期权，执行价格为\$120。假设股票价格每年会按比例上涨或下跌，并且股票上涨的概率约为55\%，这个欧式看涨期权的价值是多少？
 \end{question}
 
 \begin{choices}
@@ -482,7 +493,8 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    The S\&P 500 stock index is currently 4,500.0 and has a volatility of 30.0\% and a dividend yield of 1.5\%. The risk-free rate is 2.5\%. If we employ a two-step binomial tree, which is nearest to the value of a European 6-month call option with a strike price of 4,700.0; i.e., the call is out-of-the-money by exactly 200?
+    The S\&P 500 stock index is currently 4,500.0 and has a volatility of 30.0\% and a dividend yield of 1.5\%. The risk-free rate is 2.5\%. If we employ a two-step binomial tree, which is nearest to the value of a European 6-month call option with a strike price of 4,700.0; i.e., the call is out-of-the-money by exactly 200?\\
+    S\&P 500指数当前为4,500.0，波动率为30.0\%，股息收益率为1.5\%。无风险利率为2.5\%。如果我们使用一个两步二叉树模型，哪一个最接近一个六个月到期的欧式看涨期权，执行价格为4,700.0；即，看涨期权处于正好200的价外状态？
 \end{question}
 
 \begin{choices}
@@ -552,13 +564,18 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 \begin{question}
     Given the conditions: \( S = \text{USD } 120 \), \( T = 1 \), \( X = \text{USD } 110 \), \( r = 4.5\% \), \( u = 1.25 \), \( d = 0.75 \). This is a European put option, and the condition for exercise is \( X > S \). Using continuous compounding, what is the optimal hedge ratio and the value of the option?
+    \\给定条件：\( S = \text{USD } 120 \)，\( T = 1 \)，\( X = \text{USD } 110 \)，\( r = 4.5\% \)，\( u = 1.25 \)，\( d = 0.75 \)。这是一个欧式看跌期权，行权条件为\( X > S \)。使用连续复利，最优对冲比率和期权的价值是多少？
 \end{question}
     
 \begin{choices}
-    \item Hedge ratio: -0.33; Option value: USD 7.84
-    \item Hedge ratio: -0.33; Option value: USD 8.00
-    \item Hedge ratio: -0.40; Option value: USD 7.50
-    \item Hedge ratio: -0.40; Option value: USD 7.85
+    \item Hedge ratio: -0.33; Option value: USD 7.84\\
+    对冲比率：-0.33；期权价值：USD 7.84
+    \item Hedge ratio: -0.33; Option value: USD 8.00\\
+    对冲比率：-0.33；期权价值：USD 8.00
+    \item Hedge ratio: -0.40; Option value: USD 7.50\\
+    对冲比率：-0.40；期权价值：USD 7.50
+    \item Hedge ratio: -0.40; Option value: USD 7.85\\
+    对冲比率：-0.40；期权价值：USD 7.85
 \end{choices}
     
     \begin{correctanswer}
@@ -608,13 +625,18 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 \begin{question}
     Suppose there is a European call option on a stock with no dividends. The current stock price is USD 100, the expiration is 1 year, and the strike price is USD 120. If the risk-free rate is 4.5\%, \( u = 1.25 \), and \( d = 0.75 \), what are the optimal hedge ratio and the option price using a one-step binomial model? If the market price of the option is USD 3, what is the arbitrage opportunity?
+    \\假设有一只股票不支付股息的欧式看涨期权。当前股票价格为USD 100，到期为1年，执行价格为USD 120。如果无风险利率为4.5\%，\( u = 1.25 \)，\( d = 0.75 \)，使用一个一步二叉树模型，最优对冲比率和期权价格是多少？如果期权的市场价格为USD 3，存在什么套利机会？
     \end{question}
     
     \begin{choices}
-    \item Hedge ratio: 0.1; Option price: USD 2.82; Arbitrage profit: USD 0.18
-    \item Hedge ratio: 0.2; Option price: USD 3.00; Arbitrage profit: USD 0.00
-    \item Hedge ratio: 0.1; Option price: USD 2.50; Arbitrage profit: USD 0.50
-    \item Hedge ratio: 0.2; Option price: USD 2.82; Arbitrage profit: USD 0.18
+    \item Hedge ratio: 0.1; Option price: USD 2.82; Arbitrage profit: USD 0.18\\
+    对冲比率：0.1；期权价格：USD 2.82；套利利润：USD 0.18
+    \item Hedge ratio: 0.2; Option price: USD 3.00; Arbitrage profit: USD 0.00\\
+    对冲比率：0.2；期权价格：USD 3.00；套利利润：USD 0.00
+    \item Hedge ratio: 0.1; Option price: USD 2.50; Arbitrage profit: USD 0.50\\
+    对冲比率：0.1；期权价格：USD 2.50；套利利润：USD 0.50
+    \item Hedge ratio: 0.2; Option price: USD 2.82; Arbitrage profit: USD 0.18\\
+    对冲比率：0.2；期权价格：USD 2.82；套利利润：USD 0.18
     \end{choices}
     
     \begin{correctanswer}
@@ -660,7 +682,8 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    A risk manager for Bank XYZ, Mark is considering writing a 6-month American put option on a non-dividend paying stock ABC. The current stock price is USD 50, and the strike price of the option is USD 52. In order to find the no-arbitrage price of the option, Mark uses a two-step binomial tree model. The stock price can go up or down by 20\% each period. Mark’s view is that the stock price has an 80\% probability of going up each period and a 20\% probability of going down. The annual risk-free rate is 12\% with continuous compounding. The no-arbitrage price of the option is closest to:
+    A risk manager for Bank XYZ, Mark is considering writing a 6-month American put option on a non-dividend paying stock ABC. The current stock price is USD 50, and the strike price of the option is USD 52. In order to find the no-arbitrage price of the option, Mark uses a two-step binomial tree model. The stock price can go up or down by 20\% each period. Mark’s view is that the stock price has an 80\% probability of going up each period and a 20\% probability of going down. The annual risk-free rate is 12\% with continuous compounding. The no-arbitrage price of the option is closest to:\\
+    一位风险经理Mark正在考虑写一个6个月的美式看跌期权，标的股票不支付股息。当前股票价格为USD 50，期权的行权价为USD 52。为了找到无套利价格，Mark使用一个两步二叉树模型，其中股票价格可以上涨或下跌20\%每个周期。Mark认为股票价格有80\%的概率上涨每个周期，有20\%的概率下跌。年无风险利率为12\%，连续复利。期权的无套利价格最接近的值是多少？
     \end{question}
     
     \begin{choices}
@@ -739,14 +762,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    An investor uses a Binomial Tree Model to price a 1-year option. The original model assumes each time step is 0.5 years, but the adjusted model changes the time step to 1/12 year. Assume other parameters, such as asset volatility and risk-free rate, remain unchanged. Which of the following statements about the changes in \( u \), \( d \), and the risk-neutral probability \( P \) is correct?
+    An investor uses a Binomial Tree Model to price a 1-year option. The original model assumes each time step is 0.5 years, but the adjusted model changes the time step to 1/12 year. Assume other parameters, such as asset volatility and risk-free rate, remain unchanged. Which of the following statements about the changes in \( u \), \( d \), and the risk-neutral probability \( P \) is correct?\\
+    一位投资者使用二叉树模型对一个一年期的期权进行估值。原始模型假设每个时间步长为0.5年，但调整后的模型将时间步长改为1/12年。假设其他参数，如资产波动率和无风险利率，保持不变。关于\( u \)，\( d \)和风险中性概率\( P \)的变化，哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-    \item \( u \) decreases, \( d \) increases, \( P \) decreases
-    \item \( u \) increases, \( d \) decreases, \( P \) increases
-    \item \( u \) decreases, \( d \) decreases, \( P \) increases
-    \item \( u \) increases, \( d \) increases, \( P \) decreases
+    \item \( u \) decreases, \( d \) increases, \( P \) decreases\\
+    \( u \)下降，\( d \)上升，\( P \)下降
+    \item \( u \) increases, \( d \) decreases, \( P \) increases\\
+    \( u \)上升，\( d \)下降，\( P \)上升
+    \item \( u \) decreases, \( d \) decreases, \( P \) increases\\
+    \( u \)下降，\( d \)下降，\( P \)上升
+    \item \( u \) increases, \( d \) increases, \( P \) decreases\\
+    \( u \)上升，\( d \)上升，\( P \)下降
     \end{choices}
     
     \begin{correctanswer}
@@ -768,14 +796,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    A junior trader on a derivatives trading desk is evaluating the convergence properties of the Binomial Tree Model and the Black-Scholes-Merton (BSM) Model to improve pricing accuracy for complex options. The trader is particularly interested in understanding how the number of steps in the Binomial Tree Model affects its convergence to the BSM Model. Which of the following statements correctly describes this convergence?
+    A junior trader on a derivatives trading desk is evaluating the convergence properties of the Binomial Tree Model and the Black-Scholes-Merton (BSM) Model to improve pricing accuracy for complex options. The trader is particularly interested in understanding how the number of steps in the Binomial Tree Model affects its convergence to the BSM Model. Which of the following statements correctly describes this convergence?\\
+    一位初级交易员在衍生品交易台评估二叉树模型和布莱克-斯科尔斯-默顿（BSM）模型在提高复杂期权定价准确性方面的收敛特性。交易员特别关注二叉树模型中步数对收敛到BSM模型的影响。哪一项陈述正确描述了这种收敛？
     \end{question}
     
     \begin{choices}
-    \item The pricing results of the Binomial Tree Model always differ significantly from the BSM Model, and increasing the number of steps does not affect convergence.
-    \item The pricing results of the Binomial Tree Model differ from the BSM Model when the number of steps is small, but the difference decreases as the number of steps increases, eventually converging to the BSM Model.
-    \item The Binomial Tree Model and the BSM Model provide identical pricing results under any number of steps.
-    \item The pricing results of the Binomial Tree Model become more volatile with more steps, leading to greater divergence from the BSM Model.
+    \item The pricing results of the Binomial Tree Model always differ significantly from the BSM Model, and increasing the number of steps does not affect convergence.\\
+    二叉树模型的定价结果总是与BSM模型显著不同，增加步数不会影响收敛。
+    \item The pricing results of the Binomial Tree Model differ from the BSM Model when the number of steps is small, but the difference decreases as the number of steps increases, eventually converging to the BSM Model.\\
+    当步数较少时，二叉树模型的定价结果与BSM模型不同，但随着步数的增加，差异逐渐减小，最终收敛于BSM模型。
+    \item The Binomial Tree Model and the BSM Model provide identical pricing results under any number of steps.\\
+    二叉树模型和BSM模型在任何步数下提供相同的定价结果。
+    \item The pricing results of the Binomial Tree Model become more volatile with more steps, leading to greater divergence from the BSM Model.\\
+    随着步数的增加，二叉树模型的定价结果变得越不稳定，导致与BSM模型更大的差异。
     \end{choices}
     
     \begin{correctanswer}
@@ -879,14 +912,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    In the financial markets, investors often face the decision of whether to exercise American options early. Considering the flexibility of American options, which of the following statements is correct about the early exercise of American options?
+    In the financial markets, investors often face the decision of whether to exercise American options early. Considering the flexibility of American options, which of the following statements is correct about the early exercise of American options?\\
+    在金融市场中，投资者经常面临是否提前行使美式期权的决定。考虑到美式期权的灵活性，哪一项陈述正确描述了美式期权的提前行使？
 \end{question}
 
 \begin{choices}
-    \item It is always optimal to exercise an American call option on a non-dividend-paying stock before the expiration date. 
-    \item It can be optimal to exercise an American put option on a non-dividend-paying stock early. 
-    \item It can be optimal to exercise an American call option on a non-dividend-paying stock early. 
-    \item It is never optimal to exercise an American put option on a non-dividend-paying stock before the expiration date.
+    \item It is always optimal to exercise an American call option on a non-dividend-paying stock before the expiration date. \\
+    在非支付股息的股票上，提前行使美式看涨期权总是最优的。
+    \item It can be optimal to exercise an American put option on a non-dividend-paying stock early. \\
+    在非支付股息的股票上，提前行使美式看跌期权可能是最优的。
+    \item It can be optimal to exercise an American call option on a non-dividend-paying stock early. \\
+    在非支付股息的股票上，提前行使美式看涨期权可能是最优的。
+    \item It is never optimal to exercise an American put option on a non-dividend-paying stock before the expiration date. \\
+    在非支付股息的股票上，提前行使美式看跌期权总是最优的。
 \end{choices}
 
 \begin{correctanswer}
@@ -929,14 +967,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 \checklist{美式期权的提前行使策略。(在到期日之前对不支付股息的股票行使美式看涨期权从来都不是最佳选择)}
 
 \begin{question}
-    An options trader at a financial institution is currently evaluating various pricing models to determine the fair value of options in the market. As part of this analysis, the trader is considering the Black-Scholes options pricing model, which is widely used in the industry. However, the trader is aware that this model is based on several key assumptions. Which of the following is a correct assumption of the Black-Scholes options pricing model?
+    An options trader at a financial institution is currently evaluating various pricing models to determine the fair value of options in the market. As part of this analysis, the trader is considering the Black-Scholes options pricing model, which is widely used in the industry. However, the trader is aware that this model is based on several key assumptions. Which of the following is a correct assumption of the Black-Scholes options pricing model?\\
+    一位金融公司的期权交易员正在评估各种定价模型，以确定市场上期权的公平价值。作为分析的一部分，交易员正在考虑广泛使用的布莱克-斯科尔斯期权定价模型。然而，交易员意识到这个模型基于几个关键假设。哪一项是布莱克-斯科尔斯期权定价模型的正确假设？
 \end{question}
 
 \begin{choices}
-    \item The underlying price follows a path that allows for occasional discontinuous jumps to reflect market shocks.
-    \item The option being evaluated is an American option that can be exercised at any time before expiration.
-    \item The instantaneous variance of the underlying returns is constant throughout the life of the option.
-    \item The market structure accommodates varying transaction costs based on trade size and participant type.
+    \item The underlying price follows a path that allows for occasional discontinuous jumps to reflect market shocks. \\
+    标的资产价格遵循一条允许偶尔不连续跳跃的路径，以反映市场冲击。
+    \item The option being evaluated is an American option that can be exercised at any time before expiration. \\
+    正在评估的期权是一种美式期权，可以在到期前任何时间行使。
+    \item The instantaneous variance of the underlying returns is constant throughout the life of the option. \\
+    标的资产收益率的瞬时方差在整个期权生命周期内是恒定的。
+    \item The market structure accommodates varying transaction costs based on trade size and participant type. \\
+    市场结构适应基于交易规模和参与者类型的不同交易成本。
 \end{choices}
 
 \begin{correctanswer}
@@ -967,7 +1010,8 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 \checklist{BSM模型的假设。(波动率恒定是BSM模型的核心假设之一)}
 \begin{question}
-    The current price of a stock is \$25. A put option with a \$20 strike price that expires in six months is available. \( N(d_1) = 0.9737 \) and \( N(d_2) = 0.9651 \). If the underlying stock exhibits an annual standard deviation of 25\%, and the current continuously compounded risk-free rate is 4.25\%, what is the Black-Scholes-Merton value of the put option closest to?
+    The current price of a stock is \$25. A put option with a \$20 strike price that expires in six months is available. \( N(d_1) = 0.9737 \) and \( N(d_2) = 0.9651 \). If the underlying stock exhibits an annual standard deviation of 25\%, and the current continuously compounded risk-free rate is 4.25\%, what is the Black-Scholes-Merton value of the put option closest to?\\
+    当前股票价格为\$25。一个六个月到期的看跌期权，行权价为\$20。\( N(d_1) = 0.9737 \)和\( N(d_2) = 0.9651 \)。如果标的股票的年标准差为25\%，当前连续复利无风险利率为4.25\%，看跌期权的Black-Scholes-Merton值最接近的值是多少？
 \end{question}
 
 \begin{choices}
@@ -1016,7 +1060,8 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 \checklist{BSM模型计算看跌期权价格(待入公式即可)}
 
 \begin{question}
-    A one-year European call option on the Euro has an exercise price of \$1.40 when the current exchange rate is EUR/USD \$1.34. The risk-free rate in the United States is 4\% and the Eurozone risk-free rate is 3\%. The volatility of the spot exchange rate is 30\% per annum. What is the price of the call option?
+    A one-year European call option on the Euro has an exercise price of \$1.40 when the current exchange rate is EUR/USD \$1.34. The risk-free rate in the United States is 4\% and the Eurozone risk-free rate is 3\%. The volatility of the spot exchange rate is 30\% per annum. What is the price of the call option?\\
+    一个一年到期的欧式看涨期权，欧元兑美元的行权价为\$1.40，当前汇率为EUR/USD \$1.34。美国无风险利率为4\%，欧元区无风险利率为3\%。现货汇率的波动率为30\%每年。看涨期权的价值是多少？
 \end{question}
 
 \begin{choices}
@@ -1066,14 +1111,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 \checklist{BSM模型的计算。(待入公式)}
 
 \begin{question}
-    An options trader at a financial institution is reviewing the foundational principles of the Black-Scholes option pricing model to ensure accurate pricing of derivatives. The trader is aware that the model is based on several key assumptions. Each of the following is an underlying assumption of the basic Black-Scholes option pricing model EXCEPT:
+    An options trader at a financial institution is reviewing the foundational principles of the Black-Scholes option pricing model to ensure accurate pricing of derivatives. The trader is aware that the model is based on several key assumptions. Each of the following is an underlying assumption of the basic Black-Scholes option pricing model EXCEPT:\\
+    一位金融公司的期权交易员正在审查布莱克-斯科尔斯期权定价模型的基本原理，以确保对衍生品的准确定价。交易员意识到该模型基于几个关键假设。以下哪一项是布莱克-斯科尔斯期权定价模型的基本假设之一？
 \end{question}
 
 \begin{choices}
-    \item The stock price follows a geometric Brownian motion (GBM) which is a continuous process without jumps.
-    \item The continuously compounded rate of return on the stock is normally distributed, such that the distribution of the future stock price is lognormal.
-    \item The expected rate of return on the stock (u) and volatility (sigma) are constant.
-    \item The expected real-world (risky) rate of return on the stock is known and the value of the option is an increasing function of this rate of return.
+    \item The stock price follows a geometric Brownian motion (GBM) which is a continuous process without jumps. \\
+    股票价格遵循几何布朗运动（GBM），这是一个连续的过程，没有跳跃。
+    \item The continuously compounded rate of return on the stock is normally distributed, such that the distribution of the future stock price is lognormal. \\
+    股票的连续复合收益率是正态分布的，因此未来股票价格的分布是对数正态分布。
+    \item The expected rate of return on the stock (u) and volatility (sigma) are constant. \\
+    股票的预期收益率（u）和波动率（sigma）是恒定的。
+    \item The expected real-world (risky) rate of return on the stock is known and the value of the option is an increasing function of this rate of return. \\
+    股票的预期真实（风险）回报率是已知的，并且期权的价值是这个回报率的递增函数。
 \end{choices}
 
 \begin{correctanswer}
@@ -1108,7 +1158,8 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    The CFO at a non-dividend-paying technology firm asks a financial analyst to evaluate a plan to grant stock options to its employees. The firm has 80 million shares outstanding. Under the proposal, the firm would issue 5 million employee stock options, with each option giving the holder the right to buy one share of the firm’s stock at a strike price of USD 75. The employee stock options would expire in 5 years. A five-year call option on the stock with the same strike price is currently valued at SGD 5.20 using the Black-Scholes-Merton model. Which of the following is the best estimate of the price of one employee stock option assuming that the call option is correctly priced?
+    The CFO at a non-dividend-paying technology firm asks a financial analyst to evaluate a plan to grant stock options to its employees. The firm has 80 million shares outstanding. Under the proposal, the firm would issue 5 million employee stock options, with each option giving the holder the right to buy one share of the firm’s stock at a strike price of USD 75. The employee stock options would expire in 5 years. A five-year call option on the stock with the same strike price is currently valued at SGD 5.20 using the Black-Scholes-Merton model. Which of the following is the best estimate of the price of one employee stock option assuming that the call option is correctly priced?\\
+    一家不支付股息的科技公司的首席财务官要求一位财务分析师评估一项计划，向其员工授予股票期权。公司有8000万股流通股。根据提议，公司将发行500万股员工股票期权，每份期权赋予持有人以执行价格USD 75购买公司股票的权利。员工股票期权将在5年后到期。使用Black-Scholes-Merton模型，一个五年期看涨期权，行权价格为SGD 5.20，在股票上的价值是多少？哪一项是对一个员工股票期权假设看涨期权正确定价的最佳估计？
 \end{question}
 
 \begin{choices}
@@ -1155,14 +1206,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    Jasmine Tang, FRM, is using a simple method called “successive bisection” to determine the implied volatility of a traded option. Jasmine starts with a volatility of zero (this gives a BSM price that is less than the option market price) and a volatility of 30\% (this gives a BSM price that is higher than the option market price). She then takes the average of these two volatilities, i.e., 15\%, as the new volatility and uses it to compute the option price using the BSM formula. The revised option price is now much closer to the market price but still a bit low. Which of the following statements correctly describes the next step that Jasmine should perform?
+    Jasmine Tang, FRM, is using a simple method called “successive bisection” to determine the implied volatility of a traded option. Jasmine starts with a volatility of zero (this gives a BSM price that is less than the option market price) and a volatility of 30\% (this gives a BSM price that is higher than the option market price). She then takes the average of these two volatilities, i.e., 15\%, as the new volatility and uses it to compute the option price using the BSM formula. The revised option price is now much closer to the market price but still a bit low. Which of the following statements correctly describes the next step that Jasmine should perform?\\
+    一位FRM（金融风险管理师）的Jasmine Tang正在使用一个简单的称为“successive bisection”的方法来确定一个交易期权的隐含波动率。Jasmine从零波动率开始（这给出了一个低于期权市场价格的BSM价格），然后是30\%波动率（这给出了一个高于期权市场价格的BSM价格）。然后她取这两个波动率的平均值，即15\%，作为新的波动率，并使用BSM公式计算期权价格。修订后的期权价格现在更接近市场价格，但仍然有点低。哪一项陈述正确描述了Jasmine接下来应该执行的步骤？
 \end{question}
 
 \begin{choices}
-    \item Replace 30\% with 15\%, recalculate the averaged volatility using 0\% and 15\%, use the new average to compute the option price using the BSM formula, and compare it with the market price.
-    \item Replace 0\% with 15\%, recalculate the average volatility using 30\% and 15\%, use the new average to compute the option price using the BSM formula, and compare it with the market price.
-    \item Treat 15\% as a rough estimate of the implied volatility, because the revised option price is now much closer to the market price.
-    \item Shift to a procedure that is more numerically efficient, which involves solving a nonlinear equation.
+    \item Replace 30\% with 15\%, recalculate the averaged volatility using 0\% and 15\%, use the new average to compute the option price using the BSM formula, and compare it with the market price.\\
+    用15\%替换30\%，重新计算使用0\%和15\%的平均波动率，使用新的平均值使用BSM公式计算期权价格，并与市场价格进行比较。
+    \item Replace 0\% with 15\%, recalculate the average volatility using 30\% and 15\%, use the new average to compute the option price using the BSM formula, and compare it with the market price.\\
+    用15\%替换0\%，重新计算使用30\%和15\%的平均波动率，使用新的平均值使用BSM公式计算期权价格，并与市场价格进行比较。
+    \item Treat 15\% as a rough estimate of the implied volatility, because the revised option price is now much closer to the market price.\\
+    将15\%视为隐含波动率的粗略估计，因为修订后的期权价格现在更接近市场价格。
+    \item Shift to a procedure that is more numerically efficient, which involves solving a nonlinear equation.\\
+    转向一个更数值效率更高的过程，涉及解决一个非线性方程。
 \end{choices}
 
 
@@ -1197,14 +1253,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-    A derivatives trader is evaluating the applicability of the Black-Scholes model for pricing a new series of options. The trader observes the following market conditions: significant bid-ask spreads in options trading, a 2\% quarterly dividend announcement, continuous market making activities, and regulatory restrictions on short-selling. Which of these market conditions most significantly violates a fundamental assumption of the Black-Scholes model?
+    A derivatives trader is evaluating the applicability of the Black-Scholes model for pricing a new series of options. The trader observes the following market conditions: significant bid-ask spreads in options trading, a 2\% quarterly dividend announcement, continuous market making activities, and regulatory restrictions on short-selling. Which of these market conditions most significantly violates a fundamental assumption of the Black-Scholes model?\\
+    一位衍生品交易员正在评估布莱克-斯科尔斯模型对新系列期权定价的适用性。交易员观察到以下市场条件：期权交易中的显著买卖价差，每季度2\%的股息公告，连续的市场做市活动，以及卖空活动的监管限制。哪一项市场条件最严重地违反了布莱克-斯科尔斯模型的基本假设？
     \end{question}
     
     \begin{choices}
-    \item The existence of bid-ask spreads and transaction costs that affect the execution price of trades.
-    \item The possibility to execute risk-free arbitrage trades between options and their underlying assets.
-    \item The regulatory framework that imposes restrictions on short-selling activities.
-    \item The market making system that enables continuous trading during market hours.
+    \item The existence of bid-ask spreads and transaction costs that affect the execution price of trades.\\
+    买卖价差和交易成本影响交易执行价格的存在。
+    \item The possibility to execute risk-free arbitrage trades between options and their underlying assets.\\
+    在期权和其标的资产之间执行无风险套利交易的可能性。
+    \item The regulatory framework that imposes restrictions on short-selling activities.\\
+    对卖空活动施加限制的监管框架。
+    \item The market making system that enables continuous trading during market hours.\\
+    在市场交易时段内持续交易的市场做市系统。
     \end{choices}
     
     \begin{correctanswer}
@@ -1238,14 +1299,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
     \begin{question}
-        A quantitative analyst is developing a volatility estimation model for a new trading strategy. The analyst's colleague suggests using 60 days of historical data to estimate the annual volatility of a high-dividend stock. Which of the following statements most accurately addresses the potential issues with this approach?
+        A quantitative analyst is developing a volatility estimation model for a new trading strategy. The analyst's colleague suggests using 60 days of historical data to estimate the annual volatility of a high-dividend stock. Which of the following statements most accurately addresses the potential issues with this approach?\\
+        一位量化分析师正在开发一个波动率估计模型，用于一个新的交易策略。分析师的同事建议使用60天的历史数据来估计高股息股票的年波动率。哪一项陈述最准确地解决了这种方法可能存在的问题？
         \end{question}
         
         \begin{choices}
-        \item The estimation period is too short, as the standard practice requires at least 90-180 trading days of data to calculate reliable annualized volatility.
-        \item The approach fails to consider dividend effects, but using raw price data without adjusting for ex-dividend dates would be sufficient for volatility estimation.
-        \item Both the estimation period and dividend treatment are appropriate, as short-term data better captures current market conditions.
-        \item The approach has two fundamental flaws: insufficient historical data relative to the projection period and failure to address dividend-induced price movements.
+        \item The estimation period is too short, as the standard practice requires at least 90-180 trading days of data to calculate reliable annualized volatility.\\
+        估计期太短，因为标准做法要求至少90-180天的数据来计算可靠的年化波动率。
+        \item The approach fails to consider dividend effects, but using raw price data without adjusting for ex-dividend dates would be sufficient for volatility estimation.\\
+        这种方法忽略了股息影响，但使用未经调整的除息日价格数据足以进行波动率估计。
+        \item Both the estimation period and dividend treatment are appropriate, as short-term data better captures current market conditions.\\
+        估计期和股息处理都是适当的，因为短期数据更好地捕捉当前市场情况。
+        \item The approach has two fundamental flaws: insufficient historical data relative to the projection period and failure to address dividend-induced price movements.\\
+        这种方法有两个根本缺陷：相对于预测期，历史数据不足，以及未能解决股息引起的价格变动。
         \end{choices}
         
         \begin{correctanswer}
@@ -1295,13 +1361,25 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
             IV. The options being priced are American-style rather than European-style
             
             Which combination of these factors presents fundamental challenges to the basic Black-Scholes model implementation?
+            \\两位量化分析师正在开发一个布莱克-斯科尔斯模型，用于定价股票期权。他们已经识别出几个可能影响模型可靠性的市场观察：
+            
+                I. 历史数据显示股票波动率随时间显著变化。
+                II. 股票收益表现出重尾分布（leptokurtosis）。
+                III. 股票支付季度股息，而不是连续股息收益率。
+                IV. 正在定价的期权是美式期权，而不是欧式期权。
+          
+            哪一项组合因素对基本布莱克-斯科尔斯模型实施提出了根本性挑战？
             \end{question}
             
             \begin{choices}
-            \item Only factors I and II pose significant theoretical challenges
-            \item Only factors III and IV require model adjustments
-            \item Factors I, II and IV represent fundamental theoretical limitations
-            \item All factors can be easily addressed within the basic model framework
+            \item Only factors I and II pose significant theoretical challenges\\
+            只有因素I和II提出了显著的理论挑战
+            \item Only factors III and IV require model adjustments\\
+            只有因素III和IV需要模型调整
+            \item Factors I, II and IV represent fundamental theoretical limitations\\
+            因素I、II和IV代表根本性理论限制
+            \item All factors can be easily addressed within the basic model framework\\
+            所有因素都可以在基本模型框架内轻松解决
             \end{choices}
             
             \begin{correctanswer}
@@ -1335,14 +1413,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
             \begin{question}
-                A derivatives trader at a market-making firm is reviewing the assumptions of their Black-Scholes pricing models after observing several market anomalies. The trader needs to identify which market characteristic would require fundamental changes to their existing pricing framework.Which of the following observations represents the most significant challenge that would require the firm to modify their basic Black-Scholes implementation?
+                A derivatives trader at a market-making firm is reviewing the assumptions of their Black-Scholes pricing models after observing several market anomalies. The trader needs to identify which market characteristic would require fundamental changes to their existing pricing framework.Which of the following observations represents the most significant challenge that would require the firm to modify their basic Black-Scholes implementation?\\
+                一位衍生品交易员在一家做市商公司评估他们的布莱克-斯科尔斯定价模型，观察到几个市场异常。交易员需要识别哪一项市场特征需要对现有定价框架进行根本性改变。哪一项观察代表对公司基本布莱克-斯科尔斯实施的最重大挑战？
             \end{question}
                 
                 \begin{choices}
-                \item Their volatility forecasting model shows that the underlying stock's volatility has been fluctuating significantly in recent months
-                \item Their risk monitoring system detects that the stock's return distribution exhibits heavier tails than predicted
-                \item Their dividend projection team reports that the stock will switch from quarterly to monthly dividend payments
-                \item Their trading desk notes that most of their options allow for early exercise rights
+                \item Their volatility forecasting model shows that the underlying stock's volatility has been fluctuating significantly in recent months\\
+                他们的波动率预测模型显示，标的股票的波动率在最近几个月显著波动
+                \item Their risk monitoring system detects that the stock's return distribution exhibits heavier tails than predicted\\
+                他们的风险监控系统检测到股票的收益分布表现出比预测更重的尾部
+                \item Their dividend projection team reports that the stock will switch from quarterly to monthly dividend payments\\
+                他们的股息预测团队报告，股票将从季度支付切换为月度支付
+                \item Their trading desk notes that most of their options allow for early exercise rights\\
+                他们的交易台注意到，大多数期权允许提前行权
                 \end{choices}
                 
                 \begin{correctanswer}
@@ -1376,14 +1459,19 @@ step is one month. What is the risk-neutral probability of a down movement (1-p)
 
 
 \begin{question}
-A financial analyst is evaluating the applicability of the Black-Scholes-Merton (BSM) option pricing model. Which of the following statements correctly describes the scope of the BSM model?
+A financial analyst is evaluating the applicability of the Black-Scholes-Merton (BSM) option pricing model. Which of the following statements correctly describes the scope of the BSM model?\\
+一位金融分析师正在评估布莱克-斯科尔斯-默顿（BSM）期权定价模型的适用性。哪一项陈述正确描述了BSM模型的范围？
 \end{question}
 
 \begin{choices}
-\item The pricing model applies to all types of options, including American and European options.
-\item The pricing model applies only to European options on non-dividend-paying stocks and not to other asset classes.
-\item The pricing model can be extended to European options on dividend-paying stocks and is applicable to other asset classes such as stock indices, currencies, and futures.
-\item The pricing model must be combined with the binomial tree method for option valuation.
+\item The pricing model applies to all types of options, including American and European options.\\
+BSM模型适用于所有类型的期权，包括美式和欧式期权。
+\item The pricing model applies only to European options on non-dividend-paying stocks and not to other asset classes.\\
+BSM模型仅适用于非支付股息的股票的欧洲期权，而不适用于其他资产类别。
+\item The pricing model can be extended to European options on dividend-paying stocks and is applicable to other asset classes such as stock indices, currencies, and futures.\\
+BSM模型可以扩展到支付股息的股票的欧洲期权，并适用于其他资产类别，如股票指数、货币和期货。
+\item The pricing model must be combined with the binomial tree method for option valuation.\\
+BSM模型必须与二项式树方法结合进行期权估值。
 \end{choices}
 
 \begin{correctanswer}
@@ -1433,6 +1521,19 @@ C
     \end{itemize}
     
     Which of the following is closest to the value of this option estimated using the BSM model?
+    \\    一位衍生品交易商与其客户积极交易各种标的资产的期权。该公司希望应用Black-Scholes-Merton（BSM）模型来为期货合约上的看涨期权定价。相关数据如下：
+    
+    \begin{itemize}
+    \item 当前期货价格：EUR 65
+    \item 期权的执行价格：EUR 70
+    \item 期权的到期时间：9个月
+    \item 标的期货合约的到期时间：24个月
+    \item 连续复利年化无风险利率：4\%
+    \item \( N(d1) \): 0.4821
+    \item \( N(d2) \): 0.3625
+    \end{itemize}
+    
+    使用BSM模型估计的该期权的最接近价值是多少？
     \end{question}
     
     \begin{choices}
@@ -1476,14 +1577,19 @@ C
 
 
 \begin{question}
-    A risk analyst at a fixed-income investment firm is studying the behavior of stock price movements and returns to better understand market dynamics. The analyst is particularly interested in how these movements are described in the Black-Scholes-Merton (BSM) model. Which of the following statements correctly describes these movements?
+    A risk analyst at a fixed-income investment firm is studying the behavior of stock price movements and returns to better understand market dynamics. The analyst is particularly interested in how these movements are described in the Black-Scholes-Merton (BSM) model. Which of the following statements correctly describes these movements?\\
+    一位固定收益投资公司的风险分析师正在研究股票价格运动和回报，以更好地理解市场动态。分析师特别感兴趣的是这些运动如何在Black-Scholes-Merton（BSM）模型中描述。哪一项陈述正确描述了这些运动？
     \end{question}
     
     \begin{choices}
-    \item Stock prices follow a lognormal distribution, and their returns are normally distributed, leading to short-term returns being normally distributed.
-    \item In the BSM model, stock returns over the short term are normally distributed with mean \(\mu\) and standard deviation \(\sigma\), and over longer periods, stock prices are also normally distributed.
-    \item In the BSM model, short-term stock returns are normally distributed with mean \(\mu \Delta t\) and standard deviation \(\sigma \sqrt{\Delta t}\), and over longer periods, stock prices follow a lognormal distribution.
-    \item The volatility of stock prices remains constant in both short and long terms, and stock prices are always normally distributed.
+    \item Stock prices follow a lognormal distribution, and their returns are normally distributed, leading to short-term returns being normally distributed.\\
+    股票价格服从对数正态分布，它们的收益服从正态分布，导致短期收益服从正态分布。
+    \item In the BSM model, stock returns over the short term are normally distributed with mean \(\mu\) and standard deviation \(\sigma\), and over longer periods, stock prices are also normally distributed.\\
+    在BSM模型中，短期股票收益服从均值为\(\mu\)和标准差为\(\sigma\)的正态分布，在较长时间段内，股票价格也服从正态分布。
+    \item In the BSM model, short-term stock returns are normally distributed with mean \(\mu \Delta t\) and standard deviation \(\sigma \sqrt{\Delta t}\), and over longer periods, stock prices follow a lognormal distribution.\\
+    在BSM模型中，短期股票收益服从均值为\(\mu \Delta t\)和标准差为\(\sigma \sqrt{\Delta t}\)的正态分布，在较长时间段内，股票价格服从对数正态分布。
+    \item The volatility of stock prices remains constant in both short and long terms, and stock prices are always normally distributed.\\
+    股票价格的波动性在短期和长期内都是恒定的，股票价格总是服从正态分布。
     \end{choices}
     
     \begin{correctanswer}
@@ -1519,6 +1625,7 @@ C
 
 \begin{question}
     A financial analyst at an investment firm is evaluating the option pricing for a stock. The stock has a weekly volatility of 1.5\%. Now, you need to calculate the annualized volatility of this stock. Assume there are 252 trading days in a year and 52 weeks in a year. Based on this information, calculate the annualized volatility of the stock.
+    \\一位投资公司的财务分析师正在评估股票期权定价。股票的周波动率为1.5\%。现在，你需要计算股票的年化波动率。假设一年有252个交易日，一年有52周。根据这些信息，计算股票的年化波动率。
     \end{question}
     
     \begin{choices}
@@ -1570,6 +1677,12 @@ C
     \item \( M = 200,000 \)（Number of new warrants）
     \item The value of a 5-year European call option on the stock is \$7.04.
     \end{itemize}
+    一家公司有1亿股，每股价值40美元。公司正在考虑发行20万份认股权证。每份认股权证赋予持有人在5年后以60美元的价格购买一股股票的权利。5年期欧式看涨期权在股票上的价值为7.04美元。计算每份认股权证的价值。
+    \begin{itemize}
+    \item \( N = 1,000,000 \)（手中股票数量）
+    \item \( M = 200,000 \)（新发认股权证数量）
+    \item 5年期欧式看涨期权在股票上的价值为7.04美元。
+    \end{itemize}
 \end{question}
     
     
@@ -1609,14 +1722,19 @@ C
 
 
 \begin{question}
-    A financial analyst is evaluating the financial instruments issued by a company and needs to understand the key differences between options and warrants. Which of the following statements most accurately describes the main differences between options and warrants?
+    A financial analyst is evaluating the financial instruments issued by a company and needs to understand the key differences between options and warrants. Which of the following statements most accurately describes the main differences between options and warrants?\\
+    一位金融分析师正在评估公司发行的金融工具，并需要理解期权和权证之间的关键差异。哪一项陈述最准确地描述了期权和权证之间主要差异？
     \end{question}
     
     \begin{choices}
-    \item Options and warrants are both issued directly by the company and both lead to dilution of existing shareholders' equity.
-    \item Options are typically traded on exchanges or over-the-counter and do not affect the number of shares issued by the company; warrants are issued by the company itself and increase the total number of shares when exercised.
-    \item Options and warrants have the same liquidity when traded, and their conversion rates are fixed.
-    \item Warrants are generally more flexible than options because they can be adjusted by the company at any time.
+    \item Options and warrants are both issued directly by the company and both lead to dilution of existing shareholders' equity.\\
+    期权和权证都是由公司直接发行，都会导致现有股东权益的稀释。
+    \item Options are typically traded on exchanges or over-the-counter and do not affect the number of shares issued by the company; warrants are issued by the company itself and increase the total number of shares when exercised.\\
+    期权通常在交易所或场外市场交易，不影响公司的股本数量；权证由公司发行，行使时会增加公司的总股本。这意味着权证的行使会导致股东权益的稀释，而期权不会。
+    \item Options and warrants have the same liquidity when traded, and their conversion rates are fixed.\\
+    期权和权证在交易时具有相同的流动性，它们的转换率是固定的。
+    \item Warrants are generally more flexible than options because they can be adjusted by the company at any time.\\
+    权证通常比期权更灵活，因为它们可以由公司随时调整。
     \end{choices}
     
     \begin{correctanswer}
@@ -1651,14 +1769,19 @@ C
 
 
 \begin{question}
-    A risk manager at an investment bank is analyzing the differences between American and European call options on non-dividend-paying stocks. The manager needs to determine under what conditions these options might have different values. Which of the following statements is correct?
+    A risk manager at an investment bank is analyzing the differences between American and European call options on non-dividend-paying stocks. The manager needs to determine under what conditions these options might have different values. Which of the following statements is correct?\\
+    一位投资银行的风险经理正在分析不支付股息的股票的美式和欧式看涨期权的差异。经理需要确定在什么条件下这些期权可能具有不同的价值。哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-    \item For non-dividend-paying stocks, American and European call options have no difference in value because the value of not exercising the option is always higher than exercising it.
-    \item American call options should always be exercised early when dividends are paid, as this allows immediate receipt of the dividend.
-    \item American call options should never be exercised early on non-dividend-paying stocks, as the value of not exercising is always higher.
-    \item American call options should be exercised early to increase the option's value.
+    \item For non-dividend-paying stocks, American and European call options have no difference in value because the value of not exercising the option is always higher than exercising it.\\
+    对于不支付股息的股票，美式和欧式看涨期权的价值没有区别，因为未行使期权的价值总是高于行使期权的价值。
+    \item American call options should always be exercised early when dividends are paid, as this allows immediate receipt of the dividend.\\
+    美式看涨期权在派发股息时应该总是提前行使，因为这样可以立即收到股息。
+    \item American call options should never be exercised early on non-dividend-paying stocks, as the value of not exercising is always higher.\\
+    美式看涨期权在派发股息时不一定总是应该提前行使，因为提前行使可能会损失期权的时间价值。
+    \item American call options should be exercised early to increase the option's value.\\
+    提前行使美式看涨期权并不会增加期权的价值，反而可能会损失时间价值。
     \end{choices}
     
     \begin{correctanswer}
@@ -1691,14 +1814,19 @@ C
 
 
 \begin{question}
-    A portfolio manager at a hedge fund is analyzing a company's proposal to issue warrants to its key employees. In evaluating the potential warrant issuance, the manager compares the warrants to exchange-traded call options currently trading on the company's stock. Which of the following conclusions is correct for the manager to make?
+    A portfolio manager at a hedge fund is analyzing a company's proposal to issue warrants to its key employees. In evaluating the potential warrant issuance, the manager compares the warrants to exchange-traded call options currently trading on the company's stock. Which of the following conclusions is correct for the manager to make?\\
+    一位对冲基金的组合经理正在评估一家公司向其关键员工发行权证的提议。在评估潜在的权证发行时，经理将权证与公司股票上目前交易的交易所交易看涨期权进行了比较。经理可以得出哪一项结论？
 \end{question}
 
 \begin{choices}
-    \item The warrants will grant their holders the option to sell their stock at a price higher than the market price.
-    \item The warrants will need to be valued using a different method than the exchange-traded options once they are issued.
-    \item The warrants will be issued out-of-the-money and will trade like the call options.
-    \item The warrants will be dilutive to current shareholders, while the call options are not dilutive.
+    \item The warrants will grant their holders the option to sell their stock at a price higher than the market price.\\
+    权证将赋予其持有者以高于市场价格出售其股票的权利。
+    \item The warrants will need to be valued using a different method than the exchange-traded options once they are issued.\\
+    权证在发行后需要使用不同于交易所交易期权的方法进行估值。
+    \item The warrants will be issued out-of-the-money and will trade like the call options.\\
+    权证将发行在价外，并且会像看涨期权一样交易。
+    \item The warrants will be dilutive to current shareholders, while the call options are not dilutive.\\
+    权证会对现有股东造成稀释，而看涨期权不会稀释股东权益。
 \end{choices}
 
 \begin{correctanswer}
@@ -1749,14 +1877,19 @@ C
 \section{考点:Greek Letters}
 \setcounter{question}{0}
 \begin{question}
-    An options trader at a derivatives trading desk is currently assessing the risks associated with a short position in call options. In this context, risk is defined as the potential for unexpected losses. When analyzing these risks, which of the following statements is correct?
+    An options trader at a derivatives trading desk is currently assessing the risks associated with a short position in call options. In this context, risk is defined as the potential for unexpected losses. When analyzing these risks, which of the following statements is correct?\\
+    一位衍生品交易员在衍生品交易台正在评估看涨期权空头头寸的风险。在这个上下文中，风险被定义为意外损失的可能性。在分析这些风险时，哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item D (Delta): Measures the impact of changes in the underlying asset's price on the option's value; a positive value indicates that the option's value increases as the price rises.
-    \item V (Vega): Measures the impact of changes in volatility on the option's value; it demonstrates consistent sensitivity across all moneyness levels of options.
-    \item G (Gamma): Measures the sensitivity of Delta to changes in the underlying asset's price, with its value remaining relatively stable as options approach expiration.
-    \item T (Theta): Measures the impact of the passage of time on the option's value; it is typically not considered a risk factor.
+    \item D (Delta): Measures the impact of changes in the underlying asset's price on the option's value; a positive value indicates that the option's value increases as the price rises.\\
+    D（德尔塔）：衡量标的资产价格变化对期权价值的影响；正值表示随着价格上升，期权价值增加。
+    \item V (Vega): Measures the impact of changes in volatility on the option's value; it demonstrates consistent sensitivity across all moneyness levels of options.\\
+    V（维加）：衡量波动率变化对期权价值的影响；它在所有虚实程度级别的期权中表现出一致的敏感度。
+    \item G (Gamma): Measures the sensitivity of Delta to changes in the underlying asset's price, with its value remaining relatively stable as options approach expiration.\\
+    G（伽马）：衡量德尔塔对标的资产价格变动的敏感度，随着期权接近到期，其值相对稳定。
+    \item T (Theta): Measures the impact of the passage of time on the option's value; it is typically not considered a risk factor.\\
+    T（西塔）：衡量时间流逝对期权价值的影响；通常不被视为风险因素。
 \end{choices}
 
 \begin{correctanswer}
@@ -1787,7 +1920,8 @@ C
 \checklist{Greek Letters的性质。 (Theta通常不被视为直接的风险因素)}
 
 \begin{question}
-    A trader is evaluating the value of a call option. The option has a maturity of 2 years, the current continuous risk-free rate is 4\%, and the continuous dividend yield is 1\%. Additionally, the trader knows that \( N(d_1) = 0.64 \). What is the delta of this option?
+    A trader is evaluating the value of a call option. The option has a maturity of 2 years, the current continuous risk-free rate is 4\%, and the continuous dividend yield is 1\%. Additionally, the trader knows that \( N(d_1) = 0.64 \). What is the delta of this option?\\
+    一位交易员正在评估看涨期权的价值。期权的到期时间为2年，当前的无风险连续利率为4\%，连续股息收益率为1\%。此外，交易员知道\( N(d_1) = 0.64 \)。该期权的德尔塔是多少？
 \end{question}
 
 \begin{choices}
@@ -1837,14 +1971,19 @@ C
 \checklist{Delta的计算。(待入公式)}
 
 \begin{question}
-    An investment advisor is designing an investment strategy for a client that includes writing a large put option on the S\&P 500 index. Since the exercise price and maturity of the option are not available in the market, the advisor needs to implement a dynamic hedging strategy to manage risk. Which of the following statements about the risk of this strategy is incorrect?
+    An investment advisor is designing an investment strategy for a client that includes writing a large put option on the S\&P 500 index. Since the exercise price and maturity of the option are not available in the market, the advisor needs to implement a dynamic hedging strategy to manage risk. Which of the following statements about the risk of this strategy is incorrect?\\
+    一位投资顾问正在为客户设计一个投资策略，其中包括在标普500指数上写入大量看跌期权。由于期权的执行价格和到期时间在市场上不可用，顾问需要实施动态对冲策略来管理风险。哪一项关于这种策略风险的陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The advisor can make the portfolio delta neutral by shorting index futures contracts.
-    \item There is a short position in an S\&P 500 futures contract that will make the portfolio insensitive to both small and large moves in the S\&P 500.
-    \item A long position in a traded option on the S\&P 500 will help hedge the volatility risk of the written option.
-    \item To make the hedged portfolio gamma neutral, the advisor needs to take positions in both options and futures.
+    \item The advisor can make the portfolio delta neutral by shorting index futures contracts.\\
+    顾问可以通过做空指数期货合约使投资组合达到德尔塔中性。
+    \item There is a short position in an S\&P 500 futures contract that will make the portfolio insensitive to both small and large moves in the S\&P 500.\\
+    在标普500指数期货合约上的空头头寸将使投资组合对标普500指数的小幅和大波动不敏感。
+    \item A long position in a traded option on the S\&P 500 will help hedge the volatility risk of the written option.\\
+    在标普500指数上的交易期权的多头头寸可以帮助对冲所写期权的波动率风险。
+    \item To make the hedged portfolio gamma neutral, the advisor needs to take positions in both options and futures.\\
+    为了使对冲后的投资组合达到伽马中性，顾问需要同时在期权和期货上采取头寸。
 \end{choices}
 
 \begin{correctanswer}
@@ -1884,13 +2023,24 @@ C
         \item gamma = -150; 
     \end{itemize}
     That is, positive theta, positive vega, and negative gamma. Which of the following additional trades, utilizing generally at-the-money (ATM) options, will neutralize (hedge) the portfolio with respect to theta, vega, and gamma?
+    \\组合经理John持有100份期权合约，其希腊字母如下：
+    \begin{itemize}
+        \item theta = +30,000; 
+        \item vega = +250; 
+        \item gamma = -150; 
+    \end{itemize}
+    即：正的theta、正的vega和负的gamma。哪一项额外交易，利用大致平值（ATM）期权，将对theta、vega和gamma进行中性化（对冲）？
 \end{question}
 
 \begin{choices}
-    \item Sell short-term options + sell long-term options (all roughly at-the-money)
-    \item Sell short-term options + buy long-term options (ATM)
-    \item Buy short-term options + sell long-term options (ATM)
-    \item Buy short-term options + buy long-term options (ATM)
+    \item Sell short-term options + sell long-term options (all roughly at-the-money)\\
+    卖出短期期权 + 卖出长期期权（大致平值）
+    \item Sell short-term options + buy long-term options (ATM)\\
+    卖出短期期权 + 买入长期期权（平值）
+    \item Buy short-term options + sell long-term options (ATM)\\
+    买入短期期权 + 卖出长期期权（平值）
+    \item Buy short-term options + buy long-term options (ATM)\\
+    买入短期期权 + 买入长期期权（平值）
 \end{choices}
 
 \begin{correctanswer}
@@ -1931,13 +2081,24 @@ C
         \item In a short position of 30,000 put options, each option has a delta, vega, and gamma of -0.54, 3.0, and -0.08, respectively.
     \end{itemize}
     What are the overall delta, vega, and gamma for this portfolio?
+    \\组合经理持有以下不同期权合约的头寸：
+    \begin{itemize}
+        \item 在50,000份看涨期权合约中，每份期权有delta、vega和gamma分别为0.46、3.3和0.13。
+        \item 在20,000份看涨期权合约中，每份期权有delta、vega和gamma分别为0.33、4.2和0.15。
+        \item 在30,000份看跌期权合约的空头头寸中，每份期权有delta、vega和gamma分别为-0.54、3.0和-0.08。
+    \end{itemize}
+    该投资组合的整体delta、vega和gamma是多少？
 \end{question}
 
 \begin{choices}
-    \item Delta = 32,600; Vega = 300; Gamma = 1,100
-    \item Delta = 32,000; Vega = 320; Gamma = 1,200
-    \item Delta = 32,400; Vega = 350; Gamma = 1,100
-    \item Delta = 32,800; Vega = 310; Gamma = 1,150
+    \item Delta = 32,600; Vega = 300; Gamma = 1,100\\
+    德尔塔 = 32,600；维加 = 300；伽马 = 1,100
+    \item Delta = 32,000; Vega = 320; Gamma = 1,200\\
+    德尔塔 = 32,000；维加 = 320；伽马 = 1,200
+    \item Delta = 32,400; Vega = 350; Gamma = 1,100\\
+    德尔塔 = 32,400；维加 = 350；伽马 = 1,100
+    \item Delta = 32,800; Vega = 310; Gamma = 1,150\\
+    德尔塔 = 32,800；维加 = 310；伽马 = 1,150
 \end{choices}
 
 \begin{correctanswer}
@@ -1982,14 +2143,19 @@ C
 \checklist{Delta、Vega和Gamma的计算。(熟悉计算原理)}
 
 \begin{question}
-    An options trader is evaluating the characteristics of various options Greeks to optimize their trading strategy. Which of the following statements is true regarding options Greeks? 
+    An options trader is evaluating the characteristics of various options Greeks to optimize their trading strategy. Which of the following statements is true regarding options Greeks? \\
+    一位期权交易员正在评估各种期权希腊字母的特性，以优化他们的交易策略。哪一项关于期权希腊字母的陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Theta tends to be large and positive when buying at-the-money options. 
-    \item Gamma is greatest for in-the-money options with long maturities. 
-    \item Vega is greatest for at-the-money options with long maturities. 
-    \item Delta of deep in-the-money put options tends toward +1.
+    \item Theta tends to be large and positive when buying at-the-money options. \\
+    西塔在买入平值期权时通常较大且为正值。
+    \item Gamma is greatest for in-the-money options with long maturities. \\
+    伽马在深度实值期权中最大，且到期时间较长。
+    \item Vega is greatest for at-the-money options with long maturities. \\
+    维加在平值期权中最大，且到期时间较长。
+    \item Delta of deep in-the-money put options tends toward +1. \\
+    深度实值看跌期权的德尔塔趋向于+1。
 \end{choices}
 
 \begin{correctanswer}
@@ -2022,14 +2188,19 @@ C
 
 
 \begin{question}
-    The current stock price of a company is USD 85. A risk manager is monitoring call and put options on the stock with exercise prices of USD 55 and 7 days to maturity. If the stock price falls by USD 1.5, which of the following scenarios is most likely to occur?
+    The current stock price of a company is USD 85. A risk manager is monitoring call and put options on the stock with exercise prices of USD 55 and 7 days to maturity. If the stock price falls by USD 1.5, which of the following scenarios is most likely to occur?\\
+    一家公司的当前股票价格为USD 85。风险经理正在监控该股票的看涨和看跌期权，执行价格为USD 55，到期时间为7天。如果股票价格下跌USD 1.5，哪一种情况最有可能发生？
 \end{question}
 
 \begin{choices}
-    \item Call value decreases by USD 1.41 and put value increases by USD 0.12.
-    \item Call value decreases by USD 1.41 and put value increases by USD 1.35.
-    \item Call value decreases by USD 0.15 and put value increases by USD 1.35.
-    \item Call value decreases by USD 0.15 and put value increases by USD 0.12.
+    \item Call value decreases by USD 1.41 and put value increases by USD 0.12. \\
+    看涨期权价值减少USD 1.41，看跌期权价值增加USD 0.12。
+    \item Call value decreases by USD 1.41 and put value increases by USD 1.35.\\
+    看涨期权价值减少USD 1.41，看跌期权价值增加USD 1.35。
+    \item Call value decreases by USD 0.15 and put value increases by USD 1.35.\\
+    看涨期权价值减少USD 0.15，看跌期权价值增加USD 1.35。
+    \item Call value decreases by USD 0.15 and put value increases by USD 0.12.\\
+    看涨期权价值减少USD 0.15，看跌期权价值增加USD 0.12。
 \end{choices}
 
 \begin{correctanswer}
@@ -2071,14 +2242,19 @@ C
 
 
 \begin{question}
-    An option trader is currently holding short positions in 2,000 European call options that will all mature in one month. The current stock price is \$19, while the strike price of those call options is \$20. The trader is considering the delta hedging strategy based on a simple one-step binomial tree model. In the model setting, one month later, the stock price will be either \$23.75 or \$15.2. What should the trader do in order to make the position delta neutral?
+    An option trader is currently holding short positions in 2,000 European call options that will all mature in one month. The current stock price is \$19, while the strike price of those call options is \$20. The trader is considering the delta hedging strategy based on a simple one-step binomial tree model. In the model setting, one month later, the stock price will be either \$23.75 or \$15.2. What should the trader do in order to make the position delta neutral?\\
+    一位期权交易员目前持有2,000份欧式看涨期权合约的空头头寸，这些合约将在一个月内到期。当前股票价格为\$19，这些看涨期权的执行价格为\$20。交易员正在考虑基于简单一步二叉树模型的德尔塔对冲策略。在模型设置中，一个月后，股票价格将为\$23.75或\$15.2。交易员应该怎么做才能使头寸达到德尔塔中性？
 \end{question}
 
 \begin{choices}
-    \item Short about 877 shares.
-    \item Long about 877 shares.
-    \item Short about 1,111 shares.
-    \item Long about 1,111 shares.
+    \item Short about 877 shares. \\
+    卖出约877股。
+    \item Long about 877 shares. \\
+    买入约877股。
+    \item Short about 1,111 shares. \\
+    卖出约1,111股。
+    \item Long about 1,111 shares.\\
+    买入约1,111股。
 \end{choices}
 
 \begin{correctanswer}
@@ -2126,13 +2302,18 @@ C
 
 \begin{question}
     A trader manages a portfolio of options that is highly sensitive to increases in implied volatility and is incurring substantial losses as time passes. What strategy should the trader most likely employ to hedge this portfolio?
+    \\一位交易员管理一个对隐含波动率增加高度敏感的投资组合，并且随着时间的推移遭受重大损失。交易员最可能采用哪种策略来对冲这个投资组合？
 \end{question}
 
 \begin{choices}
-    \item Sell short-dated options and buy long-dated options.
-    \item Buy short-dated options and sell long-dated options.
-    \item Sell short-dated options and sell long-dated options.
-    \item Buy short-dated options and buy long-dated options.
+    \item Sell short-dated options and buy long-dated options. \\
+    卖出短期期权并买入长期期权。
+    \item Buy short-dated options and sell long-dated options. \\
+    买入短期期权并卖出长期期权。
+    \item Sell short-dated options and sell long-dated options. \\
+    卖出短期期权并卖出长期期权。
+    \item Buy short-dated options and buy long-dated options. \\
+    买入短期期权并买入长期期权。
 \end{choices}
 
 \begin{correctanswer}
@@ -2180,13 +2361,24 @@ C
         \item All options have near-term maturities
     \end{itemize}
     Which of the following best describes the portfolio's theta characteristic?
+    \\一位衍生品交易员在分析一个由看涨和看跌期权空头头寸组成的组合。组合具有以下特征：
+    \begin{itemize}
+        \item 组合是德尔塔中性的
+        \item 所有期权大致是平值的（ATM）
+        \item 所有期权都有接近到期的到期时间
+    \end{itemize}
+    哪一项最准确地描述了组合的西塔特性？
     \end{question}
     
     \begin{choices}
-    \item Large and negative - the portfolio will experience significant time decay losses
-    \item Small and negative - the portfolio will experience minor time decay losses
-    \item Small and positive - the portfolio will benefit slightly from time decay
-    \item Large and positive - the portfolio will benefit significantly from time decay
+    \item Large and negative - the portfolio will experience significant time decay losses\\
+    大且负 - 组合将经历显著的时间衰减损失
+    \item Small and negative - the portfolio will experience minor time decay losses\\
+    小且负 - 组合将经历轻微的时间衰减损失
+    \item Small and positive - the portfolio will benefit slightly from time decay\\
+    小且正 - 组合将略微受益于时间衰减
+    \item Large and positive - the portfolio will benefit significantly from time decay\\
+    大且正 - 组合将显著受益于时间衰减
     \end{choices}
     
     \begin{correctanswer}
@@ -2231,13 +2423,24 @@ C
                 \item Time to expiration: 30 minutes
             \end{itemize}
             Which of the following risk factors poses the greatest threat to the trader's position?
+            \\一位股票期权交易员做空一个看涨期权，具有以下特征：
+            \begin{itemize}
+                \item 执行价格：\$104
+                \item 当前股票价格：\$103.75
+                \item 到期时间：30分钟
+            \end{itemize}
+            哪一种风险因素对交易员头寸构成最大威胁？
             \end{question}
             
             \begin{choices}
-            \item The risk of a sudden move in the underlying stock price, given the option is nearly at-the-money
-            \item The risk of increased price volatility, as the option is both short-term and close to strike price
-            \item The risk of changes in interest rates affecting option pricing in the remaining time to expiration
-            \item The risk of time decay acceleration during the final minutes before expiration
+            \item The risk of a sudden move in the underlying stock price, given the option is nearly at-the-money\\
+            标的股票价格突然变动风险，考虑到期权接近平价（ATM）
+            \item The risk of increased price volatility, as the option is both short-term and close to strike price\\
+            价格波动增加风险，因为期权既短期又接近执行价格
+            \item The risk of changes in interest rates affecting option pricing in the remaining time to expiration\\
+            剩余到期时间内利率变化对期权定价的影响风险
+            \item The risk of time decay acceleration during the final minutes before expiration\\
+            到期前最后几分钟时间衰减加速风险
             \end{choices}
             
             \begin{correctanswer}
@@ -2277,13 +2480,24 @@ C
                     \item Current market environment: High volatility
                 \end{itemize}
                 Which of the following options portfolio structures would most likely create these risk exposures?
+                \\一位市场风险经理Marcat Securities的市场风险经理正在分析标普500指数期权交易台的风险暴露。他的风险报告显示以下特征：
+                \begin{itemize}
+                    \item 净伽马头寸：多头（正）
+                    \item 净维加头寸：空头（负）
+                    \item 当前市场环境：高波动率
+                \end{itemize}
+                哪一种期权组合结构最有可能创建这些风险暴露？
                 \end{question}
                 
                 \begin{choices}
-                \item A combination of long-dated long calls and short-dated short puts
-                \item A combination of long-dated long puts and long-dated short calls
-                \item A combination of long-dated long calls and short-dated short calls
-                \item A combination of short-dated long calls and long-dated short calls
+                \item A combination of long-dated long calls and short-dated short puts\\
+                长期多头看涨期权和短期空头看跌期权的组合
+                \item A combination of long-dated long puts and long-dated short calls\\
+                长期多头看涨期权和长期空头看跌期权的组合
+                \item A combination of long-dated long calls and short-dated short calls\\
+                长期多头看涨期权和短期空头看涨期权的组合
+                \item A combination of short-dated long calls and long-dated short calls\\
+                短期多头看涨期权和长期空头看涨期权的组合
                 \end{choices}
                 
                 \begin{correctanswer}
@@ -2326,14 +2540,19 @@ C
 
 
                 \begin{question}
-                    A quantitative analyst at a derivatives trading firm is conducting research on option price sensitivity. The analyst is specifically studying how changes in the underlying asset price affect the rate of change in option deltas (gamma) under the Black-Scholes framework. Assuming European-style options with constant interest rates and volatility, and fixed time to expiration, for which of the following option positions would the deltas be most sensitive to changes in the underlying asset price?
+                    A quantitative analyst at a derivatives trading firm is conducting research on option price sensitivity. The analyst is specifically studying how changes in the underlying asset price affect the rate of change in option deltas (gamma) under the Black-Scholes framework. Assuming European-style options with constant interest rates and volatility, and fixed time to expiration, for which of the following option positions would the deltas be most sensitive to changes in the underlying asset price?\\
+                    一位量化分析师在衍生品交易公司进行期权价格敏感性研究。分析师特别研究在布莱克-斯科尔斯框架下，标的资产价格变化如何影响期权德尔塔（伽马）的变化率。假设欧式期权具有恒定的无风险利率和波动率，以及固定的到期时间，哪一种期权头寸的德尔塔对标的资产价格变化最敏感？
                     \end{question}
                     
                     \begin{choices}
-                    \item Deep in-the-money calls combined with deep out-of-the-money puts, as these represent extreme price positions
-                    \item Both puts and calls that are deep in-the-money, as these options have the highest absolute delta values
-                    \item Both puts and calls that are deep out-of-the-money, as these options have the lowest absolute delta values
-                    \item Both puts and calls that are at-the-money, as these options are at their theoretical pivot point
+                    \item Deep in-the-money calls combined with deep out-of-the-money puts, as these represent extreme price positions\\
+                    深度实值看涨期权和深度虚值看跌期权的组合，因为这些代表极端价格位置
+                    \item Both puts and calls that are deep in-the-money, as these options have the highest absolute delta values\\
+                    深度实值看涨期权和深度实值看跌期权的组合，因为这些期权具有最高的绝对德尔塔值
+                    \item Both puts and calls that are deep out-of-the-money, as these options have the lowest absolute delta values\\
+                    深度虚值看涨期权和深度虚值看跌期权的组合，因为这些期权具有最低的绝对德尔塔值
+                    \item Both puts and calls that are at-the-money, as these options are at their theoretical pivot point\\
+                    平价看涨期权和平价看跌期权的组合，因为这些期权处于理论上的转折点
                     \end{choices}
                     
                     \begin{correctanswer}
@@ -2365,14 +2584,19 @@ C
                     \checklist{期权希腊字母特征分析（平价期权的\(\Gamma\)特性）}
 
 \begin{question}
-A portfolio manager is analyzing the sensitivity measures (Greeks) of various European-style options. Which of the following statements about option Greeks is CORRECT?
+A portfolio manager is analyzing the sensitivity measures (Greeks) of various European-style options. Which of the following statements about option Greeks is CORRECT?\\
+一位组合经理正在分析各种欧式期权的敏感度（希腊字母）。哪一项关于期权希腊字母的陈述是正确的？
 \end{question}
 
 \begin{choices}
-\item The sensitivity to volatility changes (vega) typically exhibits its highest values for deep in-the-money European options due to their substantial intrinsic value
-\item For a European put option, its delta maintains significant negative values even as the underlying asset price increases substantially above the strike price
-\item The rate of change in delta (gamma) tends to decrease as the time to expiration shortens for at-the-money options due to reduced time value
-\item For European call options with the same strike price and maturity, the time decay (theta) has a more negative value for at-the-money options than for out-of-the-money options
+\item The sensitivity to volatility changes (vega) typically exhibits its highest values for deep in-the-money European options due to their substantial intrinsic value\\
+    波动率变化（维加）对深度实值欧式期权的影响通常最大，因为这些期权具有较大的内在价值
+\item For a European put option, its delta maintains significant negative values even as the underlying asset price increases substantially above the strike price\\
+    对于欧式看跌期权，其德尔塔即使在标的资产价格大幅高于执行价格时也保持显著的负值
+\item The rate of change in delta (gamma) tends to decrease as the time to expiration shortens for at-the-money options due to reduced time value\\
+    德尔塔的变化率（伽马）随着到期时间缩短而减小，因为时间价值减少
+\item For European call options with the same strike price and maturity, the time decay (theta) has a more negative value for at-the-money options than for out-of-the-money options\\
+    对于相同执行价格和到期日的欧式看涨期权，平价期权的西塔比虚值期权的西塔有更大的负值
 \end{choices}
 
 \begin{correctanswer}
@@ -2411,13 +2635,18 @@ D
 
 \begin{question}
     An options trader at a hedge fund is evaluating four different portfolio positions in terms of their risk profiles. Each position combines various options strategies resulting in different gamma and delta exposures. Given that market volatility is expected to increase significantly in the coming weeks, which of the following positions would expose the fund to the highest level of risk?
+    \\一位对冲基金的期权交易员正在评估四种不同的投资组合风险状况。每个组合结合了不同的期权策略，导致不同的伽马和德尔塔暴露。鉴于市场波动预计在未来几周内显著增加，哪一种组合将使基金面临最高的风险水平？
     \end{question}
     
     \begin{choices}
-    \item A portfolio with negative gamma exposure but overall delta-neutral, constructed through a combination of short straddles.
-    \item A portfolio with positive gamma and positive delta exposure, achieved through long call options and bull spreads.
-    \item A portfolio with negative gamma but positive delta exposure, created by writing naked calls and buying the underlying.
-    \item A portfolio with positive gamma but delta-neutral, built using long straddles and covered calls.
+    \item A portfolio with negative gamma exposure but overall delta-neutral, constructed through a combination of short straddles.\\
+    一个具有负伽马暴露但总体德尔塔中性的组合，通过短跨式策略构建。
+    \item A portfolio with positive gamma and positive delta exposure, achieved through long call options and bull spreads.\\
+    一个具有正伽马和正德尔塔暴露的组合，通过买入看涨期权和牛市价差策略构建。
+    \item A portfolio with negative gamma but positive delta exposure, created by writing naked calls and buying the underlying.\\
+    一个具有负伽马但正德尔塔暴露的组合，通过卖出裸看涨期权和买入标的资产构建。
+    \item A portfolio with positive gamma but delta-neutral, built using long straddles and covered calls.\\
+    一个具有正伽马但德尔塔中性的组合，通过买入跨式策略和买入看涨期权构建。
     \end{choices}
     
     \begin{correctanswer}
@@ -2450,13 +2679,18 @@ D
 
     \begin{question}
         A derivatives trader has established the following positions in equity options on the same underlying stock (current price \$50, all options expire in 3 months): long 80 ATM call options with delta of 0.5; short 120 ATM put options with delta of -0.5; and short 40 ATM call options with delta of 0.5. Which of the following trades would achieve delta neutrality for the entire position?
+        \\一位衍生品交易员在同一标的股票上建立了以下头寸（当前价格\$50，所有期权到期时间为3个月）：买入80张平价看涨期权，德尔塔为0.5；卖出120张平价看跌期权，德尔塔为-0.5；卖出40张平价看涨期权，德尔塔为0.5。哪一项交易将使整个头寸达到德尔塔中性？
         \end{question}
         
         \begin{choices}
-        \item Buy 20 shares of the underlying stock
-        \item Sell 20 shares of the underlying stock
-        \item Buy 10 shares of the underlying stock
-        \item Sell 10 shares of the underlying stock
+        \item Buy 20 shares of the underlying stock\\
+        买入20股标的资产
+        \item Sell 20 shares of the underlying stock\\
+        卖出20股标的资产
+        \item Buy 10 shares of the underlying stock\\
+        买入10股标的资产
+        \item Sell 10 shares of the underlying stock\\
+        卖出10股标的资产
         \end{choices}
         
         \begin{correctanswer}
@@ -2509,13 +2743,23 @@ D
                 \item Put option B: delta = -0.50, gamma = 0.35, vega = 25.0
             \end{itemize}
             Along with the underlying shares, which combination of trades will make the total position delta-gamma-vega neutral?
+            \\一位组合经理持有以下希腊字母的头寸：德尔塔=-200，伽马=-100，维加=-2,000。为了实现希腊字母中性，经理可以在除了标的资产之外的交易哪些工具：
+            \begin{itemize}
+                \item 看涨期权A：德尔塔=0.50，伽马=0.25，维加=15.0
+                \item 看跌期权B：德尔塔=-0.50，伽马=0.35，维加=25.0
+            \end{itemize}
+            除了标的资产之外，哪一种交易组合将使整个头寸达到德尔塔-伽马-维加中性？
             \end{question}
             
             \begin{choices}
-            \item Long 600 calls; short 400 puts; and short 300 shares of the underlying stock
-            \item Short 1,000 calls; long 500 puts; and long 250 shares of the underlying stock
-            \item Long 1,200 calls; short 600 puts; and short 700 shares of the underlying stock
-            \item Short 800 calls; long 300 puts; and long 600 shares of the underlying stock
+            \item Long 600 calls; short 400 puts; and short 300 shares of the underlying stock\\
+            买入600张看涨期权；卖出400张看跌期权；卖出300股标的资产
+            \item Short 1,000 calls; long 500 puts; and long 250 shares of the underlying stock\\
+            卖出1,000张看涨期权；买入500张看跌期权；买入250股标的资产
+            \item Long 1,200 calls; short 600 puts; and short 700 shares of the underlying stock\\
+            买入1,200张看涨期权；卖出600张看跌期权；卖出700股标的资产
+            \item Short 800 calls; long 300 puts; and long 600 shares of the underlying stock\\
+            卖出800张看涨期权；买入300张看跌期权；买入600股标的资产
             \end{choices}
             
             \begin{correctanswer}
@@ -2574,13 +2818,19 @@ D
             \begin{question}
                 A trader sells 1 million European call options at a price of \$100 per share, with a strike price of \$105, a risk-free rate of 4\%, and a stock volatility of 25\%. The options have a one-year expiration. According to the Black-Scholes-Merton model, the theoretical price of the option is \$9.56 per share. The trader's total revenue is \$10 million, with a theoretical profit of \$440,000. The trader uses a stop-loss strategy for risk management.
                 Regarding the effectiveness of the stop-loss strategy, which of the following statements is correct?
+                \\一位交易员卖出100万份欧式看涨期权，每份期权价格为\$100，执行价格为\$105，无风险利率为4\%，股票波动率为25\%。期权有一年的到期时间。根据布莱克-斯科尔斯-默顿模型，期权的理论价格为\$9.56每股。交易员的总收入为\$10万，理论利润为\$440,000。交易员使用止损策略进行风险管理。
+                关于止损策略的有效性，哪一项陈述是正确的？
                 \end{question}
                 
                 \begin{choices}
-                \item The stop-loss strategy always ensures the trader makes a profit when the option is exercised, regardless of stock price movements.
-                \item The stop-loss strategy automatically executes when the stock price falls below \$105 to limit potential losses.
-                \item The stop-loss strategy limits potential losses by purchasing stock when the price exceeds \$105 and selling options when the price is below \$105 to gain profit.
-                \item The effectiveness of the stop-loss strategy depends on stock price movements and may not always be effective during high volatility.
+                \item The stop-loss strategy always ensures the trader makes a profit when the option is exercised, regardless of stock price movements.\\
+                止损策略总是确保交易员在期权被执行时总能获利，无论股票价格如何变动。
+                \item The stop-loss strategy automatically executes when the stock price falls below \$105 to limit potential losses.\\
+                止损策略在股票价格低于\$105时自动执行，以限制潜在损失。
+                \item The stop-loss strategy limits potential losses by purchasing stock when the price exceeds \$105 and selling options when the price is below \$105 to gain profit.\\
+                止损策略通过在价格超过\$105时购买股票，在价格低于\$105时卖出期权来获利，限制潜在损失。
+                \item The effectiveness of the stop-loss strategy depends on stock price movements and may not always be effective during high volatility.\\
+                止损策略的有效性取决于股票价格变动，在高波动性期间可能并不总是有效。
                 \end{choices}
                 
                 \begin{correctanswer}
@@ -2621,14 +2871,20 @@ D
 
 
 \begin{question}
-    In financial derivatives trading, Delta measures the sensitivity of an option's price to changes in the price of the underlying asset. Based on the characteristics of Delta, which of the following descriptions about different option positions is correct?
+    In financial derivatives trading, Delta measures the sensitivity of an option's price to changes in the price of the underlying asset. Based on the characteristics of Delta, which of the following descriptions about different option positions is correct?\\
+    在金融衍生品交易中，德尔塔衡量期权价格对标的资产价格变化的敏感度。基于德尔塔的特性，哪一项关于不同期权头寸的描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item When going long on a call option, Delta is negative, and an increase in the underlying asset's price leads to a decrease in the option's price.
-    \item When shorting a put option, Delta is negative, and a decrease in the underlying asset's price leads to an increase in the option's price.
-    \item When going long on a put option, Delta is positive, and a decrease in the underlying asset's price leads to a decrease in the option's price.
+    \item When going long on a call option, Delta is negative, and an increase in the underlying asset's price leads to a decrease in the option's price.\\
+    做多看涨期权时，德尔塔为负值，基础资产价格上涨会导致期权价格下跌。
+    \item When shorting a put option, Delta is negative, and a decrease in the underlying asset's price leads to an increase in the option's price.\\
+    做空看跌期权时，德尔塔为负值，基础资产价格下跌会导致期权价格上涨。
+    \item When going long on a put option, Delta is positive, and a decrease in the underlying asset's price leads to a decrease in the option's price.\\
+    做多看跌期权时，德尔塔为正值，基础资产价格下跌会导致期权价格下跌。
     \item When shorting a call option, Delta is negative, and an increase in the underlying asset's price leads to a decrease in the option's price.
+    \item When shorting a call option, Delta is negative, and an increase in the underlying asset's price leads to a decrease in the option's price.\\
+    做空看涨期权时，德尔塔为负值，基础资产价格上涨会导致期权价格下跌。
 \end{choices}
 
 \begin{correctanswer}
@@ -2662,13 +2918,18 @@ D
 
 \begin{question}
     Suppose we sold put options on 5,000 shares of stock. The \(\Delta\) value for the call option is 0.482, and the \(\Delta\) value for the put option is -0.207. Each stock option corresponds to one share of stock. If the hedging tool is either stock or call options, which of the following statements is correct?
+    \\假设我们卖出5,000股股票的看跌期权。看涨期权的德尔塔值为0.482，看跌期权的德尔塔值为-0.207。每份股票期权对应一份股票。如果对冲工具是股票或看涨期权，哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Sell 1,035 shares of stock or 2,147 call options for delta hedging.
-    \item Buy 1,035 shares of stock or 2,147 call options for delta hedging.
-    \item Sell 2,147 call options or 1,035 shares of stock for delta hedging.
-    \item Buy 2,147 call options or 1,035 shares of stock for delta hedging.
+    \item Sell 1,035 shares of stock or 2,147 call options for delta hedging.\\
+    卖出1,035股股票或2,147份看涨期权进行德尔塔对冲。
+    \item Buy 1,035 shares of stock or 2,147 call options for delta hedging.\\
+    买入1,035股股票或2,147份看涨期权进行德尔塔对冲。
+    \item Sell 2,147 call options or 1,035 shares of stock for delta hedging.\\
+    卖出2,147份看涨期权或1,035股股票进行德尔塔对冲。
+    \item Buy 2,147 call options or 1,035 shares of stock for delta hedging.\\
+    买入2,147份看涨期权或1,035股股票进行德尔塔对冲。
 \end{choices}
 
 \begin{correctanswer}
@@ -2711,14 +2972,19 @@ D
 
 
 \begin{question}
-    In the context of options trading, Gamma measures the rate of change of Delta in response to changes in the price of the underlying asset. Which of the following descriptions is correct based on the definition and role of Gamma?
+    In the context of options trading, Gamma measures the rate of change of Delta in response to changes in the price of the underlying asset. Which of the following descriptions is correct based on the definition and role of Gamma?\\
+    在期权交易中，伽马衡量德尔塔对标的资产价格变化的响应率。基于伽马的定义和作用，哪一项描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item When Gamma is high, Delta is insensitive to price changes, so frequent adjustments are not needed.
-    \item When Gamma is low, Delta is highly sensitive to price changes, so frequent adjustments are needed.
-    \item When Gamma is high, Delta is highly sensitive to price changes, so frequent adjustments are needed.
-    \item When Gamma is low, Delta is insensitive to price changes, so frequent adjustments are not needed.
+    \item When Gamma is high, Delta is insensitive to price changes, so frequent adjustments are not needed.\\
+    当伽马高时，德尔塔对价格变化不敏感，因此不需要频繁调整。
+    \item When Gamma is low, Delta is highly sensitive to price changes, so frequent adjustments are needed.\\
+    当伽马低时，德尔塔对价格变化非常敏感，因此需要频繁调整。
+    \item When Gamma is high, Delta is highly sensitive to price changes, so frequent adjustments are needed.\\
+    当伽马高时，德尔塔对价格变化非常敏感，因此需要频繁调整。
+    \item When Gamma is low, Delta is insensitive to price changes, so frequent adjustments are not needed.\\
+    当伽马低时，德尔塔对价格变化不敏感，因此不需要频繁调整。
 \end{choices}
 
 \begin{correctanswer}
@@ -2751,14 +3017,19 @@ D
 
 
 \begin{question}
-    An options trader at a hedge fund is currently evaluating the sensitivity of their portfolio to changes in market volatility. They need to understand how Vega affects option pricing to manage risk effectively. Based on the key characteristics of Vega, which of the following descriptions is correct?
+    An options trader at a hedge fund is currently evaluating the sensitivity of their portfolio to changes in market volatility. They need to understand how Vega affects option pricing to manage risk effectively. Based on the key characteristics of Vega, which of the following descriptions is correct?\\
+    一位对冲基金的期权交易员正在评估其投资组合对市场波动变化的敏感性。他们需要了解维加如何影响期权定价，以便有效地管理风险。基于维加的关键特征，哪一项描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item A higher Vega value means the option price is less sensitive to changes in volatility, so the hedging frequency can be reduced.
-    \item A lower Vega value means the option price is more sensitive to changes in volatility, so more frequent hedging is needed.
-    \item Vega is highest when the option is at-the-money and approaches zero when the option is deep in-the-money or out-of-the-money.
-    \item Vega is unaffected by the option's time to expiration and is only related to the underlying asset's volatility.
+    \item A higher Vega value means the option price is less sensitive to changes in volatility, so the hedging frequency can be reduced.\\
+    更高的维加值意味着期权价格对波动率变化的敏感度较低，因此对冲频率可以降低。
+    \item A lower Vega value means the option price is more sensitive to changes in volatility, so more frequent hedging is needed.\\
+    更低的维加值意味着期权价格对波动率变化的敏感度较高，因此需要更频繁的对冲。
+    \item Vega is highest when the option is at-the-money and approaches zero when the option is deep in-the-money or out-of-the-money.\\
+    当期权为平价时，维加值最高，当期权为深度价内或价外时，维加值趋近于零。
+    \item Vega is unaffected by the option's time to expiration and is only related to the underlying asset's volatility.\\
+    维加不受期权到期时间的影响，只与标的资产的波动率相关。
 \end{choices}
 
 \begin{correctanswer}
@@ -2792,14 +3063,19 @@ D
 
 
 \begin{question}
-    A risk analyst at a fixed-income investment firm is assessing the impact of time decay on their portfolio of long-term options. They need to understand how Theta affects these positions. Which of the following descriptions most accurately reflects the impact of Theta on long-term option positions?
+    A risk analyst at a fixed-income investment firm is assessing the impact of time decay on their portfolio of long-term options. They need to understand how Theta affects these positions. Which of the following descriptions most accurately reflects the impact of Theta on long-term option positions?\\
+    一位固定收益投资公司的风险分析师正在评估时间衰减对长期期权头寸的影响。他们需要了解西塔如何影响这些头寸。哪一项描述最准确地反映了西塔对长期期权头寸的影响？
 \end{question}
 
 \begin{choices}
-    \item Theta is typically positive for long-term option positions because the time value of the option increases over time, leading to a rise in the option's price.
-    \item Theta is typically negative for long-term option positions because the time value of the option decreases over time, leading to a decline in the option's price.
-    \item The value of Theta is unrelated to the option's Gamma because Theta only measures the impact of time decay on the option's price, while Gamma measures the sensitivity of Delta to changes in the underlying asset's price.
-    \item The value of Theta significantly increases as the option approaches expiration because the time value of the option rapidly decreases, causing the option's price to drop quickly.
+    \item Theta is typically positive for long-term option positions because the time value of the option increases over time, leading to a rise in the option's price.\\
+    长期期权的西塔通常为正值，因为期权的时间价值随着时间的推移而增加，导致期权价格上升。
+    \item Theta is typically negative for long-term option positions because the time value of the option decreases over time, leading to a decline in the option's price.\\
+    长期期权的西塔通常为负值，因为期权的时间价值随着时间的推移而减少，导致期权价格下降。
+    \item The value of Theta is unrelated to the option's Gamma because Theta only measures the impact of time decay on the option's price, while Gamma measures the sensitivity of Delta to changes in the underlying asset's price.\\
+    西塔值与期权的伽马无关，因为西塔只衡量时间衰减对期权价格的影响，而伽马衡量德尔塔对标的资产价格变化的敏感度。
+    \item The value of Theta significantly increases as the option approaches expiration because the time value of the option rapidly decreases, causing the option's price to drop quickly.\\
+    当期权接近到期时，西塔值显著增加，因为期权的时间价值迅速减少，导致期权价格迅速下降。
 \end{choices}
 
 \begin{correctanswer}
@@ -2835,14 +3111,19 @@ D
 \checklist{希腊字母的定义和性质（Theta和Gamma之间存在关系）}
 
 \begin{question}
-    A junior trader on a derivatives trading desk is reviewing the definitions of the Greeks in option pricing models to better understand their impact on option strategies. Based on the definitions of the Greeks, which of the following descriptions is correct?
+    A junior trader on a derivatives trading desk is reviewing the definitions of the Greeks in option pricing models to better understand their impact on option strategies. Based on the definitions of the Greeks, which of the following descriptions is correct?\\
+    一位初级衍生品交易员在审查期权定价模型中的希腊字母定义，以更好地理解它们对期权策略的影响。基于希腊字母的定义，哪一项描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Delta measures the sensitivity of the option's price to changes in the price of the underlying asset, while Gamma measures the sensitivity of the option's price to changes in volatility.
-    \item Vega measures the sensitivity of the option's price to changes in the risk-free interest rate, while Rho measures the sensitivity of the option's price to changes in the price of the underlying asset.
-    \item Theta measures the sensitivity of the option's price to the passage of time, while Vega measures the sensitivity of the option's price to changes in volatility.
-    \item Gamma measures the sensitivity of the option's price to the passage of time, while Theta measures the sensitivity of the option's price to changes in the price of the underlying asset.
+    \item Delta measures the sensitivity of the option's price to changes in the price of the underlying asset, while Gamma measures the sensitivity of the option's price to changes in volatility.\\
+    德尔塔衡量期权价格对标的资产价格变化的敏感度，而伽马衡量期权价格对波动率变化的敏感度。
+    \item Vega measures the sensitivity of the option's price to changes in the risk-free interest rate, while Rho measures the sensitivity of the option's price to changes in the price of the underlying asset.\\
+    维加衡量期权价格对无风险利率变化的敏感度，而rho衡量期权价格对标的资产价格变化的敏感度。
+    \item Theta measures the sensitivity of the option's price to the passage of time, while Vega measures the sensitivity of the option's price to changes in volatility.\\
+    西塔衡量期权价格对时间流逝的敏感度，而维加衡量期权价格对波动率变化的敏感度。
+    \item Gamma measures the sensitivity of the option's price to the passage of time, while Theta measures the sensitivity of the option's price to changes in the price of the underlying asset.\\
+    伽马衡量期权价格对时间流逝的敏感度，而西塔衡量期权价格对标的资产价格变化的敏感度。
 \end{choices}
 
 \begin{correctanswer}
@@ -2889,14 +3170,19 @@ D
 
 
 \begin{question}
-    A portfolio manager is considering using put options to protect their portfolio from market downturns while maintaining potential gains. Delta hedging is a key technique in achieving this protection, involving the creation of an offsetting position equal to the desired option Delta. Based on the principles of Delta hedging, which of the following descriptions is correct?
+    A portfolio manager is considering using put options to protect their portfolio from market downturns while maintaining potential gains. Delta hedging is a key technique in achieving this protection, involving the creation of an offsetting position equal to the desired option Delta. Based on the principles of Delta hedging, which of the following descriptions is correct?\\
+    一位组合经理正在考虑使用看跌期权来保护其投资组合免受市场下跌的影响，同时保持潜在收益。德尔塔对冲是实现这一保护的关键技术，涉及创建一个与所需期权德尔塔相等的反向头寸。基于德尔塔对冲的原则，哪一项描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item If the asset manager wants to purchase put option protection with a Delta of -0.236, she should sell 23.6\% of the portfolio.
-    \item If the asset manager wants to purchase put option protection with a Delta of -0.236, she should buy 23.6\% of the portfolio.
-    \item To match Delta, the asset manager should create an offsetting position using the underlying asset equal to the desired option Delta.
-    \item To match Delta, the asset manager should create a positive position using index futures equal to the desired option Delta.
+    \item If the asset manager wants to purchase put option protection with a Delta of -0.236, she should sell 23.6\% of the portfolio.\\
+    如果资产经理想要购买德尔塔为-0.236的看跌期权保护，她应该卖出投资组合的23.6\%。
+    \item If the asset manager wants to purchase put option protection with a Delta of -0.236, she should buy 23.6\% of the portfolio.\\
+    如果资产经理想要购买德尔塔为-0.236的看跌期权保护，她应该买入投资组合的23.6\%。
+    \item To match Delta, the asset manager should create an offsetting position using the underlying asset equal to the desired option Delta.\\
+    为了匹配德尔塔，资产经理应该创建一个与所需期权德尔塔相等的反向头寸使用标的资产。
+    \item To match Delta, the asset manager should create a positive position using index futures equal to the desired option Delta.\\
+    为了匹配德尔塔，资产经理应该创建一个正向头寸使用指数期货等于所需期权德尔塔。
 \end{choices}
 
 \begin{correctanswer}
@@ -2944,12 +3230,27 @@ D
         \hline
     \end{tabular}
 \end{center}
-
+    Ken管理一个德尔塔中性、200维加、30伽马的投资组合。有两个期权可供选择。根据以下表格中的信息，估计（a）在期权A和标的资产上应采取什么头寸以实现维加和德尔塔中性，以及（b）在期权B和标的资产上应采取什么头寸以实现伽马和德尔塔中性。
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            & Delta & Vega & Gamma \\
+            \hline
+            投资组合 & 0 & 200 & 30 \\
+            期权A & 0.5 & 2 & 0.3 \\
+            期权B & -0.8 & 4 & 0.6 \\
+            \hline
+        \end{tabular}
+    \end{center}
 \begin{choices}
-    \item For vega and delta neutrality: Take a -100 position in option A and buy 60 units of the underlying asset.
-    \item For vega and delta neutrality: Take a 100 position in option A and sell 50 units of the underlying asset.
-    \item For gamma and delta neutrality: Take a 50 position in option B and buy 40 units of the underlying asset.
-    \item For gamma and delta neutrality: Take a -50 position in option B and sell 40 units of the underlying asset.
+    \item For vega and delta neutrality: Take a -100 position in option A and buy 60 units of the underlying asset.\\
+    为了实现维加和德尔塔中性，应采取-100的期权A头寸和购买60个标的资产。
+    \item For vega and delta neutrality: Take a 100 position in option A and sell 50 units of the underlying asset.\\
+    为了实现维加和德尔塔中性，应采取100的期权A头寸和卖出50个标的资产。
+    \item For gamma and delta neutrality: Take a 50 position in option B and buy 40 units of the underlying asset.\\
+    为了实现伽马和德尔塔中性，应采取50的期权B头寸和购买40个标的资产。
+    \item For gamma and delta neutrality: Take a -50 position in option B and sell 40 units of the underlying asset.\\
+    为了实现伽马和德尔塔中性，应采取-50的期权B头寸和卖出40个标的资产。
 \end{choices}
 
 \begin{correctanswer}

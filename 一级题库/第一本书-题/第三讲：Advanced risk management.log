@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  4 DEC 2025 20:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  8 DEC 2025 10:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -667,8 +667,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count352
-
-No file "第三讲：Advanced risk management".aux.
+ (./第三讲：Advanced risk management.aux)
 \openout1 = `"第三讲：Advanced risk management.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
@@ -748,6 +747,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 84.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -783,13 +783,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 84.
+(./第三讲：Advanced risk management.out) (./第三讲：Advanced risk management.out)
 \@outlinefile=\write5
 \openout5 = `"第三讲：Advanced risk management.out"'.
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-No file "第三讲：Advanced risk management".toc.
+ (./第三讲：Advanced risk management.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+ (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+ (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write6
 \openout6 = `"第三讲：Advanced risk management.toc"'.
 
@@ -846,12 +852,12 @@ Package rerunfilecheck Info: File `"第三讲：Advanced risk management".out' h
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 26604 strings out of 475796
- 571681 string characters out of 5774033
- 969102 words of memory out of 5000000
- 49121 multiletter control sequences out of 15000+600000
- 560991 words of font info for 58 fonts, out of 8000000 for 9000
+ 26661 strings out of 475796
+ 572902 string characters out of 5774033
+ 993859 words of memory out of 5000000
+ 49153 multiletter control sequences out of 15000+600000
+ 563846 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,6n,111p,541b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,111p,594b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on 第三讲：Advanced risk management.pdf (17 pages).

@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}考点1}{2}{section.1}%
+\contentsline {subsection}{题号1考察: GARP行为准则。（职业操守和道德操守）}{2}{Item.4}%
+\contentsline {subsection}{题号2考察: GARP行为准则。（信息披露）}{3}{Item.8}%
+\contentsline {subsection}{题号3考察: GARP行为准则。（事实与意见的区分）}{3}{Item.12}%
+\contentsline {subsection}{题号4考察: GARP行为准则。（合规实践）}{4}{Item.16}%
+\contentsline {subsection}{题号5考察: 职业道德准则（不要做影响独立性和客观性的事情）}{4}{Item.20}%
+\contentsline {subsection}{题号6考察: GARP 的道德准则。（在道德准则和当地文化习俗产生矛盾和利益冲突时，GARP 会员应该遵守更高标准的规则）}{5}{Item.24}%
+\contentsline {subsection}{题号7考察: GARP协会对于会员的惩罚措施。（对于违反道德准则的会员，GARP协会有权暂时或永久移除违规者的会员资格，也有权暂时或永久移除违规者使用FRM称号的权利。）}{6}{Item.28}%
+\contentsline {subsection}{题号8考察: GARP行为准则及其在金融风险管理中的应用。（保密原则）}{7}{Item.32}%
+\contentsline {subsection}{题号9考察: GARP行为准则及其在招聘和风险管理中的应用。（不忽略候选人的职业道德历史）}{7}{Item.36}%
+\contentsline {subsection}{题号10考察: GARP行为准则及其在风险管理中的应用。（没有单一标准）}{8}{Item.40}%
+\contentsfinish 

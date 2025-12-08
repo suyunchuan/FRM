@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -97,14 +97,19 @@
 \setcounter{question}{0}
 
 \begin{question}
-    A risk analyst at a bank is studying two random variables:（1）Random variable \(X\): The number of customers served at the bank in one day；（2）Random variable \(Y\): The percentage change in returns of a financial product over a specific period. Which of the following statements about the properties of random variables \(X\) and \(Y\) is correct? 
+    A risk analyst at a bank is studying two random variables:（1）Random variable \(X\): The number of customers served at the bank in one day；（2）Random variable \(Y\): The percentage change in returns of a financial product over a specific period. Which of the following statements about the properties of random variables \(X\) and \(Y\) is correct? \\
+    一位银行的风险分析师正在研究两个随机变量：（1）随机变量\(X\)：银行一天内服务的客户数量；（2）随机变量\(Y\)：金融产品在特定时期内的收益率变化。哪一项关于随机变量\(X\)和\(Y\)的性质的陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item \(X\) is a continuous random variable because the number of customers can change continuously throughout the day.
-    \item \(Y\) is a discrete random variable because returns are typically reported in whole percentages.
-    \item Both \(X\) and \(Y\) are discrete random variables because their values are countable.
-    \item \(X\) has countable values, while \(Y\) can take any real number value.
+    \item \(X\) is a continuous random variable because the number of customers can change continuously throughout the day.\\
+    \(X\)是一个连续随机变量，因为客户数量可以在一天中连续变化。
+    \item \(Y\) is a discrete random variable because returns are typically reported in whole percentages.\\
+    \(Y\)是一个离散随机变量，因为收益率通常以整数百分比报告。
+    \item Both \(X\) and \(Y\) are discrete random variables because their values are countable.\\
+    \(X\)和\(Y\)都是离散随机变量，因为它们的值是可数的。
+    \item \(X\) has countable values, while \(Y\) can take any real number value.\\
+    \(X\)有可数的值，而\(Y\)可以取任何实数值。
 \end{choices}
 
 \begin{correctanswer}
@@ -138,14 +143,19 @@
 \checklist{离散型随机变量和连续型随机变量的定义及区别（理解可数性和不可数性的概念）}
 
 \begin{question}
-    A risk analyst at a hedge fund is studying portfolio returns. She needs to calculate the expected returns of various portfolios and their combinations. To ensure her analysis is correct, she reviews the fundamental properties of the expectation operator \(E[\cdot]\). Which of the following statements about the properties of expectation operator \(E[\cdot]\) is correct?
+    A risk analyst at a hedge fund is studying portfolio returns. She needs to calculate the expected returns of various portfolios and their combinations. To ensure her analysis is correct, she reviews the fundamental properties of the expectation operator \(E[\cdot]\). Which of the following statements about the properties of expectation operator \(E[\cdot]\) is correct?\\
+    一位对冲基金的风险分析师正在研究投资组合的收益率。她需要计算各种投资组合及其组合的期望收益率。为了确保她的分析正确，她回顾了期望算子\(E[\cdot]\)的基本性质。哪一项关于期望算子\(E[\cdot]\)的性质的陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The expectation operator \(E[\cdot]\) is not linear because it does not satisfy \(E[a + bX + cY] = a + bE[X] + cE[Y]\), where \(X\) and \(Y\) represent returns of two different portfolios.
-    \item For any constant return \(a\), \(E[a] = 0\) because constant returns do not vary over time.
-    \item For any portfolio return \(X\), \(E[E[X]] = E[X]\), which shows that the expectation of an expectation is the expectation itself.
-    \item For any non-zero portfolio return \(X\), \(E[1/X] = 1/E[X]\), which shows that the expectation operator applies to nonlinear functions of returns.
+    \item The expectation operator \(E[\cdot]\) is not linear because it does not satisfy \(E[a + bX + cY] = a + bE[X] + cE[Y]\), where \(X\) and \(Y\) represent returns of two different portfolios.\\
+    期望算子\(E[\cdot]\)不是线性的，因为它不满足\(E[a + bX + cY] = a + bE[X] + cE[Y]\)，其中\(X\)和\(Y\)代表两个不同投资组合的收益率。
+    \item For any constant return \(a\), \(E[a] = 0\) because constant returns do not vary over time.\\
+    对于任何常数收益率\(a\)，\(E[a] = 0\)，因为常数收益率不会随时间变化。
+    \item For any portfolio return \(X\), \(E[E[X]] = E[X]\), which shows that the expectation of an expectation is the expectation itself.\\
+    对于任何投资组合收益率\(X\)，\(E[E[X]] = E[X]\)，这表明期望的期望就是期望本身。
+    \item For any non-zero portfolio return \(X\), \(E[1/X] = 1/E[X]\), which shows that the expectation operator applies to nonlinear functions of returns.\\
+    对于任何非零投资组合收益率\(X\)，\(E[1/X] = 1/E[X]\)，这表明期望算子适用于收益率的非线性函数。
 \end{choices}
 
 
@@ -179,14 +189,19 @@
 \checklist{期望算子的基本性质（非线性变换下的期望）}
 
 \begin{question}
-    A quantitative analyst at a major investment bank is developing a risk model for asset returns. She needs to use cumulative distribution functions (CDFs) to model the probability distribution of returns. The analyst is reviewing the fundamental properties of CDFs to ensure her model is theoretically sound. Based on the definition and properties of CDFs, which of the following statements is correct?
+    A quantitative analyst at a major investment bank is developing a risk model for asset returns. She needs to use cumulative distribution functions (CDFs) to model the probability distribution of returns. The analyst is reviewing the fundamental properties of CDFs to ensure her model is theoretically sound. Based on the definition and properties of CDFs, which of the following statements is correct?\\
+    一位主要投资银行的风险分析师正在开发一个资产收益率的风险模型。她需要使用累积分布函数(CDF)来建模收益率的概率分布。分析师正在回顾CDF的基本性质，以确保她的模型在理论上是有根据的。基于CDF的定义和性质，哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item \(F(x)\) is unbounded because the value of the random variable can be arbitrarily large.
-    \item \(F(x)\) can decrease as \(x\) increases because the probability distribution may decrease in certain intervals.
-    \item \(P(x_1 < X \leq x_2) = F(x_2) - F(x_1)\) holds only when \(x_1\) and \(x_2\) are very close to each other.
-    \item \(F(x)\) is monotonically non-decreasing, and \(F(-\infty) = 0\), \(F(\infty) = 1\).
+    \item \(F(x)\) is unbounded because the value of the random variable can be arbitrarily large.\\
+    \(F(x)\)是无界的，因为随机变量的值可以任意大。
+    \item \(F(x)\) can decrease as \(x\) increases because the probability distribution may decrease in certain intervals.\\
+    \(F(x)\)可能随着\(x\)的增加而减少，因为概率分布在某些区间可能减少。
+    \item \(P(x_1 < X \leq x_2) = F(x_2) - F(x_1)\) holds only when \(x_1\) and \(x_2\) are very close to each other.\\ 
+    \(P(x_1 < X \leq x_2) = F(x_2) - F(x_1)\)只在\(x_1\)和\(x_2\)非常接近时成立。
+    \item \(F(x)\) is monotonically non-decreasing, and \(F(-\infty) = 0\), \(F(\infty) = 1\).\\
+    \(F(x)\)是单调非减的，且\(F(-\infty) = 0\)，\(F(\infty) = 1\)。
 \end{choices}
 
 \begin{correctanswer}
@@ -223,14 +238,19 @@
 
 
 \begin{question}
-    A risk analyst at a financial firm is studying probability functions. Let \(g(x)\) denote a probability function (probability mass function, PMF, for discrete random variables and probability density function, PDF, for continuous variables), and let \(G(x)\) represent the corresponding cumulative distribution function (CDF). For continuous variables, \(G(X)\) is the integral (or anti - derivative) of the PDF. Which of the following statements about these probability functions is false?
+    A risk analyst at a financial firm is studying probability functions. Let \(g(x)\) denote a probability function (probability mass function, PMF, for discrete random variables and probability density function, PDF, for continuous variables), and let \(G(x)\) represent the corresponding cumulative distribution function (CDF). For continuous variables, \(G(X)\) is the integral (or anti - derivative) of the PDF. Which of the following statements about these probability functions is false?\\
+    一位金融公司的风险分析师正在研究概率函数。令\(g(x)\)表示概率函数（离散随机变量的概率质量函数，PMF，和连续随机变量的概率密度函数，PDF），令\(G(x)\)表示相应的累积分布函数（CDF）。对于连续变量，\(G(X)\)是PDF的积分（或反导数）。哪一项关于这些概率函数的陈述是错误的？
     \end{question}
     
     \begin{choices}
-        \item For continuous random variables, the probability of a single point is zero; for example, \(\text{Pr}[S = - 2.50\%]=0\).
-        \item The cumulative distribution function (CDF) of any random variable, whether discrete or continuous, has a lower limit of zero and an upper limit of one; that is, \(G(-\infty)=0\) and \(G(+\infty)=1.0\).
-        \item Bayes' Theorem can be applied to both discrete and continuous random variables without the need to transform continuous variables into discrete ones.
-        \item The cumulative distribution function (CDF) of a discrete random variable may have flat regions, while for a continuous random variable, it is a strictly increasing function.
+        \item For continuous random variables, the probability of a single point is zero; for example, \(\text{Pr}[S = - 2.50\%]=0\).\\
+        对于连续随机变量，单个点的概率为零；例如，\(\text{Pr}[S = - 2.50\%]=0\)。
+        \item The cumulative distribution function (CDF) of any random variable, whether discrete or continuous, has a lower limit of zero and an upper limit of one; that is, \(G(-\infty)=0\) and \(G(+\infty)=1.0\).\\
+        任何随机变量的累积分布函数（CDF），无论是离散还是连续，都有一个下界为零和上界为1；即，\(G(-\infty)=0\)和\(G(+\infty)=1.0\)。
+        \item Bayes' Theorem can be applied to both discrete and continuous random variables without the need to transform continuous variables into discrete ones.\\
+        贝叶斯定理可以应用于离散和连续随机变量，而不需要将连续变量转换为离散变量。
+        \item The cumulative distribution function (CDF) of a discrete random variable may have flat regions, while for a continuous random variable, it is a strictly increasing function.\\
+        离散随机变量的累积分布函数可能有平坦区域，而连续随机变量的累积分布函数是严格递增的。
     \end{choices}
     
     \begin{correctanswer}
@@ -269,7 +289,18 @@ PMF (\(f(x)\)) & \(15k\) & \(8k\) & \(6k\) & \(4k\) & \(3k\) & \(2k\) & \(1k\) \
 \hline
 \end{tabular}
 \end{center}
-What is the approximate probability that less than three major loss events will occur next year?
+What is the approximate probability that less than three major loss events will occur next year?\\
+一位金融机构的风险分析师正在评估一个操作流程。一年期内重大损失事件的频率范围从0到6.0，由以下离散概率质量函数（pmf）描述，该函数表示完整的概率分布，其中\(k\)是一个常数。
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+损失事件 (\(X\)) & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+概率质量函数 (\(f(x)\)) & \(15k\) & \(8k\) & \(6k\) & \(4k\) & \(3k\) & \(2k\) & \(1k\) \\
+\hline
+\end{tabular}
+\end{center}
+明年发生少于三次重大损失事件的近似概率是多少？\\
 \end{question}
 
 \begin{choices}
@@ -300,7 +331,8 @@ What is the approximate probability that less than three major loss events will 
 \checklist{离散随机变量的累积分布函数的计算（利用概率加法公式计算特定事件的概率）}
 
 \begin{question}
-    A risk analyst at a bond - trading firm is assessing a zero - coupon bond with a notional value of \$12.00. The probability density function (pdf) of the bond's price \(x\) is \(f(x)=\frac{x}{10}-0.6\) for \(x\) in the domain \([6, 10]\). What is the probability that the price of the bond is between \$7.50 and \$8.50?
+    A risk analyst at a bond - trading firm is assessing a zero - coupon bond with a notional value of \$12.00. The probability density function (pdf) of the bond's price \(x\) is \(f(x)=\frac{x}{10}-0.6\) for \(x\) in the domain \([6, 10]\). What is the probability that the price of the bond is between \$7.50 and \$8.50?\\
+    一位债券交易公司的风险分析师正在评估一个面值为\$12.00的零息债券。该债券的价格\(x\)的概率密度函数为\(f(x)=\frac{x}{10}-0.6\)，在区间\([6, 10]\)内。债券价格在\$7.50和\$8.50之间的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -353,7 +385,24 @@ A junior risk analyst at an investment bank is examining two discrete random var
     \hline
     \end{tabular}
     \end{center}
-What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(Y|X = 8)\)?
+What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(Y|X = 8)\)? \\
+一位投资银行的初级风险分析师正在研究两个离散随机变量 \(X\) 和 \(Y\) 的以下联合分布。例如，\(P(X = 5,Y = 25)=0.08\)。
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{X的值} & \multicolumn{4}{|c|}{Y的值} \\
+    \cline{2-5}
+    & 15 & 25 & 35 & 45 \\
+    \hline
+    2 & 0.05 & 0.15 & 0.07 & 0.05 \\
+    \hline
+    5 & 0.13 & 0.19 & 0.08 & 0.06 \\
+    \hline
+    8 & 0.06 & 0.04 & 0.15 & 0.12 \\
+    \hline
+    \end{tabular}
+    \end{center}
+给定 \(X = 8\) 时，\(Y\) 的条件标准差是多少？即 \(SD(Y|X = 8)\)？ \\
 \end{question}
 
 \begin{choices}
@@ -419,7 +468,24 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
         \hline
         \end{tabular}
     \end{center}
-    Given that \(X\) and \(Y\) are independent, what is the expected value of the product of \(X\) and \(Y\), \(E(XY)\)?
+    Given that \(X\) and \(Y\) are independent, what is the expected value of the product of \(X\) and \(Y\), \(E(XY)\)?\\
+    一位金融研究公司的初级分析师正在研究两个随机变量 \(X = \{3, 8, \text{ 或 } 13\}\) 和 \(Y=\{2, 4, \text{ 或 } 6\}\)。以下概率矩阵显示了联合概率：
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        & \multicolumn{3}{|c|}{Y} \\
+        \cline{2-4}
+        X & 2 & 4 & 6 \\
+        \hline
+        3 & 6\% & 16\% & 6\% \\
+        \hline
+        8 & 11\% & 11\% & 31\% \\
+        \hline
+        13 & 6\% & 6\% & 16\% \\
+        \hline
+        \end{tabular}
+    \end{center}
+    给定 \(X\) 和 \(Y\) 是独立的，\(X\) 和 \(Y\) 的乘积的期望值是多少，即 \(E(XY)\)？\\
     \end{question}
     
     \begin{choices}
@@ -463,7 +529,8 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \checklist{独立随机变量的性质、边缘概率的计算以及期望的计算（关键是理解独立随机变量\(E(XY)\)的计算公式}
 
 \begin{question}
-    A risk analyst at an asset management firm is analyzing the cumulative distribution functions (CDFs) of four distinct random variables. Each random variable can only take values between -10 and 10. The dotted vertical line in each graph represents the mean of the distribution. Which of the following distributions has the highest variance?
+    A risk analyst at an asset management firm is analyzing the cumulative distribution functions (CDFs) of four distinct random variables. Each random variable can only take values between -10 and 10. The dotted vertical line in each graph represents the mean of the distribution. Which of the following distributions has the highest variance?\\
+    一位资产管理公司的风险分析师正在分析四个不同随机变量的累积分布函数（CDF）。每个随机变量只能取值在-10和10之间。每个图中虚线垂直线表示分布的均值。哪一种分布的方差最高？
     \end{question}
     
     \begin{choices}
@@ -502,7 +569,8 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
 
 
 \begin{question}
-    The risk manager of a global macro - investment fund is currently evaluating the performance of the international portfolio managers. The annualized total returns of a selected sample of these managers are 23\%, 19\%, 13\%, 20\%, 17\%. What is the appropriate unbiased sample variance of the returns data?
+    The risk manager of a global macro - investment fund is currently evaluating the performance of the international portfolio managers. The annualized total returns of a selected sample of these managers are 23\%, 19\%, 13\%, 20\%, 17\%. What is the appropriate unbiased sample variance of the returns data?\\
+    一位全球宏观投资基金的风险经理正在评估国际投资组合经理的表现。被选中的这些经理的年化总回报率为23\%，19\%，13\%，20\%，17\%。这些回报数据的适当无偏样本方差是多少？
     \end{question}
     
     \begin{choices}
@@ -552,13 +620,30 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \end{tabular}
     \end{center}
     The analyst claims that the distribution of Portfolio C is more peaked than a normal distribution and that the distribution of Portfolio D has a long tail on the left - hand side. Which of the following statements is true?
+    一位大型资产管理公司的金融分析师正在研究两个投资组合在同一时间段内的收益分布。该分析师收集了以下数据：
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    投资组合 & 偏度 & 峰度 \\
+    \hline
+    C & - 1.2 & 1.5 \\
+    \hline
+    D & 0.9 & 3.5 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    该分析师声称投资组合C的分布比正态分布更尖，而投资组合D的分布在左侧有长尾。下列关于这些陈述的陈述中，哪一项是正确的？
     \end{question}
     
     \begin{choices}
-        \item The analyst's claim is wrong for both portfolios.
-        \item The analyst's claim is correct for Portfolio C but wrong for Portfolio D.
-        \item The analyst's claim is wrong for Portfolio C but correct for Portfolio D.
-        \item The analyst's claim is correct for both portfolios.
+        \item The analyst's claim is wrong for both portfolios.\\
+        分析师对两个投资组合的说法都是错误的。
+        \item The analyst's claim is correct for Portfolio C but wrong for Portfolio D.\\
+        分析师对投资组合C的说法正确，而对投资组合D的说法错误。
+        \item The analyst's claim is wrong for Portfolio C but correct for Portfolio D.\\
+        分析师对投资组合C的说法错误，而对投资组合D的说法正确。
+        \item The analyst's claim is correct for both portfolios.\\
+        分析师对两个投资组合的说法都是正确的。
     \end{choices}
     
     \begin{correctanswer}
@@ -581,14 +666,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \checklist{偏度和峰度的概念及应用（关键是理解偏度和峰度与分布形状的关系）}
 
 \begin{question}
-    A risk analyst at an investment bank is comparing different probability distributions to assess the likelihood of a variable exceeding a specified extreme value. Given that all the distributions have the same mean and variance, and the extreme value \(X\) is greater than the mean, which type of distribution will yield the lowest probability for the variable to exceed \(X\)?
+    A risk analyst at an investment bank is comparing different probability distributions to assess the likelihood of a variable exceeding a specified extreme value. Given that all the distributions have the same mean and variance, and the extreme value \(X\) is greater than the mean, which type of distribution will yield the lowest probability for the variable to exceed \(X\)?\\
+    一位投资银行的风险分析师正在比较不同的概率分布，以评估变量超过指定极端值的可能性。给定所有分布具有相同的均值和方差，且极端值\(X\)大于均值，哪一种分布将使变量超过\(X\)的概率最低？
     \end{question}
     
     \begin{choices}
-        \item A platykurtic distribution
-        \item A normal distribution
-        \item A leptokurtic distribution with a kurtosis of 5
-        \item A leptokurtic distribution with a kurtosis of 10
+        \item A platykurtic distribution\\
+        一个平峰分布
+        \item A normal distribution\\
+        一个正态分布
+        \item A leptokurtic distribution with a kurtosis of 5\\
+        一个峰度为5的尖峰分布
+        \item A leptokurtic distribution with a kurtosis of 10\\
+        一个峰度为10的尖峰分布
     \end{choices}
     
     \begin{correctanswer}
@@ -609,14 +699,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \checklist{不同峰度分布的特点及极端值概率的比较（理解峰度与分布尾部厚度的关系）}
 
     \begin{question}
-        A financial analyst at a research firm is analyzing the return distribution of a particular company over a certain period. After conducting some calculations, the analyst discovers that the median return is 4.6\%, the mean return is 4.1\%, and the mode return is 4.9\%. Additionally, the calculated measure of kurtosis is 2.2. Based on this information, which of the following correctly characterizes the distribution of returns over time?
+        A financial analyst at a research firm is analyzing the return distribution of a particular company over a certain period. After conducting some calculations, the analyst discovers that the median return is 4.6\%, the mean return is 4.1\%, and the mode return is 4.9\%. Additionally, the calculated measure of kurtosis is 2.2. Based on this information, which of the following correctly characterizes the distribution of returns over time?\\
+        一位研究公司的金融分析师正在分析特定公司在某一时期内的收益率分布。经过一些计算，分析师发现中位数收益率为4.6\%，均值收益率为4.1\%，众数收益率为4.9\%。此外，计算出的峰度为2.2。基于这些信息，哪一项正确地描述了收益率随时间变化的分布？
         \end{question}
         
         \begin{choices}
-            \item Negative Platykurtic
-            \item Positive Leptokurtic
-            \item Positive Platykurtic
-            \item Negative Leptokurtic
+            \item Negative Platykurtic\\
+            负平峰
+            \item Positive Leptokurtic\\
+            正尖峰
+            \item Positive Platykurtic\\
+            正平峰
+            \item Negative Leptokurtic\\
+            负尖峰
         \end{choices}
         
         \begin{correctanswer}
@@ -640,14 +735,25 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \item Median:5.5\%
     \item Excess kurtosis:2.785
     \end{itemize}
-    Which of the following statements about skewness and kurtosis is most likely correct?
+    Which of the following statements about skewness and kurtosis is most likely correct?\\
+    一位风险分析师Lily，FRM，正在为一家咨询公司工作。她被一家客户公司委托评估一项股权投资，并创建了一个连续分布来评估其回报表现。Lily计算了以下统计数据：
+    \begin{itemize}
+    \item 均值：8.2\%
+    \item 中位数：5.5\%
+    \item 超额峰度：2.785
+    \end{itemize}
+    哪一项关于偏度和峰度的陈述最可能是正确的？
     \end{question}
     
     \begin{choices}
-        \item Positively skewed, Leptokurtic
-        \item Negatively skewed, Platykurtic
-        \item Positively skewed, Platykurtic
-        \item Negatively skewed, Leptokurtic
+        \item Positively skewed, Leptokurtic\\
+        正偏态，尖峰
+        \item Negatively skewed, Platykurtic\\
+        负偏态，平峰
+        \item Positively skewed, Platykurtic\\
+        正偏态，平峰
+        \item Negatively skewed, Leptokurtic\\
+        负偏态，尖峰
     \end{choices}
     
     \begin{correctanswer}
@@ -669,14 +775,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \end{explanation}
 
 \begin{question}
-    A risk analyst at an asset management firm is evaluating the return distribution of a particular investment fund. This return distribution has the same mean and variance as a normal distribution. However, it has a significant number of data points in both tails, and there are more observations in the right - hand tail than in the left - hand tail. Which of the following statements accurately characterizes this distribution?
+    A risk analyst at an asset management firm is evaluating the return distribution of a particular investment fund. This return distribution has the same mean and variance as a normal distribution. However, it has a significant number of data points in both tails, and there are more observations in the right - hand tail than in the left - hand tail. Which of the following statements accurately characterizes this distribution?\\
+    一位资产管理公司的风险分析师正在评估特定投资基金的回报分布。该回报分布的均值和方差与正态分布相同。然而，它在两侧都有大量数据点，并且右侧尾部有更多的观测值而不是左侧尾部。哪一项陈述准确地描述了这个分布？
     \end{question}
     
     \begin{choices}
-        \item Negatively skewed and Platykurtic.
-        \item Positively skewed and Leptokurtic.
-        \item Negatively skewed and Leptokurtic.
-        \item Positively skewed and Platykurtic.
+        \item Negatively skewed and Platykurtic.\\
+        负偏态，平峰
+        \item Positively skewed and Leptokurtic.\\
+        正偏态，尖峰
+        \item Negatively skewed and Leptokurtic.\\
+        负偏态，尖峰
+        \item Positively skewed and Platykurtic.\\
+        正偏态，平峰
     \end{choices}
     
     \begin{correctanswer}
@@ -712,7 +823,26 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
         \hline
         \end{tabular}
         \end{center}
-        What is the sample kurtosis?
+        What is the sample kurtosis?\\
+        一位股票对冲基金的风险分析师正在评估月度股票收益数据的特征。该分析师使用一个大小为380的样本。获得了以下汇总统计量：
+        \begin{center}
+        \begin{tabular}{|c|c|}
+        \hline
+        统计量 & 月度收益率 \\
+        \hline
+        均值 & 0.92\% \\
+        \hline
+        标准差 & 5.42\% \\
+        \hline
+        $\sum_{i = 1}^{380}(R_i-\bar{R})^3$ & - 0.027 \\
+        \hline
+        $\sum_{i = 1}^{380}(R_i-\bar{R})^4$ & 0.0032 \\
+        \hline
+        $n$ & 380 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        样本峰度是多少？\\
         \end{question}
         
         \begin{choices}
@@ -742,14 +872,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
         \checklist{样本峰度的计算（掌握样本峰度的计算公式）}
 
 \begin{question}
-    A risk analyst at a bank knows that the true distribution of returns is leptokurtic. When calculating the Value at Risk (VaR) assuming normality, which of the following statements is true?
+    A risk analyst at a bank knows that the true distribution of returns is leptokurtic. When calculating the Value at Risk (VaR) assuming normality, which of the following statements is true?\\
+    一位银行的风险分析师知道真实收益率分布是尖峰分布。在假设正态分布的情况下计算价值风险（VaR）时，哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item The 99\% VaR is overstated.
-        \item The 99\% VaR is understated.
-        \item The 99\% VaR is appropriate.
-        \item We cannot state the relationship between the true VaR and the calculated VaR.
+        \item The 99\% VaR is overstated.\\
+        99\% VaR被高估了。
+        \item The 99\% VaR is understated.\\
+        99\% VaR被低估了。
+        \item The 99\% VaR is appropriate.\\
+        99\% VaR是适当的。
+        \item We cannot state the relationship between the true VaR and the calculated VaR.\\
+        我们不能确定真实VaR和计算出的VaR之间的关系。
     \end{choices}
     
     \begin{correctanswer}
@@ -767,14 +902,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
 
 
         \begin{question}
-            An analyst at a quantitative investment firm is studying the relationship between two random variables. Given that a random variable \(X\) follows a normal distribution, and \(Y = C + D X\), where \(C\) and \(D\) are constants and \(D\) is negative. Which of the following statements is correct?
+            An analyst at a quantitative investment firm is studying the relationship between two random variables. Given that a random variable \(X\) follows a normal distribution, and \(Y = C + D X\), where \(C\) and \(D\) are constants and \(D\) is negative. Which of the following statements is correct?\\
+            一位量化投资公司的分析师正在研究两个随机变量之间的关系。给定一个随机变量\(X\)遵循正态分布，且\(Y = C + D X\)，其中\(C\)和\(D\)是常数，\(D\)是负数。哪一项陈述是正确的？
         \end{question}
         
         \begin{choices}
-            \item The skewness of \(Y\) is identical to the skewness of \(X\).
-            \item The mean of \(Y\) is identical to the mean of \(X\).
-            \item The kurtosis is not affected by decreasing linear transformations.
-            \item The location shift of \(C\) has an impact on the variance of \(Y\).
+            \item The skewness of \(Y\) is identical to the skewness of \(X\).\\
+            \(Y\)的偏度与\(X\)的偏度相同。
+            \item The mean of \(Y\) is identical to the mean of \(X\).\\
+            \(Y\)的均值与\(X\)的均值相同。
+            \item The kurtosis is not affected by decreasing linear transformations.\\
+            峰度不受减小线性变换的影响。
+            \item The location shift of \(C\) has an impact on the variance of \(Y\).\\
+            \(C\)的位置平移对\(Y\)的方差有影响。
         \end{choices}
         
         \begin{correctanswer}
@@ -830,14 +970,36 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \hline
     \end{tabular}
     \end{center}
-    Coincidentally, she finds another financial product \(Y\), whose return has a perfect linear relationship \(Y = - 4X+15\). Which of the following statements regarding \(Y\) is NOT correct?
+    Coincidentally, she finds another financial product \(Y\), whose return has a perfect linear relationship \(Y = - 4X+15\). Which of the following statements regarding \(Y\) is NOT correct?\\
+    一位金融集团的风险分析师Amy，FRM，正在分析一个金融产品。她将该产品的收益率表示为\(X\)。经过收集市场数据，她计算了\(X\)的四个命名矩：
+    \begin{center}
+    \begin{tabular}{|l|l|}
+    \hline
+    矩 & 值 \\
+    \hline
+    期望 & 10 \\
+    \hline
+    方差 & 16 \\
+    \hline
+    偏度 & - 5 \\
+    \hline
+    峰度 & 7 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    巧合的是，她发现另一个金融产品\(Y\)，其收益率与\(X\)有完美的线性关系\(Y = - 4X+15\)。哪一项关于\(Y\)的陈述是不正确的？
     \end{question}
     
     \begin{choices}
-        \item The expectation of \(Y\) equals to -25.
-        \item The standard deviation of \(Y\) equals to 16.
-        \item The skewness of \(Y\) equals to -5.
+        \item The expectation of \(Y\) equals to -25.\\
+        \(Y\)的期望等于-25。
+        \item The standard deviation of \(Y\) equals to 16.\\
+        \(Y\)的标准差等于16。
+        \item The skewness of \(Y\) equals to -5.\\
+        \(Y\)的偏度等于-5。
         \item The kurtosis of \(Y\) equals to 7.
+        \item The kurtosis of \(Y\) equals to 7.\\
+        \(Y\)的峰度等于7。
     \end{choices}
     
     \begin{correctanswer}
@@ -888,14 +1050,39 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \hline
     \end{tabular}
     \end{center}
-    What is the median and inter - quartile range (IQR) of this data set?
+    What is the median and inter - quartile range (IQR) of this data set?\\
+    一位风险分析师正在分析一个数据集。该数据集包含以下观测值：
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    观测值 & 值 \\
+    \hline
+    1 & 0.42 \\
+    \hline
+    2 & 0.32 \\
+    \hline
+    3 & 0.31 \\
+    \hline
+    4 & 1.02 \\
+    \hline
+    5 & 0.30 \\
+    \hline
+    6 & 0.47 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    中位数和四分位距（IQR）是多少？
     \end{question}
     
     \begin{choices}
-        \item The median is 0.37; the IQR is [0.3075, 0.4525].
-        \item The median is 0.42; the IQR is [0.3175, 0.4625].
-        \item The median is 0.67; the IQR is [0.3125, 0.4575].
-        \item The median is 0.32; the IQR is [0.3025, 0.4475].
+        \item The median is 0.37; the IQR is [0.3075, 0.4525].\\
+        中位数是0.37，四分位距是[0.3075, 0.4525]。
+        \item The median is 0.42; the IQR is [0.3175, 0.4625].\\
+        中位数是0.42，四分位距是[0.3175, 0.4625]。
+        \item The median is 0.67; the IQR is [0.3125, 0.4575].\\
+        中位数是0.67，四分位距是[0.3125, 0.4575]。
+        \item The median is 0.32; the IQR is [0.3025, 0.4475].\\
+        中位数是0.32，四分位距是[0.3025, 0.4475]。
     \end{choices}
     
     \begin{correctanswer}
@@ -920,14 +1107,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
     \checklist{中位数和四分位距的计算（四分位数的计算方法）}
 
 \begin{question}
-    A junior risk analyst named Leo, who is preparing for the FRM exam, is studying common measures used to describe observed data, including four named moments, quantiles, and the interquartile range. Regarding the properties of these measures, Leo makes the following statements. Which statement is correct?
+    A junior risk analyst named Leo, who is preparing for the FRM exam, is studying common measures used to describe observed data, including four named moments, quantiles, and the interquartile range. Regarding the properties of these measures, Leo makes the following statements. Which statement is correct?\\
+    一位风险分析师Leo，FRM，正在准备FRM考试。他正在研究用于描述观测数据的常见统计量，包括四个命名矩、分位数和四分位距。关于这些统计量的性质，Leo提出了以下陈述。哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item The interquartile range (IQR) is defined as the sum of the 75\% and 25\% quantiles.
-        \item If random variables have heavily fat tails, the interquartile range will not be robust to apply and well-defined.
-        \item The interquartile range (IQR) is typically used to measure the central tendency of the observed data.
-        \item The interquartile range (IQR) is a measure of dispersion that is distinct from the standard deviation in its sensitivity to extreme values.
+        \item The interquartile range (IQR) is defined as the sum of the 75\% and 25\% quantiles.\\
+        四分位距（IQR）定义为第75百分位数和第25百分位数之和。
+        \item If random variables have heavily fat tails, the interquartile range will not be robust to apply and well-defined.\\
+        如果随机变量具有严重肥尾，四分位距将不适用于应用和明确定义。
+        \item The interquartile range (IQR) is typically used to measure the central tendency of the observed data.\\
+        四分位距（IQR）通常用于测量观测数据的集中趋势。
+        \item The interquartile range (IQR) is a measure of dispersion that is distinct from the standard deviation in its sensitivity to extreme values.\\
+        四分位距（IQR）是衡量离散程度的一种指标，与标准差在对其敏感度上的差异。
     \end{choices}
     
     \begin{correctanswer}
@@ -957,14 +1149,19 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
 
 
 \begin{question}
-    A risk analyst at a global investment bank is analyzing the daily returns of various financial instruments. She needs to choose appropriate descriptive statistics to summarize the return distributions, particularly when dealing with extreme market conditions. Based on the definition and properties of descriptive statistics, which of the following statements is correct?
+    A risk analyst at a global investment bank is analyzing the daily returns of various financial instruments. She needs to choose appropriate descriptive statistics to summarize the return distributions, particularly when dealing with extreme market conditions. Based on the definition and properties of descriptive statistics, which of the following statements is correct?\\
+    一位全球投资银行的风险分析师正在分析各种金融工具的日收益率。她需要选择适当的描述性统计量来总结收益率分布，特别是在处理极端市场条件时。基于描述性统计量的定义和性质，哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The arithmetic mean provides enhanced stability in return analysis by giving equal weight to all observations, making it particularly reliable during market stress periods.
-    \item The median, as a positional measure, tends to better reflect the general level of returns when extreme values exist in the dataset.
-    \item The mode can effectively represent the central tendency of the data, and a dataset always has a unique mode.
-    \item The arithmetic mean's sensitivity to outliers makes it an optimal measure for risk assessment, as it captures the full impact of market volatility.
+    \item The arithmetic mean provides enhanced stability in return analysis by giving equal weight to all observations, making it particularly reliable during market stress periods.\\
+    算术平均数通过给予所有观测值相同权重，在收益率分析中提供了增强的稳定性，使其在市场压力期间特别可靠。
+    \item The median, as a positional measure, tends to better reflect the general level of returns when extreme values exist in the dataset.\\
+    中位数作为位置度量，倾向于更好地反映数据集中的收益率一般水平，尤其是在数据集中存在极端值时。
+    \item The mode can effectively represent the central tendency of the data, and a dataset always has a unique mode.\\
+    众数可以有效地代表数据的集中趋势，并且数据集总是有一个唯一的众数。
+    \item The arithmetic mean's sensitivity to outliers makes it an optimal measure for risk assessment, as it captures the full impact of market volatility.\\
+    算术平均数对异常值的敏感性使其成为风险评估的最佳测量方法，因为它能捕捉到市场波动影响的全部。
 \end{choices}
 
 \begin{correctanswer}
@@ -997,14 +1194,20 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
 
 
 \begin{question}
-    A derivatives trader at a global investment bank is pricing options on a volatile stock. She knows that Jensen's inequality is crucial for understanding why option prices differ from their intrinsic values, particularly for convex payoff functions. Based on the definition and properties of Jensen's inequality, which of the following statements is NOT correct?
+    A derivatives trader at a global investment bank is pricing options on a volatile stock. She knows that Jensen's inequality is crucial for understanding why option prices differ from their intrinsic values, particularly for convex payoff functions. Based on the definition and properties of Jensen's inequality, which of the following statements is NOT correct?\\
+    一位全球投资银行的对冲基金交易员正在为一只波动性股票定价期权。她知道Jensen不等式对于理解为什么期权价格不同于其内在价值至关重要，特别是对于凸收益函数。基于Jensen不等式的定义和性质，哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item If \(h(X)\) is a convex function, then \(E[h(X)] > h(E[X])\).
-    \item If \(g(X)\) is a concave function, then \(E[g(X)] < g(E[X])\).
-    \item In financial derivative pricing, the expected value of a convex function is always greater than the function of the expected value.
+    \item If \(h(X)\) is a convex function, then \(E[h(X)] > h(E[X])\).\\
+    如果\(h(X)\)是凸函数，则\(E[h(X)] > h(E[X])\)。
+    \item If \(g(X)\) is a concave function, then \(E[g(X)] < g(E[X])\).\\
+    如果\(g(X)\)是凹函数，则\(E[g(X)] < g(E[X])\)。
+    \item In financial derivative pricing, the expected value of a convex function is always greater than the function of the expected value.\\
+    在金融衍生品定价中，凸函数的期望值总是大于期望值的函数。
     \item Jensen's inequality does not apply to discrete random variables.
+    \item Jensen's inequality does not apply to discrete random variables.\\
+    Jensen不等式不适用于离散随机变量。
 \end{choices}
 
 \begin{correctanswer}
@@ -1049,13 +1252,18 @@ What is the conditional standard deviation of \(Y\) given \(X = 8\), i.e., \(SD(
 
 
 \begin{question}
-A portfolio manager at a hedge fund is analyzing the joint behavior of two asset returns during market stress periods. The manager wants to understand how extreme movements in one asset affect the other asset's returns, and is examining higher-order co-moments to improve portfolio risk management. Which of the following statements about coskewness and cokurtosis measures is correct?
+A portfolio manager at a hedge fund is analyzing the joint behavior of two asset returns during market stress periods. The manager wants to understand how extreme movements in one asset affect the other asset's returns, and is examining higher-order co-moments to improve portfolio risk management. Which of the following statements about coskewness and cokurtosis measures is correct?\\
+一位对冲基金的组合经理正在分析两个资产在市场压力期间的行为。经理想要理解一个资产的极端运动如何影响另一个资产的回报，并正在检查高阶共矩来改进投资组合风险管理。哪一项关于共偏度和共峰度测量的陈述是正确的？
 \end{question}
 \begin{choices}
-    \item When one variable takes a clear direction whenever the other variable is large in magnitude, the coskewness between the variables will be strictly positive.
-    \item Unlike skewness, the coskewness of two variables is unit-free but is not scale-free.
-    \item A standardized version of the cross-fourth central moment, the calculation of cokurtosis requires raising the standard deviation of one variable to the fourth power.
-    \item Cokurtosis measures the sensitivity of the magnitude of one variable to the magnitude of the other variable.
+    \item When one variable takes a clear direction whenever the other variable is large in magnitude, the coskewness between the variables will be strictly positive.\\
+    当一个变量在另一个变量取较大值时呈现明显方向性，两个变量之间的共偏度将是严格正的。
+    \item Unlike skewness, the coskewness of two variables is unit-free but is not scale-free.\\
+    与偏度不同，两个变量之间的共偏度是无单位的，但不是尺度不变的。
+    \item A standardized version of the cross-fourth central moment, the calculation of cokurtosis requires raising the standard deviation of one variable to the fourth power.\\
+    共峰度是交叉四阶中心矩的标准化版本，计算共峰度需要将一个变量的标准差提高到第四次方。
+    \item Cokurtosis measures the sensitivity of the magnitude of one variable to the magnitude of the other variable.\\
+    共峰度衡量一个变量的幅度对另一个变量幅度的敏感性。
 \end{choices}
 
 \begin{correctanswer}
@@ -1092,7 +1300,8 @@ D
 \section{考点2：Common Univariate Random Variables 常见单变量随机变量}
 \setcounter{question}{0}
 \begin{question}
-    A risk analyst at a fixed - income investment firm is assessing the default risk of a portfolio. The portfolio consists of seven bonds, and each bond has a 1 - year default probability of 13\%. The default events of these bonds are independent. What is the probability of exactly three bonds defaulting over the next year?
+    A risk analyst at a fixed - income investment firm is assessing the default risk of a portfolio. The portfolio consists of seven bonds, and each bond has a 1 - year default probability of 13\%. The default events of these bonds are independent. What is the probability of exactly three bonds defaulting over the next year?\\
+    一位固定收益投资公司的风险分析师正在评估一个投资组合的违约风险。该投资组合由七个债券组成，每个债券的1年违约概率为13\%。这些债券的违约事件是独立的。在未来一年内，恰好有三个债券违约的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -1121,14 +1330,19 @@ D
     \checklist{二项分布概率的计算（二项分布概率公式）}
 
 \begin{question}
-    A financial advisor is evaluating a binomial - distributed investment scenario. In this scenario, the probability of each success, \(p = 0.07\), and the total number of trials, \(n = 25\) trials. What is the inverse cumulative distribution function associated with a probability of 30.0\%?
+    A financial advisor is evaluating a binomial - distributed investment scenario. In this scenario, the probability of each success, \(p = 0.07\), and the total number of trials, \(n = 25\) trials. What is the inverse cumulative distribution function associated with a probability of 30.0\%?\\
+    一位金融顾问正在评估一个二项分布投资情景。在这个情景中，每次成功的概率为\(p = 0.07\)，试验次数为\(n = 25\)。与概率为30.0\%的逆累积分布函数相关的是多少？
     \end{question}
     
     \begin{choices}
-        \item Two successes
-        \item Zero successes
-        \item One success
-        \item Three successes
+        \item Two successes\\
+        两次成功
+        \item Zero successes\\
+        零次成功
+        \item One success\\
+        一次成功
+        \item Three successes\\
+        三次成功
     \end{choices}
     
     \begin{correctanswer}
@@ -1171,14 +1385,19 @@ D
     \checklist{二项分布逆累积分布函数的计算（二项分布累积分布函数公式和逆累积分布函数定义）}
 
 \begin{question}
-    A risk analyst at a large investment bank is assessing a portfolio of corporate bonds. All the bonds in the portfolio have an identical annualized probability of default, and the default events of these bonds are independent. Which type of distribution does the number of defaults in this portfolio over the next year follow?
+    A risk analyst at a large investment bank is assessing a portfolio of corporate bonds. All the bonds in the portfolio have an identical annualized probability of default, and the default events of these bonds are independent. Which type of distribution does the number of defaults in this portfolio over the next year follow?\\
+    一位大型投资银行的风险分析师正在评估一个企业债券投资组合。该投资组合中的所有债券具有相同的年化违约概率，且这些债券的违约事件是独立的。这一年中违约债券数量的分布类型是什么？
     \end{question}
     
     \begin{choices}
-        \item Exponential
-        \item Binomial
-        \item Normal
-        \item Bernoulli
+        \item Exponential\\
+        指数分布
+        \item Binomial\\
+        二项分布
+        \item Normal\\
+        正态分布
+        \item Bernoulli\\
+        伯努利分布
     \end{choices}
     
     \begin{correctanswer}
@@ -1208,14 +1427,19 @@ D
     \checklist{不同概率分布的适用场景（二项分布的定义及应用）}
 
     \begin{question}
-        A junior analyst at a financial research firm is studying probability distributions and their convergence properties. Which of the following distributions does NOT tend to approximate the normal distribution as one of its parameters increases?
+        A junior analyst at a financial research firm is studying probability distributions and their convergence properties. Which of the following distributions does NOT tend to approximate the normal distribution as one of its parameters increases?\\
+        一位金融研究公司的初级分析师正在研究概率分布及其收敛性质。哪一种分布在其中一个参数增加时不会趋近于正态分布？
         \end{question}
         
         \begin{choices}
-            \item Bernoulli
-            \item Poisson
-            \item Binomial
-            \item All of the above
+            \item Bernoulli\\
+            伯努利分布
+            \item Poisson\\
+            泊松分布
+            \item Binomial\\
+            二项分布
+            \item All of the above\\
+            以上所有
         \end{choices}
         
         \begin{correctanswer}
@@ -1245,7 +1469,8 @@ D
 
 
 \begin{question}
-    An investor is taking a multiple - choice quiz on financial knowledge. The quiz has eight questions, and each question has four choices. If the investor needs at least two correct answers to pass the quiz, what is the probability that the investor will pass simply by guessing?
+    An investor is taking a multiple - choice quiz on financial knowledge. The quiz has eight questions, and each question has four choices. If the investor needs at least two correct answers to pass the quiz, what is the probability that the investor will pass simply by guessing?\\
+    一位投资者正在参加一个金融知识的多项选择题测试。该测试有八个问题，每个问题有四个选项。如果投资者需要至少两个正确答案才能通过测试，那么投资者通过猜测的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -1279,14 +1504,19 @@ D
     \checklist{二项分布概率的计算（确定二项分布参数并利用对立事件简化计算）}
 
 \begin{question}
-    A risk analyst at a financial institution is conducting central tendency and dispersion analysis. The probability of a single - day exceedance (default) is 1.2\%. The analyst measures the mean and standard deviation of the distribution of exceedances over a period of 350 trading days. What are the mean and standard deviation of the number of exceedances?
+    A risk analyst at a financial institution is conducting central tendency and dispersion analysis. The probability of a single - day exceedance (default) is 1.2\%. The analyst measures the mean and standard deviation of the distribution of exceedances over a period of 350 trading days. What are the mean and standard deviation of the number of exceedances?\\
+    一位金融机构的风险分析师正在进行集中趋势和离散度分析。单日超额（违约）的概率为1.2\%。分析师测量了超过次数的分布在350个交易日内均值和标准差。超过次数的均值和标准差是多少？
     \end{question}
     
     \begin{choices}
-        \item Mean = 4.2, standard deviation = 2.04
-        \item Mean = 3.5, standard deviation = 1.87
-        \item Mean = 4.2, standard deviation = 1.87
-        \item Mean = 3.5, standard deviation = 2.04
+        \item Mean = 4.2, standard deviation = 2.04\\
+        均值 = 4.2，标准差 = 2.04
+        \item Mean = 3.5, standard deviation = 1.87\\
+        均值 = 3.5，标准差 = 1.87
+        \item Mean = 4.2, standard deviation = 1.87\\
+        均值 = 4.2，标准差 = 1.87
+        \item Mean = 3.5, standard deviation = 2.04\\
+        均值 = 3.5，标准差 = 2.04
     \end{choices}
     
     \begin{correctanswer}
@@ -1309,7 +1539,8 @@ D
     \checklist{二项分布的均值和标准差计算（简单用计算公式）}    
 
 \begin{question}
-    A customer service manager at an insurance call center knows that the call center receives an average of three phone calls per hour. What is the probability that the call center will receive 24 calls in a 7 - hour period?
+    A customer service manager at an insurance call center knows that the call center receives an average of three phone calls per hour. What is the probability that the call center will receive 24 calls in a 7 - hour period?\\
+    一位保险呼叫中心的服务经理知道呼叫中心每小时平均接到三个电话。在7小时内，呼叫中心接到24个电话的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -1339,7 +1570,8 @@ D
     \checklist{泊松分布概率的计算（确定泊松分布的参数\(\lambda\)并正确代入公式计算）}
     
     \begin{question}
-        A risk analyst at a financial institution is assessing the operational risk of a low - severity administrative process. This process typically generates an average of 12 errors per week (with each week consisting of five workdays). If the loss frequency of this process follows a Poisson distribution, which value is NEAREST to the probability that more than one error will occur tomorrow; i.e., \(P(K > 1|\lambda=\frac{12}{5})\)?
+        A risk analyst at a financial institution is assessing the operational risk of a low - severity administrative process. This process typically generates an average of 12 errors per week (with each week consisting of five workdays). If the loss frequency of this process follows a Poisson distribution, which value is NEAREST to the probability that more than one error will occur tomorrow; i.e., \(P(K > 1|\lambda=\frac{12}{5})\)?\\
+        一位金融机构的风险分析师正在评估一个低严重度行政流程的操作风险。这个流程通常每周平均产生12个错误（每周有5个工作日）。如果这个流程的损失频率遵循泊松分布，哪一个值最接近明天发生超过一个错误的概率；即，\(P(K > 1|\lambda=\frac{12}{5})\)?
         \end{question}
         
         \begin{choices}
@@ -1372,7 +1604,8 @@ D
         \checklist{泊松分布的概率计算（利用概率性质转化问题）}
 
 \begin{question}
-    An operational risk manager at a bank is using the Poisson distribution to estimate the frequency of losses exceeding USD 3 million in the next two - year period. Based on historical data from the past 12 years, the average frequency of losses greater than USD 3 million is 2 per year. Assuming that the past data is a good indicator of future events and all losses are independent, what is the probability of at most one loss over USD 3 million occurring during the next two years?
+    An operational risk manager at a bank is using the Poisson distribution to estimate the frequency of losses exceeding USD 3 million in the next two - year period. Based on historical data from the past 12 years, the average frequency of losses greater than USD 3 million is 2 per year. Assuming that the past data is a good indicator of future events and all losses are independent, what is the probability of at most one loss over USD 3 million occurring during the next two years?\\
+    一位银行的操作风险经理正在使用泊松分布来估计未来两年内损失超过300万美元的频率。根据过去12年的历史数据，损失超过300万美元的平均频率为每年2次。假设过去的数据是未来事件的良好指示，并且所有损失都是独立的，那么在接下来的两年内，损失超过300万美元的概率最多为一次的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -1404,7 +1637,8 @@ D
     \checklist{泊松分布的概率计算（先确定泊松分布的参数\(\lambda\)）}
 
 \begin{question}
-    A risk manager at a financial institution is back - testing the firm's model for estimating VaR. In the previous 180 trading days, the manager observes six exceedances. Assuming that the model is correctly calibrated and all exceedances are independent of each other, what is the probability that there are exactly eight exceedances over a period of 300 trading days?
+    A risk manager at a financial institution is back - testing the firm's model for estimating VaR. In the previous 180 trading days, the manager observes six exceedances. Assuming that the model is correctly calibrated and all exceedances are independent of each other, what is the probability that there are exactly eight exceedances over a period of 300 trading days?\\
+    一位金融机构的风险经理正在回测公司对价值风险（VaR）的模型。在过去的180个交易日中，经理观察到6次违约（exceedances）。假设模型正确校准，并且所有违约都是相互独立的，那么在300个交易日中，恰好有8次违约的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -1436,7 +1670,8 @@ D
 
 
 \begin{question}
-    A risk analyst is dealing with random variables. Given that \(X\) is a random variable following a Poisson distribution with \(\lambda = 3\). Define a new random variable \(Y = 2 + 3X\). What are the expectation and variance for \(Y\)?
+    A risk analyst is dealing with random variables. Given that \(X\) is a random variable following a Poisson distribution with \(\lambda = 3\). Define a new random variable \(Y = 2 + 3X\). What are the expectation and variance for \(Y\)?\\
+    一位风险分析师正在处理随机变量。给定\(X\)是一个遵循泊松分布的随机变量，\(\lambda = 3\)。定义一个新的随机变量\(Y = 2 + 3X\)。\(Y\)的期望和方差是多少？
     \end{question}
     
     \begin{choices}
@@ -1468,7 +1703,8 @@ D
     \checklist{随机变量线性变换后的期望和方差计算（用公式去理解）}
 
 \begin{question}
-    A risk analyst at a manufacturing firm is using the firm's proprietary forecasting model. The model assumes that the random variables follow the Poisson distribution. The analyst is evaluating the probability of the number of defects in an assembly production process of another company. Given that there is a 0.008 probability of a defect for every production run, what is the probability of having 5 defects in 800 production runs?
+    A risk analyst at a manufacturing firm is using the firm's proprietary forecasting model. The model assumes that the random variables follow the Poisson distribution. The analyst is evaluating the probability of the number of defects in an assembly production process of another company. Given that there is a 0.008 probability of a defect for every production run, what is the probability of having 5 defects in 800 production runs?\\
+    一位制造公司的风险分析师正在使用公司专有的预测模型。该模型假设随机变量遵循泊松分布。分析师正在评估另一个公司的装配生产过程中缺陷数量的概率。已知每次生产运行出现缺陷的概率为0.008，那么在800次生产运行中，恰好有5次缺陷的概率是多少？
     \end{question}
     
     \begin{choices}
@@ -1508,14 +1744,27 @@ D
         \item A Poisson distribution that models the frequency of system glitches in a trading day, where \(\lambda=7.0\).
         \item A binomial variable that describes the number of defaults in a portfolio of 60 bonds, each with a PD = 3\%; n = 60, p = 0.03.
         \end{itemize}
-        Which of the above has, respectively, the lowest value and highest value as its variance among the set?
+        Which of the above has, respectively, the lowest value and highest value as its variance among the set?\\
+        一位固定收益投资公司的风险分析师正在评估五个不同的随机变量以进行风险评估。这五个随机变量如下：
+        \begin{itemize}
+        \item 标准正态随机变量；无需参数。
+        \item 自由度为12的学生t分布；df = 12。
+        \item 表示贷款违约概率的伯努利变量，其中违约概率（PD）= 6\%；p = 0.06。
+        \item 模拟交易日内系统故障频率的泊松分布，其中 \(\lambda=7.0\)。
+        \item 描述60只债券投资组合中违约数量的二项变量，每只债券的PD = 3\%；n = 60，p = 0.03。
+        \end{itemize}
+        上述随机变量中，方差最低值和最高值分别是哪一个？\\
         \end{question}
         
         \begin{choices}
-            \item Binomial (lowest) and Student's t (highest)
-            \item Standard normal (lowest) and Bernoulli (highest)
-            \item Poisson (lowest) and Binomial (highest)
-            \item Bernoulli (lowest) and Poisson (highest)
+            \item Binomial (lowest) and Student's t (highest)\\
+            二项分布（最低）和学生t分布（最高）
+            \item Standard normal (lowest) and Bernoulli (highest)\\
+            标准正态分布（最低）和伯努利分布（最高）
+            \item Poisson (lowest) and Binomial (highest)\\
+            泊松分布（最低）和二项分布（最高）
+            \item Bernoulli (lowest) and Poisson (highest)\\
+            伯努利分布（最低）和泊松分布（最高）
         \end{choices}
         
         \begin{correctanswer}
@@ -1540,14 +1789,19 @@ D
         \checklist{不同概率分布方差的计算与比较（标准正态分布、学生\(t\)分布、伯努利分布、泊松分布、二项分布方差计算公式）}
 
 \begin{question}
-    A risk analyst at an asset management firm is comparing a normal distribution and a Student's t - distribution that have the same mean and standard deviation. Which of the following statements about their relationship is the most accurate?
+    A risk analyst at an asset management firm is comparing a normal distribution and a Student's t - distribution that have the same mean and standard deviation. Which of the following statements about their relationship is the most accurate?\\
+    一位资产管理公司的风险分析师正在比较正态分布和学生t分布，它们具有相同的均值和标准差。哪一项关于它们关系的陈述是最准确的？
     \end{question}
     
     \begin{choices}
-        \item The normal distribution and the Student's t - distribution have different skewness but the same kurtosis.
-        \item The normal distribution has larger skewness and larger kurtosis compared to the Student's t - distribution.
-        \item As the degrees of freedom increase, the kurtosis of the Student's t - distribution approaches that of the normal distribution.
-        \item The Student's t - distribution is a good approximation for the normal distribution when the number of degrees of freedom is small.
+        \item The normal distribution and the Student's t - distribution have different skewness but the same kurtosis.\\
+        正态分布和学生t分布具有不同的偏度和相同的峰度。
+        \item The normal distribution has larger skewness and larger kurtosis compared to the Student's t - distribution.\\
+        正态分布的偏度比学生t分布的偏度更大，峰度也比学生t分布的峰度更大。
+        \item As the degrees of freedom increase, the kurtosis of the Student's t - distribution approaches that of the normal distribution.\\
+        随着自由度增加，学生t分布的峰度趋近于正态分布的峰度。
+        \item The Student's t - distribution is a good approximation for the normal distribution when the number of degrees of freedom is small.\\
+        当自由度较小时，学生t分布是正态分布的良好近似。
     \end{choices}
     
     \begin{correctanswer}
@@ -1576,14 +1830,19 @@ D
     \checklist{正态分布和学生t分布的特征及关系（t分布的峰度随着自由度的增加逐渐趋近于正态分布的峰度）}
 
 \begin{question}
-    An investor is analyzing a situation similar to a quiz. Suppose there is a test with 25 true - false questions. A candidate has no knowledge of the content and randomly guesses the answers. How would you find the probability that the candidate will get 10 or fewer answers correct?
+    An investor is analyzing a situation similar to a quiz. Suppose there is a test with 25 true - false questions. A candidate has no knowledge of the content and randomly guesses the answers. How would you find the probability that the candidate will get 10 or fewer answers correct?\\
+    一位投资者正在分析一个类似测验的情况。假设有一个包含25个真假问题的测试。候选人对内容一无所知，随机猜测答案。你如何找到候选人答对10道或更少题目的概率？
         \end{question}
         
         \begin{choices}
-            \item Find the probability that \(X = 10\) in a binomial distribution with \(n = 25\) and \(p = 0.5\).
-            \item Find the area between 0 and 10 in a uniform distribution that goes from 0 to 25.
-            \item Find the cumulative probability for 10 in a binomial distribution with \(n = 25\) and \(p = 0.5\).
-            \item Find the probability that \(X = 10\) for a normal distribution with mean of 12.5 and standard deviation of \(\sqrt{6.25}\).
+            \item Find the probability that \(X = 10\) in a binomial distribution with \(n = 25\) and \(p = 0.5\).\\
+            在二项分布中找到\(X = 10\)的概率，其中\(n = 25\)，\(p = 0.5\)。
+            \item Find the area between 0 and 10 in a uniform distribution that goes from 0 to 25. \\
+            在从0到25的均匀分布中找到0到10之间的面积。
+            \item Find the cumulative probability for 10 in a binomial distribution with \(n = 25\) and \(p = 0.5\).\\
+            在二项分布中找到10的累积概率，其中\(n = 25\)，\(p = 0.5\)。
+            \item Find the probability that \(X = 10\) for a normal distribution with mean of 12.5 and standard deviation of \(\sqrt{6.25}\).\\
+            在正态分布中找到\(X = 10\)的概率，其中均值为12.5，标准差为\(\sqrt{6.25}\)。
         \end{choices}
         
         \begin{correctanswer}
@@ -1612,14 +1871,19 @@ D
         \checklist{二项分布累积概率的应用（关键是对累积分布函数定义的理解）}
 
 \begin{question}
-    A risk analyst at an investment bank is evaluating a portfolio that consists of five bonds. Each bond has a 1 - year default probability of 22\%. The default events of these bonds are independent. What is the mean and variance of the number of bonds defaulting over the next year?
+    A risk analyst at an investment bank is evaluating a portfolio that consists of five bonds. Each bond has a 1 - year default probability of 22\%. The default events of these bonds are independent. What is the mean and variance of the number of bonds defaulting over the next year?\\
+    一位投资银行的风险分析师正在评估一个由五只债券组成的投资组合。每只债券的1年违约概率为22\%。这些债券的违约事件是独立的。在未来一年内，违约债券数量的均值和方差是多少？
     \end{question}
     
     \begin{choices}
-        \item Mean = 0.22, variance = 0.86
-        \item Mean = 1.1, variance = 0.86
-        \item Mean = 1.1, variance = 0.98
-        \item Mean = 0.22, variance = 0.98
+        \item Mean = 0.22, variance = 0.86\\
+        均值 = 0.22，方差 = 0.86
+        \item Mean = 1.1, variance = 0.86\\
+        均值 = 1.1，方差 = 0.86
+        \item Mean = 1.1, variance = 0.98\\
+        均值 = 1.1，方差 = 0.98
+        \item Mean = 0.22, variance = 0.98\\
+        均值 = 0.22，方差 = 0.98
     \end{choices}
     
     \begin{correctanswer}
@@ -1646,7 +1910,8 @@ D
     \checklist{二项分布的均值和方差的计算（每个分布的均值和方差都应该记住）}
 
 \begin{question}
-    A risk analyst knows that the variable \(Y\) is a normal random variable with \(Y\sim N(\mu,\sigma^{2})\). Which of the following \(X\) variables is log - normally distributed?
+    A risk analyst knows that the variable \(Y\) is a normal random variable with \(Y\sim N(\mu,\sigma^{2})\). Which of the following \(X\) variables is log - normally distributed?\\
+    一位风险分析师知道变量\(Y\)是一个正态随机变量，\(Y\sim N(\mu,\sigma^{2})\)。哪一个\(X\)变量是对数正态分布的？
     \end{question}
     
     \begin{choices}
@@ -1670,14 +1935,19 @@ D
     \checklist{对数正态分布的定义和性质（关键是理解对数正态分布与正态分布之间的关系）}
 
     \begin{question}
-        Given two independent variables \( X \) and \( Y \) that follow a lognormal distribution, which of the following statements is true regarding the distribution of the product \( Z = X \times Y \)?
+        Given two independent variables \( X \) and \( Y \) that follow a lognormal distribution, which of the following statements is true regarding the distribution of the product \( Z = X \times Y \)?\\
+        给定两个独立变量\( X \)和\( Y \)，它们服从对数正态分布，哪一项陈述关于乘积\( Z = X \times Y \)的分布是正确的？
         \end{question}
         
         \begin{choices}
-            \item The distribution of \( Z \) is Normal.
-            \item The distribution of \( Z \) is Lognormal.
-            \item The distribution of \( Z \) is Exponential.
-            \item The distribution of \( Z \) is None of the above.
+            \item The distribution of \( Z \) is Normal.\\
+            分布\( Z \)是正态分布。
+            \item The distribution of \( Z \) is Lognormal.\\
+            分布\( Z \)是对数正态分布。
+            \item The distribution of \( Z \) is Exponential.\\
+            分布\( Z \)是指数分布。
+            \item The distribution of \( Z \) is None of the above.\\
+            分布\( Z \)不是上述任何一种。
         \end{choices}
         
         \begin{correctanswer}
@@ -1695,7 +1965,8 @@ D
         \checklist{正态分布和对数正态分布的性质（两个独立的正态分布变量的和仍然是正态分布）}
 
 \begin{question}
-    A financial analyst conducts a multivariate regression using a sample of 35 observations (\(n = 35\)). The regression results in five regression coefficients, including an intercept and four partial - slope coefficients. The OLS estimates follow a Student's \(t\) distribution. What are the variance and kurtosis of this Student's \(t\) distribution respectively?
+    A financial analyst conducts a multivariate regression using a sample of 35 observations (\(n = 35\)). The regression results in five regression coefficients, including an intercept and four partial - slope coefficients. The OLS estimates follow a Student's \(t\) distribution. What are the variance and kurtosis of this Student's \(t\) distribution respectively?\\
+    一位金融分析师使用35个观测值（\(n = 35\)）进行多元回归。回归结果包括五个回归系数，包括截距项和四个偏回归系数。OLS估计遵循学生t分布。这个学生t分布的方差和峰度分别是多少？
     \end{question}
     
     \begin{choices}
@@ -1727,14 +1998,19 @@ D
     \checklist{Student's \(t\)分布的参数计算（利用自由度计算Student's \(t\)分布的方差和峰度）}
 
 \begin{question}
-    A risk analyst is comparing the relationship between a normal distribution and a Student's t - distribution with the same mean and standard deviation. Which of the following statements is correct?
+    A risk analyst is comparing the relationship between a normal distribution and a Student's t - distribution with the same mean and standard deviation. Which of the following statements is correct?\\
+    一位风险分析师正在比较正态分布和学生t分布，它们具有相同的均值和标准差。哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item They have the same skewness and the same kurtosis.
-        \item The Student's t - distribution has a smaller skewness and a smaller kurtosis.
-        \item The kurtosis of a Student's t - distribution converges to that of the normal distribution as the number of degrees of freedom increases.
-        \item Given the same confidence level, t - distribution has a narrower confidence interval than the z - distribution.
+        \item They have the same skewness and the same kurtosis.\\
+        它们具有相同的偏度和相同的峰度。
+        \item The Student's t - distribution has a smaller skewness and a smaller kurtosis.\\
+        学生t分布具有较小的偏度和较小的峰度。
+        \item The kurtosis of a Student's t - distribution converges to that of the normal distribution as the number of degrees of freedom increases.\\
+        随着自由度增加，学生t分布的峰度趋近于正态分布的峰度。
+        \item Given the same confidence level, t - distribution has a narrower confidence interval than the z - distribution.\\
+        给定相同的置信水平，t分布的置信区间比z分布更窄。
     \end{choices}
     
     \begin{correctanswer}
@@ -1764,14 +2040,19 @@ D
 
 
 \begin{question}
-    A financial analyst at an asset management firm is evaluating the use of statistical distributions for hypothesis testing in regression models. Each of the following statements regarding the chi - square and F distributions is true EXCEPT:
+    A financial analyst at an asset management firm is evaluating the use of statistical distributions for hypothesis testing in regression models. Each of the following statements regarding the chi - square and F distributions is true EXCEPT:\\
+    一位资产管理公司的金融分析师正在评估统计分布在回归模型假设检验中的使用。以下关于卡方分布和F分布的陈述中，哪一项是正确的？
     \end{question}
     
     \begin{choices}
-        \item Given a calculated F - ratio, where \(F=\frac{(ESS/df_1)}{(SSR/df_2)}\), along with the sample size \(n\) and the number of independent variables \(k\), one can compute the adjusted coefficient of determination \(\bar{R}^2\) in a multiple regression.
-        \item The F - distribution is employed to test whether all the slope coefficients in a multiple regression are zero, determining if the overall regression model is significant.
-        \item As the degrees of freedom increase, the chi - square distribution approaches a normal distribution, while the F - distribution approaches a  lognormal distribution.
-        \item The chi - square distribution is utilized to test if the variance of a sample comes from a population with a pre - specified variance; that is, given an observed sample variance, is the true population variance different from a hypothesized value?
+        \item Given a calculated F - ratio, where \(F=\frac{(ESS/df_1)}{(SSR/df_2)}\), along with the sample size \(n\) and the number of independent variables \(k\), one can compute the adjusted coefficient of determination \(\bar{R}^2\) in a multiple regression.\\
+        给定一个计算出的F比率，其中\(F=\frac{(ESS/df_1)}{(SSR/df_2)}\)，加上样本量\(n\)和独立变量个数\(k\)，可以在多元回归中计算调整的决定系数\(\bar{R}^2\)。
+        \item The F - distribution is employed to test whether all the slope coefficients in a multiple regression are zero, determining if the overall regression model is significant.\\
+        F分布用于检验多元回归中的所有斜率系数是否同时为零，确定整体回归模型是否显著。
+        \item As the degrees of freedom increase, the chi - square distribution approaches a normal distribution, while the F - distribution approaches a  lognormal distribution.\\
+        随着自由度增加，卡方分布趋近于正态分布，而F分布趋近于对数正态分布。
+        \item The chi - square distribution is utilized to test if the variance of a sample comes from a population with a pre - specified variance; that is, given an observed sample variance, is the true population variance different from a hypothesized value?\\
+        卡方分布用于检验样本方差是否来自具有特定方差的总体。即，给定一个观察到的样本方差，真总体方差是否不同于假设值？
     \end{choices}
     
     \begin{correctanswer}
@@ -1800,14 +2081,18 @@ D
     \checklist{卡方分布和F分布的性质及在多元回归中的应用（随着自由度的增加，卡方分布和F分布都趋近于正态分布）}
 
 \begin{question}
-    A risk analyst at a fixed - income investment firm is reviewing distributions. In regard to the chi-squared and F - distribution, each of the following is true EXCEPT which is false?
+    A risk analyst at a fixed - income investment firm is reviewing distributions. In regard to the chi-squared and F - distribution, each of the following is true EXCEPT which is false?\\
+    一位固定收益投资公司的风险分析师正在评估分布。在卡方分布和F分布方面，以下哪一项是正确的，除了哪一项是错误的？
     \end{question}
     
     \begin{choices}
-        \item Both the chi-squared and F - distribution are non - negative and positively skewed to the right.
+        \item Both the chi-squared and F - distribution are non - negative and positively skewed to the right.\\
+        卡方分布和F分布都是非负的，并且右偏态。
         \item The square of variable with a student’s t distribution with df = k has an F - distribution with 1 and k df.
-        \item The sum of two independent chi-squared variables, with respectively k1 and k2 degrees of freedom, is itself chi-squared with (k1 + k2) degrees of freedom.
-        \item The chi-squared distribution is approximated by the ratio of two independent F.
+        \item The sum of two independent chi-squared variables, with respectively k1 and k2 degrees of freedom, is itself chi-squared with (k1 + k2) degrees of freedom.\\
+        两个独立的卡方变量，自由度分别为k1和k2，它们的和服从自由度为k1 + k2的卡方分布。
+        \item The chi-squared distribution is approximated by the ratio of two independent F.\\
+        卡方分布是由两个独立F分布的比值来近似的。
     \end{choices}
     
     \begin{correctanswer}
@@ -1836,14 +2121,19 @@ D
     \checklist{卡方分布、F分布以及学生t分布的性质和关系（卡方分布并不是由两个独立F分布的比值来近似的）}
 
 \begin{question}
-    A junior analyst at a prestigious investment bank has been tasked with giving a presentation on commonly used distributions in finance to finance undergraduates. While preparing, the analyst identifies some frequently misunderstood concepts and plans to include a short quiz during the presentation. Which of the following statements is most likely correct?
+    A junior analyst at a prestigious investment bank has been tasked with giving a presentation on commonly used distributions in finance to finance undergraduates. While preparing, the analyst identifies some frequently misunderstood concepts and plans to include a short quiz during the presentation. Which of the following statements is most likely correct?\\
+    一位知名的投资银行初级分析师被要求向金融学本科生介绍常用的金融分布。在准备过程中，分析师识别了一些常见的误解概念，并计划在演讲中包括一个简短的测验。以下哪一项陈述最可能正确？
     \end{question}
     
     \begin{choices}
-        \item The graphs of PDFs (probability density functions) for lognormal distribution, $\chi^{2}$ distribution and F - distribution are alike, all of which are left - skewed and bounded from below by zero.
-        \item Lognormal distribution is used to model asset returns.
-        \item When two normal distributions are mixed, the mixed distribution may be skewed.
-        \item T - distribution is more suitable in a joint test than F - distribution.
+        \item The graphs of PDFs (probability density functions) for lognormal distribution, $\chi^{2}$ distribution and F - distribution are alike, all of which are left - skewed and bounded from below by zero.\\
+        对数正态分布、卡方分布和F分布的概率密度函数图像都是左偏态，且都以零为下界。
+        \item Lognormal distribution is used to model asset returns.\\
+        对数正态分布用于模拟资产回报。
+        \item When two normal distributions are mixed, the mixed distribution may be skewed.\\
+        当两个正态分布混合时，混合分布可能会出现偏态。
+        \item T - distribution is more suitable in a joint test than F - distribution.\\
+        t分布在联合检验中比F分布更合适。
     \end{choices}
     
     \begin{correctanswer}
@@ -1872,14 +2162,19 @@ D
     \checklist{各类分布的特点及应用（对数正态分布、卡方分布、F分布、t分布以及混合分布的特征）}
 
     \begin{question}
-        An analyst at a quantitative investment firm is examining the combination of two normal distributions. Both distributions have a mean of 0, but different variances: N(0, 2) and N(0, 5). If the analyst uses the standard method to mix these two distributions, which of the following statements correctly describes the resulting mixture distribution?
+        An analyst at a quantitative investment firm is examining the combination of two normal distributions. Both distributions have a mean of 0, but different variances: N(0, 2) and N(0, 5). If the analyst uses the standard method to mix these two distributions, which of the following statements correctly describes the resulting mixture distribution?\\
+        一位量化投资公司的分析师正在检查两个正态分布的组合。两个分布的均值为0，但方差不同：N(0, 2)和N(0, 5)。如果分析师使用标准方法将这两个分布混合，哪一项陈述正确描述了混合后的分布？
         \end{question}
         
         \begin{choices}
-            \item The resulting distribution will not be normal. In fact, it will be skewed and have heavy tails.
-            \item The resulting distribution will also be normal, with a mean of 0 and a variance of 3.5.
-            \item The resulting distribution will not be normal. In fact, it will be bimodal.
-            \item The resulting distribution will not be normal. In fact, it will have extremely heavy tails.
+            \item The resulting distribution will not be normal. In fact, it will be skewed and have heavy tails.\\
+            混合后的分布将不是正态分布，实际上是偏态且有重的尾部。
+            \item The resulting distribution will also be normal, with a mean of 0 and a variance of 3.5.\\
+            混合后的分布也将是正态分布，均值为0，方差为3.5。
+            \item The resulting distribution will not be normal. In fact, it will be bimodal.\\
+            混合后的分布将不是正态分布，实际上是双峰分布。
+            \item The resulting distribution will not be normal. In fact, it will have extremely heavy tails.\\
+            混合后的分布将不是正态分布，实际上有非常重的尾部。
         \end{choices}
         
         \begin{correctanswer}
@@ -1904,14 +2199,19 @@ D
 
 
         \begin{question}
-            A quantitative analyst at a hedge fund is studying the t-distribution for modeling asset returns, particularly during market stress periods when returns often exhibit fat tails. The analyst is reviewing the properties of t-distribution's probability density function (PDF) with different degrees of freedom (df). Based on the definition and properties of t-distribution, which of the following statements is NOT correct?
+            A quantitative analyst at a hedge fund is studying the t-distribution for modeling asset returns, particularly during market stress periods when returns often exhibit fat tails. The analyst is reviewing the properties of t-distribution's probability density function (PDF) with different degrees of freedom (df). Based on the definition and properties of t-distribution, which of the following statements is NOT correct?\\
+            一位对冲基金的量化分析师正在研究t分布用于模拟资产回报，特别是在市场压力时期，回报通常具有厚的尾部。分析师正在审查t分布的概率密度函数（PDF）的不同自由度（df）的性质。根据t分布的定义和性质，以下哪一项陈述是不正确的？
         \end{question}
         
         \begin{choices}
-            \item The probability density function of t-distribution is parameterized by its degrees of freedom \(df\), where \(df = n-1\).
-            \item The probability density function of t-distribution is bell-shaped, symmetric around zero, with tails heavier than the normal distribution.
-            \item As the degrees of freedom \(df\) increases, the t-distribution's probability density function approaches the normal distribution.
+            \item The probability density function of t-distribution is parameterized by its degrees of freedom \(df\), where \(df = n-1\).\\
+            t分布的概率密度函数由其自由度 \(df\) 参数化，其中 \(df = n-1\)。
+            \item The probability density function of t-distribution is bell-shaped, symmetric around zero, with tails heavier than the normal distribution.\\
+            t分布的概率密度函数形状为钟形，且关于y轴对称，相比正态分布，t分布具有更厚的尾部，这使其更适合建模金融资产收益率的极端值。
+            \item As the degrees of freedom \(df\) increases, the t-distribution's probability density function approaches the normal distribution.\\
+            随着自由度 \(df\) 增加，t分布的概率密度函数趋近于正态分布。
             \item The probability density function of t-distribution reaches its maximum skewness when \(df = 1\).
+            t分布的概率密度函数在 \(df = 1\) 时达到最大偏度。
         \end{choices}
         
         \begin{correctanswer}
@@ -1951,7 +2251,15 @@ A portfolio manager at a hedge fund is evaluating a dynamic investment strategy 
     \item Asset 2 follows a uniform distribution: \(X_2 \sim U(11,20)\)
     \item A switching parameter \(W\) follows a Bernoulli distribution with \(p = 0.4\)
 \end{itemize}
-The portfolio value is defined as \(Y = W \cdot X_1 + (1-W) \cdot X_2\). What is the expected value of Y?
+The portfolio value is defined as \(Y = W \cdot X_1 + (1-W) \cdot X_2\). What is the expected value of Y?\\
+
+    一位对冲基金的组合经理正在评估一个动态投资策略，该策略结合了两种具有不同分布的资产。策略涉及：
+    \begin{itemize}
+        \item 资产1遵循均匀分布：\(X_1 \sim U(5,10)\)
+        \item 资产2遵循均匀分布：\(X_2 \sim U(11,20)\)
+        \item 切换参数 \(W\) 遵循伯努利分布，其中 \(p = 0.4\)
+    \end{itemize}
+    组合价值定义为 \(Y = W \cdot X_1 + (1-W) \cdot X_2\)。Y的期望值是多少？
 \end{question}
 
 \begin{choices}
@@ -2004,7 +2312,22 @@ B
         \hline
         \end{tabular}
     \end{center}
-    Suppose the factor sensitivities to the global equity factor are 0.7 for Market C and 0.95 for Market D, and the factor sensitivities to the global bond factors are 0.45 for Market C and 0.65 for Market D. The covariance between Market C and Market D is closest to:
+    Suppose the factor sensitivities to the global equity factor are 0.7 for Market C and 0.95 for Market D, and the factor sensitivities to the global bond factors are 0.45 for Market C and 0.65 for Market D. The covariance between Market C and Market D is closest to:\\
+    Emma Davis是一位大型国际银行的风险经理，她正在使用双因子模型评估市场C和市场D：
+    \[R_j=\alpha_j+\beta_{j,1}F_1+\beta_{j,2}F_2+\epsilon_j\]
+    其中 \(R_j\) 是资产 \(j\) 的收益率，\(\beta\) 是因子敏感性，\(F\) 是因子。随机误差 \(\epsilon_j\) 的均值为零，且与因子以及其他资产收益的随机误差不相关。为了计算市场C和市场D之间的协方差，Davis构建了以下全球资产的因子协方差矩阵：
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        & 全球债券因子 & 全球股票因子 \\
+        \hline
+        全球债券因子 & 0.009 & 0.015 \\
+        \hline
+        全球股票因子 & 0.015 & 0.38 \\
+        \hline
+        \end{tabular}
+    \end{center}
+    假设对全球股票因子的因子敏感性，市场C为0.7，市场D为0.95；对全球债券因子的因子敏感性，市场C为0.45，市场D为0.65。市场C和市场D之间的协方差最接近：\\
     \end{question}
     
     \begin{choices}
@@ -2057,7 +2380,8 @@ B
         \checklist{双因素模型下资产协方差的计算（准确识别和代入因子方差、协方差以及因子敏感度等参数）}
 
 \begin{question}
-    A risk analyst at an investment firm is analyzing two random variables \(X\) and \(Y\) which represent the annual returns of two distinct portfolios. Given that \(E[X]=5\), \(E[Y]=6\) and \(E[XY]=31\), what is the covariance \(Cov[X, Y]\)?
+    A risk analyst at an investment firm is analyzing two random variables \(X\) and \(Y\) which represent the annual returns of two distinct portfolios. Given that \(E[X]=5\), \(E[Y]=6\) and \(E[XY]=31\), what is the covariance \(Cov[X, Y]\)?\\
+    一位投资公司的风险分析师正在分析两个随机变量\(X\)和\(Y\)，它们代表两个不同的投资组合的年回报。已知\(E[X]=5\)，\(E[Y]=6\)和\(E[XY]=31\)，协方差\(Cov[X, Y]\)是多少？
     \end{question}
     
     \begin{choices}
@@ -2105,7 +2429,8 @@ B
 
 
     \begin{question}
-        A financial advisor is constructing an investment portfolio for a client. The advisor plans to combine two stocks whose annual returns are jointly normally distributed and uncorrelated. Stock X has a mean return of 8\% and a standard deviation of returns of 25\%; Stock Y has a mean return of 13\% and a standard deviation of returns of 18\%. If the advisor creates an equally - weighted portfolio with these two stocks, what is the probability that the portfolio return over the next year will be greater than 13\%?
+        A financial advisor is constructing an investment portfolio for a client. The advisor plans to combine two stocks whose annual returns are jointly normally distributed and uncorrelated. Stock X has a mean return of 8\% and a standard deviation of returns of 25\%; Stock Y has a mean return of 13\% and a standard deviation of returns of 18\%. If the advisor creates an equally - weighted portfolio with these two stocks, what is the probability that the portfolio return over the next year will be greater than 13\%?\\
+        一位金融顾问正在为客户构建一个投资组合。顾问计划将两只股票的年度回报联合正态分布且不相关。股票X的期望回报为8\%，回报的标准差为25\%；股票Y的期望回报为13\%，回报的标准差为18\%。如果顾问创建一个等权重投资组合，这两只股票，下一年的投资组合回报率大于13\%的概率是多少？
         \end{question}
         
         \begin{choices}
@@ -2157,7 +2482,8 @@ B
         \checklist{资产组合的期望收益率、标准差计算，以及利用标准正态分布计算概率（关键是掌握组合期望收益率和标准差的计算公式）}    
     
 \begin{question}
-    A financial advisor is analyzing the potential merger of two funds. The Serene Fund has assets worth USD 80 million and its recent performance has been lackluster. The advisor recommends merging it with the Dynamic Fund, which has assets of USD 300 million. The returns on the Serene Fund are normally distributed with a mean of 4\% and a standard deviation of 8\%, while the returns on the Dynamic Fund are normally distributed with a mean of 9\% and a standard deviation of 18\%. Senior management has asked the advisor to estimate the likelihood that returns on the combined portfolio will exceed 28\%. Assuming the returns on the two funds are independent, what is the closest estimate for the probability that the returns on the combined fund will exceed 32\%?
+    A financial advisor is analyzing the potential merger of two funds. The Serene Fund has assets worth USD 80 million and its recent performance has been lackluster. The advisor recommends merging it with the Dynamic Fund, which has assets of USD 300 million. The returns on the Serene Fund are normally distributed with a mean of 4\% and a standard deviation of 8\%, while the returns on the Dynamic Fund are normally distributed with a mean of 9\% and a standard deviation of 18\%. Senior management has asked the advisor to estimate the likelihood that returns on the combined portfolio will exceed 28\%. Assuming the returns on the two funds are independent, what is the closest estimate for the probability that the returns on the combined fund will exceed 32\%?\\
+    一位金融顾问正在分析两个基金的潜在合并。宁静基金价值8000万美元，其最近表现不佳。顾问建议将其与动态基金合并，动态基金价值3000万美元。宁静基金的回报服从正态分布，均值为4\%，标准差为8\%；动态基金的回报服从正态分布，均值为9\%，标准差为18\%。高级管理层要求顾问估计合并投资组合的回报率超过28\%的可能性。假设两个基金的回报是独立的，合并基金的回报率超过32\%的概率最接近的估计是多少？
     \end{question}
     
     \begin{choices}
@@ -2227,14 +2553,34 @@ B
     \hline
     \end{tabular}
     \end{center}
-    If the correlation coefficient of the returns on Stock C and Stock D is 0.4, then the expected value of the portfolio at the end of this year, within two standard deviations, will be between:
+        If the correlation coefficient of the returns on Stock C and Stock D is 0.4, then the expected value of the portfolio at the end of this year, within two standard deviations, will be between:
+        一位投资者拥有一个由股票C和股票D组成的组合。当前价值、估计的年期望回报和估计的年回报标准差如下表所示：
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        & 股票C & 股票D \\
+        \hline
+        当前价值 (美元) & 30,000 & 70,000 \\
+        \hline
+        期望回报 & 7\% & 10\% \\
+        \hline
+        标准差 & 18\% & 22\% \\
+        \hline
+        \end{tabular}
+        \end{center}
+        如果股票C和股票D的回报的相关系数为0.4，则今年年底投资组合的预期价值，在两个标准差范围内，将在：
     \end{question}
     
     \begin{choices}
-        \item USD 72,600 and USD 145,600
-        \item USD 77,200 and USD 126,800
-        \item USD 80,400 and USD 123,600
-        \item USD 82,800 and USD 121,200
+        \item USD 72,600 and USD 145,600\\
+        72,600美元和145,600美元
+        \item USD 77,200 and USD 126,800\\
+        77,200美元和126,800美元
+        \item USD 80,400 and USD 123,600\\
+        80,400美元和123,600美元
+        \item USD 82,800 and USD 121,200\\
+        82,800美元和121,200美元
+        
     \end{choices}
     
     \begin{correctanswer}
@@ -2292,7 +2638,22 @@ B
     \hline
     \end{tabular}
     \end{center}
-    Given that the standard deviations of the estimated returns on stocks M and N are 18.0\% and 11.0\%, respectively, what is the covariance of the estimated returns on stocks M and N?
+    Given that the standard deviations of the estimated returns on stocks M and N are 18.0\% and 11.0\%, respectively, what is the covariance of the estimated returns on stocks M and N?\\
+    一位金融顾问已确定明年三种潜在经济状态的概率：扩张、稳定和收缩。一位投资分析师已估计了两种股票M和N在这三种情景下可能的收益率，如下表所示：
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    状态 & 概率 & 股票M的收益率 & 股票N的收益率 \\
+    \hline
+    扩张 & 0.25 & 0.35 & 0.25 \\
+    \hline
+    稳定 & 0.55 & 0.15 & 0.15 \\
+    \hline
+    收缩 & 0.20 & -0.25 & -0.15 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    给定股票M和N的估计收益率的标准差分别为18.0\%和11.0\%，股票M和N的估计收益率的协方差是多少？\\
     \end{question}
     
     \begin{choices}
@@ -2335,14 +2696,17 @@ B
 
 
 \begin{question}
-Given that \(X\) and \(Y\) are random variables, and \(m\), \(n\), \(p\), and \(q\) are constants, which of the following statements is most likely incorrect?
+Given that \(X\) and \(Y\) are random variables, and \(m\), \(n\), \(p\), and \(q\) are constants, which of the following statements is most likely incorrect?\\
+    给定\(X\)和\(Y\)是随机变量，\(m\)，\(n\)，\(p\)和\(q\)是常数，哪一项陈述最可能不正确？
 \end{question}
 
 \begin{choices}
     \item \(V[X_1 - X_2]=V[X_1]+V[X_2]-2Cov[X_1,X_2]\)
     \item \(V[mX_1 + nX_2]=m^{2}V[X_1]+n^{2}V[X_2]+2mnCov[X_1,X_2]\)
-    \item \(Cov(m + nX,p + qY)=Cov(X,Y)\), if \(n<0\) and \(q<0\)
-    \item \(Corr(m + nX,p + qY)=Corr(X,Y)\), if \(n<0\) and \(q<0\)
+    \item \(Cov(m + nX,p + qY)=Cov(X,Y)\), if \(n<0\) and \(q<0\)\\
+    如果\(n<0\)且\(q<0\)，则\(Cov(m + nX,p + qY)=Cov(X,Y)\)。
+    \item \(Corr(m + nX,p + qY)=Corr(X,Y)\), if \(n<0\) and \(q<0\)\\
+    如果\(n<0\)且\(q<0\)，则\(Corr(m + nX,p + qY)=Corr(X,Y)\)。
 \end{choices}
 
 \begin{correctanswer}
@@ -2372,14 +2736,19 @@ C
     
 
 \begin{question}
-    A risk analyst at a financial institution is working on a model involving multiple independent random variables. When considering the characteristic function of the product of these independent random variables, it is equal to the:
+    A risk analyst at a financial institution is working on a model involving multiple independent random variables. When considering the characteristic function of the product of these independent random variables, it is equal to the:\\
+    一位金融机构的风险分析师正在研究涉及多个独立随机变量的模型。在考虑这些独立随机变量的乘积的特征函数时，它等于：
     \end{question}
     
     \begin{choices}
-        \item Product of the individual characteristic functions.
-        \item Sum of the individual characteristic functions.
-        \item Square root of the sum of the individual characteristic functions.
-        \item Exponential of the sum of the individual characteristic functions.
+        \item Product of the individual characteristic functions.\\
+        各个随机变量特征函数的乘积。
+        \item Sum of the individual characteristic functions.\\
+        各个随机变量特征函数的和。
+        \item Square root of the sum of the individual characteristic functions.\\
+        各个随机变量特征函数的平方根。
+        \item Exponential of the sum of the individual characteristic functions.\\
+        各个随机变量特征函数的指数。
     \end{choices}
     
     \begin{correctanswer}
@@ -2397,7 +2766,8 @@ C
     \checklist{独立随机变量乘积的特征函数性质（特征函数关于独立随机变量乘积的计算规则）}
 
 \begin{question}
-    A risk analyst at a quantitative trading firm is evaluating a portfolio that consists of two assets represented by random variables \(X\) and \(Y\). Each of \(X\) and \(Y\) follows a standard normal distribution, and the covariance between \(X\) and \(Y\) is \(0.15\). What is the variance of the portfolio value \(Z = 6X+3Y\)?
+    A risk analyst at a quantitative trading firm is evaluating a portfolio that consists of two assets represented by random variables \(X\) and \(Y\). Each of \(X\) and \(Y\) follows a standard normal distribution, and the covariance between \(X\) and \(Y\) is \(0.15\). What is the variance of the portfolio value \(Z = 6X+3Y\)?\\
+    一位量化交易公司的风险分析师正在评估一个由随机变量\(X\)和\(Y\)表示的两个资产组成的组合。每个\(X\)和\(Y\)服从标准正态分布，且\(X\)和\(Y\)的协方差为0.15。组合价值\(Z = 6X+3Y\)的方差是多少？
     \end{question}
     
     \begin{choices}
@@ -2446,13 +2816,35 @@ C
     \hline 
     \end{tabular}
     \end{center}
+    一位风险分析师正在检查一个联合概率矩阵，该矩阵显示了通胀（有下降、稳定和上升三种状态）和市场（有熊市、区间震荡和牛市三种状态）之间的关系。以下关于这个联合概率矩阵的陈述中，哪一项是错误的？
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline 
+        \multirow{2}{*}{通胀(i)}& \multicolumn{3}{|c|}{市场(M)} &\multirow{2}{*}{ }\\ 
+        \cline{2 - 4} 
+        & 熊市 & 区间震荡 & 牛市 &  \\ 
+        \hline 
+        下降 & 4\% & 7\% & 6\% & 17\% \\ 
+        \hline  
+        稳定 & 11\% & 32\% & 13\% & 56\% \\ 
+        \hline 
+        上升 & 7\% & 9\% & 11\% & 27\% \\ 
+        \hline 
+          & 22\% & 48\% & 30\% & 100\% \\ 
+        \hline 
+        \end{tabular}
+        \end{center}
     \end{question}
     
     \begin{choices}
-        \item The unconditional probability of a Bear Market is 22.0\%.
-        \item The probability of a Bull Market conditional on Up Inflation is about 40.7\%.
-        \item The probability of a Down Inflation conditional on a Bear Market is about 23.5\%.
-        \item The joint probability of Up Inflation and Range - bound Market is 9.0\%.
+        \item The unconditional probability of a Bear Market is 22.0\%.\\
+        熊市的无条件概率为22.0\%。
+        \item The probability of a Bull Market conditional on Up Inflation is about 40.7\%.\\
+        在通胀上升（Up Inflation）的条件下牛市（Bull Market）的概率约为40.7\%。
+        \item The probability of a Down Inflation conditional on a Bear Market is about 23.5\%.\\
+        在熊市（Bear Market）的条件下通胀下降（Down Inflation）的概率约为23.5\%。
+        \item The joint probability of Up Inflation and Range - bound Market is 9.0\%.\\
+        通胀上升（Up Inflation）和区间震荡市场（Range - bound Market）的联合概率为9.0\%。
     \end{choices}
     
     \begin{correctanswer}
@@ -2484,6 +2876,22 @@ C
 
     \begin{question}
         A risk analyst for an equity hedge fund is analyzing the joint distribution of two discrete random variables \(X\) and \(Y\) presented in the following table. Given that \(X=7\), the analyst aims to determine the conditional standard deviation of \(Y\). Which of the following options is correct?
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline 
+        \multirow{2}{*}{X}& \multicolumn{4}{|c|}{Y} \\ 
+        \cline{2 - 5} 
+        & 10 & 20 & 30 & 40 \\ 
+        \hline 
+         1 & 5\% & 7\% & 14\% & 5\% \\ 
+         \hline
+        4 & 13\% & 18\% & 8\% & 6\% \\ 
+        \hline
+        7 & 6\% & 4\% & 14\% & 12\% \\ 
+        \hline 
+        \end{tabular}
+        \end{center}
+        一位股票对冲基金的风险分析师正在分析下表中两个离散随机变量 \(X\) 和 \(Y\) 的联合分布。给定 \(X=7\)，该分析师旨在确定 \(Y\) 的条件标准差。以下哪个选项是正确的？
         \begin{center}
         \begin{tabular}{|c|c|c|c|c|}
         \hline 
@@ -2541,14 +2949,16 @@ C
 
 
 \begin{question}
-    A risk analyst for an equity hedge fund is analyzing the joint probability distribution of random variables $X$ and $Y$ which is given by $f(x,y)=k\times x\times y$ for $x = 1,2,4$, $y = 1,2,4$, and $k$ is a positive constant. What is the probability that $X + Y$ will exceed 6?
+    A risk analyst for an equity hedge fund is analyzing the joint probability distribution of random variables $X$ and $Y$ which is given by $f(x,y)=k\times x\times y$ for $x = 1,2,4$, $y = 1,2,4$, and $k$ is a positive constant. What is the probability that $X + Y$ will exceed 6?\\
+    一位股票对冲基金的风险分析师正在分析随机变量$X$和$Y$的联合概率分布，其分布为$f(x,y)=k\times x\times y$，其中$x = 1,2,4$，$y = 1,2,4$，$k$是一个正的常数。$X + Y$超过6的概率是多少？
     \end{question}
     
     \begin{choices}
         \item $1/7$
         \item $32/49$
         \item $16/49$
-        \item Cannot be determined
+        \item Cannot be determined\\
+        无法确定
     \end{choices}
     
     \begin{correctanswer}
@@ -2570,14 +2980,19 @@ C
     \checklist{联合概率分布的应用（关键是先确定常数k，再找出满足条件的组合计算概率）}
 
 \begin{question}
-    A portfolio manager at a mutual fund is analyzing the co-movement between different pairs of stocks. She is comparing two pairs: stocks A and B are small-cap growth stocks in the technology sector with high volatility, while stocks C and D are large-cap value stocks in traditional industries with lower volatility. Which of the following statements is most appropriate for comparing the strength of co-movement between these pairs?
+    A portfolio manager at a mutual fund is analyzing the co-movement between different pairs of stocks. She is comparing two pairs: stocks A and B are small-cap growth stocks in the technology sector with high volatility, while stocks C and D are large-cap value stocks in traditional industries with lower volatility. Which of the following statements is most appropriate for comparing the strength of co-movement between these pairs?\\
+    一位共同基金的组合经理正在分析不同股票对之间的联动性。她正在比较两对股票：股票A和B是小盘成长股，在科技行业，波动性高；股票C和D是大盘价值股，在传统行业，波动性低。哪一项陈述最适用于比较这些对之间的联动性强度？
 \end{question}
 
 \begin{choices}
-    \item The covariance between stocks A and B must be higher than that between stocks C and D, therefore their co-movement is stronger.
-    \item The correlation coefficient between stocks A and B must be higher than that between stocks C and D because they are small-cap stocks.
-    \item To accurately compare the co-movement between stocks A\&B and stocks C\&D, their correlation coefficients should be calculated and compared.
-    \item The covariance between stocks C and D must be lower than that between stocks A and B because they have lower return volatility.
+    \item The covariance between stocks A and B must be higher than that between stocks C and D, therefore their co-movement is stronger.\\
+    股票A和B之间的协方差必须高于股票C和D之间的协方差，因此它们的联动性更强。
+    \item The correlation coefficient between stocks A and B must be higher than that between stocks C and D because they are small-cap stocks.\\
+    股票A和B之间的相关系数必须高于股票C和D之间的相关系数，因为它们是小盘股。
+    \item To accurately compare the co-movement between stocks A\&B and stocks C\&D, their correlation coefficients should be calculated and compared.\\
+    为了准确比较股票A和B与股票C和D之间的联动性，应该计算并比较它们的相关系数。
+    \item The covariance between stocks C and D must be lower than that between stocks A and B because they have lower return volatility.\\
+    股票C和D之间的协方差必须低于股票A和B之间的协方差，因为它们的回报波动性较低。
 \end{choices}
 
 \begin{correctanswer}
@@ -2620,14 +3035,19 @@ C
 \checklist{协方差与相关系数的区别（不能仅从协方差的大小来判断收益率的波动性）}
 
 \begin{question}
-    A portfolio manager at a mutual fund is analyzing the risk diversification effects of adding multiple stocks to her portfolio. She is particularly interested in understanding how the statistical properties of independent and identically distributed (i.i.d.) returns affect the portfolio's overall risk characteristics. Based on the definition and properties of i.i.d. random variables, which of the following statements is NOT correct?
+    A portfolio manager at a mutual fund is analyzing the risk diversification effects of adding multiple stocks to her portfolio. She is particularly interested in understanding how the statistical properties of independent and identically distributed (i.i.d.) returns affect the portfolio's overall risk characteristics. Based on the definition and properties of i.i.d. random variables, which of the following statements is NOT correct?\\
+    一位共同基金的组合经理正在分析添加多个股票到她的投资组合的风险分散效果。她特别感兴趣的是理解独立且同分布（i.i.d.）回报的统计特性如何影响投资组合的整体风险特征。根据i.i.d.随机变量的定义和性质，以下哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The expected return of an equally weighted portfolio with \(n\) i.i.d. stocks is \(n\mu\), where \(\mu\) is the expected return of each stock.
-    \item The variance of an equally weighted portfolio with \(n\) i.i.d. stocks is \(n\sigma^2\), where \(\sigma^2\) is the variance of each stock.
-    \item The total risk of an equally weighted portfolio increases with the number of i.i.d. stocks \(n\).
-    \item The average risk of an equally weighted portfolio decreases with the number of i.i.d. stocks \(n\).
+    \item The expected return of an equally weighted portfolio with \(n\) i.i.d. stocks is \(n\mu\), where \(\mu\) is the expected return of each stock.\\
+    一个等权重投资组合，由\(n\)个i.i.d.股票组成，其期望回报为\(n\mu\)，其中\(\mu\)是每个股票的期望回报。
+    \item The variance of an equally weighted portfolio with \(n\) i.i.d. stocks is \(n\sigma^2\), where \(\sigma^2\) is the variance of each stock.\\
+    一个等权重投资组合，由\(n\)个i.i.d.股票组成，其方差为\(n\sigma^2\)，其中\(\sigma^2\)是每个股票的方差。
+    \item The total risk of an equally weighted portfolio increases with the number of i.i.d. stocks \(n\).\\
+    一个等权重投资组合，其总风险随i.i.d.股票数量\(n\)增加而增加。
+    \item The average risk of an equally weighted portfolio decreases with the number of i.i.d. stocks \(n\).\\
+    一个等权重投资组合，其平均风险随i.i.d.股票数量\(n\)增加而减少。
 \end{choices}
 
 \begin{correctanswer}
@@ -2667,14 +3087,19 @@ C
 
 
 \begin{question}
-A risk analyst at a global investment bank is studying the relationship between different financial variables. Understanding the relationship between covariance and correlation coefficients is crucial for risk assessment. Which of the following statements about covariance and correlation coefficients is NOT correct?
+A risk analyst at a global investment bank is studying the relationship between different financial variables. Understanding the relationship between covariance and correlation coefficients is crucial for risk assessment. Which of the following statements about covariance and correlation coefficients is NOT correct?\\
+一位全球投资银行的风险分析师正在研究不同金融变量之间的关系。理解协方差和相关系数之间的关系对于风险评估至关重要。以下关于协方差和相关系数的关系的陈述中，哪一项是不正确的？
 \end{question}
 
 \begin{choices}
-    \item If \(cov(A,B) > cov(B,C)\), then \(\rho(A,B) > \rho(B,C)\) must be true.
-    \item The covariance \(cov(X,Y)\) can be expressed in terms of the correlation coefficient \(\rho(X,Y)\) and standard deviations \(\sigma_X, \sigma_Y\).
-    \item The correlation coefficient \(\rho(X,Y)\) is a standardized measure of covariance, with values between -1 and 1.
-    \item The magnitude of covariance depends on the standard deviations of the variables, so comparing covariances requires consideration of the variables' scales.
+    \item If \(cov(A,B) > cov(B,C)\), then \(\rho(A,B) > \rho(B,C)\) must be true.\\
+    如果\(cov(A,B) > cov(B,C)\)，则\(\rho(A,B) > \rho(B,C)\)必须为真。
+    \item The covariance \(cov(X,Y)\) can be expressed in terms of the correlation coefficient \(\rho(X,Y)\) and standard deviations \(\sigma_X, \sigma_Y\).\\
+    协方差\(cov(X,Y)\)可以表示为相关系数\(\rho(X,Y)\)和标准差\(\sigma_X, \sigma_Y\)的函数。
+    \item The correlation coefficient \(\rho(X,Y)\) is a standardized measure of covariance, with values between -1 and 1.\\
+    相关系数\(\rho(X,Y)\)是协方差的标准化度量，取值范围在-1和1之间。
+    \item The magnitude of covariance depends on the standard deviations of the variables, so comparing covariances requires consideration of the variables' scales.\\
+    协方差的大小取决于变量的标准差，因此比较协方差需要考虑变量的尺度。
 \end{choices}
 
 \begin{correctanswer}
@@ -2713,14 +3138,19 @@ A
 
 
 \begin{question}
-A quantitative analyst at a hedge fund is evaluating different statistical estimators for portfolio analysis. Which of the following statements most accurately describes the properties of statistical estimators?
+A quantitative analyst at a hedge fund is evaluating different statistical estimators for portfolio analysis. Which of the following statements most accurately describes the properties of statistical estimators?\\
+一位对冲基金的量化分析师正在评估不同的统计估计量用于投资组合分析。哪一项陈述最准确地描述了统计估计量的性质？
 \end{question}
 
 \begin{choices}
-    \item The sample mean is the best estimator of the population mean because it is always unbiased.
-    \item The standard error is the standard deviation of the sample data, used to measure the estimation error of the sample mean.
-    \item Unbiased estimators are always superior to biased estimators because they are more accurate on average.
-    \item The sample average is the empirical analogue of the expectation operator, used to estimate expectations of any function.
+    \item The sample mean is the best estimator of the population mean because it is always unbiased.\\
+    样本均值是总体均值的最佳估计量，因为它总是无偏的。
+    \item The standard error is the standard deviation of the sample data, used to measure the estimation error of the sample mean.\\
+    标准误差是样本数据的标准差，用于测量样本均值的估计误差。
+    \item Unbiased estimators are always superior to biased estimators because they are more accurate on average.\\
+    无偏估计量总是优于有偏估计量，因为它们平均更准确。
+    \item The sample average is the empirical analogue of the expectation operator, used to estimate expectations of any function.\\
+    样本平均值是期望算子的经验类比，用于估计任何函数的期望值。
 \end{choices}
 
 \begin{correctanswer}
@@ -2752,14 +3182,19 @@ A quantitative analyst at a hedge fund is evaluating different statistical estim
 \checklist{估计量的性质（无偏性、有效性、样本均值、标准误差等概念）}
 
 \begin{question}
-A risk analyst at an investment bank is studying the Central Limit Theorem (CLT), a fundamental principle in statistical theory that describes the distributional properties of sample means under certain conditions. Which of the following statements about the Central Limit Theorem is INCORRECT?
+A risk analyst at an investment bank is studying the Central Limit Theorem (CLT), a fundamental principle in statistical theory that describes the distributional properties of sample means under certain conditions. Which of the following statements about the Central Limit Theorem is INCORRECT?\\
+一位投资银行的风险分析师正在研究中心极限定理（CLT），这是一个统计理论中的基本原理，描述了在某些条件下样本均值的分布特性。以下关于中心极限定理的陈述中，哪一项是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The Central Limit Theorem requires that the population mean and variance must be finite, the sample size should exceed 30, and the sampling process must follow simple random sampling without replacement.
-    \item According to the Central Limit Theorem, the expected value of the sample statistic \(\bar{X}\) equals the population parameter \(\mu\), demonstrating the unbiased nature of sample means.
-    \item The sample statistic \(\bar{X}\) has a variance equal to \(\sigma^2\), which remains constant regardless of the sample size used in the estimation process.
+    \item The Central Limit Theorem requires that the population mean and variance must be finite, the sample size should exceed 30, and the sampling process must follow simple random sampling without replacement.\\
+    中心极限定理要求总体均值和方差必须有限，样本量应超过30，且抽样过程必须遵循简单随机抽样，不替换。
+    \item According to the Central Limit Theorem, the expected value of the sample statistic \(\bar{X}\) equals the population parameter \(\mu\), demonstrating the unbiased nature of sample means.\\
+    根据中心极限定理，样本统计量\(\bar{X}\)的期望等于总体参数\(\mu\)，证明了样本均值的无偏性。
+    \item The sample statistic \(\bar{X}\) has a variance equal to \(\sigma^2\), which remains constant regardless of the sample size used in the estimation process.\\
+    样本统计量\(\bar{X}\)的方差等于\(\sigma^2\)，无论估计过程中使用的样本量如何，方差保持不变。
     \item The Central Limit Theorem states that for sufficiently large sample sizes, the distribution of the sample statistic \(\bar{X}\) approximates a normal distribution regardless of the underlying population distribution.
+    中心极限定理指出，对于足够大的样本量，样本统计量\(\bar{X}\)的分布近似于正态分布，无论总体分布如何。
 \end{choices}
 
 \begin{correctanswer}
@@ -2798,14 +3233,19 @@ A risk analyst at an investment bank is studying the Central Limit Theorem (CLT)
 
 
 \begin{question}
-    A junior statistician at a financial analytics firm is evaluating different estimators for a particular parameter in a financial model. If the variance of the sampling distribution of an estimator is smaller than all other unbiased estimators of the parameter of interest, what characteristic does this estimator possess?
+    A junior statistician at a financial analytics firm is evaluating different estimators for a particular parameter in a financial model. If the variance of the sampling distribution of an estimator is smaller than all other unbiased estimators of the parameter of interest, what characteristic does this estimator possess?\\
+    一位金融分析公司的初级统计学家正在评估不同的估计量用于金融模型中的特定参数。如果一个估计量的抽样分布的方差小于所有其他无偏估计量的参数，这个估计量具有什么特性？
     \end{question}
     
     \begin{choices}
-        \item Consistent
-        \item Unbiased
-        \item Efficient
-        \item Reliable
+        \item Consistent\\
+        一致性
+        \item Unbiased\\
+        无偏性
+        \item Efficient\\
+        有效性
+        \item Reliable\\
+        可靠性
     \end{choices}
     
     \begin{correctanswer}
@@ -2835,14 +3275,19 @@ A risk analyst at an investment bank is studying the Central Limit Theorem (CLT)
 
 
 \begin{question}
-A portfolio manager at a hedge fund is analyzing the properties of estimators based on the Law of Large Numbers and consistency. Which of the following statements is INCORRECT?
+A portfolio manager at a hedge fund is analyzing the properties of estimators based on the Law of Large Numbers and consistency. Which of the following statements is INCORRECT?\\
+一位对冲基金的组合经理正在分析基于大数定律和一致性的估计量的性质。以下哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item According to the Law of Large Numbers, as the sample size increases, the sample mean converges in probability to the population mean \(\mu\).
-    \item A consistent estimator requires that as the sample size increases, any finite sample bias approaches zero.
-    \item A consistent estimator requires that as the sample size increases, the variance of the estimator approaches zero.
-    \item Increasing sample size always improves the reliability of an estimator.
+    \item According to the Law of Large Numbers, as the sample size increases, the sample mean converges in probability to the population mean \(\mu\).\\
+    根据大数定律，随着样本容量的增加，样本均值依概率收敛于总体均值\(\mu\)。
+    \item A consistent estimator requires that as the sample size increases, any finite sample bias approaches zero.\\
+    一个一致性估计量要求随着样本容量增加，任何有限样本的偏差趋近于零。
+    \item A consistent estimator requires that as the sample size increases, the variance of the estimator approaches zero.\\
+    一个一致性估计量要求随着样本容量增加，估计量的方差趋近于零。
+    \item Increasing sample size always improves the reliability of an estimator.\\
+    增加样本容量总是提高估计量的可靠性。
 \end{choices}
 
 \begin{correctanswer}
@@ -2877,14 +3322,19 @@ A portfolio manager at a hedge fund is analyzing the properties of estimators ba
 
 
 \begin{question}
-    A junior risk analyst at a technology - focused investment firm, Lily, has been assigned to estimate the volatility of a technology stock index. She has found a sample statistic whose expected value is equal to the population volatility. Moreover, she discovers that increasing the sample size will reduce the sampling error of this statistic. How can this statistic best be described?
+    A junior risk analyst at a technology - focused investment firm, Lily, has been assigned to estimate the volatility of a technology stock index. She has found a sample statistic whose expected value is equal to the population volatility. Moreover, she discovers that increasing the sample size will reduce the sampling error of this statistic. How can this statistic best be described?\\
+    一位专注于科技投资的初级风险分析师Lily被分配估算科技股票指数的波动率。她发现一个样本统计量的期望值等于总体波动率。此外，她发现增加样本量会减少这个统计量的抽样误差。这个统计量最好如何描述？
     \end{question}
     
     \begin{choices}
-        \item Unbiased and consistent
-        \item Unbiased and efficient
-        \item Efficient and consistent
-        \item Unbiased only
+        \item Unbiased and consistent\\
+        无偏且一致
+        \item Unbiased and efficient\\
+        无偏且有效
+        \item Efficient and consistent\\
+        有效且一致
+        \item Unbiased only\\
+        无偏
     \end{choices}
     
     \begin{correctanswer}
@@ -2910,14 +3360,19 @@ A portfolio manager at a hedge fund is analyzing the properties of estimators ba
     \checklist{评价估计量的标准（无偏性、一致性、有效性）}
 
     \begin{question}
-        Analyst Lisa has identified an estimator, denoted \(S(.)\), which qualifies as the best linear unbiased estimator (BLUE). If \(S(.)\) is BLUE, which of the following must necessarily be true?
+        Analyst Lisa has identified an estimator, denoted \(S(.)\), which qualifies as the best linear unbiased estimator (BLUE). If \(S(.)\) is BLUE, which of the following must necessarily be true?\\
+        分析师Lisa已经确定了一个估计量\(S(.)\)，它符合最佳线性无偏估计量（BLUE）的标准。如果\(S(.)\)是BLUE，以下哪一项必定是正确的？
         \end{question}
         
         \begin{choices}
-            \item \(S(.)\) must have the minimum variance among all possible estimators.
-            \item \(S(.)\) must be the most efficient (the "best") among all possible estimators.
-            \item \(S(.)\) is superior to all non - linear estimators.
-            \item Among the class of unbiased estimators that are linear, \(S(.)\) has the smallest variance.
+            \item \(S(.)\) must have the minimum variance among all possible estimators.\\
+            \(S(.)\)必须是在所有可能的估计量中具有最小方差的最佳估计量。
+            \item \(S(.)\) must be the most efficient (the "best") among all possible estimators.\\
+            \(S(.)\)必须是在所有可能的估计量中最有效的最佳估计量。
+            \item \(S(.)\) is superior to all non - linear estimators.\\
+            \(S(.)\)优于所有非线性估计量。
+            \item Among the class of unbiased estimators that are linear, \(S(.)\) has the smallest variance.\\
+            在所有线性无偏估计量中，\(S(.)\)具有最小方差。
         \end{choices}
         
         \begin{correctanswer}
@@ -2946,14 +3401,19 @@ A portfolio manager at a hedge fund is analyzing the properties of estimators ba
         \checklist{最佳线性无偏估计量（BLUE）的定义（关键是明确各项标准的限定范围）}
 
 \begin{question}
-    A financial analyst at an asset management firm is evaluating different estimators for the population mean of a stock's return. She is considering the properties of the sample mean as an estimator. Why is the sample mean an unbiased estimator of the population mean?
+    A financial analyst at an asset management firm is evaluating different estimators for the population mean of a stock's return. She is considering the properties of the sample mean as an estimator. Why is the sample mean an unbiased estimator of the population mean?\\
+    一位资产管理公司的金融分析师正在评估不同的估计量用于股票回报的总体均值。她考虑样本均值作为估计量。为什么样本均值是无偏估计量？
     \end{question}
     
     \begin{choices}
-        \item The sample mean provides a more accurate estimate of the population mean as the sample size increases.
-        \item The sampling distribution of the sample mean has the smallest variance of any other unbiased estimators of the population mean.
-        \item The expected value of the sample mean is equal to the population mean.
-        \item The sampling distribution of the sample mean is normal.
+        \item The sample mean provides a more accurate estimate of the population mean as the sample size increases.\\
+        样本均值随着样本量增加能更准确估计总体均值。
+        \item The sampling distribution of the sample mean has the smallest variance of any other unbiased estimators of the population mean.\\
+        样本均值的抽样分布具有最小方差。
+        \item The expected value of the sample mean is equal to the population mean.\\
+        样本均值的期望值等于总体均值。
+        \item The sampling distribution of the sample mean is normal.\\
+        样本均值的抽样分布是正态分布。
     \end{choices}
     
     \begin{correctanswer}
@@ -2982,14 +3442,19 @@ A portfolio manager at a hedge fund is analyzing the properties of estimators ba
     \checklist{最佳线性无偏估计量（BLUE）的定义（无偏性是指估计量的期望值等于总体参数）}
 
 \begin{question}
-A portfolio manager at a large investment bank is evaluating two different weighting schemes for combining analyst forecasts. She has two independent forecasts \(X_1\) and \(X_2\) for a stock's return, both drawn from the same distribution with mean \(\mu\) and variance \(\sigma^2\). She considers two weighting schemes: an equal-weighted average \(S_1=\frac{1}{2}X_1+\frac{1}{2}X_2\) and an unequal-weighted average \(S_2=\frac{1}{3}X_1+\frac{2}{3}X_2\). Which of the following statements correctly describes the relationship between the variances of \(S_1\) and \(S_2\)?
+A portfolio manager at a large investment bank is evaluating two different weighting schemes for combining analyst forecasts. She has two independent forecasts \(X_1\) and \(X_2\) for a stock's return, both drawn from the same distribution with mean \(\mu\) and variance \(\sigma^2\). She considers two weighting schemes: an equal-weighted average \(S_1=\frac{1}{2}X_1+\frac{1}{2}X_2\) and an unequal-weighted average \(S_2=\frac{1}{3}X_1+\frac{2}{3}X_2\). Which of the following statements correctly describes the relationship between the variances of \(S_1\) and \(S_2\)?\\
+    一位大型投资银行的投资组合经理正在评估两种不同的加权方案来组合分析师的预测。她有两个独立的预测\(X_1\)和\(X_2\)，都是从同一个分布中抽取的，均值为\(\mu\)，方差为\(\sigma^2\)。她考虑两种加权方案：等权重平均\(S_1=\frac{1}{2}X_1+\frac{1}{2}X_2\)和不等权重平均\(S_2=\frac{1}{3}X_1+\frac{2}{3}X_2\)。哪一项陈述正确描述了\(S_1\)和\(S_2\)的方差之间的关系？
 \end{question}
 
 \begin{choices}
-    \item The variance of \(S_1\) is \(\frac{1}{2}\sigma^2\), the variance of \(S_2\) is \(\frac{5}{9}\sigma^2\), and \(S_1\) is more efficient.
-    \item Both \(S_1\) and \(S_2\) have the same variance, therefore they are equally efficient.
-    \item The variance of \(S_2\) is \(\frac{5}{9}\sigma^2\), \(S_1\) has a larger variance, therefore \(S_1\) is more efficient.
-    \item The variances of \(S_1\) and \(S_2\) cannot be directly compared because they depend on different weight allocations.
+    \item The variance of \(S_1\) is \(\frac{1}{2}\sigma^2\), the variance of \(S_2\) is \(\frac{5}{9}\sigma^2\), and \(S_1\) is more efficient.\\
+    \(S_1\)的方差为\(\frac{1}{2}\sigma^2\)，\(S_2\)的方差为\(\frac{5}{9}\sigma^2\)，且\(S_1\)更有效。
+    \item Both \(S_1\) and \(S_2\) have the same variance, therefore they are equally efficient.\\
+    \(S_1\)和\(S_2\)的方差相同，因此它们同样有效。
+    \item The variance of \(S_2\) is \(\frac{5}{9}\sigma^2\), \(S_1\) has a larger variance, therefore \(S_1\) is more efficient.\\
+    \(S_2\)的方差为\(\frac{5}{9}\sigma^2\)，\(S_1\)的方差更大，因此\(S_1\)更有效。
+    \item The variances of \(S_1\) and \(S_2\) cannot be directly compared because they depend on different weight allocations.\\
+    \(S_1\)和\(S_2\)的方差不能直接比较，因为它们依赖于不同的权重分配。
 \end{choices}
 
 \begin{correctanswer}
@@ -3024,7 +3489,8 @@ A portfolio manager at a large investment bank is evaluating two different weigh
 
 
 \begin{question}
-    A financial analyst at an investment firm is analyzing the price - to - earnings (P/E) ratios of stocks in a particular industrial sector. The mean P/E ratio of 40 stocks in this sector is 22, and the sample standard deviation is 4.2. What is the value CLOSEST to the standard error of the mean?
+    A financial analyst at an investment firm is analyzing the price - to - earnings (P/E) ratios of stocks in a particular industrial sector. The mean P/E ratio of 40 stocks in this sector is 22, and the sample standard deviation is 4.2. What is the value CLOSEST to the standard error of the mean?\\
+    一位投资公司的金融分析师正在分析某个工业部门的股票的市盈率（P/E）。这个部门40只股票的平均市盈率是22，样本标准差是4.2。最接近样本均值标准误差的值是多少？
     \end{question}
     
     \begin{choices}
@@ -3080,14 +3546,19 @@ A portfolio manager at a large investment bank is evaluating two different weigh
         \checklist{样本均值标准差的计算（关键是中心极限定理下的样本均值标准差计算公式）}
 
 \begin{question}
-    A quantitative analyst at a hedge fund is evaluating different statistical measures for portfolio risk assessment. She needs to choose between standard deviation and standard error to describe the uncertainty in her estimates. Based on the definitions and properties of standard error and standard deviation, which of the following statements is NOT correct?
+    A quantitative analyst at a hedge fund is evaluating different statistical measures for portfolio risk assessment. She needs to choose between standard deviation and standard error to describe the uncertainty in her estimates. Based on the definitions and properties of standard error and standard deviation, which of the following statements is NOT correct?\\
+    一位对冲基金的量化分析师正在评估不同的统计量用于投资组合风险评估。她需要在标准差和标准误差之间选择，以描述她估计的不确定性。根据标准误差和标准差的定义和性质，以下哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Standard error is the standard deviation of the mean, measuring the uncertainty of the estimator.
-    \item Standard deviation describes the dispersion of the dataset, while standard error describes the precision of the estimator.
-    \item Standard deviation decreases as the sample size increases.
-    \item In hypothesis testing and Monte Carlo simulation, standard error provides an indication of estimation accuracy.
+    \item Standard error is the standard deviation of the mean, measuring the uncertainty of the estimator.\\
+    标准误差是样本均值的标准差，用于衡量估计量的不确定性。
+    \item Standard deviation describes the dispersion of the dataset, while standard error describes the precision of the estimator.\\
+    标准差描述数据集的分散程度，而标准误差描述估计量的精度。
+    \item Standard deviation decreases as the sample size increases.\\
+    标准差随着样本量增加而减小。
+    \item In hypothesis testing and Monte Carlo simulation, standard error provides an indication of estimation accuracy.\\
+    在假设检验和蒙特卡洛模拟中，标准误差提供估计精度的指示。
 \end{choices}
 
 \begin{correctanswer}
@@ -3131,14 +3602,19 @@ A portfolio manager at a large investment bank is evaluating two different weigh
 \section{考点5：Hypothesis Testing 假设检验}
 \setcounter{question}{0}
 \begin{question}
-    A risk analyst at an asset management firm is currently engaged in hypothesis testing for a financial model. Which of the following statements regarding hypothesis testing is incorrect?
+    A risk analyst at an asset management firm is currently engaged in hypothesis testing for a financial model. Which of the following statements regarding hypothesis testing is incorrect?\\
+    一位资产管理公司的风险分析师正在进行假设检验，评估一个金融模型。以下关于假设检验的陈述中，哪一项是不正确的？
     \end{question}
     
     \begin{choices}
-        \item If the p - value is greater than the significance level, then the statistic falls into the acceptance region.
-        \item Hypothesis testing is used to make inferences about the parameters of a given population on the basis of statistics computed for a sample that is drawn from the same population.
-        \item Type II error refers to the failure to reject the H1 when it is actually false.
-        \item All else being equal, the decrease in the chance of making a Type I error comes at the cost of increasing the probability of making a Type II error.
+        \item If the p - value is greater than the significance level, then the statistic falls into the acceptance region.\\
+        如果p值大于显著性水平，则统计量落在接受域。
+        \item Hypothesis testing is used to make inferences about the parameters of a given population on the basis of statistics computed for a sample that is drawn from the same population.\\
+        假设检验用于基于从同一总体中抽取的样本计算的统计量，对总体的参数进行推断。
+        \item Type II error refers to the failure to reject the H1 when it is actually false.\\
+        第二类错误指的是在实际上错误的情况下未能拒绝H1。
+        \item All else being equal, the decrease in the chance of making a Type I error comes at the cost of increasing the probability of making a Type II error.\\
+        所有其他条件相同，减少犯第一类错误的概率是以增加犯第二类错误的概率为代价的。
     \end{choices}
     
     \begin{correctanswer}
@@ -3167,14 +3643,19 @@ A portfolio manager at a large investment bank is evaluating two different weigh
     \checklist{假设检验的基本概念（关键是理解第一类错误、第二类错误、\(p\)值、显著性水平等概念以及它们之间的关系）}
 
 \begin{question}
-    A financial analyst at a hedge fund is conducting a hypothesis test. When the level of significance of the test is decreased, which of the following statements is incorrect?
+    A financial analyst at a hedge fund is conducting a hypothesis test. When the level of significance of the test is decreased, which of the following statements is incorrect?\\
+    一位对冲基金的金融分析师正在进行假设检验。当显著性水平降低时，哪一项陈述是不正确的？
     \end{question}
     
     \begin{choices}
-        \item The null hypothesis is rejected less frequently, even when it is actually false.
-        \item The likelihood of making a Type II error increases.
-        \item The likelihood of rejecting the null hypothesis when it is true decreases.
-        \item The likelihood of making a Type I error increases.
+        \item The null hypothesis is rejected less frequently, even when it is actually false.\\
+        原假设在实际上错误的情况下被拒绝的频率更低。
+        \item The likelihood of making a Type II error increases.\\
+        犯第二类错误的概率增加。
+        \item The likelihood of rejecting the null hypothesis when it is true decreases.\\
+        当原假设为真时，拒绝原假设的概率降低。
+        \item The likelihood of making a Type I error increases.\\
+        犯第一类错误的概率增加。
     \end{choices}
     
     \begin{correctanswer}
@@ -3198,14 +3679,19 @@ A portfolio manager at a large investment bank is evaluating two different weigh
     \checklist{假设检验中显著性水平与两类错误的关系（显著性水平降低，第一类错误概率降低，第二类错误概率增加）}
 
 \begin{question}
-    A risk analyst at an energy investment firm has assembled a sample of 1200 individual firms for statistical analysis. She is contemplating either reducing the level of significance used to test hypotheses from 6\% to 2\%, or eliminating 600 privately - owned firms from her sample. What impact will these changes have on the probability of making Type I and Type II errors?
+    A risk analyst at an energy investment firm has assembled a sample of 1200 individual firms for statistical analysis. She is contemplating either reducing the level of significance used to test hypotheses from 6\% to 2\%, or eliminating 600 privately - owned firms from her sample. What impact will these changes have on the probability of making Type I and Type II errors?\\
+    一位能源投资公司的风险分析师正在对1200家独立公司的样本进行统计分析。她正在考虑将用于假设检验的显著性水平从6\%降低到2\%，或者从样本中消除600家私营公司。这些变化对犯第一类和第二类错误的概率有何影响？
     \end{question}
     
     \begin{choices}
-        \item P(Type I error) decreases, P(Type II error) increases
-        \item P(Type II error) decreases, P(Type II error) decreases
-        \item P(Type I error) increases, P(Type I error) increases
-        \item P(Type II error) increases, P(Type I error) decreases
+        \item P(Type I error) decreases, P(Type II error) increases\\
+        犯第一类错误的概率降低，犯第二类错误的概率增加。
+        \item P(Type II error) decreases, P(Type II error) decreases\\
+        犯第二类错误的概率降低，犯第二类错误的概率降低。
+        \item P(Type I error) increases, P(Type I error) increases\\
+        犯第一类错误的概率增加，犯第一类错误的概率增加。
+        \item P(Type II error) increases, P(Type I error) decreases\\
+        犯第二类错误的概率增加，犯第一类错误的概率降低。
     \end{choices}
     
     \begin{correctanswer}
@@ -3228,14 +3714,19 @@ A portfolio manager at a large investment bank is evaluating two different weigh
     \checklist{假设检验中显著性水平和样本量对两类错误的影响（显著性水平降低，第一类错误概率降低，第二类错误概率增加；样本量减少，第二类错误概率增加）}
 
     \begin{question}
-        A risk analyst at a large bank is reviewing the Basel back - testing framework. According to the Basel back - testing framework guidelines, penalties start to apply if there are six or more exceptions during the previous year. The Type I error rate of this test is 13 percent. If the true coverage is 96 percent of exceptions instead of the required 98 percent, the power of the test is 85 percent. This implies that there is a(an):
+        A risk analyst at a large bank is reviewing the Basel back - testing framework. According to the Basel back - testing framework guidelines, penalties start to apply if there are six or more exceptions during the previous year. The Type I error rate of this test is 13 percent. If the true coverage is 96 percent of exceptions instead of the required 98 percent, the power of the test is 85 percent. This implies that there is a(an):\\
+        一位大型银行的风险分析师正在审查巴塞尔回测框架。根据巴塞尔回测框架指南，如果前一年有六个或更多例外，惩罚开始适用。这个测试的第一类错误率是13\%。如果真实覆盖率是96\%而不是要求的98\%，测试的功效是85\%。这意味着存在：
         \end{question}
         
         \begin{choices}
-            \item 15\% probability regulators will not reject the incorrect model.
-            \item 13\% probability regulators will not reject the correct model.
-            \item 85\% probability regulators will not reject the incorrect model.
-            \item 87\% probability regulators will reject the correct model.
+            \item 15\% probability regulators will not reject the incorrect model.\\
+            15\%的概率监管机构不会拒绝错误的模型。
+            \item 13\% probability regulators will not reject the correct model.\\
+            13\%的概率监管机构不会拒绝正确的模型。
+            \item 85\% probability regulators will not reject the incorrect model.\\
+            85\%的概率监管机构不会拒绝错误的模型。
+            \item 87\% probability regulators will reject the correct model.\\
+            87\%的概率监管机构会拒绝正确的模型。
         \end{choices}
         
         \begin{correctanswer}
@@ -3256,14 +3747,19 @@ A portfolio manager at a large investment bank is evaluating two different weigh
         \checklist{假设检验中第一类错误和检验功效的概念及应用（第一类错误是原假设为真时拒绝原假设的概率，检验功效是原假设为假时拒绝原假设的概率）}
 
 \begin{question}
-    A junior analyst at a financial consulting firm is examining the impact of changing the level of significance in hypothesis testing. If the level of significance decreases from 10\% to 5\%, which of the following four statements about hypothesis testing is correct?
+    A junior analyst at a financial consulting firm is examining the impact of changing the level of significance in hypothesis testing. If the level of significance decreases from 10\% to 5\%, which of the following four statements about hypothesis testing is correct?\\
+    一位金融咨询公司的初级分析师正在研究改变显著性水平对假设检验的影响。如果显著性水平从10\%降低到5\%，哪一项关于假设检验的陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item The probability of making a type II error decreases.
-        \item It becomes more difficult to reject a null hypothesis when it is actually true.
-        \item The probability of making a type I error increases.
-        \item The probability of failing to reject the null hypothesis when it is actually false decreases to 5\%.
+        \item The probability of making a type II error decreases.\\
+        犯第二类错误的概率降低。
+        \item It becomes more difficult to reject a null hypothesis when it is actually true.\\
+        当原假设实际上为真时，更难拒绝原假设。
+        \item The probability of making a type I error increases.\\
+        犯第一类错误的概率增加。
+        \item The probability of failing to reject the null hypothesis when it is actually false decreases to 5\%.\\
+        当原假设实际上为假时，未能拒绝原假设的概率降低到5\%。
     \end{choices}
     
     \begin{correctanswer}
@@ -3309,7 +3805,25 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
     \hline
 \end{tabular}
 \end{center}
- What is the 95\% confidence interval for the mean monthly return?
+ What is the 95\% confidence interval for the mean monthly return?\\
+ 一位经纪公司的金融分析师正在分析一家名为Wilson Corp的公司的月度股票收益率。对于过去35个月股票收益率的样本，平均收益率为5\%，样本标准差为22\%。由于总体方差未知，样本的标准误估计为：
+\[S_{\bar{x}}=\frac{22\%}{\sqrt{35}}=3.71\%\]
+
+相关的t表值如下（\(t_{i,j\%}\) 表示自由度为 \(i\) 的t分布值的第 \((100 - j)\) 百分位数）：
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    \(t_{34,2.5\%}\) & 2.032\\
+    \hline
+    \(t_{34,5.0\%}\) & 1.691\\
+    \hline
+    \(t_{35,2.5\%}\) & 2.030\\
+    \hline
+    \(t_{35,5.0\%}\) & 1.690\\
+    \hline
+\end{tabular}
+\end{center}
+ 平均月度收益率的95\%置信区间是多少？\\
 \end{question}
 
 \begin{choices}
@@ -3339,7 +3853,8 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
 \checklist{样本均值的置信区间计算（关键是计算标准误差和确定合适的t值）}
 
 \begin{question}
-    A financial analyst is considering a stock with an initial price of \(\$80\). The price one year from now is given by \(S = 80e^{r}\), where the rate of return \(r\) is normally distributed with a mean of \(0.15\) and a standard deviation of \(0.25\). With \(99\%\) confidence, after rounding, \(S\) will be between which of the following ranges?
+    A financial analyst is considering a stock with an initial price of \(\$80\). The price one year from now is given by \(S = 80e^{r}\), where the rate of return \(r\) is normally distributed with a mean of \(0.15\) and a standard deviation of \(0.25\). With \(99\%\) confidence, after rounding, \(S\) will be between which of the following ranges?\\
+    一位金融分析师正在考虑一只初始价格为\(\$80\)的股票。一年后的价格由\(S = 80e^{r}\)给出，其中收益率\(r\)服从均值为\(0.15\)，标准差为\(0.25\)的正态分布。以\(99\%\)的置信度，四舍五入后，\(S\)将落在以下哪个范围内？
     \end{question}
     
     \begin{choices}
@@ -3372,14 +3887,19 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
 
 
 \begin{question}
-    A risk analyst at a financial institution is conducting a hypothesis test. The standard deviation of a normal population is known to be 12, and the hypothesized mean is 10. A sample size of 144 is taken. What is the range of sample means that allows the hypothesis to be accepted at a level of significance of 0.01?
+    A risk analyst at a financial institution is conducting a hypothesis test. The standard deviation of a normal population is known to be 12, and the hypothesized mean is 10. A sample size of 144 is taken. What is the range of sample means that allows the hypothesis to be accepted at a level of significance of 0.01?\\
+    一位金融机构的风险分析师正在进行假设检验。已知正态总体的标准差为12，假设的均值为10。抽取样本大小为144。在显著性水平为0.01时，样本均值的接受范围是多少？
     \end{question}
     
     \begin{choices}
-        \item Between 7.42 and 12.58
-        \item Between -10.23 and 30.23
-        \item Between 8.12 and 11.88
-        \item Between 9.13 and 10.87
+        \item Between 7.42 and 12.58\\
+        在7.42和12.58之间
+        \item Between -10.23 and 30.23\\
+        在-10.23和30.23之间
+        \item Between 8.12 and 11.88\\
+        在8.12和11.88之间
+        \item Between 9.13 and 10.87\\
+        在9.13和10.87之间
     \end{choices}
     
     \begin{correctanswer}
@@ -3424,6 +3944,22 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
         \hline
         \end{tabular}
         \end{center}
+        一位名为Alex的金融公司风险分析师决定使用均值为$\mu = \$5.00$、标准差为$\sigma=\$2.00$的正态分布来模拟一家名为Green Leaf Corp的公司的每股收益（EPS）。该公司在任何给定时期内EPS位于$\$4.40$和$\$5.22$之间的概率是多少？
+        
+        \begin{center}
+        附录：标准正态分布的部分累积分布函数\\
+        \begin{tabular}{|c|c|c|}
+        \hline
+        $Z$ & 0 & 0.01 \\
+        \hline
+        0.1 & 0.5298 & 0.5438 \\
+        \hline
+        0.2 & 0.5793 & 0.5832 \\
+        \hline
+        0.3 & 0.6179 & 0.6217 \\
+        \hline
+        \end{tabular}
+        \end{center}
         \end{question}
         
         \begin{choices}
@@ -3452,14 +3988,19 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
         \checklist{正态分布的标准化以及计算指定区间概率（标准化方法）}
 
 \begin{question}
-    A risk analyst at an investment firm is evaluating a new equity fund named AI Growth Pro, which is managed by an AI using machine - learning algorithms. The fund claims that its true (population) volatility does not exceed 12.0\% per annum. A random sample of 35 observations yields a sample volatility of 14.0\% per annum. At a 90\% confidence level, and considering this as a one - side test where the null hypothesis assumes the volatility is equal to or less than 12.0\% per annum, should the null hypothesis be rejected in favor of the alternative hypothesis that the fund's true volatility exceeds 12.0\%?
+    A risk analyst at an investment firm is evaluating a new equity fund named AI Growth Pro, which is managed by an AI using machine - learning algorithms. The fund claims that its true (population) volatility does not exceed 12.0\% per annum. A random sample of 35 observations yields a sample volatility of 14.0\% per annum. At a 90\% confidence level, and considering this as a one - side test where the null hypothesis assumes the volatility is equal to or less than 12.0\% per annum, should the null hypothesis be rejected in favor of the alternative hypothesis that the fund's true volatility exceeds 12.0\%?\\
+    一位投资公司的风险分析师正在评估一家名为AI Growth Pro的新股票基金。该基金由使用机器学习算法的AI管理。基金声称其真实（总体）波动率不超过12.0\%每年。随机抽取35个观测值得到样本波动率为14.0\%每年。在90\%的置信水平下，考虑这是一个单侧检验，原假设假设波动率等于或小于12.0\%每年，是否应该拒绝原假设，支持基金的真实波动率超过12.0\%？
     \end{question}
     
     \begin{choices}
-        \item No, because the test statistic of 47.83 is more than the critical value of 44.90
-        \item No, because the test statistic of 49.67 is more than the critical value of 46.07
-        \item Yes, because the test statistic of 48.85 is more than the critical value of 46.07
-        \item Yes, because the test statistic of 46.28 is more than the critical value of 44.90
+        \item No, because the test statistic of 47.83 is more than the critical value of 44.90\\
+        否，因为检验统计量47.83大于临界值44.90
+        \item No, because the test statistic of 49.67 is more than the critical value of 46.07\\
+        否，因为检验统计量49.67大于临界值46.07
+        \item Yes, because the test statistic of 48.85 is more than the critical value of 46.07\\
+        是，因为检验统计量48.85大于临界值46.07
+        \item Yes, because the test statistic of 46.28 is more than the critical value of 44.90\\
+        是，因为检验统计量46.28大于临界值44.90
     \end{choices}
     
     \begin{correctanswer}
@@ -3490,7 +4031,8 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
     \checklist{总体方差的单侧假设检验（解题步骤可以画表）}
 
 \begin{question}
-    A risk analyst named Emma, FRM, works at a financial institution. A junior staff member, Tom, is confused about the relationships among variables. Tom assumes there are three identically and independently distributed variables \(X_1\), \(X_2\) and \(X_3\), all following the normal distribution \(X\sim N(25, 12^{2})\). There is another variable \(Y\) constructed as \(Y = 3X_1+2X_2 + X_3\). What is the probability that variable \(Y\) is greater than 75.9?
+    A risk analyst named Emma, FRM, works at a financial institution. A junior staff member, Tom, is confused about the relationships among variables. Tom assumes there are three identically and independently distributed variables \(X_1\), \(X_2\) and \(X_3\), all following the normal distribution \(X\sim N(25, 12^{2})\). There is another variable \(Y\) constructed as \(Y = 3X_1+2X_2 + X_3\). What is the probability that variable \(Y\) is greater than 75.9?\\
+    一位名为Emma的金融公司风险分析师正在评估一家名为AI Growth Pro的新股票基金。该基金由使用机器学习算法的AI管理。基金声称其真实（总体）波动率不超过12.0\%每年。随机抽取35个观测值得到样本波动率为14.0\%每年。在90\%的置信水平下，考虑这是一个单侧检验，原假设假设波动率等于或小于12.0\%每年，是否应该拒绝原假设，支持基金的真实波动率超过12.0\%？
     \end{question}
     
     \begin{choices}
@@ -3539,7 +4081,24 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
     \hline
     \end{tabular}
     \end{center}
-    Using the t - table above, what is the 95\% confidence interval for the mean return?
+    Using the t - table above, what is the 95\% confidence interval for the mean return?\\
+    一位资产管理公司的风险分析师正在评估股票ABC的表现。使用过去15个月的收益率，该分析师估计股票ABC的平均月度收益率为-0.9\%，标准误为3.2\%。相关的单尾t分布表如下：
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    自由度 & $\alpha = 0.10$ & $\alpha = 0.05$ & $\alpha = 0.025$ \\
+    \hline
+    12 & 1.356 & 1.782 & 2.179 \\
+    \hline
+    13 & 1.350 & 1.771 & 2.160 \\
+    \hline
+    14 & 1.345 & 1.761 & 2.145 \\
+    \hline
+    15 & 1.341 & 1.753 & 2.131 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    使用上述t表，平均收益率的95\%置信区间是多少？
     \end{question}
     
     \begin{choices}
@@ -3600,13 +4159,46 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
         \hline
         \end{tabular}
         \end{center}
+        一位金融研究公司的风险分析师正在研究一只名为Alpha对冲基金的新对冲基金。该基金已运营2.5年。其平均月度收益率为7\%，标准差为6\%。该基金的目标是控制以月度收益率标准差衡量的波动率。该分析师被要求检验零假设：Alpha对冲基金月度收益率的波动率等于5\%，备择假设：波动率不等于5\%。假设所有月度收益率独立同分布且服从正态分布，并使用下表，应该使用哪种正确的检验方法？在5\%的显著性水平下，正确的结论是什么？
+        t表：学生t分布的单尾概率的逆
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        自由度 & 单尾概率 = 5.0\% & 单尾概率 = 2.5\% \\
+        \hline
+        29 & 1.699 & 2.045 \\
+        \hline
+        30 & 1.697 & 2.042 \\
+        \hline
+        31 & 1.696 & 2.040 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        卡方表：卡方分布的单尾概率的逆
+        \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        自由度 & 单尾概率 = 5.0\% & 单尾概率 = 2.5\% \\
+        \hline
+        29 & 42.557 & 45.722 \\
+        \hline
+        30 & 43.773 & 46.979 \\
+        \hline
+        31 & 44.985 & 48.232 \\
+        \hline
+        \end{tabular}
+        \end{center}
         \end{question}
         
         \begin{choices}
-            \item t - test; do not reject the null hypothesis
-            \item Chi - square test; do not reject the null hypothesis
-            \item t - test; reject the null hypothesis
-            \item Chi - square test; reject the null hypothesis
+            \item t - test; do not reject the null hypothesis\\
+            t检验；不拒绝原假设
+            \item Chi - square test; do not reject the null hypothesis\\
+            卡方检验；不拒绝原假设
+            \item t - test; reject the null hypothesis\\
+            t检验；拒绝原假设
+            \item Chi - square test; reject the null hypothesis\\
+            卡方检验；拒绝原假设
         \end{choices}
         
         \begin{correctanswer}
@@ -3634,14 +4226,19 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
         \checklist{总体方差的假设检验（关键是选择正确的检验方法和计算卡方统计量）}
 
         \begin{question}
-            A junior analyst at an investment bank is examining the returns of a particular stock. Using a sample size of 71 observations, the analyst determines that the standard deviation of the returns from the stock is 24\%. The analyst wants to test if the standard deviation of returns is higher than 16\% at a 0.05 significance level. Given that if df = 70 and p = 0.05, the critical value is 90.53, what should the analyst conclude?
+            A junior analyst at an investment bank is examining the returns of a particular stock. Using a sample size of 71 observations, the analyst determines that the standard deviation of the returns from the stock is 24\%. The analyst wants to test if the standard deviation of returns is higher than 16\% at a 0.05 significance level. Given that if df = 70 and p = 0.05, the critical value is 90.53, what should the analyst conclude?\\
+            一位投资银行的一名初级分析师正在研究某只股票的回报。使用71个观测值，分析师确定该股票的回报标准差为24\%。分析师想要检验回报标准差是否高于16\%，在0.05显著性水平下。已知自由度为70，单尾概率为0.05，临界值为90.53，分析师应该得出什么结论？
             \end{question}
             
             \begin{choices}
-                \item Cannot conclude that the standard deviation of returns is higher than 16\%.
-                \item Can conclude that the standard deviation of returns is higher than 16\%.
-                \item Can conclude that the standard deviation of returns is not higher than 16\%.
-                \item None of the above.
+                \item Cannot conclude that the standard deviation of returns is higher than 16\%.\\
+                无法得出回报标准差高于16\%的结论。
+                \item Can conclude that the standard deviation of returns is higher than 16\%.\\
+                可以得出回报标准差高于16\%的结论。
+                \item Can conclude that the standard deviation of returns is not higher than 16\%.\\
+                可以得出回报标准差不高于16\%的结论。
+                \item None of the above.\\
+                以上都不是。
             \end{choices}
             
             \begin{correctanswer}
@@ -3664,14 +4261,19 @@ The relevant t - table values are ( \(t_{i,j\%}\) denotes the \((100 - j)\)th pe
             \checklist{总体标准差的单侧卡方检验（计算卡方统计量）}
 
 \begin{question}
-A risk analyst at a large financial institution is testing the null hypothesis that the population mean of a certain variable is less than or equal to 50. From a population of 4,000,000 individuals, 100 observations are randomly selected. The sample mean is found to be 51.8, and the sample standard deviation is 6. What is the value of the most appropriate test statistic for the test of the population mean, and what is the correct decision at the 5\% significance level?
+A risk analyst at a large financial institution is testing the null hypothesis that the population mean of a certain variable is less than or equal to 50. From a population of 4,000,000 individuals, 100 observations are randomly selected. The sample mean is found to be 51.8, and the sample standard deviation is 6. What is the value of the most appropriate test statistic for the test of the population mean, and what is the correct decision at the 5\% significance level?\\
+一位大型金融机构的风险分析师正在检验某个变量的总体均值小于或等于50的原假设。从4,000,000个个体中随机抽取100个观测值。样本均值为51.8，样本标准差为6。对于总体均值的检验，最合适的检验统计量是什么，在5\%显著性水平下，正确的结论是什么？
 \end{question}
 
 \begin{choices}
-    \item t = 0.30, and fail to reject the null hypothesis.
-    \item z = 3.00, and reject the null hypothesis.
-    \item t = 3.00, and accept the null hypothesis.
-    \item z = 0.30, and neither reject nor fail to reject the null hypothesis.
+    \item t = 0.30, and fail to reject the null hypothesis.\\
+    t = 0.30，不拒绝原假设。
+    \item z = 3.00, and reject the null hypothesis.\\
+    z = 3.00，拒绝原假设。
+    \item t = 3.00, and accept the null hypothesis.\\
+    t = 3.00，接受原假设。
+    \item z = 0.30, and neither reject nor fail to reject the null hypothesis.\\
+    z = 0.30，既不拒绝也不不拒绝原假设。
 \end{choices}
 
 \begin{correctanswer}
@@ -3694,14 +4296,19 @@ A risk analyst at a large financial institution is testing the null hypothesis t
 \checklist{大样本下总体均值的单侧z检验（关键是大数定理的应用和检验统计量的计算）}
 
 \begin{question}
-    A risk analyst is in charge of evaluating whether to switch from spreadsheets to data analytics software. The risk managers think spreadsheets cause too many errors, but some finance staff believe that the firm's current spreadsheets contain no more than 0.8 bugs per sheet. A sample of 49 sheets is analyzed, and the sample mean is 1.2 bugs per sheet with a sample standard deviation of 0.7. At a 95\% confidence level, should the analyst reject the null hypothesis that the true error rate is not greater than 0.8 bugs per sheet?
+    A risk analyst is in charge of evaluating whether to switch from spreadsheets to data analytics software. The risk managers think spreadsheets cause too many errors, but some finance staff believe that the firm's current spreadsheets contain no more than 0.8 bugs per sheet. A sample of 49 sheets is analyzed, and the sample mean is 1.2 bugs per sheet with a sample standard deviation of 0.7. At a 95\% confidence level, should the analyst reject the null hypothesis that the true error rate is not greater than 0.8 bugs per sheet?\\
+    一位风险分析师正在评估是否从电子表格切换到数据分析软件。风险管理人员认为电子表格会导致太多错误，但一些财务人员认为公司目前的电子表格每张包含不超过0.8个错误。分析了49张电子表格，样本均值为1.2个错误每张，样本标准差为0.7。在95\%的置信水平下，分析师是否应该拒绝总体错误率不高于0.8个错误的原假设？
     \end{question}
     
     \begin{choices}
-        \item yes, because the test statistic of 4.0 is greater than the critical value of 1.96
-        \item Yes, because the test statistic of 4.0 is greater than the critical value of 1.68
-        \item No, because the test statistic of 2.0 is less than the critical value of 2.58
-        \item Because the population distribution and variance are both unknown, we do not have a reliable test statistic for the sample mean
+        \item yes, because the test statistic of 4.0 is greater than the critical value of 1.96\\
+        是，因为检验统计量4.0大于临界值1.96
+        \item Yes, because the test statistic of 4.0 is greater than the critical value of 1.68\\
+        是，因为检验统计量4.0大于临界值1.68
+        \item No, because the test statistic of 2.0 is less than the critical value of 2.58\\
+        否，因为检验统计量2.0小于临界值2.58
+        \item Because the population distribution and variance are both unknown, we do not have a reliable test statistic for the sample mean\\
+        因为总体分布和方差均未知，我们没有可靠的样本均值检验统计量
     \end{choices}
     
     \begin{correctanswer}
@@ -3732,14 +4339,19 @@ A risk analyst at a large financial institution is testing the null hypothesis t
     \checklist{总体方差未知时总体均值的单侧\(t\)检验（计算\(t\)统计量和确定临界值）}
 
 \begin{question}
-    A risk analyst has estimated the parameters of a normal distribution from a very large dataset. The analyst uses a Z - value of 1.96 to form a two - sided confidence interval around the sample mean based on the estimated distribution parameters. Which of the following statements regarding the confidence interval is most likely correct?
+    A risk analyst has estimated the parameters of a normal distribution from a very large dataset. The analyst uses a Z - value of 1.96 to form a two - sided confidence interval around the sample mean based on the estimated distribution parameters. Which of the following statements regarding the confidence interval is most likely correct?\\
+    一位风险分析师从非常大的数据集中估计了正态分布的参数。分析师使用Z值1.96构建一个双侧置信区间，基于估计的分布参数。关于置信区间，哪一项陈述最可能正确？
     \end{question}
     
     \begin{choices}
-        \item 10\% of all observations will fall outside the confidence interval.
-        \item There is a 1\% probability of a particular observation falling outside the confidence interval.
-        \item There is a 2.5\% probability of a particular observation being smaller than the lower limit of the confidence interval.
+        \item 10\% of all observations will fall outside the confidence interval.\\
+        10\%的观测值会落在置信区间之外。
+        \item There is a 1\% probability of a particular observation falling outside the confidence interval.\\
+        某个观测值落在置信区间之外的概率为1\%。
+        \item There is a 2.5\% probability of a particular observation being smaller than the lower limit of the confidence interval.\\
+        某个观测值小于置信区间下限的概率为2.5\%。
         \item 99\% of all observations will fall inside the confidence interval.
+        99\%的观测值会落在置信区间内。
     \end{choices}
     
     \begin{correctanswer}
@@ -3764,14 +4376,19 @@ A risk analyst at a large financial institution is testing the null hypothesis t
     \checklist{正态分布下双侧置信区间的理解及概率计算（理解置信区间这个概念）}
 
 \begin{question}
-    A financial analyst takes a random sample of 120 aggressive equity funds and calculates the average beta as 1.5. The sample betas have a standard deviation of 0.3. Using a 95\% confidence interval and a z - statistic, which of the following statements about the confidence interval and its interpretation is most likely accurate? The analyst can be confident at the 95\% level that the interval:
+    A financial analyst takes a random sample of 120 aggressive equity funds and calculates the average beta as 1.5. The sample betas have a standard deviation of 0.3. Using a 95\% confidence interval and a z - statistic, which of the following statements about the confidence interval and its interpretation is most likely accurate? The analyst can be confident at the 95\% level that the interval:\\
+    一位金融分析师随机抽取了120只激进的股票基金，计算出平均贝塔值为1.5。样本贝塔值的标准差为0.3。使用95\%置信区间和z统计量，关于置信区间及其解释，哪一项陈述最可能准确？分析师在95\%的置信水平下可以自信地认为区间：
     \end{question}
     
     \begin{choices}
-        \item from 0.90 to 2.10 includes the mean of the sample betas.
-        \item from 1.446 to 1.554 includes the mean of the sample betas.
-        \item from 0.90 to 2.10 includes the mean of the population beta.
-        \item from 1.446 to 1.554 includes the mean of the population beta.
+        \item from 0.90 to 2.10 includes the mean of the sample betas.\\
+        从0.90到2.10包括样本贝塔值的均值。
+        \item from 1.446 to 1.554 includes the mean of the sample betas.\\
+        从1.446到1.554包括样本贝塔值的均值。
+        \item from 0.90 to 2.10 includes the mean of the population beta.\\
+        从0.90到2.10包括总体贝塔值的均值。
+        \item from 1.446 to 1.554 includes the mean of the population beta.\\
+        从1.446到1.554包括总体贝塔值的均值。
     \end{choices}
     
     \begin{correctanswer}
@@ -3798,14 +4415,19 @@ A risk analyst at a large financial institution is testing the null hypothesis t
 
 
 \begin{question}
-A portfolio manager at a hedge fund is evaluating the performance of fund managers using hypothesis testing. The manager wants to test whether the fund's performance is superior to its benchmark. Which of the following statements about one-sided hypothesis testing is INCORRECT?
+A portfolio manager at a hedge fund is evaluating the performance of fund managers using hypothesis testing. The manager wants to test whether the fund's performance is superior to its benchmark. Which of the following statements about one-sided hypothesis testing is INCORRECT?\\
+一位对冲基金的组合经理正在使用假设检验评估基金经理的表现。经理想要检验基金的表现是否优于基准。关于单侧假设检验，哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The alternative hypothesis \(H_1: \mu_{FUND} > \mu_{BM}\) allows us to test whether the fund manager's performance is superior to the benchmark.
-    \item When the test results support \(H_1\), we can reject the null hypothesis \(H_0: \mu_{FUND} = \mu_{BM}\).
-    \item If we fail to reject \(H_0\), it means \(H_0\) is true and the fund's performance is equal to the benchmark.
-    \item One-sided tests can be more powerful than two-sided tests in detecting large losses.
+    \item The alternative hypothesis \(H_1: \mu_{FUND} > \mu_{BM}\) allows us to test whether the fund manager's performance is superior to the benchmark.\\
+    备择假设\(H_1: \mu_{FUND} > \mu_{BM}\)允许我们检验基金经理的表现是否优于基准。
+    \item When the test results support \(H_1\), we can reject the null hypothesis \(H_0: \mu_{FUND} = \mu_{BM}\).\\
+    当检验结果支持\(H_1\)时，我们可以拒绝原假设\(H_0: \mu_{FUND} = \mu_{BM}\)。
+    \item If we fail to reject \(H_0\), it means \(H_0\) is true and the fund's performance is equal to the benchmark.\\    
+    如果我们不拒绝\(H_0\)，这意味着\(H_0\)为真，基金的表现等于基准。
+    \item One-sided tests can be more powerful than two-sided tests in detecting large losses.\\
+    单侧检验在检测大幅损失时比双侧检验更有效。
 \end{choices}
 
 \begin{correctanswer}
@@ -3837,14 +4459,19 @@ A portfolio manager at a hedge fund is evaluating the performance of fund manage
 \checklist{假设检验的基本概念（不能拒绝不代表接受是真的）}
 
 \begin{question}
-A quantitative researcher at a hedge fund is conducting multiple hypothesis tests on trading strategies. Which of the following statements about multiple testing and its control methods is INCORRECT?
+A quantitative researcher at a hedge fund is conducting multiple hypothesis tests on trading strategies. Which of the following statements about multiple testing and its control methods is INCORRECT?\\
+一位对冲基金的量化研究员正在对交易策略进行多次假设检验。关于多次检验及其控制方法，哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Multiple testing increases the probability of Type I error because the same sample is used to test multiple hypotheses.
-    \item When n = 100, with independent tests and a 5\% significance level, the probability of finding at least one strategy that significantly outperforms the market is 99.4\%.
-    \item If you continuously test strategies on the same dataset, you will eventually find a seemingly effective strategy. If you subsequently test this strategy on different data, it is likely to remain effective.
-    \item The significance level \(\alpha\) (probability of incorrectly rejecting true results) is accurate only for single hypothesis tests but not applicable in multiple testing.
+    \item Multiple testing increases the probability of Type I error because the same sample is used to test multiple hypotheses.\\
+    多次检验增加了第一类错误的概率，因为同一个样本被用于测试多个假设。
+    \item When n = 100, with independent tests and a 5\% significance level, the probability of finding at least one strategy that significantly outperforms the market is 99.4\%.\\
+    当n = 100，独立检验和5\%显著性水平下，至少找到一个显著优于市场的策略的概率为99.4\%。
+    \item If you continuously test strategies on the same dataset, you will eventually find a seemingly effective strategy. If you subsequently test this strategy on different data, it is likely to remain effective.\\
+    如果你连续在同一数据集上测试策略，你最终会找到一个看似有效的策略。如果你随后在不同数据上测试这个策略，它很可能仍然有效。
+    \item The significance level \(\alpha\) (probability of incorrectly rejecting true results) is accurate only for single hypothesis tests but not applicable in multiple testing.\\
+    显著性水平\(\alpha\)（错误拒绝真结果的概率）仅对单个假设检验是准确的，但在多次检验中不适用。
 \end{choices}
 
 \begin{correctanswer}
@@ -3882,14 +4509,19 @@ A quantitative researcher at a hedge fund is conducting multiple hypothesis test
 
 
 \begin{question}
-Suppose you are evaluating an investment strategy that has shown statistically significant positive returns over the past 20 years. However, you need to consider transaction costs, tax implications, risk factors, and the limitations of statistical testing. Which of the following statements is INCORRECT?
+Suppose you are evaluating an investment strategy that has shown statistically significant positive returns over the past 20 years. However, you need to consider transaction costs, tax implications, risk factors, and the limitations of statistical testing. Which of the following statements is INCORRECT?\\
+你正在评估一个在过去20年中显示出统计显著正回报的投资策略。然而，你需要考虑交易成本、税收影响、风险因素以及统计检验的局限性。哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Transaction costs may reduce the strategy's net returns, even if the strategy shows positive returns statistically.
-    \item Tax implications may lower the strategy's actual returns, even if the strategy is statistically successful.
-    \item Early closing of short positions will make statistically significant results more economically meaningful.
-    \item Statistical tests may lead to results that are statistically significant but have little practical impact.
+    \item Transaction costs may reduce the strategy's net returns, even if the strategy shows positive returns statistically.\\
+    交易成本可能会减少策略的净回报，即使策略在统计上显示出正回报。
+    \item Tax implications may lower the strategy's actual returns, even if the strategy is statistically successful.\\
+    税收影响可能会降低策略的实际回报，即使策略在统计上是成功的。
+    \item Early closing of short positions will make statistically significant results more economically meaningful.\\
+    提前平仓空头头寸会使统计显著结果更具经济意义。
+    \item Statistical tests may lead to results that are statistically significant but have little practical impact.\\
+    统计检验可能导致统计显著但实际影响很小的结果。
 \end{choices}
 \begin{correctanswer}
 C
@@ -3935,14 +4567,33 @@ Return on S\&P 500 & 1.2054 & 0.00298 & 404.25225 & 0.00002 \\
 \end{tabular}
 \end{center}
 
-The analyst wants to test the null hypothesis that the beta of the portfolio is 1.2 at a 5\% significance level. According to the regression results, the analyst would:
+The analyst wants to test the null hypothesis that the beta of the portfolio is 1.2 at a 5\% significance level. According to the regression results, the analyst would:\\
+一位全球投资银行的量化分析师对一只股票的日收益率与标普500指数收益率进行普通最小二乘回归分析。该分析使用了750个交易日的数据。回归结果总结如下表：
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+预测变量 & 系数 & 标准误 & t统计量 & p值 \\
+\hline
+常数项 & 0.0561 & 0.00294 & 19.09710 & 0.00001 \\
+\hline
+标普500收益率 & 1.2054 & 0.00298 & 404.25225 & 0.00002 \\
+\hline
+\end{tabular}
+\end{center}
+
+该分析师想要在5\%的显著性水平下检验投资组合的贝塔值等于1.2的零假设。根据回归结果，该分析师将：\\
 \end{question}
 
 \begin{choices}
-    \item Reject the null hypothesis because the t-statistic is greater than 1.64
-    \item Fail to reject the null hypothesis because the t-statistic is greater than 1.64
-    \item Reject the null hypothesis because the p-value is greater than 5\%
-    \item Fail to reject the null hypothesis because the p-value is greater than 5\%
+    \item Reject the null hypothesis because the t-statistic is greater than 1.64\\
+    拒绝原假设，因为t统计量大于1.64
+    \item Fail to reject the null hypothesis because the t-statistic is greater than 1.64\\
+    不拒绝原假设，因为t统计量大于1.64
+    \item Reject the null hypothesis because the p-value is greater than 5\%\\
+    拒绝原假设，因为p值大于5\%
+    \item Fail to reject the null hypothesis because the p-value is greater than 5\%\\
+    不拒绝原假设，因为p值大于5\%
 \end{choices}
 
 \begin{correctanswer}

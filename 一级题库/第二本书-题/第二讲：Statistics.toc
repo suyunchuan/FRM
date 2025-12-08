@@ -1,105 +1,105 @@
 \contentsline {section}{\numberline {1}考点1：Random Variables 随机变量}{4}{}%
 \contentsline {subsection}{题号1考察: 离散型随机变量和连续型随机变量的定义及区别（理解可数性和不可数性的概念）}{4}{}%
 \contentsline {subsection}{题号2考察: 期望算子的基本性质（非线性变换下的期望）}{5}{}%
-\contentsline {subsection}{题号3考察: 累积分布函数(CDF)的基本性质（单调递减性、边界条件）}{5}{}%
+\contentsline {subsection}{题号3考察: 累积分布函数(CDF)的基本性质（单调递减性、边界条件）}{6}{}%
 \contentsline {subsection}{题号4考察: 概率质量函数、概率密度函数、累积分布函数的性质以及贝叶斯定理在不同随机变量中的应用（贝叶斯公式既可用于离散随机变量，也可用于连续随机变量）}{6}{}%
 \contentsline {subsection}{题号5考察: 离散随机变量的累积分布函数的计算（利用概率加法公式计算特定事件的概率）}{7}{}%
-\contentsline {subsection}{题号6考察: 连续随机变量的概率密度函数的计算（利用定积分计算连续随机变量在某区间的概率）}{7}{}%
-\contentsline {subsection}{题号7考察: 离散随机变量的条件期望和条件方差的计算（ \(\text {Var}[X] = E\left [(X - \mu )^2\right ] = E[X^2] - (E[X])^2 \)）}{8}{}%
-\contentsline {subsection}{题号8考察: 独立随机变量的性质、边缘概率的计算以及期望的计算（关键是理解独立随机变量\(E(XY)\)的计算公式}{9}{}%
-\contentsline {subsection}{题号9考察: 累积分布函数（CDF）的性质与随机变量方差的关系（关键是理解CDF的形状如何反映随机变量取值的分散程度）}{10}{}%
-\contentsline {subsection}{题号10考察: 样本方差的计算（掌握样本方差公式）}{10}{}%
-\contentsline {subsection}{题号11考察: 偏度和峰度的概念及应用（关键是理解偏度和峰度与分布形状的关系）}{11}{}%
-\contentsline {subsection}{题号12考察: 不同峰度分布的特点及极端值概率的比较（理解峰度与分布尾部厚度的关系）}{11}{}%
-\contentsline {subsection}{题号13考察: 偏度和峰度的判断（关键是掌握均值、中位数、众数与偏度的关系，以及峰度与分布形态的关系）}{12}{}%
-\contentsline {subsection}{题号14考察: 偏度和峰度的判断（依据均值与中位数的关系判断偏度类型，依据超额峰度的值判断峰度类型）}{12}{}%
-\contentsline {subsection}{题号15考察: 分布的偏态和峰态特征（根据分布的特征描述判断偏度和峰度类型）}{13}{}%
-\contentsline {subsection}{题号16考察: 样本峰度的计算（掌握样本峰度的计算公式）}{13}{}%
-\contentsline {subsection}{题号17考察: 分布的尾部特征（理解厚尾分布与正态分布在极端事件概率上的差异）}{14}{}%
-\contentsline {subsection}{题号18考察: 线性变换对随机变量均值、方差、偏度和峰度的影响（峰度是不受线性变化影响的）}{14}{}%
-\contentsline {subsection}{题号19考察: 线性变换对随机变量均值、方差、偏度和峰度的影响（主要是理解偏度和峰度）}{15}{}%
-\contentsline {subsection}{题号20考察: 中位数和四分位距的计算（四分位数的计算方法）}{16}{}%
-\contentsline {subsection}{题号21考察: 四分位距IQR的定义、性质（四分位距主要用于衡量数据的离散程度）}{16}{}%
-\contentsline {subsection}{题号22考察: 描述性统计量的特性及其在金融数据分析中的应用（中位数在存在极端值时的优势）}{17}{}%
-\contentsline {subsection}{题号23考察: Jensen不等式的性质及其在金融领域的应用（连续和离散都可以）}{18}{}%
-\contentsline {subsection}{题号24考察: 共偏度和共峰度的特性（共偏度不一定是严格正的）}{18}{}%
-\contentsline {section}{\numberline {2}考点2：Common Univariate Random Variables 常见单变量随机变量}{19}{}%
-\contentsline {subsection}{题号1考察: 二项分布概率的计算（二项分布概率公式）}{19}{}%
-\contentsline {subsection}{题号2考察: 二项分布逆累积分布函数的计算（二项分布累积分布函数公式和逆累积分布函数定义）}{20}{}%
-\contentsline {subsection}{题号3考察: 不同概率分布的适用场景（二项分布的定义及应用）}{20}{}%
-\contentsline {subsection}{题号4考察: 常见概率分布与正态分布的关系（分布极限是正态）}{21}{}%
-\contentsline {subsection}{题号5考察: 二项分布概率的计算（确定二项分布参数并利用对立事件简化计算）}{21}{}%
-\contentsline {subsection}{题号6考察: 二项分布的均值和标准差计算（简单用计算公式）}{22}{}%
-\contentsline {subsection}{题号7考察: 泊松分布概率的计算（确定泊松分布的参数\(\lambda \)并正确代入公式计算）}{22}{}%
-\contentsline {subsection}{题号8考察: 泊松分布的概率计算（利用概率性质转化问题）}{23}{}%
-\contentsline {subsection}{题号9考察: 泊松分布的概率计算（先确定泊松分布的参数\(\lambda \)）}{23}{}%
-\contentsline {subsection}{题号10考察: 泊松分布概率计算（关键是根据情境确定泊松分布的参数\(\lambda \)）}{24}{}%
-\contentsline {subsection}{题号11考察: 随机变量线性变换后的期望和方差计算（用公式去理解）}{24}{}%
-\contentsline {subsection}{题号12考察: 泊松分布的概率计算（关键是确定泊松分布的参数\(\lambda \)）}{25}{}%
-\contentsline {subsection}{题号13考察: 不同概率分布方差的计算与比较（标准正态分布、学生\(t\)分布、伯努利分布、泊松分布、二项分布方差计算公式）}{25}{}%
-\contentsline {subsection}{题号14考察: 正态分布和学生t分布的特征及关系（t分布的峰度随着自由度的增加逐渐趋近于正态分布的峰度）}{26}{}%
-\contentsline {subsection}{题号15考察: 二项分布累积概率的应用（关键是对累积分布函数定义的理解）}{27}{}%
-\contentsline {subsection}{题号16考察: 二项分布的均值和方差的计算（每个分布的均值和方差都应该记住）}{27}{}%
-\contentsline {subsection}{题号17考察: 对数正态分布的定义和性质（关键是理解对数正态分布与正态分布之间的关系）}{27}{}%
-\contentsline {subsection}{题号18考察: 正态分布和对数正态分布的性质（两个独立的正态分布变量的和仍然是正态分布）}{28}{}%
-\contentsline {subsection}{题号19考察: Student's \(t\)分布的参数计算（利用自由度计算Student's \(t\)分布的方差和峰度）}{28}{}%
-\contentsline {subsection}{题号20考察: 正态分布和t分布的特征比较（t分布的峰度随着自由度的增加逐渐趋近于正态分布的峰度）}{29}{}%
-\contentsline {subsection}{题号21考察: 卡方分布和F分布的性质及在多元回归中的应用（随着自由度的增加，卡方分布和F分布都趋近于正态分布）}{29}{}%
-\contentsline {subsection}{题号22考察: 卡方分布、F分布以及学生t分布的性质和关系（卡方分布并不是由两个独立F分布的比值来近似的）}{30}{}%
-\contentsline {subsection}{题号23考察: 各类分布的特点及应用（对数正态分布、卡方分布、F分布、t分布以及混合分布的特征）}{31}{}%
-\contentsline {subsection}{题号24考察: 混合分布（不同方差的正态分布混合后有非常重的尾部特征）}{31}{}%
-\contentsline {subsection}{题号25考察: t分布的基本性质及其在金融建模中的应用（对称性、尾部特征、与自由度的关系）}{32}{}%
-\contentsline {subsection}{题号26考察: 期望值的计算（均匀分布的期望值计算和伯努利分布的性质）}{32}{}%
-\contentsline {section}{\numberline {3}考点3：Multivariate Random Variables 多元随机变量}{32}{}%
-\contentsline {subsection}{题号1考察: 双因素模型下资产协方差的计算（准确识别和代入因子方差、协方差以及因子敏感度等参数）}{33}{}%
-\contentsline {subsection}{题号2考察: 协方差的计算（掌握协方差公式）}{34}{}%
-\contentsline {subsection}{题号3考察: 协方差的上限（掌握协方差公式以及相关系数和方差的性质）}{34}{}%
-\contentsline {subsection}{题号4考察: 资产组合的期望收益率、标准差计算，以及利用标准正态分布计算概率（关键是掌握组合期望收益率和标准差的计算公式）}{35}{}%
-\contentsline {subsection}{题号5考察: 资产组合的期望收益率、标准差计算，以及利用标准正态分布计算概率（关键是掌握组合期望收益率和标准差的计算公式）}{36}{}%
-\contentsline {subsection}{题号6考察: 投资组合预期终值范围的计算（计算资产组合收益率均值及标准差）}{37}{}%
-\contentsline {subsection}{题号7考察: 计算投资组合协方差（协方差公式）}{37}{}%
-\contentsline {subsection}{题号8考察: 方差、协方差和相关系数的运算性质（线性变化的影响）}{38}{}%
-\contentsline {subsection}{题号9考察: 独立随机变量乘积的特征函数性质（特征函数关于独立随机变量乘积的计算规则）}{38}{}%
-\contentsline {subsection}{题号10考察: 随机变量线性组合的方差计算（两个随机变量线性组合的方差计算公式）}{39}{}%
-\contentsline {subsection}{题号11考察: 联合概率矩阵的解读、条件概率的计算（用条件概率公式并正确从矩阵中读取概率值）}{39}{}%
-\contentsline {subsection}{题号12考察: 离散随机变量的条件概率分布、条件期望、条件方差和条件标准差的计算（关键是正确运用相关公式）}{40}{}%
-\contentsline {subsection}{题号13考察: 联合概率分布的应用（关键是先确定常数k，再找出满足条件的组合计算概率）}{41}{}%
-\contentsline {subsection}{题号14考察: 协方差与相关系数的区别（不能仅从协方差的大小来判断收益率的波动性）}{42}{}%
-\contentsline {subsection}{题号15考察: i.i.d.随机变量的基本性质（和的期望、方差，平均值的方差）}{42}{}%
-\contentsline {subsection}{题号16考察: 协方差与相关系数的关系（相关系数是标准化的协方差度量，其值总是在-1到1之间）}{43}{}%
-\contentsline {section}{\numberline {4}考点4：Sample Moments 样本矩}{43}{}%
-\contentsline {subsection}{题号1考察: 估计量的性质（无偏性、有效性、样本均值、标准误差等概念）}{43}{}%
-\contentsline {subsection}{题号2考察: 中心极限定理的条件和结论（样本均值的分布性质、方差计算、大样本性质）}{44}{}%
-\contentsline {subsection}{题号3考察: 评价估计量的标准（关键是理解有效性、无偏性、一致性等概念的区别）}{45}{}%
-\contentsline {subsection}{题号4考察: 大数定律与一致性估计量的性质（区分依概率收敛和处处收敛）}{45}{}%
-\contentsline {subsection}{题号5考察: 评价估计量的标准（无偏性、一致性、有效性）}{46}{}%
-\contentsline {subsection}{题号6考察: 最佳线性无偏估计量（BLUE）的定义（关键是明确各项标准的限定范围）}{46}{}%
-\contentsline {subsection}{题号7考察: 最佳线性无偏估计量（BLUE）的定义（无偏性是指估计量的期望值等于总体参数）}{47}{}%
-\contentsline {subsection}{题号8考察: 方差计算与比较（独立随机变量的线性组合的方差计算规则）}{48}{}%
-\contentsline {subsection}{题号9考察: 样本均值标准差的计算（关键是中心极限定理下的样本均值标准差计算公式）}{48}{}%
-\contentsline {subsection}{题号10考察: 样本均值标准差的计算（关键是中心极限定理下的样本均值标准差计算公式）}{48}{}%
-\contentsline {subsection}{题号11考察: 标准误差与标准偏差的区别（估计量的标准误差随着样本大小的增加而减少。标准偏差不会随着样本大小的变化而改变。 ）}{49}{}%
-\contentsline {section}{\numberline {5}考点5：Hypothesis Testing 假设检验}{49}{}%
-\contentsline {subsection}{题号1考察: 假设检验的基本概念（关键是理解第一类错误、第二类错误、\(p\)值、显著性水平等概念以及它们之间的关系）}{50}{}%
-\contentsline {subsection}{题号2考察: 假设检验中显著性水平与两类错误的关系（显著性水平降低，第一类错误概率降低，第二类错误概率增加）}{50}{}%
-\contentsline {subsection}{题号3考察: 假设检验中显著性水平和样本量对两类错误的影响（显著性水平降低，第一类错误概率降低，第二类错误概率增加；样本量减少，第二类错误概率增加）}{51}{}%
-\contentsline {subsection}{题号4考察: 假设检验中第一类错误和检验功效的概念及应用（第一类错误是原假设为真时拒绝原假设的概率，检验功效是原假设为假时拒绝原假设的概率）}{51}{}%
-\contentsline {subsection}{题号5考察: 显著性水平变化对假设检验中两类错误概率的影响（显著性水平降低，第一类错误概率降低，第二类错误概率增加）}{52}{}%
-\contentsline {subsection}{题号6考察: 样本均值的置信区间计算（关键是计算标准误差和确定合适的t值）}{52}{}%
-\contentsline {subsection}{题号7考察: 正态分布的置信区间计算以及对数正态分布的应用（利用正态分布性质计算置信区间并应用到对数正态分布）}{53}{}%
-\contentsline {subsection}{题号8考察: 正态分布的置信区间计算（确定临界值、计算样本均值的标准误差）}{53}{}%
-\contentsline {subsection}{题号9考察: 正态分布的标准化以及计算指定区间概率（标准化方法）}{54}{}%
-\contentsline {subsection}{题号10考察: 总体方差的单侧假设检验（解题步骤可以画表）}{54}{}%
-\contentsline {subsection}{题号11考察: 正态分布的线性组合的期望和方差计算（期望和方差计算公式）}{55}{}%
-\contentsline {subsection}{题号12考察: 使用t分布计算样本均值的置信区间（关键是确定自由度和对应的t值）}{56}{}%
-\contentsline {subsection}{题号13考察: 总体方差的假设检验（关键是选择正确的检验方法和计算卡方统计量）}{56}{}%
-\contentsline {subsection}{题号14考察: 总体标准差的单侧卡方检验（计算卡方统计量）}{57}{}%
-\contentsline {subsection}{题号15考察: 大样本下总体均值的单侧z检验（关键是大数定理的应用和检验统计量的计算）}{57}{}%
-\contentsline {subsection}{题号16考察: 总体方差未知时总体均值的单侧\(t\)检验（计算\(t\)统计量和确定临界值）}{58}{}%
-\contentsline {subsection}{题号17考察: 正态分布下双侧置信区间的理解及概率计算（理解置信区间这个概念）}{58}{}%
-\contentsline {subsection}{题号18考察: 总体均值的置信区间计算（置信区间临界值的计算公式）}{59}{}%
-\contentsline {subsection}{题号19考察: 假设检验的基本概念（不能拒绝不代表接受是真的）}{59}{}%
-\contentsline {subsection}{题号20考察: 多重检验的基本概念（显著性水平\(\alpha \)仅对单个假设检验是准确的）}{60}{}%
-\contentsline {subsection}{题号21考察: 统计显著性与实际经济意义的区别（交易成本、税收和风险等实际因素的影响）}{61}{}%
-\contentsline {subsection}{题号22考察: 回归分析中的假设检验（关键是理解t统计量和p值的含义及其在假设检验中的应用）}{61}{}%
+\contentsline {subsection}{题号6考察: 连续随机变量的概率密度函数的计算（利用定积分计算连续随机变量在某区间的概率）}{8}{}%
+\contentsline {subsection}{题号7考察: 离散随机变量的条件期望和条件方差的计算（ \(\text {Var}[X] = E\left [(X - \mu )^2\right ] = E[X^2] - (E[X])^2 \)）}{9}{}%
+\contentsline {subsection}{题号8考察: 独立随机变量的性质、边缘概率的计算以及期望的计算（关键是理解独立随机变量\(E(XY)\)的计算公式}{10}{}%
+\contentsline {subsection}{题号9考察: 累积分布函数（CDF）的性质与随机变量方差的关系（关键是理解CDF的形状如何反映随机变量取值的分散程度）}{11}{}%
+\contentsline {subsection}{题号10考察: 样本方差的计算（掌握样本方差公式）}{11}{}%
+\contentsline {subsection}{题号11考察: 偏度和峰度的概念及应用（关键是理解偏度和峰度与分布形状的关系）}{12}{}%
+\contentsline {subsection}{题号12考察: 不同峰度分布的特点及极端值概率的比较（理解峰度与分布尾部厚度的关系）}{13}{}%
+\contentsline {subsection}{题号13考察: 偏度和峰度的判断（关键是掌握均值、中位数、众数与偏度的关系，以及峰度与分布形态的关系）}{13}{}%
+\contentsline {subsection}{题号14考察: 偏度和峰度的判断（依据均值与中位数的关系判断偏度类型，依据超额峰度的值判断峰度类型）}{14}{}%
+\contentsline {subsection}{题号15考察: 分布的偏态和峰态特征（根据分布的特征描述判断偏度和峰度类型）}{14}{}%
+\contentsline {subsection}{题号16考察: 样本峰度的计算（掌握样本峰度的计算公式）}{15}{}%
+\contentsline {subsection}{题号17考察: 分布的尾部特征（理解厚尾分布与正态分布在极端事件概率上的差异）}{16}{}%
+\contentsline {subsection}{题号18考察: 线性变换对随机变量均值、方差、偏度和峰度的影响（峰度是不受线性变化影响的）}{17}{}%
+\contentsline {subsection}{题号19考察: 线性变换对随机变量均值、方差、偏度和峰度的影响（主要是理解偏度和峰度）}{18}{}%
+\contentsline {subsection}{题号20考察: 中位数和四分位距的计算（四分位数的计算方法）}{18}{}%
+\contentsline {subsection}{题号21考察: 四分位距IQR的定义、性质（四分位距主要用于衡量数据的离散程度）}{19}{}%
+\contentsline {subsection}{题号22考察: 描述性统计量的特性及其在金融数据分析中的应用（中位数在存在极端值时的优势）}{20}{}%
+\contentsline {subsection}{题号23考察: Jensen不等式的性质及其在金融领域的应用（连续和离散都可以）}{21}{}%
+\contentsline {subsection}{题号24考察: 共偏度和共峰度的特性（共偏度不一定是严格正的）}{22}{}%
+\contentsline {section}{\numberline {2}考点2：Common Univariate Random Variables 常见单变量随机变量}{22}{}%
+\contentsline {subsection}{题号1考察: 二项分布概率的计算（二项分布概率公式）}{22}{}%
+\contentsline {subsection}{题号2考察: 二项分布逆累积分布函数的计算（二项分布累积分布函数公式和逆累积分布函数定义）}{23}{}%
+\contentsline {subsection}{题号3考察: 不同概率分布的适用场景（二项分布的定义及应用）}{24}{}%
+\contentsline {subsection}{题号4考察: 常见概率分布与正态分布的关系（分布极限是正态）}{25}{}%
+\contentsline {subsection}{题号5考察: 二项分布概率的计算（确定二项分布参数并利用对立事件简化计算）}{25}{}%
+\contentsline {subsection}{题号6考察: 二项分布的均值和标准差计算（简单用计算公式）}{26}{}%
+\contentsline {subsection}{题号7考察: 泊松分布概率的计算（确定泊松分布的参数\(\lambda \)并正确代入公式计算）}{26}{}%
+\contentsline {subsection}{题号8考察: 泊松分布的概率计算（利用概率性质转化问题）}{27}{}%
+\contentsline {subsection}{题号9考察: 泊松分布的概率计算（先确定泊松分布的参数\(\lambda \)）}{27}{}%
+\contentsline {subsection}{题号10考察: 泊松分布概率计算（关键是根据情境确定泊松分布的参数\(\lambda \)）}{28}{}%
+\contentsline {subsection}{题号11考察: 随机变量线性变换后的期望和方差计算（用公式去理解）}{28}{}%
+\contentsline {subsection}{题号12考察: 泊松分布的概率计算（关键是确定泊松分布的参数\(\lambda \)）}{29}{}%
+\contentsline {subsection}{题号13考察: 不同概率分布方差的计算与比较（标准正态分布、学生\(t\)分布、伯努利分布、泊松分布、二项分布方差计算公式）}{30}{}%
+\contentsline {subsection}{题号14考察: 正态分布和学生t分布的特征及关系（t分布的峰度随着自由度的增加逐渐趋近于正态分布的峰度）}{30}{}%
+\contentsline {subsection}{题号15考察: 二项分布累积概率的应用（关键是对累积分布函数定义的理解）}{31}{}%
+\contentsline {subsection}{题号16考察: 二项分布的均值和方差的计算（每个分布的均值和方差都应该记住）}{32}{}%
+\contentsline {subsection}{题号17考察: 对数正态分布的定义和性质（关键是理解对数正态分布与正态分布之间的关系）}{32}{}%
+\contentsline {subsection}{题号18考察: 正态分布和对数正态分布的性质（两个独立的正态分布变量的和仍然是正态分布）}{33}{}%
+\contentsline {subsection}{题号19考察: Student's \(t\)分布的参数计算（利用自由度计算Student's \(t\)分布的方差和峰度）}{33}{}%
+\contentsline {subsection}{题号20考察: 正态分布和t分布的特征比较（t分布的峰度随着自由度的增加逐渐趋近于正态分布的峰度）}{34}{}%
+\contentsline {subsection}{题号21考察: 卡方分布和F分布的性质及在多元回归中的应用（随着自由度的增加，卡方分布和F分布都趋近于正态分布）}{34}{}%
+\contentsline {subsection}{题号22考察: 卡方分布、F分布以及学生t分布的性质和关系（卡方分布并不是由两个独立F分布的比值来近似的）}{35}{}%
+\contentsline {subsection}{题号23考察: 各类分布的特点及应用（对数正态分布、卡方分布、F分布、t分布以及混合分布的特征）}{36}{}%
+\contentsline {subsection}{题号24考察: 混合分布（不同方差的正态分布混合后有非常重的尾部特征）}{36}{}%
+\contentsline {subsection}{题号25考察: t分布的基本性质及其在金融建模中的应用（对称性、尾部特征、与自由度的关系）}{37}{}%
+\contentsline {subsection}{题号26考察: 期望值的计算（均匀分布的期望值计算和伯努利分布的性质）}{38}{}%
+\contentsline {section}{\numberline {3}考点3：Multivariate Random Variables 多元随机变量}{38}{}%
+\contentsline {subsection}{题号1考察: 双因素模型下资产协方差的计算（准确识别和代入因子方差、协方差以及因子敏感度等参数）}{39}{}%
+\contentsline {subsection}{题号2考察: 协方差的计算（掌握协方差公式）}{40}{}%
+\contentsline {subsection}{题号3考察: 协方差的上限（掌握协方差公式以及相关系数和方差的性质）}{40}{}%
+\contentsline {subsection}{题号4考察: 资产组合的期望收益率、标准差计算，以及利用标准正态分布计算概率（关键是掌握组合期望收益率和标准差的计算公式）}{41}{}%
+\contentsline {subsection}{题号5考察: 资产组合的期望收益率、标准差计算，以及利用标准正态分布计算概率（关键是掌握组合期望收益率和标准差的计算公式）}{42}{}%
+\contentsline {subsection}{题号6考察: 投资组合预期终值范围的计算（计算资产组合收益率均值及标准差）}{43}{}%
+\contentsline {subsection}{题号7考察: 计算投资组合协方差（协方差公式）}{44}{}%
+\contentsline {subsection}{题号8考察: 方差、协方差和相关系数的运算性质（线性变化的影响）}{44}{}%
+\contentsline {subsection}{题号9考察: 独立随机变量乘积的特征函数性质（特征函数关于独立随机变量乘积的计算规则）}{45}{}%
+\contentsline {subsection}{题号10考察: 随机变量线性组合的方差计算（两个随机变量线性组合的方差计算公式）}{45}{}%
+\contentsline {subsection}{题号11考察: 联合概率矩阵的解读、条件概率的计算（用条件概率公式并正确从矩阵中读取概率值）}{46}{}%
+\contentsline {subsection}{题号12考察: 离散随机变量的条件概率分布、条件期望、条件方差和条件标准差的计算（关键是正确运用相关公式）}{47}{}%
+\contentsline {subsection}{题号13考察: 联合概率分布的应用（关键是先确定常数k，再找出满足条件的组合计算概率）}{48}{}%
+\contentsline {subsection}{题号14考察: 协方差与相关系数的区别（不能仅从协方差的大小来判断收益率的波动性）}{49}{}%
+\contentsline {subsection}{题号15考察: i.i.d.随机变量的基本性质（和的期望、方差，平均值的方差）}{50}{}%
+\contentsline {subsection}{题号16考察: 协方差与相关系数的关系（相关系数是标准化的协方差度量，其值总是在-1到1之间）}{50}{}%
+\contentsline {section}{\numberline {4}考点4：Sample Moments 样本矩}{50}{}%
+\contentsline {subsection}{题号1考察: 估计量的性质（无偏性、有效性、样本均值、标准误差等概念）}{51}{}%
+\contentsline {subsection}{题号2考察: 中心极限定理的条件和结论（样本均值的分布性质、方差计算、大样本性质）}{52}{}%
+\contentsline {subsection}{题号3考察: 评价估计量的标准（关键是理解有效性、无偏性、一致性等概念的区别）}{53}{}%
+\contentsline {subsection}{题号4考察: 大数定律与一致性估计量的性质（区分依概率收敛和处处收敛）}{53}{}%
+\contentsline {subsection}{题号5考察: 评价估计量的标准（无偏性、一致性、有效性）}{54}{}%
+\contentsline {subsection}{题号6考察: 最佳线性无偏估计量（BLUE）的定义（关键是明确各项标准的限定范围）}{54}{}%
+\contentsline {subsection}{题号7考察: 最佳线性无偏估计量（BLUE）的定义（无偏性是指估计量的期望值等于总体参数）}{55}{}%
+\contentsline {subsection}{题号8考察: 方差计算与比较（独立随机变量的线性组合的方差计算规则）}{56}{}%
+\contentsline {subsection}{题号9考察: 样本均值标准差的计算（关键是中心极限定理下的样本均值标准差计算公式）}{56}{}%
+\contentsline {subsection}{题号10考察: 样本均值标准差的计算（关键是中心极限定理下的样本均值标准差计算公式）}{57}{}%
+\contentsline {subsection}{题号11考察: 标准误差与标准偏差的区别（估计量的标准误差随着样本大小的增加而减少。标准偏差不会随着样本大小的变化而改变。 ）}{57}{}%
+\contentsline {section}{\numberline {5}考点5：Hypothesis Testing 假设检验}{58}{}%
+\contentsline {subsection}{题号1考察: 假设检验的基本概念（关键是理解第一类错误、第二类错误、\(p\)值、显著性水平等概念以及它们之间的关系）}{58}{}%
+\contentsline {subsection}{题号2考察: 假设检验中显著性水平与两类错误的关系（显著性水平降低，第一类错误概率降低，第二类错误概率增加）}{59}{}%
+\contentsline {subsection}{题号3考察: 假设检验中显著性水平和样本量对两类错误的影响（显著性水平降低，第一类错误概率降低，第二类错误概率增加；样本量减少，第二类错误概率增加）}{59}{}%
+\contentsline {subsection}{题号4考察: 假设检验中第一类错误和检验功效的概念及应用（第一类错误是原假设为真时拒绝原假设的概率，检验功效是原假设为假时拒绝原假设的概率）}{60}{}%
+\contentsline {subsection}{题号5考察: 显著性水平变化对假设检验中两类错误概率的影响（显著性水平降低，第一类错误概率降低，第二类错误概率增加）}{61}{}%
+\contentsline {subsection}{题号6考察: 样本均值的置信区间计算（关键是计算标准误差和确定合适的t值）}{62}{}%
+\contentsline {subsection}{题号7考察: 正态分布的置信区间计算以及对数正态分布的应用（利用正态分布性质计算置信区间并应用到对数正态分布）}{62}{}%
+\contentsline {subsection}{题号8考察: 正态分布的置信区间计算（确定临界值、计算样本均值的标准误差）}{63}{}%
+\contentsline {subsection}{题号9考察: 正态分布的标准化以及计算指定区间概率（标准化方法）}{63}{}%
+\contentsline {subsection}{题号10考察: 总体方差的单侧假设检验（解题步骤可以画表）}{64}{}%
+\contentsline {subsection}{题号11考察: 正态分布的线性组合的期望和方差计算（期望和方差计算公式）}{65}{}%
+\contentsline {subsection}{题号12考察: 使用t分布计算样本均值的置信区间（关键是确定自由度和对应的t值）}{66}{}%
+\contentsline {subsection}{题号13考察: 总体方差的假设检验（关键是选择正确的检验方法和计算卡方统计量）}{67}{}%
+\contentsline {subsection}{题号14考察: 总体标准差的单侧卡方检验（计算卡方统计量）}{67}{}%
+\contentsline {subsection}{题号15考察: 大样本下总体均值的单侧z检验（关键是大数定理的应用和检验统计量的计算）}{68}{}%
+\contentsline {subsection}{题号16考察: 总体方差未知时总体均值的单侧\(t\)检验（计算\(t\)统计量和确定临界值）}{69}{}%
+\contentsline {subsection}{题号17考察: 正态分布下双侧置信区间的理解及概率计算（理解置信区间这个概念）}{69}{}%
+\contentsline {subsection}{题号18考察: 总体均值的置信区间计算（置信区间临界值的计算公式）}{70}{}%
+\contentsline {subsection}{题号19考察: 假设检验的基本概念（不能拒绝不代表接受是真的）}{71}{}%
+\contentsline {subsection}{题号20考察: 多重检验的基本概念（显著性水平\(\alpha \)仅对单个假设检验是准确的）}{71}{}%
+\contentsline {subsection}{题号21考察: 统计显著性与实际经济意义的区别（交易成本、税收和风险等实际因素的影响）}{72}{}%
+\contentsline {subsection}{题号22考察: 回归分析中的假设检验（关键是理解t统计量和p值的含义及其在假设检验中的应用）}{73}{}%
 \contentsfinish 

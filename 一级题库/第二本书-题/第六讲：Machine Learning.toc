@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}考点1：Machine-Learn Methods 机器学习方法}{2}{}%
+\contentsline {subsection}{题号1考察: 机器学习方法的类型及其应用场景（关键是理解监督学习和非监督学习的区别及其适用范围）}{2}{}%
+\contentsline {subsection}{题号2考察: 机器学习方法的类型及其应用场景（不同类型机器学习方法的特点和适用范围）}{3}{}%
+\contentsline {subsection}{题号3考察: 机器学习模型的过拟合和欠拟合（理解模型复杂度、训练集和验证集表现之间的关系）}{4}{}%
+\contentsline {subsection}{题号4考察: 机器学习与传统计量经济模型适用场景的比较（理解机器学习在缺乏理论指导、处理复杂关系和大数据方面的优势）}{5}{}%
+\contentsline {subsection}{题号5考察: 不同机器学习算法的适用场景（K - means聚类方法的应用）}{5}{}%
+\contentsline {subsection}{题号6考察: 机器学习的类型以及样本的分离和准备（无监督学习、监督学习与强化学习的定义，训练集、验证集和测试集的作用）}{6}{}%
+\contentsline {subsection}{题号7考察: 数据清洗（如何处理异常值、缺失值、无关数据以及保持数据格式一致性）}{7}{}%
+\contentsline {subsection}{题号8考察: 不同机器学习算法的适用场景（回归的应用）}{7}{}%
+\contentsline {subsection}{题号9考察: 自然语言处理在金融领域的应用（关键在于区分NLP是用于分析和理解语言，而非创造语句情感倾向）}{8}{}%
+\contentsline {section}{\numberline {2}考点2：Machine-Learning and Prediction 机器学习和预测}{8}{}%
+\contentsline {subsection}{题号1考察: 不同机器学习方法在处理大量特征分类问题中的适用性（当存在大量数据特征时，支持向量机（SVM）非常适合于分类问题）。}{9}{}%
+\contentsline {subsection}{题号2考察: 神经网络和深度学习的适用场景（理解其处理非线性和复杂特征关系的能力）}{9}{}%
+\contentsline {subsection}{题号3考察: 分类与回归树（CART）和K近邻（KNN）算法的比较（关键在于理解CART相对于KNN的优势和劣势）}{10}{}%
+\contentsline {subsection}{题号4考察: 违约预测模型的精准率和准确率计算（关键是了解precision、recall和accuracy的定义和计算公式）}{11}{}%
+\contentsline {subsection}{题号5考察: 正则化技术的类型（关键在于区分正则化技术和其他数据处理技术）}{11}{}%
+\contentsline {subsection}{题号6考察: ROC（receiver operating curve）曲线和AUC（area under curve）（关键在于理解ROC曲线和AUC的特征及应用场景）}{12}{}%
+\contentsline {subsection}{题号7考察: 神经网络的基本概念及过度拟合问题（关键在于理解神经网络与线性回归的联系、各组成部分的作用以及过度拟合的处理方法）}{13}{}%
+\contentsline {subsection}{题号8考察: 神经网络中梯度下降算法的停止条件（关键是理解目标函数在训练集和验证集上的变化与模型训练状态的关系）}{14}{}%
+\contentsline {subsection}{题号9考察: 逻辑回归的概率计算（关键在于理解逻辑回归的公式和二分类结果的性质）}{14}{}%
+\contentsline {subsection}{题号10考察: 区分岭回归和LASSO正则化方法（关键在于理解L1和L2正则化的区别以及它们能否将参数设为0）}{15}{}%
+\contentsline {subsection}{题号11考察: 机器学习中的正则化技术（关键在于理解不同正则化方法的惩罚项特征及其作用）}{15}{}%
+\contentsline {subsection}{题号12考察: 集成学习方法（关键在于理解群体智慧的概念以及随机森林和提升方法的工作原理）}{16}{}%
+\contentsfinish 

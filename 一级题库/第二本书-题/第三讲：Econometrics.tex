@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -99,14 +99,19 @@
 \setcounter{question}{0}
 
 \begin{question}
-A financial advisor is using an ordinary least squares regression model with one independent variable to analyze the relationship between two financial variables. Which of the following statements about this model is correct?
+A financial advisor is using an ordinary least squares regression model with one independent variable to analyze the relationship between two financial variables. Which of the following statements about this model is correct?\\
+一位金融顾问正在使用一个具有一个自变量的普通最小二乘回归模型来分析两个金融变量之间的关系。哪一项陈述关于这个模型是正确的？
 \end{question}
 
 \begin{choices}
-    \item In the OLS model, the variance of the residuals is assumed to be correlated with the independent variable.
-    \item In the OLS model, the variance of the independent variable is assumed to be positively correlated with the variance of the error term.
-    \item In the OLS model, it is assumed that the correlation between the dependent variable and the random error term is zero.
-    \item In the OLS model, the random error term is assumed to have zero mean and constant variance.
+    \item In the OLS model, the variance of the residuals is assumed to be correlated with the independent variable.\\
+    在OLS模型中，假设残差的方差与自变量相关。
+    \item In the OLS model, the variance of the independent variable is assumed to be positively correlated with the variance of the error term.\\
+    在OLS模型中，假设自变量的方差与误差项的方差正相关。
+    \item In the OLS model, it is assumed that the correlation between the dependent variable and the random error term is zero.\\
+    在OLS模型中，假设因变量与随机误差项的相关性为零。
+    \item In the OLS model, the random error term is assumed to have zero mean and constant variance.\\
+    在OLS模型中，假设随机误差项具有零均值和恒定方差。
 \end{choices}
 
 \begin{correctanswer}
@@ -145,7 +150,17 @@ A financial advisor is using an ordinary least squares regression model with one
     \end{itemize}
     Assuming the analyst uses the same data to estimate the regression model:
     \[R_{ABC,t}=\alpha + \beta R_{NASDAQ,t}+\epsilon_t\] 
-    Using the ordinary least - squares technique, which of the following models will the analyst obtain?
+    Using the ordinary least - squares technique, which of the following models will the analyst obtain?\\
+    一位投资公司的金融分析师正在分析股票ABC（\(R_{ABC}\)）与纳斯达克指数（\(R_{NASDAQ}\)）之间的关系。使用历史数据，分析师估计如下：
+    \begin{itemize}
+    \item ABC的年度平均回报率为13\%，
+    \item 纳斯达克指数的年度平均回报率为9\%，
+    \item 纳斯达克指数的年度波动率为20\%，
+    \item ABC和纳斯达克指数的回报之间的协方差为7\%。
+    \end{itemize}
+    假设分析师使用相同的数据来估计回归模型：
+    \[R_{ABC,t}=\alpha + \beta R_{NASDAQ,t}+\epsilon_t\] 
+    使用普通最小二乘法，分析师将获得以下哪个模型？
     \end{question}
     
     \begin{choices}
@@ -189,7 +204,24 @@ A financial advisor is using an ordinary least squares regression model with one
     \hline
     \end{tabular}
     \end{center}
-    What is the slope of the resulting regression line?
+    What is the slope of the resulting regression line?\\
+    一位对冲基金的风险分析师正在对股票\(X\)和股票\(Y\)的回报进行普通最小二乘回归分析，使用过去四年的每日调整后的收盘价数据。在开始回归之前，分析师从数据中计算了以下信息：
+    \begin{center}
+        \begin{tabular}{|c|c|}
+        \hline
+        样本协方差 & 0.000215 \\
+        \hline
+        股票\(X\)的样本方差 & 0.000365 \\
+        \hline
+        股票\(Y\)的样本方差 & 0.000612 \\
+        \hline
+        股票\(X\)的样本平均收益率 & - 0.04\% \\
+        \hline
+        股票\(Y\)的样本平均收益率 & 0.04\% \\
+        \hline
+        \end{tabular}
+        \end{center}
+        所得回归直线的斜率是多少？\\
     \end{question}
     
     \begin{choices}
@@ -218,14 +250,19 @@ A financial advisor is using an ordinary least squares regression model with one
     \checklist{普通最小二乘法回归中斜率的计算（关键是掌握斜率计算公式并正确代入数据）}
 
     \begin{question}
-        A risk analyst at an asset management firm is testing a hypothesis that the beta, \(\beta\), of stock XYZ is 1. The analyst runs an ordinary least squares regression of the quarterly returns of XYZ, \(R_{XYZ}\), on the quarterly returns of the Russell 2000 index, \(R_{R2000}\), and obtains the following relation: \(R_{XYZ}=0.78R_{R2000}-0.25\). The analyst also observes that the standard error of the coefficient of \(R_{R2000}\) is 0.75. In order to test the hypothesis \(H_0: \beta = 1\) against \(H_1: \beta \neq 1\), what is the correct statistic to calculate?
+        A risk analyst at an asset management firm is testing a hypothesis that the beta, \(\beta\), of stock XYZ is 1. The analyst runs an ordinary least squares regression of the quarterly returns of XYZ, \(R_{XYZ}\), on the quarterly returns of the Russell 2000 index, \(R_{R2000}\), and obtains the following relation: \(R_{XYZ}=0.78R_{R2000}-0.25\). The analyst also observes that the standard error of the coefficient of \(R_{R2000}\) is 0.75. In order to test the hypothesis \(H_0: \beta = 1\) against \(H_1: \beta \neq 1\), what is the correct statistic to calculate?\\
+        一位资产管理公司的风险分析师正在检验股票XYZ的贝塔值\(\beta\)为1的原假设。分析师对XYZ的季度回报\(R_{XYZ}\)与Russell 2000指数的季度回报\(R_{R2000}\)进行普通最小二乘回归，得到以下关系：\(R_{XYZ}=0.78R_{R2000}-0.25\)。分析师还观察到\(R_{R2000}\)的系数的标准误差为0.75。为了检验原假设\(H_0: \beta = 1\) against \(H_1: \beta \neq 1\)，应该计算什么统计量？
         \end{question}
         
         \begin{choices}
-            \item Chi - square test statistic
-            \item F test statistic
-            \item t - statistic
-            \item Sum of squared residuals
+            \item Chi - square test statistic\\
+            卡方检验统计量
+            \item F test statistic\\
+            F检验统计量
+            \item t - statistic\\
+            t检验统计量
+            \item Sum of squared residuals\\
+            残差平方和
         \end{choices}
         
         \begin{correctanswer}
@@ -274,13 +311,36 @@ Total & 4 & 122 \\
 \end{tabular}
 \end{center}
 Which of the following statements regarding the regression is incorrect?
+一位股票投资公司的风险分析师正在通过回归分析研究某只股票的收益率（百分比）与行业指数收益率（百分比）之间的关系。获得以下结果：
+\begin{center}
+\begin{tabular}{ccc}
+&系数 &  标准误 \\
+\hline
+截距项 & 2.5 & 2.05 \\
+行业指数 & 2.1 & 0.33 \\
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{ccc}
+& 自由度 & SS  \\
+\hline
+解释 & 1 & 95.236 \\
+残差 & 3 & 26.764 \\
+总计 & 4 & 122 \\
+\end{tabular}
+\end{center}
+下列关于该回归的陈述中，哪一项是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The correlation coefficient between the X and Y variables is 0.883.
-    \item The industry index coefficient is significant at the 95\% confidence interval.
-    \item If the return on the industry index is 5\%, the stock's expected return is 13\%.
-    \item The variability of industry returns explains 18\% of the variation of company returns.
+    \item The correlation coefficient between the X and Y variables is 0.883.\\
+    股票X和股票Y变量之间的相关系数为0.883。
+    \item The industry index coefficient is significant at the 95\% confidence interval.\\
+    行业指数系数在95\%的置信区间内显著。
+    \item If the return on the industry index is 5\%, the stock's expected return is 13\%.\\
+    如果行业指数回报率为5\%，股票的预期回报率为13\%。
+    \item The variability of industry returns explains 18\% of the variation of company returns.\\
+    行业回报的变异性解释了公司回报变异性的18\%。
 \end{choices}
 
 \begin{correctanswer}
@@ -322,14 +382,28 @@ Which of the following statements regarding the regression is incorrect?
     Slope (industry sales) & 0.3125 & 0.0421 \\
     \end{tabular}
     \end{center}
-    The correlation between company and industry sales is 0.9812. Which of the following is closest to the value and reports the most likely interpretation of the \(R^{2}\)?
+    The correlation between company and industry sales is 0.9812. Which of the following is closest to the value and reports the most likely interpretation of the \(R^{2}\)?\\
+    一位市场研究公司的金融分析师正在对公司ABC（塑料产品制造商）的年度销售额与塑料产品行业销售额进行回归分析。分析师有以下数据：
+    \begin{center}
+    \begin{tabular}{ccc}
+    & 系数 & 系数的标准误差 \\
+    \hline
+    截距项 & -102.35 & 35.12 \\
+    斜率（行业销售额） & 0.3125 & 0.0421 \\
+    \end{tabular}
+    \end{center}
+    公司和行业销售额之间的相关系数为0.9812。哪一项最接近该值，并报告了\(R^{2}\)的最可能解释？
     \end{question}
     
     \begin{choices}
-        \item 0.963, indicating that the variability of industry sales explains about 96.3\% of the variability of company sales.
-        \item 0.037, indicating that the variability of company sales explains about 3.7\% of the variability of industry sales.
-        \item 0.963, indicating that the variability of company sales explains about 96.3\% of the variability of industry sales.
-        \item 0.037, indicating that the variability of industry sales explains about 3.7\% of the variability of company sales.
+        \item 0.963, indicating that the variability of industry sales explains about 96.3\% of the variability of company sales.\\
+        0.963，表示行业销售额的变异性解释了约96.3\%的公司销售额的变异性。
+        \item 0.037, indicating that the variability of company sales explains about 3.7\% of the variability of industry sales.\\
+        0.037，表示公司销售额的变异性解释了约3.7\%的行业销售额的变异性。
+        \item 0.963, indicating that the variability of company sales explains about 96.3\% of the variability of industry sales.\\
+        0.963，表示公司销售额的变异性解释了约96.3\%的行业销售额的变异性。
+        \item 0.037, indicating that the variability of industry sales explains about 3.7\% of the variability of company sales.\\
+        0.037，表示行业销售额的变异性解释了约3.7\%的公司销售额的变异性。
     \end{choices}
     
     \begin{correctanswer}
@@ -359,14 +433,19 @@ Which of the following statements regarding the regression is incorrect?
     \checklist{线性回归中判定系数的计算和解释（一元回归中判定系数与相关系数的关系）}
 
     \begin{question}
-        A risk analyst at a hedge fund is conducting an ordinary least squares (OLS) regression to determine the sensitivity of a particular tech stock's return to the return on the NASDAQ 100 index. This OLS procedure is intended to:
+        A risk analyst at a hedge fund is conducting an ordinary least squares (OLS) regression to determine the sensitivity of a particular tech stock's return to the return on the NASDAQ 100 index. This OLS procedure is intended to:\\
+        一位对冲基金的风险分析师正在通过普通最小二乘法（OLS）回归分析确定特定科技股票收益率对纳斯达克100指数收益率的敏感性。该OLS程序旨在：
         \end{question}
         
         \begin{choices}
-            \item Minimize the sum of differences between the actual and estimated squared NASDAQ 100 returns.
-            \item Minimize the square of the sum of differences between the actual and estimated NASDAQ 100 returns.
-            \item Minimize the square of the sum of differences between the actual and estimated tech stock returns.
-            \item Minimize the sum of squared differences between the actual and estimated tech stock returns.
+            \item Minimize the sum of differences between the actual and estimated squared NASDAQ 100 returns.\\
+            最小化实际和估计的纳斯达克100指数收益率差异之和的平方。
+            \item Minimize the square of the sum of differences between the actual and estimated NASDAQ 100 returns.\\
+            最小化实际和估计的纳斯达克100指数收益率差异之和的平方。
+            \item Minimize the square of the sum of differences between the actual and estimated tech stock returns.\\
+            最小化实际和估计的科技股票收益率差异之和的平方。
+            \item Minimize the sum of squared differences between the actual and estimated tech stock returns.\\
+            最小化实际和估计的科技股票收益率差异之和的平方。
         \end{choices}
         
         \begin{correctanswer}
@@ -391,14 +470,21 @@ Which of the following statements regarding the regression is incorrect?
     
     Annual Savings = 0.26 × Household Income - 30.5, \(R^{2}=0.55\). 
     
-    Assuming all coefficients are statistically significant, which of the following interpretations of this result is correct?
+    Assuming all coefficients are statistically significant, which of the following interpretations of this result is correct?\\
+    一位银行的风险分析师正在分析个人贷款借款人的数据集。分析师对年度储蓄（美元）与年度家庭收入（美元）进行普通最小二乘回归，得到以下关系：
+    \[Annual Savings = 0.26 \times Household Income - 30.5, R^{2}=0.55\]
+    假设所有系数都显著，哪一项关于该结果的解释是正确的？
     \end{question}
     
     \begin{choices}
-        \item For a decrease of USD 1,500 in income, expected annual savings will decrease by USD 390.
-        \item For a household with no income, annual savings is USD 0.
-        \item For this sample data, the average error term is USD -30.5.
-        \item For an increase of USD 2,000 in income, expected annual savings will increase by USD 520.
+        \item For a decrease of USD 1,500 in income, expected annual savings will decrease by USD 390.\\
+        对于收入减少1500美元，预期年度储蓄将减少390美元。
+        \item For a household with no income, annual savings is USD 0.\\
+        对于没有收入的家庭，年度储蓄为0美元。
+        \item For this sample data, the average error term is USD -30.5.\\
+        对于这个样本数据，平均误差项为-30.5美元。
+        \item For an increase of USD 2,000 in income, expected annual savings will increase by USD 520.\\
+        对于收入增加2000美元，预期年度储蓄将增加520美元。
     \end{choices}
     
     \begin{correctanswer}
@@ -440,6 +526,19 @@ Which of the following statements regarding the regression is incorrect?
     \end{tabular}
     \end{center}
     Lucy believes the beta in this regression should be 0.12 based on previous observations. What can she conclude if she wants to test the null hypothesis that beta is 0.12 at a confidence level of 95\%?
+    一位来自商业银行的金融分析师Lucy使用去年的数据（假设每年260个交易日）对股票XYZ的日收益率与纳斯达克指数的日收益率进行普通最小二乘回归。回归结果总结如下表：
+    \begin{center}
+    \begin{tabular}{ccccc}
+    \hline
+    预测变量 & 系数 & 标准误 & t统计量 & p值 \\
+    \hline
+    常数项 & 0.042 & 0.009 & 4.6667 & 0.00002 \\
+    \hline
+    纳斯达克收益率 & 0.135 & 0.0016 & 84.375 & 0.00000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    Lucy基于之前的观察认为该回归中的贝塔值应该为0.12。如果她想在95\%的置信水平下检验贝塔值等于0.12的零假设，她能得出什么结论？
     \end{question}
     
     \begin{choices}
@@ -484,14 +583,33 @@ Which of the following statements regarding the regression is incorrect?
     \hline
     \end{tabular}
     \end{center}
-    The sample size is 260. Which of the following intervals is most likely to be the real 95\% confidence interval for $b_1$?
+    The sample size is 260. Which of the following intervals is most likely to be the real 95\% confidence interval for $b_1$?\\
+    一位金融公司的股票分析师正在分析一个将股票基金收益率与市场收益率因子联系起来的回归模型。下表显示了回归结果，斜率系数 \(b_1\) 的某些值缺失。
+    \[
+    Y = b_0 + b_1 \times X + \mu
+    \]
+    \begin{center}
+    \begin{tabular}{cccc}
+    \hline
+        & 系数 & 标准误 & t统计量 \\
+    \hline
+    $b_0$ & 0.2567 & 0.0368 & 6.9755 \\
+    $b_1$ & X & 0.0912 & XX \\
+    \hline
+    \end{tabular}
+    \end{center}
+    样本量为260。以下哪个区间最可能是 $b_1$ 的真实95\%置信区间？
     \end{question}
     
     \begin{choices}
-        \item From 0.7034 to 1.0654.
-        \item From 0.7345 to 1.0342.
-        \item From 0.5678 to 1.1892.
-        \item From 0.4789 to 1.2931.
+        \item From 0.7034 to 1.0654.\\
+        从0.7034到1.0654。
+        \item From 0.7345 to 1.0342.\\
+        从0.7345到1.0342。
+        \item From 0.5678 to 1.1892.\\
+        从0.5678到1.1892。
+        \item From 0.4789 to 1.2931.\\
+        从0.4789到1.2931。
     \end{choices}
     
     \begin{correctanswer}
@@ -540,14 +658,41 @@ Which of the following statements regarding the regression is incorrect?
     \hline
     \end{tabular}
     \end{center}
-    Which of the following statements regarding the regression is incorrect?
+    Which of the following statements regarding the regression is incorrect?\\
+    一位投资公司的风险分析师正在评估一只股票收益率对行业指数收益率的回归模型。回归结果如下：
+    \begin{center}
+    \begin{tabular}{ccc}
+    \hline
+        & 系数 & 标准误 \\
+    \hline
+    截距项 & 2.3 & 2.11 \\
+    行业指数 & 2.1 & 0.33 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \begin{center}
+    \begin{tabular}{ccc}
+    \hline
+        & 自由度 & SS \\
+    \hline
+    解释 & 1 & 98.756 \\
+    残差 & 100 & 26.348 \\
+    总计 & 101 & 125.104 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    下列关于该回归的陈述中，哪一项是不正确的？\\
     \end{question}
     
     \begin{choices}
-        \item The correlation coefficient between X (industry index’s return) and Y (stock’s return) is 0.888.
-        \item The industry index coefficient is significant at a 99\% confidence interval.
-        \item If the return on the industry index is 5\%, the stock's expected return is 12.8\%.
-        \item The variation of industry returns explains 23\% of the variation of company returns.
+        \item The correlation coefficient between X (industry index’s return) and Y (stock’s return) is 0.888.\\
+        股票X（行业指数回报）和股票Y（股票回报）之间的相关系数为0.888。
+        \item The industry index coefficient is significant at a 99\% confidence interval.\\
+        行业指数系数在99\%的置信区间内显著。
+        \item If the return on the industry index is 5\%, the stock's expected return is 12.8\%.\\
+        如果行业指数回报率为5\%，股票的预期回报率为12.8\%。
+        \item The variation of industry returns explains 23\% of the variation of company returns.\\
+        行业回报的变异性解释了公司回报变异性的23\%。
     \end{choices}
     
     \begin{correctanswer}
@@ -577,14 +722,19 @@ Which of the following statements regarding the regression is incorrect?
 
 
 \begin{question}
-A quantitative analyst at a hedge fund is conducting regression analysis to study the relationship between stock returns and market factors. When explaining the model to junior analysts, which of the following statements correctly describes the residual term and regression coefficients?
+A quantitative analyst at a hedge fund is conducting regression analysis to study the relationship between stock returns and market factors. When explaining the model to junior analysts, which of the following statements correctly describes the residual term and regression coefficients?\\
+一位对冲基金的量化分析师正在通过回归分析研究股票收益率与市场因子之间的关系。当向初级分析师解释模型时，哪一项陈述正确描述了残差项和回归系数？
 \end{question}
 
 \begin{choices}
-    \item The residual term represents the part of the dependent variable that is explained by the independent variables, and the regression coefficient is the estimated change in the dependent variable per unit change in the independent variable.
-    \item The residual term represents the part of the dependent variable that is not explained by the independent variables, but can be explained by adding additional independent variables. The regression coefficient is the value of the dependent variable when all independent variables are zero.
-    \item The residual term represents the part of the dependent variable that is explained by the independent variables, and the regression coefficient is the total change in the dependent variable per unit change in the independent variable.
-    \item The residual term represents the part of the dependent variable that is not explained by the independent variables, and the regression coefficient is the estimated change in the dependent variable per unit change in the independent variable.
+    \item The residual term represents the part of the dependent variable that is explained by the independent variables, and the regression coefficient is the estimated change in the dependent variable per unit change in the independent variable.\\
+    残差项代表因变量中被自变量解释的部分，回归系数是因变量每变动一个单位时自变量变动的估计值。
+    \item The residual term represents the part of the dependent variable that is not explained by the independent variables, but can be explained by adding additional independent variables. The regression coefficient is the value of the dependent variable when all independent variables are zero.\\
+    残差项代表因变量中未被自变量解释的部分，但可以通过添加额外的自变量来解释。回归系数是当所有自变量为零时因变量的值。
+    \item The residual term represents the part of the dependent variable that is explained by the independent variables, and the regression coefficient is the total change in the dependent variable per unit change in the independent variable.\\
+    残差项代表因变量中被自变量解释的部分，回归系数是因变量每变动一个单位时自变量变动的总变动量。
+    \item The residual term represents the part of the dependent variable that is not explained by the independent variables, and the regression coefficient is the estimated change in the dependent variable per unit change in the independent variable.\\
+    残差项代表因变量中未被自变量解释的部分，回归系数是因变量每变动一个单位时自变量变动的估计值。
 \end{choices}
 
 \begin{correctanswer}
@@ -617,14 +767,19 @@ D
 
 
 \begin{question}
-A junior econometrician at a credit rating agency is reviewing the methodology documentation for their default prediction models. While examining the OLS regression assumptions used in their models, she notices some inconsistencies in her colleague's report about the basic model assumptions and their implications for rating accuracy. Which of the following statements in the report about OLS assumptions and their implications is incorrect?
+A junior econometrician at a credit rating agency is reviewing the methodology documentation for their default prediction models. While examining the OLS regression assumptions used in their models, she notices some inconsistencies in her colleague's report about the basic model assumptions and their implications for rating accuracy. Which of the following statements in the report about OLS assumptions and their implications is incorrect?\\
+一位信用评级机构的初级计量经济学家正在审查其违约预测模型的方法文档。在检查他们模型中使用的OLS回归假设时，她注意到同事关于基本模型假设及其对评级准确性的影响的报告存在一些不一致。以下关于OLS假设及其影响的报告中哪一项陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item When the zero conditional mean assumption is violated, OLS estimates will be biased, leading to regression coefficients that deviate from true parameters.
-    \item If outliers exist in the sample, they must be retained to maintain the unbiasedness of OLS estimates.
-    \item Under heteroskedasticity, although OLS estimates remain unbiased, their standard errors will be biased, in which case robust standard errors should be used.
-    \item When using randomly generated sample data, the regression coefficients may not accurately reflect the true relationship between variables.
+    \item When the zero conditional mean assumption is violated, OLS estimates will be biased, leading to regression coefficients that deviate from true parameters.\\
+    当零条件均值假设被违背时，OLS估计量将会有偏，导致回归系数偏离真实参数值。
+    \item If outliers exist in the sample, they must be retained to maintain the unbiasedness of OLS estimates.\\
+    如果样本中存在极端异常值，必须保留它们以保持OLS估计量的无偏性。
+    \item Under heteroskedasticity, although OLS estimates remain unbiased, their standard errors will be biased, in which case robust standard errors should be used.\\
+    在异方差情况下，尽管OLS估计量保持无偏，但其标准误会出现偏差，此时应采用异方差稳健标准误。
+    \item When using randomly generated sample data, the regression coefficients may not accurately reflect the true relationship between variables.\\
+    在使用随机生成的样本数据时，回归系数可能无法准确反映变量之间的真实关系。
 \end{choices}
 
 \begin{correctanswer}
@@ -658,14 +813,19 @@ B
 
 
 \begin{question}
-A risk analyst at a quantitative research firm is studying various types of biases in regression analysis that could affect risk assessment accuracy. The analyst is reviewing a report about different types of regression biases and their implications for financial risk management. Which of the following statements about regression biases is incorrect?
+A risk analyst at a quantitative research firm is studying various types of biases in regression analysis that could affect risk assessment accuracy. The analyst is reviewing a report about different types of regression biases and their implications for financial risk management. Which of the following statements about regression biases is incorrect?\\
+一位量化研究公司的风险分析师正在研究回归分析中各种偏差类型可能对风险评估准确性的影响。分析师正在审查关于不同类型回归偏差及其对金融风险管理影响的报告。以下关于回归偏差陈述中哪一项是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Sample selection bias occurs when sample selection depends on specific outcomes. For example, mortgage refinancing sample selection bias increases during periods of falling house prices, making refinancing transactions more likely to occur in rising price environments.
-    \item Simultaneity bias occurs when X and Y values are determined simultaneously. For example, trading volume and volatility increase simultaneously during volatile periods, leading to potential misestimation of their relationship.
-    \item Omitted variable bias occurs when important explanatory variables are not included in the model. If these variables are omitted, the error term will capture their effects, leading to biased coefficients and potentially indicating relationships that do not exist.
-    \item Attenuation bias, known as the iron law of econometrics, suggests that due to the prevalence of measurement errors, estimated coefficients systematically overestimate the true strength of relationships.
+    \item Sample selection bias occurs when sample selection depends on specific outcomes. For example, mortgage refinancing sample selection bias increases during periods of falling house prices, making refinancing transactions more likely to occur in rising price environments.\\
+    样本选择偏差发生在样本选择依赖于特定结果时。例如，在房价下跌期间，由于再融资活动受限，导致观察到的再融资交易样本主要来自房价上涨时期，这种选择性会导致估计结果产生偏差。
+    \item Simultaneity bias occurs when X and Y values are determined simultaneously. For example, trading volume and volatility increase simultaneously during volatile periods, leading to potential misestimation of their relationship.\\
+    同时性偏差发生在解释变量和被解释变量同时决定时。例如，在市场波动期间交易量和波动性同时增加，这种同时性使得难以准确估计它们之间的因果关系。
+    \item Omitted variable bias occurs when important explanatory variables are not included in the model. If these variables are omitted, the error term will capture their effects, leading to biased coefficients and potentially indicating relationships that do not exist.\\
+    遗漏变量偏差发生在重要解释变量未被包含在模型中时。如果这些变量被遗漏，误差项将捕捉它们的影响，导致系数估计产生偏差，可能显示出实际并不存在的关系。
+    \item Attenuation bias, known as the iron law of econometrics, suggests that due to the prevalence of measurement errors, estimated coefficients systematically overestimate the true strength of relationships.\\
+    衰减偏差（Attenuation bias），也称为计量经济学中的铁律，表明由于测量误差普遍存在，估计系数系统性地高估了真实关系强度。
 \end{choices}
 
 \begin{correctanswer}
@@ -697,13 +857,18 @@ D
 \checklist{回归分析中的各种偏差类型及其对估计结果的影响（理解四个偏差的含义）}
 
 \begin{question}
-Sarah Chen, a senior risk analyst at Goldman Sachs, is developing a model to assess the impact of interest rate changes on mortgage default rates. While examining the reliability of her regression coefficients, she needs to understand how different factors affect the precision of these estimates. Which of the following statements about the reliability of the slope coefficient in a regression model is most likely correct?
+Sarah Chen, a senior risk analyst at Goldman Sachs, is developing a model to assess the impact of interest rate changes on mortgage default rates. While examining the reliability of her regression coefficients, she needs to understand how different factors affect the precision of these estimates. Which of the following statements about the reliability of the slope coefficient in a regression model is most likely correct?\\  
+一位高盛的风险分析师Sarah Chen正在开发一个模型来评估利率变化对抵押贷款违约率的影响。在检查回归系数的可靠性时，她需要理解不同因素如何影响这些估计的精度。以下关于回归模型中斜率系数可靠性的陈述中哪一项最可能是正确的？
 \end{question}
 \begin{choices}
-    \item The reliability of the slope coefficient is positively affected by the variance of the residuals and negatively affected by the variance of the independent variables.
-    \item The reliability of the slope coefficient is negatively affected by both the variance of the residuals and the variance of the independent variables.
-    \item The reliability of the slope coefficient is positively affected by both the variance of the residuals and the variance of the independent variables.
-    \item The reliability of the slope coefficient is negatively affected by the variance of the residuals and positively affected by the variance of the independent variables.
+    \item The reliability of the slope coefficient is positively affected by the variance of the residuals and negatively affected by the variance of the independent variables.\\
+    残差方差与斜率系数的可靠性是正相关的，而自变量方差与斜率系数的可靠性是负相关的。
+    \item The reliability of the slope coefficient is negatively affected by both the variance of the residuals and the variance of the independent variables.\\
+    残差方差与斜率系数的可靠性是负相关的，而自变量方差与斜率系数的可靠性也是负相关的。
+    \item The reliability of the slope coefficient is positively affected by both the variance of the residuals and the variance of the independent variables.\\
+    残差方差与斜率系数的可靠性是正相关的，而自变量方差与斜率系数的可靠性也是正相关的。
+    \item The reliability of the slope coefficient is negatively affected by the variance of the residuals and positively affected by the variance of the independent variables.\\
+    残差方差与斜率系数的可靠性是负相关的，而自变量方差与斜率系数的可靠性是正相关的。
 \end{choices}
 
 \begin{correctanswer}
@@ -746,14 +911,20 @@ D
 
 
 \begin{question}
-Michael Zhang, a quantitative risk analyst at BlackRock, is developing a regression model to analyze the relationship between mutual fund returns and various market factors. When explaining the interpretation of regression coefficients to new team members, he presents a model where the slope coefficient equals 10.0. Which of the following statements most accurately interprets this slope coefficient?
+Michael Zhang, a quantitative risk analyst at BlackRock, is developing a regression model to analyze the relationship between mutual fund returns and various market factors. When explaining the interpretation of regression coefficients to new team members, he presents a model where the slope coefficient equals 10.0. Which of the following statements most accurately interprets this slope coefficient?\\
+一位BlackRock的量化风险分析师Michael Zhang正在开发一个回归模型来分析共同基金收益率与各种市场因子之间的关系。当向新团队成员解释回归系数的解释时，他展示了一个斜率系数等于10.0的模型。以下关于该斜率系数陈述中哪一项最准确地解释了该斜率系数？
 \end{question}
 
 \begin{choices}
-    \item The predicted value of the dependent variable when the independent variable is zero is 10.0.
-    \item The predicted value of the independent variable when the dependent variable is zero is 0.1.
-    \item For every one unit change in the independent variable, the model predicts that the dependent variable will change by 10 units.
+    \item The predicted value of the dependent variable when the independent variable is zero is 10.0.\\
+    当自变量为零时，因变量的预测值为10.0。
+    \item The predicted value of the independent variable when the dependent variable is zero is 0.1.\\
+    当因变量为零时，自变量的预测值为0.1。
+    \item For every one unit change in the independent variable, the model predicts that the dependent variable will change by 10 units.\\
+    对于自变量每变动一个单位，模型预测因变量将变动10个单位。
     \item For every one unit change in the independent variable, the model predicts that the dependent variable will change by 0.1 units.
+    \item For every one unit change in the independent variable, the model predicts that the dependent variable will change by 0.1 units.\\
+    对于自变量每变动一个单位，模型预测因变量将变动0.1个单位。
 \end{choices}
 
 \begin{correctanswer}
@@ -785,20 +956,28 @@ C
 \checklist{线性回归中斜率系数的解释（斜率系数反映了自变量对因变量的边际影响）}
 
 \begin{question}
-David Chen, a quantitative researcher at Morgan Stanley, is evaluating the Capital Asset Pricing Model (CAPM) during Federal Open Market Committee (FOMC) announcement days. He notices that both alpha (α) and beta (β) of the model might be different on these announcement days. Which of the following model specifications would be most appropriate to capture these effects?
+David Chen, a quantitative researcher at Morgan Stanley, is evaluating the Capital Asset Pricing Model (CAPM) during Federal Open Market Committee (FOMC) announcement days. He notices that both alpha (α) and beta (β) of the model might be different on these announcement days. Which of the following model specifications would be most appropriate to capture these effects?\\
+一位Morgan Stanley的量化研究员David Chen正在评估联邦公开市场委员会（FOMC）公告日期的资本资产定价模型（CAPM）。他注意到模型中的alpha（α）和beta（β）在公告日可能不同。哪一种模型设定最合适地捕捉这些效应？
 \end{question}
 
 \begin{choices}
     \item Use a single dummy variable to capture β's change:
+    \[R_i = \alpha + \beta R_{m,i} + \gamma I_{FOMC} + \epsilon_i\]\\
+    使用一个虚拟变量来捕捉β的变化：
     \[R_i = \alpha + \beta R_{m,i} + \gamma I_{FOMC} + \epsilon_i\]
-    
     \item Use two dummy variables, one for α's change and another for β's change:
+    \[R_i = \alpha + \gamma_1 I_{FOMC} + \beta R_{m,i} + \gamma_2 I_{FOMC}R_{m,i} + \epsilon_i\]\\
+    使用两个虚拟变量，一个用于α的变化，另一个用于β的变化：
     \[R_i = \alpha + \gamma_1 I_{FOMC} + \beta R_{m,i} + \gamma_2 I_{FOMC}R_{m,i} + \epsilon_i\]
     
     \item Use a single dummy variable to simultaneously capture α and β's changes:
+    \[R_i = \alpha + \beta R_{m,i} + \gamma(I_{FOMC} + I_{FOMC}R_{m,i}) + \epsilon_i\]\\
+    使用一个虚拟变量同时捕捉α和β的变化：
     \[R_i = \alpha + \beta R_{m,i} + \gamma(I_{FOMC} + I_{FOMC}R_{m,i}) + \epsilon_i\]
     
     \item Use no dummy variables, assuming CAPM holds for all days:
+    \[R_i = \alpha + \beta R_{m,i} + \epsilon_i\]\\
+    不使用虚拟变量，假设CAPM适用于所有交易日：
     \[R_i = \alpha + \beta R_{m,i} + \epsilon_i\]
 \end{choices}
 
@@ -837,14 +1016,19 @@ B
 \checklist{回归模型中虚拟变量的应用（理解如何使用虚拟变量来捕捉特定事件对模型参数的影响）}
 
 \begin{question}
-A credit risk analyst at Moody's is developing a logistic regression model to predict corporate defaults across different sectors. The analyst has collected data from 500 companies spanning five industry divisions (Technology, Financial Services, Healthcare, Energy, and Consumer Goods) and needs to incorporate the industry classification into the model. Which of the following approaches would be most appropriate for incorporating these industry divisions into the model?
+A credit risk analyst at Moody's is developing a logistic regression model to predict corporate defaults across different sectors. The analyst has collected data from 500 companies spanning five industry divisions (Technology, Financial Services, Healthcare, Energy, and Consumer Goods) and needs to incorporate the industry classification into the model. Which of the following approaches would be most appropriate for incorporating these industry divisions into the model?\\
+一位穆迪的风险分析师正在开发一个逻辑回归模型来预测不同行业的公司违约情况。分析师已经收集了来自五个行业部门（科技、金融服务、医疗保健、能源和消费品）的500家公司数据，并需要将行业分类纳入模型。哪一种方法最合适地将这些行业部门纳入模型？
 \end{question}
 
 \begin{choices}
-    \item Create a fixed intercept for each industry division to avoid the dummy variable trap in the default prediction model
-    \item Apply regularization techniques to transform the industry classification data into numerical scores for default risk assessment
-    \item Create separate dummy variables for Technology, Financial Services, Healthcare, and Energy sectors, using Consumer Goods as the base category
-    \item Create a single ordinal variable with values 1 through 5 to represent the industries' historical default rates
+    \item Create a fixed intercept for each industry division to avoid the dummy variable trap in the default prediction model\\
+    为每个行业部门创建一个固定截距，以避免违约预测模型中的虚拟变量陷阱
+    \item Apply regularization techniques to transform the industry classification data into numerical scores for default risk assessment\\
+    应用正则化技术将行业分类数据转换为数值分数，用于违约风险评估
+    \item Create separate dummy variables for Technology, Financial Services, Healthcare, and Energy sectors, using Consumer Goods as the base category\\
+    为科技、金融服务、医疗保健和能源部门创建单独的虚拟变量，使用消费品作为基类
+    \item Create a single ordinal variable with values 1 through 5 to represent the industries' historical default rates\\
+    创建一个具有1到5值的单个序数变量，代表行业的历史违约率
 \end{choices}
 
 \begin{correctanswer}
@@ -894,15 +1078,34 @@ Where:
     \item \(D_{4t}\) = 1 if it is the fourth city in period t; 0 otherwise
     \item \(D_{5t}\) = 1 if it is the fifth city in period t; 0 otherwise
 \end{itemize}
+What does the intercept term (\(\beta_0\)) in this regression equation represent?\\
+一位BMW的销售分析师正在进行回归分析，以评估不同城市如何影响公司的汽车销量。该分析师使用六个城市的虚拟变量构建了以下回归模型：
 
-What does the intercept term (\(\beta_0\)) in this regression equation represent?
+\[S_t = \beta_0 + \beta_1D_{1t} + \beta_2D_{2t} + \beta_3D_{3t} + \beta_4D_{4t} + \beta_5D_{5t} + \varepsilon_t\]
+
+其中：
+\begin{itemize}
+    \item \(S_t\) = BMW在时期t的销量
+    \item \(D_{1t}\) = 如果是时期t的第一个城市则为1；否则为0
+    \item \(D_{2t}\) = 如果是时期t的第二个城市则为1；否则为0
+    \item \(D_{3t}\) = 如果是时期t的第三个城市则为1；否则为0
+    \item \(D_{4t}\) = 如果是时期t的第四个城市则为1；否则为0
+    \item \(D_{5t}\) = 如果是时期t的第五个城市则为1；否则为0
+\end{itemize}
+该回归方程中的截距项（\(\beta_0\)）代表什么？
 \end{question}
 
+
 \begin{choices}
-    \item The average sales volume across all six cities
-    \item The sales volume in the first city
-    \item The sales volume in the sixth city
-    \item None of the above
+    \item The average sales volume across all six cities\\
+    六个城市平均销售量
+    \item The sales volume in the first city\\
+    第一个城市销售量
+    \item The sales volume in the sixth city\\
+    第六个城市销售量
+    \item None of the above\\
+    以上都不是
+   
 \end{choices}
 
 \begin{correctanswer}
@@ -925,14 +1128,19 @@ C
 \section{考点2：Regression with Multiple Explanatory Variables 多元线性回归}
 \setcounter{question}{0}
 \begin{question}
-    A risk analyst at a consulting firm is examining a sample of 500 firms. The relationship between corporate profit (Y) and the average number of training hours per employee (\(X_1\)) and the average years of education per employee (\(X_2\)) is modeled as \(Y_j=\beta_0+\beta_1X_{1j}+\beta_2X_{2j}+\epsilon_j\). The analyst wishes to test the joint null hypothesis that \(\beta_1 = 0\) and \(\beta_2 = 0\) at the 95\% confidence level. The p - value for the t - statistic for \(\beta_1\) is 0.08, and the p - value for the t - statistic for \(\beta_2\) is 0.09. The p - value for the F - statistic for the regression is 0.03. Which of the following statements is correct?
+    A risk analyst at a consulting firm is examining a sample of 500 firms. The relationship between corporate profit (Y) and the average number of training hours per employee (\(X_1\)) and the average years of education per employee (\(X_2\)) is modeled as \(Y_j=\beta_0+\beta_1X_{1j}+\beta_2X_{2j}+\epsilon_j\). The analyst wishes to test the joint null hypothesis that \(\beta_1 = 0\) and \(\beta_2 = 0\) at the 95\% confidence level. The p - value for the t - statistic for \(\beta_1\) is 0.08, and the p - value for the t - statistic for \(\beta_2\) is 0.09. The p - value for the F - statistic for the regression is 0.03. Which of the following statements is correct?\\
+    一位咨询公司的风险分析师正在检查500家公司的样本。企业利润（Y）与每个员工平均培训小时数（\(X_1\)）和每个员工平均教育年限（\(X_2\)）之间的关系被建模为\(Y_j=\beta_0+\beta_1X_{1j}+\beta_2X_{2j}+\epsilon_j\)。分析师希望在95\%的置信水平下检验联合原假设\(\beta_1 = 0\)和\(\beta_2 = 0\)。\(\beta_1\)的t统计量的p值为0.08，\(\beta_2\)的t统计量的p值为0.09，回归的F统计量的p值为0.03。以下哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item You cannot reject the null hypothesis because neither \(\beta\) is different from 0 at the 95\% confidence level.
-        \item You can reject the null hypothesis because each \(\beta\) is different from 0 at the 95\% confidence level.
-        \item You can reject the null hypothesis because the F - statistic is significant at the 95\% confidence level.
-        \item You cannot reject the null hypothesis because the F - statistic is not significant at the 95\% confidence level.
+        \item You cannot reject the null hypothesis because neither \(\beta\) is different from 0 at the 95\% confidence level.\\
+        你不能拒绝原假设，因为\(\beta\)在95\%的置信水平下都不等于0。
+        \item You can reject the null hypothesis because each \(\beta\) is different from 0 at the 95\% confidence level.\\
+        你可以拒绝原假设，因为每个\(\beta\)在95\%的置信水平下都等于0。
+        \item You can reject the null hypothesis because the F - statistic is significant at the 95\% confidence level.\\
+        你可以拒绝原假设，因为F统计量在95\%的置信水平下显著。
+        \item You cannot reject the null hypothesis because the F - statistic is not significant at the 95\% confidence level.\\
+        你不能拒绝原假设，因为F统计量在95\%的置信水平下不显著。
     \end{choices}
     
     \begin{correctanswer}
@@ -961,14 +1169,19 @@ C
 
 
     \begin{question}
-        A risk analyst at a quantitative investment firm is evaluating a multiple linear regression model. Which of the following is false about the adjusted \(R^2\)?
+        A risk analyst at a quantitative investment firm is evaluating a multiple linear regression model. Which of the following is false about the adjusted \(R^2\)?\\
+        一位量化投资公司的风险分析师正在评估一个多元线性回归模型。以下关于调整后的\(R^2\)哪一项陈述是错误的？
         \end{question}
         
         \begin{choices}
-            \item The adjusted \(R^2\) can be negative.
-            \item Adjusted \(R^2 = 1-\frac{SSR}{TSS}\times\frac{n - 1}{n - k - 1}\)
-            \item Adjusted \(R^2\) is always greater than \(R^2\).
-            \item Adding a regressor (independent variable) does not always cause the adjusted \(R^2\) to decrease.
+            \item The adjusted \(R^2\) can be negative.\\
+            调整后的\(R^2\)可以为负数。
+            \item Adjusted \(R^2 = 1-\frac{SSR}{TSS}\times\frac{n - 1}{n - k - 1}\)\\
+            调整后的\(R^2\) = 1-\(\frac{SSR}{TSS}\times\frac{n - 1}{n - k - 1}\)
+            \item Adjusted \(R^2\) is always greater than \(R^2\).\\
+            调整后的\(R^2\)总是大于\(R^2\)。
+            \item Adding a regressor (independent variable) does not always cause the adjusted \(R^2\) to decrease.\\
+            添加一个回归变量（自变量）并不总是导致调整后的\(R^2\)下降。
         \end{choices}
         
         \begin{correctanswer}
@@ -997,7 +1210,8 @@ C
         \checklist{Adjusted \(R^2\) 的性质和计算公式（理解Adjusted \(R^2\) 与 \(R^2\) 的关系）}
 
 \begin{question}
-    A risk analyst at an investment bank is conducting a regression analysis of monthly stock returns. The analyst uses five independent variables in the regression over 60 months. From the regression results, the total sum of squares (TSS) is 720, and the residual sum of squares (RSS) is 280. The regression coefficient of determination (\(R^{2}\)) and the adjusted \(R^{2}\) are closest to:
+    A risk analyst at an investment bank is conducting a regression analysis of monthly stock returns. The analyst uses five independent variables in the regression over 60 months. From the regression results, the total sum of squares (TSS) is 720, and the residual sum of squares (RSS) is 280. The regression coefficient of determination (\(R^{2}\)) and the adjusted \(R^{2}\) are closest to:\\
+    一位投资银行的风险分析师正在进行月度股票收益率的回归分析。分析师在60个月内使用五个自变量进行回归。从回归结果中，总平方和（TSS）为720，残差平方和（RSS）为280。回归系数决定系数（\(R^{2}\)）和调整后的\(R^{2}\)最接近的值是：
     \end{question}
     
     \begin{choices}
@@ -1027,14 +1241,19 @@ C
     \checklist{判定系数 \(R^{2}\) 和调整的 \(R^{2}\) 的计算（关键是掌握二者的计算公式）}
 
 \begin{question}
-    A financial advisor is performing an ordinary least squares regression of the daily returns of a mutual fund on the daily returns of the Russell 2000 index, using data from the last 800 trading days. A fellow advisor proposes adding the returns on the Wilshire 5000 Total Market Index as an extra explanatory variable. After running the new regression, the \(R^{2}\) increases while the adjusted \(R^{2}\) decreases. What conclusion can be drawn from these results?
+    A financial advisor is performing an ordinary least squares regression of the daily returns of a mutual fund on the daily returns of the Russell 2000 index, using data from the last 800 trading days. A fellow advisor proposes adding the returns on the Wilshire 5000 Total Market Index as an extra explanatory variable. After running the new regression, the \(R^{2}\) increases while the adjusted \(R^{2}\) decreases. What conclusion can be drawn from these results?\\
+    一位财务顾问正在进行普通最小二乘回归，将共同基金的每日回报率与 Russell 2000 指数的每日回报率进行回归，使用过去800个交易日的数据。一位同事建议添加 Wilshire 5000 Total Market Index 的回报率作为额外的解释变量。运行新的回归后，\(R^{2}\) 增加而调整后的 \(R^{2}\) 下降。从这些结果可以得出什么结论？
     \end{question}
     
     \begin{choices}
-        \item The decreased adjusted \(R^{2}\) suggests that the coefficient of the returns on the Wilshire 5000 Total Market Index is not significant.
-        \item The increased \(R^{2}\) indicates an improvement in the regression.
-        \item The increased \(R^{2}\) gives an inflated estimate of how well the regression fits the data.
-        \item The decreased adjusted \(R^{2}\) suggests the existence of omitted variable bias in this regression.
+        \item The decreased adjusted \(R^{2}\) suggests that the coefficient of the returns on the Wilshire 5000 Total Market Index is not significant.\\
+        调整后的 \(R^{2}\) 下降表明 Wilshire 5000 Total Market Index 的回报率系数不显著。
+        \item The increased \(R^{2}\) indicates an improvement in the regression.\\
+        增加的 \(R^{2}\) 表明回归有所改进。
+        \item The increased \(R^{2}\) gives an inflated estimate of how well the regression fits the data.\\
+        增加的 \(R^{2}\) 高估了回归对数据的拟合程度。
+        \item The decreased adjusted \(R^{2}\) suggests the existence of omitted variable bias in this regression.\\
+        减少的调整后的 \(R^{2}\) 表明存在遗漏变量偏差。
     \end{choices}
     
     \begin{correctanswer}
@@ -1065,14 +1284,19 @@ C
     \checklist{回归分析中 \(R^{2}\) 和调整后 \(R^{2}\) 的含义及应用（两者对模型评估的差异以及如何根据其变化判断新变量的显著性）}
 
 \begin{question}
-    A junior analyst at a financial research firm is studying a simple linear regression model \(Y = \beta_0+\beta_1X+\varepsilon\). Which of the following statements about \(R^{2}\) is correct?
+    A junior analyst at a financial research firm is studying a simple linear regression model \(Y = \beta_0+\beta_1X+\varepsilon\). Which of the following statements about \(R^{2}\) is correct?\\
+    一位金融研究公司的初级分析师正在研究一个简单的线性回归模型 \(Y = \beta_0+\beta_1X+\varepsilon\)。以下关于 \(R^{2}\) 的陈述中哪一项是正确的？
     \end{question}
     
     \begin{choices}
-        \item The \(R^{2}\) from regressing \(Y\) on \(X\) is greater than the \(R^{2}\) of regressing \(X\) on \(Y\).
-        \item If \(\beta_1 = 0\), the \(R^{2}\) must be 0.
-        \item \(R^{2}\) is a measure of the fit of the model and reports the percentage of the total variation in \(Y\) that cannot be explained by \(X\).
-        \item This measure is only useful when examining models with more than two explanatory variables.
+        \item The \(R^{2}\) from regressing \(Y\) on \(X\) is greater than the \(R^{2}\) of regressing \(X\) on \(Y\).\\
+        \(Y\)对\(X\)的\(R^{2}\)大于\(X\)对\(Y\)的\(R^{2}\)。
+        \item If \(\beta_1 = 0\), the \(R^{2}\) must be 0.\\
+        如果\(\beta_1 = 0\)，\(R^{2}\)必须为0。
+        \item \(R^{2}\) is a measure of the fit of the model and reports the percentage of the total variation in \(Y\) that cannot be explained by \(X\).\\
+        \(R^{2}\)衡量模型的拟合程度，报告\(Y\)总变异中不能被\(X\)解释的部分百分比。
+        \item This measure is only useful when examining models with more than two explanatory variables.\\
+        这个衡量标准仅在检查超过两个解释变量的模型时才有用。
     \end{choices}
     
     \begin{correctanswer}
@@ -1101,7 +1325,8 @@ C
     \checklist{线性回归中 \(R^{2}\) 的性质和含义（\(R^{2}\) 与相关系数、回归系数的关系以及其衡量的内容）}
 
 \begin{question}
-    A risk analyst at an investment firm is examining the relationship between two variables \(X\) and \(Y\) using linear regression. The result of the linear regression is \(Y = 0.15-0.60X\), with a correlation coefficient \(\rho=-0.85\). What is the fraction of the variance of \(Y\) attributable to \(X\)?
+    A risk analyst at an investment firm is examining the relationship between two variables \(X\) and \(Y\) using linear regression. The result of the linear regression is \(Y = 0.15-0.60X\), with a correlation coefficient \(\rho=-0.85\). What is the fraction of the variance of \(Y\) attributable to \(X\)?\\
+    一位投资公司的风险分析师正在使用线性回归分析两个变量 \(X\) 和 \(Y\) 之间的关系。线性回归的结果为 \(Y = 0.15-0.60X\)，相关系数 \(\rho=-0.85\)。\(Y\) 的方差中归属于 \(X\) 的比例是多少？
     \end{question}
     
     \begin{choices}
@@ -1130,14 +1355,19 @@ C
     \checklist{线性回归中决定系数\(R^{2}\)与相关系数\(\rho\)的关系（一元线性回归中，\(R^{2}=\rho^{2}\)）}
 
 \begin{question}
-    A financial analyst at a research firm is evaluating the results of a linear regression model used to analyze stock returns. The analyst is considering different aspects of the coefficient of determination \(R^{2}\). Which statement regarding the coefficient of determination \(R^{2}\) is correct?
+    A financial analyst at a research firm is evaluating the results of a linear regression model used to analyze stock returns. The analyst is considering different aspects of the coefficient of determination \(R^{2}\). Which statement regarding the coefficient of determination \(R^{2}\) is correct?\\
+    一位研究公司的财务分析师正在评估使用线性回归模型分析股票收益率的结果。分析师正在考虑决定系数\(R^{2}\)的不同方面。以下关于决定系数\(R^{2}\)的陈述中哪一项是正确的？
     \end{question}
     
     \begin{choices}
-        \item For a simple linear regression, the squared correlation between the dependent and independent variable is equal to the coefficient of determination.
-        \item For the same model, the adjusted \(R^{2}\) is higher than \(R^{2}\).
-        \item The value for the adjusted \(R^{2}\) ranges from 0 to 1.
-        \item An increase in the adjusted \(R^{2}\) after adding a new independent variable indicates that the new variable is statistically significant.
+        \item For a simple linear regression, the squared correlation between the dependent and independent variable is equal to the coefficient of determination.\\
+        对于简单线性回归，因变量和自变量之间的相关系数的平方等于决定系数。
+        \item For the same model, the adjusted \(R^{2}\) is higher than \(R^{2}\).\\
+        对于相同的模型，调整后的\(R^{2}\)高于\(R^{2}\)。
+        \item The value for the adjusted \(R^{2}\) ranges from 0 to 1.\\
+        调整后的\(R^{2}\)的值介于0到1之间。
+        \item An increase in the adjusted \(R^{2}\) after adding a new independent variable indicates that the new variable is statistically significant.\\
+        添加一个新的自变量后，调整后的\(R^{2}\)增加表明新变量是统计显著的。
     \end{choices}
     
     \begin{correctanswer}
@@ -1176,13 +1406,27 @@ C
         \hline 
         \end{tabular}
         \end{center}
+        一位银行的风险分析师正在分析银行业投资组合收益率对三个因子的模型回归结果：市场因子、规模因子和价值因子。t统计量报告在每个系数下方的括号中。最右侧列报告模型的R平方。下列关于这些陈述的陈述中，哪一项是正确的？
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+        \hline 
+        & $\alpha$ & $\beta_{\text{market}}$ & $\beta_{\text{size}}$ & $\beta_{\text{value}}$ & $R^{2}$ \\ 
+        \hline 
+        银行业 & -0.215 (-1.23) & 1.345 (35.12) & -0.189 (-3.56) & 0.912 (18.23) & 0.823 \\ 
+        \hline 
+        \end{tabular}
+        \end{center}
         \end{question}
         
         \begin{choices}
-            \item The banking industry return increases 0.189 units for per unit increase in the size factor, holding other conditions constant.
-            \item All factors are statistically significant at 95\% confidence level, except for the market factor.
-            \item The percentage of the variation in the data that can be explained by the model is 82.3\%.
-            \item Adjusted R$^{2}$ always decreases when adding a new variable.
+            \item The banking industry return increases 0.189 units for per unit increase in the size factor, holding other conditions constant.\\
+            银行业回报率每增加一个单位，规模因子每增加一个单位，其他条件不变时，银行业回报率增加0.189个单位。
+            \item All factors are statistically significant at 95\% confidence level, except for the market factor.\\
+            所有因子在95\%的置信水平下显著，除了市场因子。
+            \item The percentage of the variation in the data that can be explained by the model is 82.3\%.\\
+            模型可以解释数据变异的82.3\%。
+            \item Adjusted R$^{2}$ always decreases when adding a new variable.\\
+            添加一个新的变量后，调整后的R$^{2}$总是下降。
         \end{choices}
         
         \begin{correctanswer}
@@ -1216,14 +1460,19 @@ C
 
 
 \begin{question}
-    A junior analyst at a financial research firm is working on a multiple least squares regression model. Which of the following is assumed in the multiple least squares regression model?
+    A junior analyst at a financial research firm is working on a multiple least squares regression model. Which of the following is assumed in the multiple least squares regression model?\\
+    一位金融研究公司的初级分析师正在研究一个多元最小二乘回归模型。以下哪一项假设在多元最小二乘回归模型中被假设？
     \end{question}
     
     \begin{choices}
-        \item The independent variables are homoskedastic.
-        \item The error terms are heteroskedastic.
-        \item The independent variables are not perfectly multicollinear.
-        \item The dependent variable is stationary.
+        \item The independent variables are homoskedastic.\\
+        自变量是同方差的。
+        \item The error terms are heteroskedastic.\\
+        误差项是异方差的。
+        \item The independent variables are not perfectly multicollinear.\\
+        自变量不是完全多重共线性的。
+        \item The dependent variable is stationary.\\
+        因变量是平稳的。
     \end{choices}
     
     \begin{correctanswer}
@@ -1252,14 +1501,19 @@ C
     \checklist{多元回归模型的假设条件（自变量间不可完全相互替代）}
 
     \begin{question}
-    A risk analyst at a financial research institution is evaluating the potential issues in regression models when estimating relationships between financial variables. Some of these issues stem from the assumptions of the regression model. Which of the following is NOT one of these problems?
+    A risk analyst at a financial research institution is evaluating the potential issues in regression models when estimating relationships between financial variables. Some of these issues stem from the assumptions of the regression model. Which of the following is NOT one of these problems?\\
+    一位金融研究机构的风险分析师正在评估回归模型在估计金融变量之间的关系时可能出现的问题。一些问题源于回归模型的假设。以下哪一项不是这些问题之一？
     \end{question}
     
     \begin{choices}
-        \item Multicollinearity
-        \item Autocorrelation
-        \item Stratification
-        \item Heteroscedasticity
+        \item Multicollinearity\\
+        多重共线性
+        \item Autocorrelation\\
+        自相关
+        \item Stratification\\
+        分层
+        \item Heteroscedasticity\\
+        异方差性
     \end{choices}
     
     \begin{correctanswer}
@@ -1292,7 +1546,8 @@ C
        
 
 \begin{question}
-    A risk analyst at a financial firm is examining the results of a multiple linear regression analysis. The analysis is based on the ANOVA table and coefficient details provided below. At a 5\% significance level, which of the following hypotheses can not be rejected?
+    A risk analyst at a financial firm is examining the results of a multiple linear regression analysis. The analysis is based on the ANOVA table and coefficient details provided below. At a 5\% significance level, which of the following hypotheses can not be rejected?\\
+   
     \end{question}
     \begin{table}[h]
         \centering
@@ -1316,6 +1571,30 @@ C
             \(x_2\) & 7.4250 & 1.1615 & 6.3923 & 0.0004 \\ \bottomrule
         \end{tabular}
     \end{table}
+    一位金融公司的风险分析师正在检查多元线性回归分析的结果。分析基于以下ANOVA表和系数细节。在5\%的显著性水平下，以下哪个假设不能被拒绝？
+
+\begin{table}[h]
+    \centering
+    \caption{ANOVA结果}
+    \begin{tabular}{@{}cccccc@{}}
+        \toprule
+        &自由度 & SS & MS & F & P值 \\ \midrule
+        解释 & 2 & 4410.4500 & 2205.2250 & 20.4309 & 0.0012 \\
+        残差 & 7 & 755.5500 & 107.9357 &  &  \\
+        总计 & 9 & 5166.0000 &  &  &  \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{@{}cccccc@{}}
+        \toprule
+        &系数 & 标准误 & t统计量 & P值 \\ \midrule
+        截距项 & 35.5875 & 6.1737 & 5.7644 & 0.0007 \\
+        \(x_1\) & 1.8563 & 1.6681 & 1.1128 & 0.3026 \\
+        \(x_2\) & 7.4250 & 1.1615 & 6.3923 & 0.0004 \\ \bottomrule
+    \end{tabular}
+\end{table}
     \begin{choices}
         \item \(H_0: \beta_0 = 0\)
         \item \(H_0: \beta_1 = 0\)
@@ -1344,7 +1623,8 @@ C
     \checklist{线性回归中的假设检验（关键在于根据\(p - value\)与显著性水平的比较来判断是否拒绝原假设）}
 
 \begin{question}
-    A financial analyst at a consumer goods research firm is studying the revenue growth of a new snack product launched two years ago by a local company. The analyst believes that three factors have a significant impact on the growth and obtains the following results: \(Y = b + 1.8X_1+1.4X_2 + 3.2X_3\), Sum of Squared Regression [SSR] = 912.34, Sum of Squared Errors [SSE] = 18.66. What proportion of the revenue growth is explained by the regression results?
+    A financial analyst at a consumer goods research firm is studying the revenue growth of a new snack product launched two years ago by a local company. The analyst believes that three factors have a significant impact on the growth and obtains the following results: \(Y = b + 1.8X_1+1.4X_2 + 3.2X_3\), Sum of Squared Regression [SSR] = 912.34, Sum of Squared Errors [SSE] = 18.66. What proportion of the revenue growth is explained by the regression results?\\
+    一位消费品研究公司的财务分析师正在研究一个新的小吃产品在过去两年中由当地公司推出的收入增长。分析师认为三个因素对增长有显著影响，并获得以下结果：\(Y = b + 1.8X_1+1.4X_2 + 3.2X_3\)，回归平方和[SSR] = 912.34，误差平方和[SSE] = 18.66。回归结果解释了多少收入增长？
     \end{question}
     
     \begin{choices}
@@ -1409,14 +1689,51 @@ C
     FTSE All - World Europe & 0.936 & 0.997 & 0.836 & 1.000 \\
     \end{tabular}
     \end{center}
-    Based on the regression results, which statement is correct?
+    Based on the regression results, which statement is correct?\\
+   一位投资公司的风险分析师正在评估客户季度投资组合收益率对三个欧洲股票指数的回归：STOXX Europe 50指数、MSCI Europe Small Cap指数和FTSE All-World Europe指数。结果如下。
+    \begin{center}
+    \begin{tabular}{cc}
+    回归统计量 &  \\
+    \hline
+    多重R & 0.88 \\
+    R平方 & 0.88 \\
+    调整R平方 & 0.88 \\
+    标准误 & 0.001 \\
+    观测值 & 200 \\
+    \end{tabular}
+    \end{center}
+    \begin{center}
+    \begin{tabular}{ccccc}
+    回归输出 & 系数 & 标准误 & t统计量 & P值 \\
+    \hline
+    截距项 & 0.0028 & 0.0007 & 4.0 & 0.0001 \\
+    STOXX Europe 50 & 0.1234 & 1.6234 & 0.076 & 0.9393 \\
+    MSCI Europe Small Cap & 0.1122 & 0.1421 & 0.79 & 0.4298 \\
+    FTSE All - World Europe & 0.3678 & 1.7890 & 0.205 & 0.8378 \\
+    \end{tabular}
+    \end{center}
+    \begin{center}
+    \begin{tabular}{ccccc}
+    相关系数矩阵 & 投资组合收益率 & STOXX Europe 50 & MSCI Europe Small Cap & FTSE All - World Europe \\
+    \hline
+    投资组合收益率 & 1.000 &  &  &  \\
+    STOXX Europe 50 & 0.928 & 1.000 &  &  \\
+    MSCI Europe Small Cap & 0.847 & 0.804 & 1.000 &  \\
+    FTSE All - World Europe & 0.936 & 0.997 & 0.836 & 1.000 \\
+    \end{tabular}
+    \end{center}
+    根据回归结果，哪个陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item The high p - value of 0.9393 indicates that the regression coefficient of the returns of STOXX Europe 50 is more statistically significant than the other two indexes.
-        \item The high adjusted R² indicates that the estimated coefficients on the STOXX Europe 50, MSCI Europe Small Cap, and FTSE All - World Europe indexes are statistically significant.
-        \item The estimated coefficient of 0.3678 indicates that the returns of the FTSE All - World Europe index are more statistically significant in determining the portfolio returns than the other two indexes.
-        \item The high correlations between each pair of index returns indicate that multicollinearity exists between the variables in this regression.
+        \item The high p - value of 0.9393 indicates that the regression coefficient of the returns of STOXX Europe 50 is more statistically significant than the other two indexes.\\
+        0.9393的p值表明STOXX Europe 50的回归系数比其他两个指数的回归系数更显著。
+        \item The high adjusted R² indicates that the estimated coefficients on the STOXX Europe 50, MSCI Europe Small Cap, and FTSE All - World Europe indexes are statistically significant.\\
+        高的调整R²表明STOXX Europe 50、MSCI Europe Small Cap和FTSE All - World Europe指数的估计系数都是统计显著的。
+        \item The estimated coefficient of 0.3678 indicates that the returns of the FTSE All - World Europe index are more statistically significant in determining the portfolio returns than the other two indexes.\\
+        0.3678的估计系数表明FTSE All - World Europe指数的回报率比其他两个指数的回报率更显著地决定投资组合回报率。
+        \item The high correlations between each pair of index returns indicate that multicollinearity exists between the variables in this regression.\\
+        每对指数回报率之间的高相关性表明回归中变量之间存在多重共线性。
     \end{choices}
     
     \begin{correctanswer}
@@ -1445,14 +1762,19 @@ C
     \checklist{对线性回归模型中P值、R²、相关系数的理解（通过相关系数判断多重共线性）}
 
 \begin{question}
-    A risk analyst is analyzing the factors affecting a celebrity's popularity through a multiple - regression model with several skills as independent variables and wants to test the overall explanatory power of these factors. Which option correctly states the type of hypothesis test and the null hypothesis?
+    A risk analyst is analyzing the factors affecting a celebrity's popularity through a multiple - regression model with several skills as independent variables and wants to test the overall explanatory power of these factors. Which option correctly states the type of hypothesis test and the null hypothesis?\\
+   一位风险分析师正在通过多元回归模型分析影响名人受欢迎程度的一系列技能。他想测试这些技能作为一个整体对名人受欢迎程度的解释能力。哪一项正确地陈述了假设检验的类型和原假设？
     \end{question}
     
     \begin{choices}
-        \item Hypothesis test with single coefficient; \(H_0: \beta_1 = 0\).
-        \item Four individual hypothesis tests with every single coefficient (t - test); \(H_0: \beta_1 = 0, H_0: \beta_2 = 0, H_0: \beta_3 = 0, H_0: \beta_4 = 0\).
-        \item Joint Hypothesis test (F - test); \(H_0: \beta_1=\beta_2=\beta_3=\beta_4 = 0\).
-        \item Joint Hypothesis test (F - test); \(H_0:\) at least one \(\beta_j\neq0\) (\(j = 1\) to \(4\)).
+        \item Hypothesis test with single coefficient; \(H_0: \beta_1 = 0\).\\
+        单个系数假设检验；\(H_0: \beta_1 = 0\)。
+        \item Four individual hypothesis tests with every single coefficient (t - test); \(H_0: \beta_1 = 0, H_0: \beta_2 = 0, H_0: \beta_3 = 0, H_0: \beta_4 = 0\).\\
+        四个单独的假设检验，每个系数（t检验）；\(H_0: \beta_1 = 0, H_0: \beta_2 = 0, H_0: \beta_3 = 0, H_0: \beta_4 = 0\)。
+        \item Joint Hypothesis test (F - test); \(H_0: \beta_1=\beta_2=\beta_3=\beta_4 = 0\).\\
+        联合假设检验（F检验）；\(H_0: \beta_1=\beta_2=\beta_3=\beta_4 = 0\)。
+        \item Joint Hypothesis test (F - test); \(H_0:\) at least one \(\beta_j\neq0\) (\(j = 1\) to \(4\)).\\
+        联合假设检验（F检验）；\(H_0:\) 至少一个 \(\beta_j\neq0\) (\(j = 1\) to \(4\))。
     \end{choices}
     
     \begin{correctanswer}
@@ -1471,13 +1793,18 @@ C
 
 \begin{question}
 A derivatives trader at Goldman Sachs is developing multiple regression models to analyze the relationship between options prices and various market factors. When building both simple and complex models, she needs to ensure all statistical assumptions are properly met. Which of the following statements correctly describes the difference between univariate and multivariate regression assumptions in her analysis?
+\\一位高盛的衍生品交易员正在开发多个回归模型来分析期权价格与各种市场因素之间的关系。在构建简单和复杂模型时，她需要确保所有统计假设都得到适当满足。以下哪一项陈述正确描述了她分析中一元回归和多元回归假设之间的差异？
 \end{question}
 
 \begin{choices}
-    \item The variance of option pricing residuals must be constant in multivariate models but not in univariate models.
-    \item The variance of market factors must be positive in univariate models but not required in multivariate models.
+    \item The variance of option pricing residuals must be constant in multivariate models but not in univariate models.\\
+    期权定价残差的方差在多元回归模型中必须为常数，而在一元回归模型中则不需要。
+    \item The variance of market factors must be positive in univariate models but not required in multivariate models.\\
+    市场因素的方差在多元回归模型中必须为正，而在一元回归模型中则不需要。
     \item Both models require zero expected pricing errors, but multivariate models additionally require no perfect correlation among market factors.
+    一元回归和多元回归都要求零预期定价误差，但多元回归模型还需要解释变量之间没有完美的相关性。
     \item Both univariate and multivariate option pricing models share identical assumptions without any additional requirements.
+    一元回归和多元回归期权定价模型共享相同的假设，没有任何额外的要求。
 \end{choices}
 \begin{correctanswer}
 C
@@ -1511,13 +1838,18 @@ C
 
 \begin{question}
 A portfolio manager at BlackRock is analyzing multiple regression models to evaluate different investment strategies. When interpreting the R² and adjusted R² measures for these models, which of the following statements incorrectly reflects a potential pitfall that could lead to invalid conclusions?
+\\一位BlackRock的投资组合经理正在分析多个回归模型来评估不同的投资策略。在解释这些模型的R²和调整后的R²时，哪一项陈述错误地反映了可能导致无效结论的潜在陷阱？
 \end{question}
 
 \begin{choices}
-    \item The R² measure does not provide evidence that the most or least appropriate independent variables have been selected.
-    \item If the R² is high, we have to assume that we have found all relevant independent variables.
-    \item If adding an additional independent variable to the regression improves the R², this variable is not necessarily statistically significant.
-    \item The R² measure may be spurious, meaning that the independent variables may show a high R²; however, they are not the exact cause of the movement in the dependent variable.
+    \item The R² measure does not provide evidence that the most or least appropriate independent variables have been selected.\\
+    R²衡量标准不能提供证据表明选择了最适合或最不适当的自变量。
+    \item If the R² is high, we have to assume that we have found all relevant independent variables.\\
+    如果R²很高，我们必须假设我们已经找到了所有相关的自变量。
+    \item If adding an additional independent variable to the regression improves the R², this variable is not necessarily statistically significant.\\
+    如果将额外的自变量添加到回归中提高了R²，这个变量不一定统计显著。
+    \item The R² measure may be spurious, meaning that the independent variables may show a high R²; however, they are not the exact cause of the movement in the dependent variable.\\
+    R²衡量标准可能是虚假的，这意味着自变量可能显示出很高的R²；然而，它们不是因变量运动的确切原因。
 \end{choices}
 
 \begin{correctanswer}
@@ -1558,14 +1890,19 @@ B
 \setcounter{question}{0}
 
 \begin{question}
-    A financial analyst at an investment bank is conducting an ordinary least squares estimation for a portfolio's return model. The proper selection of factors to include in this estimation is crucial for the accuracy of the result. When does omitted variable bias occur?
+    A financial analyst at an investment bank is conducting an ordinary least squares estimation for a portfolio's return model. The proper selection of factors to include in this estimation is crucial for the accuracy of the result. When does omitted variable bias occur?\\
+    一位投资银行的风险分析师正在进行投资组合收益率模型的普通最小二乘估计。正确选择要包含在估计中的因素对于结果的准确性至关重要。什么时候会出现遗漏变量偏差？
     \end{question}
     
     \begin{choices}
-        \item Omitted variable bias occurs when the omitted variable is independent of the included regressor but is not a determinant of the dependent variable.
-        \item Omitted variable bias occurs when the omitted variable is independent of the included regressor and is a determinant of the dependent variable.
-        \item Omitted variable bias occurs when the omitted variable is correlated with the included regressor but is not a determinant of the dependent variable.
-        \item Omitted variable bias occurs when the omitted variable is correlated with the included regressor and is a determinant of the dependent variable.
+        \item Omitted variable bias occurs when the omitted variable is independent of the included regressor but is not a determinant of the dependent variable.\\
+        遗漏变量偏差发生在遗漏变量与包含的回归变量独立，但不是因变量的决定因素时。
+        \item Omitted variable bias occurs when the omitted variable is independent of the included regressor and is a determinant of the dependent variable.\\
+        遗漏变量偏差发生在遗漏变量与包含的回归变量独立，并且是因变量的决定因素时。
+        \item Omitted variable bias occurs when the omitted variable is correlated with the included regressor but is not a determinant of the dependent variable.\\
+        遗漏变量偏差发生在遗漏变量与包含的回归变量相关，但不是因变量的决定因素时。
+        \item Omitted variable bias occurs when the omitted variable is correlated with the included regressor and is a determinant of the dependent variable.\\
+        遗漏变量偏差发生在遗漏变量与包含的回归变量相关，并且是因变量的决定因素时。
     \end{choices}
     
     \begin{correctanswer}
@@ -1585,13 +1922,18 @@ B
 
 \begin{question}
     A financial analyst at an asset management firm is analyzing the performance of multiple portfolio managers. The analyst conducts an ordinary least - squares regression of the weekly returns of each manager's portfolio on their annual bonuses. The analyst concludes that a manager's bonus is a key driver of their portfolio's performance. The analyst is aware that work experience only affects their bonuses and does not affect the portfolio's performance, while market - timing skills and risk - management skills affect both bonuses and portfolio's performance, and the number of years in the industry affects neither the bonuses nor the performance. Does the analyst make an omitted variable bias? 
+    \\一位资产管理公司的财务分析师正在分析多个投资组合经理的绩效。分析师对每个经理的投资组合的每周回报率进行普通最小二乘回归，以他们的年度奖金为因变量。分析师得出结论，经理的奖金是投资组合绩效的关键驱动因素。分析师意识到工作经验只影响他们的奖金，不影响投资组合的绩效，而市场时机把握能力和风险管理能力既影响奖金又影响投资组合的绩效，而行业从业年限既不影响奖金也不影响绩效。分析师是否存在遗漏变量偏差？
     \end{question}
     
     \begin{choices}
-        \item No. There is no omitted variable bias.
-        \item Yes. Manager's work experience is omitted.
-        \item Yes. Manager's market - timing skills and risk - management skills are omitted.
-        \item Yes. The number of years in the industry is omitted.
+        \item No. There is no omitted variable bias.\\
+        否。不存在遗漏变量偏差。
+        \item Yes. Manager's work experience is omitted.\\
+        是。经理的工作经验被遗漏。
+        \item Yes. Manager's market - timing skills and risk - management skills are omitted.\\
+        是。经理的市场时机把握能力和风险管理能力被遗漏。
+        \item Yes. The number of years in the industry is omitted.\\
+        是。行业从业年限被遗漏。
     \end{choices}
     
     \begin{correctanswer}
@@ -1610,13 +1952,18 @@ B
 
 \begin{question}
     A risk analyst at a hedge fund is using the linear regression method to evaluate the sensitivity of the portfolio return to several candidate variables such as inflation rate, industrial production index, unemployment rate, and exchange rate. The analyst is worried about including irrelevant variables and omitting relevant ones in the regression model. So, the analyst decides to use either the M-Fold Cross-Validation or General - to - specific (GtS) model selection method to pick a final model. Which of the following statements is incorrect regarding the two methods?
+    \\一位对冲基金的风险分析师正在使用线性回归方法评估投资组合收益率对通货膨胀率、工业生产指数、失业率和汇率等几个候选变量的敏感性。分析师担心在回归模型中包括不相关的变量和遗漏相关的变量。因此，分析师决定使用M-Fold交叉验证或一般到特定（GtS）模型选择方法来
     \end{question}
     
     \begin{choices}
-        \item The regression model selected by the GtS model selection method may still have some statistically insignificant coefficients.
-        \item The GtS model starts by specifying a large model that includes many candidate variables.
-        \item Out - of - sample prediction is performed when using the M-Fold Cross-Validation selection method.
-        \item Based on the M-Fold Cross-Validation selection method, the regression model with the smallest in - sample sum of squared residuals is chosen from the set of candidate regression models.
+        \item The regression model selected by the GtS model selection method may still have some statistically insignificant coefficients.\\
+        一般到特定（GtS）模型选择方法选择的回归模型可能仍然有一些统计上不显著的系数。
+        \item The GtS model starts by specifying a large model that includes many candidate variables.\\
+        一般到特定（GtS）模型从包含许多候选变量的大模型开始。
+        \item Out - of - sample prediction is performed when using the M-Fold Cross-Validation selection method.\\
+        使用M-Fold交叉验证选择方法时，进行样本外预测。
+        \item Based on the M-Fold Cross-Validation selection method, the regression model with the smallest in - sample sum of squared residuals is chosen from the set of candidate regression models.\\
+        基于M-Fold交叉验证选择方法，从候选回归模型集中选择残差平方和最小的回归模型。
     \end{choices}
     
     \begin{correctanswer}
@@ -1648,13 +1995,18 @@ B
 
     \begin{question}
         An analyst is performing a regression. The dependent variable is portfolio return while the independent variable is the years of experience of the portfolio manager. Based on the resulting scatter plot, the analyst can conclude that the portfolio returns exhibit:
+        \\一位分析师正在进行回归分析。因变量是投资组合收益率，自变量是投资组合经理的经验年限。根据得到的散点图，分析师可以得出投资组合收益率表现出：
         \end{question}
         \includegraphics[width=0.5\textwidth]{Heteroskedasticity.png}
         \begin{choices}
-            \item Homoskedasticity
-            \item Non - perfect multicollinearity
-            \item Perfect multicollinearity
-            \item Heteroskedasticity
+            \item Homoskedasticity\\
+            同方差性
+            \item Non - perfect multicollinearity\\
+            非完全多重共线性
+            \item Perfect multicollinearity\\
+            完全多重共线性
+            \item Heteroskedasticity\\
+            异方差性
         \end{choices}
         
         \begin{correctanswer}
@@ -1685,14 +2037,19 @@ B
 
 \begin{question}
     A risk analyst at a hedge fund, Alpha Robin, FRM, is examining a single - factor regression. He makes the following statements. Which statement is incorrect?
+    \\一位对冲基金的风险分析师，Alpha Robin，FRM，正在检查单因素回归。他做出了以下陈述。哪一项陈述是不正确的？
     \end{question}
     
     \begin{choices}
-        \item Heteroskedasticity exists if the regression residuals are correlated with their lagged values.
-        \item Heteroskedasticity does not affect the consistency or unbiasedness of the OLS parameter estimator.
-        \item When residuals are heteroskedastic, the standard errors are usually unreliable estimates.
-        \item A consequence of heteroskedasticity is that the asymptotic distribution
-        of the estimated parameters takes a different form.
+        \item Heteroskedasticity exists if the regression residuals are correlated with their lagged values.\\
+        如果回归残差与它们的滞后值相关，则存在异方差性。
+        \item Heteroskedasticity does not affect the consistency or unbiasedness of the OLS parameter estimator.\\
+        异方差不会影响普通最小二乘法（OLS）参数估计量的一致性和无偏性。
+        \item When residuals are heteroskedastic, the standard errors are usually unreliable estimates.\\
+        当残差存在异方差时，标准误差通常是不可靠的估计。
+        \item A consequence of heteroskedasticity is that the asymptotic distribution of the estimated parameters takes a different form.\\
+        异方差的一个后果是估计参数的渐近分布会呈现不同的形式。
+
     \end{choices}
     
     \begin{correctanswer}
@@ -1722,13 +2079,18 @@ B
 
 \begin{question}
     A financial analyst at an asset management firm is conducting a linear regression analysis of a portfolio's returns against several macro - economic variables. The analysis yields a high coefficient of determination (\(R^{2}\)), but only a few significant t - ratios. Which assumption is most likely violated?
+    \\一位资产管理公司的财务分析师正在对投资组合收益率与几个宏观经济变量进行线性回归分析。分析结果显示高决定系数（\(R^{2}\)），但只有少数显著的t比率。哪一项假设最有可能被违反？
     \end{question}
     
     \begin{choices}
-        \item Error term is normal with mean = 0 and constant variance = \(\sigma\)
-        \item No auto - correlation between error terms
-        \item Multicollinearity
-        \item Homoscedasticity
+        \item Error term is normal with mean = 0 and constant variance = \(\sigma\)\\
+        误差项服从均值为0、方数为\(\sigma\)的正态分布
+        \item No auto - correlation between error terms\\
+        误差项之间不存在自相关
+        \item Multicollinearity\\
+        多重共线性
+        \item Homoscedasticity\\
+        同方差性
     \end{choices}
     
     \begin{correctanswer}
@@ -1759,13 +2121,18 @@ B
 
     \begin{question}
     A junior analyst at a financial consulting firm is analyzing a regression model that estimates the quarterly revenue of a company based on multiple economic indicators. The analyst discovers that the variance of the error term is an increasing function of the explanatory variable. Which assumption of the regression model is violated?
+    \\一位金融咨询公司的初级分析师正在分析一个回归模型，该模型根据多个经济指标估计公司的季度收入。分析师发现误差项的方差是解释变量的增函数。哪一项回归模型的假设被违反？
     \end{question}
     
     \begin{choices}
-        \item No autocorrelation between error terms
-        \item Model is linear
-        \item Multicollinearity
-        \item Homoscedasticity
+        \item No autocorrelation between error terms\\
+        误差项之间不存在自相关
+        \item Model is linear\\
+        模型是线性的
+        \item Multicollinearity\\
+        多重共线性
+        \item Homoscedasticity\\
+        同方差性
     \end{choices}
     
     \begin{correctanswer}
@@ -1795,6 +2162,7 @@ B
 
     \begin{question}
     A risk analyst at an asset management firm is conducting a White test to check for heteroskedasticity in a portfolio. The portfolio is modeled as \(Y_i = \alpha+\beta X_{1i}+\epsilon_i\). The residuals are calculated as \(\hat{\epsilon}_i=Y_i - \hat{\alpha}-\hat{\beta}X_{1i}\). Which of the following equations correctly represents the second step in the White test for this portfolio?
+    \\一位资产管理公司的风险分析师正在对投资组合进行怀特检验，以检查投资组合中是否存在异方差。投资组合被建模为 \(Y_i = \alpha+\beta X_{1i}+\epsilon_i\)。残差计算为 \(\hat{\epsilon}_i=Y_i - \hat{\alpha}-\hat{\beta}X_{1i}\)。以下哪个方程正确表示了投资组合的怀特检验的第二步？
     \end{question}
     
     \begin{choices}
@@ -1859,14 +2227,19 @@ B
 
 \begin{question}
 A risk analyst at a fixed-income hedge fund is evaluating a yield curve prediction model. To improve the model's accuracy, she is considering adding several macroeconomic indicators such as GDP growth rate, inflation rate, and unemployment rate. When incorporating these potentially irrelevant variables into the regression model, which of the following statements about their impact is incorrect?
+\\一位固定收益对冲基金的风险分析师正在评估一个收益率曲线预测模型。为了提高模型的准确性，她考虑添加几个宏观经济指标，如GDP增长率、通胀率和失业率。当将这些潜在无关变量纳入回归模型时，以下哪一项陈述关于它们的影响是不正确的？
 \end{question}
 
 
 \begin{choices}
-    \item In a multiple regression model, adding an irrelevant variable will always increase R² as long as its regression coefficient is non-zero.
-    \item After adding an irrelevant explanatory variable, the adjusted R² may either increase or decrease.
-    \item If the newly added variable has high correlation with existing variables in the model, the standard errors of the regression coefficients will increase.
-    \item The addition of irrelevant variables will not affect the mean of residuals.
+    \item In a multiple regression model, adding an irrelevant variable will always increase R² as long as its regression coefficient is non-zero.\\
+    在多元回归模型中，添加一个无关变量将始终增加R²，只要其回归系数不为零。
+    \item After adding an irrelevant explanatory variable, the adjusted R² may either increase or decrease.\\
+    添加一个无关解释变量后，调整后的R²可能上升也可能下降。
+    \item If the newly added variable has high correlation with existing variables in the model, the standard errors of the regression coefficients will increase.\\
+    如果新添加的变量与模型中的现有变量高度相关，回归系数的标准误差将增加。
+    \item The addition of irrelevant variables will not affect the mean of residuals.\\
+    添加无关变量不会影响残差的均值。
 \end{choices}
 
 \begin{correctanswer}
@@ -1943,14 +2316,45 @@ Model & Regression Equation & \(\beta_0\) & \(\beta_1\) \\
 \end{tabular}
 \end{table}
 \end{center}
+一位分析师对三个变量进行了三次独立的回归（所有系数均使用OLS方法估计）：股票S收益率、黄金商品收益率和美国1年期国债收益率。回归结果如下表所示。根据表中的信息，下列关于这些陈述的陈述中，哪一项是正确的？
 
+\begin{center}
+\begin{table}[H]
+\centering
+\caption{三次回归的结果}
+\begin{tabular}{lccc}
+\toprule
+模型 & 回归方程 & \(\beta_0\) & \(\beta_1\) \\
+\midrule
+\multirow{4}{*}{回归1} & 股票 = \(\beta_0 + \beta_1\) × 黄金 & -0.0003 & 0.57 \\
+& 标准误 & 0.0002 & 0.028 \\
+& t统计量 & -1.5 & 20.36 \\
+& \(R^2\) & \multicolumn{2}{c}{0.45} \\
+\midrule
+\multirow{4}{*}{回归2} & 股票 = \(\beta_0 + \beta_1\) × 国债 & -0.0003 & 2.28 \\
+& 标准误 & 0.0004 & 0.053 \\
+& t统计量 & -0.75 & 43.02 \\
+& \(R^2\) & \multicolumn{2}{c}{0.70} \\
+\midrule
+\multirow{4}{*}{回归3} & 黄金 = \(\beta_0 + \beta_1\) × 国债 & 0.0002 & 0.054 \\
+& 标准误 & 0.0004 & 0.015 \\
+& t统计量 & 0.50 & 3.60 \\
+& \(R^2\) & \multicolumn{2}{c}{0.37} \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{center}
 \end{question}
 
 \begin{choices}
-    \item Due to omitted variable bias, the coefficient of gold returns in Regression 1 is overestimated
-    \item Due to heteroskedasticity, the coefficient of Treasury bill returns in Regression 2 is overestimated
-    \item The intercept term in Regression 3 is significantly different from zero
-    \item Due to multicollinearity, the \(R^2\) in Regression 2 is high
+    \item Due to omitted variable bias, the coefficient of gold returns in Regression 1 is overestimated\\
+    由于遗漏变量偏误，回归1中黄金收益率的系数被高估
+    \item Due to heteroskedasticity, the coefficient of Treasury bill returns in Regression 2 is overestimated\\
+    由于异方差，回归2中国债收益率的系数被高估
+    \item The intercept term in Regression 3 is significantly different from zero\\
+    回归3中的截距项在统计上显著异于0
+    \item Due to multicollinearity, the \(R^2\) in Regression 2 is high\\
+    由于多重共线性，回归2中的R²很高
 \end{choices}
 
 \begin{correctanswer}

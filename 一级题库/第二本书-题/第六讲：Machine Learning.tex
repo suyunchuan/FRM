@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -96,14 +96,19 @@
 
 
 \begin{question}
-A risk analyst at a global investment bank, Sarah Chen, is evaluating different machine learning techniques for risk prediction and classification. Based on the provided materials, which of the following statements is incorrect?
+A risk analyst at a global investment bank, Sarah Chen, is evaluating different machine learning techniques for risk prediction and classification. Based on the provided materials, which of the following statements is incorrect?\\
+一位全球投资银行的风险分析师Sarah Chen正在评估不同的机器学习技术用于风险预测和分类。基于提供的材料，哪一项陈述是错误的？
 \end{question}
 
 \begin{choices}
-    \item Supervised learning requires labeled data for model training
-    \item Unsupervised learning does not rely on labeled data and can be used for clustering analysis
-    \item Supervised learning can be used for price prediction, such as analyzing house features and sale prices
-    \item Unsupervised learning can be used to predict future stock price movements
+    \item Supervised learning requires labeled data for model training\\
+    监督式学习需要使用带有标签的数据来进行模型训练
+    \item Unsupervised learning does not rely on labeled data and can be used for clustering analysis\\
+    非监督式学习不依赖于任何标签数据，可以用于聚类分析
+    \item Supervised learning can be used for price prediction, such as analyzing house features and sale prices\\
+    监督式学习可以用于价格预测，例如分析房屋特征和销售价格
+    \item Unsupervised learning can be used to predict future stock price movements\\
+    非监督式学习可以用于预测未来的股票价格走势
 \end{choices}
 
 \begin{correctanswer}
@@ -136,17 +141,22 @@ D
 
 
 \begin{question}
-In financial risk management (FRM), a bank's compliance officer uses machine learning techniques to review employee journal entries submitted to the bank's general ledger, particularly focusing on whether employees have used incorrect account classifications for transactions. Which machine learning method is most appropriate for this task?
+In financial risk management (FRM), a bank's compliance officer uses machine learning techniques to review employee journal entries submitted to the bank's general ledger, particularly focusing on whether employees have used incorrect account classifications for transactions. Which machine learning method is most appropriate for this task?\\
+在金融风险管理（FRM）中，一家银行的合规官员使用机器学习技术审查提交给银行总账的员工日记账，特别关注员工是否使用了错误的账户分类进行交易。哪一种机器学习方法最适合这项任务？
 \end{question}
 
 \begin{choices}
-    \item Supervised Learning：this learning method uses labeled data for model training, where the model learns to map input features to output labels.
+    \item Supervised Learning：this learning method uses labeled data for model training, where the model learns to map input features to output labels.\\
+    监督式学习：这种方法使用带有标签的数据进行模型训练，模型学习将输入特征映射到输出标签。
 
-    \item Unsupervised Learning：this learning method works with unlabeled datasets, attempting to discover hidden patterns or structures in the data.
+    \item Unsupervised Learning：this learning method works with unlabeled datasets, attempting to discover hidden patterns or structures in the data.\\
+    非监督式学习：这种方法使用未标记的数据集，试图发现数据中的隐藏模式或结构。
 
-    \item Reinforcement Learning：this learning method interacts with the environment to learn, optimizing its strategy through trial and error.    
+    \item Reinforcement Learning：this learning method interacts with the environment to learn, optimizing its strategy through trial and error.\\
+    强化学习：这种方法与环境交互以学习，通过试错优化其策略。
 
-    \item Linear Regression Analysis：this is a statistical method used to model the relationship between a dependent variable and one or more independent variables.
+    \item Linear Regression Analysis：this is a statistical method used to model the relationship between a dependent variable and one or more independent variables.\\
+    线性回归分析：这是一种统计方法，用于建模因变量和自变量之间的关系。
 \end{choices}
 
 \begin{correctanswer}
@@ -184,13 +194,18 @@ A
 
 
 \begin{question}
-A machine learning engineer at a hedge fund is developing a trading strategy model and needs to evaluate its performance. During the model validation process, understanding and identifying overfitting and underfitting is crucial for model effectiveness. Based on the provided materials, which of the following statements is incorrect?
+A machine learning engineer at a hedge fund is developing a trading strategy model and needs to evaluate its performance. During the model validation process, understanding and identifying overfitting and underfitting is crucial for model effectiveness. Based on the provided materials, which of the following statements is incorrect?\\
+一位对冲基金的机器学习工程师正在开发一个交易策略模型，并需要评估其性能。在模型验证过程中，理解并识别过拟合和欠拟合对于模型有效性至关重要。基于提供的材料，哪一项陈述是错误的？
 \end{question}
 \begin{choices}
-    \item Overfitting models typically perform poorly on new data because they have learned too much noise from the training data
-    \item Underfitting models perform poorly on both training and validation sets due to their simplicity and inability to capture relevant patterns
-    \item Overfitting usually occurs when the model has too many parameters, while underfitting occurs when the model has too few parameters
-    \item Overfitting models have very high error rates on the training set because they cannot generalize well to new data
+    \item Overfitting models typically perform poorly on new data because they have learned too much noise from the training data\\
+    过拟合模型通常在新数据上表现不佳，因为它们从训练数据中学习了太多的噪声
+    \item Underfitting models perform poorly on both training and validation sets due to their simplicity and inability to capture relevant patterns\\
+    欠拟合模型由于其简单性和无法捕捉相关模式，在训练集和验证集上表现不佳
+    \item Overfitting usually occurs when the model has too many parameters, while underfitting occurs when the model has too few parameters\\
+    过拟合通常发生在模型参数过多的情况下，而欠拟合发生在模型参数过少的情况下
+    \item Overfitting models have very high error rates on the training set because they cannot generalize well to new data\\
+    过拟合模型在训练集上的错误率非常高，因为它们无法很好地泛化到新数据
 \end{choices}
 
 \begin{correctanswer}
@@ -229,14 +244,19 @@ D
 
 
 \begin{question}
-    A data scientist at a financial analytics firm is comparing conventional econometric modeling with machine learning for analyzing financial data. The scientist is trying to determine in which scenarios machine learning would be more appropriate. Which of the following situations makes machine learning a better choice?
+    A data scientist at a financial analytics firm is comparing conventional econometric modeling with machine learning for analyzing financial data. The scientist is trying to determine in which scenarios machine learning would be more appropriate. Which of the following situations makes machine learning a better choice?\\
+    一位金融分析公司的数据科学家正在比较传统的计量经济学建模和机器学习用于分析金融数据。科学家试图确定在哪些情况下机器学习更合适。哪一种
     \end{question}
     
     \begin{choices}
-        \item Machine learning is advantageous when there is limited theoretical knowledge about the relationship between variables and relevant features.
-        \item Machine learning focuses more on establishing strict causality compared to conventional econometric modeling.
-        \item Machine learning is preferred when the relationships between features and targets are highly linear.
-        \item Machine learning is suitable when the number of data points and features is extremely small.
+        \item Machine learning is advantageous when there is limited theoretical knowledge about the relationship between variables and relevant features.\\
+        机器学习在变量之间关系和相关特征的理论知识有限时更适用。
+        \item Machine learning focuses more on establishing strict causality compared to conventional econometric modeling.\\
+        机器学习比传统的计量经济学建模更侧重于建立严格的因果关系。
+        \item Machine learning is preferred when the relationships between features and targets are highly linear.\\
+        机器学习在特征和目标之间的关系高度线性时更适用。
+        \item Machine learning is suitable when the number of data points and features is extremely small.\\
+        机器学习在数据点和特征数量极小时更适用。
     \end{choices}
     
     \begin{correctanswer}
@@ -265,14 +285,19 @@ D
     \checklist{机器学习与传统计量经济模型适用场景的比较（理解机器学习在缺乏理论指导、处理复杂关系和大数据方面的优势）}
 
 \begin{question}
-    A risk analyst at a bank is tasked with segmenting the bank's savers into different groups based on information such as their age, marital status, and salary. Which type of machine - learning algorithm is most appropriate for this task?
+    A risk analyst at a bank is tasked with segmenting the bank's savers into different groups based on information such as their age, marital status, and salary. Which type of machine - learning algorithm is most appropriate for this task?\\
+    一位银行的风险分析师被要求根据年龄、婚姻状况和工资等信息将银行的储户分成不同的组。哪一种机器学习算法最适合这项任务？
     \end{question}
     
     \begin{choices}
-        \item K - means
-        \item Natural language processing
-        \item Logistic regression
-        \item Principal components analysis (PCA)
+        \item K - means\\
+        K - means
+        \item Natural language processing\\
+        自然语言处理
+        \item Logistic regression\\
+        逻辑回归
+        \item Principal components analysis (PCA)\\
+        主成分分析（PCA）
     \end{choices}
     
     \begin{correctanswer}
@@ -301,14 +326,19 @@ D
     \checklist{不同机器学习算法的适用场景（K - means聚类方法的应用）}
 
 \begin{question}
-    A risk analyst at a fintech startup is evaluating different machine - learning concepts. Which of the following statements is true?
+    A risk analyst at a fintech startup is evaluating different machine - learning concepts. Which of the following statements is true?\\
+    一位金融科技初创公司的风险分析师正在评估不同的机器学习概念。哪一项陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item Validation datasets are employed to assess the performance of various experimental models.
-        \item Unsupervised machine - learning models can't be evaluated due to the absence of labels.
-        \item Reinforcement learning resembles supervised learning as the algorithm gets the correct output values for the training data.
-        \item Cross - validation combines the training and test samples.
+        \item Validation datasets are employed to assess the performance of various experimental models.\\
+        验证数据集用于评估各种实验模型的性能。
+        \item Unsupervised machine - learning models can't be evaluated due to the absence of labels.\\
+        无监督机器学习模型由于缺乏标签，无法进行评估。
+        \item Reinforcement learning resembles supervised learning as the algorithm gets the correct output values for the training data.\\
+        强化学习类似于监督学习，因为算法可以获得训练数据的正确输出值。
+        \item Cross - validation combines the training and test samples.\\
+        交叉验证将训练集和测试集结合使用。
     \end{choices}
     
     \begin{correctanswer}
@@ -337,14 +367,19 @@ D
     \checklist{机器学习的类型以及样本的分离和准备（无监督学习、监督学习与强化学习的定义，训练集、验证集和测试集的作用）}
 
 \begin{question}
-    A data analyst at a financial institution is conducting data cleaning. Which of the following statements about the reasons for data cleaning is false?
+    A data analyst at a financial institution is conducting data cleaning. Which of the following statements about the reasons for data cleaning is false?\\
+    一位金融公司的数据分析师正在进行数据清洗。哪一项关于数据清洗原因的陈述是错误的？
     \end{question}
     
     \begin{choices}
-        \item We can use the mean rather than median of the observations to replace missing observations.
-        \item Observations on a feature that are several standard deviations from the mean should be checked carefully, as they can have a big effect on results.
-        \item Observations not relevant to the task at hand should be removed.
-        \item For data to be read correctly, it is important that all data is recorded in the same way.
+        \item We can use the mean rather than median of the observations to replace missing observations.\\
+        我们可以使用观测值的平均值而不是中位数来替换缺失的观测值。
+        \item Observations on a feature that are several standard deviations from the mean should be checked carefully, as they can have a big effect on results.\\
+        距离均值几个标准差之外的观测值应该仔细检查，因为它们可能会对结果产生较大影响。
+        \item Observations not relevant to the task at hand should be removed.\\
+        与当前分析任务无关的观测值应该被删除。
+        \item For data to be read correctly, it is important that all data is recorded in the same way.\\
+        为了正确读取数据，重要的是所有数据都以相同的方式记录。
     \end{choices}
     
     \begin{correctanswer}
@@ -374,14 +409,18 @@ D
 
 
 \begin{question}
-    A portfolio manager at an investment firm is using machine - learning techniques to manage a portfolio of 120 stocks. The goal is to predict the next quarter's return for each stock and identify the 25 stocks with the lowest estimated return for replacement. Which machine - learning techniques are most likely to be appropriate?
+    A portfolio manager at an investment firm is using machine - learning techniques to manage a portfolio of 120 stocks. The goal is to predict the next quarter's return for each stock and identify the 25 stocks with the lowest estimated return for replacement. Which machine - learning techniques are most likely to be appropriate?\\
+    一位投资公司的投资组合经理正在使用机器学习技术管理一个包含120只股票的投资组合。目标是预测每只股票下一季度的回报，并识别估计回报最低的25只股票进行替换。哪一种机器学习技术最可能适合这项任务？
     \end{question}
     
     \begin{choices}
-        \item Classification
+        \item Classification\\
+        分类
         \item K - means
-        \item PCA
-        \item Regression
+        \item PCA\\
+        主成分分析（PCA）
+        \item Regression\\
+        回归
     \end{choices}
     
     \begin{correctanswer}
@@ -410,14 +449,19 @@ D
     \checklist{不同机器学习算法的适用场景（回归的应用）}
 
     \begin{question}
-        A financial analyst at an investment firm is researching the applications of natural language processing (NLP) in the finance industry. NLP, also referred to as text mining, focuses on understanding and analyzing both written and spoken human language. Which of the following is not a typical use of NLP in finance?
+        A financial analyst at an investment firm is researching the applications of natural language processing (NLP) in the finance industry. NLP, also referred to as text mining, focuses on understanding and analyzing both written and spoken human language. Which of the following is not a typical use of NLP in finance?\\
+        一位投资公司的金融分析师正在研究自然语言处理（NLP）在金融行业的应用。NLP，也称为文本挖掘，专注于理解和分析书面和口头的人类语言。哪一项不是金融领域常见的NLP应用？
         \end{question}
         
         \begin{choices}
-            \item Detecting accounting fraud
-            \item Categorization of a particular piece of text
-            \item Creating the sentiment of a statement
-            \item Recognition of specific words to determine the purpose of a message
+            \item Detecting accounting fraud\\
+            检测会计欺诈
+            \item Categorization of a particular piece of text\\
+            对特定文本进行分类
+            \item Creating the sentiment of a statement\\
+            创造语句的情感倾向
+            \item Recognition of specific words to determine the purpose of a message\\
+            识别特定单词以确定消息的目的
         \end{choices}
         
         \begin{correctanswer}
@@ -459,14 +503,19 @@ D
 \setcounter{question}{0}
 
 \begin{question}
-    A data scientist at a financial technology company is dealing with a classification problem that involves a large number of features. Which of the following methods is well - suited for this task?
+    A data scientist at a financial technology company is dealing with a classification problem that involves a large number of features. Which of the following methods is well - suited for this task?\\
+    一位金融科技公司的数据科学家正在处理一个涉及大量特征的分类问题。哪一种方法最适合这项任务？
     \end{question}
     
     \begin{choices}
-        \item K - means
-        \item Decision trees
-        \item Linear model
-        \item Support vector machines
+        \item K - means\\
+        K - means
+        \item Decision trees\\
+        决策树
+        \item Linear model\\
+        线性模型
+        \item Support vector machines\\
+        支持向量机
     \end{choices}
     
     \begin{correctanswer}
@@ -494,14 +543,19 @@ D
     
     \checklist{不同机器学习方法在处理大量特征分类问题中的适用性（当存在大量数据特征时，支持向量机（SVM）非常适合于分类问题）。}
     \begin{question}
-        A financial analyst at an asset management firm is examining the applications of neural networks (NNs) and deep learning (DL). Which of the following areas is least suitable for the application of NNs and DL?
+        A financial analyst at an asset management firm is examining the applications of neural networks (NNs) and deep learning (DL). Which of the following areas is least suitable for the application of NNs and DL?\\
+        一位资产管理公司的金融分析师正在研究神经网络（NNs）和深度学习（DL）的应用。哪一种领域最不适合NNs和DL的应用？
         \end{question}
         
         \begin{choices}
-            \item Modelling non - linearities and complex interactions among many features.
-            \item Image and speech recognition, and natural language processing.
-            \item Developing single variable ordinary least squares regression models.
-            \item Analyzing sentiment in financial news articles for market trend prediction.
+            \item Modelling non - linearities and complex interactions among many features.\\
+            建模许多特征之间的非线性和复杂相互作用。
+            \item Image and speech recognition, and natural language processing.\\
+            图像和语音识别，以及自然语言处理。
+            \item Developing single variable ordinary least squares regression models.\\
+            开发单变量普通最小二乘法回归模型。
+            \item Analyzing sentiment in financial news articles for market trend prediction.\\
+            分析金融新闻文章中的情感来预测市场趋势。
         \end{choices}
         
         \begin{correctanswer}
@@ -530,14 +584,19 @@ D
         \checklist{神经网络和深度学习的适用场景（理解其处理非线性和复杂特征关系的能力）}
 
 \begin{question}
-    A risk analyst at a financial institution is evaluating the suitability of Classification and Regression Trees (CART) and K - Nearest Neighbor (KNN) for a credit risk classification task. Which of the following statements best describes a disadvantage of using CART instead of KNN?
+    A risk analyst at a financial institution is evaluating the suitability of Classification and Regression Trees (CART) and K - Nearest Neighbor (KNN) for a credit risk classification task. Which of the following statements best describes a disadvantage of using CART instead of KNN?\\
+    一位金融机构的风险分析师正在评估分类与回归树（CART）和K近邻（KNN）在信用风险分类任务中的适用性。哪一项陈述最好地描述了使用CART而不是KNN的劣势？
     \end{question}
     
     \begin{choices}
-        \item CART has a higher tendency to overfit the training data than KNN.
-        \item CART does not need to specify a similarity (or distance) measure.
-        \item CART offers a visual explanation for the prediction output.
-        \item CART does not require an initial hyperparameter like K.
+        \item CART has a higher tendency to overfit the training data than KNN.\\
+        CART比KNN更容易过度拟合训练数据。
+        \item CART does not need to specify a similarity (or distance) measure.\\
+        分类与回归树不需要指定相似性（或距离）度量。
+        \item CART offers a visual explanation for the prediction output.\\
+        分类与回归树提供预测结果的可视化解释。
+        \item CART does not require an initial hyperparameter like K.\\
+        分类与回归树不需要像K那样指定初始超参数。
     \end{choices}
     
     \begin{correctanswer}
@@ -577,6 +636,16 @@ D
     Default & 55 & 5 \\ \hline
     \end{tabular}
     \end{center}
+    一位商业银行的风险分析师正在评估一组特定地区的企业贷款的违约预测模型的性能。模型预测借款人是否会在下一年违约，结果与实际结果的比较如下表所示。模型的精准率和准确率是多少？
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+            & \multicolumn{2}{|c|}{预测结果} \\ \hline
+        实际结果 & 不违约 & 违约 \\ \hline
+        不违约 & 510 & 8 \\ \hline
+        违约 & 55 & 5 \\ \hline
+        \end{tabular}
+        \end{center}
     \end{question}
     
     \begin{choices}
@@ -609,13 +678,18 @@ D
 
     \begin{question}
         A risk analyst at a quantitative investment firm is looking for regularization techniques to prevent model over - complexity when dealing with a dataset having a large number of highly correlated features. Which of the following is not a typical regularization technique?
+        一位量化投资公司的风险分析师正在寻找正则化技术，以防止在处理具有大量高度相关特征的数据集时模型过度复杂。哪一种不是典型的正则化技术？
         \end{question}
         
         \begin{choices}
-            \item Principal Component Analysis (PCA)
-            \item Ridge regression
-            \item LASSO
-            \item A hybrid of the Ridge regression and LASSO
+            \item Principal Component Analysis (PCA)\\
+            主成分分析（PCA）
+            \item Ridge regression\\
+            岭回归
+            \item LASSO\\
+            LASSO
+            \item A hybrid of the Ridge regression and LASSO\\
+            岭回归和LASSO的混合方法
         \end{choices}
         
         \begin{correctanswer}
@@ -644,14 +718,19 @@ D
         \checklist{正则化技术的类型（关键在于区分正则化技术和其他数据处理技术）}
 
 \begin{question}
-    A risk analyst at a bank is evaluating a binary classification model used for loan approval. The analyst is relying on a confusion matrix and related performance metrics. Which of the following statements about these metrics is incorrect?
+    A risk analyst at a bank is evaluating a binary classification model used for loan approval. The analyst is relying on a confusion matrix and related performance metrics. Which of the following statements about these metrics is incorrect?\\
+    一位银行的风险分析师正在评估一个用于贷款审批的二元分类模型。分析师依赖于混淆矩阵和相关性能指标。哪一项关于这些指标的陈述是错误的？
     \end{question}
     
     \begin{choices}
-        \item The AUC can be used to compare different models, and a higher AUC implies better model performance in separating data points.
-        \item The ROC curve plots the false positive rate on the x - axis against the true positive rate on the y - axis, and the points on the curve are obtained by varying the decision threshold.
-        \item An AUC of 0.5 indicates a model with no better predictive ability than random guessing, while an AUC of 0.9 suggests a very good model fit.
-        \item The ROC and AUC are not useful in the context of comparing models for deciding whether to accept or reject a loan application.
+        \item The AUC can be used to compare different models, and a higher AUC implies better model performance in separating data points.\\
+        AUC可以用于比较不同模型，AUC值越高，模型在区分数据点方面的性能越好。
+        \item The ROC curve plots the false positive rate on the x - axis against the true positive rate on the y - axis, and the points on the curve are obtained by varying the decision threshold.\\
+        ROC曲线以假阳性率为横轴，真阳性率为纵轴，通过改变决策阈值可以得到曲线上的不同点。
+        \item An AUC of 0.5 indicates a model with no better predictive ability than random guessing, while an AUC of 0.9 suggests a very good model fit.\\
+        AUC为0.5表示模型的预测能力与随机猜测相当，而AUC为0.9表示模型拟合非常好。
+        \item The ROC and AUC are not useful in the context of comparing models for deciding whether to accept or reject a loan application.\\
+        ROC和AUC在比较模型决定是否接受或拒绝贷款申请时没有用。
     \end{choices}
     
     \begin{correctanswer}
@@ -681,13 +760,18 @@ D
 
 \begin{question}
     A junior data scientist at a fintech company is working on a neural network project for credit risk assessment. Which of the following statements about neural networks is incorrect?
+    \\一位金融科技公司的初级数据科学家正在开发一个用于信用风险评估的神经网络项目。哪一项关于神经网络的陈述是错误的？
     \end{question}
     
     \begin{choices}
-        \item A neural network with no  activation function is equivalent to a linear regression model.
-        \item The weights in a neural network play the same role as the coefficients in a regression model.
-        \item Overfitting can be completely eliminated by using the validation data set during the training process.
-        \item The bias in a neural network serves a similar purpose as the constant term in a regression.
+        \item A neural network with no  activation function is equivalent to a linear regression model.\\
+        没有激活函数的神经网络等同于线性回归模型。
+        \item The weights in a neural network play the same role as the coefficients in a regression model.\\
+        神经网络中的权重与回归模型中的系数扮演相同的角色。
+        \item Overfitting can be completely eliminated by using the validation data set during the training process.\\
+        通过在训练过程中使用验证数据集，可以完全消除过拟合。
+        \item The bias in a neural network serves a similar purpose as the constant term in a regression.\\
+        神经网络中的偏置与回归模型中的常数项扮演相同的角色。
     \end{choices}
     
     \begin{correctanswer}
@@ -717,13 +801,18 @@ D
 
     \begin{question}
         A risk analyst working on a neural network model for financial forecasting is considering when to stop the gradient descent algorithm. Which of the following statements best describes the appropriate stopping condition?
+        \\一位风险分析师正在研究一个用于金融预测的神经网络模型，正在考虑何时停止梯度下降算法。哪一项陈述最好地描述了适当的停止条件？
         \end{question}
         
         \begin{choices}
-            \item When the value for the objective function increases for both the validation set and the training set.
-            \item When the value for the objective function decreases for both the validation set and the training set.
-            \item When the value for the objective function declines for the training set, even as it improves for the validation set.
-            \item When the value for the objective function declines for the validation set, even as it improves for the training set.
+            \item When the value for the objective function increases for both the validation set and the training set.\\
+            当验证集和训练集的目标函数值都增加时。
+            \item When the value for the objective function decreases for both the validation set and the training set.\\
+            当验证集和训练集的目标函数值都下降时。
+            \item When the value for the objective function declines for the training set, even as it improves for the validation set.\\
+            当训练集的目标函数值下降，而验证集的目标函数值在提高时。
+            \item When the value for the objective function declines for the validation set, even as it improves for the training set.\\
+            当验证集的目标函数值下降，而训练集的目标函数值在提高时。
         \end{choices}
         
         \begin{correctanswer}
@@ -756,7 +845,8 @@ D
 
 
     \begin{question}
-        A risk analyst at a bank is using logistic regression to predict the probability of a loan default (a binary outcome). The model has 5 features, and the linear combination of the features for each observation \(i\) is estimated as \(y_i=\alpha+\beta_1x_{1i}+\beta_2x_{2i}+\beta_3x_{3i}+\beta_4x_{4i}+\beta_5x_{5i}\). What is the probability that \(y_i = 0\)?
+        A risk analyst at a bank is using logistic regression to predict the probability of a loan default (a binary outcome). The model has 5 features, and the linear combination of the features for each observation \(i\) is estimated as \(y_i=\alpha+\beta_1x_{1i}+\beta_2x_{2i}+\beta_3x_{3i}+\beta_4x_{4i}+\beta_5x_{5i}\). What is the probability that \(y_i = 0\)?\\
+        一位银行的风险分析师正在使用逻辑回归来预测贷款违约的概率（二元结果）。模型有5个特征，每个观测值的特征线性组合估计为 \(y_i=\alpha+\beta_1x_{1i}+\beta_2x_{2i}+\beta_3x_{3i}+\beta_4x_{4i}+\beta_5x_{5i}\)。\(y_i = 0\)的概率是多少？
         \end{question}
         
         \begin{choices}
@@ -786,13 +876,18 @@ D
 
 \begin{question}
     A financial analyst at an investment firm is working on a model with a large number of highly correlated features. To prevent overfitting, the analyst is considering using either ridge or LASSO regularization. Which of the following statements accurately describes these two regularization methods?
+    \\一位投资公司的金融分析师正在研究一个具有大量高度相关特征的模型。为了防止过拟合，分析师正在考虑使用岭回归或LASSO正则化。哪一项陈述准确地描述了这两种正则化方法？
     \end{question}
     
     \begin{choices}
-        \item The LASSO is L1 regularization, which can set some parameter estimates exactly to zero, effectively performing feature selection.
-        \item The ridge is L1 regularization, and it helps avoid situations where the parameter estimates are offsetting, with one having a large positive value and another a large negative value.
-        \item The LASSO is L2 regularization, and it helps to balance the parameter estimates to avoid large positive and negative values.
-        \item The ridge is L2 regularization, and it is used to set some of the less-important parameter estimates to zero.
+        \item The LASSO is L1 regularization, which can set some parameter estimates exactly to zero, effectively performing feature selection.\\
+        LASSO是L1正则化，它可以设置一些参数估计值恰好为零，有效地执行特征选择。
+        \item The ridge is L1 regularization, and it helps avoid situations where the parameter estimates are offsetting, with one having a large positive value and another a large negative value.\\
+        岭回归是L1正则化，它有助于避免参数估计值相互抵消的情况，其中一个参数估计值为很大的正值，另一个参数估计值为很大的负值。
+        \item The LASSO is L2 regularization, and it helps to balance the parameter estimates to avoid large positive and negative values.\\
+        LASSO是L2正则化，它有助于平衡参数估计值，避免出现很大的正值和负值。
+        \item The ridge is L2 regularization, and it is used to set some of the less-important parameter estimates to zero.\\
+        岭回归是L2正则化，它用于将一些不重要的参数估计值设为零。
     \end{choices}
     
     \begin{correctanswer}
@@ -815,13 +910,18 @@ D
 
 \begin{question}
 A data scientist at a quantitative trading firm is implementing various regularization techniques to prevent model overfitting. Which of the following statements about shrinkage penalty terms in regularization is most accurate?
+\\一位量化交易公司的数据科学家正在实施各种正则化技术，以防止模型过拟合。哪一项关于正则化中的收缩惩罚项的陈述最准确？
 \end{question}
 
 \begin{choices}
-    \item Penalty terms are not applied in model regularization
-    \item The sum of the squares of the slope coefficients is the penalty term for LASSO
-    \item Elastic net sums the penalty terms found in both ridge regression and LASSO
-    \item The sum of the absolute values of the slope coefficients is the penalty term for ridge regression
+    \item Penalty terms are not applied in model regularization\\
+    惩罚项在模型正则化中不适用
+    \item The sum of the squares of the slope coefficients is the penalty term for LASSO\\
+    LASSO的惩罚项是斜率系数的平方和
+    \item Elastic net sums the penalty terms found in both ridge regression and LASSO\\
+    弹性网络汇总了岭回归和LASSO中找到的惩罚项
+    \item The sum of the absolute values of the slope coefficients is the penalty term for ridge regression\\
+    岭回归的惩罚项是斜率系数的绝对值之和
 \end{choices}
 
 \begin{correctanswer}
@@ -859,13 +959,18 @@ C
 
 \begin{question}
     Leo Breiman proposed the Bagging method in 1996 and further developed the Random Forests algorithm in 2001. These ensemble learning methods improve the accuracy and robustness of predictions by combining multiple models. Which of the following most accurately describes the concept of "swarm intelligence" in ensemble learning and its application in Random Forests and Boosting methods?
+    \\Leo Breiman于1996年提出了Bagging方法，并于2001年进一步发展了随机森林算法。这些集成学习方法通过组合多个模型提高了预测的准确性和鲁棒性。哪一项最准确地描述了集成学习中的“群体智慧”概念及其在随机森林和提升方法中的应用？
 \end{question}
 
 \begin{choices}
-    \item Collective wisdom is only achieved through averaging predictions from multiple models, regardless of whether the models are overfitting or underfitting
-    \item Random Forests improve ensemble learning performance by reducing correlation between decision trees, without considering model fitting issues
-    \item Boosting methods optimize model performance by gradually increasing weights for misclassified samples, demonstrating sensitivity to outliers in collective wisdom
-    \item Both Random Forests and Boosting methods utilize collective wisdom to average predictions, reducing individual model bias and improving overall model generalization ability
+    \item Collective wisdom is only achieved through averaging predictions from multiple models, regardless of whether the models are overfitting or underfitting\\
+    群体智慧仅仅通过平均多个模型的预测来实现，无论模型是否过拟合或欠拟合
+    \item Random Forests improve ensemble learning performance by reducing correlation between decision trees, without considering model fitting issues\\
+    随机森林通过减少决策树之间的相关性提高了集成学习性能，但没有考虑模型拟合问题
+    \item Boosting methods optimize model performance by gradually increasing weights for misclassified samples, demonstrating sensitivity to outliers in collective wisdom\\
+    提升方法通过逐渐增加错误分类样本的权重来优化模型性能，展示了群体智慧对异常值的敏感性
+    \item Both Random Forests and Boosting methods utilize collective wisdom to average predictions, reducing individual model bias and improving overall model generalization ability\\
+    随机森林和提升方法都利用群体智慧来平均预测，减少单个模型的偏差并提高整体模型的泛化能力
 \end{choices}
 
 \begin{correctanswer}

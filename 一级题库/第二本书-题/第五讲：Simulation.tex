@@ -3,9 +3,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -111,6 +111,23 @@
     \end{tabular}
     \end{center}
     What is the estimated price of the derivative?
+    \\一位投资公司的风险分析师正在使用蒙特卡罗模拟来估计一个路径依赖衍生品的价格。该衍生品在8个月后到期，无风险利率为5\%，年复利。分析师生成了30,000条路径，记录每条路径的支付，并给出了以下结果：
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        分析师 & 路径数量 & 每条路径的平均衍生品支付（美元） \\
+        \hline
+        1 & 3,000 & 42 \\
+        \hline
+        2 & 6,000 & 43 \\
+        \hline
+        3 & 15,000 & 47 \\
+        \hline
+        4 & 6,000 & 44 \\
+        \hline
+        \end{tabular}
+        \end{center}
+        该衍生品的估计价格是多少？
     \end{question}
     
     \begin{choices}
@@ -141,13 +158,18 @@
 
     \begin{question}
         A junior risk analyst at a financial institution is evaluating the capabilities of Monte Carlo simulation in risk analysis. Which of the following statements regarding Monte Carlo simulation is CORRECT?
+        \\一位金融公司的初级风险分析师正在评估蒙特卡罗模拟在风险分析中的能力。哪一项关于蒙特卡罗模拟的陈述是正确的？
     \end{question}
         
     \begin{choices}
-        \item The correlation structure in Monte Carlo simulations requires perfect linear relationships between variables to generate meaningful results.
-        \item Monte Carlo methods cannot handle situations with time - varying volatility.
-        \item Monte Carlo simulations perform optimally with a moderate number of simulations, as additional paths beyond 1000 iterations provide minimal accuracy improvements.
-        \item For VaR estimation, historical simulations typically demand more computing power than Monte Carlo methods.
+        \item The correlation structure in Monte Carlo simulations requires perfect linear relationships between variables to generate meaningful results.\\
+        蒙特卡罗模拟中的相关结构需要变量之间存在完美的线性关系才能生成有意义的结果。
+        \item Monte Carlo methods cannot handle situations with time - varying volatility.\\
+        蒙特卡罗方法无法处理时变波动率的情况。
+        \item Monte Carlo simulations perform optimally with a moderate number of simulations, as additional paths beyond 1000 iterations provide minimal accuracy improvements.\\
+        蒙特卡罗模拟在模拟次数适中的情况下表现最佳，因为超过1000次模拟的额外路径提供的准确性改进微乎其微。
+        \item For VaR estimation, historical simulations typically demand more computing power than Monte Carlo methods.\\
+        对于VaR估计，历史模拟通常需要比蒙特卡罗方法更多的计算能力。
     \end{choices}
         
     \begin{correctanswer}
@@ -182,13 +204,18 @@
 
 \begin{question}
     A quantitative analyst at an investment bank is using Monte Carlo simulation to solve complex economic and financial problems. Which of the following statements is least likely to represent a limitation of the Monte Carlo technique when dealing with problems of this nature?
+    \\一位投资银行的量化分析师正在使用蒙特卡罗模拟来解决复杂的经济和金融问题。哪一项关于蒙特卡罗技术的陈述最不可能代表在处理此类问题时的局限性？
     \end{question}
     
     \begin{choices}
-        \item Results of most Monte Carlo experiments are easy to replicate.
-        \item If the input variables have fat - tails, Monte Carlo simulation may not be fully appropriate as it often assumes variables are drawn from a normally distributed population.
-        \item High computational costs occur when dealing with complex problems.
-        \item Simulation results are experiment - specific because financial problems are analyzed based on a specific data - generating process (DGP) and set of equations.
+        \item Results of most Monte Carlo experiments are easy to replicate.\\
+        大多数蒙特卡罗实验的结果很容易复制。
+        \item If the input variables have fat - tails, Monte Carlo simulation may not be fully appropriate as it often assumes variables are drawn from a normally distributed population.\\
+        如果输入变量具有肥尾，蒙特卡罗模拟可能不完全适用，因为它通常假设变量是从正态分布中抽取的。
+        \item High computational costs occur when dealing with complex problems.\\
+        处理复杂问题时计算成本很高。
+        \item Simulation results are experiment - specific because financial problems are analyzed based on a specific data - generating process (DGP) and set of equations.\\
+        模拟结果是实验特定的，因为金融问题是基于特定的数据生成过程（DGP）和方程集分析的。
     \end{choices}
     
     \begin{correctanswer}
@@ -218,13 +245,18 @@
 
 \begin{question}
     A risk analyst at a hedge fund is performing a Monte Carlo simulation to estimate the expected value of a particular financial random variable. Which of the following methods can effectively reduce the standard error of the simulated expectation?
+    \\一位对冲基金的风险分析师正在使用蒙特卡罗模拟来估计某个金融随机变量的期望值。哪一种方法可以有效地减少模拟期望的标准误差？
     \end{question}
     
     \begin{choices}
-        \item Decreasing the number of replications
-        \item Decreasing the confidence level of the simulation
-        \item Increasing the variance of the distribution
-        \item Increasing the number of replications
+        \item Decreasing the number of replications\\
+        减少模拟的重复次数
+        \item Decreasing the confidence level of the simulation\\
+        减少模拟的置信水平
+        \item Increasing the variance of the distribution\\
+        增加分布的方差
+        \item Increasing the number of replications\\
+        增加模拟的重复次数
     \end{choices}
     
     \begin{correctanswer}
@@ -254,13 +286,18 @@
 
 \begin{question}
     A financial analyst at a quantitative trading firm is using Monte Carlo simulation to estimate the potential returns of a complex derivatives portfolio. The analyst is aware that the simulation results may have a large standard error, leading to unreliable conclusions. Which of the following statements about reducing the sampling error in Monte Carlo simulation is most likely correct?
+    \\一位量化交易公司的金融分析师正在使用蒙特卡罗模拟来估计一个复杂衍生品投资组合的潜在回报。分析师意识到模拟结果可能具有较大的标准误差，导致不可靠的结论。哪一项关于减少蒙特卡罗模拟中的抽样误差陈述最可能正确？
     \end{question}
     
     \begin{choices}
-        \item Increasing the number of simulation draws is an inefficient way to reduce sampling error as it requires a large amount of computational resources.
-        \item Antithetic variables reduce simulation sampling error by generating negatively correlated random variables to previously simulated values.
-        \item Control variates reduce sample error by simulating a completely unrelated random variable.
-        \item Increasing the number of simulation draws has no impact on improving the accuracy of the simulation because each simulation draw is independent from each other.
+        \item Increasing the number of simulation draws is an inefficient way to reduce sampling error as it requires a large amount of computational resources.\\
+        增加模拟次数是一种低效的减少抽样误差的方法，因为它需要大量的计算资源。
+        \item Antithetic variables reduce simulation sampling error by generating negatively correlated random variables to previously simulated values.\\
+        对偶变量法通过生成与之前模拟值负相关的随机变量来减少模拟抽样误差。
+        \item Control variates reduce sample error by simulating a completely unrelated random variable.\\
+        控制变量法通过模拟一个完全不相关的随机变量来减少样本误差。
+        \item Increasing the number of simulation draws has no impact on improving the accuracy of the simulation because each simulation draw is independent from each other.\\
+        增加模拟次数对提高模拟准确性没有影响，因为每次模拟都是独立的。
     \end{choices}
     
     \begin{correctanswer}
@@ -293,7 +330,8 @@
 
 
     \begin{question}
-        A quantitative analyst at a financial firm is forecasting the S\&P 500 index value at the end of the year. The index value was 2,000 at the beginning of the year. The analyst first generated 300 scenarios and calculated the average index value at year-end to be 2,200 with a 95\% confidence interval of [2,160, 2,240]. To enhance the forecast's accuracy, the analyst increased the number of scenarios. The new 95\% confidence interval is [2,190, 2,210] while keeping the same sample mean and sample standard deviation. How many scenarios were used to obtain this new result?
+        A quantitative analyst at a financial firm is forecasting the S\&P 500 index value at the end of the year. The index value was 2,000 at the beginning of the year. The analyst first generated 300 scenarios and calculated the average index value at year-end to be 2,200 with a 95\% confidence interval of [2,160, 2,240]. To enhance the forecast's accuracy, the analyst increased the number of scenarios. The new 95\% confidence interval is [2,190, 2,210] while keeping the same sample mean and sample standard deviation. How many scenarios were used to obtain this new result?\\
+        一位金融公司的量化分析师正在预测年末标普500指数的价值。指数年初价值为2,000。分析师首先生成300种情景，计算年末平均指数价值为2,200，95\%置信区间为[2,160, 2,240]。为了提高预测的准确性，分析师增加了情景数量。新的95\%置信区间为[2,190, 2,210]，同时保持相同的样本均值和样本标准差。为了获得这个新的结果，使用了多少种情景？
         \end{question}
         
         \begin{choices}
@@ -323,7 +361,8 @@
         \checklist{置信区间与样本量的关系（掌握样本量如何影响置信区间宽度）}
 
 \begin{question}
-    A risk analyst at an options trading firm is using the standard Monte Carlo method to price a European call option. Initially, the analyst conducts 1,000 simulations of the underlying stock price and estimates the option price to be USD 1.00 with a standard error of USD 0.40. If the analyst increases the number of simulations to 3,000 while keeping all other factors constant, what is the likely resulting standard error?
+    A risk analyst at an options trading firm is using the standard Monte Carlo method to price a European call option. Initially, the analyst conducts 1,000 simulations of the underlying stock price and estimates the option price to be USD 1.00 with a standard error of USD 0.40. If the analyst increases the number of simulations to 3,000 while keeping all other factors constant, what is the likely resulting standard error?\\
+    一位期权交易公司的风险分析师正在使用标准蒙特卡罗方法来定价一个欧式看涨期权。最初，分析师进行了1,000次模拟，估计标的股票价格为1.00美元，标准误差为0.40美元。如果分析师增加模拟次数到3,000次，同时保持所有其他因素不变，可能得到的标准误差是多少？
     \end{question}
     
     \begin{choices}
@@ -353,14 +392,19 @@
     \checklist{蒙特卡罗模拟中标准误差与模拟次数的关系（关键是掌握标准误差与模拟次数平方根成反比的公式）}
 
 \begin{question}
-    A risk analyst at a large pension fund is evaluating different methods for estimating confidence intervals of asset returns. Currently, the firm uses the Monte Carlo simulation method, but the analyst is considering switching to the bootstrapping method. Which of the following statements about bootstrapping is correct?
+    A risk analyst at a large pension fund is evaluating different methods for estimating confidence intervals of asset returns. Currently, the firm uses the Monte Carlo simulation method, but the analyst is considering switching to the bootstrapping method. Which of the following statements about bootstrapping is correct?\\
+    一位大型养老基金的风险分析师正在评估不同的方法来估计资产回报的置信区间。目前，公司使用蒙特卡罗模拟方法，但分析师考虑切换到自助法。哪一项关于自助法的陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item Similar to Monte Carlo simulation, bootstrapping needs to assume a specific distribution of returns to estimate the confidence interval accurately.
-        \item Unlike Monte Carlo simulation, bootstrapping can generate an accurate confidence interval even with an incorrect assumption about the return distribution.
-        \item Similar to Monte Carlo simulation, bootstrapping requires the specification of a complex model to estimate the confidence interval.
-        \item Unlike Monte Carlo simulation, bootstrapping does not rely on a pre - specified distribution of returns to estimate the confidence interval.
+        \item Similar to Monte Carlo simulation, bootstrapping needs to assume a specific distribution of returns to estimate the confidence interval accurately.\\
+        与蒙特卡罗模拟类似，自助法需要假设一种特定的回报分布来准确估计置信区间。
+        \item Unlike Monte Carlo simulation, bootstrapping can generate an accurate confidence interval even with an incorrect assumption about the return distribution.\\
+        与蒙特卡罗模拟不同，自助法可以在假设回报分布错误的情况下生成准确的置信区间。
+        \item Similar to Monte Carlo simulation, bootstrapping requires the specification of a complex model to estimate the confidence interval.\\
+        与蒙特卡罗模拟类似，自助法需要指定一个复杂的模型来估计置信区间。
+        \item Unlike Monte Carlo simulation, bootstrapping does not rely on a pre - specified distribution of returns to estimate the confidence interval.\\
+        与蒙特卡罗模拟不同，自助法不依赖于预先指定的回报分布来估计置信区间。
     \end{choices}
     
     \begin{correctanswer}
@@ -391,13 +435,18 @@
 
 \begin{question}
     A junior trader on a derivatives trading desk is comparing the Monte Carlo simulation and bootstrapping methods. Which of the following statements about these two methods is incorrect?
+    \\一位初级交易员在衍生品交易台比较蒙特卡罗模拟和自助法。哪一项关于这两种方法的陈述是错误的？
     \end{question}
     
     \begin{choices}
-        \item The bootstrapping methods do not rely on the assumption that the data are iid, whether they are naïve or sophisticated.
-        \item In option pricing, the Monte Carlo simulation uses a risk - neutral stock price process to simulate price paths.
-        \item Bootstrapping generates observation indices through random sampling with replacement.
-        \item If the specified data - generating process in Monte Carlo simulation fails to describe the observed data well, the simulation results may be unreliable.
+        \item The bootstrapping methods do not rely on the assumption that the data are iid, whether they are naïve or sophisticated.\\
+        自助法不依赖于数据是独立同分布（iid）的假设，无论是简单的还是复杂的。
+        \item In option pricing, the Monte Carlo simulation uses a risk - neutral stock price process to simulate price paths.\\
+        在期权定价中，蒙特卡罗模拟使用风险中性股票价格过程来模拟价格路径。
+        \item Bootstrapping generates observation indices through random sampling with replacement.\\
+        自助法通过随机抽样有放回地生成观测索引。
+        \item If the specified data - generating process in Monte Carlo simulation fails to describe the observed data well, the simulation results may be unreliable.\\
+        如果蒙特卡罗模拟指定的数据生成过程不能很好地描述观察到的数据，模拟结果可能不可靠。
     \end{choices}
     
     \begin{correctanswer}
@@ -427,13 +476,18 @@
 
 \begin{question}
     A risk analyst for an equity hedge fund is evaluating different simulation methods for risk assessment. Which of the following statements about simulation is invalid?
+    \\一位对冲基金的风险分析师正在评估不同的模拟方法用于风险评估。哪一项关于模拟的陈述是无效的？
     \end{question}
     
     \begin{choices}
-        \item Bootstrapping can well capture the autocorrelation of asset returns while incorporating correlations and non - normality.
-        \item The historical simulation approach is a non - parametric method without specific assumptions about the distribution of asset returns.
-        \item Monte Carlo simulation is a useful method for pricing derivatives and exploring asset return scenarios.
-        \item When using Monte Carlo simulation to simulate asset returns, the number of scenarios run will affect the accuracy of the simulation.
+        \item Bootstrapping can well capture the autocorrelation of asset returns while incorporating correlations and non - normality.\\
+        自助法能够很好地捕捉资产回报的自相关性，同时考虑相关性和非正态性。
+        \item The historical simulation approach is a non - parametric method without specific assumptions about the distribution of asset returns.\\
+        历史模拟法是一种非参数方法，不需要对资产回报的分布做出特定的假设。
+        \item Monte Carlo simulation is a useful method for pricing derivatives and exploring asset return scenarios.\\
+        蒙特卡罗模拟是一种有用的方法，用于定价衍生品和探索资产回报情景。
+        \item When using Monte Carlo simulation to simulate asset returns, the number of scenarios run will affect the accuracy of the simulation.\\
+        使用蒙特卡罗模拟模拟资产回报时，运行的情景数量会影响模拟的准确性。
     \end{choices}
     
     \begin{correctanswer}
@@ -463,13 +517,18 @@
 
 \begin{question}
     A financial advisor at a wealth management firm is trying to value a rare stock option with limited available information. The advisor is contemplating between Monte Carlo simulation and bootstrapping for the valuation analysis. Which of the following statements about bootstrapping is correct?
+    \\一位财富管理公司的金融顾问正在尝试为一个罕见的股票期权定价，但可用信息有限。顾问正在考虑使用蒙特卡罗模拟和自助法进行估值分析。哪一项关于自助法的陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item Data used for bootstrapping must be from a variable with a well - defined probability distribution.
-        \item Data used for bootstrapping must cover all possible outcomes in the probability space when resampled.
-        \item Data used for bootstrapping must be resampled with replacement.
-        \item Data used for bootstrapping must follow a log - normal distribution.
+        \item Data used for bootstrapping must be from a variable with a well - defined probability distribution.\\
+        自助法使用的数据必须来自具有明确定义概率分布的变量。
+        \item Data used for bootstrapping must cover all possible outcomes in the probability space when resampled.\\
+        自助法使用的数据必须是在重抽样时覆盖概率空间中的所有可能结果。
+        \item Data used for bootstrapping must be resampled with replacement.\\
+        自助法使用的数据必须是有放回地重抽样。
+        \item Data used for bootstrapping must follow a log - normal distribution.\\
+        自助法使用的数据必须遵循对数正态分布。
     \end{choices}
     
     \begin{correctanswer}
@@ -500,13 +559,19 @@
 
 \begin{question}
 A derivatives trader at an investment bank is developing pricing models for a new series of exotic options. While implementing Monte Carlo simulation for these complex instruments, the trader needs to evaluate different aspects of the simulation methodology to ensure accurate pricing results. Which of the following statements about Monte Carlo simulation is incorrect?
+    \\一位投资银行的衍生品交易员正在开发一个新的系列奇异期权的定价模型。在实施蒙特卡罗模拟这些复杂工具时，交易员需要评估模拟方法的不同方面，以确保准确的定价结果。哪一项关于蒙特卡罗模拟的陈述是错误的？
 \end{question}
 
 \begin{choices}
-    \item A model without a fully random number generator can completely avoid the clustering effect in sampling.
-    \item Monte Carlo simulation is only used for simulating outcomes from linear combinations.
-    \item One limitation of Monte Carlo simulation is that the results depend on the assumptions about the underlying distribution.
+    \item A model without a fully random number generator can completely avoid the clustering effect in sampling.\\
+    一个没有完全随机的随机数生成器的模型可以完全避免抽样中的聚集效应。
+    \item Monte Carlo simulation is only used for simulating outcomes from linear combinations.\\
+    蒙特卡罗模拟只用于模拟线性组合的结果。
+    \item One limitation of Monte Carlo simulation is that the results depend on the assumptions about the underlying distribution.\\
+    蒙特卡罗模拟的一个局限是结果依赖于底层分布的假设。
     \item Monte Carlo simulation can be applied to both t-distribution and non-t-distribution analysis.
+    \item Monte Carlo simulation can be applied to both t-distribution and non-t-distribution analysis.\\
+    蒙特卡罗模拟可以应用于t分布和非t分布的分析。
 \end{choices}
 
 \begin{correctanswer}
@@ -539,13 +604,18 @@ A
 
 \begin{question}
 A quantitative risk analyst at a global investment bank is evaluating different statistical methods for risk measurement. The analyst is particularly interested in determining when bootstrapping would be an appropriate technique in financial risk management (FRM). Which of the following scenarios represents the most suitable application of bootstrapping?
+\\一位全球投资银行的风险分析师正在评估不同的统计方法用于风险测量。分析师特别感兴趣的是确定在金融风险管理（FRM）中自助法何时是一个合适的技术。哪一种情景最符合自助法的应用？
 \end{question}
 
 \begin{choices}
-    \item Using bootstrapping to estimate market volatility during the 2008 financial crisis period.
-    \item Using bootstrapping to model short-term interest rates when rates are approaching zero.
-    \item Using bootstrapping to estimate stock market returns during periods of stable economic growth.
-    \item Using bootstrapping to estimate stock returns in an emerging market following major policy changes.
+    \item Using bootstrapping to estimate market volatility during the 2008 financial crisis period.\\
+    在2008年金融危机期间，使用自助法估计市场波动性。
+    \item Using bootstrapping to model short-term interest rates when rates are approaching zero.\\
+    在利率接近零时，使用自助法建模短期利率。
+    \item Using bootstrapping to estimate stock market returns during periods of stable economic growth.\\
+    在稳定的经济增长期间，使用自助法估计股市回报。
+    \item Using bootstrapping to estimate stock returns in an emerging market following major policy changes.\\
+    在重大政策变动后，使用自助法估计新兴市场的股票回报。
 \end{choices}
 
 \begin{correctanswer}
@@ -579,13 +649,18 @@ C
 
 \begin{question}
 A small bank's risk analyst is studying the relationship between simulation accuracy and sample size. The analyst wants to determine how increasing the number of scenarios from 1,000 to 4,000 in a Monte Carlo simulation affects the confidence interval. Which of the following statements is correct when increasing the number of scenarios?
+\\一位小型银行的风险分析师正在研究模拟准确性与样本量之间的关系。分析师想要确定在蒙特卡罗模拟中增加情景数量从1,000到4,000时，置信区间如何变化。哪一项关于增加情景数量的陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The confidence interval will be reduced by 50\%
-    \item The confidence interval will be reduced by 75\%
-    \item The confidence interval will double
-    \item The confidence interval will increase by 400\%
+    \item The confidence interval will be reduced by 50\%\\
+    置信区间将减少50\%
+    \item The confidence interval will be reduced by 75\%\\
+    置信区间将减少75\%
+    \item The confidence interval will double\\
+    置信区间将翻倍
+    \item The confidence interval will increase by 400\%\\
+    置信区间将增加400\%
 \end{choices}
 
 \begin{correctanswer}

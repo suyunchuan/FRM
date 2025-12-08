@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  8 DEC 2025 10:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  8 DEC 2025 11:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"第三讲：Advanced risk management"
-(./第三讲：Advanced risk management.tex
+**"第四讲：Financial Crisis and Financial Disaster"
+(./第四讲：Financial Crisis and Financial Disaster.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -667,29 +667,29 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count352
- (./第三讲：Advanced risk management.aux)
-\openout1 = `"第三讲：Advanced risk management.aux"'.
+ (./第四讲：Financial Crisis and Financial Disaster.aux)
+\openout1 = `"第四讲：Financial Crisis and Financial Disaster.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -697,56 +697,56 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 84.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 84.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 84.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 84.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 84.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 84.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 84.
-LaTeX Font Info:    Redeclaring math accent \check on input line 84.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 84.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 84.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 84.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 84.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 83.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 83.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 83.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 83.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 83.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 83.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 83.
+LaTeX Font Info:    Redeclaring math accent \check on input line 83.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 83.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 83.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 83.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 83.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 84.
+(Font)              `operators' in the math version `normal' on input line 83.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 84.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 83.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 84.
+(Font)              `operators' in the math version `bold' on input line 83.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 84.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 83.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 84.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 84.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 84.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 84.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 84.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 83.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 84.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 84.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 84.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 83.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 84.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 83.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -782,12 +782,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 84.
-(./第三讲：Advanced risk management.out) (./第三讲：Advanced risk management.out)
+Package hyperref Info: Link coloring OFF on input line 83.
+(./第四讲：Financial Crisis and Financial Disaster.out) (./第四讲：Financial Crisis and Financial Disaster.out)
 \@outlinefile=\write5
-\openout5 = `"第三讲：Advanced risk management.out"'.
+\openout5 = `"第四讲：Financial Crisis and Financial Disaster.out"'.
 
- (./第三讲：Advanced risk management.toc
+ (./第四讲：Financial Crisis and Financial Disaster.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -795,25 +795,17 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write6
-\openout6 = `"第三讲：Advanced risk management.toc"'.
-
-
+)
 
 [1
 
-]
+])
+\tf@toc=\write6
+\openout6 = `"第四讲：Financial Crisis and Financial Disaster.toc"'.
+
+
 
 [2]
-Missing character: There is no ⼤ (U+2F24) in font SimSun/OT:script=hani;language=dflt;!
-Missing character: There is no ⾃ (U+2F83) in font SimSun/OT:script=hani;language=dflt;!
-Missing character: There is no ⼈ (U+2F08) in font SimSun/OT:script=hani;language=dflt;!
-Missing character: There is no ⼯ (U+2F2F) in font SimSun/OT:script=hani;language=dflt;!
-Missing character: There is no ⼲ (U+2F32) in font SimSun/OT:script=hani;language=dflt;!
-Missing character: There is no ⼿ (U+2F3F) in font SimSun/OT:script=hani;language=dflt;!
-Missing character: There is no ⾃ (U+2F83) in font SimSun/OT:script=hani;language=dflt;!
-
 
 [3]
 
@@ -843,21 +835,55 @@ Missing character: There is no ⾃ (U+2F83) in font SimSun/OT:script=hani;langua
 
 [16]
 
-[17] (./第三讲：Advanced risk management.aux)
+[17]
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+
+[22]
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+
+[27]
+
+[28]
+
+[29]
+
+[30]
+
+[31]
+
+[32]
+
+[33]
+
+[34] (./第四讲：Financial Crisis and Financial Disaster.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
-Package rerunfilecheck Info: File `"第三讲：Advanced risk management".out' has not changed.
+Package rerunfilecheck Info: File `"第四讲：Financial Crisis and Financial Disaster".out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 26661 strings out of 475796
- 572902 string characters out of 5774033
- 993859 words of memory out of 5000000
- 49153 multiletter control sequences out of 15000+600000
+ 26692 strings out of 475796
+ 575335 string characters out of 5774033
+ 1028420 words of memory out of 5000000
+ 49184 multiletter control sequences out of 15000+600000
  563846 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,6n,111p,594b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,111p,850b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 第三讲：Advanced risk management.pdf (17 pages).
+Output written on 第四讲：Financial Crisis and Financial Disaster.pdf (34 pages).

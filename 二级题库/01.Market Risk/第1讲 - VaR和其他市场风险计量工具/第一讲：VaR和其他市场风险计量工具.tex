@@ -1465,7 +1465,27 @@
         \caption{Six lowest returns with hybrid weightings}
     \end{table}
     What is the 5\% VaR under the hybrid approach?
-\\
+\\    下表显示了投资组合的六个最低收益率及其混合权重：
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \multicolumn{4}{|c|}{六个最低收益率及其混合权重} \\
+        \hline
+        & 六个最低收益率 & 混合权重 & 混合累积权重 \\
+        \hline
+        1 & -5.20\% & 0.0160 & 0.0160 \\
+        2 & -4.80\% & 0.0150 & 0.0310 \\
+        3 & -4.50\% & 0.0100 & 0.0410 \\
+        4 & -4.20\% & 0.0120 & 0.0530 \\
+        5 & -4.00\% & 0.0080 & 0.0610 \\
+        6 & -3.80\% & 0.0040 & 0.0650 \\
+        \hline
+    \end{tabular}
+    \caption{六个最低收益率及其混合权重}
+\end{table}
+在混合方法下，5\%的VaR是多少？
 \end{question}
 
 \begin{choices}
@@ -1510,16 +1530,24 @@
 
 \begin{question}
     Which of the following statements about age-weighting in VaR calculation is most accurate?
+    \\哪一种陈述关于年龄加权法在VaR计算中最准确？
 \end{question}
 
 \begin{choices}
-    \item The age-weighting method requires GARCH model estimates for implementation
-    \item If the decay factor is close to 1, the data shows strong persistence
+    \item The age-weighting method requires GARCH model estimates for implementation\\
+        年龄加权法需要GARCH模型估计才能实施
+    \item If the decay factor is close to 1, the data shows strong persistence\\
+        如果衰减因子接近1，数据表现出强持久性
     \item The weight for day i is calculated as:
     \[
     W_{(i)} = \frac{\lambda^{i-1} \times (1 - \lambda)}{1 - \lambda^{n}}
     \]
-    \item The minimum required number of observations is 250
+    \\第i天的权重计算公式为：
+    \[
+    W_{(i)} = \frac{\lambda^{i-1} \times (1 - \lambda)}{1 - \lambda^{n}}
+    \]
+    \item The minimum required number of observations is 250\\
+        最少需要的观测值数量是250
 \end{choices}
 
 \begin{correctanswer}
@@ -1553,13 +1581,18 @@
 
 \begin{question}
     What is the key difference between historical simulation and bootstrapped historical simulation in VaR estimation?
+    \\历史模拟法和自举历史模拟法在VaR估计中的关键区别是什么？
 \end{question}
 
 \begin{choices}
-    \item Bootstrapping is a non-parametric approach
-    \item Bootstrapping can be used to estimate both VaR and ES
-    \item Bootstrapping does not require a variance-covariance matrix
-    \item Bootstrapping generates multiple samples through resampling
+    \item Bootstrapping is a non-parametric approach\\
+        自举法是一种非参数方法
+    \item Bootstrapping can be used to estimate both VaR and ES\\
+        自举法可以用于估计VaR和ES
+    \item Bootstrapping does not require a variance-covariance matrix\\
+        自举法不需要方差-协方差矩阵
+    \item Bootstrapping generates multiple samples through resampling\\
+        自举法通过重采样生成多个样本
 \end{choices}
 
 \begin{correctanswer}
@@ -1592,13 +1625,18 @@
 
 \begin{question}
     Michael Wang has collected 1,500 daily observations of equity returns. He is concerned about the skewness in the data and decides to use historical simulation with bootstrapping to estimate the 5\% VaR. Which of the following steps is most likely to be part of the estimation procedure?
+    \\王先生收集了1,500个股票收益率的每日观测值。他担心数据中的偏度，决定使用自举历史模拟法来估计5\%的VaR。以下哪个步骤最可能是估计过程的一部分？
 \end{question}
 
 \begin{choices}
-    \item Filter the data to remove outliers
-    \item Perform repeated sampling with replacement
-    \item Identify the tail region by reordering the original data
-    \item Apply a weighting scheme to reduce the impact of older data
+    \item Filter the data to remove outliers\\
+        过滤数据以移除异常值
+    \item Perform repeated sampling with replacement\\
+        重复采样并替换
+    \item Identify the tail region by reordering the original data\\
+        通过重新排序原始数据识别尾部区域
+    \item Apply a weighting scheme to reduce the impact of older data\\
+        应用加权方案以减少旧数据的影响
 \end{choices}
 
 \begin{correctanswer}
@@ -1633,13 +1671,18 @@
 
 \begin{question}
     A portfolio manager is comparing parametric and non-parametric approaches for VaR calculation and is concerned about the characteristics of the loss data. Which of the following distribution characteristics would make parametric approaches the preferred method?
+    \\一位投资组合经理正在比较参数法和非参数法在VaR计算中的应用，并担心损失数据的特征。以下哪种分布特征会使参数法成为首选方法？
 \end{question}
 
 \begin{choices}
-    \item Skewness in the distribution
-    \item Fat tails in the distribution
-    \item Scarcity of high magnitude loss events
-    \item Heteroskedasticity in the distribution
+    \item Skewness in the distribution\\
+        分布中的偏度
+    \item Fat tails in the distribution\\
+        分布中的厚尾
+    \item Scarcity of high magnitude loss events\\
+        高幅度损失事件的稀缺性
+    \item Heteroskedasticity in the distribution\\
+        分布中的异方差性
 \end{choices}
 
 \begin{correctanswer}
@@ -1679,13 +1722,19 @@
     \item II. The bootstrapping method always uses a time horizon based on the time scale of the historical data 
     \item III. Bootstrapping is based on synthesis of normally distributed random numbers
     \end{itemize}
+    关于VaR估计中使用的自助法（bootstrap）模拟方法，以下哪个陈述是正确的？
+    \begin{itemize}
+    \item I. 自助法使用实际市场数据
+    \item II. 自助法总是使用基于历史数据时间尺度的时间期限
+    \item III. 自助法基于正态分布随机数的合成
+    \end{itemize}
 \end{question}
 
 \begin{choices}
-    \item I only
-    \item II only
-    \item I and III
-    \item I, II and III
+    \item I only\\只有I
+    \item II only\\只有II
+    \item I and III\\只有I和III
+    \item I, II and III\\I，II和III
 \end{choices}
 
 \begin{correctanswer}
@@ -1720,13 +1769,22 @@
 \end{itemize}
 
     How many of Ms. Zhang's statements are correct?
+    Robert Liu
+    \\收集了四个新兴市场的大量每日市场收益率数据集。他担心数据中的非正态偏度，正在考虑非参数估计方法。Liu与同事Jennifer Zhang讨论了该程序。在他们的讨论中，Zhang发表了以下陈述：
+    \begin{itemize}
+        \item I. 年龄加权历史模拟只有在超过用户定义的阈值后才会减少较旧观测值的影响。
+        \item II. 波动率加权历史模拟通过加性波动率调整来调整历史收益率。
+        \item III. 过滤历史估计结合了复杂的参数和动态波动率估计技术。
+    \end{itemize}
+    
+        Zhang女士的陈述中有多少是正确的？
 \end{question}
 
 \begin{choices}
-    \item Zero
-    \item One
-    \item Two
-    \item Three
+    \item Zero\\零个
+    \item One\\一个
+    \item Two\\两个
+    \item Three\\三个
 \end{choices}
 
 \begin{correctanswer}
@@ -1761,7 +1819,8 @@
 
 
 \begin{question}
-    Which of the following statements is not an advantage of non-parametric simulation methods in risk measurement?
+    Which of the following statements is not an advantage of non-parametric simulation methods in risk measurement?\\
+    
 \end{question}
 
 \begin{choices}

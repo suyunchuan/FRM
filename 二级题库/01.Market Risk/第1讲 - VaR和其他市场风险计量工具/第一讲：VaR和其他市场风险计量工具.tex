@@ -311,7 +311,27 @@
     \end{table}
 
     What is the closest estimate of the daily expected shortfall at the 97.5\% confidence level?\\
-    97.5\%置信水平下，每日预期损失的最近估计值是多少？
+    一家主权财富基金拥有500亿美元的资产。风险经理计算了不同置信水平下的每日VaR，如下：
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            置信水平 & VaR(USD) \\
+            \hline
+            95.5\% & 720,000,000 \\
+            96.0\% & 750,000,000 \\
+            96.5\% & 790,000,000 \\
+            97.0\% & 830,000,000 \\
+            97.5\% & 870,000,000 \\
+            98.0\% & 920,000,000 \\
+            98.5\% & 990,000,000 \\
+            99.0\% & 1,050,000,000 \\
+            99.5\% & 1,150,000,000 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    在97.5\%置信水平下，每日期望损失的最接近估计值是多少？
 \end{question}
 
 \begin{choices}
@@ -514,7 +534,7 @@
 
 
 \begin{question}
-    A credit union has accumulated historical loan returns data. The credit union believes the returns follow a normal distribution with a mean of 10 and a standard deviation of 3.0. The following table shows tail VaRs at different confidence levels. Assume the initial analysis uses four tail slices. Calculate the expected shortfall at the 95\% confidence level and identify the effect on ES when the number of tail slices increases.平下的预期损失，并识别当尾部切片数量增加时ES的影响。
+    A credit union has accumulated historical loan returns data. The credit union believes the returns follow a normal distribution with a mean of 10 and a standard deviation of 3.0. The following table shows tail VaRs at different confidence levels. Assume the initial analysis uses four tail slices. Calculate the expected shortfall at the 95\% confidence level and identify the effect on ES when the number of tail slices increases.
     \begin{table}[H]
         \centering
         \begin{tabular}{|c|c|}
@@ -654,13 +674,18 @@
 
 \begin{question}
     Assume the profit/loss distribution for XYZ is normally distributed with an annual mean of \$30 million and a standard deviation of \$15 million. The 5\% VaR is calculated and interpreted as which of the following statements?
+    \\假设XYZ的利润/损失分布是正态分布，年均值为3000万美元，标准差为1500万美元。5\%VaR计算并解释为以下哪个陈述？
 \end{question}
 
 \begin{choices}
-    \item 5\% probability of losses of at least \$5.25 million
-    \item 5\% probability of earnings of at least \$5.25 million
-    \item 95\% probability of losses of at least \$5.25 million
-    \item 95\% probability of earnings of at least \$5.25 million
+    \item 5\% probability of losses of at least \$5.25 million\\
+        5\%概率的损失至少为525万美元
+    \item 5\% probability of earnings of at least \$5.25 million\\
+        5\%概率的收益至少为525万美元
+    \item 95\% probability of losses of at least \$5.25 million\\
+        95\%概率的损失至少为525万美元
+    \item 95\% probability of earnings of at least \$5.25 million\\
+        95\%概率的收益至少为525万美元
 \end{choices}
 
 \begin{correctanswer}
@@ -992,7 +1017,9 @@
     
     II. Historical returns can be revised using correlation-adjusted returns.
     \\一家对冲基金使用VaR来估计损失概率。然而，管理层担心估计过程对所有观测值给予相等的权重。因此，正在考虑替代方法。以下哪一项陈述准确描述了替代的加权历史模拟方法？ 
+
     I. 可以通过用波动率调整后的收益率替代历史收益率，基于波动率对单个观测值进行加权。
+
     II. 可以使用相关性调整后的收益率来修正历史收益率。
 \end{question}
 
@@ -1769,8 +1796,7 @@
 \end{itemize}
 
     How many of Ms. Zhang's statements are correct?
-    Robert Liu
-    \\收集了四个新兴市场的大量每日市场收益率数据集。他担心数据中的非正态偏度，正在考虑非参数估计方法。Liu与同事Jennifer Zhang讨论了该程序。在他们的讨论中，Zhang发表了以下陈述：
+    \\Robert Liu收集了四个新兴市场的大量每日市场收益率数据集。他担心数据中的非正态偏度，正在考虑非参数估计方法。Liu与同事Jennifer Zhang讨论了该程序。在他们的讨论中，Zhang发表了以下陈述：
     \begin{itemize}
         \item I. 年龄加权历史模拟只有在超过用户定义的阈值后才会减少较旧观测值的影响。
         \item II. 波动率加权历史模拟通过加性波动率调整来调整历史收益率。
@@ -1820,14 +1846,18 @@
 
 \begin{question}
     Which of the following statements is not an advantage of non-parametric simulation methods in risk measurement?\\
-    
+    哪一种陈述不是非参数模拟方法在风险测量中的优势？
 \end{question}
 
 \begin{choices}
-    \item Data that requires adjustments is often readily available
-    \item Intuitive and often computationally simple
-    \item Not hindered by parametric violations of skewness
-    \item Can accommodate more complex analysis
+    \item Data that requires adjustments is often readily available\\
+        需要调整的数据通常很容易获得
+    \item Intuitive and often computationally simple\\
+        直观且通常计算简单
+    \item Not hindered by parametric violations of skewness\\
+        不受参数方法偏度违反的影响
+    \item Can accommodate more complex analysis\\
+        可以适应更复杂的分析
 \end{choices}
 
 \begin{correctanswer}
@@ -1860,13 +1890,18 @@
 
 \begin{question}
     Crude oil prices show seasonal volatility patterns, with higher volatility during hurricane season. Which of the following statements is correct if VaR is estimated using unweighted historical simulation with a three-year sample period?
+    \\原油价格显示季节性波动模式，飓风季节波动率更高。如果使用未加权历史模拟法估计VaR，并使用三年样本期，以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item We will overstate VaR in the off-season and understate VaR during hurricane season
-    \item We will overstate VaR in the off-season and overstate VaR during hurricane season
-    \item We will understate VaR in the off-season and understate VaR during hurricane season
-    \item We will understate VaR in the off-season and overstate VaR during hurricane season
+    \item We will overstate VaR in the off-season and understate VaR during hurricane season\\
+        我们在淡季高估VaR，在飓风季节低估VaR
+    \item We will overstate VaR in the off-season and overstate VaR during hurricane season\\
+        我们在淡季高估VaR，在飓风季节高估VaR
+    \item We will understate VaR in the off-season and understate VaR during hurricane season\\
+        我们在淡季低估VaR，在飓风季节低估VaR
+    \item We will understate VaR in the off-season and overstate VaR during hurricane season\\
+        我们在淡季低估VaR，在飓风季节高估VaR
 \end{choices}
 
 \begin{correctanswer}
@@ -1896,13 +1931,18 @@
 
 \begin{question}
     The historical simulation (HS) approach is based on empirical distributions and can handle multiple risk factors. The RiskMetrics approach assumes normal distributions and uses mapping to equity indices. For which of the following portfolios would the HS approach be more likely to provide an accurate VaR estimate than the RiskMetrics approach?
+    \\历史模拟法（HS）基于经验分布，可以处理多个风险因素。RiskMetrics方法假设正态分布，并使用映射到股票指数。对于以下哪个投资组合，历史模拟法比RiskMetrics方法更有可能提供准确的VaR估计？
 \end{question}
 
 \begin{choices}
-    \item A small number of emerging market securities
-    \item A small number of broad market indexes
-    \item A large number of emerging market securities
-    \item A large number of broad market indexes
+    \item A small number of emerging market securities\\
+        少量新兴市场证券
+    \item A small number of broad market indexes\\
+        少量广泛市场指数
+    \item A large number of emerging market securities\\
+        大量新兴市场证券
+    \item A large number of broad market indexes\\
+        大量广泛市场指数
 \end{choices}
 
 \begin{correctanswer}
@@ -1934,13 +1974,18 @@
 
 \begin{question}
     A portfolio manager at a large investment fund wants to improve the accuracy of the fund's ES estimates. The manager has collected the profit and loss data on one of the fund's portfolios over the past 1,200 trading days and plans to apply the bootstrapped historical simulation approach to generate ES estimates. Which of the following statements about the bootstrapped historical approach is correct?
+    \\一个大型投资基金的组合经理想要提高基金的ES估计准确性。经理在过去1,200个交易日中收集了基金组合的利润和损失数据，并计划应用自举历史模拟法生成ES估计。以下关于自举历史模拟法的陈述哪一个是正确的？
 \end{question}
 
 \begin{choices}
-    \item A major cost incurred when applying the bootstrapped historical simulation approach is the increased computational time and complex programming required
-    \item The non-parametric nature of the bootstrapped historical simulation approach makes this approach more difficult to apply when there are a large number of assets in the portfolio
-    \item The number of resamples taken from the data set should be chosen to minimize the bias of the ES estimate
-    \item Resamples are obtained by choosing profit and loss observations from the original data set at random with replacement
+    \item A major cost incurred when applying the bootstrapped historical simulation approach is the increased computational time and complex programming required\\
+        应用自举历史模拟法的主要成本是增加的计算时间和复杂的编程要求
+    \item The non-parametric nature of the bootstrapped historical simulation approach makes this approach more difficult to apply when there are a large number of assets in the portfolio\\
+        自举历史模拟法的非参数性质使得当投资组合中资产数量众多时，这种方法更难应用
+    \item The number of resamples taken from the data set should be chosen to minimize the bias of the ES estimate\\
+        从数据集中抽取的重采样数量应选择最小化ES估计的偏差
+    \item Resamples are obtained by choosing profit and loss observations from the original data set at random with replacement\\
+        重采样是通过从原始数据集中随机选择利润和损失观测值，并进行替换来获得的
 \end{choices}
 
 \begin{correctanswer}
@@ -1972,13 +2017,18 @@
 
 \begin{question}
     A senior analyst at a hedge fund is presenting to a group of junior analysts on the historical simulation (HS) approach for estimating ES. The analyst discusses the assumptions, data requirements, advantages, and disadvantages of the HS approach. Which of the following statements would the analyst be correct to make about an advantage of using the HS approach for estimating ES?
+    \\一个对冲基金的高级分析师正在向一群初级分析师介绍历史模拟法（HS）在估计ES中的应用。分析师讨论了HS方法的假设、数据要求、优势和劣势。分析师哪一种陈述是关于使用HS方法估计ES的优势的正确陈述？
 \end{question}
 
 \begin{choices}
-    \item Major shifts in financial markets or the factors that influence them can be ignored since any effects of these shifts would already have been included in historical datasets
-    \item Any type of investment position can be easily accommodated, from simple linear positions to complex non-linear derivatives positions
-    \item ES can be easily and accurately estimated for any holding period up to the full time period of the historical data set
-    \item Features of profit and loss distributions such as fat tails and skewness are easily accommodated by making appropriate distributional assumptions
+    \item Major shifts in financial markets or the factors that influence them can be ignored since any effects of these shifts would already have been included in historical datasets\\
+        金融市场的重大变化或影响因素可以被忽略，因为这些变化的影响已经包含在历史数据集中
+    \item Any type of investment position can be easily accommodated, from simple linear positions to complex non-linear derivatives positions\\
+        任何类型的投资头寸都可以很容易地适应，从简单的线性头寸到复杂的非线性衍生品头寸
+    \item ES can be easily and accurately estimated for any holding period up to the full time period of the historical data set\\
+        ES可以很容易且准确地估计任何持有期，直到历史数据集的完整时间周期
+    \item Features of profit and loss distributions such as fat tails and skewness are easily accommodated by making appropriate distributional assumptions\\
+        利润和损失分布的特征，如厚尾和偏度，可以通过适当的分布假设很容易地适应
 \end{choices}
 
 \begin{correctanswer}
@@ -2018,13 +2068,18 @@
 \setcounter{question}{0}
 \begin{question}
     In modeling extreme values using the generalized extreme value (GEV) distribution, cases where the tail index parameter is less than zero:
+    \\在用广义极值（GEV）分布建模极端值时，尾部指数参数小于零的情况：
 \end{question}
 
 \begin{choices}
-    \item Cannot be modeled, and they are usually not of interest in financial risk management
-    \item Can be modeled, but they are usually not of interest in financial risk management
-    \item Can be modeled, and they are usually of the most interest in financial risk management
-    \item Cannot be modeled, but would be of interest in financial risk management if they could be modeled
+    \item Cannot be modeled, and they are usually not of interest in financial risk management\\
+        无法建模，通常在金融风险管理中不感兴趣
+    \item Can be modeled, but they are usually not of interest in financial risk management\\
+        可以建模，但通常在金融风险管理中不感兴趣
+    \item Can be modeled, and they are usually of the most interest in financial risk management\\
+        可以建模，通常在金融风险管理中最感兴趣
+    \item Cannot be modeled, but would be of interest in financial risk management if they could be modeled\\
+        无法建模，但如果可以建模，在金融风险管理中会感兴趣
 \end{choices}
 
 \begin{correctanswer}
@@ -2060,13 +2115,18 @@
 
 \begin{question}
     Let X be a random variable representing the daily loss of your portfolio. The "peaks over threshold" (POT) approach considers a threshold value, u, of X and the distribution of excess losses over this threshold. Which of the following statements about this application of extreme value theory is correct?
+    \\设X是一个随机变量，代表你的投资组合的每日损失。“超阈值”（POT）方法考虑X的阈值u和超过该阈值的损失分布。以下关于这种极值理论应用的陈述哪一个是正确的？
 \end{question}
 
 \begin{choices}
-    \item To apply the POT approach, the distribution of X must be elliptical and known
-    \item If X is normally distributed, the distribution of excess losses requires the estimation of only one parameter, $\beta$, which is a positive scale parameter
-    \item To apply the POT approach, one must choose a threshold, u, which is high enough that the number of observations in excess of u is zero
-    \item As the threshold, u, increases, the distribution of excess losses over u converges to a generalized Pareto distribution
+    \item To apply the POT approach, the distribution of X must be elliptical and known\\
+        要应用POT方法，X的分布必须是椭圆的和已知的
+    \item If X is normally distributed, the distribution of excess losses requires the estimation of only one parameter, $\beta$, which is a positive scale parameter\\
+        如果X是正态分布，超过u的损失分布只需要估计一个参数，$\beta$，这是一个正的尺度参数
+    \item To apply the POT approach, one must choose a threshold, u, which is high enough that the number of observations in excess of u is zero\\
+        要应用POT方法，必须选择一个阈值u，使得超过u的观测值数量为零
+    \item As the threshold, u, increases, the distribution of excess losses over u converges to a generalized Pareto distribution\\
+        随着阈值u增加，超过u的损失分布收敛于广义帕累托分布
 \end{choices}
 
 \begin{correctanswer}
@@ -2099,13 +2159,18 @@
 
 \begin{question}
     According to the Fisher-Tippett theorem, as the sample size n gets large, the distribution of extremes converges to:
+    \\根据Fisher-Tippett定理，随着样本量n增大，极端分布收敛于：
 \end{question}
 
 \begin{choices}
-    \item A normal distribution
-    \item A uniform distribution
-    \item A generalized Pareto distribution
-    \item A generalized extreme value distribution
+    \item A normal distribution\\
+        正态分布
+    \item A uniform distribution\\
+        均匀分布
+    \item A generalized Pareto distribution\\
+        广义帕累托分布
+    \item A generalized extreme value distribution\\
+        广义极值分布
 \end{choices}
 
 \begin{correctanswer}
@@ -2155,13 +2220,36 @@
     \end{table}
     
     Given the VaR value and the parameter assumptions, which of the following is correct?
+    \\一家在商品期货中持有活跃头寸的对冲基金正在使用超阈值峰值（peaks-over-threshold, POT）方法来估计99\%置信水平下的VaR和ES。该基金的风险经理已设定一个阈值水平来评估超额损失。他们认为，阈值的选择是合适的，并且与4.50\%的观测值超过阈值这一发现一致。风险经理得出结论，使用POT方法计算的头寸VaR为5.20\%。VaR估计值是根据以下参数计算的，经理们的实证分析基于超额损失的广义帕累托分布假设。
+     
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{参数} & \textbf{符号} & \textbf{数值} \\
+        \hline
+        损失阈值 & $u$ & 3.5 \\
+        观测值数量 & $N$ & 800 \\
+        超过阈值的观测值数量 & $n$ & 36 \\
+        尺度参数 & $\beta$ & 0.85 \\
+        形状参数（尾部指数） & $\xi$ & 0.25 \\
+        \hline
+        \end{tabular}
+    \end{table}
+    
+    给定VaR值和参数假设，以下哪项是正确的？
+
 \end{question}
 
 \begin{choices}
-    \item Keeping all other parameters constant, increasing the value of the tail index lowers both the ES and the VaR
-    \item Keeping all other parameters constant, increasing the loss threshold level increases both the ES and the VaR
-    \item The value of ES is 5.35\%
-    \item The value of ES is 6.45\%
+    \item Keeping all other parameters constant, increasing the value of the tail index lowers both the ES and the VaR\\
+        保持其他参数不变，提高尾部指数参数会降低ES和VaR
+    \item Keeping all other parameters constant, increasing the loss threshold level increases both the ES and the VaR\\
+        保持其他参数不变，提高损失阈值水平会增加ES和VaR
+    \item The value of ES is 5.35\%\\
+        ES的值为5.35\%
+    \item The value of ES is 6.45\%\\
+        ES的值为6.45\%
 \end{choices}
 
 \begin{correctanswer}
@@ -2212,6 +2300,13 @@
     \item III The distribution produces a curve that dips below the normal distribution prior to the tail and then moves above the normal distribution in a curved shape until it reached the extreme tail. 
     
     \item IV The distribution provides a more accurate estimate of the event probabilities in the distribution tail, allowing VaR to be computed at high confidence levels.
+    \end{itemize}
+    以下关于最常用的超阈值分布的陈述哪一个是错误的？
+    \begin{itemize}
+    \item I 分布需要一个阈值、形状和尺度参数。
+    \item II 这些极端值的分布遵循GEV分布。
+    \item III 分布产生的曲线在尾部之前低于正态分布，然后以弯曲形状移动到正态分布上方，直到达到极端尾部。
+    \item IV 分布提供了更准确的尾部事件概率估计，允许在高置信水平下计算VaR。
     \end{itemize}
 \end{question}
 
@@ -2272,13 +2367,18 @@
 
 \begin{question}
     The peaks-over-threshold approach generally requires:
+    \\超阈值方法通常需要：
 \end{question}
 
 \begin{choices}
-    \item More estimated parameters than the GEV approach and shares one parameter with the GEV
-    \item Fewer estimated parameters than the GEV approach and shares one parameter with the GEV
-    \item More estimated parameters than the GEV approach and does not share any parameters with the GEV approach
-    \item Fewer estimated parameters than the GEV approach and does not share any parameters with the GEV approach
+    \item More estimated parameters than the GEV approach and shares one parameter with the GEV\\
+        比GEV方法需要更多的估计参数，并共享一个参数与GEV
+    \item Fewer estimated parameters than the GEV approach and shares one parameter with the GEV\\
+        比GEV方法需要更少的估计参数，并共享一个参数与GEV
+    \item More estimated parameters than the GEV approach and does not share any parameters with the GEV approach\\
+        比GEV方法需要更多的估计参数，但不共享任何参数与GEV方法
+    \item Fewer estimated parameters than the GEV approach and does not share any parameters with the GEV approach\\
+        比GEV方法需要更少的估计参数，但不共享任何参数与GEV方法
 \end{choices}
 
 \begin{correctanswer}
@@ -2315,13 +2415,18 @@
 
 \begin{question}
     In setting the threshold in the POT approach, which of the following statements is the most accurate? Setting the threshold relatively high makes the model:
+    \\在POT方法中设定阈值时，以下哪一项陈述是最准确的？设定相对较高的阈值使模型：
 \end{question}
 
 \begin{choices}
-    \item More applicable but decreases the number of observations in the modeling procedure
-    \item Less applicable and decreases the number of observations in the modeling procedure
-    \item More applicable but increases the number of observations in the modeling procedure
-    \item Less applicable but increases the number of observations in the modeling procedure
+    \item More applicable but decreases the number of observations in the modeling procedure\\
+        更适用，但减少建模过程中的观测值数量
+    \item Less applicable and decreases the number of observations in the modeling procedure\\
+        更不适用，且减少建模过程中的观测值数量
+    \item More applicable but increases the number of observations in the modeling procedure\\
+        更适用，但增加建模过程中的观测值数量
+    \item Less applicable but increases the number of observations in the modeling procedure\\
+        更不适用，但增加建模过程中的观测值数量
 \end{choices}
 
 \begin{correctanswer}
@@ -2351,6 +2456,7 @@
 
 \begin{question}
     Given a VaR equal to 3.20, a threshold of 1.5\%, a shape parameter equal to 0.25, and a scale parameter equal to 0.40, what is the expected shortfall?
+    \\给定VaR等于3.20，阈值为1.5\%，形状参数等于0.25，尺度参数等于0.40，预期短缺度量是多少？
 \end{question}
 
 \begin{choices}
@@ -2385,13 +2491,18 @@
 
 \begin{question}
     Extreme value theory (EVT) can assist with value at risk (VaR) calculations by providing better probability estimates of observing extreme losses than that indicated by a standard normal distribution because empirical distributions exhibit fat tails. If one uses the generalized Pareto distribution (GPD) method to generate parameter estimates for the shape parameter, fat tails will indicate a:
+    \\极值理论（EVT）可以通过提供比标准正态分布更好的极端损失概率估计，从而辅助VaR计算，因为经验分布显示厚尾。如果使用广义帕累托分布（GPD）方法生成形状参数的参数估计，厚尾将表示：
 \end{question}
 
 \begin{choices}
-    \item positive parameter estimate and VaR calculations that are too large
-    \item negative parameter estimate and VaR calculations that are too small
-    \item positive parameter estimate and VaR calculations that are too small
-    \item negative parameter estimate and VaR calculations that are too large
+    \item positive parameter estimate and VaR calculations that are too large\\
+        正参数估计和VaR计算过大
+    \item negative parameter estimate and VaR calculations that are too small\\
+        负参数估计和VaR计算过小
+    \item positive parameter estimate and VaR calculations that are too small\\
+        正参数估计和VaR计算过小
+    \item negative parameter estimate and VaR calculations that are too large\\
+        负参数估计和VaR计算过大
 \end{choices}
 
 \begin{correctanswer}
@@ -2423,13 +2534,18 @@
 
 \begin{question}
     The peaks-over-threshold approach generally requires:
+    \\超阈值方法通常需要：
 \end{question}
 
 \begin{choices}
-    \item More estimated parameters than the GEV approach and shares one parameter with the GEV
-    \item Fewer estimated parameters than the GEV approach and shares one parameter with the GEV
-    \item More estimated parameters than the GEV approach and does not share any parameters with the GEV approach
-    \item Fewer estimated parameters than the GEV approach and does not share any parameters with the GEV approach
+    \item More estimated parameters than the GEV approach and shares one parameter with the GEV\\
+        比GEV方法需要更多的估计参数，并共享一个参数与GEV
+    \item Fewer estimated parameters than the GEV approach and shares one parameter with the GEV\\
+        比GEV方法需要更少的估计参数，并共享一个参数与GEV
+    \item More estimated parameters than the GEV approach and does not share any parameters with the GEV approach\\
+        比GEV方法需要更多的估计参数，但不共享任何参数与GEV方法
+    \item Fewer estimated parameters than the GEV approach and does not share any parameters with the GEV approach\\
+        比GEV方法需要更少的估计参数，但不共享任何参数与GEV方法
 \end{choices}
 
 \begin{correctanswer}
@@ -2468,6 +2584,7 @@
 
 \begin{question}
     A researcher using the POT approach observes the following parameter values: β = 1.2, ξ = 0.20, u = 2.5\%, and Nu/n = 5\%. The 5\% VaR in percentage terms is:
+    \\一个研究者使用POT方法观察到以下参数值：β = 1.2，ξ = 0.20，u = 2.5\%，Nu/n = 5\%。5\%置信水平下的VaR以百分比表示为：
 \end{question}
 
 \begin{choices}
@@ -2503,13 +2620,14 @@
 
 \begin{question}
     The peaks-over-threshold (POT) approach is used by a firm to apply extreme value theory (EVT) to the distribution of excess losses over a high threshold. The firm estimated the following parameter values: distribution scale parameter = 1.10, distribution shape parameter = 0.20, threshold = 1.5\%, and number of observations that exceed threshold / threshold = 6\%. Compute the 1\% VaR in percentage terms and the corresponding expected shortfall measure.
+    \\一家公司使用超阈值（POT）方法将极值理论（EVT）应用于超过高阈值的超额损失分布。该公司估计了以下参数值：分布尺度参数 = 1.10，分布形状参数 = 0.20，阈值 = 1.5\%，超过阈值的观测值数量/阈值 = 6\%。计算1\%置信水平下的VaR以百分比表示和相应的预期短缺度量。
 \end{question}
 
 \begin{choices}
-    \item VaR = 3.25\%, and ES = 4.89\%
-    \item VaR = 3.12\%, and ES = 4.45\%
-    \item VaR = 2.98\%, and ES = 4.21\%
-    \item VaR = 2.85\%, and ES = 4.12\%
+    \item VaR = 3.25\%, and ES = 4.89\%\\风险价值 = 3.25\%，期望损失 = 4.89\%
+    \item VaR = 3.12\%, and ES = 4.45\%\\风险价值 = 3.12\%，期望损失 = 4.45\%
+    \item VaR = 2.98\%, and ES = 4.21\%\\风险价值 = 2.98\%，期望损失 = 4.21\%
+    \item VaR = 2.85\%, and ES = 4.12\%\\风险价值 = 2.85\%，期望损失 = 4.12\%
 \end{choices}
 
 \begin{correctanswer}
@@ -2554,14 +2672,15 @@
     location, scale, and tail index parameters for each distribution. Which of 
     the following distributions is consistent with a tail index parameter (ξ) 
     whose value is greater than zero？
-    
+    \\一个市场风险分析师正在研究如何使用极值理论（EVT）来建模低概率、高影响的事件。分析师需要决定是使用广义极值（GEV）方法还是超阈值（POT）方法来建模利润和损失（P\&L）分布的尾部。以下哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
     \item Weibull
-    \item Gumbel
+    \item Gumbel    
     \item Fréchet
-    \item Binomial
+    \item Binomial\\
+        二项分布
 \end{choices}
 
 \begin{correctanswer}
@@ -2591,14 +2710,19 @@
 }
 
 \begin{question}
-    A market risk analyst at an investment bank is studying how to use extreme value theory (EVT) to model low-probability, high-impact events. The analyst needs to decide whether to use the generalized extreme value (GEV) approach or the peaks-over-threshold (POT) method to model the tail of the profit and loss (P\&L) distribution. Which of the following statements is correct?
+    A market risk analyst at an investment bank is studying how to use extreme value theory (EVT) to model low-probability, high-impact events. The analyst needs to decide whether to use the generalized extreme value (GEV) approach or the peaks-over-threshold (POT) method to model the tail of the profit and loss (P\&L) distribution. Which of the following statements is correct?\\
+    一个投资银行的市场风险分析师正在研究如何使用极值理论（EVT）来建模低概率、高影响的事件。分析师需要决定是使用广义极值（GEV）方法还是超阈值（POT）方法来建模利润和损失（P\&L）分布的尾部。以下哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The POT method provides a strictly conditional loss distribution assessment approach, as extreme losses are typically controlled by dynamic processes.
-    \item The POT method suggests that increasing the number of independent variables in a multivariate distribution can generate a large number of extreme observations for modeling the tail distribution.
-    \item GEV theory determines which distribution should be used to model extreme loss values through the tail index parameter, which reflects the thickness of the P\&L distribution tail.
-    \item GEV theory outlines the procedure for transforming central tendency parameters such as location and scale into forms that can be used to interpret extreme tail loss distributions.
+    \item The POT method provides a strictly conditional loss distribution assessment approach, as extreme losses are typically controlled by dynamic processes.\\
+        POT方法提供了一种严格条件性的损失分布评估方法，因为极端损失通常由动态过程控制。
+    \item The POT method suggests that increasing the number of independent variables in a multivariate distribution can generate a large number of extreme observations for modeling the tail distribution.\\
+        POT方法建议在多元分布中增加独立变量数量可以生成大量极端观测值来建模尾部分布。
+    \item GEV theory determines which distribution should be used to model extreme loss values through the tail index parameter, which reflects the thickness of the P\&L distribution tail.\\
+        GEV理论通过尾部指数参数确定应该使用哪种分布来建模极端损失值，这反映了P\&L分布尾部的厚度。
+    \item GEV theory outlines the procedure for transforming central tendency parameters such as location and scale into forms that can be used to interpret extreme tail loss distributions.\\
+        GEV理论概述了将中心趋势参数（如位置和尺度）转换为可以用于解释极端尾部损失分布的形式的过程。
 \end{choices}
 
 \begin{correctanswer}
@@ -2631,13 +2755,18 @@
 
 \begin{question}
     A senior risk manager at a large bank is asked to evaluate the methods and implications of incorporating generalized extreme value (GEV) theory into the bank's risk measurement process. The manager is studying the procedure for calculating VaR for extreme loss distributions (EV-VaR), including the assumptions and parameters required to generate accurate EV-VaR estimates. Which of the following statements is correct?
+    \\一家大型银行的高级风险经理被要求评估将广义极值（GEV）理论纳入银行风险测量过程中的方法和影响。经理正在研究计算极端损失分布（EV-VaR）的VaR的程序，包括生成准确EV-VaR估计所需的假设和参数。以下哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Incorrectly assuming that the tail index parameter is not statistically significantly different from zero may lead to EV-VaR overestimating extreme risk.
-    \item Due to significant model risk in choosing the correct extreme value distribution, the most conservative Fréchet distribution should be selected.
-    \item The value of the tail index parameter has a significant impact on quantile and EV-VaR estimates for any type of GEV distribution.
-    \item Since extreme values are located in the tail of the original loss distribution, the EV-VaR generated at a given confidence level will provide an accurate estimate of extreme risk.
+    \item Incorrectly assuming that the tail index parameter is not statistically significantly different from zero may lead to EV-VaR overestimating extreme risk.\\
+        错误地认为尾部指数参数不显著异于零可能导致EV-VaR高估极端风险。
+    \item Due to significant model risk in choosing the correct extreme value distribution, the most conservative Fréchet distribution should be selected.\\
+        由于选择正确的极值分布存在显著模型风险，最保守的Fréchet分布应被选择。
+    \item The value of the tail index parameter has a significant impact on quantile and EV-VaR estimates for any type of GEV distribution.\\
+        尾部指数参数对任何GEV分布的分位数和EV-VaR估计有显著影响。
+    \item Since extreme values are located in the tail of the original loss distribution, the EV-VaR generated at a given confidence level will provide an accurate estimate of extreme risk.\\
+        由于极端值位于原始损失分布的尾部，在给定置信水平下生成的EV-VaR将提供对极端风险的准确估计。
 \end{choices}
 
 \begin{correctanswer}
@@ -2677,6 +2806,7 @@
 
 \begin{question}
     A portfolio manager is backtesting a sample at the 95\% confidence level to see if a VaR model needs to be recalibrated. He is using 300 daily returns for the sample and discovered 20 exceptions. What is the Z-Score for this sample when conducting VaR model verification?
+    \\一个投资组合经理正在对样本进行95\%置信水平的回测，以确定VaR模型是否需要重新校准。他使用300个每日收益作为样本，发现了20个异常。在执行VaR模型验证时，该样本的Z值是多少？
 \end{question}
 
 \begin{choices}
@@ -2711,13 +2841,18 @@
 
 \begin{question}
     Basel II requires a backtest at a 99\% confidence level of a bank's internal value at risk (VaR) model (IMA). Assume the bank's ten-day 99\% VaR is \$1.5 million (minimum of 99\% is hardwired per Basel). The null hypothesis is: the VaR model is accurate. Out of 1,200 observations, 30 exceptions are observed (we saw the actual loss exceed the VaR 30 out of 1200 observations).
+    \\巴塞尔II要求对银行内部价值风险（VaR）模型（IMA）进行99\%置信水平的回测。假设银行的十天99\%VaR为\$1.5百万（巴塞尔规定的最低99\%为硬编码）。原假设是：VaR模型是准确的。在1200个观测值中，观察到30个异常（我们观察到实际损失超过VaR 30次，共1200次观测）。
 \end{question}
 
 \begin{choices}
-    \item We will probably call the VaR model good (accurate) but we risk a Type I error.
-    \item We will probably call the VaR model good (accurate) but we risk a Type II error.
-    \item We will probably call the model bad (inaccurate) but we risk a Type I error.
-    \item We will probably call the model bad (inaccurate) but we risk a Type II error.
+    \item We will probably call the VaR model good (accurate) but we risk a Type I error.\\
+        我们可能会认为VaR模型是好的（准确的），但我们面临I型错误的风险。
+    \item We will probably call the VaR model good (accurate) but we risk a Type II error.\\
+        我们可能会认为VaR模型是好的（准确的），但我们面临II型错误的风险。
+    \item We will probably call the model bad (inaccurate) but we risk a Type I error.\\
+        我们可能会认为模型是差的（不准确的），但我们面临I型错误的风险。
+    \item We will probably call the model bad (inaccurate) but we risk a Type II error.\\
+        我们可能会认为模型是差的（不准确的），但我们面临II型错误的风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -2755,13 +2890,18 @@
 
 \begin{question}
     Which of the following statements regarding verification of a VaR model by examining its failure rates is false?
+    \\关于通过检查VaR模型的失败率来验证VaR模型的陈述哪一个是错误的？
 \end{question}
 
 \begin{choices}
-    \item The frequency of exceptions should correspond to the confidence level used for the model.
-    \item According to Kupiec (1995), we should reject the hypothesis that the model is correct if the LF>3.84.
-    \item Backtesting VaR models with lower confidence levels is difficult because the number of exceptions is not high enough to provide meaningful information.
-    \item The range for the number of exceptions must strike a balance between the chances of rejecting an accurate model (a Type I error) and the chance of accepting an inaccurate model (a Type II error).
+    \item The frequency of exceptions should correspond to the confidence level used for the model.\\
+        异常频率应该与模型使用的置信水平匹配。
+    \item According to Kupiec (1995), we should reject the hypothesis that the model is correct if the LF>3.84.\\
+        根据Kupiec（1995），如果LF>3.84，我们应该拒绝模型正确的假设。
+    \item Backtesting VaR models with lower confidence levels is difficult because the number of exceptions is not high enough to provide meaningful information.\\
+        回测置信水平较低的VaR模型很困难，因为异常数量不足以提供有意义的信息。
+    \item The range for the number of exceptions must strike a balance between the chances of rejecting an accurate model (a Type I error) and the chance of accepting an inaccurate model (a Type II error).\\
+        异常数量范围必须在拒绝准确模型（I型错误）和接受不准确模型（II型错误）的机会之间取得平衡。
 \end{choices}
 
 \begin{correctanswer}
@@ -2792,6 +2932,7 @@
 
 \begin{question}
     A portfolio manager is analyzing a 1-day 97\% VaR model. Assuming 252 days in a year, what is the maximum number of daily losses exceeding the 1-day 97\% VaR that is acceptable in a 1-year backtest to conclude, at a 95\% confidence level, that the model is calibrated correctly?
+    \\一个投资组合经理正在分析一个1天97\%VaR模型。假设一年有252天，在95\%置信水平下，1年回测中，每日损失超过1天97\%VaR的最大可接受异常数是多少？
 \end{question}
 
 \begin{choices}
@@ -2829,13 +2970,18 @@
 
 \begin{question}
     The Basel Committee has established four categories of causes for exceptions. Which of the following does not apply to one of those categories?
+    \\巴塞尔委员会确定了四个异常原因类别。以下哪一项不适用于其中一个类别？
 \end{question}
 
 \begin{choices}
-    \item The sample is small.
-    \item Intraday trading activity.
-    \item Model accuracy needs improvement.
-    \item The basic integrity of the model is lacking.
+    \item The sample is small.\\
+        样本很小。
+    \item Intraday trading activity.\\
+        日内交易活动。
+    \item Model accuracy needs improvement.\\
+        模型准确性需要提高。
+    \item The basic integrity of the model is lacking.\\
+        模型基本完整性不足。
 \end{choices}
 
 \begin{correctanswer}
@@ -2888,13 +3034,34 @@
         \end{tabular}
     \end{table}
     Which statement about the backtesting is TRUE?
+    \\Alpha Capital Management决定在10月份对固定收益组合的VaR模型进行12天回测。在测试的12天期间，组合的交易停止。回测提供了以下预测每日百分比收益，置信水平为95\%：
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{cccc}
+            \hline
+            上限 & 下限 & 实际收益率 \\
+            \hline
+            0.45 & -0.25 & 0.32 \\
+            0.48 & -0.18 & 0.41 \\
+            0.49 & -0.12 & -0.15 \\
+            0.49 & -0.20 & -0.28 \\
+            0.49 & -0.25 & 0.32 \\
+            0.48 & -0.19 &       \\
+            \hline
+        \end{tabular}
+    \end{table}
+    以下关于回测的陈述哪一个是正确的？
 \end{question}
 
 \begin{choices}
-    \item At this confidence level, 18\% of the actual results in the backtesting should fall outside the predicted range.
-    \item The backtesting is not valid because the portfolio was not traded during the twelve days. It is only appropriate to backtest a portfolio that has undergone significant changes between calculations because otherwise the results are not relevant to actual trading situations.
-    \item At the end of the period, Alpha Capital will recompute VaR to determine what the upper and lower ranges of the portfolio return should have been.
-\item The backtesting does not confirm the validity of the model.
+    \item At this confidence level, 18\% of the actual results in the backtesting should fall outside the predicted range.\\
+        在95\%置信水平下，回测中18\%的实际结果应该落在预测范围之外。
+    \item The backtesting is not valid because the portfolio was not traded during the twelve days. It is only appropriate to backtest a portfolio that has undergone significant changes between calculations because otherwise the results are not relevant to actual trading situations.\\
+        回测无效，因为组合在12天内没有交易。只有在计算期间发生重大变化时，才适合对组合进行回测，否则结果与实际交易情况无关。
+    \item At the end of the period, Alpha Capital will recompute VaR to determine what the upper and lower ranges of the portfolio return should have been.\\
+        期末，Alpha Capital将重新计算VaR，以确定组合回报的上限和下限应该是多少。
+\item The backtesting does not confirm the validity of the model.\\
+        回测不确认模型的有效性。
 \end{choices}
 
 \begin{correctanswer}
@@ -2933,7 +3100,8 @@
 \checklist{VaR回测}
 
 \begin{question}
-    When backtesting a VaR model. How many exceptions are expected when the model using a 98\% confidence level over a 252-day period?
+    When backtesting a VaR model. How many exceptions are expected when the model using a 98\% confidence level over a 252-day period?\\
+    当回测VaR模型时，使用98\%置信水平在252天期间，期望多少异常？
 \end{question}
 
 \begin{choices}
@@ -2972,13 +3140,18 @@
 
 \begin{question}
     A hedge fund conducted a backtest of its 98\% daily value at risk (VaR) and observed 8 exceptions over the last year which included 252 trading days (T = 252). If we use the normal distribution to approximate the binomial for purposes of model verification, what is our accept/reject opinion of the model under a 90\% two-tailed test?
+    \\一个对冲基金对其98\%每日价值风险（VaR）进行了回测，在过去一年中观察到8个异常，包括252个交易日（T = 252）。如果我们使用正态分布来近似二项分布来进行模型验证，在90\%双尾检验下，我们对模型的接受/拒绝意见是什么？
 \end{question}
 
 \begin{choices}
-    \item Accept with a test statistic of 1.45
-    \item Accept with a test statistic of 2.12
-    \item Reject with a test statistic of 1.45
-    \item Reject with a test statistic of 2.12
+    \item Accept with a test statistic of 1.45\\
+        接受检验统计量为1.45
+    \item Accept with a test statistic of 2.12\\
+        接受检验统计量为2.12
+    \item Reject with a test statistic of 1.45\\
+        拒绝检验统计量为1.45
+    \item Reject with a test statistic of 2.12\\
+        拒绝检验统计量为2.12
 \end{choices}
 
 \begin{correctanswer}
@@ -3014,13 +3187,18 @@
 
 \begin{question}
     Which of the following statements regarding verification of a VaR model by examining its failure rates is false?
+    \\关于通过检查VaR模型的失败率来验证VaR模型的陈述哪一个是错误的？
 \end{question}
 
 \begin{choices}
-    \item The frequency of exceptions should correspond to the confidence level used for the model.
-    \item According to Kupiec (1995), we should reject the hypothesis that the model is correct if the LF>3.84.
-    \item Backtesting VaR models with lower confidence levels is difficult because the number of exceptions is not high enough to provide meaningful information.
-    \item The range for the number of exceptions must strike a balance between the chances of rejecting an accurate model (a Type I error) and the chance of accepting an inaccurate model (a Type II error).
+    \item The frequency of exceptions should correspond to the confidence level used for the model.\\
+        异常频率应该与模型使用的置信水平匹配。
+    \item According to Kupiec (1995), we should reject the hypothesis that the model is correct if the LF>3.84.\\
+        根据Kupiec（1995），如果LF>3.84，我们应该拒绝模型正确的假设。
+    \item Backtesting VaR models with lower confidence levels is difficult because the number of exceptions is not high enough to provide meaningful information.\\
+        回测置信水平较低的VaR模型很困难，因为异常数量不足以提供有意义的信息。
+    \item The range for the number of exceptions must strike a balance between the chances of rejecting an accurate model (a Type I error) and the chance of accepting an inaccurate model (a Type II error).\\
+        异常数量范围必须在拒绝准确模型（I型错误）和接受不准确模型（II型错误）的机会之间取得平衡。
 \end{choices}
 
 \begin{correctanswer}
@@ -3069,13 +3247,31 @@
     \end{table}
 
     Based on the above information, which of the following statements accurately describes the VaR model that is being backtested?
+    \\    一位风险经理正在使用99\%的置信水平对252天期间的每日持有期VaR模型进行回测，并使用3.84的检验统计量。下表显示了在99\%置信水平下对数似然比（LR）的计算值。
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|cccccccccccc|}
+            \hline
+            异常数量& 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+            \hline
+            LR统计量 & 7.25 & 4.38 & 2.56 & 1.33 & 0.62 & 0.45 & 0.59 & 0.92 & 1.51 & 2.34 & 3.37 & 4.59 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    基于以上信息，以下哪项陈述准确描述了正在回测的VaR模型？
 \end{question}
 
 \begin{choices}
-    \item If the number of exceptions is more than 2, we would not reject the model.
-    \item If the number of exceptions is more than 1 and less than 11, we may commit a Type II error.
-    \item If the number of exceptions is less than 1, we would accept the hypothesis that the model is correct.
-    \item If the number of exceptions is less than 1, we may commit a Type II error.
+    \item If the number of exceptions is more than 2, we would not reject the model.\\
+        如果异常数大于2，我们不会拒绝模型。
+    \item If the number of exceptions is more than 1 and less than 11, we may commit a Type II error.\\
+        如果异常数大于1且小于11，我们可能犯II型错误。
+    \item If the number of exceptions is less than 1, we would accept the hypothesis that the model is correct.\\
+        如果异常数小于1，我们接受模型正确的假设。
+    \item If the number of exceptions is less than 1, we may commit a Type II error.\\
+        如果异常数小于1，我们可能犯II型错误。
 \end{choices}
 
 \begin{correctanswer}
@@ -3106,6 +3302,7 @@
 
 \begin{question}
     You are given the following information about the returns of stock X and stock Y: Variance of return of stock X = 169.0. Variance of return of stock Y = 289.0. Covariance between the return of stock X and the return of stock Y = 85.0. At the end of 2024, you are holding USD 6 million in stock X. You are considering a strategy of shifting USD 2.5 million into stock Y and keeping USD 3.5 million in stock X. What percentage of risk, as measured by standard deviation of return, can be reduced by this strategy?
+    \\你被提供以下关于股票X和股票Y的收益信息：股票X的收益方差 = 169.0。股票Y的收益方差 = 289.0。股票X和股票Y的收益协方差 = 85.0。在2024年底，你持有6百万美元的股票X。你正在考虑一个策略，将250万美元转移到股票Y，并保持350万美元的股票X。通过这个策略，可以减少多少百分比的风险，以标准差收益率衡量？
 \end{question}
 
 \begin{choices}
@@ -3154,13 +3351,18 @@
 
 \begin{question}
     Based on Basel III rules for backtesting, a penalty is given to banks that have more than four exceptions to their 1-day 99\% VaR over the course of 252 trading days. The supervisor gives these penalties based on four criteria. Which of the following causes of exceptions is most likely to lead to a penalty?
+    \\根据巴塞尔III回测规则，对于在252个交易日期间，1天99\%VaR超过四个异常的银行，会给予惩罚。主管根据四个标准给出这些惩罚。以下哪项异常原因最可能导致惩罚？
 \end{question}
 
 \begin{choices}
-    \item The bank increases its intraday trading activity.
-    \item A large move in exchange rates was combined with a small move in correlations.
-    \item The bank's model calculates currency risk based on the average duration of the forwards in the portfolio.
-    \item A sudden market crisis in a developed market leads to losses in the bond positions in that country.
+    \item The bank increases its intraday trading activity.\\
+        银行增加了日内交易活动。
+    \item A large move in exchange rates was combined with a small move in correlations.\\
+        汇率大幅波动与相关性小幅变化相结合。
+    \item The bank's model calculates currency risk based on the average duration of the forwards in the portfolio.\\
+        银行模型根据投资组合中远期的平均期限计算货币风险。
+    \item A sudden market crisis in a developed market leads to losses in the bond positions in that country.\\
+        在发达市场突然发生的金融危机导致该国债券头寸损失。
 \end{choices}
 
 \begin{correctanswer}
@@ -3193,13 +3395,18 @@
 
 \begin{question}
     Basel III requires a backtest of a bank's internal value at risk (VaR) model (IMA). Assume the bank's ten-day 99\% VaR is \$3.5 million (minimum of 99\% is hard-wired per Basel). The null hypothesis is: the VaR model is accurate. Out of 800 observations, 12 exceptions are observed (we saw the actual loss exceed the VaR 12 out of 800 observations). (Binomial CDF)
+    \\巴塞尔III要求对银行内部价值风险（VaR）模型（IMA）进行回测。假设银行的十天99\%VaR为\$3.5百万（巴塞尔规定的最低99\%为硬编码）。原假设是：VaR模型是准确的。在800个观测值中，观察到12个异常（我们观察到实际损失超过VaR 12次，共800次观测）。（二项分布CDF）
 \end{question}
 
 \begin{choices}
-    \item We will probably call the VaR model good (accurate) but we risk a Type I error.
-    \item We will probably call the VaR model good (accurate) but we risk a Type II error.
-    \item We will probably call the model bad (inaccurate) but we risk a Type I error.
-    \item We will probably call the model bad (inaccurate) but we risk a Type II error.
+    \item We will probably call the VaR model good (accurate) but we risk a Type I error.\\
+        我们可能会认为VaR模型是好的（准确的），但我们面临I型错误的风险。
+    \item We will probably call the VaR model good (accurate) but we risk a Type II error.\\
+        我们可能会认为VaR模型是好的（准确的），但我们面临II型错误的风险。
+    \item We will probably call the model bad (inaccurate) but we risk a Type I error.\\
+        我们可能会认为模型是差的（不准确的），但我们面临I型错误的风险。
+    \item We will probably call the model bad (inaccurate) but we risk a Type II error.\\
+        我们可能会认为模型是差的（不准确的），但我们面临II型错误的风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -3238,13 +3445,18 @@
 
 \begin{question}
     Which of the following statements regarding verification of a VAR model by examining its failure rates is false?I. The frequency of exceptions should correspond to the confidence level used for the model.II. According to Kupiec (1995), we should reject the hypothesis that the model is correct if the LR>3.84.III. Backtesting VAR models with higher confidence levels is difficult because the number of exceptions is not high enough to provide meaningful information.IV. The range for the number of exceptions must strike a balance between the chances of rejecting an accurate model (a type 1 error) and the chance of accepting an inaccurate model (a type 2 error)
+    \\关于通过检查VaR模型的失败率来验证VaR模型的陈述哪一个是错误的？I. 异常频率应与模型使用的置信水平相对应。II. 根据Kupiec (1995)，如果LR>3.84，我们应该拒绝模型正确的假设。III. 回测具有更高置信水平的VaR模型很困难，因为异常数量不足以提供有意义的信息。IV. 异常数量的接受范围必须在拒绝准确模型（I型错误）和接受不准确模型（II型错误）的机会之间取得平衡
 \end{question}
 
 \begin{choices}
-    \item I and IV
-    \item II only
-    \item III only
-    \item II and IV
+    \item I and IV\\
+        I和IV
+    \item II only\\
+        只有II
+    \item III only\\
+        只有III
+    \item II and IV\\
+        II和IV
 \end{choices}
 
 \begin{correctanswer}
@@ -3296,13 +3508,34 @@
         \end{tabular}
     \end{table}
     Based on the above information, which of the following statements accurately describes the VaR model that is being backtested?
+    \\一位分析师正在使用99\%的置信水平对240天期间的每日持有期VaR模型进行回测，并使用3.84的检验统计量。下表显示了在99\%置信水平下对数似然比（LR）的计算值。
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            异常数量 & LR值 \\
+            \hline
+            1 & 0.6123 \\
+            2 & 1.2345 \\
+            3 & 1.8765 \\
+            4 & 2.5432 \\
+            5 & 3.1234 \\
+            \hline
+        \end{tabular}
+    \end{table}
+    基于以上信息，以下哪项陈述准确描述了正在回测的VaR模型？
 \end{question}
 
 \begin{choices}
-    \item If the number of exceptions is more than 3, we would not reject the model.
-    \item If the number of exceptions is more than 1 and less than 10, we may commit a Type II error.
-    \item If the number of exceptions is less than 1, we would accept the hypothesis that the model is correct.
-    \item If the number of exceptions is less than 1, we may commit a Type II error.
+    \item If the number of exceptions is more than 3, we would not reject the model.\\
+        如果异常数大于3，我们不会拒绝模型。
+    \item If the number of exceptions is more than 1 and less than 10, we may commit a Type II error.\\
+        如果异常数大于1且小于10，我们可能犯II型错误。
+    \item If the number of exceptions is less than 1, we would accept the hypothesis that the model is correct.\\
+        如果异常数小于1，我们接受模型正确的假设。
+    \item If the number of exceptions is less than 1, we may commit a Type II error.\\
+        如果异常数小于1，我们可能犯II型错误。
 \end{choices}
 
 \begin{correctanswer}
@@ -3340,6 +3573,7 @@
 
 \begin{question}
     A risk analyst at Bank XYZ has been asked to verify the bank's VaR model based on the failure rate. Upon examining the bank's daily trading profits and losses over the past year, the analyst finds that there were 18 exceptions to the bank's 99\% VaR model. To determine whether the VaR model is biased, the analyst calculates the z-statistic for the model. Assuming there are 250 trading days in a year, which of the following is the correct estimate of the z-statistic?
+    \\一个风险分析师被要求根据失败率验证银行VaR模型。通过检查银行过去一年的每日交易利润和损失，分析师发现银行99\%VaR模型有18个异常。为了确定VaR模型是否存在偏差，分析师计算了模型的z统计量。假设一年有250个交易日，以下哪个是z统计量的正确估计？
 \end{question}
 
 \begin{choices}
@@ -3380,13 +3614,18 @@
 
 \begin{question}
     A risk analyst backtests an internal 1-day 99\% VaR model over a 240-day look-back period and finds the model's failure rate to be 2.8\%. If the analyst conducts a one-tailed test at the 99\% confidence level and the number of exceptions follows a binomial probability distribution, what should the analyst conclude?
+    \\一个风险分析师对一个内部1天99\%VaR模型进行240天回测，发现模型的失败率为2.8\%。如果分析师在99\%置信水平下进行单侧检验，且例外数遵循二项分布，分析师应该得出什么结论？
 \end{question}
 
 \begin{choices}
-    \item The model is incorrectly calibrated since the test statistic is less than the critical value.
-    \item The model is incorrectly calibrated since the test statistic is greater than the critical value.
-    \item The model is correctly calibrated since the test statistic is less than the critical value.
-    \item The model is correctly calibrated since the test statistic is greater than the critical value.
+    \item The model is incorrectly calibrated since the test statistic is less than the critical value.\\
+        模型校准不正确，因为检验统计量小于临界值。
+    \item The model is incorrectly calibrated since the test statistic is greater than the critical value.\\
+        模型校准不正确，因为检验统计量大于临界值。
+    \item The model is correctly calibrated since the test statistic is less than the critical value.\\
+        模型校准正确，因为检验统计量小于临界值。
+    \item The model is correctly calibrated since the test statistic is greater than the critical value.\\
+        模型校准正确，因为检验统计量大于临界值。
 \end{choices}
 
 \begin{correctanswer}
@@ -3419,13 +3658,18 @@
 \setcounter{question}{0}
 \begin{question}
     Unconditional testing does not reflect:
+    \\非条件检验不反映：
 \end{question}
 
 \begin{choices}
-    \item the size of the portfolio.
-    \item the number of exceptions.
-    \item the confidence level chosen.
+    \item the size of the portfolio.\\
+        投资组合规模。
+    \item the number of exceptions.\\
+        异常数量。
+    \item the confidence level chosen.\\
+        选择的置信水平。
     \item the timing of the exceptions.
+        异常发生的时间。
 \end{choices}
 
 \begin{correctanswer}
@@ -3462,13 +3706,18 @@
 
 \begin{question}
     What is a key weakness of the value at risk (VaR) measure? VaR:
+    \\VaR衡量方法的关键弱点是什么？VaR：
 \end{question}
 
 \begin{choices}
-    \item does not consider the severity of losses in the tail of the returns distribution.
-    \item is quite difficult to compute.
-    \item is sub-additive.
-    \item has an insufficient amount of back-testing data.
+    \item does not consider the severity of losses in the tail of the returns distribution.\\
+        不考虑收益率分布尾部损失的严重程度。
+    \item is quite difficult to compute.\\
+        计算相当困难。
+    \item is sub-additive.\\
+        是次可加的。
+    \item has an insufficient amount of back-testing data.\\
+        回测数据不足。
 \end{choices}
 
 \begin{correctanswer}
@@ -3509,6 +3758,7 @@
 
 \begin{question}
     XYZ's pension plan has \$450 million in assets with an expected return of 12 percent. The last thirty monthly returns are given below. What is the 10 percent monthly probability VaR for XYZ's pension plan? 18.92\% -18.75\% 28.34\% 6.45\% -1.23\% 15.67\% 4.56\% 8.45\% 1.89\% 32.12\% 27.89\% 16.23\% 7.34\% -5.67\% -1.23\% 10.23\% 9.45\% 6.78\% 2.34\% 12.67\% 12.45\% 7.89\% 9.12\% 19.67\% 7.89\% 17.23\% 6.78\% 35.67\% 32.89\% 8.67\%
+    \\XYZ的养老金计划有4.5亿美元资产，预期收益率为12\%。过去30个月的月度收益如下。XYZ的养老金计划的10\%月度概率VaR是多少？18.92\% -18.75\% 28.34\% 6.45\% -1.23\% 15.67\% 4.56\% 8.45\% 1.89\% 32.12\% 27.89\% 16.23\% 7.34\% -5.67\% -1.23\% 10.23\% 9.45\% 6.78\% 2.34\% 12.67\% 12.45\% 7.89\% 9.12\% 19.67\% 7.89\% 17.23\% 6.78\% 35.67\% 32.89\% 8.67\%
 \end{question}
 
 \begin{choices}
@@ -3538,13 +3788,18 @@
 
 \begin{question}
     In early 2024, a risk manager calculates the VaR for a hedge fund based on the last three years of data. The strategy of the fund is to buy stocks and write out-of-the-money calls. The manager needs to compute VaR. Which of the following methods would yield results that are least representative of the risks inherent in the portfolio?
+    \\2024年初，风险经理根据过去三年的数据计算了对冲基金的VaR。基金策略是买入股票并卖出虚值看涨期权。经理需要计算VaR。以下哪种方法会得出对投资组合风险代表性最差的VaR结果？
 \end{question}
 
 \begin{choices}
-    \item Historical simulation with full repricing
-    \item Delta–normal VaR assuming zero drift
-    \item Monte Carlo style VaR assuming zero drift with full repricing
-    \item Historical simulation using delta-equivalents for all positions
+    \item Historical simulation with full repricing\\
+        完全重定价的历史模拟
+    \item Delta–normal VaR assuming zero drift\\
+        零漂移的Delta-正态VaR
+    \item Monte Carlo style VaR assuming zero drift with full repricing\\
+        零漂移的蒙特卡洛风格VaR，完全重定价
+    \item Historical simulation using delta-equivalents for all positions\\
+        使用delta等价的历史模拟，对所有头寸
 \end{choices}
 
 \begin{correctanswer}
@@ -3581,6 +3836,7 @@
 
 \begin{question}
     Consider a trader with an investment in a corporate bond with face value of \$300,000 and default probability of 0.6\%. Over the next period, we can either have no default, with a return of zero, or default with a loss of \$300,000. The payoffs are thus \$300,000 with probability of 0.6\% and +\$0 with probability of 99.4\%. Since the probability of getting \$0 is greater than 99\%, the VaR at the 99\% confidence level is \$0, without taking the mean into account. This is consistent with the definition that VaR is the smallest loss, such that the right-tail probability is at least 99\%. Now, consider a portfolio invested in four bonds (A, B, C, D) with the same characteristics and independent payoffs. Please compute the portfolio VaR at the 99\% confidence level (using loss distribution method):
+    \\考虑一个投资于面值30万美元的企业债券的投资者，违约概率为0.6\%。在下一个时期，我们可以要么没有违约，收益为零，要么违约，损失30万美元。因此，收益为30万美元的概率为0.6\%，收益为0的概率为99.4\%。由于获得0的概率大于99\%，因此在99\%置信水平下，VaR为0，不考虑均值。这与VaR定义一致，即VaR是最小损失，使得右尾概率至少为99\%。现在，考虑一个投资于四只债券（A、B、C、D）的组合，具有相同特征且独立收益。请计算组合VaR在99\%置信水平下的值（使用损失分布方法）：
 \end{question}
 
 \begin{choices}
@@ -3635,6 +3891,16 @@
     
     \item IV. Using more risk factors generally leads to better risk measurement but also requires more time to be devoted to the modeling process and risk computation.
 \end{itemize}
+关于风险因子映射方法，以下哪些陈述是正确的？
+\begin{itemize}
+   \item I. 在现金流映射方法下，只有与固定收益投资组合的平均到期期限相关的风险被映射。
+    
+    \item II. 现金流映射是固定收益投资组合风险映射最不精确的方法。
+    
+    \item III. 在久期映射方法下，债券的风险被映射到具有相同久期的零息债券。
+    
+    \item IV. 使用更多的风险因子通常会导致更好的风险测量，但也需要更多时间投入到建模过程和风险计算中。
+\end{itemize}
 \end{question}
 
 \begin{choices}
@@ -3674,14 +3940,19 @@
 }
 
 \begin{question}
-    There is a short position in 1-year bonds with a \$250 million face value and a 6\% annual interest rate, with interest paid semiannually. The annualized interest rate on zero-coupon bonds is 4.2\% for a 6-month maturity and 4.5\% for a 12-month maturity. Decompose the bond into the cash flows of the two standard instruments, and then determine the present value of the cash flows of the standard instruments. What are the present values of each cash flow?
+    There is a short position in 1-year bonds with a \$250 million face value and a 6\% annual interest rate, with interest paid semiannually. The annualized interest rate on zero-coupon bonds is 4.2\% for a 6-month maturity and 4.5\% for a 12-month maturity. Decompose the bond into the cash flows of the two standard instruments, and then determine the present value of the cash flows of the standard instruments. What are the present values of each cash flow?\\
+    有一笔面值2.5亿美元、年利率6\%的1年期债券空头头寸，半年付息一次。零息债券的6个月年化利率为4.2\%，12个月年化利率为4.5\%。将债券分解为两个标准工具的现金流，然后计算每个现金流的现值。每个现金流的现值是多少？
 \end{question}
 
 \begin{choices}
-    \item (PV of CF1) -\$6,123,456; (PV of CF2) -\$233,456,789
-    \item (PV of CF1) -\$6,234,567; (PV of CF2) -\$235,678,901
-    \item (PV of CF1) -\$6,234,567; (PV of CF2) -\$240,384,615
-    \item (PV of CF1) -\$6,456,789; (PV of CF2) -\$238,095,238
+    \item (PV of CF1) -\$6,123,456; (PV of CF2) -\$233,456,789\\
+        (CF1的现值) -\$6,123,456; (CF2的现值) -\$233,456,789
+    \item (PV of CF1) -\$6,234,567; (PV of CF2) -\$235,678,901\\
+        (CF1的现值) -\$6,234,567; (CF2的现值) -\$235,678,901
+    \item (PV of CF1) -\$6,234,567; (PV of CF2) -\$240,384,615\\
+        (CF1的现值) -\$6,234,567; (CF2的现值) -\$240,384,615
+    \item (PV of CF1) -\$6,456,789; (PV of CF2) -\$238,095,238\\
+        (CF1的现值) -\$6,456,789; (CF2的现值) -\$238,095,238
 \end{choices}
 
 \begin{correctanswer}
@@ -3714,13 +3985,18 @@
 
 \begin{question}
     Which of the following methods is not one of the three approaches for mapping a portfolio of fixed-income securities onto risk factors?
+    \\以下哪种方法不是将固定收益证券投资组合映射到风险因子的三种方法之一？
 \end{question}
 
 \begin{choices}
-    \item Principal mapping
-    \item Duration mapping
-    \item Cash flow mapping
-    \item Present value mapping
+    \item Principal mapping\\
+        本金映射
+    \item Duration mapping\\
+        久期映射
+    \item Cash flow mapping\\
+        现金流映射
+    \item Present value mapping\\
+        现值映射
 \end{choices}
 
 \begin{correctanswer}
@@ -3747,6 +4023,7 @@
 
 \begin{question}
     A portfolio manager owns a portfolio of options on a non-dividend paying stock XYZ. The portfolio is made up of 20,000 deep in-the-money call options on XYZ and 50,000 deep out-of-the-money call options on XYZ. The portfolio also contains 30,000 forward contracts on XYZ. XYZ is trading at USD 150. If the volatility of XYZ is 30\% per year, which of the following amounts would be closest to the 1-day VaR of the portfolio at the 95 percent confidence level, assuming 250 trading days in a year?
+    \\一个投资组合经理拥有一个非分红股票XYZ的期权组合。组合由20,000张深度实值看涨期权和50,000张深度虚值看涨期权组成。组合还包含30,000份远期合约。XYZ交易价格为150美元。如果XYZ的年波动率为30\%，假设一年有250个交易日，以下哪个金额最接近组合在95\%置信水平下的1天VaR？
 \end{question}
 
 \begin{choices}
@@ -3791,13 +4068,18 @@
 
 \begin{question}
     Computing VaR on a portfolio containing a very large number of positions can be simplified by mapping these positions to a smaller number of elementary risk factors. Which of the following mappings would be adequate?
+    \\计算一个包含大量头寸的投资组合的VaR可以通过将这些头寸映射到较少数量的基本风险因子来简化。以下哪种映射是合适的？
 \end{question}
 
 \begin{choices}
-    \item EUR/JPY forward contracts are mapped on the EUR/USD spot exchange rate.
-    \item Each position in a corporate bond portfolio is mapped on the bond with the closest maturity among a set of government bonds.
-    \item Government bonds paying regular coupons are mapped on zero-coupon government bonds.
-    \item A position in the NASDAQ index is mapped on a position in a single stock within that index.
+    \item EUR/JPY forward contracts are mapped on the EUR/USD spot exchange rate.\\
+        EUR/JPY远期合约映射到EUR/USD现汇汇率。
+    \item Each position in a corporate bond portfolio is mapped on the bond with the closest maturity among a set of government bonds.\\
+        每个企业债券头寸映射到一组政府债券中期限最接近的债券。
+    \item Government bonds paying regular coupons are mapped on zero-coupon government bonds.\\
+        支付定期利息的政府债券映射到零息政府债券。
+    \item A position in the NASDAQ index is mapped on a position in a single stock within that index.\\
+        NASDAQ指数头寸映射到该指数中单个股票的头寸。
 \end{choices}
 
 \begin{correctanswer}
@@ -3836,7 +4118,8 @@
 }
 
 \begin{question}
-    An analyst is using the delta-normal method to determine the VAR of a fixed income portfolio. The portfolio contains a long position in 1-year bonds with a \$3 million face value and a 6\% coupon that is paid semiannually. The interest rates on 6- and 12-month maturity zero-coupon bonds are 4\% and 4.5\%, respectively. Mapping the long position to standard positions in the 6- and 12-month zeros, respectively, provides which of the following mapped positions?
+    An analyst is using the delta-normal method to determine the VAR of a fixed income portfolio. The portfolio contains a long position in 1-year bonds with a \$3 million face value and a 6\% coupon that is paid semiannually. The interest rates on 6- and 12-month maturity zero-coupon bonds are 4\% and 4.5\%, respectively. Mapping the long position to standard positions in the 6- and 12-month zeros, respectively, provides which of the following mapped positions?\\
+    \\一位分析师使用delta-normal方法确定固定收益投资组合的VaR。组合包含一个面值300万美元、年利率6\%的1年期债券多头头寸，半年付息一次。6个月和12个月期限的零息债券利率分别为4\%和4.5\%。将多头头寸映射到6个月和12个月零息债券的标准头寸，分别提供以下哪种映射头寸？
 \end{question}
 
 \begin{choices}
@@ -3886,6 +4169,23 @@
     \end{table}
 
     A bond portfolio consists of a \$200 million bond maturing in two years and a \$200 million bond maturing in four years. What is the VaR of this bond portfolio using the principal VaR mapping method?
+    \\    在95\%置信水平下，到期期限从一年到五年的债券的VaR百分比如下：
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            到期期限 & VaR \% \\
+            \hline
+            1 & 0.5234 \\
+            2 & 1.0987 \\
+            3 & 1.6542 \\
+            4 & 2.1985 \\
+            5 & 2.7043 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    一个债券投资组合由一只2年期2亿美元的债券和一只4年期2亿美元的债券组成。使用主成分VaR映射方法，该债券投资组合的VaR是多少？
 \end{question}
 
 \begin{choices}
@@ -3929,6 +4229,10 @@
     II. The more frequent the time steps used for projected fixed-income security values, the more accurate the pricing.
     
     III. The Black-Scholes-Merton model is preferred for the pricing of fixed income securities because of its continuous time assumption.
+    \\关于固定收益证券定价的陈述哪一个是正确的？
+    I. 当利率下降时，可赎回债券的赎回价格是债券的上限价值。
+    II. 使用更频繁的时间步长进行固定收益证券价值预测，定价越准确。
+    III. 布莱克-斯科尔斯-默顿模型因其连续时间假设而更适合固定收益证券定价。
 \end{question}
 
 \begin{choices}
@@ -3965,6 +4269,7 @@
 
 \begin{question}
     A fund manager owns a portfolio of options on a non-dividend paying stock DEF. The portfolio is made up of 10,000 deep in-the-money call options on DEF and 20,000 deep out-of-the-money call options on DEF. The portfolio also contains 18,000 forward contracts on DEF. Currently, DEF is trading at USD 85. Assuming 250 trading days in a year and the volatility of DEF is 20\% per year, which of the following amounts would be closest to the 1-day VaR of the portfolio at the 99\% confidence level?
+    \\一个基金经理拥有一个非分红股票DEF的期权组合。组合由10,000张深度实值看涨期权和20,000张深度虚值看涨期权组成。组合还包含18,000份远期合约。目前，DEF交易价格为85美元。假设一年有250个交易日，DEF的年波动率为20\%，以下哪个金额最接近组合在99\%置信水平下的1天VaR？
 \end{question}
 
 \begin{choices}
@@ -4011,13 +4316,18 @@
 
 \begin{question}
     A hedge fund manager has to choose a risk model for a large "equity market neutral" portfolio, which has zero beta. Many of the stocks held are recent IPOs. Among the following alternatives, the best is:
+    \\一个对冲基金经理必须选择一个风险模型用于一个大型“股票市场中性”投资组合，该组合的beta为零。许多持有的股票是最近上市的IPO股票。在以下选项中，最佳选择是：
 \end{question}
 
 \begin{choices}
-    \item A single index model with no specific risk, estimated over the last year
-    \item A diagonal index model with idiosyncratic risk, estimated over the last year
-    \item A model that maps positions on industry and style factors
-    \item A full covariance matrix model using a very short window
+    \item A single index model with no specific risk, estimated over the last year\\
+        一个单一指数模型，没有特定风险，估计过去一年
+    \item A diagonal index model with idiosyncratic risk, estimated over the last year\\
+        一个对角指数模型，包含特异性风险，估计过去一年
+    \item A model that maps positions on industry and style factors\\
+        一个映射行业和风格因子的模型
+    \item A full covariance matrix model using a very short window\\
+        一个全协方差矩阵模型，使用非常短的时间窗口
 \end{choices}
 
 \begin{correctanswer}
@@ -4057,6 +4367,7 @@
 
 \begin{question}
     A trader has an option position in natural gas with a delta of 150,000 units and gamma of -75,000 units per dollar move in price. Using the delta-gamma methodology, compute the VaR on this position, assuming the extreme move on natural gas is \$3.00 per unit.
+    \\一个交易员拥有一个天然气期权头寸，delta为150,000单位，gamma为-75,000单位每美元价格变动。使用delta-gamma方法，计算该头寸的VaR，假设天然气极端价格变动为3美元每单位。
 \end{question}
 
 \begin{choices}
@@ -4090,13 +4401,18 @@
     
 \begin{question}
     Michael Wang is a risk manager who has been assigned the task of designing a risk engine for VaR mapping. Which of the following statements accurately describes VaR mapping?
+    \\Michael Wang是一个风险经理，被分配设计一个VaR映射的风险引擎。以下哪个陈述准确描述了VaR映射？
 \end{question}
 
 \begin{choices}
-    \item Duration is an important factor in mapping equity portfolios.
-    \item Delta-normal method is an appropriate method for estimating VaR for mapping options and interest-rate swaps.
-    \item VaR mapping involves identifying common risk factors among positions in a portfolio and mapping all positions to a single risk factor.
-    \item A return-based analysis may fail to spot style drift or hidden risks.
+    \item Duration is an important factor in mapping equity portfolios.\\
+        久期是映射股票投资组合的重要因子。
+    \item Delta-normal method is an appropriate method for estimating VaR for mapping options and interest-rate swaps.\\
+        Delta-normal方法是对映射期权和利率互换的VaR估计的适当方法。
+    \item VaR mapping involves identifying common risk factors among positions in a portfolio and mapping all positions to a single risk factor.\\
+        VaR映射涉及识别投资组合中头寸之间的共同风险因子，并将所有头寸映射到单一风险因子。
+    \item A return-based analysis may fail to spot style drift or hidden risks.\\
+        基于收益的分析可能无法发现风格漂移或隐藏风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -4139,13 +4455,18 @@
 
 \begin{question}
     A risk analyst at an investment bank is evaluating methods for estimating portfolio VaR. The analyst considers the implications of applying a VaR mapping approach to the bank's portfolio of several fixed-income instruments and derivative contracts. Which of the following statements would the analyst be correct to make?
+    \\一个投资银行的风险分析师正在评估估计投资组合VaR的方法。分析师考虑将VaR映射方法应用于银行的几种固定收益工具和衍生品合约的投资组合。以下哪个陈述是分析师正确的？
 \end{question}
 
 \begin{choices}
-    \item When mapping for derivative contracts, exposures should only be estimated using regression analysis and cannot be directly allocated to risk factors.
-    \item The choice of mapping approach involves a trade-off between preserving the market value of the positions and preserving the market risk of the positions.
-    \item As the proportion of total portfolio risk explained by general risk factors increases, the proportion of total portfolio risk attributed to specific risk decreases.
-    \item The portion of portfolio risk that is explained by the variance of the risk factors is the specific risk resulting from issuer-specific price movements.
+    \item When mapping for derivative contracts, exposures should only be estimated using regression analysis and cannot be directly allocated to risk factors.\\
+        当映射衍生品合约时，暴露应仅使用回归分析估计，不能直接分配给风险因子。
+    \item The choice of mapping approach involves a trade-off between preserving the market value of the positions and preserving the market risk of the positions.\\
+        映射方法的选择涉及在保持头寸市场价值和保持头寸市场风险之间权衡。
+    \item As the proportion of total portfolio risk explained by general risk factors increases, the proportion of total portfolio risk attributed to specific risk decreases.\\
+        随着总组合风险中由一般风险因子解释的部分增加，总组合风险中由特定风险解释的部分减少。
+    \item The portion of portfolio risk that is explained by the variance of the risk factors is the specific risk resulting from issuer-specific price movements.\\
+        被风险因子方差解释的组合风险部分是特定风险，由发行人特定价格变动引起。
 \end{choices}
 
 \begin{correctanswer}
@@ -4189,13 +4510,18 @@
 
 \begin{question}
     A risk management team at a bank is benchmarking a VaR model to evaluate its performance. During the benchmarking process, the team faces two main challenges. Which of the following statements accurately describes benchmarking and the methods to overcome these challenges?
+    \\一个银行的风险管理团队正在基准测试VaR模型以评估其性能。在基准测试过程中，团队面临两个主要挑战。以下哪个陈述准确描述了基准测试和克服这些挑战的方法？
 \end{question}
 
 \begin{choices}
-    \item The purpose of benchmarking is to evaluate the model's risk prediction capability. When facing the problem of non-independent and identically distributed errors due to frequent changes in trading portfolios, location scale models can be used to address this issue, and this method is applicable to all types of distributions.
-    \item The purpose of benchmarking is to compare the bank's VaR model with alternative models. When facing the problem of lack of comparable models, a GARCH(1,1) VaR model can be estimated based on trading profit and loss as a benchmark, although this model may not be suitable for bank risk management, it can be used for comparison.
-    \item The purpose of benchmarking is to simplify VaR models to improve computational efficiency. When facing the problem of non-independent and identically distributed errors due to frequent changes in trading portfolios, location scale models can be used, where quantiles are linear functions of volatility.
-    \item The purpose of benchmarking is to verify the accuracy of VaR models. When facing the problem of lack of comparable models, the challenge can be addressed by constructing multiple VaR models for comparison.
+    \item The purpose of benchmarking is to evaluate the model's risk prediction capability. When facing the problem of non-independent and identically distributed errors due to frequent changes in trading portfolios, location scale models can be used to address this issue, and this method is applicable to all types of distributions.\\
+        基准测试的目的是评估模型的风险预测能力。当面临由于交易组合频繁变化导致的非独立同分布误差问题时，位置尺度模型可以用于解决这个问题，并且这种方法适用于所有类型的分布。
+    \item The purpose of benchmarking is to compare the bank's VaR model with alternative models. When facing the problem of lack of comparable models, a GARCH(1,1) VaR model can be estimated based on trading profit and loss as a benchmark, although this model may not be suitable for bank risk management, it can be used for comparison.\\
+        基准测试的目的是将银行的VaR模型与替代模型进行比较。当面临缺乏可比较模型的问题时，可以根据交易利润和损失估计GARCH(1,1) VaR模型作为基准，虽然该模型可能不适合银行风险管理，但可用于比较。
+    \item The purpose of benchmarking is to simplify VaR models to improve computational efficiency. When facing the problem of non-independent and identically distributed errors due to frequent changes in trading portfolios, location scale models can be used, where quantiles are linear functions of volatility.\\
+        基准测试的目的是简化VaR模型以提高计算效率。当面临由于交易组合频繁变化导致的非独立同分布误差问题时，位置尺度模型可以用于解决这个问题，其中分位数是波动率的线性函数。
+    \item The purpose of benchmarking is to verify the accuracy of VaR models. When facing the problem of lack of comparable models, the challenge can be addressed by constructing multiple VaR models for comparison.\\
+        基准测试的目的是验证VaR模型的准确性。当面临缺乏可比较模型的问题时，可以通过构建多个VaR模型进行比较来解决挑战。
 \end{choices}
 
 \begin{correctanswer}

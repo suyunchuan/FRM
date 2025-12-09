@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -95,7 +95,8 @@
 \section{考点1：Nominal Interest Rate \& Real Interest Rate 名义利率和实际利率}
 \setcounter{question}{0}
 \begin{question}
-    A risk analyst at a fixed - income investment firm knows that the nominal interest rate on a bond is 8\% and the inflation rate is 3\%. What is the approximate real interest rate according to the simplified formula?
+    A risk analyst at a fixed - income investment firm knows that the nominal interest rate on a bond is 8\% and the inflation rate is 3\%. What is the approximate real interest rate according to the simplified formula?\\
+    一位固定收益投资公司的风险分析师知道，债券的名义利率为8\%，通胀率为3\%。根据简化公式，近似计算真实利率是多少？
     \end{question}
     
     \begin{choices}
@@ -123,14 +124,19 @@
     \checklist{真实利率计算}
 
 \begin{question}
-    A junior trader on a derivatives trading desk is analyzing the relationship between nominal and real interest rates. Which of the following statements is correct?
+    A junior trader on a derivatives trading desk is analyzing the relationship between nominal and real interest rates. Which of the following statements is correct?\\
+    一位初级交易员正在分析名义利率和真实利率之间的关系。以下哪个陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item The real interest rate is always higher than the nominal interest rate.
-        \item The nominal interest rate is adjusted for inflation to get the real interest rate.
-        \item The real interest rate is adjusted for inflation, and it can be approximated by subtracting the inflation rate from the nominal interest rate.
-        \item The inflation rate is calculated by subtracting the nominal interest rate from the real interest rate.
+        \item The real interest rate is always higher than the nominal interest rate.\\
+        真实利率总是高于名义利率。
+        \item The nominal interest rate is adjusted for inflation to get the real interest rate.\\
+        名义利率需要通过对真实利率进行通胀调整得到。
+        \item The real interest rate is adjusted for inflation, and it can be approximated by subtracting the inflation rate from the nominal interest rate.\\
+        真实利率需要通过对名义利率进行通胀调整得到，并且可以通过从名义利率中减去通胀率来近似计算。
+        \item The inflation rate is calculated by subtracting the nominal interest rate from the real interest rate.\\
+        通胀率可以通过从名义利率中减去真实利率来计算。
     \end{choices}
     
     \begin{correctanswer}
@@ -161,7 +167,8 @@
 \section{考点2:Forward Rate Agreement(FRA) 远期利率协议}
 \setcounter{question}{0}
 \begin{question}
-    A financial advisor is evaluating a forward rate agreement. Assume the one - year zero rate is 3.5\% and the eighteen - month zero rate is 4.5\% with continuous compounding. What is the value of a forward rate agreement that allows the holder to earn 8\% expressed with quarterly compounding, for a 6 - month period starting in one year on a notional of \$1,200,000?
+    A financial advisor is evaluating a forward rate agreement. Assume the one - year zero rate is 3.5\% and the eighteen - month zero rate is 4.5\% with continuous compounding. What is the value of a forward rate agreement that allows the holder to earn 8\% expressed with quarterly compounding, for a 6 - month period starting in one year on a notional of \$1,200,000?\\
+    一位金融顾问正在评估一个远期利率协议。假设一年期零利率为3.5\%，十八个月期零利率为4.5\%，连续复利。一个远期利率协议的价值是多少，允许持有者在一年后开始六个月期限，面值为120万美元，以8\%的季度复利获得收益？
     \end{question}
     
     \begin{choices}
@@ -197,14 +204,19 @@
     \checklist{远期利率协议价值计算(注意折现的时点)}
 
 \begin{question}
-    A risk analyst at a bank is reviewing the characteristics of forward rate agreements (FRAs). Which of the following statements about FRAs is correct?
+    A risk analyst at a bank is reviewing the characteristics of forward rate agreements (FRAs). Which of the following statements about FRAs is correct?\\
+    一位银行的风险分析师正在审查远期利率协议（FRA）的特征。以下哪个陈述关于FRA是正确的？
     \end{question}
     
     \begin{choices}
-        \item FRAs are traded on organized exchanges, providing high liquidity and standardized terms.
-        \item In a FRA, the interest rates are in compound interest form, similar to most other interest rate instruments.
-        \item For a long FRA position, when the market interest rate rises, the position benefits as it receives a floating rate and pays a fixed rate. 
-        \item A short FRA position is also known as a fixed - rate payer, and it gains when the market interest rate falls.
+        \item FRAs are traded on organized exchanges, providing high liquidity and standardized terms.\\
+        FRA在有组织的交易所交易，提供高流动性和标准化条款。
+        \item In a FRA, the interest rates are in compound interest form, similar to most other interest rate instruments.\\
+        在FRA中，利率是复利形式，类似于大多数其他利率工具。
+        \item For a long FRA position, when the market interest rate rises, the position benefits as it receives a floating rate and pays a fixed rate. \\
+        对于多头FRA头寸，当市场利率上升时，头寸受益，因为它收取浮动利率并支付固定利率。
+        \item A short FRA position is also known as a fixed - rate payer, and it gains when the market interest rate falls.\\
+        空头FRA头寸也被称为固定利率支付者，当市场利率下降时，头寸受益。
     \end{choices}
     
     \begin{correctanswer}
@@ -233,7 +245,8 @@
     \checklist{远期利率协议（注意辨析FRA多头和空头收益情况）}
 
 \begin{question}
-    An investor has entered into an FRA, agreeing to pay a fixed rate of 4\% on \$1.5 million based on the quarterly rate in four months. Assume that rates are compounded quarterly. Calculate the payoff from the FRA if the quarterly rate is 2\% in four months.
+    An investor has entered into an FRA, agreeing to pay a fixed rate of 4\% on \$1.5 million based on the quarterly rate in four months. Assume that rates are compounded quarterly. Calculate the payoff from the FRA if the quarterly rate is 2\% in four months.\\
+    一位投资者进入了一个FRA，同意在四个月后以季度利率4\%支付150万美元的固定利率。假设利率是季度复利。如果四个月后的季度利率为2\%，计算FRA的收益。
     \end{question}
     
     \begin{choices}
@@ -261,7 +274,8 @@
     \checklist{远期利率协议（FRA）的支付计算}
 
 \begin{question}
-    Suppose the two - month and five - month floating rates are 3\% and 4\% respectively (continuously compounded rates). An investor enters into an FRA in which she will receive 7\% (assuming quarterly compounding) on a principal of \$4,000,000 between Months 2 and 5. What is the payoff from the FRA?
+    Suppose the two - month and five - month floating rates are 3\% and 4\% respectively (continuously compounded rates). An investor enters into an FRA in which she will receive 7\% (assuming quarterly compounding) on a principal of \$4,000,000 between Months 2 and 5. What is the payoff from the FRA?\\
+    假设两个月和五个月的浮动利率分别为3\%和4\%（连续复利）。一位投资者进入了一个FRA，她将在两个月和五个月之间收到7\%（假设季度复利）的利息，面值为400万美元。FRA的收益是多少？
     \end{question}
     
     \begin{choices}
@@ -299,14 +313,19 @@
     \checklist{远期利率协议（FRA）支付计算（关键是掌握远期利率计算、利率转换以及FRA支付公式，并准确代入数据计算）}
 
 \begin{question}
-    A financial manager at a firm is looking to hedge the interest - rate risk of a future borrowing. The firm plans to borrow \$15 million for 60 days starting in two years. The manager enters into a forward rate agreement (FRA) where the firm will pay a fixed rate, R(k), of 4.5\%. The FRA cash settles in two years (T = 2.0), not in arrears. All rates are expressed with quarterly compounding. If the actual 60 - day LIBOR observed two years forward turns out to be 5.5\%, what is the cash flow payment/receipt by the firm under the FRA?
+    A financial manager at a firm is looking to hedge the interest - rate risk of a future borrowing. The firm plans to borrow \$15 million for 60 days starting in two years. The manager enters into a forward rate agreement (FRA) where the firm will pay a fixed rate, R(k), of 4.5\%. The FRA cash settles in two years (T = 2.0), not in arrears. All rates are expressed with quarterly compounding. If the actual 60 - day LIBOR observed two years forward turns out to be 5.5\%, what is the cash flow payment/receipt by the firm under the FRA?\\
+    一位金融经理正在寻找对未来借款的利率风险的套期保值。公司计划在两年后借入1500万美元，为期60天。经理进入了一个远期利率协议（FRA），公司将支付固定利率R(k)，为4.5\%。FRA现金结算在两年后（T = 2.0），不是到期付息。所有利率都以季度复利表示。如果两年后实际的60天LIBOR为5.5\%，公司通过FRA获得的现金流是多少？
     \end{question}
     
     \begin{choices}
-        \item The firm pays \$24,772
-        \item The firm pays \$25,325
-        \item The firm receives \$24,772
-        \item The firm receives \$25,325
+        \item The firm pays \$24,772\\
+        公司支付24772美元
+        \item The firm pays \$25,325\\
+        公司支付25325美元
+        \item The firm receives \$24,772\\
+        公司收到24772美元
+        \item The firm receives \$25,325\\
+        公司收到25325美元
     \end{choices}
     
     \begin{correctanswer}
@@ -332,14 +351,19 @@
     \checklist{提前结算的远期利率协议（FRA）现金流计算（关键是掌握提前结算FRA的现金流计算公式，并准确代入参数进行计算）}
     
 \begin{question}
-    A risk analyst at a fixed - income investment firm is analyzing an FRA (forward rate agreement) that has the same maturity and compounding frequency as a Eurodollar futures contract. The FRA has a LIBOR underlying. Which of the following statements is true about the relationship between the forward rate and the futures rate?
+    A risk analyst at a fixed - income investment firm is analyzing an FRA (forward rate agreement) that has the same maturity and compounding frequency as a Eurodollar futures contract. The FRA has a LIBOR underlying. Which of the following statements is true about the relationship between the forward rate and the futures rate?\\
+    一位固定收益投资公司的风险分析师正在分析一个远期利率协议（FRA），其期限和复利频率与欧元美元期货合约相同。FRA的底层是LIBOR。以下哪个陈述关于远期利率和期货利率之间的关系是正确的？
     \end{question}
     
     \begin{choices}
-        \item They should be exactly the same.
-        \item The forward rate is normally lower than the futures rate.
-        \item They have no fixed relationship.
-        \item The forward rate is normally higher than the futures rate.
+        \item They should be exactly the same.\\
+        它们应该完全相同。
+        \item The forward rate is normally lower than the futures rate.\\
+        远期利率通常低于期货利率。
+        \item They have no fixed relationship.\\
+        它们之间没有固定的关系。
+        \item The forward rate is normally higher than the futures rate.\\
+        远期利率通常高于期货利率。
     \end{choices}
     
     \begin{correctanswer}
@@ -387,6 +411,20 @@
     \hline
     \end{tabular}
     \end{center}
+    一位交易员在债券期货合约中持有空头头寸，正在寻找交割债券。给定以下选项和报价120.00，哪只债券是最便宜可交割债券（CTD）？
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{债券} & \textbf{报价} & \textbf{转换因子} \\
+    \hline
+    Bond A & 105 - 08 & 0.8523 \\
+    \hline
+    Bond B & 112 - 16 & 0.9215 \\
+    \hline
+    Bond C & 130 - 24 & 1.0732 \\
+    \hline
+    \end{tabular}
+    \end{center}
     \end{question}
     
     \begin{choices}
@@ -419,14 +457,19 @@
     \checklist{最便宜可交割债券（CTD）（关键是掌握交割成本计算公式）}
 
 \begin{question}
-    A risk analyst at a financial institution is studying the concept of the cheapest - to - deliver (CTD) bond in the context of bond futures contracts. Which of the following statements regarding CTD bonds is correct?
+    A risk analyst at a financial institution is studying the concept of the cheapest - to - deliver (CTD) bond in the context of bond futures contracts. Which of the following statements regarding CTD bonds is correct?\\
+    一位金融机构的风险分析师正在研究债券期货合约中便宜可交割债券（CTD）的概念。以下哪个陈述关于CTD债券是正确的？
     \end{question}
     
     \begin{choices}
-        \item When yields are above 6\%, CTD bonds are typically low - coupon, short - maturity bonds.
-        \item In an upward - sloping yield curve environment, CTD bonds tend to have shorter maturities.
-        \item When yields are below 6\%, the CTD bond is usually a high - coupon, short - maturity bond.
-        \item The short position in a bond futures contract has no flexibility in choosing the bond for delivery.
+        \item When yields are above 6\%, CTD bonds are typically low - coupon, short - maturity bonds.\\
+        当收益率大于6\%时，CTD债券倾向于低息票、短期限债券。
+        \item In an upward - sloping yield curve environment, CTD bonds tend to have shorter maturities.\\
+        在收益率曲线向上倾斜的环境中，CTD债券倾向于有更短的期限。
+        \item When yields are below 6\%, the CTD bond is usually a high - coupon, short - maturity bond.\\
+        当收益率小于6\%时，CTD债券倾向于高息票、短期限债券。
+        \item The short position in a bond futures contract has no flexibility in choosing the bond for delivery.\\
+        在债券期货合约中，空头方没有选择交割债券的灵活性。
     \end{choices}
     
     \begin{correctanswer}
@@ -455,14 +498,19 @@
     \checklist{最便宜可交割债券(注意辨析不同情况下CTD债券的特点)}
 
     \begin{question}
-        A junior trader is analyzing the implications of the cheapest - to - deliver (CTD) bond mechanism in bond futures contracts. Which of the following statements about the CTD bond and related strategies is accurate?
+        A junior trader is analyzing the implications of the cheapest - to - deliver (CTD) bond mechanism in bond futures contracts. Which of the following statements about the CTD bond and related strategies is accurate?\\
+        一位初级交易员正在分析债券期货合约中便宜可交割债券（CTD）机制的含义。以下哪个陈述关于CTD债券和相关策略是正确的？
         \end{question}
         
         \begin{choices}
-            \item When the yield curve is downward sloping, CTD bonds tend to have longer maturities.
-            \item The "wild card play" strategy is only available to the long position in a bond futures contract.
-            \item The ability to choose the CTD bond and use the "wild card play" generally increases the price of bond futures contracts.
-            \item The calculation of the cost for delivering a bond involves the quoted bond price, quoted futures price, and the conversion factor.
+            \item When the yield curve is downward sloping, CTD bonds tend to have longer maturities.\\
+            当收益率曲线向下倾斜时，CTD债券倾向于有更长的期限。
+            \item The "wild card play" strategy is only available to the long position in a bond futures contract.\\
+            “百塔牌”策略仅适用于债券期货合约中的多头方。
+            \item The ability to choose the CTD bond and use the "wild card play" generally increases the price of bond futures contracts.\\
+            选择CTD债券和使用“百塔牌”策略通常会增加债券期货合约的价格。
+            \item The calculation of the cost for delivering a bond involves the quoted bond price, quoted futures price, and the conversion factor.\\
+            交割债券的成本计算涉及报价债券价格、报价期货价格和转换因子。
         \end{choices}
         
         \begin{correctanswer}
@@ -491,7 +539,8 @@
         \checklist{最便宜可交割债券（注意CTD和“百塔牌”策略都是空头方用的，对空头有利）}
 
 \begin{question}
-    Suppose a Eurodollar futures quote is 96.80, the standard deviation of the change in the monthly rate over one year is 1.5\%, and the time to maturity is two years. Ignoring compounding effects, what is the forward rate?
+    Suppose a Eurodollar futures quote is 96.80, the standard deviation of the change in the monthly rate over one year is 1.5\%, and the time to maturity is two years. Ignoring compounding effects, what is the forward rate?\\
+    假设欧元美元期货报价为96.80，一年内每月利率变化的标普为1.5\%，到期时间为两年。忽略复利效应，远期利率是多少？
     \end{question}
     
     \begin{choices}
@@ -523,14 +572,19 @@
     \checklist{欧洲美元期货远期利率计算(掌握凸性调节部分公式，尤其是T2的含义)}
 
     \begin{question}
-        A trader holds a long position in a Eurodollar futures contract. The price of the Eurodollar futures changes from 98.00 to 97.20. What is the gain/loss to the trader, considering the relationship with SOFR?
+        A trader holds a long position in a Eurodollar futures contract. The price of the Eurodollar futures changes from 98.00 to 97.20. What is the gain/loss to the trader, considering the relationship with SOFR?\\
+        一位交易员在欧元美元期货合约中持有多头头寸。欧元美元期货价格从98.00变为97.20。考虑与SOFR的关系，交易员的收益/损失是多少？
         \end{question}
         
         \begin{choices}
-            \item SOFR decreased by 80 basis points, resulting in a loss of \$2,000 for the long position.
-            \item SOFR increased by 80 basis points, resulting in a loss of \$2,000 for the long position.
-            \item SOFR decreased by 80 basis points, resulting in a gain of \$2,000 for the long position.
-            \item SOFR increased by 80 basis points, resulting in a gain of \$2,000 for the long position.
+            \item SOFR decreased by 80 basis points, resulting in a loss of \$2,000 for the long position.\\
+            SOFR下降了80个基点，导致多头头寸损失2000美元。
+            \item SOFR increased by 80 basis points, resulting in a loss of \$2,000 for the long position.\\
+            SOFR上升了80个基点，导致多头头寸损失2000美元。
+            \item SOFR decreased by 80 basis points, resulting in a gain of \$2,000 for the long position.\\
+            SOFR下降了80个基点，导致多头头寸收益2000美元。
+            \item SOFR increased by 80 basis points, resulting in a gain of \$2,000 for the long position.\\
+            SOFR上升了80个基点，导致多头头寸收益2000美元。
         \end{choices}
         
         \begin{correctanswer}
@@ -559,13 +613,27 @@
     \end{tabular}
     \end{center}
     The futures price is 105 - 18/32 and the maturity date of the contract is October 1. The bonds pay their coupon semiannually on July 31 and January 31. Which is the cheapest to deliver bond?
+    \\
+    收益率曲线向上倾斜。一位交易员持有国债期货空头头寸。以下债券符合交割条件：
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    债券 & A & B & C \\ \hline
+    现货价格 & 104 - 16/32 & 108 - 20/32 & 100 - 14/32 \\ \hline
+    票息 & 4.5\% & 5.5\% & 3.5\% \\ \hline
+    转换因子 & 0.99 & 1.04 & 0.96 \\ \hline
+    \end{tabular}
+    \end{center}
+    期货价格为105 - 18/32，合约到期日为10月1日。债券在7月31日和1月31日每半年支付一次票息。哪个是最便宜交割债券？
+    
     \end{question}
     
     \begin{choices}
         \item Bond A
         \item Bond B
         \item Bond C
-        \item Insufficient information
+        \item Insufficient information\\
+        信息不足
     \end{choices}
     
     \begin{correctanswer}
@@ -592,14 +660,19 @@
     \checklist{国债期货中最便宜可交割债券（CTD）的计算（关键是掌握交割成本的计算公式）}
 
 \begin{question}
-    A French real - estate company is looking to hedge against the risk of increasing interest rates. It decides to use futures on 15 - year French government bonds. Which position in the futures should the company take, and what is the reason?
+    A French real - estate company is looking to hedge against the risk of increasing interest rates. It decides to use futures on 15 - year French government bonds. Which position in the futures should the company take, and what is the reason?\\
+    一位法国房地产公司正在寻找对利率上升风险的套期保值。它决定使用15年期法国政府债券期货。公司应该采取哪种期货头寸，为什么？
     \end{question}
     
     \begin{choices}
-        \item Take a long position in the futures because rising interest rates lead to declining futures prices.
-        \item Take a short position in the futures because rising interest rates lead to declining futures prices.
-        \item Take a long position in the futures because rising interest rates lead to rising futures prices.
-        \item Take a short position in the futures because rising interest rates lead to rising futures prices.
+        \item Take a long position in the futures because rising interest rates lead to declining futures prices.\\
+        采取多头头寸在期货价格下降时会遭受损失，无法对冲利率上升的风险。
+        \item Take a short position in the futures because rising interest rates lead to declining futures prices.\\
+        采取空头头寸在期货价格下降时会盈利，可以对冲利率上升的风险。
+        \item Take a long position in the futures because rising interest rates lead to rising futures prices.\\
+        采取多头头寸在期货价格上升时会盈利，可以对冲利率上升的风险。
+        \item Take a short position in the futures because rising interest rates lead to rising futures prices.\\
+        采取空头头寸在期货价格上升时会遭受损失，无法对冲利率上升的风险。
     \end{choices}
     
     \begin{correctanswer}
@@ -631,6 +704,7 @@
 
 \begin{question}
     The five - year Eurodollar futures quote is 96.50. The volatility of the short - term interest rate (LIBOR) is 1.2\%, expressed with continuous compounding. What is the equivalent forward rate, adjusted for convexity, given in ACT/360 day count with continuous compounding (i.e., the Eurodollar futures contract gives LIBOR in quarterly compounding ACT/360, so convert to continuous but a day count conversion is not needed)?
+    \\五年期欧元美元期货报价为96.50，短期利率（LIBOR）的波动率为1.2\%，连续复利表示。给出在ACT/360天计数下，考虑凸性调整的等效远期利率，连续复利（即欧元美元期货合约给出LIBOR，季度复利ACT/360，所以需要转换为连续复利，但不需要进行天数转换）。
     \end{question}
     
     \begin{choices}
@@ -667,14 +741,19 @@
     \checklist{Eurodollar期货中考虑凸性调整的远期利率计算（关键是掌握期货利率的计算、利率形式转换以及凸性调整公式）}
 
 \begin{question}
-    A junior trader on a derivatives trading desk is in charge of tracking the US Treasury bond futures contracts. The trader needs to understand how market conditions influence the choice of the cheapest - to - deliver bonds and how the delivery process affects the futures price. Which of the following statements about the delivery of US Treasury bond futures contracts is correct?
+    A junior trader on a derivatives trading desk is in charge of tracking the US Treasury bond futures contracts. The trader needs to understand how market conditions influence the choice of the cheapest - to - deliver bonds and how the delivery process affects the futures price. Which of the following statements about the delivery of US Treasury bond futures contracts is correct?\\
+    一位初级交易员在衍生品交易桌负责跟踪美国国债期货合约。交易员需要理解市场条件如何影响最便宜可交割债券的选择，以及交割过程如何影响期货价格。以下哪个陈述关于美国国债期货合约的交割是正确的？
     \end{question}
     
     \begin{choices}
-        \item The “wild card play” benefits the short - position holders in expiring futures contracts by allowing them to choose the delivery time.
-        \item The embedded options associated with delivery against a US Treasury futures contract tend to decrease the value of the contract.
-        \item As bond yields decrease, long - maturity bonds with high coupons will tend to be the cheapest - to - deliver.
-        \item An upward - sloping yield curve makes it more likely that long - maturity bonds will be cheapest - to - deliver.
+        \item The “wild card play” benefits the short - position holders in expiring futures contracts by allowing them to choose the delivery time.\\
+        “百塔牌”策略使空头方在到期期货合约中受益，允许他们选择交割时间。
+        \item The embedded options associated with delivery against a US Treasury futures contract tend to decrease the value of the contract.\\
+        与美国国债期货合约交割相关的嵌入式期权倾向于降低合约的价值。
+        \item As bond yields decrease, long - maturity bonds with high coupons will tend to be the cheapest - to - deliver.\\
+        当债券收益率下降时，长期限、高息票的债券更有可能成为最便宜可交割债券。
+        \item An upward - sloping yield curve makes it more likely that long - maturity bonds will be cheapest - to - deliver.\\
+        向上倾斜的收益率曲线更有可能使长期限债券成为最便宜可交割债券。
     \end{choices}
     
     \begin{correctanswer}

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -92,13 +92,18 @@
 \setcounter{question}{0}
 \begin{question}
     A quantitative analyst at a cryptocurrency trading firm is developing a risk model for digital assets. During a team meeting, she needs to explain why traditional risk models based on normal distribution might not be suitable for crypto assets. Which of the following statements about the return distributions of cryptocurrency investments is most likely correct?
+    \\一位加密货币交易公司的量化分析师正在开发加密资产的风险模型。在团队会议上，她需要解释为什么传统的基于正态分布的风险模型不适合加密资产。以下哪个陈述关于加密货币投资的收益分布是最可能正确的？
     \end{question}
     
     \begin{choices}
-        \item Machine learning models can accurately capture cryptocurrency returns by focusing solely on the mean return, as other parameters are less significant in digital asset markets.
-        \item The return distributions of cryptocurrency investments typically show thinner tails than traditional assets, making extreme price movements less frequent than in conventional markets.
-        \item Cryptocurrency returns tend to exhibit more pronounced peaks and fatter tails than the normal distribution would suggest, particularly during periods of market stress.
-        \item When applying normal distribution models to estimate potential losses in cryptocurrency trading, the probability of extreme events is typically overestimated compared to actual market behavior.
+        \item Machine learning models can accurately capture cryptocurrency returns by focusing solely on the mean return, as other parameters are less significant in digital asset markets.\\
+        机器学习模型可以通过仅关注均值回报来准确捕捉加密货币回报，因为在数字资产市场中其他参数的重要性较低。
+        \item The return distributions of cryptocurrency investments typically show thinner tails than traditional assets, making extreme price movements less frequent than in conventional markets.\\
+        加密货币投资的收益分布通常表现出比传统资产更薄的尾部，使得极端价格波动发生的频率低于传统市场。
+        \item Cryptocurrency returns tend to exhibit more pronounced peaks and fatter tails than the normal distribution would suggest, particularly during periods of market stress.\\
+        加密货币回报倾向于表现出比正态分布更显著的峰值和更厚的尾部，特别是在市场压力期间。
+        \item When applying normal distribution models to estimate potential losses in cryptocurrency trading, the probability of extreme events is typically overestimated compared to actual market behavior.\\
+        当应用正态分布模型估计加密货币交易中的潜在损失时，极端事件的概率通常被高估，与实际市场行为相比。
     \end{choices}
     
     \begin{correctanswer}
@@ -133,13 +138,18 @@
 
     \begin{question}
         A financial analyst evaluates a trading portfolio and determines that the Value at Risk (VaR) at a 95\% confidence interval for a 1-day holding period is \$500,000. Which of the following statements is TRUE?
+        \\一位金融分析师评估了一个交易组合，并确定在95\%的置信水平下，持有期为1天的价值风险（VaR）为500,000美元。以下哪个陈述是正确的？
         \end{question}
         
         \begin{choices}
-            \item The probability of the daily loss on the portfolio exceeding \$500,000 is 5\%.
-            \item There is a 95\% confidence that the daily loss on the portfolio will not exceed \$500,000.
-            \item The maximum daily loss that the portfolio can incur is \$500,000.
-            \item 95\% of financial analysts agree that the maximum loss on the portfolio is \$500,000.
+            \item The probability of the daily loss on the portfolio exceeding \$500,000 is 5\%.\\
+            投资组合每日损失超过500,000美元的概率是5\%。
+            \item There is a 95\% confidence that the daily loss on the portfolio will not exceed \$500,000.\\
+            有95\%的信心认为投资组合每日损失不会超过500,000美元。
+            \item The maximum daily loss that the portfolio can incur is \$500,000.\\
+            投资组合可能遭受的最大每日损失是500,000美元。
+            \item 95\% of financial analysts agree that the maximum loss on the portfolio is \$500,000.\\
+            95\%的金融分析师同意投资组合可能遭受的最大损失是500,000美元。
         \end{choices}
         
         \begin{correctanswer}
@@ -173,13 +183,18 @@
 
         \begin{question}
             A risk management team is discussing the implications of Value at Risk (VaR) for their investment strategies. Which of the following statements about VaR is NOT correct?
+            \\一个风险管理团队正在讨论价值风险（VaR）对投资策略的影响。以下哪个陈述关于VaR是不正确的？
         \end{question}
         
         \begin{choices}
-            \item VaR can account for the diversified holdings of a financial institution, reducing capital requirements.
-            \item VaR(10\%) = \$0 indicates that a positive dollar return is likely to occur on 90 out of 100 days.
-            \item VaR(1\%) can be interpreted as the number of days in which the portfolio value will exceed a loss of 1\%.
-            \item A major limitation of the VaR measure is the use of two arbitrary parameters: confidence level and holding period.
+            \item VaR can account for the diversified holdings of a financial institution, reducing capital requirements.\\
+            VaR可以考虑金融机构投资组合的多样化，从而减少资本要求。
+            \item VaR(10\%) = \$0 indicates that a positive dollar return is likely to occur on 90 out of 100 days.\\
+            VaR(10\%) = \$0表示在90\%的置信水平下，100天中有10天可能会出现损失超过0美元的情况。
+            \item VaR(1\%) can be interpreted as the number of days in which the portfolio value will exceed a loss of 1\%.\\
+            VaR(1\%)可以解释为投资组合价值超过1\%损失的天数。
+            \item A major limitation of the VaR measure is the use of two arbitrary parameters: confidence level and holding period.\\
+            VaR度量一个主要限制是使用两个任意参数：置信水平和持有期。
         \end{choices}
         
         \begin{correctanswer}
@@ -217,13 +232,18 @@
 
         \begin{question}
             When using the delta-normal method to calculate Value-at-Risk (VaR) for a linear portfolio, how would the presence of fat tails in the return distribution affect the estimated VaR?
+            \\当使用delta-normal方法计算线性投资组合的价值风险（VaR）时，收益分布中存在肥尾现象会对估计的VaR产生什么影响？
         \end{question}
         
         \begin{choices}
-            \item The estimated VaR would likely underestimate the actual VaR.
-            \item The estimated VaR would be equal to the actual VaR.
-            \item The estimated VaR would likely overestimate the actual VaR.
-            \item  The estimated VaR cannot be accurately determined without additional information.
+            \item The estimated VaR would likely underestimate the actual VaR.\\
+            估计的VaR可能会低估实际VaR。
+            \item The estimated VaR would be equal to the actual VaR.\\
+            估计的VaR等于实际VaR。
+            \item The estimated VaR would likely overestimate the actual VaR.\\
+            估计的VaR可能会高估实际VaR。
+            \item  The estimated VaR cannot be accurately determined without additional information.\\
+            估计的VaR无法准确确定，因为没有额外信息。
         \end{choices}
         
         \begin{correctanswer}
@@ -257,13 +277,18 @@
 
               \begin{question}
             A portfolio manager at a hedge fund is conducting a training session on risk measurement principles. While explaining the concept of consistent risk measures, she notices that some junior analysts have misconceptions about these measures. Which of the following statements represents a misconception about consistent risk measures?
+            \\一位对冲基金的组合经理正在进行风险度量原则的培训。在解释一致风险度量的概念时，她注意到一些初级分析师对这些度量有误解。以下哪个陈述代表了对一致风险度量的误解？
         \end{question}
         
         \begin{choices}
-            \item Monotonicity implies that if portfolio A consistently outperforms portfolio B, then \(\text{Risk}(A) < \text{Risk}(B)\).
-            \item Subadditivity indicates that the risk of two combined portfolios will not exceed the sum of individual risks, i.e., \(\text{Risk}(A + B) \leq \text{Risk}(A) + \text{Risk}(B)\).
-            \item Homogeneity means that if the scale of portfolio A doubles, its risk measure should also double, i.e., \(\text{Risk}(2A) = 2\text{Risk}(A)\).
-            \item Translation invariance implies that adding cash to a portfolio reduces its risk measure, but the reduction is not necessarily equal to the cash added.
+            \item Monotonicity implies that if portfolio A consistently outperforms portfolio B, then \(\text{Risk}(A) < \text{Risk}(B)\).\\
+            单调性意味着如果投资组合A持续优于投资组合B，则\(\text{Risk}(A) < \text{Risk}(B)\)。
+            \item Subadditivity indicates that the risk of two combined portfolios will not exceed the sum of individual risks, i.e., \(\text{Risk}(A + B) \leq \text{Risk}(A) + \text{Risk}(B)\).\\
+            次可加性意味着两个组合的风险之和不会超过各个组合风险的和，即\(\text{Risk}(A + B) \leq \text{Risk}(A) + \text{Risk}(B)\)。
+            \item Homogeneity means that if the scale of portfolio A doubles, its risk measure should also double, i.e., \(\text{Risk}(2A) = 2\text{Risk}(A)\).\\
+            齐次性意味着如果投资组合A的规模翻倍，其风险度量也应翻倍，即\(\text{Risk}(2A) = 2\text{Risk}(A)\)。
+            \item Translation invariance implies that adding cash to a portfolio reduces its risk measure, but the reduction is not necessarily equal to the cash added.\\
+            平移不变性意味着向投资组合中添加现金会减少其风险度量，但减少量不一定等于添加的现金。
         \end{choices}
         
         \begin{correctanswer}
@@ -297,13 +322,18 @@
 
 \begin{question}
     An investor has purchased a stock that is part of the S\&P 500 index. Considering the statistical characteristics of stock returns, which of the following traits is most likely to be exhibited by the returns of this stock compared to a normal distribution?
+    \\一位投资者购买了S\&P 500指数的一部分股票。考虑到股票回报率的统计特征，以下哪个特征最有可能被该股票的回报率与正态分布相比？
 \end{question}
 
 \begin{choices}
-    \item The return distribution has low kurtosis, indicating a shape that is flatter than a normal distribution.
-    \item The return distribution is symmetric around zero, meaning the left and right sides of the distribution are balanced.
-    \item The return distribution lacks excess kurtosis, meaning the tails are similar to those of a normal distribution, with few extreme values.
-    \item The return distribution is more extreme, with more extreme values likely to occur in both positive and negative directions.
+    \item The return distribution has low kurtosis, indicating a shape that is flatter than a normal distribution.\\
+    收益分布具有低峰度，表明其形状比正态分布更平坦。
+    \item The return distribution is symmetric around zero, meaning the left and right sides of the distribution are balanced.\\
+    收益分布关于零对称，意味着分布的左侧和右侧是平衡的。
+    \item The return distribution lacks excess kurtosis, meaning the tails are similar to those of a normal distribution, with few extreme values.\\
+    收益分布缺乏超额峰度，意味着尾部与正态分布相似，只有少数极端值。
+    \item The return distribution is more extreme, with more extreme values likely to occur in both positive and negative directions.\\
+    收益分布更极端，更极端值可能在正向和负向都可能发生。
 \end{choices}
 
 \begin{correctanswer}
@@ -338,13 +368,18 @@
 
 \begin{question}
     A risk manager at a global investment bank is evaluating different risk metrics for their trading portfolio. The team is debating whether to use Value at Risk (VaR) or Expected Shortfall (ES) as their primary risk measure for regulatory reporting and internal risk control.Which of the following statements about these two risk measures is correct?
+    \\一位全球投资银行的风险经理正在评估不同的风险指标用于其交易组合。团队正在讨论是否使用价值风险（VaR）或预期短缺（ES）作为主要风险度量用于监管报告和内部风险控制。以下哪个陈述关于这两种风险度量是正确的？
     \end{question}
     
     \begin{choices}
-    \item Expected Shortfall satisfies the portfolio diversification principle (sub-additivity), while VaR may show inconsistent results when aggregating portfolio risks.
-    \item VaR and Expected Shortfall provide identical risk information since they both measure potential losses over a specified time horizon at a given confidence level.
-    \item Both VaR and Expected Shortfall require the portfolio returns to follow a normal distribution to be valid risk measures.
+    \item Expected Shortfall satisfies the portfolio diversification principle (sub-additivity), while VaR may show inconsistent results when aggregating portfolio risks.\\
+    预期短缺满足投资组合多样化原则（次可加性），而VaR在汇总投资组合风险时可能显示不一致的结果。
+    \item VaR and Expected Shortfall provide identical risk information since they both measure potential losses over a specified time horizon at a given confidence level.\\
+    VaR和预期短缺提供相同的风险信息，因为它们都在指定时间范围内以给定置信水平衡量潜在损失。
+    \item Both VaR and Expected Shortfall require the portfolio returns to follow a normal distribution to be valid risk measures.\\
+    两种风险度量方法都要求投资组合收益服从正态分布才能有效。
     \item Expected Shortfall remains constant regardless of the confidence level chosen, while VaR varies with different confidence levels.
+    \\预期短缺在选择置信水平时保持不变，而VaR随不同置信水平变化。
     \end{choices}
     
     \begin{correctanswer}
@@ -378,13 +413,18 @@
 
     \begin{question}
         A risk management team at a global investment firm is evaluating different risk measures to enhance their portfolio management strategies. During a meeting, the team discusses the advantages of expected shortfall (ES) over value at risk (VaR) in capturing tail risk. Which of the following is not a reason that expected shortfall (ES) is a more appropriate risk measure than value at risk (VaR)?
+        \\一位全球投资公司的风险管理团队正在评估不同的风险指标以增强其投资组合管理策略。在会议上，团队讨论了预期短缺（ES）相对于价值风险（VaR）在捕捉尾部风险方面的优势。以下哪个不是预期短缺（ES）比价值风险（VaR）更合适的原因？
     \end{question}
     
     \begin{choices}
-        \item For normal distributions, only ES satisfies all the properties of coherent risk measurements.
-        \item For nonelliptical distributions, the portfolio risk surface formed by holding period and confidence level is more convex for ES.
-        \item ES gives an estimate of the magnitude of a loss.
-        \item ES has less restrictive assumptions regarding risk/return decision rules than VaR.
+        \item For normal distributions, only ES satisfies all the properties of coherent risk measurements.\\
+        对于正态分布，只有ES满足一致性风险度量的所有性质。
+        \item For nonelliptical distributions, the portfolio risk surface formed by holding period and confidence level is more convex for ES.\\
+        对于非椭圆分布，ES形成的投资组合风险曲面在持有期和置信水平上更凸。
+        \item ES gives an estimate of the magnitude of a loss.\\
+        ES提供了损失幅度的估计。
+        \item ES has less restrictive assumptions regarding risk/return decision rules than VaR.\\
+        ES对风险/收益决策规则的假设较少限制性，这使得它在不同市场条件下更具适用性。
     \end{choices}
     
     \begin{correctanswer}
@@ -419,13 +459,18 @@
 
 \begin{question}
     A financial institution has determined that the Value-at-Risk (VaR) for a portfolio over a 1-day horizon is USD 200 million. Based on this information, which of the following statements is TRUE regarding the VaR over a 5-day horizon?
+    \\一家金融机构确定了一个投资组合在1天持有期下的价值风险（VaR）为20000万美元。基于此信息，以下哪个陈述关于5天持有期下的VaR是正确的？
 \end{question}
 
 \begin{choices}
-    \item The VaR over a 5-day horizon is USD 447 million if returns are independently and identically distributed.
-    \item The VaR over a 5-day horizon is USD 447 million if returns are not independently and identically distributed.
-    \item The VaR over a 5-day horizon remains USD 200 million since VaR is independent of the time horizon.
-    \item The VaR over a 5-day horizon is USD 40 million, regardless of the distribution of returns.
+    \item The VaR over a 5-day horizon is USD 447 million if returns are independently and identically distributed.\\
+    如果收益是独立同分布的，5天持有期下的VaR为44700万美元。
+    \item The VaR over a 5-day horizon is USD 447 million if returns are not independently and identically distributed.\\
+    如果收益不是独立同分布的，5天持有期下的VaR为44700万美元。
+    \item The VaR over a 5-day horizon remains USD 200 million since VaR is independent of the time horizon.\\
+    5天持有期下的VaR保持为20000万美元，因为VaR与时间范围无关。
+    \item The VaR over a 5-day horizon is USD 40 million, regardless of the distribution of returns.\\
+    5天持有期下的VaR为4000万美元，无论收益的分布如何。
 \end{choices}
 
 \begin{correctanswer}
@@ -462,13 +507,18 @@
 
 \begin{question}
     A risk analyst at a commodity trading firm is evaluating an options portfolio that has a two-day Value-at-Risk (VaR) of \$3 million. The analyst needs to determine the appropriate translation of this VaR to a ten-day horizon under normal market conditions. What would be the estimated VaR for the ten-day horizon?
+    \\一位商品交易公司的风险分析师正在评估一个期权组合，该组合在2天持有期下的价值风险（VaR）为300万美元。分析师需要确定在正常市场条件下，将此VaR转换为10天持有期下的适当值。10天持有期下的估计VaR是多少？
 \end{question}
 
 \begin{choices}
-    \item \$4.743 million 
-    \item \$5.678 million 
-    \item \$6.708 million 
-    \item \$7.890 million 
+    \item \$4.743 million \\
+    4743000美元
+    \item \$5.678 million \\
+    5678000美元
+    \item \$6.708 million \\
+    6708000美元
+    \item \$7.890 million \\
+    7890000美元
 \end{choices}
 
 \begin{correctanswer}
@@ -527,16 +577,21 @@
 
 \begin{question}
     A risk analyst at a major investment bank is preparing a training session for new employees about Value at Risk (VaR). During the preparation, she reviews several statements about VaR's characteristics and interpretations. Which of the following statements about VaR is CORRECT?
+    \\一位大型投资银行的风险分析师正在准备一份关于价值风险（VaR）的培训课程。在准备过程中，她审查了几种关于VaR特征和解释的陈述。以下哪个陈述关于VaR是正确的？
 \end{question}
 
 \begin{choices}
-    \item VaR calculations primarily focus on individual asset risks, with portfolio diversification effects having minimal impact on capital requirements for financial institutions.
+    \item VaR calculations primarily focus on individual asset risks, with portfolio diversification effects having minimal impact on capital requirements for financial institutions.\\
+    VaR计算主要关注单个资产风险，投资组合多样化效应对金融机构资本要求的影响最小。
     
-    \item When a portfolio's VaR(10\%) equals \$0, this indicates the portfolio will maintain positive returns for 90 consecutive trading days.
+    \item When a portfolio's VaR(10\%) equals \$0, this indicates the portfolio will maintain positive returns for 90 consecutive trading days.\\
+    当一个投资组合的VaR(10\%)等于0时，这意味着投资组合将在90个连续交易日内保持正收益。
     
-    \item VaR was originally developed by commercial banks as a tool to better estimate their economic capital requirements while accounting for portfolio diversification effects.
+    \item VaR was originally developed by commercial banks as a tool to better estimate their economic capital requirements while accounting for portfolio diversification effects.\\
+    VaR最初由商业银行开发，作为一种工具，更好地估计其经济资本需求，同时考虑投资组合多样化效应。
     
-    \item VaR measures provide precise predictions of future portfolio losses through advanced statistical modeling techniques.
+    \item VaR measures provide precise predictions of future portfolio losses through advanced statistical modeling techniques.\\
+    VaR度量提供通过高级统计建模技术对未来投资组合损失的精确预测。
 \end{choices}
 
 \begin{correctanswer}
@@ -570,16 +625,21 @@
 
 \begin{question}
     A portfolio manager at a global investment bank is conducting a training session for junior risk analysts. During the session, she notices that some analysts have misconceptions about Value at Risk (VaR). Which of the following statements represents a common misconception about VaR?
+    \\一位全球投资银行的投资组合经理正在对初级风险分析师进行培训。在培训过程中，她注意到一些分析师对价值风险（VaR）有误解。以下哪个陈述代表了对VaR的常见误解？
 \end{question}
 
 \begin{choices}
-    \item A 95\% VaR of \$10 million means there is a 5\% chance that the portfolio losses will exceed \$10 million over the specified time horizon.
+    \item A 95\% VaR of \$10 million means there is a 5\% chance that the portfolio losses will exceed \$10 million over the specified time horizon.\\
+    95\%的VaR为1000万美元意味着在指定时间范围内，投资组合损失超过1000万美元的概率为5\%。
     
-    \item VaR can be used to compare risk levels across different trading desks, as it provides a standardized risk measure in monetary terms.
+    \item VaR can be used to compare risk levels across different trading desks, as it provides a standardized risk measure in monetary terms.\\
+    VaR可以用于比较不同交易部门的风险水平，因为它提供了标准化的风险度量，以货币单位表示。
     
-    \item When calculating portfolio VaR, correlation effects between different assets are considered, which typically results in a portfolio VaR less than the sum of individual VaRs.
+    \item When calculating portfolio VaR, correlation effects between different assets are considered, which typically results in a portfolio VaR less than the sum of individual VaRs.\\
+    当计算投资组合VaR时，考虑不同资产之间的相关性，通常会导致投资组合VaR小于单个VaR的总和。
     
-    \item If a trading desk reports a daily 99\% VaR of \$1 million, it means the desk will lose exactly \$1 million on its worst trading days.
+    \item If a trading desk reports a daily 99\% VaR of \$1 million, it means the desk will lose exactly \$1 million on its worst trading days.\\
+    如果一个交易部门报告每日99\%的VaR为100万美元，这意味着该部门在其最糟糕的交易日内将损失正好100万美元。
 \end{choices}
 
 \begin{correctanswer}
@@ -619,6 +679,7 @@
 
 \begin{question}
     A risk analyst at a fixed-income investment firm is currently evaluating the potential risks associated with a bond position of \$15 million. The analyst notes that the modified duration of the bond is 4.2 years, and the annualized yield volatility is 1.5\%. Using the duration method and assuming that the daily return on the bond position is independently identically normally distributed, the analyst needs to calculate the 10-day holding period VaR of the position with a 99\% confidence interval, assuming there are 252 business days in a year.
+    \\一位固定收益投资公司的风险分析师正在评估与1500万美元债券头寸相关的潜在风险。分析师注意到债券的修正久期为4.2年，年化收益率波动率为1.5\%。使用久期方法，假设债券头寸的每日收益是独立同分布的正态分布，分析师需要计算持有期为10天的VaR，假设一年有252个交易日，置信区间为99\%。
 \end{question}
 
 \begin{choices}
@@ -667,6 +728,7 @@
     1,153,000. Assume that there are 250 trading days in a year and that the correlation 
     between stocks and bonds is zero. What is the 95\% daily VaR for the fixed income portion 
     of the portfolio? 
+    \\Mixed Fund投资组合价值为12428000美元，其中42\%为固定收益投资，58\%为股权投资。整个投资组合的95\%年VaR为1367000美元，股权部分的95\%年VaR为1153000美元。假设一年有250个交易日，股票和债券的相关系数为0。固定收益部分的95\%日VaR是多少？
 \end{question}
 
 \begin{choices}
@@ -771,6 +833,7 @@
 
 \begin{question}
     Greenfield Investments is estimating a daily VaR for its equity portfolio currently valued at USD 1.2 billion. Using returns for the last 500 days (ordered in decreasing order, from highest daily return to lowest daily return), the daily returns are the following: 2.10\%, 1.95\%, 1.85\%, 1.80\%, \ldots, -1.75\%, -1.90\%, -1.95\%, -2.05\%, -2.15\%. At the 99\% confidence level, what is your estimate of the daily VaR using the historical simulation method? 
+    \\Greenfield Investments正在估算其股权投资组合的每日VaR，目前价值为12亿美元。使用过去500天的收益数据（按从最高日收益到最低日收益的顺序排列），每日收益如下：2.10\%，1.95\%，1.85\%，1.80\%，\ldots，-1.75\%，-1.90\%，-1.95\%，-2.05\%，-2.15\%。在99\%的置信水平下，使用历史模拟法估算的每日VaR是多少？
     \end{question}
     
     \begin{choices}
@@ -824,6 +887,7 @@
 
     \begin{question}
         A risk analyst uses historical data from 1,500 days of profit/loss information to calculate a daily VaR at the 95th percentile, which amounts to USD 5 million. Loss observations beyond the 95th percentile are then used to estimate the conditional VaR. If the losses beyond the VaR level, in millions, are USD 6, USD 7, USD 10, USD 13, USD 15, USD 18, USD 21, USD 25, and USD 35, what is the conditional VaR? 
+        \\一位风险分析师使用1500天的利润/损失信息历史数据，计算每日VaR的95百分位数，金额为5000万美元。超过95百分位数的损失观测值用于估计条件VaR。如果超过VaR水平的损失金额（以百万美元为单位）为6, 7, 10, 13, 15, 18, 21, 25, 和 35，条件VaR是多少？
     \end{question}
     
     \begin{choices}
@@ -881,6 +945,7 @@
 
     \begin{question}
         A risk manager at an investment firm is analyzing the potential losses of a portfolio over different time horizons. The manager has asked a quantitative analyst to calculate the Value at Risk (VaR) for 5-, 10-, 15-, and 20-day periods, assuming that daily returns are independently and identically normally distributed. The manager notices an inconsistency in the analyst’s calculations. Which one of the following VaRs for this portfolio is inconsistent with the others?
+        \\一位投资公司的风险经理正在分析投资组合在不同时间范围内的潜在损失。经理要求量化分析师计算5天、10天、15天和20天持有期下的价值风险（VaR），假设每日收益是独立同分布的正态分布。经理注意到分析师的计算存在不一致。以下哪个投资组合的VaR与其他不一致？
     \end{question}
     
     \begin{choices}
@@ -937,13 +1002,19 @@
 
     \begin{question}
         A risk manager calculates that the VaR of a trading portfolio at 95\% confidence level is 12.8 million dollars. Assuming returns follow a one-tailed normal distribution, what would be the closest value of VaR if the confidence level is increased to 99\%?
+        \\一位风险经理计算出交易组合在95\%置信水平下的VaR为1280万美元。假设收益服从单尾正态分布，如果置信水平提高到99\%，VaR的最近值是多少？
     \end{question}
     
     \begin{choices}
-        \item 8.5 million dollars
-        \item 14.2 million dollars
-        \item 18.1 million dollars
+        \item 8.5 million dollars\\
+        850万美元
+        \item 14.2 million dollars \\
+        1420万美元
+        \item 18.1 million dollars \\
+        1810万美元
         \item 18.9 million dollars
+        \item 18.9 million dollars \\
+        1890万美元
     \end{choices}
     
     \begin{correctanswer}
@@ -1012,6 +1083,33 @@
         \hline
         \end{tabular}
         \end{center}
+        Sarah,量子投资基金的风险分析师，正在比较两种加密货币投资策略的风险特征。她收集了关于这些策略损失分布的信息。哪种风险度量最合适来区分它们的风险严重程度？
+        \begin{center}
+            \begin{tabular}{|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{策略A的损失分布} \\
+            \hline
+            概率 & 损失金额 \\
+            \hline
+            $98.5\%$ & $\$15,000$ \\
+            $1.5\%$ & $\$45,000$ \\
+            \hline
+            \end{tabular}
+            \end{center}
+            
+            \begin{center}
+            \begin{tabular}{|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{策略B的损失分布} \\
+            \hline
+            概率 & 损失金额 \\
+            \hline
+            $99\%$ & $\$15,000$ \\
+            $0.5\%$ & $\$250,000$ \\
+            $0.5\%$ & $\$350,000$ \\
+            \hline
+            \end{tabular}
+            \end{center}
         \end{question}
         
         \begin{choices}
@@ -1072,6 +1170,7 @@
 
         \begin{question}
             Sarah, a quantitative analyst at XYZ Asset Management, is analyzing a structured product with returns following a uniform distribution between -25\% and 40\%. To assess the risk profile, she needs to calculate both VaR and ES at the 95\% confidence level. What are the 95\% VaR and 95\% ES for this product?
+            \\Sarah,XYZ资产管理公司的量化分析师，正在分析一个收益率在-25\%和40\%之间均匀分布的结构性产品。为了评估风险特征，她需要在95\%的置信水平下计算VaR和ES。这个产品的95\%VaR和95\%ES是多少？
             \end{question}
             
             \begin{choices}
@@ -1144,13 +1243,18 @@
             \checklist{均匀分布下VaR和ES的计算方法。（图形化理解风险度量）}
     \begin{question}
     In the context of financial risk management, Value at Risk (VaR) is a widely used risk measurement method. A risk management team at a leading financial institution is reviewing the properties and limitations of VaR to ensure its effective application in their investment strategies. During a team meeting, they discuss several statements about VaR. Which of the following statements about VaR is CORRECT?
+    \\在金融风险管理背景下，价值风险（VaR）是一种广泛使用的风险度量方法。一家领先金融机构的风险管理团队正在审查VaR的特性和局限性，以确保其在投资策略中的有效应用。在团队会议上，他们讨论了几个关于VaR的陈述。以下哪个陈述关于VaR是正确的？
 \end{question}
 
 \begin{choices}
-    \item VaR exhibits strong portfolio diversification effects, consistently reflecting the risk reduction benefits when combining multiple investments.
-    \item VaR provides reliable risk estimates across all market conditions due to its robust statistical foundation in normal distribution theory.
-    \item The standardized confidence levels and holding periods in VaR calculations must be clearly specified and consistently applied to ensure meaningful risk comparisons across portfolios.
-    \item VaR provides an estimate of the actual amount or size of loss an investor might face, reflecting the corresponding risk exposure.
+    \item VaR exhibits strong portfolio diversification effects, consistently reflecting the risk reduction benefits when combining multiple investments.\\
+    VaR表现出强烈的投资组合多元化效应，持续反映在组合多个投资时的风险降低收益。
+    \item VaR provides reliable risk estimates across all market conditions due to its robust statistical foundation in normal distribution theory.\\
+    VaR提供了可靠的风险估计，因为它在正态分布理论中具有强大的统计基础。
+    \item The standardized confidence levels and holding periods in VaR calculations must be clearly specified and consistently applied to ensure meaningful risk comparisons across portfolios.\\
+    VaR计算中的标准化置信水平和持有期必须明确指定并一致应用，以确保投资组合之间的有意义的风险比较。
+    \item VaR provides an estimate of the actual amount or size of loss an investor might face, reflecting the corresponding risk exposure.\\
+    VaR提供投资者可能面临的实际损失金额或大小的估计，反映相应的风险敞口。
 \end{choices}
 
 \begin{correctanswer}
@@ -1186,13 +1290,18 @@
 
 \begin{question}
     In the context of financial risk management, understanding the relationship between asset value changes and underlying variables is crucial. A risk management team at a leading financial institution is reviewing the characteristics of linear and nonlinear investment products. During a team meeting, they discuss several statements about these products. Which of the following statements is INCORRECT?
+    \\在金融风险管理背景下，理解资产价值变化与基础变量之间的关系至关重要。一家领先金融机构的风险管理团队正在审查线性和非线性投资产品的特性。在团队会议上，他们讨论了几个关于这些产品的陈述。以下哪个陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The value change of a linear investment portfolio has a linear relationship with the change in its underlying variables. Futures and forwards are typical examples of linear products.
-    \item The value change of a nonlinear investment portfolio does not have a linear relationship with the change in its underlying variables. Options are common examples of nonlinear products.
-    \item The first derivative of a linear investment portfolio is constant, while the first derivative of a nonlinear investment portfolio is variable.
-    \item A linear investment portfolio exhibits the same risk sensitivity as a nonlinear investment portfolio during market fluctuations.
+    \item The value change of a linear investment portfolio has a linear relationship with the change in its underlying variables. Futures and forwards are typical examples of linear products.\\
+    线性投资组合的价值变化与其基础变量的价值变化呈线性关系，期货和远期是线性衍生品的典型例子。
+    \item The value change of a nonlinear investment portfolio does not have a linear relationship with the change in its underlying variables. Options are common examples of nonlinear products.\\
+    非线性投资组合的价值变化与其基础变量的价值变化没有线性关系，期权是常见的非线性衍生品。
+    \item The first derivative of a linear investment portfolio is constant, while the first derivative of a nonlinear investment portfolio is variable.\\
+    线性投资组合的一阶导数为常数，非线性投资组合的一阶导数为非常数。
+    \item A linear investment portfolio exhibits the same risk sensitivity as a nonlinear investment portfolio during market fluctuations.\\
+    线性投资组合在市场波动时不会表现出与非线性投资组合相同的风险敏感度。
 \end{choices}
 
 \begin{correctanswer}
@@ -1248,16 +1357,43 @@
     \end{center}
 
     Over the next 10 days, four new extreme declines occurred: -25\%, -9.5\%, -7.8\%, and -4.1\%. The other six days showed positive returns. Calculate the updated 1-day 95\% VaR using the historical approach with equal weights.
+    \\ 
+    一位风险管理经理正在使用历史VaR（100天回顾期）监控一个价值1亿美元的国内股票投资组合。初步分析显示了以下极端负收益：
+
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    排序 & 收益率 & 天数前 \\
+    \hline
+    1 & -10.0\% & 95 \\
+    \hline
+    2 & -6.3\% & 17 \\
+    \hline
+    3 & -4.7\% & 65 \\
+    \hline
+    4 & -4.0\% & 4 \\
+    \hline
+    5 & -3.8\% & 5 \\
+    \hline
+    6 & -3.6\% & 30 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    在接下来的10天中，发生了四次新的极端下跌：-25\%，-9.5\%，-7.8\%和-4.1\%。其他六天显示正收益。使用等权重历史方法计算更新后的1天95\% VaR。
 \end{question}
 
 \begin{choices}
-    \item USD 3.28 million
+    \item USD 3.28 million\\
+    3280000美元
     
-    \item USD 4.70 million
+    \item USD 4.70 million\\
+    4700000美元
     
-    \item USD 10.00 million
+    \item USD 10.00 million\\
+    10000000美元
     
-    \item USD 25.00 million
+    \item USD 25.00 million\\
+    25000000美元
 \end{choices}
 
 \begin{correctanswer}
@@ -1308,13 +1444,18 @@
 
 \begin{question}
     A risk analyst at Bergman International Bank is tasked with explaining how to calculate Value at Risk (VaR) for linear derivatives to new junior analysts. Which of the following statements accurately describes the process for calculating VaR for a linear derivative based on the S\&P 500 Index?
+    \\Bergman国际银行的一名风险分析师被要求解释如何计算基于S\&P 500指数的线性衍生品的VaR。以下哪个陈述准确描述了基于S\&P 500指数的线性衍生品的VaR计算过程？
 \end{question}
 
 \begin{choices}
-    \item For a futures contract, the VaR of the S\&P 500 Index should be multiplied by a sensitivity factor that indicates the percentage change in the futures contract's value for a 1\% change in the index.
-    \item For an options contract, the VaR of the S\&P 500 Index should be multiplied by a sensitivity factor that indicates the percentage change in the futures contract's value for a 1\% change in the index.
-    \item For a futures contract, the VaR of the S\&P 500 Index should be divided by a sensitivity factor that reflects the absolute change in the futures contract's value for an absolute change in the index.
-    \item For an options contract, the VaR of the S\&P 500 Index should be divided by a sensitivity factor that indicates the percentage change in the futures contract's value for a 1\% change in the index.
+    \item For a futures contract, the VaR of the S\&P 500 Index should be multiplied by a sensitivity factor that indicates the percentage change in the futures contract's value for a 1\% change in the index.\\
+    对于期货合约，S\&P 500指数的VaR应乘以一个敏感性因子，该因子表示在指数变化1\%时期货合约价值的变化百分比。
+    \item For an options contract, the VaR of the S\&P 500 Index should be multiplied by a sensitivity factor that indicates the percentage change in the futures contract's value for a 1\% change in the index.\\
+    对于期权合约，S\&P 500指数的VaR应乘以一个敏感性因子，该因子表示在指数变化1\%时期货合约价值的变化百分比。
+    \item For a futures contract, the VaR of the S\&P 500 Index should be divided by a sensitivity factor that reflects the absolute change in the futures contract's value for an absolute change in the index.\\
+    对于期货合约，S\&P 500指数的VaR应除以一个敏感性因子，该因子表示在指数变化1\%时期货合约价值的变化百分比。
+    \item For an options contract, the VaR of the S\&P 500 Index should be divided by a sensitivity factor that indicates the percentage change in the futures contract's value for a 1\% change in the index.\\
+    对于期权合约，S\&P 500指数的VaR应除以一个敏感性因子，该因子表示在指数变化1\%时期货合约价值的变化百分比。
 \end{choices}
 
 \begin{correctanswer}
@@ -1355,13 +1496,18 @@
 \begin{question}
     A risk manager would like to measure VaR for a bond. He notices that the bond has a 
     puttable feature. What effect on the VaR will this puttable feature have? 
+    \\一位风险经理想要测量一个债券的VaR。他注意到债券具有可赎回（puttable）特性。这个可赎回特性对VaR有什么影响？
     \end{question}
     
     \begin{choices}
-        \item The VaR will increase. 
-        \item The VaR will decrease. 
-        \item The VaR will remain the same. 
-        \item The effect on the VaR will depend on the volatility of the bond.
+        \item The VaR will increase.\\
+        VaR会增加。
+        \item The VaR will decrease.\\
+        VaR会减少。
+        \item The VaR will remain the same.\\
+        VaR会保持不变。
+        \item The effect on the VaR will depend on the volatility of the bond.\\
+        VaR的影响取决于债券的波动性。
     \end{choices}
     
     \begin{correctanswer}
@@ -1415,13 +1561,21 @@
         \end{itemize}
         
         Bank X uses a linear approximation method, while Bank Y employs a Monte Carlo simulation for a more detailed analysis. Which bank is likely to report a higher 1-day 99\% VaR?
+        \\两家投资银行，Bank X和Bank Y，正在计算一个非分红股票的看涨期权的1天99\% VaR。相关信息如下：
+        \begin{itemize}
+            \item 当前股票价格：USD 100
+            \item 估计年波动率：20\%
+            \item 当前期权价格：USD 4.50
+            \item 期权德尔塔：0.5
+        \end{itemize}
+        Bank X使用线性近似法，而Bank Y使用蒙特卡洛模拟进行更详细的分析。哪一家银行可能报告更高的1天99\% VaR？
     \end{question}
     
     \begin{choices}
-        \item Bank X will report a higher VaR.  
-        \item Bank Y will report a higher VaR.  
-        \item Both banks will report the same VaR.  
-        \item Insufficient information to determine.  
+        \item Bank X will report a higher VaR.\\ Bank X会报告更高的VaR。  
+        \item Bank Y will report a higher VaR.\\ Bank Y会报告更高的VaR。  
+        \item Both banks will report the same VaR.\\ 两家银行都会报告相同的VaR。  
+        \item Insufficient information to determine.\\ 信息不足，无法确定。  
     \end{choices}
     
     \begin{correctanswer}
@@ -1467,15 +1621,33 @@
             \hline
         \end{tabular}
     \end{table}
+一位风险分析师正在使用历史模拟法估算一个投资组合的预期短缺（ES）。投资组合的价值在市场收盘时取决于股票价格和利率。分析师使用最近501个交易日的数据，Day 0为第一个数据点，Day 500为最后一个数据点。分析师应该使用哪一天的股票价格和利率来计算Day 501的预期短缺？
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+        \hline
+        天数 & 股价（港元） & 利率（\%） \\
+        \hline
+        0   & 80.00              & 3.00              \\
+        1   & 78.00              & 3.10              \\
+        ... & ...                & ...               \\
+        500 & 100.00             & 4.00              \\
+        \hline
+    \end{tabular}
+\end{table}
 
    
 \end{question}
 
 \begin{choices}
-    \item A. Stock price: HKD 95.00, Interest rate: 4.05\%
-    \item B. Stock price: HKD 95.00, Interest rate: 4.10\%
-    \item C. Stock price: HKD 98.00, Interest rate: 4.05\%
-    \item D. Stock price: HKD 98.00, Interest rate: 4.10\%
+    \item A. Stock price: HKD 95.00, Interest rate: 4.05\%\\
+    股票价格：95.00港元，利率：4.05\%
+    \item B. Stock price: HKD 95.00, Interest rate: 4.10\%\\
+    股票价格：95.00港元，利率：4.10\%
+    \item C. Stock price: HKD 98.00, Interest rate: 4.05\%\\
+    股票价格：98.00港元，利率：4.05\%
+    \item D. Stock price: HKD 98.00, Interest rate: 4.10\%\\
+    股票价格：98.00港元，利率：4.10\%
 \end{choices}
 
 \begin{correctanswer}
@@ -1521,16 +1693,21 @@
 
 \begin{question}
     A risk management team is discussing different approaches to value at risk (VaR) estimation. Which of the following statements about VaR estimation methods is CORRECT?
+    \\一个风险管理团队正在讨论不同的价值风险（VaR）估计方法。以下哪个陈述关于VaR估计方法是正确的？
 \end{question}
 
 \begin{choices}
-    \item Parametric VaR approaches are primarily forward-looking and rely minimally on historical return data for parameter estimation.
+    \item Parametric VaR approaches are primarily forward-looking and rely minimally on historical return data for parameter estimation.\\
+    参数法VaR主要是前瞻性的，最小依赖于历史收益率数据来估计参数。
     
-    \item GARCH(1,1) models can generate accurate VaR estimates without requiring any historical volatility or return information.
+    \item GARCH(1,1) models can generate accurate VaR estimates without requiring any historical volatility or return information.\\
+    GARCH(1,1)模型可以生成准确的VaR估计，不需要任何历史波动率或收益率信息。
     
-    \item Hybrid approaches combining parametric and nonparametric methods are completely independent of historical market data.
+    \item Hybrid approaches combining parametric and nonparametric methods are completely independent of historical market data.\\
+    混合方法结合了参数法和非参数法的特点，完全独立于历史市场数据。
     
-    \item Implied volatility-based VaR estimation is the least dependent on historical returns as it primarily uses current option market prices.
+    \item Implied volatility-based VaR estimation is the least dependent on historical returns as it primarily uses current option market prices.\\
+    隐含波动率法VaR估计对历史收益率的依赖最小，因为它主要使用当前期权市场价格。
 \end{choices}
 
 \begin{correctanswer}
@@ -1564,16 +1741,21 @@
 
 \begin{question}
     A bank's operational risk department has developed a model for a specific business process. For the next year, the model predicts a 95\% probability of no loss occurrence and a 5\% probability of experiencing a loss event. If a loss occurs, there are three possible outcomes: a \$12 million loss with 20\% probability, a \$20 million loss with 50\% probability, and a \$28 million loss with 30\% probability. What is the 90\% Expected Shortfall (ES) for this operational risk model?
+    \\一家银行的操作风险部门开发了一个特定业务流程的模型。明年，模型预测95\%的概率没有损失发生，5\%的概率发生损失事件。如果发生损失，有三种可能的结果：1200万美元损失的概率为20\%，2000万美元损失的概率为50\%，2800万美元损失的概率为30\%。这个操作风险模型的90\%预期短缺（ES）是多少？
 \end{question}
 
 \begin{choices}
-    \item \$10.4 million
+    \item \$10.4 million\\
+    1040万美元
     
-    \item \$12.0 million
+    \item \$12.0 million\\
+    1200万美元
     
-    \item \$15.6 million
+    \item \$15.6 million\\
+    1560万美元
     
-    \item \$20.0 million
+    \item \$20.0 million\\
+    2000万美元
 \end{choices}
 
 \begin{correctanswer}
@@ -1614,16 +1796,21 @@
 
 \begin{question}
     A portfolio manager is reviewing the effectiveness of diversification strategies during the 2008 financial crisis. The analysis focuses on how correlations between different asset classes changed during this period and its implications for risk management. Which of the following statements MOST accurately describes the behavior of correlations and risk metrics during financial crises?
+    \\一位投资组合经理正在审查2008年金融危机期间多元化策略的有效性。分析重点是不同资产类别之间的相关性在危机期间如何变化及其对风险管理的影响。以下哪个陈述最准确地描述了金融危机期间相关性和风险度量行为？
 \end{question}
 
 \begin{choices}
-    \item Historical correlations between asset classes remain stable during crisis periods, making traditional diversification strategies consistently effective.
+    \item Historical correlations between asset classes remain stable during crisis periods, making traditional diversification strategies consistently effective.\\
+    资产类别之间的历史相关性在危机期间保持稳定，使传统多元化策略始终有效。
     
-    \item Asset correlations tend to increase significantly during market stress, reducing diversification benefits and leading to higher portfolio risk levels.
+    \item Asset correlations tend to increase significantly during market stress, reducing diversification benefits and leading to higher portfolio risk levels.\\
+    资产相关性在市场压力期间倾向于显著增加，降低多元化收益并导致更高的投资组合风险水平。
     
-    \item Market volatilities increase during crises but correlations typically decrease, creating new diversification opportunities.
+    \item Market volatilities increase during crises but correlations typically decrease, creating new diversification opportunities.\\
+    市场波动率在危机期间增加，但相关性通常下降，创造了新的多元化机会。
     
-    \item Standard VaR models automatically adjust for changing correlations during crisis periods, making additional risk adjustments unnecessary.
+    \item Standard VaR models automatically adjust for changing correlations during crisis periods, making additional risk adjustments unnecessary.\\
+    标准VaR模型在危机期间自动调整相关性变化，使额外风险调整不必要。
 \end{choices}
 
 \begin{correctanswer}
@@ -1663,16 +1850,25 @@
     Required:
     (1) Calculate the Value at Risk (VaR) at 90\% confidence level
     (2) Calculate the Expected Shortfall (ES) at 90\% confidence level
+    \\一位风险分析师正在使用历史模拟法评估一个交易组合的风险度量。以下25个排序后的百分比收益已被生成：
+    -18, -15, -12, -10, -8, -6, -5, -5, -3, -2, -1, 0, 0, 1, 2, 3, 5, 7, 8, 10, 12, 15, 17, 20, 22
+    要求：
+    (1) 计算90\%置信水平下的价值风险（VaR）
+    (2) 计算90\%置信水平下的预期短缺（ES）
 \end{question}
 
 \begin{choices}
-    \item VaR(90\%) = 8\%, ES = 11\%
+    \item VaR(90\%) = 8\%, ES = 11\%\\
+    90\%置信水平下的价值风险为8\%，预期短缺为11\%
     
-    \item VaR(90\%) = 12\%, ES = 15\%
+    \item VaR(90\%) = 12\%, ES = 15\%\\
+    90\%置信水平下的价值风险为12\%，预期短缺为15\%
     
-    \item VaR(90\%) = 12\%, ES = 13.5\%
+    \item VaR(90\%) = 12\%, ES = 13.5\%\\
+    90\%置信水平下的价值风险为12\%，预期短缺为13.5\%
     
-    \item VaR(90\%) = 15\%, ES = 18\%
+    \item VaR(90\%) = 15\%, ES = 18\%\\
+    90\%置信水平下的价值风险为15\%，预期短缺为18\%
 \end{choices}
 
 \begin{correctanswer}
@@ -1709,16 +1905,21 @@
 
 \begin{question}
     A risk manager at a global fund believes that the market is about to transition from a bull to a bear market. She needs to select appropriate risk measures and calculation methods to assess the portfolio's risk exposure during this transition period. Which of the following statements is CORRECT regarding the choice and implementation of risk measures?
+    \\一位全球基金的风险经理认为市场即将从牛市转为熊市。她需要选择适当的风险度量和计算方法来评估投资组合在转型期间的风险暴露。以下哪个陈述关于风险度量和计算方法的选择和实施是正确的？
 \end{question}
 
 \begin{choices}
-    \item VaR and Expected Shortfall are equivalent in measuring tail risk, as both metrics capture the complete distribution of potential losses in the portfolio's tail.
+    \item VaR and Expected Shortfall are equivalent in measuring tail risk, as both metrics capture the complete distribution of potential losses in the portfolio's tail.\\
+    VaR和预期短缺在衡量尾部风险方面是等价的，因为两者都捕捉了投资组合尾部潜在损失的完整分布。
     
-    \item Historical simulation remains a reliable method for VaR calculation during market regime changes, as past price patterns and correlations will continue to be representative.
+    \item Historical simulation remains a reliable method for VaR calculation during market regime changes, as past price patterns and correlations will continue to be representative.\\
+    历史模拟在市场机制变化期间仍然是计算VaR的可靠方法，因为过去的价格模式和相关性将继续具有代表性。
     
-    \item Monte Carlo simulation with appropriate distributional assumptions and volatility adjustments is suitable for VaR calculation during market transitions, as it allows for flexible modeling of changing market conditions.
+    \item Monte Carlo simulation with appropriate distributional assumptions and volatility adjustments is suitable for VaR calculation during market transitions, as it allows for flexible modeling of changing market conditions.\\
+    蒙特卡洛模拟，具有适当的分布假设和波动率调整，适合在市场转型期间计算VaR，因为它允许灵活建模市场条件的变化。
     
-    \item For portfolios containing options, the delta-normal approach without gamma adjustment provides accurate VaR estimates, as option risks are primarily linear in nature.
+    \item For portfolios containing options, the delta-normal approach without gamma adjustment provides accurate VaR estimates, as option risks are primarily linear in nature.\\
+    对于包含期权的投资组合，delta-normal方法不进行gamma调整提供准确的VaR估计，因为期权风险主要是线性的。
 \end{choices}
 
 \begin{correctanswer}
@@ -1781,16 +1982,50 @@
     \end{center}
 
     Compare the daily VaR estimates using both delta-normal and historical simulation methods.
+    \\一位大学捐赠基金的投资组合经理正在比较其8000万欧元股票投资组合的不同VaR计算方法。该投资组合具有以下特征：
+
+    \begin{itemize}
+        \item 每日预期收益率：0.05\%
+        \item 每日波动率：0.85\%
+        \item 显著性水平：2\%（z值 = 2.05）
+    \end{itemize}
+
+    该经理还收集了250个每日历史收益率。六个最低收益率如下：
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    排名 & 收益率 \\
+    \hline
+    1 & -3.25\% \\
+    \hline
+    2 & -2.88\% \\
+    \hline
+    3 & -2.65\% \\
+    \hline
+    4 & -2.42\% \\
+    \hline
+    5 & -2.28\% \\
+    \hline
+    6 & -2.15\% \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    使用delta-normal方法和历史模拟方法比较每日VaR估计值。
 \end{question}
 
 \begin{choices}
-    \item Both methods give the same VaR estimate of €2.12 million
+    \item Both methods give the same VaR estimate of €2.12 million\\
+    两种方法都给出2120万欧元的VaR估计值
     
-    \item Delta-normal: €1.68 million; Historical: €2.12 million
+    \item Delta-normal: €1.68 million; Historical: €2.12 million\\
+    Delta-normal: 1680万欧元；历史模拟: 2120万欧元
     
-    \item Delta-normal: €1.32 million; Historical: €1.82 million
+    \item Delta-normal: €1.32 million; Historical: €1.82 million\\
+    Delta-normal: 1320万欧元；历史模拟: 1820万欧元
     
-    \item Delta-normal: €2.12 million; Historical: €1.68 million
+    \item Delta-normal: €2.12 million; Historical: €1.68 million\\
+    Delta-normal: 2120万欧元；历史模拟: 1680万欧元
 \end{choices}
 
 \begin{correctanswer}
@@ -1826,16 +2061,21 @@
 
 \begin{question}
     A junior risk analyst at an asset management firm is currently evaluating different methods for assessing portfolio risk. The analyst is particularly interested in historical simulation due to its straightforward approach and reliance on past data. During a team meeting, the analyst presents several statements about historical simulation to discuss its advantages and limitations. Which of the following statements about historical simulation is correct?
+    \\一位资产管理部门的初级风险分析师正在评估不同的风险评估方法。分析师特别关注历史模拟，因为它简单直接且依赖于过去的数据。在团队会议上，分析师提出了几个关于历史模拟的陈述，讨论其优势和局限性。以下哪个陈述关于历史模拟是正确的？
 \end{question}
 
 \begin{choices}
-    \item Historical simulation provides dynamic updates to volatility and correlation estimates through continuous market feedback mechanisms.
+    \item Historical simulation provides dynamic updates to volatility and correlation estimates through continuous market feedback mechanisms.\\
+    历史模拟通过连续的市场反馈机制动态更新波动率和相关性估计。
     
-    \item Historical simulation incorporates time-varying weights to reflect the relative importance of recent versus distant observations.
+    \item Historical simulation incorporates time-varying weights to reflect the relative importance of recent versus distant observations.\\
+    历史模拟采用时间可变权重来反映近期观察与远期观察的相对重要性。
     
-    \item Historical simulation does not require any model assumptions.
+    \item Historical simulation does not require any model assumptions.\\
+    历史模拟不需要任何模型假设。
     
-    \item Historical simulation generates reliable future market predictions through comprehensive pattern recognition algorithms.
+    \item Historical simulation generates reliable future market predictions through comprehensive pattern recognition algorithms.\\
+    历史模拟通过综合模式识别算法生成可靠的未来市场预测。
 \end{choices}
 
 \begin{correctanswer}
@@ -1869,13 +2109,18 @@
 
 \begin{question}
     A junior risk analyst at an investment firm is evaluating the delta-normal method for risk assessment. The analyst presents several statements about the delta-normal method during a team meeting. Which of the following statements is CORRECT?
+    \\一位投资公司的初级风险分析师正在评估delta-normal方法的风险评估。分析师在团队会议上提出了几个关于delta-normal方法的陈述。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The delta-normal method performs well for linear portfolios and can be applied to nonlinear portfolios.
-    \item The delta-normal method primarily relies on historical volatility patterns to determine the distribution of portfolio returns.
-    \item In the delta-normal method, actual changes in all risk factors are more practical than percentage changes.
-    \item The delta-normal method achieves optimal results through dynamic correlation adjustments in varying market conditions.
+    \item The delta-normal method performs well for linear portfolios and can be applied to nonlinear portfolios.\\
+    Delta-normal方法对线性投资组合表现良好，可以应用于非线性投资组合。
+    \item The delta-normal method primarily relies on historical volatility patterns to determine the distribution of portfolio returns.\\
+    Delta-normal方法主要依赖历史波动模式来确定投资组合收益的分布。
+    \item In the delta-normal method, actual changes in all risk factors are more practical than percentage changes.\\
+    Delta-normal方法中，所有风险因素的实际变化比百分比变化更实用。
+    \item The delta-normal method achieves optimal results through dynamic correlation adjustments in varying market conditions.\\
+    Delta-normal方法通过在不同市场条件下进行动态相关性调整实现最佳结果。
 \end{choices}
 
 \begin{correctanswer}
@@ -1913,13 +2158,18 @@
 
 \begin{question}
     Consider a portfolio consisting of a \$10,000 investment in asset X and a \$20,000 investment in asset Y. Assume the daily volatilities of X and Y are 1\% and 2\% respectively, and the correlation coefficient between their returns is 0.3. Which of the following options correctly describes the portfolio's five-day VaR and ES at a 97\% confidence level?
+    \\考虑一个投资组合，包含10,000美元的资产X投资和20,000美元的资产Y投资。假设资产X和Y的每日波动率分别为1\%和2\%，它们之间的相关系数为0.3。以下哪个选项正确描述了该投资组合五天VaR和ES在97\%置信水平下的值？
 \end{question}
 
 \begin{choices}
-    \item VaR is \$1852.4, ES is \$2233.8.
-    \item VaR is \$2233.8, ES is \$1852.4.
-    \item VaR is \$440.5, ES is \$984.9.
-    \item VaR is \$984.9, ES is \$440.5.
+    \item VaR is \$1852.4, ES is \$2233.8.\\
+    VaR是1852.4美元，ES是2233.8美元。
+    \item VaR is \$2233.8, ES is \$1852.4.\\
+    VaR是2233.8美元，ES是1852.4美元。
+    \item VaR is \$440.5, ES is \$984.9.\\
+    VaR是440.5美元，ES是984.9美元。
+    \item VaR is \$984.9, ES is \$440.5.\\
+    VaR是984.9美元，ES是440.5美元。
 \end{choices}
 
 \begin{correctanswer}
@@ -1962,13 +2212,18 @@
 
 \begin{question}
     A quantitative analyst at a global investment bank is evaluating different VaR calculation methods for their complex derivatives portfolio. During a team discussion about Monte Carlo simulation, which of the following statements about this method is CORRECT?
+    \\一位全球投资银行的量化分析师正在评估不同的VaR计算方法用于其复杂的衍生品投资组合。在团队讨论蒙特卡洛模拟时，以下哪个陈述关于这种方法是正确的？
 \end{question}
 
 \begin{choices}
-    \item The Monte Carlo simulation primarily relies on historical data patterns, making it more reliable than parametric approaches for risk factor distribution estimation.
-    \item The Monte Carlo simulation's model risk can be effectively eliminated by increasing the number of simulations and using more sophisticated probability distributions.
-    \item The Monte Carlo simulation is computationally intensive, making it suitable for scenarios requiring quick results.
-    \item Using historical data to estimate risk factor characteristics may not accurately predict future market changes.
+    \item The Monte Carlo simulation primarily relies on historical data patterns, making it more reliable than parametric approaches for risk factor distribution estimation.\\
+    Monte-Carlo模拟主要依赖历史数据模式，使其在风险因子分布估计方面比参数法更可靠。
+    \item The Monte Carlo simulation's model risk can be effectively eliminated by increasing the number of simulations and using more sophisticated probability distributions.\\
+    Monte-Carlo模拟的模型风险可以通过增加模拟次数和使用更复杂的概率分布有效地消除。
+    \item The Monte Carlo simulation is computationally intensive, making it suitable for scenarios requiring quick results.\\
+    Monte-Carlo模拟计算量大，适用于需要快速结果的场景。
+    \item Using historical data to estimate risk factor characteristics may not accurately predict future market changes.\\
+    使用历史数据估计风险因子特性可能无法准确预测未来市场变化。
 \end{choices}
 
 \begin{correctanswer}
@@ -2002,17 +2257,21 @@
 
 \begin{question}
     A risk manager at a global investment bank is evaluating different VaR calculation methods for their diverse portfolio. During their analysis, they notice that each method has its own strengths and limitations in capturing different types of risks. After reviewing the characteristics of Delta-Normal, Historical Simulation, and Monte Carlo Simulation methods, which of the following statements about these approaches is CORRECT?
+    \\一位全球投资银行的风险经理正在评估不同的VaR计算方法用于其多样化的投资组合。在分析过程中，他们注意到每种方法在捕捉不同类型风险方面都有其优势和局限性。在审查Delta-Normal、历史模拟和蒙特卡洛模拟方法的特征后，以下哪个陈述关于这些方法的正确？
 \end{question}
 
 \begin{choices}
-    \item The Delta-Normal method provides comprehensive risk assessment for option portfolios through its linear approximation approach, making it particularly suitable for complex derivatives.
+    \item The Delta-Normal method provides comprehensive risk assessment for option portfolios through its linear approximation approach, making it particularly suitable for complex derivatives.\\
+    Delta-Normal方法通过其线性近似方法为期权投资组合提供全面的风险评估，使其特别适用于复杂衍生品。
     
-    \item The Historical Simulation method maintains consistent computational efficiency across all portfolio types, with enhanced accuracy for structured products.
+    \item The Historical Simulation method maintains consistent computational efficiency across all portfolio types, with enhanced accuracy for structured products.\\
+    历史模拟方法在所有投资组合类型中保持一致的计算效率，对结构化产品具有增强的准确性。
     
-    \item The Monte Carlo Simulation method is computationally complex but can achieve good VaR precision through multiple iterations.
+    \item The Monte Carlo Simulation method is computationally complex but can achieve good VaR precision through multiple iterations.\\
+    Monte-Carlo模拟方法计算复杂，但可以通过多次迭代实现良好的VaR精度。
     
-    \item The Delta-Normal method performs excellently in VaR precision over short windows, while the Historical Simulation method
-    has advantages in handling time-varying risks and unusual events.
+    \item The Delta-Normal method performs excellently in VaR precision over short windows, while the Historical Simulation method has advantages in handling time-varying risks and unusual events.\\
+    Delta-Normal方法在短期窗口期的VaR精度方面表现出色，而历史模拟方法在处理时变风险和异常事件方面具有优势。
 \end{choices}
 
 \begin{correctanswer}
@@ -2044,16 +2303,21 @@
 \checklist{历史模拟法、蒙特卡洛模拟法和Delta-Normal三种方法的比较（综合起来考察）}
 \begin{question}
     A junior risk analyst at an asset management firm is currently evaluating different methods for assessing portfolio risk. The analyst is particularly interested in historical simulation due to its straightforward approach and reliance on past data. During a team meeting, the analyst presents several statements about historical simulation to discuss its advantages and limitations. Which of the following statements about historical simulation is CORRECT?
+    \\一位资产管理部门的初级风险分析师正在评估不同的风险评估方法。分析师特别关注历史模拟，因为它简单直接且依赖于过去的数据。在团队会议上，分析师提出了几个关于历史模拟的陈述，讨论其优势和局限性。以下哪个陈述关于历史模拟是正确的？
 \end{question}
 
 \begin{choices}
-    \item Worst Case Analysis primarily serves as a predictive tool for future market movements, providing reliable forecasts through statistical extrapolation of historical extreme events.
+    \item Worst Case Analysis primarily serves as a predictive tool for future market movements, providing reliable forecasts through statistical extrapolation of historical extreme events.\\
+    最坏情况分析主要是作为预测未来市场走势的工具，通过统计外推历史极端事件提供可靠的预测。
     
-    \item Contagion effects occur when both volatility and correlation increase, enhancing the benefits of diversification. VaR and ES can be used to simulate this effect.
+    \item Contagion effects occur when both volatility and correlation increase, enhancing the benefits of diversification. VaR and ES can be used to simulate this effect.\\
+    传染效应发生在波动率和相关性都增加时，增强分散化的好处。VaR和ES可以用于模拟这种效应。
     
-    \item Correlation patterns maintain stability across different market conditions, allowing for consistent risk estimation regardless of market stress levels.
+    \item Correlation patterns maintain stability across different market conditions, allowing for consistent risk estimation regardless of market stress levels.\\
+    相关性模式在不同市场条件下保持稳定，允许在不同市场压力水平下进行一致的风险估计。
     
-    \item When calculating VaR or ES, we should estimate correlations under extreme market conditions rather than normal market conditions.
+    \item When calculating VaR or ES, we should estimate correlations under extreme market conditions rather than normal market conditions.\\
+    在计算VaR或ES时，我们应该估计极端市场条件下的相关性，而不是正常市场条件下的相关性。
 \end{choices}
 
 \begin{correctanswer}
@@ -2100,13 +2364,18 @@
 
 \begin{question}
     A financial analyst is evaluating different models for estimating the volatility of asset returns in order to improve risk management strategies. The analyst comes across four statements regarding these models. Which of the following statements is INCORRECT?
+    \\一位金融分析师正在评估不同的模型来估计资产收益率的波动率，以改进风险管理策略。分析师遇到了关于这些模型的四个陈述。以下哪个陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item In the exponentially weighted moving average (EWMA) model, some positive weight is assigned to the long-run average variance.
-    \item In the EWMA model, the weights assigned to observations decrease exponentially as the observations become older.
-    \item In the GARCH (1,1) model, a positive weight is estimated for the long-run average variance.
-    \item In the GARCH (1,1) model, the weights estimated for observations decrease exponentially as the observations become older.
+    \item In the exponentially weighted moving average (EWMA) model, some positive weight is assigned to the long-run average variance.\\
+    在指数加权移动平均（EWMA）模型中，分配给长期平均方差的一些正权重。
+    \item In the EWMA model, the weights assigned to observations decrease exponentially as the observations become older.\\
+    在EWMA模型中，分配给观察值的权重随着观察值变得更旧而指数递减。
+    \item In the GARCH (1,1) model, a positive weight is estimated for the long-run average variance.\\
+    在GARCH (1,1)模型中，为长期平均方差估计了一个正权重。
+    \item In the GARCH (1,1) model, the weights estimated for observations decrease exponentially as the observations become older.\\
+    在GARCH (1,1)模型中，估计的观察值的权重随着观察值变得更旧而指数递减。
 \end{choices}
 
 \begin{correctanswer}
@@ -2156,13 +2425,18 @@
 
 \begin{question}
     A junior risk analyst is tasked with modeling the volatility of a specific market variable. The analyst is contemplating the use of either the EWMA model or the GARCH (1,1) model. Which of the following statements accurately reflects the characteristics of these models?
+    \\一位初级风险分析师被任务建模特定市场变量的波动率。分析师正在考虑使用EWMA模型或GARCH (1,1)模型。以下哪个陈述准确反映了这些模型的特性？
 \end{question}
 
 \begin{choices}
-    \item The EWMA model can be viewed as a special case of the GARCH (1,1) model, assuming that the long-run volatility is zero.
-    \item The variance estimated from the GARCH (1,1) model is a weighted average of the prior day's estimated variance and the prior day's squared return.
-    \item The GARCH (1,1) model assigns a higher weight to the prior day's estimated variance than the EWMA model.
-    \item The variance estimated from the EWMA model is a weighted average of the prior day's estimated variance and the prior day's observed squared return.
+    \item The EWMA model can be viewed as a special case of the GARCH (1,1) model, assuming that the long-run volatility is zero.\\
+    EWMA模型可以被视为GARCH (1,1)模型的特例，假设长期波动率为零。
+    \item The variance estimated from the GARCH (1,1) model is a weighted average of the prior day's estimated variance and the prior day's squared return.\\
+    从GARCH (1,1)模型估计的方差是前一天估计方差和前一天平方收益的加权平均。
+    \item The GARCH (1,1) model assigns a higher weight to the prior day's estimated variance than the EWMA model.\\
+    GARCH (1,1)模型对前一天估计方差的权重高于EWMA模型。
+    \item The variance estimated from the EWMA model is a weighted average of the prior day's estimated variance and the prior day's observed squared return.\\
+    EWMA模型估计的方差是前一天估计方差和前一天观察到的平方收益的加权平均。
 \end{choices}
 
 \begin{correctanswer}
@@ -2249,16 +2523,50 @@
     \end{center}
 
     Which of the following statements is INCORRECT?
+    \\一位风险分析师正在使用衰减权重（λ = 0.97）的历史模拟法估计一个投资组合的每日5\%价值风险（VaR）。以下哪个陈述是不正确的？
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        收益率（\%） & 天数前 & 权重 & 累积权重 \\
+        \hline
+        -0.93 & 19 & 0.01734 & 0.01734 \\
+        \hline
+        -0.89 & 92 & 0.00188 & 0.01922 \\
+        \hline
+        -0.86 & 82 & 0.00254 & 0.02176 \\
+        \hline
+        -0.80 & 78 & 0.00287 & 0.02463 \\
+        \hline
+        -0.74 & 62 & A & 0.02931 \\
+        \hline
+        -0.43 & 98 & 0.00156 & 0.03088 \\
+        \hline
+        -0.31 & 76 & 0.00305 & 0.03393 \\
+        \hline
+        -0.29 & 84 & 0.00239 & 0.03633 \\
+        \hline
+        -0.15 & 59 & 0.00513 & 0.04145 \\
+        \hline
+        -0.07 & 37 & 0.01002 & 0.05147 \\
+        \hline
+        \end{tabular}
+        \end{center}
+    
+        以下哪个陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item The missing weight in cell A can be calculated as \(w_{62} = (1-0.97) \times 0.97^{62-1} = 0.00468\)
+    \item The missing weight in cell A can be calculated as \(w_{62} = (1-0.97) \times 0.97^{62-1} = 0.00468\)\\
+    单元格A中的缺失权重可以计算为\(w_{62} = (1-0.97) \times 0.97^{62-1} = 0.00468\)
     
-    \item Based on the cumulative weights, the 5\% VaR lies between -0.07\% and -0.15\%
+    \item Based on the cumulative weights, the 5\% VaR lies between -0.07\% and -0.15\%\\
+    基于累积权重，5\%VaR位于-0.07\%和-0.15\%之间
     
-    \item Using equal-weighted historical simulation would result in a higher VaR estimate than using declining weights
+    \item Using equal-weighted historical simulation would result in a higher VaR estimate than using declining weights\\
+    使用等权重历史模拟会导致比使用衰减权重更高的VaR估计
     
-    \item A smaller λ value leads to a slower decline in the weights as we move further into the past
+    \item A smaller λ value leads to a slower decline in the weights as we move further into the past\\
+    λ值越小，权重衰减越慢，随着我们进一步进入过去
 \end{choices}
 
 \begin{correctanswer}
@@ -2333,6 +2641,26 @@
     \end{center}
 
     Assuming daily volatility is independently identically distributed, using the long-term daily volatility from the GARCH(1,1) model, which of the following is closest to the annualized Sharpe ratio of the stock?
+    一位投资组合经理基于某股票的每日收益率估计了以下GARCH(1,1)模型：
+
+    \[
+    \sigma_t^2 = 0.00016 + 0.03\mu_{t-1}^2 + 0.85\sigma_{t-1}^2
+    \]
+
+    给定以下信息：
+    \begin{center}
+    \begin{tabular}{|l|c|}
+    \hline
+    年化收益率 & 18\% \\
+    \hline
+    无风险利率 & 4\% \\
+    \hline
+    每年交易日 & 250天 \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    假设每日波动率独立同分布，使用GARCH(1,1)模型的长期每日波动率，以下哪个最接近该股票的年化夏普比率？
 \end{question}
 
 \begin{choices}
@@ -2435,16 +2763,21 @@
 
 \begin{question}
     A risk analyst is using a GARCH model to estimate volatility for VaR calculations. The current volatility exhibits mean-reverting characteristics. When extending the one-day VaR forecast to a t-day horizon under these conditions, which of the following statements is correct?
+    \\一位风险分析师正在使用GARCH模型估计波动率用于VaR计算。当前波动率具有均值回复特性。在这些条件下，将一天的VaR预测扩展到t天水平，以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The t-day VaR will always be less than \(\sqrt{t}\) times the one-day VaR, due to mean reversion.
+    \item The t-day VaR will always be less than \(\sqrt{t}\) times the one-day VaR, due to mean reversion.\\
+    t天VaR总是小于\(\sqrt{t}\)倍的单日VaR，因为存在均值回复特性。
     
-    \item The t-day VaR will exactly equal \(\sqrt{t}\) times the one-day VaR, following the square root of time rule.
+    \item The t-day VaR will exactly equal \(\sqrt{t}\) times the one-day VaR, following the square root of time rule.\\
+    t天VaR将精确等于\(\sqrt{t}\)倍的单日VaR，遵循时间平方根规则。
     
-    \item The t-day VaR will always be greater than \(\sqrt{t}\) times the one-day VaR, due to volatility clustering.
+    \item The t-day VaR will always be greater than \(\sqrt{t}\) times the one-day VaR, due to volatility clustering.\\
+    t天VaR总是大于\(\sqrt{t}\)倍的单日VaR，因为存在波动率聚类特性。
     
-    \item The relationship between t-day VaR and one-day VaR depends on whether current volatility is above or below its long-run mean.
+    \item The relationship between t-day VaR and one-day VaR depends on whether current volatility is above or below its long-run mean.\\
+    t天VaR和单日VaR之间的关系取决于当前波动率是否高于或低于其长期均值。
 \end{choices}
 
 \begin{correctanswer}
@@ -2508,6 +2841,7 @@
 
 \begin{question}
     A risk analyst is using an exponential smoothing (EWMA) approach to estimate daily volatility, with a lambda parameter of 0.920. If today is denoted as time t, and we are considering the weights assigned to past returns, what are the weights for the returns at time (t-1) and (t-2) respectively?
+    \\一位风险分析师正在使用指数平滑（EWMA）方法估计每日波动率，衰减因子为0.920。如果今天表示为时间t，我们正在考虑分配给过去收益的权重，(t-1)和(t-2)期的权重分别是多少？
 \end{question}
 
 \begin{choices}
@@ -2568,13 +2902,18 @@
 
 \begin{question}
     A junior market risk analyst is studying the mechanics of the EWMA approach for estimating volatility. The analyst observes that the approach applies various weights to a series of historical returns, and the return needed to update the EWMA calculation is the most recent day’s squared return. Which of the following statements is correct? 
+    \\一位初级市场风险分析师正在研究EWMA方法估计波动率的机制。分析师观察到该方法对一系列历史收益应用不同的权重，更新EWMA计算所需的收益是最近一天的平方收益。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Daily returns prior to the most recent day have no influence on the current variance rate estimate in the EWMA calculation. 
-    \item Daily returns prior to the most recent day are incorporated into the EWMA calculation through the smoothing parameter (\(\lambda\)).
-    \item Daily returns prior to the most recent day are reflected in the EWMA calculation by the most recent day’s squared return. 
-    \item Daily returns prior to the most recent day are reflected in the EWMA calculation by the previous variance rate estimate.
+    \item Daily returns prior to the most recent day have no influence on the current variance rate estimate in the EWMA calculation. \\
+    最近一天之前的每日收益对EWMA计算中的当前方差率估计没有影响。
+    \item Daily returns prior to the most recent day are incorporated into the EWMA calculation through the smoothing parameter (\(\lambda\)).\\
+    最近一天之前的每日收益通过平滑参数(\(\lambda\))纳入EWMA计算。
+    \item Daily returns prior to the most recent day are reflected in the EWMA calculation by the most recent day’s squared return. \\
+    最近一天之前的每日收益通过最近一天的平方收益反映在EWMA计算中。
+    \item Daily returns prior to the most recent day are reflected in the EWMA calculation by the previous variance rate estimate. \\
+    最近一天之前的每日收益通过前一方差率估计反映在EWMA计算中。
 \end{choices}
 
 \begin{correctanswer}
@@ -2616,16 +2955,21 @@
 
 \begin{question}
     A market risk analyst is studying volatility patterns in financial markets and discussing the concept of regime switching. The analyst needs to understand how market volatility changes under different conditions and what triggers these changes. Which of the following statements about regime switching in volatility modeling is INCORRECT?
+    \\一位市场风险分析师正在研究金融市场中的波动率模式，并讨论波动率模型中的 regime switching 概念。分析师需要理解在市场不同条件下波动率如何变化以及什么因素触发这些变化。以下哪个关于波动率模型中的 regime switching 陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item High volatility periods tend to be followed by high volatility periods in normal market conditions, demonstrating the clustering nature of market volatility.
+    \item High volatility periods tend to be followed by high volatility periods in normal market conditions, demonstrating the clustering nature of market volatility. \\
+    高波动率期间倾向于在正常市场条件下跟随高波动率期间，展示市场波动率的聚集性特征。
     
-    \item Regime switching refers to gradual and predictable changes in market volatility that allow investors to adjust their positions systematically.
+    \item Regime switching refers to gradual and predictable changes in market volatility that allow investors to adjust their positions systematically. \\
+    Regime switching 指的是市场波动率的渐进性和可预测性变化，允许投资者系统性地调整其头寸。
     
-    \item An unexpected central bank announcement can trigger an immediate regime switch in volatility, causing market turbulence followed by stabilization.
+    \item An unexpected central bank announcement can trigger an immediate regime switch in volatility, causing market turbulence followed by stabilization. \\
+    意外的央行公告可能导致市场波动率的立即转换，导致市场动荡随后稳定。
     
-    \item Low volatility periods are typically followed by low volatility periods under normal circumstances, reflecting the persistence of market conditions.
+    \item Low volatility periods are typically followed by low volatility periods under normal circumstances, reflecting the persistence of market conditions. \\
+    低波动率期间通常在正常情况下跟随低波动率期间，反映市场条件的持续性。
 \end{choices}
 
 \begin{correctanswer}
@@ -2659,13 +3003,18 @@
 
 \begin{question}
     A financial analyst at a hedge fund is monitoring market volatility to adjust the fund's risk management strategies. The analyst reviews historical data and notices that the average standard deviation of asset returns is 1\% per day. However, the current volatility monitoring program indicates that the volatility has increased to 2\%. Based on the following market volatility monitoring results, which statement is correct?
+    \\一位对冲基金的金融分析师正在监控市场波动率以调整基金的风险管理策略。分析师审查历史数据并注意到资产收益率的标准差平均为1\%每天。然而，当前的波动率监控程序表明波动率已增加到2\%。基于以下市场波动率监控结果，以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item In an unconditionally normal model, the probability distribution of daily returns assumes a standard deviation of 1\%.
-    \item The conditionally normal model maintains stable volatility patterns through market cycles, providing consistent risk estimates.
-    \item The current market volatility of 2\% represents a temporary deviation that should be disregarded in favor of the long-term average of 1\%.
-    \item If the conditional distribution is normal, returns have similar means and similar volatility.
+    \item In an unconditionally normal model, the probability distribution of daily returns assumes a standard deviation of 1\%. \\
+    在一个无条件正态模型中，每日收益的概率分布假设标准差为1\%。
+    \item The conditionally normal model maintains stable volatility patterns through market cycles, providing consistent risk estimates. \\
+    条件正态模型通过市场周期保持稳定的波动率模式，提供一致的风险估计。
+    \item The current market volatility of 2\% represents a temporary deviation that should be disregarded in favor of the long-term average of 1\%. \\ 
+    当前市场波动率2\%代表一个临时偏差，应被忽视，而不是长期平均值1\%。
+    \item If the conditional distribution is normal, returns have similar means and similar volatility. \\
+    如果条件分布是正态分布，收益具有相似的均值和相似的波动性。
 \end{choices}
 
 \begin{correctanswer}
@@ -2700,16 +3049,21 @@
 
 \begin{question}
     A junior risk analyst at an asset management firm is currently evaluating different methods for assessing portfolio risk. The analyst is particularly interested in understanding the differences between implied volatility and historical volatility to enhance the firm's risk assessment models. During a team meeting, the analyst presents several statements about these volatilities. Which of the following statements is CORRECT?
+    \\一位资产管理部门的初级风险分析师正在评估不同的方法来评估投资组合风险。分析师特别关注隐含波动率和历史波动率之间的差异，以增强公司的风险评估模型。在团队会议上，分析师提出了几个关于这些波动率的陈述。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Historical volatility, calculated from past data, is forward-looking, while implied volatility is retrospective.
+    \item Historical volatility, calculated from past data, is forward-looking, while implied volatility is retrospective. \\
+    历史波动率，基于过去数据计算，是前瞻性的，而隐含波动率是回顾性的。
     
-    \item Implied volatility of options maintains consistent values across different maturities due to the market's uniform expectations of future volatility.
+    \item Implied volatility of options maintains consistent values across different maturities due to the market's uniform expectations of future volatility. \\
+    期权隐含波动率在不同到期日之间保持一致值，因为市场对未来波动率的预期是统一的。
     
-    \item Implied volatility provides a better estimate of actual future volatility than historical volatility.
+    \item Implied volatility provides a better estimate of actual future volatility than historical volatility. \\
+    隐含波动率比历史波动率提供了更好的实际未来波动率估计。
     
-    \item The conversion between annual and daily implied volatility requires adjustments based on market liquidity conditions rather than trading days.
+    \item The conversion between annual and daily implied volatility requires adjustments based on market liquidity conditions rather than trading days. \\
+    年度和日度隐含波动率之间的转换需要基于市场流动性条件而不是交易天数进行调整。
 \end{choices}
 
 \begin{correctanswer}
@@ -2743,13 +3097,18 @@
 
 \begin{question}
     A quantitative analyst at a financial institution is exploring the use of Multivariate Density Estimation (MDE) for portfolio analysis. The analyst presents several statements about MDE during a team discussion. Which of the following statements is INCORRECT?
+    \\一位金融机构的量化分析师正在探索使用多元密度估计（MDE）进行投资组合分析。分析师在团队讨论中提出了几个关于MDE的陈述。以下哪个陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Multivariate Density Estimation adjusts weights by comparing historical returns with current market factors.
-    \item Historical returns with high factor similarity to current market conditions are given greater weight.
-    \item Multivariate Density Estimation considers the time distance of historical data.
-    \item Multivariate Density Estimation is applicable to factors such as interest rate levels and GDP growth rates.
+    \item Multivariate Density Estimation adjusts weights by comparing historical returns with current market factors. \\
+    多元密度估计法通过比较历史回报和当前市场因子来调整权重。
+    \item Historical returns with high factor similarity to current market conditions are given greater weight. \\
+    当前市场条件相似性高的历史回报被赋予更大的权重。
+    \item Multivariate Density Estimation considers the time distance of historical data. \\
+    多元密度估计法考虑历史数据的时间距离。
+    \item Multivariate Density Estimation is applicable to factors such as interest rate levels and GDP growth rates. \\
+    多元密度估计法适用于利率水平和GDP增长率等因子。
 \end{choices}
 
 \begin{correctanswer}

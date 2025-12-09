@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -98,7 +98,8 @@
 \setcounter{question}{0}
 
 \begin{question}
-    Bennett Bank extends a 5\% APR (annual percentage rate) USD 100,000 30-year mortgage requiring monthly payments. If the mortgage is structured so that it requires interest-only payments for the first 5 years, after which it becomes a self-amortizing mortgage, what would be the portion of the monthly payment applied to the principal in the 61st month?
+    Bennett Bank extends a 5\% APR (annual percentage rate) USD 100,000 30-year mortgage requiring monthly payments. If the mortgage is structured so that it requires interest-only payments for the first 5 years, after which it becomes a self-amortizing mortgage, what would be the portion of the monthly payment applied to the principal in the 61st month?\\
+    Bennett Bank 向借款人发放了100,000美元的30年期抵押贷款，年利率为5\%，每月等额还款。如果该抵押贷款要求在前5年只支付利息，之后转为自偿性抵押贷款，那么在第61个月，每月还款中用于本金的部分是多少？
     \end{question}
     
     \begin{choices}
@@ -152,7 +153,8 @@
 
 
             \begin{question}
-                Consider a 30-year mortgage with an initial interest rate of 5\%, compounded monthly, and a principal amount of USD 100,000. After 5 years, the interest rate decreases to 3.5\%. Assuming the refinancing process keeps the principal amount and maturity unchanged, what is the reduction in the monthly repayment amount?
+                Consider a 30-year mortgage with an initial interest rate of 5\%, compounded monthly, and a principal amount of USD 100,000. After 5 years, the interest rate decreases to 3.5\%. Assuming the refinancing process keeps the principal amount and maturity unchanged, what is the reduction in the monthly repayment amount?\\
+                考虑一个30年期的抵押贷款，初始利率为5\%，每月复利，本金为100,000美元。在前5年，利率为5\%，之后利率降至3.5\%。假设再融资过程保持本金和期限不变，每月还款额减少了多少？
                 \end{question}
                 
                 \begin{choices}
@@ -215,6 +217,7 @@
 
     \begin{question}
         A fixed-income portfolio manager purchases a seasoned 5.5\% agency mortgage-backed security with a weighted average loan age of 60 months. The current balance on the loans is USD 20 million, and the conditional prepayment rate is assumed to be constant at 0.4\% per year. Which of the following is closest to the expected principal prepayment this month?
+        \\一位固定收益投资组合经理购买了一只 seasoned 5.5\% 的机构抵押贷款支持证券，加权平均贷款年龄为60个月。目前贷款余额为2000万美元，假设条件提前还款率为每年0.4\%。以下哪个选项最接近本月预计的提前还款本金？
         \end{question}
         
         \begin{choices}
@@ -286,6 +289,23 @@
     \end{center}
     
     What is the correct calculation of the weighted average coupon rate of this green bond pool?
+    \\一位绿色能源投资基金的投资组合经理正在评估一个可持续基础设施债券池。该债券池包含三只不同的绿色债券，为可再生能源项目融资。三只债券的信息如下所示：
+    
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+     & 票面利率 & 到期期限 & 本金（美元） \\
+    \hline
+    绿色债券1 & 4.5\% & 120 months & 2,500,000 \\
+    \hline
+    绿色债券2 & 5.5\% & 180 months & 3,500,000 \\
+    \hline
+    绿色债券3 & 6.5\% & 240 months & 4,000,000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+    
+    该绿色债券池的加权平均票面利率的正确计算是什么？
     \end{question}
     
     \begin{choices}
@@ -339,16 +359,21 @@
 
     \begin{question}
         You are analyzing a portfolio of green mortgage-backed securities (Green MBS), where the underlying mortgages are all tied to energy-efficient homes. The pool has a total value of \$500 million with varying prepayment characteristics. Which of the following scenarios would likely result in lower prepayment risk for this Green MBS portfolio?
+        \\你正在分析一个绿色抵押贷款支持证券（Green MBS）组合，其中 underlying mortgages 都是与节能房屋相关的。该组合总价值为5亿美元，具有不同的提前还款特征。以下哪个场景可能降低该绿色MBS组合的提前还款风险？
     \end{question}
         
         \begin{choices}
-            \item The government introduces new environmental guarantees that cover both interest and principal payments if borrowers default on their green mortgages.
+            \item The government introduces new environmental guarantees that cover both interest and principal payments if borrowers default on their green mortgages.\\
+            政府引入新的环境担保，如果借款人违约，将覆盖利息和本金支付。
             
-            \item Energy-efficient homes are showing high turnover rates as homeowners frequently upgrade to newer, more efficient properties.
+            \item Energy-efficient homes are showing high turnover rates as homeowners frequently upgrade to newer, more efficient properties.\\
+            节能房屋的周转率很高，因为 homeowners 经常升级到更节能的新房产。
             
-            \item Most mortgages in the pool have entered their final years, with relatively small remaining balances and high energy efficiency ratings.
+            \item Most mortgages in the pool have entered their final years, with relatively small remaining balances and high energy efficiency ratings.\\
+            该组合中的大多数抵押贷款已经进入最后几年，剩余余额相对较小，能源效率评级较高。
             
-            \item Borrowers hold mortgages with 3\% interest rates (including green mortgage discounts), while current market rates have risen to 6\% for similar green mortgages.
+            \item Borrowers hold mortgages with 3\% interest rates (including green mortgage discounts), while current market rates have risen to 6\% for similar green mortgages.\\
+            借款人持有利率为3\%的抵押贷款（包括绿色抵押贷款折扣），而当前市场利率已上升至6\%，用于类似的绿色抵押贷款。
         \end{choices}
         
         \begin{correctanswer}
@@ -394,7 +419,8 @@
 
 
             \begin{question}
-                If a pool of mortgage loans begins the month with a balance of \$10,500,000, has a scheduled principal payment of \$54,800, and ends the month with a balance of \$9,800,000, what is the CPR for this month?
+                If a pool of mortgage loans begins the month with a balance of \$10,500,000, has a scheduled principal payment of \$54,800, and ends the month with a balance of \$9,800,000, what is the CPR for this month?\\
+                如果一个按揭贷款池月初余额为1050万美元，计划支付54,800美元，月末余额为980万美元，本月提前还款率是多少？
             \end{question}
                 
                 \begin{choices}
@@ -436,13 +462,18 @@
 
     \begin{question}
         An investor is evaluating the risks associated with Mortgage-Backed Securities (MBS), which are backed by a pool of insured mortgages. These mortgages carry prepayment risk, allowing borrowers to repay early due to favorable interest rate changes. From an investor's perspective, holding an MBS is similar to having a long position in a non-prepayable mortgage pool combined with which of the following options?
+        \\一位投资者正在评估抵押贷款支持证券（MBS）的风险，这些MBS由一组保险抵押贷款支持。这些抵押贷款具有提前还款风险，允许借款人在利率下降时提前还款。从投资者的角度来看，持有MBS类似于持有一个不可提前还款的抵押贷款池的长期头寸，与以下哪个选项类似？
         \end{question}
         
         \begin{choices}
-            \item A long American put option on the underlying pool of mortgages.
-            \item A short American call option on the underlying pool of mortgages.
-            \item A long European call option on the underlying pool of mortgages.
+            \item A long American put option on the underlying pool of mortgages.\\
+            底层抵押贷款池的长期美国看跌期权。
+            \item A short American call option on the underlying pool of mortgages.\\
+            底层抵押贷款池的短期美国看涨期权。
+            \item A long European call option on the underlying pool of mortgages.\\
+            底层抵押贷款池的长期欧洲看涨期权。
             \item A short European put option on the underlying pool of mortgages.
+            \\底层抵押贷款池的短期欧洲看跌期权。
         \end{choices}
         
         \begin{correctanswer}
@@ -466,6 +497,7 @@
 
         \begin{question}
             A homeowner has a 30-year, 4.5\% fixed-rate mortgage with a current balance of USD 300,000. Mortgage rates have been decreasing. If the existing mortgage was refinanced into a new 30-year, 3.5\% fixed-rate mortgage, which of the following is closest to the amount that the homeowner would save in monthly mortgage payments?
+            \\一位 homeowner 持有30年、4.5\%固定利率的抵押贷款，余额为30万美元。抵押贷款利率一直在下降。如果现有的抵押贷款被再融资为新的30年、3.5\%固定利率的抵押贷款，以下哪个选项最接近 homeowner 每月节省的抵押贷款金额？
             \end{question}
             
             \begin{choices}
@@ -512,14 +544,19 @@
 
 
             \begin{question}
-                A financial advisor is reviewing the prepayment penalty policies and types of loans available to clients. Based on the descriptions of prepayment penalties and loan types, which of the following statements is correct?
+                A financial advisor is reviewing the prepayment penalty policies and types of loans available to clients. Based on the descriptions of prepayment penalties and loan types, which of the following statements is correct?\\
+                一位金融顾问正在审查提前还款罚息政策和可用的贷款类型。根据提前还款罚息和贷款类型的描述，以下哪个陈述是正确的？
             \end{question}
             
             \begin{choices}
-                \item The interest rate on Adjustable Rate Mortgages (ARMs) is fixed, typically based on LIBOR + 250bps.
-                \item Mortgage interest rates are always variable, allowing borrowers to prepay when rates drop to lower their interest rate.
-                \item Prepayment penalty policies are the same across all banks, typically not charging penalties within the first two years of the loan.
-                \item The prepayment option allows borrowers to refinance at a lower rate when interest rates drop.
+                \item The interest rate on Adjustable Rate Mortgages (ARMs) is fixed, typically based on LIBOR + 250bps.\\
+                可变利率房贷（ARMs）的利率是固定的，通常基于LIBOR + 250bps。
+                \item Mortgage interest rates are always variable, allowing borrowers to prepay when rates drop to lower their interest rate.\\
+                房贷利率总是浮动的，允许借款人在利率下降时提前还款，降低他们的利息。
+                \item Prepayment penalty policies are the same across all banks, typically not charging penalties within the first two years of the loan.\\
+                提前还款罚息政策在所有银行都相同，通常在贷款的前两年不收取罚息。
+                \item The prepayment option allows borrowers to refinance at a lower rate when interest rates drop.\\
+                提前还款选项允许借款人在利率下降时重新融资，以较低的利率获得贷款。
             \end{choices}
             
             \begin{correctanswer}
@@ -553,13 +590,18 @@
 
 \begin{question}
     A junior risk analyst at an asset management firm is tasked with evaluating different types of loans and their associated risks for a client portfolio. Based on the descriptions of loan types and their risks, which of the following descriptions is correct?
+    \\一位资产管理部门的风险分析师被要求评估不同类型的贷款及其相关的风险，以评估客户投资组合。根据贷款类型和风险的描述，以下哪个描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Standard loans are issued by private institutions and typically do not meet loan limit and minimum down payment requirements.
-    \item Mortgage-Backed Securities (MBS) are riskier because the underlying loans have a higher default risk.
-    \item Non-conforming loans are recognized by the three major mortgage agencies and are typically provided by government-backed institutions.
-    \item Non-conforming loans are usually issued by private institutions outside the three major agencies and may carry higher risks.
+    \item Standard loans are issued by private institutions and typically do not meet loan limit and minimum down payment requirements.\\
+    标准贷款由私人机构发行，通常不符合贷款限额和最低首付要求。
+    \item Mortgage-Backed Securities (MBS) are riskier because the underlying loans have a higher default risk.\\
+    抵押贷款支持证券（MBS）风险更高，因为底层贷款具有更高的违约风险。
+    \item Non-conforming loans are recognized by the three major mortgage agencies and are typically provided by government-backed institutions.\\
+    非标准贷款被三大房贷机构认可，通常由政府支持的机构提供。
+    \item Non-conforming loans are usually issued by private institutions outside the three major agencies and may carry higher risks.\\
+    非标准贷款通常由三大机构以外的私人机构发行，可能具有更高的风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -596,6 +638,7 @@
 
 \begin{question}
     A loan officer at a bank is reviewing a client's mortgage repayment schedule. The client has an outstanding principal balance of ¥150,000 at the end of the month. The scheduled repayment for this month is ¥10,000, but the client actually repaid ¥15,000. Calculate the Single Monthly Mortality (SMM) rate for this month.
+    \\一位银行贷款经理正在审查客户的抵押贷款还款计划。客户在本月底的未偿还本金余额为150,000元。本月应还款为10,000元，但客户实际还款为15,000元。计算本月的单月提前还款率（SMM）。
 \end{question}
 
 \begin{choices}
@@ -638,14 +681,19 @@
 
 
 \begin{question}
-    The PSA (Public Securities Association) prepayment benchmark assumes that the monthly prepayment rate for a mortgage pool increases with its age or seasonal changes. The 100\% PSA (or simply 100 PSA) for a 30-year mortgage assumes the following increasing CPRs (Conditional Prepayment Rates): CPR starts at 0.2\% in the first month and increases by 0.2\% each month until the 30th month. For example, the CPR for the 14th month is 14(0.2\%) = 2.8\%. From the 30th month to the 360th month, the CPR is 6\%. Based on this information, which of the following statements is correct?
+    The PSA (Public Securities Association) prepayment benchmark assumes that the monthly prepayment rate for a mortgage pool increases with its age or seasonal changes. The 100\% PSA (or simply 100 PSA) for a 30-year mortgage assumes the following increasing CPRs (Conditional Prepayment Rates): CPR starts at 0.2\% in the first month and increases by 0.2\% each month until the 30th month. For example, the CPR for the 14th month is 14(0.2\%) = 2.8\%. From the 30th month to the 360th month, the CPR is 6\%. Based on this information, which of the following statements is correct?\\
+    PSA（公共证券协会）提前还款基准假设抵押贷款池的每月提前还款率随着其年龄或季节变化而增加。对于30年期的抵押贷款，100\% PSA（或简称为100 PSA）假设以下递增的CPR（条件提前还款率）：CPR在第一个月为0.2\%，每月增加0.2\%，直到第30个月。例如，第14个月的CPR为14(0.2\%) = 2.8\%。从第30个月到第360个月，CPR为6\%。根据这些信息，以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item 100\% PSA assumes a CPR of 6\% for all months.
-    \item 50\% PSA refers to half of the CPR specified by 100\% PSA, while 200\% PSA refers to twice the CPR specified by 100\% PSA.
-    \item The PSA benchmark does not account for seasonal variations in the mortgage pool.
-    \item The CPR for the 14th month is 2.8\%, which is consistent with the 100\% PSA specification.
+    \item 100\% PSA assumes a CPR of 6\% for all months.\\
+    100\% PSA假设所有月份的CPR均为6\%。
+    \item 50\% PSA refers to half of the CPR specified by 100\% PSA, while 200\% PSA refers to twice the CPR specified by 100\% PSA.\\
+    50\% PSA指的是100\% PSA指定的CPR的一半，而200\% PSA指的是100\% PSA指定的CPR的两倍。
+    \item The PSA benchmark does not account for seasonal variations in the mortgage pool.\\
+    PSA基准不考虑抵押贷款池的季节性变化。
+    \item The CPR for the 14th month is 2.8\%, which is consistent with the 100\% PSA specification.\\
+    第14个月的CPR为2.8\%，与100\% PSA的规格一致。
 \end{choices}
 
 \begin{correctanswer}
@@ -692,14 +740,19 @@
 
 
 \begin{question}
-    Tom is an experienced fixed-income trader, and he's considering two different financing strategies by managing his portfolio: a repurchase agreement (repo) and a dollar roll. The portfolio includes an MBS with a par value of USD 100 million with a 30-year FNMA pool with a 4.5\% coupon. He wants to understand the key differences between these strategies. Which of the following statements is true?
+    Tom is an experienced fixed-income trader, and he's considering two different financing strategies by managing his portfolio: a repurchase agreement (repo) and a dollar roll. The portfolio includes an MBS with a par value of USD 100 million with a 30-year FNMA pool with a 4.5\% coupon. He wants to understand the key differences between these strategies. Which of the following statements is true?\\
+    Tom是一位经验丰富的固定收益交易员，正在考虑通过管理其投资组合来采用两种不同的融资策略：回购协议（repo）和美元滚动交易。投资组合包括一个面值为1亿美元的30年期FNMA池，票面利率为4.5\%。他想了解这些策略的关键区别。以下哪个陈述是正确的？
 \end{question}
     
     \begin{choices}
-        \item In a repo, Tom would agree to buy back the same securities he initially sells, while in a dollar roll, he may buy similar but not the same securities.
-        \item Interest is added to the price at which the securities are repurchased for both repo and dollar roll transactions.
-        \item When Tom evaluates the value of the dollar roll trade, the cost should include the interest earned on the proceeds of the sale for the financing period.
-        \item In the dollar roll, Tom should have the coupon and the principal repayment that would have been received on the pool sold during the financing period.
+        \item In a repo, Tom would agree to buy back the same securities he initially sells, while in a dollar roll, he may buy similar but not the same securities.\\
+        在回购交易中，Tom会同意在未来以相同价格买回他最初卖出的相同证券。在美元滚动交易中，他可能会买回类似但不完全相同的证券。
+        \item Interest is added to the price at which the securities are repurchased for both repo and dollar roll transactions.\\
+        回购和美元滚动交易的价格中都包含利息。
+        \item When Tom evaluates the value of the dollar roll trade, the cost should include the interest earned on the proceeds of the sale for the financing period.\\
+        当Tom评估美元滚动交易的价值时，成本应包括在融资期间出售证券所获得的利息收入。
+        \item In the dollar roll, Tom should have the coupon and the principal repayment that would have been received on the pool sold during the financing period.\\
+        在美元滚动交易中，Tom应该收到在融资期间出售的抵押贷款池的利息和本金还款。
     \end{choices}
     
     \begin{correctanswer}
@@ -736,14 +789,19 @@
 
 
 \begin{question}
-    A junior trader on a derivatives trading desk is analyzing the differences between dollar roll transactions and traditional repurchase agreements to optimize the firm's trading strategies. What is a key difference between a dollar roll transaction and a traditional repurchase agreement (repo)?
+    A junior trader on a derivatives trading desk is analyzing the differences between dollar roll transactions and traditional repurchase agreements to optimize the firm's trading strategies. What is a key difference between a dollar roll transaction and a traditional repurchase agreement (repo)?\\
+    一位初级交易员正在分析美元滚动交易和传统回购协议之间的差异，以优化公司的交易策略。美元滚动交易和传统回购协议之间的一个关键区别是什么？
 \end{question}
     
     \begin{choices}
-        \item In a dollar roll, the initiating party sells securities and agrees to buy them back at a higher price, similar to a repo.
-        \item Dollar rolls involve the exchange of securities with the same characteristics between parties.
-        \item Dollar rolls may involve receiving different securities in the second month, unlike repos where the same securities are repurchased.
-        \item Dollar roll transactions add interest to the repurchase price, unlike repos where interest is not considered.
+        \item In a dollar roll, the initiating party sells securities and agrees to buy them back at a higher price, similar to a repo.\\
+        在美元滚动交易中，发起方出售证券并同意在未来以更高价格买回。类似于回购交易。
+        \item Dollar rolls involve the exchange of securities with the same characteristics between parties.\\
+        美元滚动交易涉及各方之间具有相同特征的证券交换。
+        \item Dollar rolls may involve receiving different securities in the second month, unlike repos where the same securities are repurchased.\\
+        美元滚动交易可能涉及在第二个月收到不同的证券，而回购交易中必须买回相同的证券。
+        \item Dollar roll transactions add interest to the repurchase price, unlike repos where interest is not considered.\\
+        美元滚动交易在回购价格中添加利息，而回购交易中不考虑利息。
     \end{choices}
     
     \begin{correctanswer}
@@ -779,14 +837,19 @@
 
 
     \begin{question}
-        A financial analyst is evaluating different types of Mortgage-Backed Securities (MBS) for a client. MBS can be classified into Agency MBS, issued by government agencies or sponsored enterprises, and Non-Agency MBS, issued by private entities. Which of the following descriptions is correct?
+        A financial analyst is evaluating different types of Mortgage-Backed Securities (MBS) for a client. MBS can be classified into Agency MBS, issued by government agencies or sponsored enterprises, and Non-Agency MBS, issued by private entities. Which of the following descriptions is correct?\\
+        一位金融分析师正在评估不同类型的抵押贷款支持证券（MBS），以评估客户的投资组合。MBS可以分为机构MBS，由政府机构或赞助企业发行，以及非机构MBS，由私人实体发行。以下哪个描述是正确的？
     \end{question}
     
     \begin{choices}
-        \item Agency MBS and Non-Agency MBS are both issued by government agencies.
-        \item Agency MBS provides investors with protection against default risk, but not prepayment.
-        \item Non-Agency MBS is issued by government-sponsored enterprises, providing investors with protection against default risk.
-        \item MBS issued by Ginnie Mae (GNMA) has no implicit guarantee.
+        \item Agency MBS and Non-Agency MBS are both issued by government agencies.\\
+        机构MBS和非机构MBS都由政府机构发行。
+        \item Agency MBS provides investors with protection against default risk, but not prepayment.\\
+        机构MBS为投资者提供违约保护，但不包括提前还款的保护。
+        \item Non-Agency MBS is issued by government-sponsored enterprises, providing investors with protection against default risk.\\
+        非机构MBS由政府赞助企业发行，为投资者提供违约保护。
+        \item MBS issued by Ginnie Mae (GNMA) has no implicit guarantee.\\
+        吉利美（Ginnie Mae）发行的MBS没有隐性担保。
     \end{choices}
     
     \begin{correctanswer}
@@ -821,14 +884,19 @@
 
 
 \begin{question}
-    An investment analyst is assessing the characteristics of Mortgage Pool Securities (MPS) within Agency Mortgage-Backed Securities (MBS) for a client portfolio. Based on the definition and characteristics of MPS, which of the following descriptions is correct?
+    An investment analyst is assessing the characteristics of Mortgage Pool Securities (MPS) within Agency Mortgage-Backed Securities (MBS) for a client portfolio. Based on the definition and characteristics of MPS, which of the following descriptions is correct?\\
+    一位投资分析师正在评估机构抵押贷款支持证券（MBS）中的抵押贷款池证券（MPS）的特征，以评估客户的投资组合。根据MPS的定义和特征，以下哪个描述是正确的？
 \end{question}
 
 \begin{choices}
-    \item MPS allows investors to receive different returns based on their investment amounts.
-    \item MPS involves no fees, and investors receive the entire cash flow from the mortgage pool.
-    \item MPS investors must bear prepayment risk, which is the uncertainty of the cash flow amounts they receive.
-    \item MPS is issued by private entities and does not provide protection against default risk for investors.
+    \item MPS allows investors to receive different returns based on their investment amounts.\\
+    MPS允许投资者根据其投资金额获得不同的回报。
+    \item MPS involves no fees, and investors receive the entire cash flow from the mortgage pool.\\
+    MPS不涉及费用，投资者收到抵押贷款池的全部现金流。
+    \item MPS investors must bear prepayment risk, which is the uncertainty of the cash flow amounts they receive.\\
+    MPS投资者必须承担提前还款风险，即他们收到的现金流金额可能不确定。
+    \item MPS is issued by private entities and does not provide protection against default risk for investors.\\
+    MPS由私人实体发行，不提供投资者对违约风险的保护。
 \end{choices}
 
 \begin{correctanswer}
@@ -862,14 +930,19 @@
 
 
 \begin{question}
-    A junior mortgage analyst at a fixed-income investment firm is currently assessing the trading strategies for mortgage-backed securities. The analyst is particularly focused on understanding the TBA (To-Be-Announced) trading mode to optimize client portfolios. Which of the following descriptions is correct regarding the TBA trading mode?
+    A junior mortgage analyst at a fixed-income investment firm is currently assessing the trading strategies for mortgage-backed securities. The analyst is particularly focused on understanding the TBA (To-Be-Announced) trading mode to optimize client portfolios. Which of the following descriptions is correct regarding the TBA trading mode?\\
+    一位初级固定收益投资公司的抵押贷款分析师正在评估抵押贷款支持证券的交易策略，特别关注理解TBA（To-Be-Announced）交易模式，以优化客户投资组合。以下哪个描述是关于TBA交易模式的正确描述？
 \end{question}
 
 \begin{choices}
-    \item In a specified pool trading mode, investors only learn the specific characteristics of the asset pool after the transaction is completed, increasing transaction uncertainty.
-    \item In the TBA trading mode, both parties know the specific asset pool at the time of transaction completion, reducing transaction uncertainty.
-    \item In the TBA trading mode, the contract requires the buyer to choose the cheapest deliverable asset pool that meets the contract requirements.
-    \item The specified pool trading mode provides higher transaction flexibility and liquidity compared to the TBA mode, as all characteristics are known before the transaction.
+    \item In a specified pool trading mode, investors only learn the specific characteristics of the asset pool after the transaction is completed, increasing transaction uncertainty.\\
+    在特定资产池交易模式下，投资者只有在交易完成后才能了解资产池的具体特征，增加了交易的不确定性。
+    \item In the TBA trading mode, both parties know the specific asset pool at the time of transaction completion, reducing transaction uncertainty.\\
+    在TBA交易模式下，交易双方在交易完成时都知道具体的资产池，减少了交易的不确定性。
+    \item In the TBA trading mode, the contract requires the buyer to choose the cheapest deliverable asset pool that meets the contract requirements.\\
+    在TBA交易模式下，合约要求买方选择最便宜的可交割资产池，满足合约要求。
+    \item The specified pool trading mode provides higher transaction flexibility and liquidity compared to the TBA mode, as all characteristics are known before the transaction.\\
+    特定资产池交易模式在交易前就明确了资产池的所有具体特征，因此提供了比TBA模式更高的交易灵活性和流动性。
 \end{choices}
 
 \begin{correctanswer}
@@ -902,14 +975,19 @@
 
 
 \begin{question}
-    A financial advisor at an investment bank is analyzing the mechanics of dollar roll transactions in mortgage-backed securities (MBS) trading to provide insights for clients. Based on the detailed description of dollar roll transactions, which of the following is the most accurate description?
+    A financial advisor at an investment bank is analyzing the mechanics of dollar roll transactions in mortgage-backed securities (MBS) trading to provide insights for clients. Based on the detailed description of dollar roll transactions, which of the following is the most accurate description?\\
+    一位投资银行的金融顾问正在分析抵押贷款支持证券（MBS）交易中的美元滚动交易的机制，以提供给客户洞察。根据美元滚动交易的详细描述，以下哪个描述是最准确的描述？
 \end{question}
 
 \begin{choices}
-    \item In a dollar roll transaction, investors must purchase identical securities in two consecutive months to ensure consistency and predictability.
-    \item During a dollar roll transaction, the repurchase price in the second month typically includes accrued interest to reflect the time value of money and opportunity cost.
-    \item In a dollar roll transaction, the securities purchased next month may differ from the first month, and there is no interest added to the repurchase price, causing one party to lose interest income for a month while the other gains it.
-    \item Dollar roll transactions are identical to standard repurchase agreements in all aspects, applicable to all types of MBS trading, and do not affect investors' cash flow.
+    \item In a dollar roll transaction, investors must purchase identical securities in two consecutive months to ensure consistency and predictability.\\
+    在美元滚动交易中，投资者必须在连续两个月内购买完全相同的证券，以确保一致性和可预测性。
+    \item During a dollar roll transaction, the repurchase price in the second month typically includes accrued interest to reflect the time value of money and opportunity cost.\\
+    在美元滚动交易中，第二个月的回购价格通常包括应计利息，以反映资金的时间价值和机会成本。
+    \item In a dollar roll transaction, the securities purchased next month may differ from the first month, and there is no interest added to the repurchase price, causing one party to lose interest income for a month while the other gains it.\\
+    在美元滚动交易中，下个月购买的证券可能与第一个月不同，且在回购价格上没有利息的增加，这导致交易的一方在一个月内失去利息收入，而另一方则获得相应的利息收益。
+    \item Dollar roll transactions are identical to standard repurchase agreements in all aspects, applicable to all types of MBS trading, and do not affect investors' cash flow.\\
+    美元滚动交易与标准的回购协议在所有方面都是相同的，适用于所有类型的MBS交易，不影响投资者的现金流。
 \end{choices}
 
 \begin{correctanswer}
@@ -945,7 +1023,8 @@
 
 
 \begin{question}
-    Suppose a 4\% pool with a face value of \$2,000,000 was sold in August for 104.00 and repurchased in September for 103.25. The values 104 and 103.25 are percentages of the face value. The monthly payment date is the 15th day of each month(assuming 30 days per month).Funds from the first month's sale will earn one month's interest at 0.15\%. Assume that the forgone coupon and principal payments are 0.6\% of the face value. Calculate the value of this dollar roll transaction.
+    Suppose a 4\% pool with a face value of \$2,000,000 was sold in August for 104.00 and repurchased in September for 103.25. The values 104 and 103.25 are percentages of the face value. The monthly payment date is the 15th day of each month(assuming 30 days per month).Funds from the first month's sale will earn one month's interest at 0.15\%. Assume that the forgone coupon and principal payments are 0.6\% of the face value. Calculate the value of this dollar roll transaction.\\
+    假设一个面值为200万美元、票面利率为4\%的抵押贷款池在8月份以104.00的价格出售，并在9月份以103.25的价格回购。104和103.25是面值的百分比。每月还款日期为每月的15日（假设每月30天）。第一个月销售所得资金将获得一个月的利息，利率为0.15\%。假设放弃的票息和本金支付为面值的0.6\%。计算这个美元滚动交易的价值。
 \end{question}
 
 \begin{choices}
@@ -1005,14 +1084,19 @@
 
 
 \begin{question}
-    In the modern CMO (Collateralized Mortgage Obligation) structure, how does the relationship between PAC (Planned Amortization Class) bonds and support tranches affect their respective prepayment risks?
+    In the modern CMO (Collateralized Mortgage Obligation) structure, how does the relationship between PAC (Planned Amortization Class) bonds and support tranches affect their respective prepayment risks?\\
+    在现代CMO（担保抵押贷款义务）结构中，PAC（计划摊销类）债券和支持层之间的关系如何影响各自的提前还款风险？
 \end{question}
 
 \begin{choices}
-    \item The PAC tranches do not have a priority claim against the cash flows generated by the underlying mortgage pool.
-    \item The PAC tranches have a priority claim against the cash flows generated by the underlying mortgage pool.
-    \item The prepayment risk of the PAC tranche is directly proportional to the prepayment risk of the support tranche.
-    \item The prepayment risks of the PAC tranche and the support tranche are independent and do not affect each other.
+    \item The PAC tranches do not have a priority claim against the cash flows generated by the underlying mortgage pool.\\
+    PAC层对底层抵押贷款池产生的现金流没有优先权。
+    \item The PAC tranches have a priority claim against the cash flows generated by the underlying mortgage pool.\\
+    PAC层对底层抵押贷款池产生的现金流有优先权。
+    \item The prepayment risk of the PAC tranche is directly proportional to the prepayment risk of the support tranche.\\
+    PAC层的提前还款风险与支持层的提前还款风险直接成正比。
+    \item The prepayment risks of the PAC tranche and the support tranche are independent and do not affect each other.\\
+    PAC层和支持层的提前还款风险是独立的，互不影响。
 \end{choices}
 
 \begin{correctanswer}
@@ -1046,14 +1130,19 @@
 
 
 \begin{question}
-    A financial analyst at an investment firm is currently comparing the characteristics of Principal-Only (PO) securities and Interest-Only (IO) securities to provide valuable insights for investment decisions. Which of the following statements is correct?
+    A financial analyst at an investment firm is currently comparing the characteristics of Principal-Only (PO) securities and Interest-Only (IO) securities to provide valuable insights for investment decisions. Which of the following statements is correct?\\
+    一位投资公司的金融分析师正在比较本金只支付（PO）证券和利息只支付（IO）证券的特征，以提供有价值的洞察，帮助投资决策。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item PO securities have larger cash flows at the beginning, which decrease over time.
-    \item The total cash flow value received by IO securities throughout the life of the mortgage pool is always higher than initially expected.
-    \item A higher prepayment rate will lead to a decrease in the yield of PO securities.
-    \item Uncertainty in interest rates and prepayment rates typically results in a decrease in the value of IO securities and an increase in the value of PO securities.
+    \item PO securities have larger cash flows at the beginning, which decrease over time.\\
+    PO证券在初期现金流较大，随着时间的推移而逐渐减少。
+    \item The total cash flow value received by IO securities throughout the life of the mortgage pool is always higher than initially expected.\\
+    IO证券在整个抵押贷款池的生命周期内收到的现金流价值总是高于最初的预期。
+    \item A higher prepayment rate will lead to a decrease in the yield of PO securities.\\
+    较高的提前还款率会导致PO证券的收益率下降。
+    \item Uncertainty in interest rates and prepayment rates typically results in a decrease in the value of IO securities and an increase in the value of PO securities.\\
+    利率和提前还款率的不确定性通常会导致IO证券的价值降低，而PO证券的价值则可能因本金回收的加速而增加，从而使其在不确定性中更具吸引力。
 \end{choices}
 
 \begin{correctanswer}
@@ -1086,14 +1175,19 @@
 
 
 \begin{question}
-    A financial analyst is evaluating the characteristics of Principal-Only (PO) securities and Interest-Only (IO) securities to determine their respective risks and returns. Which of the following statements is correct?
+    A financial analyst is evaluating the characteristics of Principal-Only (PO) securities and Interest-Only (IO) securities to determine their respective risks and returns. Which of the following statements is correct?\\
+    一位金融分析师正在评估本金只支付（PO）证券和利息只支付（IO）证券的特征，以确定它们各自的风险和回报。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Only IO securities carry the risk of loss.
-    \item The cash flows of PO securities decrease over time.
-    \item A higher prepayment rate will lead to higher yields for IO securities.
-    \item Uncertainty in interest rates and prepayment rates leads to a decrease in the value of both PO and IO securities.
+    \item Only IO securities carry the risk of loss.\\
+    IO证券只承担损失风险。
+    \item The cash flows of PO securities decrease over time.\\
+    PO证券的现金流随着时间的推移而减少。
+    \item A higher prepayment rate will lead to higher yields for IO securities.\\
+    较高的提前还款率会导致IO证券的收益率提高。
+    \item Uncertainty in interest rates and prepayment rates leads to a decrease in the value of both PO and IO securities.\\
+    利率和提前还款率的不确定性导致PO和IO证券的价值都降低。
 \end{choices}
 
 \begin{correctanswer}
@@ -1129,14 +1223,19 @@
 
 
 \begin{question}
-    A financial analyst is examining the structure of the To Be Announced (TBA) market, which is a subset of the mortgage-backed securities (MBS) market. Which of the following statements most accurately characterizes the structure of the TBA market?
+    A financial analyst is examining the structure of the To Be Announced (TBA) market, which is a subset of the mortgage-backed securities (MBS) market. Which of the following statements most accurately characterizes the structure of the TBA market?\\
+    一位金融分析师正在评估To Be Announced（TBA）市场的结构，这是抵押贷款支持证券（MBS）市场的一个子集。以下哪个陈述最准确地描述了TBA市场的结构？
 \end{question}
 
 \begin{choices}
-    \item TBAs are comprised of highly diverse securities thereby reducing the risk to investors.
-    \item The composition of a TBA is announced at the time the trade bids on it.
-    \item The TBA market is essentially a forward market in which buyer and seller agree to exchange a pool of securities for cash in the future.
-    \item There are actually two separate TBA markets, one for fixed-rate agency pools and the other for conventional adjustable-rate mortgage pools.
+    \item TBAs are comprised of highly diverse securities thereby reducing the risk to investors.\\
+    TBAs由高度多样化的证券组成，从而降低投资者的风险。
+    \item The composition of a TBA is announced at the time the trade bids on it.\\
+    TBA的组成在交易时并不会被宣布。
+    \item The TBA market is essentially a forward market in which buyer and seller agree to exchange a pool of securities for cash in the future.\\
+    TBA市场本质上是一个远期市场，买卖双方同意在未来交换一组证券以换取现金。
+    \item There are actually two separate TBA markets, one for fixed-rate agency pools and the other for conventional adjustable-rate mortgage pools.\\
+    TBA市场实际上有两个独立的市场，一个用于固定利率机构池，另一个用于传统可调利率抵押贷款池。
 \end{choices}
 
 \begin{correctanswer}
@@ -1170,14 +1269,19 @@
 
 
 \begin{question}
-    An investor in MBS is evaluating two methods of financing a recent purchase of an MBS pool. One method involves entering into a repurchase agreement (repo) and selling the pool now. The other method involves purchasing a dollar roll. One advantage of purchasing a roll instead of entering into a repo agreement is that roll buyers:
+    An investor in MBS is evaluating two methods of financing a recent purchase of an MBS pool. One method involves entering into a repurchase agreement (repo) and selling the pool now. The other method involves purchasing a dollar roll. One advantage of purchasing a roll instead of entering into a repo agreement is that roll buyers:\\
+    一位MBS投资者正在评估两种融资方法，以购买最近购买的MBS池。一种方法涉及进入回购协议（repo）并立即出售池子。另一种方法涉及购买美元滚动。购买滚动而不是进入回购协议的一个优势是滚动买家：
 \end{question}
 
 \begin{choices}
-    \item Receive the same securities back when the transaction is concluded.
-    \item Receive the interest and principal repayments on the pool during the life of the roll.
-    \item Are more similar to a secured borrower than a repo participant.
-    \item Are subject to less risk of prepayment than a repo buyer.
+    \item Receive the same securities back when the transaction is concluded.\\
+    在交易完成后收到相同的证券。
+    \item Receive the interest and principal repayments on the pool during the life of the roll.\\
+    在滚动期间收到抵押贷款池的利息和本金还款。
+    \item Are more similar to a secured borrower than a repo participant.\\
+    与回购参与者相比，更像是一个担保借款人。
+    \item Are subject to less risk of prepayment than a repo buyer.\\
+    比回购买家面临更低的提前还款风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -1235,17 +1339,22 @@
 
 
 \begin{question}
-    Emma, a structured products analyst at a global investment bank, is evaluating a new residential mortgage-backed security (RMBS) with a pool size of 800 million dollars. Her team needs to assess the prepayment risk characteristics of the pool. Which of the following statements about MBS analysis is correct?
+    Emma, a structured products analyst at a global investment bank, is evaluating a new residential mortgage-backed security (RMBS) with a pool size of 800 million dollars. Her team needs to assess the prepayment risk characteristics of the pool. Which of the following statements about MBS analysis is correct?\\
+    Emma，一位全球投资银行的结构化产品分析师，正在评估一个面值为8亿美元的新型住宅抵押贷款支持证券（RMBS）。她的团队需要评估抵押贷款池的提前还款风险特征。以下哪个陈述关于MBS分析是正确的？
     \end{question}
     
     \begin{choices}
-        \item For Ginnie Mae MBS valuation, both prepayment risk and credit risk modeling should be prioritized as they have equal importance in price determination.
+        \item For Ginnie Mae MBS valuation, both prepayment risk and credit risk modeling should be prioritized as they have equal importance in price determination.\\
+        对于吉利美MBS估值，提前还款风险和信用风险建模应该被优先考虑，因为它们在价格决定中具有同等重要性。
         
-        \item The weighted-average FICO score of the mortgage pool primarily reflects the credit quality of the lending institutions in the securitization.
+        \item The weighted-average FICO score of the mortgage pool primarily reflects the credit quality of the lending institutions in the securitization.\\
+        抵押贷款池的加权平均FICO分数主要反映了证券化过程中贷款机构的信用质量。
         
-        \item When Single Monthly Mortality (SMM) rate increases, IO strip values rise due to increased interest payments, while PO strip values fall due to faster principal repayment.
+        \item When Single Monthly Mortality (SMM) rate increases, IO strip values rise due to increased interest payments, while PO strip values fall due to faster principal repayment.\\
+        当单月死亡率（SMM）上升时，IO层价值上升，因为利息支付增加，而PO层价值下降，因为本金还款加速。
         
-        \item In prepayment modeling, FICO scores and LTV ratios are key inputs for default probability estimation, while loan seasoning helps predict voluntary prepayment patterns.
+        \item In prepayment modeling, FICO scores and LTV ratios are key inputs for default probability estimation, while loan seasoning helps predict voluntary prepayment patterns.\\
+        在提前还款建模中，FICO分数和LTV比率是违约概率估计的关键输入，而贷款年限有助于预测自愿提前还款模式。
     \end{choices}
     
     \begin{correctanswer}
@@ -1290,17 +1399,22 @@
 
 
     \begin{question}
-        A portfolio manager at a quantitative hedge fund is evaluating an agency MBS with a pool size of \$500 million. She needs to identify factors that could increase prepayment risk and affect the portfolio's cash flows. Which of the following scenarios would most likely increase prepayment rates?
+        A portfolio manager at a quantitative hedge fund is evaluating an agency MBS with a pool size of \$500 million. She needs to identify factors that could increase prepayment risk and affect the portfolio's cash flows. Which of the following scenarios would most likely increase prepayment rates?\\
+        一位量化对冲基金的组合经理正在评估一个面值为5亿美元的机构MBS。她需要识别可能导致提前还款风险增加并影响组合现金流的因素。以下哪个场景最可能导致提前还款率上升？
     \end{question}
         
         \begin{choices}
-            \item The weighted-average FICO score of borrowers in the mortgage pool declines from 760 to 690 due to increased credit card utilization.
+            \item The weighted-average FICO score of borrowers in the mortgage pool declines from 760 to 690 due to increased credit card utilization.\\
+            由于信用卡使用率上升，抵押贷款池中借款人的加权平均FICO分数从760降至690。
             
-            \item The mortgage pool consists mainly of 2-year seasoned loans with an average loan-to-value ratio of 85\%.
+            \item The mortgage pool consists mainly of 2-year seasoned loans with an average loan-to-value ratio of 85\%.\\
+            抵押贷款池主要由2年期的成熟贷款组成，平均贷款价值比为85\%。
             
-            \item The 90-day delinquency rate in comparable mortgage pools rises from 0.4\% to 1.1\% amid economic uncertainty.
+            \item The 90-day delinquency rate in comparable mortgage pools rises from 0.4\% to 1.1\% amid economic uncertainty.\\
+            在经济不确定性期间，可比抵押贷款池的90天逾期率从0.4\%上升到1.1\%。
             
-            \item The Federal Reserve implements a dovish policy shift, causing the 30-year mortgage rate to decrease by 125 basis points.
+            \item The Federal Reserve implements a dovish policy shift, causing the 30-year mortgage rate to decrease by 125 basis points.\\
+            美联储实施宽松政策，导致30年期抵押贷款利率下降125个基点。
         \end{choices}
         
         \begin{correctanswer}
@@ -1342,14 +1456,23 @@
             \[
             \text{Prepayment Rate} = \frac{1}{a + b \cdot e^{-c \cdot T}}
             \]
-            where \( a, b, c \) are parameters determined from empirical data, and \( T \) is time. The prepayment rate increases as interest rates decline but tends to stabilize after reaching a certain level. Please explain why the prepayment rate increases initially with declining interest rates but ultimately approaches a stable value.
+            where \( a, b, c \) are parameters determined from empirical data, and \( T \) is time. The prepayment rate increases as interest rates decline but tends to stabilize after reaching a certain level. Please explain why the prepayment rate increases initially with declining interest rates but ultimately approaches a stable value.\\
+            在抵押贷款支持证券（MBS）的背景下，提前还款行为建模涉及复杂的数学关系，不仅取决于利率，还取决于各种因素。一个常用的提前还款率模型是：
+            \[
+            \text{Prepayment Rate} = \frac{1}{a + b \cdot e^{-c \cdot T}}
+            \]
+            其中\( a, b, c \)是根据经验数据确定的参数，\( T \)是时间。提前还款率随着利率下降而增加，但最终趋于稳定。请解释为什么在利率下降初期提前还款率会增加，但最终趋于稳定。
         \end{question}
         
         \begin{choices}
-            \item In the early stages of declining interest rates, borrowers are inclined to refinance at lower rates, thus increasing the prepayment rate. However, over time, most eligible borrowers have already refinanced, leading to a stabilization of the prepayment rate.
-            \item In the early stages of declining interest rates, borrowers have no incentive to prepay because the new loan rates may not be significantly lower than their current loan rates, so the prepayment rate does not increase.
-            \item The increase in the prepayment rate is entirely driven by market sentiment and is unrelated to changes in interest rates, meaning that even if rates decline, borrowers may choose to prepay for other reasons.
-            \item The prepayment rate will never stabilize; instead, it will continue to increase as interest rates decline, as borrowers always tend to refinance at lower rates.
+            \item In the early stages of declining interest rates, borrowers are inclined to refinance at lower rates, thus increasing the prepayment rate. However, over time, most eligible borrowers have already refinanced, leading to a stabilization of the prepayment rate.\\
+            在利率下降初期，借款人倾向于利用更低的利率重新融资，从而增加提前还款率，但随着时间的推移，大多数符合条件的借款人已经重新融资，导致提前还款率趋于稳定。
+            \item In the early stages of declining interest rates, borrowers have no incentive to prepay because the new loan rates may not be significantly lower than their current loan rates, so the prepayment rate does not increase.\\
+            在利率下降初期，借款人没有提前还款的动机，因为新贷款利率可能不会显著低于他们当前的贷款利率，因此提前还款率不会增加。
+            \item The increase in the prepayment rate is entirely driven by market sentiment and is unrelated to changes in interest rates, meaning that even if rates decline, borrowers may choose to prepay for other reasons.\\
+            提前还款率完全由市场情绪驱动，与利率变化无关，这意味着即使利率下降，借款人也可能出于其他原因选择提前还款。
+            \item The prepayment rate will never stabilize; instead, it will continue to increase as interest rates decline, as borrowers always tend to refinance at lower rates.\\
+            提前还款率永远不会稳定；相反，它会随着利率下降而继续增加，因为借款人总是倾向于以较低的利率重新融资。
         \end{choices}
         
         \begin{correctanswer}
@@ -1382,14 +1505,19 @@
 
 
         \begin{question}
-            A risk analyst at a mortgage investment firm is studying various methods to address prepayment path dependency in mortgage-backed securities. Which of the following methods is often used to avoid the problems associated with prepayment path dependency?
+            A risk analyst at a mortgage investment firm is studying various methods to address prepayment path dependency in mortgage-backed securities. Which of the following methods is often used to avoid the problems associated with prepayment path dependency?\\
+            一位抵押贷款投资公司的风险分析师正在研究各种方法，以解决抵押贷款支持证券中的提前还款路径依赖问题。以下哪个方法通常用于避免与提前还款路径依赖相关的问题？
         \end{question}
         
         \begin{choices}
-            \item Monte Carlo simulation.
-            \item Error-correction model tree.
-            \item Cox-Ingersoll-Ross tree design.
-            \item Bernard and Schwartz simulation.
+            \item Monte Carlo simulation.\\
+            蒙特卡洛模拟。
+            \item Error-correction model tree.\\
+            误差修正模型树。
+            \item Cox-Ingersoll-Ross tree design.\\
+            Cox-Ingersoll-Ross树状设计。
+            \item Bernard and Schwartz simulation.\\
+            Bernard和Schwartz模拟。
         \end{choices}
         
         \begin{correctanswer}
@@ -1422,14 +1550,19 @@
 
 
         \begin{question}
-            A mortgage analyst at a financial institution is studying various factors affecting prepayment behavior in mortgage-backed securities (MBS). Which of the following statements correctly describes a characteristic of prepayment behavior?
+            A mortgage analyst at a financial institution is studying various factors affecting prepayment behavior in mortgage-backed securities (MBS). Which of the following statements correctly describes a characteristic of prepayment behavior?\\
+            一位金融公司的抵押贷款分析师正在研究影响抵押贷款支持证券（MBS）提前还款行为的各种因素。以下哪个陈述正确描述了提前还款行为的一个特征？
         \end{question}
         
         \begin{choices}
-            \item The likelihood of refinancing is positively correlated with market interest rate increases and negatively correlated with improvements in borrower credit quality.
-            \item The turnover rate is not affected by seasonality and remains stable throughout the year.
-            \item Default is considered a form of prepayment and affects MBS cash flows.
-            \item Curtailment typically occurs at the beginning of the loan term to reduce the loan balance.
+            \item The likelihood of refinancing is positively correlated with market interest rate increases and negatively correlated with improvements in borrower credit quality.\\
+            再融资的可能性与市场利率的上升成正比，与借款人信用质量的提高成正比。
+            \item The turnover rate is not affected by seasonality and remains stable throughout the year.\\
+            周转率不受季节性影响，全年保持稳定。
+            \item Default is considered a form of prepayment and affects MBS cash flows.\\
+            违约被视为提前还款的一种形式，影响MBS的现金流。
+            \item Curtailment typically occurs at the beginning of the loan term to reduce the loan balance.\\
+            削减通常发生在贷款期限的开始阶段，以减少贷款余额。
         \end{choices}
         
         \begin{correctanswer}
@@ -1461,14 +1594,19 @@
 
 
 \begin{question}
-    A fixed-income analyst at an investment bank is studying the Option-Adjusted Spread (OAS) methodology for MBS valuation. Which of the following statements MOST LIKELY misrepresents the characteristics of  the OAS valuation procedure?
+    A fixed-income analyst at an investment bank is studying the Option-Adjusted Spread (OAS) methodology for MBS valuation. Which of the following statements MOST LIKELY misrepresents the characteristics of  the OAS valuation procedure?\\
+    一位投资银行的固定收益分析师正在研究MBS估值的Option-Adjusted Spread（OAS）方法。以下哪个陈述最可能误解了OAS估值程序的特征？
 \end{question}
 
 \begin{choices}
-    \item The OAS valuation procedure involves making an initial estimate of the OAS, followed by conducting a Monte Carlo simulation using the yield on US Treasury bills as the discount rate.
-    \item OAS represents the expected yield spread of fixed-income securities over the risk-free rate and is used to measure the relative valuation of MBS.
-    \item The mean reversion characteristic of OAS implies that OAS estimates are repeatedly adjusted until the simulated price equals the market price.
-    \item A limitation of the OAS valuation method is that OAS itself implies an assumption that the spread remains constant over time, although OAS actually changes over time.
+    \item The OAS valuation procedure involves making an initial estimate of the OAS, followed by conducting a Monte Carlo simulation using the yield on US Treasury bills as the discount rate.\\
+    OAS估值程序包括对OAS进行初始估计，然后使用美国国债收益率作为贴现率进行蒙特卡洛模拟。
+    \item OAS represents the expected yield spread of fixed-income securities over the risk-free rate and is used to measure the relative valuation of MBS.\\
+    OAS表示固定收益证券预期收益率超过无风险收益率的差额，用于衡量MBS的相对估值。
+    \item The mean reversion characteristic of OAS implies that OAS estimates are repeatedly adjusted until the simulated price equals the market price.\\
+    OAS的均值复归特性意味着OAS估计值需要反复调整，直到模拟价格等于市场价格。
+    \item A limitation of the OAS valuation method is that OAS itself implies an assumption that the spread remains constant over time, although OAS actually changes over time.\\
+    OAS估值方法的一个局限性是，OAS本身假设利差在一段时间内保持不变，但实际上OAS会随时间变化。
 \end{choices}
 
 \begin{correctanswer}
@@ -1516,13 +1654,29 @@
         \hline
         \end{tabular}
         \end{center}
+        Emily，一位固定收益分析师，最近完成了一项CMO分层的蒙特卡洛模拟分析。她的分析包括三个等权重的路径，每个路径的现值使用不同的利差计算。如果CMO分层的实际市场价格为70.00，那么期权调整利差（OAS）是多少？
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|}
+            \hline
+            \textbf{路径} & \textbf{55基点时的现值} & \textbf{65基点时的现值} & \textbf{75基点时的现值} \\
+            \hline
+            1 & 72 & 70 & 68 \\
+            2 & 74 & 72 & 70 \\
+            3 & 70 & 68 & 66 \\
+            \hline
+            \end{tabular}
+            \end{center}
     \end{question}
     
     \begin{choices}
-        \item 55 basis points
-        \item 65 basis points
-        \item 75 basis points
-        \item 80 basis points
+        \item 55 basis points\\
+        55基点
+        \item 65 basis points\\
+        65基点
+        \item 75 basis points\\
+        75基点
+        \item 80 basis points\\
+        80基点
     \end{choices}
     
     
@@ -1568,14 +1722,19 @@
 
 
     \begin{question}
-        A mortgage analyst is evaluating factors that could influence prepayment rates in a portfolio of Mortgage-Backed Securities (MBS). Which of the following factors is most likely to lead to increased prepayments in Mortgage-Backed Securities (MBS)?
+        A mortgage analyst is evaluating factors that could influence prepayment rates in a portfolio of Mortgage-Backed Securities (MBS). Which of the following factors is most likely to lead to increased prepayments in Mortgage-Backed Securities (MBS)?\\
+        一位抵押贷款分析师正在评估影响抵押贷款支持证券（MBS）组合提前还款率的各种因素。以下哪个因素最可能导致抵押贷款支持证券（MBS）的提前还款率上升？
     \end{question}
         
         \begin{choices}
-            \item A stable housing market encourages borrowers to maintain their current mortgages.
-            \item Volatile housing prices prompt borrowers to refinance or sell their properties.
-            \item Rising interest rates discourage refinancing activities.
-            \item Approaching maturity of the MBS has minimal impact on prepayment behavior.
+            \item A stable housing market encourages borrowers to maintain their current mortgages.\\
+            稳定的住房市场鼓励借款人保持其当前的抵押贷款。
+            \item Volatile housing prices prompt borrowers to refinance or sell their properties.\\
+            波动的住房价格促使借款人进行再融资或出售其房产。
+            \item Rising interest rates discourage refinancing activities.\\
+            利率上升会减少再融资活动。
+            \item Approaching maturity of the MBS has minimal impact on prepayment behavior.\\
+            MBS接近到期日对提前还款行为的影响最小。
         \end{choices}
         
         \begin{correctanswer}
@@ -1612,14 +1771,19 @@
 
 
 \begin{question}
-    A quantitative analyst at a mortgage investment firm is tasked with improving their MBS valuation models. During their research, they discover that traditional valuation methods may not fully capture the complexity of these securities. In their analysis of different methodologies, they focus particularly on path dependency characteristics. Which of their findings about path dependency and valuation methods is correct?
+    A quantitative analyst at a mortgage investment firm is tasked with improving their MBS valuation models. During their research, they discover that traditional valuation methods may not fully capture the complexity of these securities. In their analysis of different methodologies, they focus particularly on path dependency characteristics. Which of their findings about path dependency and valuation methods is correct?\\
+    一位量化分析师正在改进他们的MBS估值模型。在他们的研究中，他们发现传统的估值方法可能无法完全捕捉这些证券的复杂性。在分析不同的方法论时，他们特别关注路径依赖特征。以下关于路径依赖和估值方法的发现哪个是正确的？
 \end{question}
 
 \begin{choices}
-    \item Monte Carlo simulation provides limited value in path dependency analysis due to its focus on single-period scenarios.
-    \item The burnout effect indicates that prepayment rates tend to decrease when refinancing rates drop substantially, as borrowers who are likely to refinance have already done so in previous rate cycles.
-    \item Path dependency primarily affects short-term pricing adjustments in MBS valuation, with minimal impact on long-term value.
-    \item Monte Carlo simulation's primary advantage lies in its computational speed rather than its ability to capture path dependency characteristics.
+    \item Monte Carlo simulation provides limited value in path dependency analysis due to its focus on single-period scenarios.\\
+    蒙特卡洛模拟在路径依赖分析中价值有限，因为它专注于单期情景。
+    \item The burnout effect indicates that prepayment rates tend to decrease when refinancing rates drop substantially, as borrowers who are likely to refinance have already done so in previous rate cycles.\\
+    燃尽效应表明，当再融资利率显著下降时，提前还款率往往不会大幅上升。这是因为在之前的低利率周期中，倾向于再融资的借款人已经完成了再融资。剩余的借款人对利率变化的敏感度较低，即使利率进一步下降，也不太可能进行再融资。
+    \item Path dependency primarily affects short-term pricing adjustments in MBS valuation, with minimal impact on long-term value.\\
+    路径依赖主要影响MBS估值中的短期定价调整，对长期价值影响最小。
+    \item Monte Carlo simulation's primary advantage lies in its computational speed rather than its ability to capture path dependency characteristics.\\
+    蒙特卡洛模拟的主要优势在于其计算速度，而不是其捕捉路径依赖特征的能力。实际上，为了准确模拟路径依赖性，蒙特卡洛模拟往往需要大量的计算时间。
 \end{choices}
 
 \begin{correctanswer}
@@ -1652,14 +1816,19 @@
 
 
 \begin{question}
-    A senior analyst at a fixed-income investment firm has been tasked with training new team members about MBS valuation methods. During a presentation on Option-Adjusted Spread (OAS) analysis, several team members raise questions about the methodology's limitations. The analyst reviews their notes and needs to identify which statement about OAS characteristics requires correction. Which of the following statements MOST LIKELY misrepresents the characteristics of OAS?
+    A senior analyst at a fixed-income investment firm has been tasked with training new team members about MBS valuation methods. During a presentation on Option-Adjusted Spread (OAS) analysis, several team members raise questions about the methodology's limitations. The analyst reviews their notes and needs to identify which statement about OAS characteristics requires correction. Which of the following statements MOST LIKELY misrepresents the characteristics of OAS?\\
+    一位固定收益投资公司的资深分析师被任命为培训新团队成员关于MBS估值方法。在Option-Adjusted Spread（OAS）分析的介绍中，团队成员提出了关于方法局限性的问题。分析师回顾了他们的笔记，需要确定哪个关于OAS特征的陈述需要纠正。以下哪个陈述最可能误解了OAS的特征？
 \end{question}
 
 \begin{choices}
-    \item OAS is based on Monte Carlo simulation results, which may inherently contain model risk.
-    \item The adjustment of interest rate paths may be subjective and affected by model risk.
-    \item OAS implies an assumption that spreads remain constant over a period of time, although OAS actually changes over time.
-    \item Prepayment rates are closely related to OAS modeling, and MBS prepayment rates can be accurately estimated.
+    \item OAS is based on Monte Carlo simulation results, which may inherently contain model risk.\\
+    OAS是基于蒙特卡洛模拟结果得出的，这本身就包含模型风险。
+    \item The adjustment of interest rate paths may be subjective and affected by model risk.\\
+    利率路径的调整可能主观且受模型风险影响。
+    \item OAS implies an assumption that spreads remain constant over a period of time, although OAS actually changes over time.\\
+    OAS假设利差在一段时间内保持不变，但实际上OAS会随时间变化。
+    \item Prepayment rates are closely related to OAS modeling, and MBS prepayment rates can be accurately estimated.\\
+    提前还款率与OAS建模密切相关，MBS提前还款率可以准确估计。
 \end{choices}
 
 \begin{correctanswer}

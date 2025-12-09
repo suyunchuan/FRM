@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -22,6 +22,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}  % 提供数学符号，包括\therefore
 \usepackage{multirow}
+\usepackage{float}
 %目录设定
 %快捷键 CMD + / 注释
 %  \renewcommand{\cftdot}{} % 隐藏目录中的页码
@@ -97,13 +98,18 @@
 
 \begin{question}
     As a portfolio manager for a mutual fund, you are evaluating three different corporate bonds for potential investment. Your fund's investment policy mandates that any bond included in the portfolio must have an investment grade rating from at least two reputable bond rating agencies. Which of the bonds listed below satisfies your investment criteria?
+    \\作为一名共同基金的组合经理，你正在评估三种不同的企业债券以进行潜在投资。你的基金的投资政策规定，任何包含在投资组合中的债券必须至少从两个知名的债券评级机构获得投资级评级。以下列出的债券中哪一种符合你的投资标准？
 \end{question}
 
 \begin{choices}
-    \item Bond A carries an S\&P rating of BB and a Moody’s rating of Baa. 
-    \item Bond B carries an S\&P rating of BBB and a Moody’s rating of Ba. 
-    \item Bond C carries an S\&P rating of BBB and a Moody’s rating of Baa. 
-    \item Bond D carries an S\&P rating of A and a Moody’s rating of B.
+    \item Bond A carries an S\&P rating of BB and a Moody’s rating of Baa. \\
+    Bond A持有标准普尔（S\&P）评级为BB和穆迪（Moody’s）评级为Baa。
+    \item Bond B carries an S\&P rating of BBB and a Moody’s rating of Ba. \\
+    Bond B持有标准普尔（S\&P）评级为BBB和穆迪（Moody’s）评级为Ba。
+    \item Bond C carries an S\&P rating of BBB and a Moody’s rating of Baa. \\
+    Bond C持有标准普尔（S\&P）评级为BBB和穆迪（Moody’s）评级为Baa。
+    \item Bond D carries an S\&P rating of A and a Moody’s rating of B. \\
+    Bond D持有标准普尔（S\&P）评级为A和穆迪（Moody’s）评级为B。
 \end{choices}
 
 \begin{correctanswer}
@@ -165,12 +171,38 @@
     \hline
     \end{array}
     \]
+    \\一位信用风险分析师正在分析一家大型投资银行的贷款组合的一年评级转移概率。分析师已经编制了以下转移矩阵，并需要验证团队计算的几个概率。以下哪个陈述正确解释了矩阵中显示的转移概率？
+    \[
+        \begin{array}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \text{从/到（\%）} & \text{AAA} & \text{AA} & \text{A} & \text{BBB} & \text{BB} & \text{B} & \text{CCC/C} & \text{D} \\
+        \hline
+        \text{AAA} & 87.44 & 7.37 & 0.46 & 0.09 & 0.06 & 0.00 & 0.00 & 4.59 \\
+        \hline
+        \text{AA} & 0.60 & 86.65 & 7.78 & 0.58 & 0.06 & 0.11 & 0.02 & 0.01 \\
+        \hline
+        \text{A} & 0.05 & 2.05 & 86.96 & 5.50 & 0.43 & 0.16 & 0.03 & 0.04 \\
+        \hline
+        \text{BBB} & 0.02 & 0.21 & 3.85 & 84.13 & 4.39 & 0.77 & 0.19 & 0.29 \\
+        \hline
+        \text{BB} & 0.04 & 0.08 & 0.33 & 5.27 & 75.73 & 6.36 & 0.94 & 1.20 \\
+        \hline
+        \text{B} & 0.00 & 0.07 & 0.20 & 0.28 & 5.21 & 72.95 & 4.23 & 5.71 \\
+        \hline
+        \text{CCC/C} & 0.08 & 0.00 & 0.31 & 0.39 & 1.31 & 9.74 & 46.83 & 28.83 \\
+        \hline
+        \end{array}
+        \]
 \end{question}
     \begin{choices}
-        \item BBB loans have a 4.08\% chance of being downgraded in one year.
-        \item BB loans have a 5.27\% chance of staying at BB for one year.
-        \item BBB loans have an 88.21\% chance of being upgraded in one year.
-        \item BB loans have a 5.72\% chance of being downgraded in one year.
+        \item BBB loans have a 4.08\% chance of being downgraded in one year.\\
+        BBB贷款在一年内被降级的概率为4.08\%。
+        \item BB loans have a 5.27\% chance of staying at BB for one year.\\
+        BB贷款在一年内保持在BB评级的概率为5.27\%。
+        \item BBB loans have an 88.21\% chance of being upgraded in one year.\\
+        BBB贷款在一年内被升级的概率为88.21\%。
+        \item BB loans have a 5.72\% chance of being downgraded in one year.\\
+        BB贷款在一年内被降级的概率为5.72\%。
     \end{choices}
 
 \begin{correctanswer}
@@ -221,16 +253,21 @@
 
 \begin{question}
     A pension fund's investment guidelines require immediate liquidation of bonds that fall below investment grade. Under Moody's rating system, which of the following rating transitions would trigger this requirement?
+    \\一位养老基金的投资指南要求立即清算评级低于投资级的债券。在穆迪评级体系下，以下哪个评级变动会触发这一要求？
 \end{question}
 
 \begin{choices}
-    \item A rating downgrade from A to Baa
+    \item A rating downgrade from A to Baa\\
+    A评级降至Baa评级
     
-    \item A rating downgrade from Baa to Ba
+    \item A rating downgrade from Baa to Ba\\
+    Baa评级降至Ba评级
     
-    \item A rating downgrade from Ba to B
+    \item A rating downgrade from Ba to B\\
+    Ba评级降至B评级
     
-    \item A rating downgrade from B to Caa
+    \item A rating downgrade from B to Caa\\
+    B评级降至Caa评级
 \end{choices}
 
 \begin{correctanswer}
@@ -277,6 +314,30 @@
     \end{center}
 
     The analyst needs to calculate the downgrade probability for 'A' rated issuers. What is the probability that an issuer rated 'A' at the beginning of 2023 will be downgraded by year-end?
+    \\一位评级机构的信用风险分析师正在分析公司债券的信用评级稳定性。以下转移矩阵显示了2023年期间在不同评级类别之间迁移的评级发行人数量：
+
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{起始} & \multicolumn{6}{c|}{2023年末} \\
+    \cline{2-7}
+    & AAA & AA & A & BBB & 违约 & 总计 \\
+    \hline
+    AAA & 48 & 3 & 2 & 0 & 0 & 53 \\
+    \hline
+    AA & 2 & 35 & 5 & 2 & 1 & 45 \\
+    \hline
+    A & 1 & 4 & 45 & 3 & 2 & 55 \\
+    \hline
+    BBB & 0 & 1 & 2 & 35 & 2 & 40 \\
+    \hline
+    违约 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    分析师需要计算'A'级发行人的降级概率。在2023年初被评为'A'级的发行人在年底被降级的概率是多少？
+
 \end{question}
 
 \begin{choices}
@@ -328,16 +389,21 @@
 
 \begin{question}
     Sarah, a portfolio manager at Green Energy Fund, holds green bonds issued by NextGen Solar Corp. After Moody's downgraded the bonds from A- to BBB+, their price fell by 12\%. Analysts now suggest a potential rating upgrade. Which statement about ratings and market behavior is correct?
+    \\Sarah是绿色能源基金的组合经理，持有NextGen Solar Corp.发行的绿色债券。穆迪将债券评级从A-降至BBB+后，价格下跌了12\%。分析师现在建议潜在的评级上调。关于评级和市场行为，以下哪个陈述是正确的？
 \end{question}
     
 \begin{choices}
-    \item The bond price will fully recover its 12\% loss when the rating returns to A-.
+    \item The bond price will fully recover its 12\% loss when the rating returns to A-.\\
+    债券价格将在评级恢复到A-时完全收回12\%的损失。
     
-    \item CDS spreads primarily reflect historical market data and typically lag behind rating changes in providing market signals.
+    \item CDS spreads primarily reflect historical market data and typically lag behind rating changes in providing market signals.\\
+    CDS利差主要反映历史市场数据，通常滞后于评级变化，提供市场信号。
     
-    \item Green bond ratings combine traditional credit analysis with environmental metrics.
+    \item Green bond ratings combine traditional credit analysis with environmental metrics.\\
+    绿色债券评级结合传统信用分析和环境指标。
     
-    \item Rating agencies maintain consistent weighting between traditional financial metrics and ESG factors across all types of bonds.
+    \item Rating agencies maintain consistent weighting between traditional financial metrics and ESG factors across all types of bonds.\\
+    评级机构在所有类型的债券中保持传统财务指标和ESG因素之间的一致权重。
 \end{choices}
     
 \begin{correctanswer}
@@ -370,13 +436,18 @@
 
     \begin{question}
         A credit analyst at a rating agency is discussing the typical practices of credit rating agencies during a training session. The analyst presents several statements about these practices. Which of the following statements is INCORRECT?
+        \\一位评级机构的信用风险分析师正在讨论评级机构通常的做法。分析师提出了几个关于这些做法的陈述。以下哪个陈述是不正确的？
     \end{question}
     
     \begin{choices}
-        \item Credit rating agencies provide initial ratings at the time of a bond's first issuance and conduct regular reviews and adjustments.
-        \item Rating outcomes incorporate historical and projected financial data, industry and economic data, as well as peer comparison information.
-        \item Rating fees are paid by investors, which may lead to potential conflicts of interest for the rating agencies.
-        \item The rating process considers qualitative factors such as corporate governance structures and interview results with the target company's management.
+        \item Credit rating agencies provide initial ratings at the time of a bond's first issuance and conduct regular reviews and adjustments.\\
+        信用评级机构在债券首次发行时提供初始评级，并定期进行回顾和调整。
+        \item Rating outcomes incorporate historical and projected financial data, industry and economic data, as well as peer comparison information.\\
+        评级结果结合了历史和预测的财务数据、行业和经济数据以及同业比较信息。
+        \item Rating fees are paid by investors, which may lead to potential conflicts of interest for the rating agencies.\\
+        评级费用由投资者支付，可能导致评级机构潜在的利益冲突。
+        \item The rating process considers qualitative factors such as corporate governance structures and interview results with the target company's management.\\
+        评级过程考虑定性因素，如公司治理结构和目标公司管理层的访谈结果。
     \end{choices}
     
     \begin{correctanswer}
@@ -409,16 +480,21 @@
 
 \begin{question}
     A credit analyst at a rating agency is explaining the concepts of rating outlook and rating watchlist during a training session. The analyst presents several statements about these concepts. Which of the following statements is correct?
+    \\一位评级机构的信用风险分析师正在解释评级展望和评级观察名单的概念。分析师提出了几个关于这些概念的陈述。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Rating outlook serves as a real-time indicator of credit quality, reflecting immediate market changes and short-term fluctuations in the rated entity's financial position.
+    \item Rating outlook serves as a real-time indicator of credit quality, reflecting immediate market changes and short-term fluctuations in the rated entity's financial position.\\
+    评级展望作为信用质量的实时指标，反映即时市场变化和被评级实体短期财务状况波动。
     
-    \item Rating outlooks primarily focus on quantitative metrics, with changes in financial ratios being the primary driver for outlook adjustments.
+    \item Rating outlooks primarily focus on quantitative metrics, with changes in financial ratios being the primary driver for outlook adjustments.\\
+    评级展望主要关注定量指标，财务比率变化是展望调整的主要驱动力。
     
-    \item Rating watchlist is used to evaluate events that may affect ratings in the short term.
+    \item Rating watchlist is used to evaluate events that may affect ratings in the short term.\\
+    评级观察名单用于评估短期内可能影响评级的事件。
     
-    \item If a rating agency places a company on the rating watchlist, the rating is immediately adjusted.
+    \item If a rating agency places a company on the rating watchlist, the rating is immediately adjusted.\\
+    如果评级机构将目标公司加入评级观察名单，评级会立即调整。
 \end{choices}
 
 \begin{correctanswer}
@@ -470,16 +546,21 @@
 
 \begin{question}
     A large international bank is reviewing its internal credit rating system. The risk management team is debating whether to implement different rating approaches for different types of borrowers. During the discussion, several statements are made about point-in-time (PIT) and through-the-cycle (TTC) rating approaches. Which of the following statements is CORRECT regarding these internal credit rating methodologies?
+    \\一家大型国际银行正在审查其内部信用评级系统。风险管理团队正在讨论是否对不同类型的借款人采用不同的评级方法。在讨论中，提出了几个关于时点（PIT）和周期（TTC）评级方法的陈述。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Point-in-time ratings focus on long-term economic trends and structural factors, providing stable credit assessments across different market conditions.
+    \item Point-in-time ratings focus on long-term economic trends and structural factors, providing stable credit assessments across different market conditions.\\
+    时点评级关注长期经济趋势和结构性因素，在不同市场条件下提供稳定的信用评估。
     
-    \item Through-the-cycle ratings emphasize real-time market indicators and current financial metrics, enabling rapid response to market changes.
+    \item Through-the-cycle ratings emphasize real-time market indicators and current financial metrics, enabling rapid response to market changes.\\
+    周期评级强调实时市场指标和当前财务指标，实现对市场变化的快速响应。
     
-    \item Credit scores under the point-in-time approach typically show higher volatility compared to through-the-cycle ratings, as they are more responsive to current economic conditions.
+    \item Credit scores under the point-in-time approach typically show higher volatility compared to through-the-cycle ratings, as they are more responsive to current economic conditions.\\
+    时点方法下的信用评分通常比周期评级表现出更高的波动性，因为它们对当前经济状况更敏感。
     
-    \item An effective internal rating system should use point-in-time methodology for small and medium enterprises while applying through-the-cycle ratings for large corporations to optimize risk assessment.
+    \item An effective internal rating system should use point-in-time methodology for small and medium enterprises while applying through-the-cycle ratings for large corporations to optimize risk assessment.\\
+    有效的内部评级系统应采用时点方法对中小企业进行评级，同时对大型企业采用周期评级，以优化风险评估。
 \end{choices}
 
 \begin{correctanswer}
@@ -514,16 +595,21 @@
 
 \begin{question}
     During an interview for a risk analyst position at Bank of America's Quantitative Risk Analytics Team, a candidate was asked about the differences between internal and external ratings in banking. Which of the following statements is INCORRECT?
+    \\在一次对美国银行量化风险分析团队的信用风险分析师职位的面试中，候选人被问及银行内部评级和外部评级之间的差异。以下哪个陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Internal rating systems require multiple input factors and regular back-testing to maintain their effectiveness. The validation process should examine both the methodology and actual performance of the ratings.
+    \item Internal rating systems require multiple input factors and regular back-testing to maintain their effectiveness. The validation process should examine both the methodology and actual performance of the ratings.\\
+    内部评级系统需要多个输入因素和定期回测来保持其有效性。验证过程应检查评级方法和实际表现。
     
-    \item A company rated as Baa3 by Moody's and BBB+ by S\&P indicates similar default probability assessments from these two major rating agencies, as they use comparable rating scales.
+    \item A company rated as Baa3 by Moody's and BBB+ by S\&P indicates similar default probability assessments from these two major rating agencies, as they use comparable rating scales.\\
+    Moody's的Baa3评级和S\&P的BBB+评级表明两家主要评级机构对类似违约概率的评估，因为它们使用可比的评级尺度。
     
-    \item Point-in-time (PIT) and through-the-cycle (TTC) approaches each serve different purposes in internal rating systems. The choice between them depends on the specific application and business objectives.
+    \item Point-in-time (PIT) and through-the-cycle (TTC) approaches each serve different purposes in internal rating systems. The choice between them depends on the specific application and business objectives.\\
+    时点（PIT）和周期（TTC）方法在内部评级系统中各有不同的目的。选择取决于具体应用和业务目标。
     
-    \item External rating agencies like Moody's and S\&P use standardized methodologies, while internal rating systems can be customized to reflect bank-specific risk factors and portfolio characteristics.
+    \item External rating agencies like Moody's and S\&P use standardized methodologies, while internal rating systems can be customized to reflect bank-specific risk factors and portfolio characteristics.\\
+    外部评级机构如穆迪和标准普尔使用标准化方法，而内部评级系统可以根据银行特定风险因素和投资组合特征进行定制。
 \end{choices}
 
 \begin{correctanswer}
@@ -558,16 +644,21 @@
 
 \begin{question}
     A risk analyst at a fixed-income investment firm is evaluating the differences between through-the-cycle (TTC) and point-in-time (PIT) approaches to credit ratings. The analyst is aware that understanding these methodologies is crucial for making informed investment decisions. In regard to TTC versus PIT approaches, which of the following statements is correct?
+    \\一位固定收益投资公司的风险分析师正在评估贯穿周期（TTC）和在点（PIT）方法在信用评级中的差异。分析师意识到理解这些方法论对于做出明智的投资决策至关重要。在TTC方法和PIT方法之间，以下哪个陈述是正确的？
 \end{question}
     
 \begin{choices}
-    \item External credit ratings reflect market conditions dynamically, with TTC ratings adjusting rapidly to capture short-term market fluctuations.
+    \item External credit ratings reflect market conditions dynamically, with TTC ratings adjusting rapidly to capture short-term market fluctuations.\\
+    外部信用评级动态反映市场条件，周期评级迅速调整以捕捉短期市场波动。
     
-    \item The PIT approach focuses on a long-term, stable view of credit assessment, while the TTC approach focuses on a more immediate and conditional view of credit assessment.
+    \item The PIT approach focuses on a long-term, stable view of credit assessment, while the TTC approach focuses on a more immediate and conditional view of credit assessment.\\
+    PIT方法关注长期稳定的信用评估视角，而TTC方法关注更即时和条件性的信用评估视角。
     
-    \item Credit spreads are calculated on a per-point basis, and the per-point method contains limited information about market conditions.
+    \item Credit spreads are calculated on a per-point basis, and the per-point method contains limited information about market conditions.\\
+    信用息差是逐点计算的，逐点方法包含有限的市场条件信息。
     
-    \item During crisis periods, the PIT approach means higher expectations and unexpected losses (EL \& UL), thus PIT tends to be pro-cyclical.
+    \item During crisis periods, the PIT approach means higher expectations and unexpected losses (EL \& UL), thus PIT tends to be pro-cyclical.\\
+    在危机时期，PIT方法意味着更高的预期和意外损失（EL \& UL），因此PIT往往具有顺周期性。
 \end{choices}
     
 \begin{correctanswer}
@@ -601,13 +692,18 @@
 
       \begin{question}
         A credit analyst at a rating agency is discussing the consistency of credit ratings and their influencing factors during a training session. The analyst presents several statements about these aspects. Which of the following statements is correct?
+        \\一位评级机构的信用风险分析师正在讨论信用评级的一致性和影响因素。分析师提出了几个关于这些方面的陈述。以下哪个陈述是正确的？
     \end{question}
     
     \begin{choices}
-        \item Rating agencies maintain comprehensive databases of industry-specific rating patterns, enabling analysts to draw reliable conclusions about rating consistency across different sectors.
-        \item Different rating agencies exhibit lower consistency in their ratings for banks compared to other companies, possibly due to the higher complexity of banking operations or the use of different evaluation standards by the agencies.
-        \item Rating agencies pursue consistency, and inferring future credit risk from past data is considered safe because agencies believe historical data can accurately predict future credit risk.
-        \item Rating agencies employ standardized methodologies that remain stable over time, as established rating frameworks have proven effective across various market conditions.
+        \item Rating agencies maintain comprehensive databases of industry-specific rating patterns, enabling analysts to draw reliable conclusions about rating consistency across different sectors.\\
+        评级机构维护行业特定评级模式的全面数据库，使分析师能够得出关于不同行业评级一致性的可靠结论。
+        \item Different rating agencies exhibit lower consistency in their ratings for banks compared to other companies, possibly due to the higher complexity of banking operations or the use of different evaluation standards by the agencies.\\
+        不同评级机构对银行的评级一致性低于其他公司，这可能是由于银行业务的复杂性较高或评级机构采用不同的评估标准。
+        \item Rating agencies pursue consistency, and inferring future credit risk from past data is considered safe because agencies believe historical data can accurately predict future credit risk.\\
+        评级机构追求一致性，从过去数据推断未来是安全的，因为评级机构相信历史数据可以准确预测未来信用风险。
+        \item Rating agencies employ standardized methodologies that remain stable over time, as established rating frameworks have proven effective across various market conditions.\\
+        评级机构采用标准化的方法，这些方法随着时间的推移保持稳定，因为已建立的评级框架在各种市场条件下都被证明是有效的。
     \end{choices}
     
     \begin{correctanswer}
@@ -642,12 +738,17 @@
 
 \begin{question}
     A credit analyst at a rating agency is presenting research findings on market reactions to rating changes. Based on historical data and empirical evidence, which of the following market reactions is inconsistent with typical observed patterns?
+    \\一位评级机构的信用风险分析师正在研究信用评级变动对市场反应的影响。基于历史数据和实证证据，以下哪个市场反应与典型观察模式不一致？
 \end{question}
 \begin{choices}
     \item A company's credit rating is downgraded from BBB to BBB-, leading to a decline in its stock and bond prices, and an increase in credit default swap spreads. This indicates that the downgrade has a significant impact on the market.
+    \\当公司的信用评级从BBB下调至BBB-时，导致其股票和债券价格下跌，同时信用违约掉期（CDS）利差增加。这表明评级下调对市场有显著影响。
     \item A company's credit rating is upgraded from A to AA-, but the market reaction is muted, with little change in stock and bond prices. This suggests that the market response to the upgrade is not significant.
+    \\当公司的信用评级从A上调至AA-时，市场反应较为平淡，股票和债券价格变化不大。这表明市场对评级上调的反应不显著。
     \item A company's credit rating is downgraded from AAA to AA+, and despite remaining investment grade, the market reacts strongly, with a sharp decline in stock and bond prices. This shows that even a small downgrade can cause significant market volatility.
+    \\当公司的信用评级从AAA下调至AA+时，尽管仍保持在投资级别，但市场可能会强烈反应，导致股票和债券价格大幅下跌。这表明即使是小幅度的评级下调，也可能导致市场的显著波动，尤其是在高评级的情况下，市场对任何负面信息都非常敏感。
     \item A company's credit rating is upgraded from BBB to BBB+, and the market reacts positively, with an increase in stock and bond prices, and a decrease in credit default swap spreads. This indicates a strong market response to the upgrade.
+    \\当公司的信用评级从BBB上调至BBB+时，市场反应积极，股票和债券价格上涨，同时信用违约掉期（CDS）利差下降。这表明市场对评级上调的反应非常显著。
 \end{choices}
 
 \begin{correctanswer}
@@ -701,16 +802,21 @@
 
 \begin{question}
     A credit analyst is evaluating the impact of different rating methodologies on economic cycles. The analyst presents several statements and asks which of the following statements is correct?
+    \\一位信用风险分析师正在评估不同评级方法论对经济周期的影响。分析师提出了几个关于这些方面的陈述。以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The point-in-time (PIT) rating approach enhances market stability by providing consistent ratings throughout economic cycles, leading to balanced lending practices.
+    \item The point-in-time (PIT) rating approach enhances market stability by providing consistent ratings throughout economic cycles, leading to balanced lending practices.\\
+    时点评级法通过在整个经济周期中提供一致的评级，增强市场稳定性，从而实现平衡的贷款实践。
     
-    \item The through-the-cycle (TTC) rating approach responds dynamically to market conditions, allowing banks to adjust their lending strategies based on short-term economic indicators.
+    \item The through-the-cycle (TTC) rating approach responds dynamically to market conditions, allowing banks to adjust their lending strategies based on short-term economic indicators.\\
+    周期评级法动态响应市场条件，允许银行根据短期经济指标调整其贷款策略。
     
-    \item During economic downturns, companies need funds to supplement liquidity, so banks generally assign higher ratings to support economic recovery.
+    \item During economic downturns, companies need funds to supplement liquidity, so banks generally assign higher ratings to support economic recovery.\\
+    在经济衰退期间，企业需要资金补充流动性，因此银行通常会给出较高评级以支持经济复苏。
     
-    \item The PIT rating approach may lead to a reduction in loan volumes during economic downturns, thereby slowing down the pace of economic recovery.
+    \item The PIT rating approach may lead to a reduction in loan volumes during economic downturns, thereby slowing down the pace of economic recovery.\\
+    时点评级法在经济衰退时可能导致贷款规模缩减，从而减缓经济复苏的速度。
 \end{choices}
 
 \begin{correctanswer}
@@ -742,13 +848,18 @@
 \checklist{Internal Rating Systems的时点评级法（分为经济好与不好两种情况分析）}
 \begin{question}
     A junior risk analyst at an asset management firm is currently evaluating the necessity of developing internal credit ratings for the firm's diverse portfolio. During a team meeting, the analyst presents several statements regarding the reasons for implementing such ratings and asks which of the following statements is correct?
+    \\一位资产管理公司的初级风险分析师正在评估开发公司多样投资组合的内部信用评级的必要性。在团队会议上，分析师提出了几个关于实施这些评级的理由，并询问以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item One reason for developing internal ratings is that there may not be external ratings available.
-    \item Accounting standards suggest banks primarily use market-based indicators for loan valuations, with default probabilities serving as supplementary references.
-    \item Default probabilities mainly influence trading decisions, while regulatory capital requirements are primarily determined by market volatility measures.
-    \item Internal ratings typically reflect the economic conditions over the entire cycle rather than at a point in time.
+    \item One reason for developing internal ratings is that there may not be external ratings available.\\
+    开发内部评级的一个原因是可能没有可用的外部评级。
+    \item Accounting standards suggest banks primarily use market-based indicators for loan valuations, with default probabilities serving as supplementary references.\\
+    会计准则建议银行主要使用市场指标进行贷款估值，违约概率作为补充参考。
+    \item Default probabilities mainly influence trading decisions, while regulatory capital requirements are primarily determined by market volatility measures.\\
+    违约概率主要影响交易决策，而监管资本要求主要由市场波动性指标决定。
+    \item Internal ratings typically reflect the economic conditions over the entire cycle rather than at a point in time.\\
+    内部评级通常反映整个周期的经济状况，而不是时间点的经济状况。
 \end{choices}
 
 \begin{correctanswer}
@@ -797,13 +908,32 @@
         \item Ratio of market value of equity to book value of total liabilities \(X_4 = 1.2\)
         \item Ratio of sales to total assets \(X_5 = 0.8\)
     \end{itemize}
+    一家银行正在使用机器学习来自动化其贷款决策过程。为了评估公司的违约概率和信用风险，银行采用了Altman Z-score模型。该模型使用以下公式计算公开交易制造公司的违约概率：
+    \[
+    Z = 1.2X_1 + 1.4X_2 + 3.3X_3 + 0.6X_4 + 0.999X_5
+    \]
+
+    给定公司的财务比率如下：
+    \begin{itemize}
+        \item 流动资产与总资产之比 \(X_1 = 0.15\)
+        \item 留存收益与总资产之比 \(X_2 = 0.05\)
+        \item 息税前利润与总资产之比 \(X_3 = 0.08\)
+        \item 股票市值与总负债之比 \(X_4 = 1.2\)
+        \item 销售收入与总资产之比 \(X_5 = 0.8\)
+    \end{itemize}
+
+    根据这些数据，计算公司的违约概率。
 \end{question}
 
 \begin{choices}
-    \item The company is unlikely to default.
-    \item The company has a high probability of default.
-    \item The company has a moderate probability of default.
-    \item It is impossible to determine the company's probability of default.
+    \item The company is unlikely to default.\\
+    公司不太可能违约。
+    \item The company has a high probability of default.\\
+    公司有很高的违约概率。
+    \item The company has a moderate probability of default.\\
+    公司有中等违约概率。
+    \item It is impossible to determine the company's probability of default.\\
+    无法确定公司的违约概率。
 \end{choices}
 
 \begin{correctanswer}
@@ -870,13 +1000,27 @@
     \end{itemize}
     
     What is the 1-year UL of the bond portfolio at the 99\% confidence level?
+    \\一位投资公司的风险分析师正在举办新员工研讨会，介绍意外损失（UL）的概念。为了演示UL的计算，分析师提供了以下关于假设债券投资组合的数据：
+    \begin{itemize}
+        \item 债券投资组合的 Principal amount: SGD 150 million  
+        \item 投资组合的违约率: 3.0\%  
+        \item 回收率: 40\%  
+        \item 一年99\% VaR: SGD 10.5 million  
+        \item 一年99\% ES: SGD 15.2 million  
+    \end{itemize}
+
+    计算债券投资组合的一年99\% UL。
 \end{question}
 
 \begin{choices}
-    \item SGD 7.8 million  
-    \item SGD 9.5 million  
-    \item SGD 10.5 million  
-    \item SGD 12.5 million  
+    \item SGD 7.8 million  \\
+    7.8百万SGD
+    \item SGD 9.5 million  \\
+    9.5百万SGD
+    \item SGD 10.5 million  \\
+    10.5百万SGD
+    \item SGD 12.5 million  \\
+    12.5百万SGD
 \end{choices}
 
 \begin{correctanswer}
@@ -922,16 +1066,31 @@
     \]
 
     Which of the following statements regarding the Vasicek model is correct?
+    \\一位银行监管机构的初级分析师正在参加内部培训课程，学习Vasicek模型。分析师审查了与模型相关的以下方程：
+    \[
+    U_i = a_iF + \sqrt{1 - a_i^2}Z_i
+    \]
+
+    违约率作为F的函数：
+    \[
+    F = N\left(N^{-1}(PD) - aF \over \sqrt{1 - a^2}\right)
+    \]
+
+    以下哪个关于Vasicek模型的陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The default probabilities of the individual loans in a portfolio are each mapped to the standard normal distribution \(U_i\), of which values in the extreme right tail represent default.
+    \item The default probabilities of the individual loans in a portfolio are each mapped to the standard normal distribution \(U_i\), of which values in the extreme right tail represent default.\\
+    投资组合中每个贷款的违约概率分别映射到标准正态分布 \(U_i\)，其中极右尾的值代表违约。
     
-    \item A low value of the factor \(F\) indicates that the economy is strong, while a high value of \(F\) represents economic weakness.
+    \item A low value of the factor \(F\) indicates that the economy is strong, while a high value of \(F\) represents economic weakness.\\
+    \(F\) 的低值表示经济强劲，而 \(F\) 的高值表示经济疲弱。
     
-    \item For corporate borrowers, the value of the factor \(F\) is higher for loans to companies with more cyclical businesses.
+    \item For corporate borrowers, the value of the factor \(F\) is higher for loans to companies with more cyclical businesses.\\
+    对于企业借款人，周期性企业的贷款 \(F\) 值更高。
     
-    \item The model coefficient \(a\) directly relates to the correlations between the default probability distributions \(U_i\) of the loans in the portfolio.
+    \item The model coefficient \(a\) directly relates to the correlations between the default probability distributions \(U_i\) of the loans in the portfolio.\\
+    模型系数 \(a\) 直接关系到投资组合中贷款的违约概率分布 \(U_i\) 之间的相关性。
 \end{choices}
 
 \begin{correctanswer}
@@ -966,13 +1125,18 @@
 
 \begin{question}
     An investor holds a portfolio of \$150 million. This portfolio consists of A-rated bonds (\$60 million) and BBB-rated bonds (\$90 million). Assume that the one-year probabilities of default for A-rated and BBB-rated bonds are 4\% and 6\%, respectively, and that they are independent. If the recovery value for A-rated bonds in the event of default is 75\% and the recovery value for BBB-rated bonds is 50\%, what is the one-year expected credit loss from this portfolio?
+    \\一位投资者持有价值150百万美元的投资组合。该投资组合由A评级债券（60百万美元）和BBB评级债券（90百万美元）组成。假设A评级债券和BBB评级债券的一年违约概率分别为4\%和6\%，并且它们是独立的。如果A评级债券在违约事件中的回收价值为75\%，而BBB评级债券的回收价值为50\%，那么该投资组合的一年预期信用损失是多少？
     \end{question}
     
     \begin{choices}
-        \item \$2100000 
-        \item \$2400000 
-        \item \$2700000 
-        \item \$3300000
+        \item \$2100000  \\
+        210万美元
+        \item \$2400000\\
+        240万美元
+        \item \$2700000 \\
+        270万美元
+        \item \$3300000\\
+        330万美元
     \end{choices}
     
     \begin{correctanswer}
@@ -1027,7 +1191,8 @@
         Consider the following four short-term loans held by a bank:
     \end{question}
     
-    {\huge
+
+    
 \[
 \begin{array}{|c|c|c|c|}
 \hline
@@ -1043,10 +1208,30 @@ d & 120.00 & 1.00 & 30.0 \\
 \hline
 \end{array}
 \]
-}
     
     Hazard rate (aka, default intensity) which is by definition continuous, but it is okay to assume discrete as difference is not here material. Which loan has the highest expected loss in dollar terms?
-    
+    \\考虑银行持有的以下四笔短期贷款：
+
+
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+\text{贷款} & \begin{tabular}{c}\text{违约时} \\ \text{敞口（百万）}\end{tabular} & \begin{tabular}{c}\text{一年期违约} \\ \text{概率（\%）}\end{tabular} & \begin{tabular}{c}\text{违约} \\ \text{损失率（\%）}\end{tabular} \\
+\hline
+a & 50.00 & 5.00 & 80.0 \\
+\hline
+b & 70.00 & 2.00 & 50.0 \\
+\hline
+c & 90.00 & 1.50 & 40.0 \\
+\hline
+d & 120.00 & 1.00 & 30.0 \\
+\hline
+\end{array}
+\]
+
+
+风险率（也称为违约强度）在定义上是连续的，但假设为离散也是可以的，因为这里的差异并不重要。哪笔贷款的预期损失（以美元计）最高？
     \begin{choices}
         \item Loan (a)  
         \item Loan (b)  
@@ -1094,16 +1279,24 @@ d & 120.00 & 1.00 & 30.0 \\
 
     \begin{question}
         A risk analyst at a financial advisory firm is currently reviewing the components of expected loss (EL) in credit risk management. The analyst understands that EL is crucial for assessing potential losses in a loan portfolio. With this in mind, the analyst considers the following three components of EL: probability of default (PD), exposure amount (EA), and loss rate (LR). Each of the following statements is true EXCEPT which is not accurate?
+        \\一位金融咨询公司的风险分析师正在审查信用风险管理中的预期损失（EL）的组成部分。分析师理解EL对于评估贷款组合的潜在损失至关重要。基于这个认识，分析师考虑了EL的三个组成部分：违约概率（PD）、暴露金额（EA）和损失率（LR）。以下哪个陈述是不正确的？
     \end{question}
     
     \begin{choices}
-        \item Exposure amount (EA) is the standard deviation of credit losses estimated at the end of the horizon excluding outstanding interest payments.
+        \item Exposure amount (EA) is the standard deviation of credit losses estimated at the end of the horizon excluding outstanding interest payments.\\
+        暴露金额（EA）是信用损失的标准差，在排除未付利息的情况下，在期限结束时估计。
         
-        \item Probability of default (PD) is the probability that a borrower will default before the end of a predetermined period of time (the estimation horizon typically chosen is one year).
+        \item Probability of default (PD) is the probability that a borrower will default before the end of a predetermined period of time (the estimation horizon typically chosen is one year).\\
+        违约概率（PD）是借款人在预定时间段结束之前违约的概率（通常选择的估计期限为一年）。
         
-        \item Loss rate (LR) represents the ratio of actual losses incurred at the time of default (including all costs associated with the collection and sale of collateral) to the exposure amount.
+        \item Loss rate (LR) represents the ratio of actual losses incurred at the time of default (including all costs associated with the collection and sale of collateral) to the exposure amount.\\
+        损失率（LR）表示在违约时实际损失与暴露金额的比率（包括与收回和出售抵押品相关的所有成本）。
         
         \item Expected loss (EL) is equal to the product of: the probability of default up to time H (horizon); the exposure amount at time H; and the loss rate experienced at time H; i.e.,
+        \[
+        EL(H) = PD(H) \times EA(H) \times LR(H).
+        \]
+        \\预期损失（EL）等于以下内容的乘积：到时间H（期限）时的违约概率；时间H时的暴露金额；以及时间H时的损失率；即，
         \[
         EL(H) = PD(H) \times EA(H) \times LR(H).
         \]
@@ -1165,6 +1358,28 @@ d & 120.00 & 1.00 & 30.0 \\
 }
 
 Assuming portfolio losses are binomially distributed, what is the estimate of the standard deviation of losses on the portfolio?
+\\一位银行的风险经理正在向一组分析师讲解如何估计贷款组合中的信用损失。该经理提出了一个由两笔贷款组成的投资组合场景，并提供如下贷款信息：
+
+
+{\Large
+\[
+\begin{array}{|c|c|c|}
+\hline
+\text{贷款} & \text{贷款1} & \text{贷款2} \\
+\hline
+\text{借款金额} & \text{1500万元人民币} & \text{2000万元人民币} \\
+\hline
+\text{违约概率} & 2\% & 2\% \\
+\hline
+\text{回收率} & 40\% & 25\% \\
+\hline
+\text{贷款1和贷款2之间的违约相关性} & 0.6 & - \\
+\hline
+\end{array}
+\]
+}
+
+假设投资组合损失服从二项分布，投资组合损失的标准差估计值是多少？
 
 \begin{choices}
     \item CNY 1.38 million 
@@ -1239,6 +1454,7 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     A credit risk analyst at a bank is evaluating the annual default probabilities of a 3-year loan that has just been approved. The analyst determines from rating agency data that the average hazard rate between today and the end of year 3 is 3\%, and uses this information to calculate the 1-year survival rate for the borrower. If the unconditional default probability between the end of year 1 and the end of year 3 is 1.2345\%, what is the survival rate of the borrower during the first year of the loan?
+    \\一位银行的风险分析师正在评估刚刚获批的三年期贷款的年违约概率。分析师从评级机构数据中确定，从今天到年底3年的平均风险率为3\%，并使用这一信息计算借款人的一年生存率。如果年末1年和年末3年之间的无条件违约概率为1.2345\%，那么借款人在贷款第一年的生存率是多少？
 \end{question}
 
 \begin{choices}
@@ -1302,13 +1518,18 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     A bank has a \$100 million portfolio of loans with a probability of default (PD) of 0.75\%. The correlation parameter is estimated to be 0.2, and the recovery rate in the event of a default is 30\%. Suppose that the 99.9-percentile of the default rate given by the Vasicek model is 12.01\%. What is the required regulatory capital?
+    \\一家银行有价值100百万美元的贷款组合，违约概率为0.75\%。相关参数估计为0.2，违约事件的回收率为30\%。假设Vasicek模型给出的99.9\%违约率是12.01\%，那么所需的监管资本是多少？
 \end{question}
 
 \begin{choices}
-    \item \$5.88 million 
-    \item \$6.88 million 
-    \item \$7.88 million 
-    \item \$8.88 million 
+    \item \$5.88 million  \\
+    5.88百万美元
+    \item \$6.88 million  \\
+    6.88百万美元
+    \item \$7.88 million  \\
+    7.88百万美元
+    \item \$8.88 million  \\
+    8.88百万美元
 \end{choices}
 
 \begin{correctanswer}
@@ -1349,13 +1570,18 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     A portfolio contains three independent bonds each with identical (i.i.d.) \$100 par value, 3.0\% probability of default (PD) and loss given default (LGD) of 100\%. What is, respectively, the 95.0\% confident and 99.0\% confident portfolio value at risk (VaR)?
+    \\一个投资组合包含三个独立的债券，每个债券的面值为100美元，违约概率为3\%，违约损失率为100\%。分别计算95\%和99\%置信水平下的投资组合价值VaR。
     \end{question}
     
     \begin{choices}
-    \item Zero and zero at both 95\% and 99\% confidence levels.
-    \item \$100 and \$100 at 95\% and 99\% confidence levels respectively.
-    \item \$200 at 95\% confidence level and \$300 at 99\% confidence level.
-    \item \$285 at 95\% confidence level and \$300 at 99\% confidence level.
+    \item Zero and zero at both 95\% and 99\% confidence levels. \\
+    95\%和99\%置信水平下均为零。
+    \item \$100 and \$100 at 95\% and 99\% confidence levels respectively. \\
+    95\%和99\%置信水平下分别为100美元和100美元。
+    \item \$200 at 95\% confidence level and \$300 at 99\% confidence level. \\
+    95\%置信水平下为200美元，99\%置信水平下为300美元。
+    \item \$285 at 95\% confidence level and \$300 at 99\% confidence level. \\
+    95\%置信水平下为285美元，99\%置信水平下为300美元。
     \end{choices}
     
     \begin{correctanswer}
@@ -1420,16 +1646,21 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
     \begin{question}
         A risk management consultant is advising a fintech company that is applying for a banking license. The company needs to understand the differences between regulatory capital and economic capital for their risk management framework. In comparing these two types of capital requirements, which of the following statements would be correct?
+        \\一位风险管理顾问正在向一家申请银行牌照的金融科技公司提供建议。该公司需要了解监管资本和经济资本在风险管理框架中的差异。在比较这两种资本要求时，以下哪个陈述是正确的？
      \end{question}
         
         \begin{choices}
-            \item Bank regulators require banks to keep regulatory capital and consider the correlations between risks in their capital calculations.
+            \item Bank regulators require banks to keep regulatory capital and consider the correlations between risks in their capital calculations. \\
+            银行监管机构要求银行保持监管资本，并在资本计算中考虑风险之间的相关性。
             
-            \item Using the CreditMetrics model for economic capital calculation tends to be more conservative than Basel II regulatory capital when targeting a default probability of 0.01\%.
+            \item Using the CreditMetrics model for economic capital calculation tends to be more conservative than Basel II regulatory capital when targeting a default probability of 0.01\%. \\
+            使用CreditMetrics模型进行经济资本计算倾向于比Basel II监管资本更为保守，当目标违约概率为0.01\%时。
             
-            \item The bank's economic capital can be calculated by simply adding up the capital requirements for credit risk, market risk, and operational risk separately.
+            \item The bank's economic capital can be calculated by simply adding up the capital requirements for credit risk, market risk, and operational risk separately. \\
+            银行的经济资本可以通过简单地将信用风险、市场风险和操作风险的资本要求相加来计算。
             
-            \item Regulatory capital and economic capital are primarily designed to cover expected losses, while insurance products cover unexpected losses.
+            \item Regulatory capital and economic capital are primarily designed to cover expected losses, while insurance products cover unexpected losses. \\
+            监管资本和经济资本主要用于覆盖预期损失，而保险产品用于覆盖意外损失。
         \end{choices}
         
         \begin{correctanswer}
@@ -1465,16 +1696,21 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
         
         \begin{question}
             Sarah, a quantitative researcher at Nova Investment, is developing a credit risk model for their new structured products portfolio. When calibrating model parameters using market data, she encounters several methodological challenges. Which of the following statements about credit risk parameter estimation is correct?
+            \\一位量化研究员Sarah正在为Nova Investment的新结构化产品投资组合开发信用风险模型。在利用市场数据校准模型参数时，她遇到了几个方法论上的挑战。以下关于信用风险参数估计的哪个陈述是正确的？
             \end{question}
             
             \begin{choices}
-                \item The model requires both through-the-cycle and point-in-time estimates of recovery rates, rather than probability of default (PD), to meet regulatory and accounting standards.
+                \item The model requires both through-the-cycle and point-in-time estimates of recovery rates, rather than probability of default (PD), to meet regulatory and accounting standards. \\
+                模型需要通过周期和时点估计回收率，而不是违约概率（PD），以满足监管和会计标准。
                 
-                \item The model assumes recovery rates increase during market stress, offsetting higher default rates and thus maintaining stable credit risk levels.
+                \item The model assumes recovery rates increase during market stress, offsetting higher default rates and thus maintaining stable credit risk levels. \\
+                模型假设在市场压力期间，回收率增加，抵消更高的违约率，从而保持稳定的信用风险水平。
                 
-                \item The model suggests counterparty default probabilities tend to decrease when trading exposures with that counterparty become larger.
+                \item The model suggests counterparty default probabilities tend to decrease when trading exposures with that counterparty become larger. \\
+                模型表明交易对手的违约概率倾向于随着与该交易对手的交易敞口增加而下降。
                 
-                \item The model needs to account for risk factor correlations as different risk types interact and affect overall capital requirements.
+                \item The model needs to account for risk factor correlations as different risk types interact and affect overall capital requirements. \\
+                模型需要考虑风险因子相关性，因为不同风险类型相互作用并影响总体资本要求。
             \end{choices}
             
             \begin{correctanswer}
@@ -1511,7 +1747,7 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
             \begin{question}
                 Based on the cumulative default probabilities shown in the table below, calculate the cumulative survival rate over the first 4 years, the unconditional default rate in the 5th year, and the conditional probability of default in the 5th year given no prior default. Which of the following options is correct?
             
-                \begin{table}[h]
+                \begin{table}[H]
                 \centering
                 \begin{tabular}{|c|c|c|c|c|c|c|}
                 \hline
@@ -1521,13 +1757,29 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
                 \hline
                 \end{tabular}
                 \end{table}
+                根据下表中显示的累积违约概率，计算前4年的累积生存率、第5年的无条件违约率以及在前4年未发生违约的情况下第5年的条件违约概率。以下哪个选项是正确的？
+            
+                \begin{table}[h]
+                \centering
+                \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                年份 & 1 & 2 & 3 & 4 & 5 & 6 \\
+                \hline
+                累积违约概率 & 3.76\% & 8.56\% & 12.66\% & 15.87\% & 18.32\% & 20.32\% \\
+                \hline
+                \end{tabular}
+                \end{table}
             \end{question}
             
             \begin{choices}
-                \item Cumulative survival rate: 84.13\%, Unconditional default rate: 2.45\%, Conditional default probability: 2.91\%
-                \item Cumulative survival rate: 85.00\%, Unconditional default rate: 2.50\%, Conditional default probability: 2.95\%
-                \item Cumulative survival rate: 83.00\%, Unconditional default rate: 2.40\%, Conditional default probability: 2.90\%
-                \item Cumulative survival rate: 82.50\%, Unconditional default rate: 2.55\%, Conditional default probability: 2.85\%
+                \item Cumulative survival rate: 84.13\%, Unconditional default rate: 2.45\%, Conditional default probability: 2.91\% \\
+                累积生存率：84.13\%，无条件违约率：2.45\%，条件违约概率：2.91\%
+                \item Cumulative survival rate: 85.00\%, Unconditional default rate: 2.50\%, Conditional default probability: 2.95\% \\
+                累积生存率：85.00\%，无条件违约率：2.50\%，条件违约概率：2.95\%
+                \item Cumulative survival rate: 83.00\%, Unconditional default rate: 2.40\%, Conditional default probability: 2.90\% \\
+                累积生存率：83.00\%，无条件违约率：2.40\%，条件违约概率：2.90\%
+                \item Cumulative survival rate: 82.50\%, Unconditional default rate: 2.55\%, Conditional default probability: 2.85\% \\
+                累积生存率：82.50\%，无条件违约率：2.55\%，条件违约概率：2.85\%
             \end{choices}
             
             \begin{correctanswer}
@@ -1557,13 +1809,18 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     Assume that the annual hazard rate of a certain bond is constant at 1\%. Calculate the probability of default within 3 years, and the probability of default in the 4th year given no default in the first 3 years. Which of the following options is correct?
+    \\假设某债券的年危害率为1\%，计算3年内违约的概率，以及在前3年内没有违约的情况下第4年违约的概率。以下哪个选项是正确的？
 \end{question}
 
 \begin{choices}
-    \item Probability of default within 3 years: 2.9554\%, Conditional probability of default in the 4th year: 0.9951\%
-    \item Probability of default within 3 years: 3.0000\%, Conditional probability of default in the 4th year: 1.0000\%
-    \item Probability of default within 3 years: 2.5000\%, Conditional probability of default in the 4th year: 0.9000\%
-    \item Probability of default within 3 years: 3.5000\%, Conditional probability of default in the 4th year: 1.1000\%
+    \item Probability of default within 3 years: 2.9554\%, Conditional probability of default in the 4th year: 0.9951\% \\
+    3年内违约概率：2.9554\%，第4年违约概率：0.9951\%
+    \item Probability of default within 3 years: 3.0000\%, Conditional probability of default in the 4th year: 1.0000\% \\
+    3年内违约概率：3.0000\%，第4年违约概率：1.0000\%
+    \item Probability of default within 3 years: 2.5000\%, Conditional probability of default in the 4th year: 0.9000\% \\
+    3年内违约概率：2.5000\%，第4年违约概率：0.9000\%
+    \item Probability of default within 3 years: 3.5000\%, Conditional probability of default in the 4th year: 1.1000\% \\
+    3年内违约概率：3.5000\%，第4年违约概率：1.1000\%
 \end{choices}
 
 \begin{correctanswer}
@@ -1600,13 +1857,18 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     Suppose a bank is rated AA, and the default probability for AA-rated companies is typically 0.02\%. The bank's current borrowers have a default probability of 1.305\% and a recovery rate of 25\%. In the loss distribution, the 99.9\% percentile corresponds to a default probability of 14.89\%, and the 99.98\% percentile corresponds to a default probability of 22.31\%. Calculate the bank's regulatory capital and economic capital.
+    \\假设一家银行被评为AA级，AA级公司的违约概率通常为0.02\%。该银行的当前借款人违约概率为1.305\%，回收率为25\%。在损失分布中，99.9\%分位数对应于14.89\%的违约概率，99.98\%分位数对应于22.31\%的违约概率。计算银行的监管资本和经济资本。
 \end{question}
 
 \begin{choices}
-    \item Regulatory capital: 10.19\%, Economic capital: 15.75\%
-    \item Regulatory capital: 9.50\%, Economic capital: 15.75\%
-    \item Regulatory capital: 10.19\%, Economic capital: 16.00\%
-    \item Regulatory capital: 8.00\%, Economic capital: 15.75\%
+    \item Regulatory capital: 10.19\%, Economic capital: 15.75\% \\
+    监管资本：10.19\%，经济资本：15.75\%
+    \item Regulatory capital: 9.50\%, Economic capital: 15.75\% \\
+    监管资本：9.50\%，经济资本：15.75\%
+    \item Regulatory capital: 10.19\%, Economic capital: 16.00\% \\
+    监管资本：10.19\%，经济资本：16.00\%
+    \item Regulatory capital: 8.00\%, Economic capital: 15.75\% \\
+    监管资本：8.00\%，经济资本：15.75\%
 \end{choices}
 
 \begin{correctanswer}
@@ -1648,13 +1910,18 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     A bank is reviewing its capital requirements to ensure it meets both regulatory and internal risk management standards. The bank's risk management team is discussing the differences between economic capital and regulatory capital. Which of the following statements about economic capital and regulatory capital is incorrect?
+    \\一家银行正在审查其资本要求，以确保它符合监管和内部风险管理标准。银行的风险管理团队正在讨论经济资本和监管资本之间的差异。以下关于经济资本和监管资本的哪个陈述是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Economic capital is calculated by banks based on their own risk conditions to absorb unexpected losses.
-    \item Regulatory capital is the minimum capital required by regulatory authorities to ensure that banks can withstand risks.
-    \item The calculation of economic capital is usually based on the bank's internal risk assessment model, while regulatory capital is calculated strictly according to the unified standards of regulatory authorities.
-    \item Regulatory capital requirements are higher, so regulatory capital is generally greater than economic capital.
+    \item Economic capital is calculated by banks based on their own risk conditions to absorb unexpected losses. \\
+    经济资本是银行根据自身风险状况计算的资本，用于吸收非预期损失。
+    \item Regulatory capital is the minimum capital required by regulatory authorities to ensure that banks can withstand risks. \\
+    监管资本是监管机构要求银行持有的最低资本，以确保银行能够抵御风险。
+    \item The calculation of economic capital is usually based on the bank's internal risk assessment model, while regulatory capital is calculated strictly according to the unified standards of regulatory authorities. \\
+    经济资本的计算通常基于银行内部的风险评估模型，而监管资本的计算则严格遵循监管机构的统一标准。
+    \item Regulatory capital requirements are higher, so regulatory capital is generally greater than economic capital.\\
+    监管资本要求更高，因此监管资本通常大于经济资本。
 \end{choices}
 
 \begin{correctanswer}
@@ -1699,16 +1966,31 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
     \]
 
     Which of the following statements regarding the Vasicek model is correct?
+    \\    一位银行监管机构的初级分析师正在参加关于Vasicek模型的内部培训课程。该分析师回顾了与该模型相关的以下方程：
+    
+    \[
+    U_i = aF + \sqrt{1 - a^2}Z_i
+    \]
+
+    违约率作为\( F \)的函数：
+    \[
+    F = N\left(\frac{N^{-1}(PD) - aF}{\sqrt{1 - a^2}}\right)
+    \]
+
+    关于Vasicek模型，以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The default probabilities of the individual loans in a portfolio are each mapped to the standard normal distribution \(U_i\), of which values in the extreme right tail represent default.
+    \item The default probabilities of the individual loans in a portfolio are each mapped to the standard normal distribution \(U_i\), of which values in the extreme right tail represent default.\\
+    投资组合中每个贷款的违约概率分别映射到标准正态分布 \(U_i\)，其中极右尾的值代表违约。
+    \item A low value of the factor \(F\) indicates that the economy is strong, while a high value of \(F\) represents economic weakness.\\
+    低值的 \(F\) 表示经济强劲，而高值的 \(F\) 表示经济疲弱。
     
-    \item A low value of the factor \(F\) indicates that the economy is strong, while a high value of \(F\) represents economic weakness.
+    \item For corporate borrowers, the value of the factor \(F\) is higher for loans to companies with more cyclical businesses.\\
+    对于企业借款人，贷款给更多周期性企业的公司的 \(F\) 值更高。
     
-    \item For corporate borrowers, the value of the factor \(F\) is higher for loans to companies with more cyclical businesses.
-    
-    \item The model coefficient \(a\) directly relates to the correlations between the default probability distributions \(U_i\) of the loans in the portfolio.
+    \item The model coefficient \(a\) directly relates to the correlations between the default probability distributions \(U_i\) of the loans in the portfolio.\\
+    模型系数 \(a\) 直接与投资组合中贷款的违约概率分布 \(U_i\) 之间的相关性相关。
 \end{choices}
 
 \begin{correctanswer}
@@ -1745,13 +2027,18 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     Suppose there is a portfolio consisting of Loan A and Loan B. The standard deviations of losses for Loan A and Loan B are \$2 and \$6, respectively. The correlation between the two loans is 0.5, and the portfolio's standard deviation is 7.2111. Calculate the contribution of Loan A and Loan B to the portfolio risk.
+    \\假设有一个由贷款A和贷款B组成的投资组合。贷款A和贷款B的损失标准差分别为2和6，贷款A和贷款B之间的相关系数为0.5，投资组合的标准差为7.2111。计算贷款A和贷款B对投资组合风险的影响。
 \end{question}
 
 \begin{choices}
-    \item Loan A: 1.388, Loan B: 5.826
-    \item Loan A: 1.500, Loan B: 6.000
-    \item Loan A: 1.200, Loan B: 5.500
-    \item Loan A: 1.600, Loan B: 6.200
+    \item Loan A: 1.388, Loan B: 5.826 \\
+    贷款A：1.388，贷款B：5.826
+    \item Loan A: 1.500, Loan B: 6.000 \\
+    贷款A：1.500，贷款B：6.000
+    \item Loan A: 1.200, Loan B: 5.500 \\
+    贷款A：1.200，贷款B：5.500
+    \item Loan A: 1.600, Loan B: 6.200 \\
+    贷款A：1.600，贷款B：6.200
 \end{choices}
 
 \begin{correctanswer}
@@ -1806,16 +2093,21 @@ Assuming portfolio losses are binomially distributed, what is the estimate of th
 
 \begin{question}
     A risk manager at a financial institution is preparing a presentation on derivative credit risk measurement for the bank's senior management team. During their research, they identify several key challenges that need to be addressed. In their presentation notes, they list various statements about these challenges. Which of these statements accurately reflects the complexities they have identified in measuring derivative credit risk?
+    \\一家金融机构的风险经理正在准备一份关于衍生品信用风险测量的报告，供银行高级管理团队的成员参考。在研究过程中，他们识别出需要解决的几个关键挑战。在他们的报告笔记中，他们列出了各种关于这些挑战的陈述。以下哪个陈述准确反映了他们所识别的测量衍生品信用风险复杂性？
 \end{question}
 
 \begin{choices}
-    \item Banks' risk assessment models primarily focus on point-in-time estimates, as they provide the most comprehensive view of credit risk across market cycles.
+    \item Banks' risk assessment models primarily focus on point-in-time estimates, as they provide the most comprehensive view of credit risk across market cycles.\\
+    银行的风险评估模型主要关注时点估计，因为它们提供了市场周期内信用风险最全面的视角。
     
-    \item Loss Given Default (LGD) demonstrates positive correlation with market conditions, showing higher recovery rates during periods of increased defaults.
+    \item Loss Given Default (LGD) demonstrates positive correlation with market conditions, showing higher recovery rates during periods of increased defaults.\\
+    违约损失率（LGD）与市场条件呈正相关关系，表明在违约率上升期间回收率更高。
     
-    \item Expected Default Loss (EAD) calculations are complex and may include wrong-way risk, which is particularly evident in derivative transactions.
+    \item Expected Default Loss (EAD) calculations are complex and may include wrong-way risk, which is particularly evident in derivative transactions.\\
+    预期违约损失（EAD）计算复杂，可能包括错误方向风险，这在衍生品交易中尤为明显。
     
-    \item Counterparty risk is typically unilateral, with all unsettled derivatives with a counterparty considered as a single derivative counterparty default.
+    \item Counterparty risk is typically unilateral, with all unsettled derivatives with a counterparty considered as a single derivative counterparty default.\\
+    交易对手风险通常是单边的，所有与交易对手未结清的衍生品都被视为单个衍生品交易对手违约。
 \end{choices}
 
 \begin{correctanswer}

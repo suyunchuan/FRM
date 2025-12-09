@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}考点1:Stress testing versus VaR and ES}{2}{}%
+\contentsline {subsection}{题号1考察: 压力测试与VaR在风险评估中的优势。（压力测试可以捕捉特定场景中资产类别之间的相互依赖关系）}{2}{}%
+\contentsline {subsection}{题号2考察: 压力测试与经济资本方法的差异。（压力测试倾向于使用序数排名，而经济资本方法使用基数概率）}{3}{}%
+\contentsline {subsection}{题号3考察: 压力测试的时机选择（在经济和金融环境良好时期进行压力测试的重要性）}{4}{}%
+\contentsline {subsection}{题号4考察: 压力测试方法的比较（回溯测试数据不适用于压力测试）}{5}{}%
+\contentsline {subsection}{题号5考察: VaR与压力测试的互补关系（VaR的局限性和压力测试的作用）}{5}{}%
+\contentsline {subsection}{题号6考察: 压力测试的目的（确保金融机构具备足够的资本和流动性应对极端事件）}{6}{}%
+\contentsline {section}{\numberline {2}考点2:Key aspects of stress testing}{6}{}%
+\contentsline {subsection}{题号1考察: 压力测试建模的关键考量（压力测试需要考虑直接影响和二阶效应）}{7}{}%
+\contentsline {subsection}{题号2考察: 压力测试方面。（在经济承压时期，相关性往往会增加。）}{8}{}%
+\contentsline {subsection}{题号3考察: 压力测试方面。（CCAR和DFAST都要求银行评估其在极端情况下的生存能力）}{8}{}%
+\contentsline {section}{\numberline {3}考点3:Governance}{9}{}%
+\contentsline {subsection}{题号1考察: 压力测试的基本原则（压力测试场景的严格性和全面性的重要性）}{9}{}%
+\contentsline {subsection}{题号2考察: 内部审计在压力测试治理中的角色（评估人员专业知识和职责分工的重要性）}{10}{}%
+\contentsline {subsection}{题号3考察: 银行压力测试监管原则（使用共同情景进行额外的压力测试是审慎的做法）}{11}{}%
+\contentsline {subsection}{题号4考察: 治理架构中的压力测试。（董事会可以调整资本水平和风险敞口）}{12}{}%
+\contentsline {subsection}{题号5考察: 巴塞尔协议（压力测试针对的是极端风险）}{12}{}%
+\contentsfinish 

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -134,7 +134,8 @@
 \section{考点1:相关性基础}
 \setcounter{question}{0}
 \begin{question}
-    Suppose an individual buys a correlation swap with a fixed correlation of 0.3 and a notional value of \$2 million for one year. The realized pairwise correlations of the daily log returns at maturity for three assets are $\rho_{1,2}= 0.8$, $\rho_{3,1} = 0.3$, and $\rho_{3,2} = 0.4$. What is the correlation swap buyer's payoff at maturity?
+    Suppose an individual buys a correlation swap with a fixed correlation of 0.3 and a notional value of \$2 million for one year. The realized pairwise correlations of the daily log returns at maturity for three assets are $\rho_{1,2}= 0.8$, $\rho_{3,1} = 0.3$, and $\rho_{3,2} = 0.4$. What is the correlation swap buyer's payoff at maturity?\\
+    假设一个人购买了一个固定相关性为0.3、名义价值为200万美元的互换合约，期限为一年。三个资产的日对数回报的实现两两相关性在到期时为$\rho_{1,2}= 0.8$，$\rho_{3,1} = 0.3$，$\rho_{3,2} = 0.4$。互换买方的到期支付是多少？
 \end{question}
 
 \begin{choices}
@@ -179,13 +180,18 @@
 
 \begin{question}
     Within the framework of risk analysis, which of the following choices would be considered most critical when looking at risks within financial institutions?
+    \\在风险分析的框架下，在金融机构内部审视风险时，哪一种选择被认为是最重要的？
 \end{question}
 
 \begin{choices}
-    \item Computing separate capital requirements for a bank's trading and banking books.
-    \item Proper analysis of stressed VaR.
-    \item Persistent use of backtesting.
-    \item Consideration of interactions among risk factors.
+    \item Computing separate capital requirements for a bank's trading and banking books.\\
+        计算银行交易账簿和银行账簿分别计提的资本要求。
+    \item Proper analysis of stressed VaR.\\
+        适当分析压力VaR。
+    \item Persistent use of backtesting.\\
+        持续使用回测。
+    \item Consideration of interactions among risk factors.\\
+        考虑风险因子之间的相互作用。
 \end{choices}
 
 \begin{correctanswer}
@@ -233,13 +239,18 @@
 
 \begin{question}
     The risk measure that extracts the dependence structure from the joint distribution function created from several continuous marginal distribution functions is known as a:
+    \\从由多个连续边际分布函数创建的联合分布函数中提取依赖结构的风险度量被称为：
 \end{question}
 
 \begin{choices}
-    \item Copula
-    \item Volatility
-    \item Correlation
-    \item Multivariate correlation
+    \item Copula\\
+        联结函数
+    \item Volatility\\
+        波动率
+    \item Correlation\\
+        相关性
+    \item Multivariate correlation\\
+        多元相关性
 \end{choices}
 
 \begin{correctanswer}
@@ -278,13 +289,18 @@
 
 \begin{question}
     What type of liquidity risk is most troublesome for complex trading positions?
+    \\对于复杂交易头寸，哪种类型的流动性风险最麻烦？
 \end{question}
 
 \begin{choices}
-    \item Endogenous
-    \item Market-specific
-    \item Exogenous
-    \item Spectral
+    \item Endogenous\\
+        内生流动性风险
+    \item Market-specific\\
+        市场特定流动性风险
+    \item Exogenous\\
+        外生流动性风险
+    \item Spectral\\
+        谱流动性风险
 \end{choices}
 
 \begin{correctanswer}
@@ -324,13 +340,18 @@
 
 \begin{question}
     In May of 2008, several large hedge funds had speculative positions in the collateralized debt obligations (CDOs) tranches. These hedge funds were forced into bankruptcy due to the lack of understanding of correlations across tranches. Which of the following statements best describes the positions held by hedge funds at this time and the role of changing correlations? Hedge funds held:
+    \\在2008年5月，几家大型对冲基金在担保债务凭证（CDO）分层中持有投机性头寸。由于对分层之间相关性缺乏理解，这些对冲基金被迫破产。以下哪个陈述最好地描述了此时对冲基金持有的头寸以及相关性变化的作用？对冲基金持有：
 \end{question}
 
 \begin{choices}
-    \item a long equity tranche and short mezzanine tranche when the correlations in both tranches decreased.
-    \item a short equity tranche and long mezzanine tranche when the correlations in both tranches increased.
-    \item a short senior tranche and long mezzanine tranche when the correlation in the mezzanine tranche decreased.
-    \item a long mezzanine tranche and short equity tranche when the correlation in the mezzanine tranche increased.
+    \item a long equity tranche and short mezzanine tranche when the correlations in both tranches decreased.\\
+        当两个分层的相关性都下降时，持有权益层和夹层空头头寸。
+    \item a short equity tranche and long mezzanine tranche when the correlations in both tranches increased.\\
+        当两个分层的相关性都上升时，持有权益层和夹层多头头寸。
+    \item a short senior tranche and long mezzanine tranche when the correlation in the mezzanine tranche decreased.\\
+        当夹层相关性下降时，持有优先层空头头寸和夹层多头头寸。
+    \item a long mezzanine tranche and short equity tranche when the correlation in the mezzanine tranche increased.\\
+        当夹层相关性上升时，持有夹层多头头寸和权益层空头头寸。
 \end{choices}
 
 \begin{correctanswer}
@@ -374,6 +395,7 @@
 
 \begin{question}
     Suppose a creditor makes a \$6 million loan to company A and a \$6 million loan to company B. Based on historical information of companies in this industry, companies A and B each have a 7\% default probability and a default correlation coefficient of 0.6. The expected loss for this creditor under the worst case scenario assuming loss given default is 100\% is closest to:
+    \\假设一个债权人向公司A和公司B分别贷款600万美元。根据该行业公司的历史信息，公司A和公司B的违约概率均为7\%，违约相关系数为0.6。在假设损失给定违约的情况下，最坏情况下债权人的预期损失最接近：
 \end{question}
 
 \begin{choices}
@@ -427,13 +449,18 @@ P(A\cap B)
 
 \begin{question}
     New copula correlation models were used by traders and risk managers during the 2008-2010 global financial crisis. This led to miscalculations in the underlying risk for structured products such as collateralized debt obligation (CDO) models. Which of the following statements least likely explains the failure of these new copula correlation models during the financial crisis?
+    \\在2008-2010年全球金融危机期间，交易员和风险经理使用了新的联结函数相关模型。这导致了担保债务凭证（CDO）模型等结构性产品的底层风险计算错误。以下哪个陈述最不可能解释这些新的联结函数相关模型在金融危机期间的失败？
 \end{question}
 
 \begin{choices}
-    \item The copula correlation models assumed a negative correlation between the equity and senior tranches of CDOs.
-    \item Correlations for equity tranches of CDOs increased during the financial crisis.
-    \item The correlation copula models were calibrated with data from time periods that had low risk.
-    \item Correlations for senior tranches of CDOs decreased during the financial crisis.
+    \item The copula correlation models assumed a negative correlation between the equity and senior tranches of CDOs.\\
+        联结函数相关模型假设担保债务凭证（CDO）的权益层和优先层之间存在负相关。
+    \item Correlations for equity tranches of CDOs increased during the financial crisis.\\
+        担保债务凭证（CDO）的权益层相关性在金融危机期间增加。
+    \item The correlation copula models were calibrated with data from time periods that had low risk.\\
+        联结函数相关模型使用低风险时期的数据进行校准。
+    \item Correlations for senior tranches of CDOs decreased during the financial crisis.\\
+        担保债务凭证（CDO）的优先层相关性在金融危机期间下降。
 \end{choices}
 
 \begin{correctanswer}
@@ -475,13 +502,18 @@ P(A\cap B)
 
 \begin{question}
     Expected shortfall is generally suggested as a better alternative than VaR during market turmoil. Which of the following statements regarding VaR and ES is true?
+    \\在市场动荡期间，期望损失通常被建议作为比VaR更好的替代方案。以下关于VaR和ES的陈述哪一个是正确的？
 \end{question}
 
 \begin{choices}
-    \item ES leads to more required economic capital than VaR does for the same confidence level.
-    \item While VaR ensures that the estimate of portfolio risk is less than or equal to the sum of the risks of that portfolio's positions, ES does not.
-    \item Both VaR and ES account for the severity of losses beyond the confidence threshold.
-    \item ES is relatively easier to backtest than VaR.
+    \item ES leads to more required economic capital than VaR does for the same confidence level.\\
+        ES在相同置信水平下需要更多的经济资本比VaR多。
+    \item While VaR ensures that the estimate of portfolio risk is less than or equal to the sum of the risks of that portfolio's positions, ES does not.\\
+        虽然VaR确保投资组合风险估计小于或等于投资组合头寸风险的和，但ES不确保。
+    \item Both VaR and ES account for the severity of losses beyond the confidence threshold.\\
+        VaR和ES都考虑超过置信水平阈值的损失严重程度。
+    \item ES is relatively easier to backtest than VaR.\\
+        ES比VaR更容易回测。
 \end{choices}
 
 \begin{correctanswer}
@@ -524,13 +556,18 @@ P(A\cap B)
 
 \begin{question}
     Which of the following measures is most likely an example of a dynamic financial correlation measure?
+    \\以下哪种度量最可能是动态金融相关性度量的例子？
 \end{question}
 
 \begin{choices}
-    \item Pairs trading
-    \item Value at risk (VaR)
-    \item Binomial default correlation model
-    \item Correlation copulas for collateralized debt obligations (CDOs)
+    \item Pairs trading\\
+        配对交易
+    \item Value at risk (VaR)\\
+        价值风险（VaR）
+    \item Binomial default correlation model\\
+        二项违约相关模型
+    \item Correlation copulas for collateralized debt obligations (CDOs)\\
+        担保债务凭证（CDO）相关联结函数
 \end{choices}
 
 \begin{correctanswer}
@@ -578,6 +615,7 @@ P(A\cap B)
 
 \begin{question}
     A portfolio manager owns a portfolio of options on a non-dividend paying stock XYZ. The portfolio is made up of 18,000 deep in-the-money call options on XYZ and 45,000 deep out-of-the-money call options on XYZ. The portfolio also contains 22,000 forward contracts on XYZ. XYZ is trading at USD 95. If the volatility of XYZ is 28\% per year, which of the following amounts would be closest to the 1-day VaR of the portfolio at the 95 percent confidence level, assuming 252 trading days in a year?
+    \\一个基金经理拥有一个非分红股票XYZ的期权组合。组合由18,000张深度实值看涨期权和45,000张深度虚值看涨期权组成。组合还包含22,000份远期合约。XYZ交易价格为95美元。假设一年有252个交易日，XYZ的年波动率为28\%，以下哪个金额最接近组合在95\%置信水平下的1天VaR？
 \end{question}
 
 \begin{choices}
@@ -627,13 +665,18 @@ P(A\cap B)
 
 \begin{question}
     The relationship of correlation risk to credit risk is an important area of concern for risk managers. Which of the following statements regarding default probabilities and default correlations is incorrect?
+    \\相关性风险与信用风险的关系是风险经理关注的重要领域。以下关于违约概率和违约相关性的陈述哪一个是错误的？
 \end{question}
 
 \begin{choices}
-    \item Creditors benefit by diversifying exposure across industries to lower the default correlations of debtors.
-    \item The default term structure increases with time to maturity for most investment grade bonds.
-    \item The probability of default is higher in the long-term time horizon for non-investment grade bonds.
-    \item For non-investment grade bonds, the probability of default is higher in the immediate time horizon.
+    \item Creditors benefit by diversifying exposure across industries to lower the default correlations of debtors.\\
+        债权人通过跨行业分散暴露来降低债务人的违约相关性而受益。
+    \item The default term structure increases with time to maturity for most investment grade bonds.\\
+        违约期限结构随到期时间增加而上升，适用于大多数投资级债券。
+    \item The probability of default is higher in the long-term time horizon for non-investment grade bonds.\\
+        非投资级债券在长期时间范围内违约概率更高。
+    \item For non-investment grade bonds, the probability of default is higher in the immediate time horizon.\\
+        非投资级债券在即期时间范围内违约概率更高。
 \end{choices}
 
 \begin{correctanswer}
@@ -681,13 +724,18 @@ P(A\cap B)
 
 \begin{question}
     The dependence structure between the returns of financial assets plays an important role in risk measurement. For liquid markets, which of the following statements is incorrect?
+    \\金融资产回报之间的依赖结构在风险度量中起着重要作用。对于流动性市场，以下哪个陈述是错误的？
 \end{question}
 
 \begin{choices}
-    \item Correlation is valid measure of dependence between random variables for only certain types of return distributions.
-    \item Even if the return distributions of two assets have a correlation of zero, the returns of these assets are not necessarily independent.
-    \item Copulas make it possible to model marginal distributions and the dependence structure separately.
-    \item With short time horizons (3 months or less), correlation estimates are typically very stable.
+    \item Correlation is valid measure of dependence between random variables for only certain types of return distributions.\\
+        相关性是对随机变量之间依赖关系的有效度量，仅适用于某些类型的回报分布。
+    \item Even if the return distributions of two assets have a correlation of zero, the returns of these assets are not necessarily independent.\\
+        即使两个资产的回报分布相关性为零，这些资产的回报也不一定是独立的。
+    \item Copulas make it possible to model marginal distributions and the dependence structure separately.\\
+        联结函数使得可以分别建模边际分布和依赖结构。
+    \item With short time horizons (3 months or less), correlation estimates are typically very stable.\\
+        短期（3个月或更短）相关性估计通常非常稳定。
 \end{choices}
 
 \begin{correctanswer}
@@ -738,13 +786,18 @@ P(A\cap B)
 
 \begin{question}
     On December 31, 2008, Portfolio A had a market value of \$4,500,000. The historical standard deviation of daily returns was 1.8\%. Assuming that Portfolio A is normally distributed, calculate the daily VAR(2.5\%) on a dollar basis and state its interpretation. Daily VAR(2.5\%) is equal to:
+    \\2008年12月31日，投资组合A的市场价值为450万美元。日收益率的历史标准差为1.8\%。假设投资组合A是正态分布，计算日VaR(2.5\%)并解释其含义。日VaR(2.5\%)等于：
 \end{question}
 
 \begin{choices}
-    \item \$132,300, implying that daily portfolio losses will fall short of this amount 2.5\% of the time.
-    \item \$111,375, implying that daily portfolio losses will only exceed this amount 2.5\% of the time.
-    \item \$132,300, implying that daily portfolio losses will only exceed this amount 2.5\% of the time.
-    \item \$111,375, implying that daily portfolio losses will fall short of this amount 2.5\% of the time.
+    \item \$132,300, implying that daily portfolio losses will fall short of this amount 2.5\% of the time.\\
+        132,300美元，意味着每日投资组合损失将少于这个金额2.5\%的时间。
+    \item \$111,375, implying that daily portfolio losses will only exceed this amount 2.5\% of the time.\\
+        111,375美元，意味着每日投资组合损失将仅超过这个金额2.5\%的时间。
+    \item \$132,300, implying that daily portfolio losses will only exceed this amount 2.5\% of the time.\\
+        132,300美元，意味着每日投资组合损失将仅超过这个金额2.5\%的时间。
+    \item \$111,375, implying that daily portfolio losses will fall short of this amount 2.5\% of the time.\\
+        111,375美元，意味着每日投资组合损失将少于这个金额2.5\%的时间。
 \end{choices}
 
 \begin{correctanswer}
@@ -795,6 +848,15 @@ P(A\cap B)
     III. Pearson correlation is a linear measure of dependence between the return of two assets equal to the ratio of the covariance of the asset returns to the product of their volatilities.
 
     IV. Using copulas, one can construct joint return distribution functions from marginal distribution functions in a way that allows for more general types of dependence structure of the asset returns.
+   \\    Michael Wang是一位风险分析师，他想使用copula（连接函数）来建模资产收益率之间的依赖关系，并且必须说服他的经理这是最佳方法。以下哪些陈述是正确的？
+
+   I. 投资组合资产收益率分布之间的依赖关系对风险测量至关重要。
+
+   II. 相关性估计在低市场波动期间通常显得稳定，然后在压力市场条件下变得不稳定。因此，使用长期估计的相关性计算的风险度量将在压力期间低估风险。
+
+   III. 皮尔逊相关性是两个资产收益率之间依赖关系的线性度量，等于资产收益率的协方差与其波动率乘积的比值。
+
+   IV. 使用copula，可以从边际分布函数构建联合收益率分布函数，这种方式允许资产收益率具有更一般的依赖结构类型。 
 \end{question}
 
 \begin{choices}
@@ -837,13 +899,18 @@ P(A\cap B)
 
 \begin{question}
     Portfolios (X) and (Y) each have volatility of 30\%, but portfolio (Y) has a higher return and therefore its absolute VaR is lower; i.e., Absolute VaR = - return * T + deviate * volatility * $\sqrt{T}$. Which coherence property does this illustrate?
+    \\投资组合（X）和（Y）每个都有30\%的波动率，但投资组合（Y）具有更高的回报，因此其绝对VaR较低；即，绝对VaR = - 回报 * T + 偏差 * 波动率 * $\sqrt{T}$。哪种一致性属性说明了这一点？
 \end{question}
 
 \begin{choices}
-    \item Monotonicity
-    \item Subadditivity
-    \item Positive Homogeneity
-    \item Translational invariance
+    \item Monotonicity\\
+        单调性
+    \item Subadditivity\\
+        次可加性
+    \item Positive Homogeneity\\
+        正齐次性
+    \item Translational invariance\\
+        平移不变性
 \end{choices}
 
 \begin{correctanswer}
@@ -894,13 +961,30 @@ P(A\cap B)
             \hline
             \textbf{Stock A} & 1.0 & 0.5 & 0.7 & 0.6 \\
             \textbf{Stock B} & 0.5 & 1.0 & 0.3 & 0.4 \\
-            \textbf{Stock C} & 0.7 & 0.3 & 1.0 & 0.8 \\
+            \textbf{Stock C} & 0.7 &0.3 & 1.0 & 0.8 \\
             \textbf{Stock D} & 0.6 & 0.4 & 0.8 & 1.0 \\
             \hline
         \end{tabular}
         \caption{股票相关系数矩阵}
     \end{table}
-    What is the average realized correlation?
+    What is the average realized correlation? 
+    \\一个投资银行分析师正在计算一个相关性互换的收益，该互换即将到期。相关性互换的名义金额涵盖了四个等权重股票。分析师使用以下实现的成对相关性来计算将应用于确定互换支付的相关性：
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            & \textbf{股票A} & \textbf{股票B} & \textbf{股票C} & \textbf{股票D} \\
+            \hline
+            \textbf{股票A} & 1.0 & 0.5 & 0.7 & 0.6 \\
+            \textbf{股票B} & 0.5 & 1.0 & 0.3 & 0.4 \\
+            \textbf{股票C} & 0.7 &0.3 & 1.0 & 0.8 \\
+            \textbf{股票D} & 0.6 & 0.4 & 0.8 & 1.0 \\
+            \hline
+        \end{tabular}
+        \caption{股票相关系数矩阵}
+    \end{table}
+    平均实现相关性是多少？
 \end{question}
 
 \begin{choices}
@@ -958,13 +1042,22 @@ P(A\cap B)
     ·Take a long position in a correlation swap on the market index, with Beta as the fixed correlation payer.
 
     Assuming the CIO's expectations are realized, which of the following is correct?
+    \\Beta Capital Inc. (Beta)是一家财富管理公司，目前管理着一个另类投资基金、一个成长型股权基金和一个包括资产Z的个体资产。这两个基金都与同一个定制指数进行基准比较。另类投资基金在MBS中对优先层和夹层层进行了等额投资，该MBS由Bank Alpha发行，由SPV发行。Bank Alpha在交易期间保留了6\%的净经济利益。为了对冲其头寸，Beta从Bank Gamma购买了MBS的CDS。Bank Alpha和Bank Gamma都依赖于零售存款来为其贷款活动融资。Beta使用RAROC在99\%置信水平下评估其投资业绩和资本预算。CIO预计市场波动性和定制指数中的资产相关性在未来一年会增加。CIO然后决定执行以下两个策略：
+    ·进入一个支付波动率互换，其中预先指定的固定波动率是Asset Z的当前波动率。
+    ·在市场上建立一个多头头寸，与Beta作为固定相关性支付方。
+
+    假设CIO的预期是正确的，以下哪个陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Assuming no low-risk anomaly, Beta would generate a gain from the volatility swap if the volatility of Asset Z decreases.
-    \item If the realized correlation in the correlation swap is higher than the fixed correlation, Beta would generate a gain on the correlation swap.
-    \item An increase in the default correlation between Bank Alpha and Bank Gamma, all else held constant, would lead to a decrease in the value of Beta's CDS position.
-    \item Holding all else constant, Beta's estimated after-tax RAROC would not change if it adopts a 95-Confidence level compared to a 99-Confidence level for its capital budgeting.
+    \item Assuming no low-risk anomaly, Beta would generate a gain from the volatility swap if the volatility of Asset Z decreases.\\
+        假设没有低风险异常，如果Asset Z的波动率下降，Beta将从波动率互换中获得收益。
+    \item If the realized correlation in the correlation swap is higher than the fixed correlation, Beta would generate a gain on the correlation swap.\\
+        如果相关性互换的实现相关性高于固定相关性，Beta将在相关性互换中获得收益。
+    \item An increase in the default correlation between Bank Alpha and Bank Gamma, all else held constant, would lead to a decrease in the value of Beta's CDS position.\\
+        银行Alpha和银行Gamma之间的违约相关性增加，所有其他条件不变，将导致Beta的CDS头寸价值下降。
+    \item Holding all else constant, Beta's estimated after-tax RAROC would not change if it adopts a 95-Confidence level compared to a 99-Confidence level for its capital budgeting.\\
+        所有其他条件不变，如果Beta采用95\%置信水平进行资本预算，而不是99\%置信水平，其估计的税后RAROC将不会发生变化。
 \end{choices}
 
 \begin{correctanswer}
@@ -1026,7 +1119,8 @@ P(A\cap B)
 \setcounter{question}{0}
 
 \begin{question}
-    A risk manager uses the past 500 months of correlation data from the S\&P 500 Index to estimate the long-run mean correlation of common stocks and the mean reversion rate. Based on historical data, the long-run mean correlation of S\&P 500 stocks was 35\%, and the regression output estimates the following regression relationship: Y = 0.225 – 0.80X. Suppose that in March 2023, the average monthly correlation for all S\&P 500 stocks was 40\%. What is the expected correlation for April 2023 assuming the mean reversion rate estimated in the regression analysis?
+    A risk manager uses the past 500 months of correlation data from the S\&P 500 Index to estimate the long-run mean correlation of common stocks and the mean reversion rate. Based on historical data, the long-run mean correlation of S\&P 500 stocks was 35\%, and the regression output estimates the following regression relationship: Y = 0.225 – 0.80X. Suppose that in March 2023, the average monthly correlation for all S\&P 500 stocks was 40\%. What is the expected correlation for April 2023 assuming the mean reversion rate estimated in the regression analysis?\\
+    一个风险经理使用标普500指数过去500个月的月度相关性数据来估计普通股票的长期平均相关性和均值回归率。根据历史数据，标普500指数股票的长期平均相关性为35\%，回归输出估计了以下回归关系：Y = 0.225 – 0.80X。假设在2023年3月，标普500指数所有股票的平均月度相关性为40\%。假设回归分析中估计的均值回归率，2023年4月的预期相关性是多少？
 \end{question}
 
 \begin{choices}
@@ -1074,13 +1168,18 @@ P(A\cap B)
 \begin{question}
     Suppose a risk manager examines the correlations and correlation volatility of stocks in the
     S\&P 500 Index for the period beginning in 1980 and ending in 2020. Expansionary periods are defined as periods where the U.S. gross domestic product (GDP) growth rate is greater than 3.5\%, periods are normal when the GDP growth rates are between 0 and 3.5\%, and recessions are periods with two consecutive negative GDP growth rates. Which of the following statements characterizes correlation and correlation volatilities for this sample? The risk manager will most likely find that
+    \\假设一个风险经理检查了标普500指数股票在1980年至2020年期间的相关性和相关性波动。扩张期定义为美国国内生产总值（GDP）增长率大于3.5\%的时期，正常期定义为GDP增长率在0到3.5\%之间的时期，衰退期定义为两个连续的负GDP增长率时期。以下哪个陈述描述了样本的相关性和相关性波动？风险经理最有可能发现：
 \end{question}
 
 \begin{choices}
-    \item correlations and correlation volatility are highest for recessions.
-    \item correlations and correlation volatility are highest for expansionary periods.
-    \item correlations are highest for normal periods, and correlation volatility is highest for recessions.
-    \item correlations are highest for recessions, and correlation volatility is highest for normal periods.
+    \item correlations and correlation volatility are highest for recessions.\\
+        衰退期相关性和相关性波动性最高。
+    \item correlations and correlation volatility are highest for expansionary periods.\\
+        扩张期相关性和相关性波动性最高。
+    \item correlations are highest for normal periods, and correlation volatility is highest for recessions.\\
+        正常期相关性最高，衰退期相关性波动性最高。
+    \item correlations are highest for recessions, and correlation volatility is highest for normal periods.\\
+        衰退期相关性最高，正常期相关性波动性最高。
 \end{choices}
 
 \begin{correctanswer}
@@ -1116,6 +1215,7 @@ P(A\cap B)
     Assume that the long-run mean value for this variable is 45 and ignore the stochastic term
     included in most regressions of financial data. What is the expected change in value of the
     variable for the next period if the mean reversion rate is 0.5.
+    \\假设一个变量在时间周期t-1的值为35。假设该变量的长期均值为45，忽略大多数金融数据回归中包含的随机项。如果均值回归率为0.5，则下一期的变量值预期变化是多少？
 \end{question}
 
 \begin{choices}
@@ -1149,13 +1249,18 @@ P(A\cap B)
     distributions for equity correlation distributions, bond correlation distributions, and default
     probability correlation distributions? The best-fit distribution for the equity, bond, and
     default probability correlation distributions, respectively are:
+    \\在估计相关性矩阵时，风险经理通常假设相关性的潜在分布。以下哪个陈述最准确地描述了股权相关性分布、债券相关性分布和违约概率相关性分布的最佳拟合分布？股权、债券和违约概率相关性分布的最佳拟合分布分别是：
 \end{question}
 
 \begin{choices}
-    \item lognormal, generalized extreme value, and normal.
-    \item Johnson SB, generalized extreme value, and Johnson SB.
-    \item beta, normal, and beta.
-    \item Johnson SB, normal, and beta.
+    \item lognormal, generalized extreme value, and normal.\\
+        对数正态分布，广义极值分布，正态分布。
+    \item Johnson SB, generalized extreme value, and Johnson SB.\\
+        Johnson SB，广义极值分布，Johnson SB。
+    \item beta, normal, and beta.\\
+        Beta分布，正态分布，Beta分布。
+    \item Johnson SB, normal, and beta.\\
+        Johnson SB，正态分布，Beta分布。
 \end{choices}
 
 \begin{correctanswer}
@@ -1185,7 +1290,8 @@ P(A\cap B)
 }
 
 \begin{question}
-    A risk manager uses the past 500 months of correlation data from the S\&P 500 Index to estimate the long-run mean correlation of common stocks and the mean reversion rate. Based on historical data, the long-run mean correlation of S\&P 500 stocks was 35\%, and the regression output estimates the following regression relationship: Y = 0.225 – 0.80X. Suppose that in March 2023, the average monthly correlation for all S\&P 500 stocks was 40\%. What is the expected correlation for April 2023 assuming the mean reversion rate estimated in the regression analysis?
+    A risk manager uses the past 500 months of correlation data from the S\&P 500 Index to estimate the long-run mean correlation of common stocks and the mean reversion rate. Based on historical data, the long-run mean correlation of S\&P 500 stocks was 35\%, and the regression output estimates the following regression relationship: Y = 0.225 – 0.80X. Suppose that in March 2023, the average monthly correlation for all S\&P 500 stocks was 40\%. What is the expected correlation for April 2023 assuming the mean reversion rate estimated in the regression analysis?\\
+    一个风险经理使用标普500指数过去500个月的月度相关性数据来估计普通股票的长期平均相关性和均值回归率。根据历史数据，标普500指数股票的长期平均相关性为35\%，回归输出估计了以下回归关系：Y = 0.225 – 0.80X。假设在2023年3月，标普500指数所有股票的平均月度相关性为40\%。假设回归分析中估计的均值回归率，2023年4月的预期相关性是多少？
 \end{question}
 
 \begin{choices}
@@ -1244,13 +1350,22 @@ P(A\cap B)
         \end{equation*}
 
     Which of the following statements does not accurately describe this copula function?
+    \\假设一个风险经理创建了一个联结函数C，定义为：
+    \begin{equation*}
+        C\left[ G_1(u_1), \ldots, G_n(u_n) \right] = F_n \left[ F_1^{-1}(G_1(u_1)), \ldots, F_n^{-1}(G_n(u_n)); \rho_F \right]
+        \end{equation*}
+    以下哪个陈述不准确地描述了这个联结函数？
 \end{question}
 
 \begin{choices}
-    \item $G_i (u_i)$ are standard normal univariate distributions.
-    \item $F_n$ is the joint cumulative distribution function.
-    \item $F_1^{-1}$ is the inverse function of $F_n$ that is used in the mapping process.
-    \item $\rho_F$ is the correlation matrix structure of the joint cumulative function $F_n$.
+    \item $G_i (u_i)$ are standard normal univariate distributions.\\
+         $G_i (u_i)$是标准正态一元分布。
+    \item $F_n$ is the joint cumulative distribution function.\\
+         $F_n$是联合累积分布函数。
+    \item $F_1^{-1}$ is the inverse function of $F_n$ that is used in the mapping process.\\
+         $F_1^{-1}$是$F_n$的逆函数，用于映射过程。
+    \item $\rho_F$ is the correlation matrix structure of the joint cumulative function $F_n$.\\
+         $\rho_F$是联合累积函数$F_n$的相关矩阵结构。
 \end{choices}
 
 \begin{correctanswer}
@@ -1283,13 +1398,18 @@ P(A\cap B)
 \begin{question}
     In estimating correlation matrices, risk managers often assume an underlying distribution for the correlations. Which of the following statements most accurately describes the best-fit
     distributions for stock index correlation distributions, commodity correlation distributions, and credit spread correlation distributions? The best-fit distribution for the stock index, commodity, and credit spread correlation distributions, respectively are:
+    \\在估计相关性矩阵时，风险经理通常假设相关性的潜在分布。以下哪个陈述最准确地描述了股指相关性分布、商品相关性分布和信用利差相关性分布的最佳拟合分布？股指、商品和信用利差相关性分布的最佳拟合分布分别是：
 \end{question}
 
 \begin{choices}
-    \item lognormal, generalized extreme value, and normal.
-    \item Johnson SB, generalized extreme value, and Johnson SB.
-    \item beta, normal, and beta.
-    \item Johnson SB, normal, and beta.
+    \item lognormal, generalized extreme value, and normal.\\
+        对数正态分布，广义极值分布，正态分布。
+    \item Johnson SB, generalized extreme value, and Johnson SB.\\
+        Johnson SB，广义极值分布，Johnson SB。
+    \item beta, normal, and beta.\\
+        Beta分布，正态分布，Beta分布。
+    \item Johnson SB, normal, and beta.\\
+        Johnson SB，正态分布，Beta分布。
 \end{choices}
 
 \begin{correctanswer}
@@ -1325,16 +1445,21 @@ P(A\cap B)
 
 \begin{question}
     Which of the following statements best describes a Student's t copula?
+    \\以下哪个陈述最准确地描述了Student's t copula？
 \end{question}
 
 \begin{choices}
     \item A major disadvantage of a Student's t copula model is the transformation of the original
-    marginal distributions in order to define the correlation matrix.
+    marginal distributions in order to define the correlation matrix.\\
+        一个Student's t copula模型的主要缺点是转换原始边际分布以定义相关矩阵。
     \item The mapping of each variable to the new distribution is done by defining a mathematical
-    relationship between marginal and unknown distributions.
+    relationship between marginal and unknown distributions.\\
+        将每个变量映射到新分布是通过定义边际分布和未知分布之间的数学关系来完成的。
     \item A Student's t copula maps the marginal distribution of each variable to the standard t
-    distribution.
-    \item A Student's t copula is seldom used in financial models because ordinal numbers are required.
+    distribution.\\
+        A Student's t copula将每个变量的边际分布映射到标准t分布。
+    \item A Student's t copula is seldom used in financial models because ordinal numbers are required.\\
+        A Student's t copula在金融模型中很少使用，因为需要序数。
 \end{choices}
 
 \begin{correctanswer}
@@ -1377,6 +1502,15 @@ P(A\cap B)
     infinite variance. 
     
     IV. Correlation is an appropriate measure of dependence when the variables follow a multivariate normal distribution.
+    \\以下哪个陈述关于相关性和联结函数是正确的？
+
+    I. Copula允许我们独立于边际分布建模变量之间的依赖结构。
+
+    II. 变量的线性变换保留了它们的相关结构。
+
+    III. 相关性可以有效地用于测量具有无限方差的变量之间的关系。
+
+    IV. 当变量遵循多元正态分布时，相关性是依赖关系的适当度量。
 \end{question}
 
 \begin{choices}
@@ -1421,17 +1555,21 @@ P(A\cap B)
 \begin{question}
     A Gaussian copula is constructed to estimate the joint default probability of two assets
     within a one-year time period. Which of the following statements regarding this type of copula is incorrect?
-    
+    \\一个高斯Copula被构造来估计两个资产在一年时间内的联合违约概率。以下哪个陈述关于这种类型的Copula是错误的？
 \end{question}
 
 \begin{choices}
     \item This copula requires that the respective cumulative default probabilities are mapped to a
-    bivariate standard normal distribution.
+    bivariate standard normal distribution.\\
+        这个Copula要求将各自的累积违约概率映射到二元标准正态分布。
     \item This copula defines the relationship between the variables using a default correlation
-    matrix, ρM
+    matrix, ρM\\
+        这个Copula使用违约相关矩阵定义变量之间的关系，ρM
     \item The term maps each individual cumulative default probability for asset i for time period ton
-    a percentile-to-percentile basis.
-    \item This copula is a common approach used in finance to estimate joint default probabilities
+    a percentile-to-percentile basis.\\
+        这个术语将每个资产i在时间周期t的累积违约概率映射到百分位数-百分位数的基础上。
+    \item This copula is a common approach used in finance to estimate joint default probabilities\\
+        这个Copula是金融中常用的方法，用于估计联合违约概率
 \end{choices}
 
 \begin{correctanswer}
@@ -1470,14 +1608,19 @@ P(A\cap B)
     variables, X and Y. X is uniformly distributed between 5 and 9, and Y is uniformly distributed
     between 6 and 10. The risk manager wants to model their joint distribution, H(X,Y). The theorem
     of Sklar proves that, for any joint distribution H, there is a copula C such that:
+    \\一个风险经理想要研究一个依赖于两个经济变量X和Y的组合。X在5和9之间均匀分布，Y在6和10之间均匀分布。风险经理想要建模它们的联合分布H(X,Y)。Sklar定理证明，对于任何联合分布H，都存在一个联结函数C，使得：
 \end{question}
 
 \begin{choices}
-    \item H(4X + 5, 4Y + 6) is equal to C[X,Y].
+    \item H(4X + 5, 4Y + 6) is equal to C[X,Y].\\
+        H(4X + 5, 4Y + 6)等于C[X,Y]。
     \item H(X,Y) is equal to C[u,d] where u is the density marginal distribution of X and d is the
-    density marginal distribution of Y.
-    \item H(X,Y) is equal to C[(X – 5)/4, (Y – 6)/4].
-    \item H[(X - 5)/4, (Y- 6)/4] is equal to C(X,Y).
+    density marginal distribution of Y.\\
+        H(X,Y)等于C[u,d]，其中u是X的密度边际分布，d是Y的密度边际分布。
+    \item H(X,Y) is equal to C[(X – 5)/4, (Y – 6)/4].\\
+        H(X,Y)等于C[(X – 5)/4, (Y – 6)/4]。
+    \item H[(X - 5)/4, (Y- 6)/4] is equal to C(X,Y).\\
+        H[(X - 5)/4, (Y- 6)/4]等于C(X,Y)。
 \end{choices}
 
 \begin{correctanswer}

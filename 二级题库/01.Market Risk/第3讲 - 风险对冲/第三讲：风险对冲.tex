@@ -5,9 +5,9 @@
 
 \usepackage{fontspec} 
 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
@@ -104,13 +104,17 @@
     TIPS in relation to nominal bonds. He runs a regression and determines from the output that the
     nominal yield changes by 1.0352 basis points per basis point change in the real yield. Would
     the trader adjust the hedge, and if so, by how much?
+    \\假设一个交易员正在做一个相对价值交易，卖出一张美国国债，同时购买一张美国国债TIPS。根据当前两个证券之间的利差，交易员卖出\$120M名义债券，买入\$105.6M TIPS。然后，交易员开始质疑TIPS收益率变化与名义债券收益率变化之间的关系。他进行回归分析，并从输出中确定名义收益率每变化1个基点，实际收益率变化1.0352个基点。交易员是否会调整对冲，如果是，调整多少？
 \end{question}
 
 \begin{choices}
     \item No.
-    \item Yes, by \$3.12 million (purchase additional TIPS)
-    \item Yes, by \$3.15 million (sell a portion of the TIPS)
-    \item Yes, by \$2.88 million (Purchase additional TIPS)
+    \item Yes, by \$3.12 million (purchase additional TIPS)\\
+        是的，需要额外购买\$3.12M的TIPS。
+    \item Yes, by \$3.15 million (sell a portion of the TIPS)\\
+        是的，需要卖出部分TIPS。
+    \item Yes, by \$2.88 million (Purchase additional TIPS)\\
+        是的，需要额外购买\$2.88M的TIPS。
 \end{choices}
 
 \begin{correctanswer}
@@ -173,13 +177,18 @@
     If a trader is creating a fixed income hedge, which hedging methodology would be least
     effective if the trader is concerned about the dispersion of the change in the corporate bond yield
     for a particular change in the government bond yield?
+    \\假设一个交易员正在创建一个固定收益对冲，如果交易员担心公司债券收益率变化与政府债券收益率变化之间的分散性，哪种对冲方法最无效？
 \end{question}
 
 \begin{choices}
-    \item One-variable regression hedge.
-    \item DV01 hedge
-    \item Two-variable regression hedge.
-    \item Principal components hedge.
+    \item One-variable regression hedge.\\
+        单变量回归对冲。
+    \item DV01 hedge\\
+        DV01对冲。
+    \item Two-variable regression hedge.\\
+        双变量回归对冲。
+    \item Principal components hedge.\\
+        主成分对冲。
 \end{choices}
 
 \begin{correctanswer}

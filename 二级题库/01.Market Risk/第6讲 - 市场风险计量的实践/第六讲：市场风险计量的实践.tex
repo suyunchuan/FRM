@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -94,14 +94,19 @@
 \setcounter{question}{0}
 
 \begin{question}
-    Which of the following risks is specifically recognized by the incremental risk charge (IRC)?
+    Which of the following risks is specifically recognized by the incremental risk charge (IRC)?\\
+    以下哪一项风险被增量风险收费（IRC）特别识别？
     \end{question}
     
     \begin{choices}
-        \item Expected shortfall risk, because it is important to understand the amount of loss potential in the tail
-        \item Jump-to-default risk, as measured by 99.9\% VaR, because a default could cause a significant loss for the bank
-        \item Equity price risk, because a change in market prices could materially impact mark-to-market accounting for risk
-        \item Interest rate risk, as measured by 97.5\% expected shortfall, because an increase in interest rates could cause a significant loss for the bank
+        \item Expected shortfall risk, because it is important to understand the amount of loss potential in the tail\\
+        预期短缺风险，因为它很重要，可以理解尾部损失的潜在金额
+        \item Jump-to-default risk, as measured by 99.9\% VaR, because a default could cause a significant loss for the bank\\
+        跳跃到违约风险，通过99.9\%置信水平的VaR衡量，因为违约可能导致银行重大损失
+        \item Equity price risk, because a change in market prices could materially impact mark-to-market accounting for risk\\
+        股权价格风险，因为市场价格的变化可能对风险的市场价值产生重大影响
+        \item Interest rate risk, as measured by 97.5\% expected shortfall, because an increase in interest rates could cause a significant loss for the bank\\
+        利率风险，通过97.5\%置信水平的预期短缺衡量，因为利率上升可能导致银行重大损失
     \end{choices}
     
     \begin{correctanswer}
@@ -139,6 +144,11 @@
         \begin{itemize}
             \item I.The bank must be able to physically trade the asset
             \item II.The risk of the asset must be managed by the bank's trading desk
+        \end{itemize}
+        以下哪一项陈述代表将资产归类为交易账户资产的标准？
+        \begin{itemize}
+            \item I.银行必须能够实物交易资产
+            \item II.资产的风险必须由银行的交易台管理
         \end{itemize}
     \end{question}
     
@@ -180,13 +190,18 @@
 
     \begin{question}
         Which of the following statements regarding the differences between Basel I, Basel II.5, and the Fundamental Review of the Trading Book (FRTB) for market risk capital calculations is incorrect?
+        \\ 以下哪一项陈述关于巴塞尔协议I、巴塞尔协议II.5和交易账簿基本审查（FRTB）在市场风险资本计算方面的差异是不正确的？
     \end{question}
     
     \begin{choices}
-        \item Both Basel I and Basel II.5 require calculation of VaR with a 99\% confidence interval
-        \item FRTB requires the calculation of expected shortfall with a 97.5\% confidence interval
-        \item FRTB requires adding a stressed VaR measure to complement the expected shortfall calculation
-        \item The 10-day time horizon for market risk capital proposed under Basel I incorporates a recent period of time, which typically ranges from one to four years
+        \item Both Basel I and Basel II.5 require calculation of VaR with a 99\% confidence interval\\
+        巴塞尔协议I和巴塞尔协议II.5都要求计算99\%置信水平的VaR
+        \item FRTB requires the calculation of expected shortfall with a 97.5\% confidence interval\\
+        FRTB要求计算97.5\%置信水平的预期短缺
+        \item FRTB requires adding a stressed VaR measure to complement the expected shortfall calculation\\
+        FRTB要求添加压力VaR度量来补充预期短缺计算
+        \item The 10-day time horizon for market risk capital proposed under Basel I incorporates a recent period of time, which typically ranges from one to four years\\
+        巴塞尔协议I提出的10天期限的市场风险资本要求包括最近一段时间，通常范围为一年到四年
     \end{choices}
     
     \begin{correctanswer}
@@ -220,13 +235,18 @@
 
     \begin{question}
         A large commercial bank is using VaR as its main risk measurement tool. Expected shortfall (ES) is suggested as a better alternative to use during market turmoil. What should be understood regarding VaR and ES before modifying current practices?
+        \\ 一家大型商业银行使用VaR作为其主要风险度量工具。预期短缺（ES）被建议作为在市场动荡期间使用的更好替代方法。在修改当前做法之前，应该理解哪些关于VaR和ES？
     \end{question}
     
     \begin{choices}
-        \item Despite being more complicated to calculate, ES is easier to backtest than VaR
-        \item Relative to VaR, ES leads to more required economic capital for the same confidence level
-        \item While VaR ensures that the estimate of portfolio risk is less than or equal to the sum of the risks
-        \item Both VaR and ES account for the severity of losses beyond the confidence threshold
+        \item Despite being more complicated to calculate, ES is easier to backtest than VaR\\
+        尽管计算更复杂，但ES比VaR更容易进行回测
+        \item Relative to VaR, ES leads to more required economic capital for the same confidence level\\
+        与VaR相比，ES在相同置信水平下导致更高的经济资本要求
+        \item While VaR ensures that the estimate of portfolio risk is less than or equal to the sum of the risks\\
+        虽然VaR确保投资组合风险估计小于或等于各风险之和，但ES考虑了超过置信阈值的损失的严重程度
+        \item Both VaR and ES account for the severity of losses beyond the confidence threshold\\
+        虽然VaR确保投资组合风险估计小于或等于各风险之和，但ES考虑了超过置信阈值的损失的严重程度
     \end{choices}
     
     \begin{correctanswer}

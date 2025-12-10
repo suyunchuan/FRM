@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -96,14 +96,19 @@
 \setcounter{question}{0}
 
 \begin{question}
-    As one of the useful approaches which can be used to estimate PD, single-factor model is growing popular. Assume there is an individual firm i, has beta correlation, βi, with market factor, m. If the market factor is given, which of the following statements most accurately describes the implication?
+    As one of the useful approaches which can be used to estimate PD, single-factor model is growing popular. Assume there is an individual firm i, has beta correlation, βi, with market factor, m. If the market factor is given, which of the following statements most accurately describes the implication?\\
+    单因素模型是估计违约概率的一种有用方法，越来越受欢迎。假设有一个单独的公司i，与市场因子m有beta相关性，βi。如果市场因子是给定的，以下哪一项陈述最准确地描述了其含义？
 \end{question}
 
 \begin{choices}
-    \item Individual idiosyncratic shocks are negatively correlated with other firms' shock
-    \item Individual idiosyncratic shocks are positively correlated with other firms' shock
-    \item The unconditional standard deviation is less than the conditional standard deviation
-    \item Individual asset returns are independent from other firms' shocks and returns
+    \item Individual idiosyncratic shocks are negatively correlated with other firms' shock\\
+    个别公司的特定风险冲击与其他公司的特定风险冲击之间不存在负相关关系。特定风险冲击是相互独立的。
+    \item Individual idiosyncratic shocks are positively correlated with other firms' shock\\
+    个别公司的特定风险冲击与其他公司的特定风险冲击之间存在正相关关系。特定风险冲击是相互独立的。
+    \item The unconditional standard deviation is less than the conditional standard deviation\\
+    无条件标准差小于条件标准差。
+    \item Individual asset returns are independent from other firms' shocks and returns\\
+    个别公司的资产回报和其他公司的特定风险冲击和回报是相互独立的。
 \end{choices}
 
 \begin{correctanswer}
@@ -137,14 +142,19 @@
 
 
 \begin{question}
-    Preciousmetals is a specialist company that only trades derivatives on precious metals. Preciousmetals and a handful of other firms, all of whom have large notional outstanding contracts with Preciousmetals, dominate the market for such derivatives. Preciousmetals management would like to mitigate its overall counterparty exposure, with the goal of reducing it to almost zero. Which of the following methods, if implemented, could best achieve this goal?
+    Preciousmetals is a specialist company that only trades derivatives on precious metals. Preciousmetals and a handful of other firms, all of whom have large notional outstanding contracts with Preciousmetals, dominate the market for such derivatives. Preciousmetals management would like to mitigate its overall counterparty exposure, with the goal of reducing it to almost zero. Which of the following methods, if implemented, could best achieve this goal?\\
+    珍贵金属是一家专门从事珍贵金属衍生品交易的公司。珍贵金属和少数其他公司，所有这些公司都与珍贵金属有大量名义上的未平仓合约，主导了此类衍生品的市场。珍贵金属管理层的总体目标是通过减少到几乎为零来减轻其对交易对手的风险敞口。以下哪一种方法，如果实施，最有可能实现这一目标？
 \end{question}
 
 \begin{choices}
-    \item Ensuring that sufficient collateral is posted by counterparties
-    \item Diversifying among counterparties
-    \item Cross-product netting on a single counterparty basis
-    \item Purchasing credit derivatives, such as credit default swaps
+    \item Ensuring that sufficient collateral is posted by counterparties\\
+    确保交易对手有足够的抵押品
+    \item Diversifying among counterparties\\
+    在交易对手之间分散风险
+    \item Cross-product netting on a single counterparty basis\\
+    在单一交易对手基础上进行跨产品净额结算
+    \item Purchasing credit derivatives, such as credit default swaps\\
+    购买信用衍生品，如信用违约互换
 \end{choices}
 
 \begin{correctanswer}
@@ -176,14 +186,19 @@
 \checklist{抵押品对信用风险敞口的影响}
 
 \begin{question}
-    Credit risk is a function of the probability of default, exposure at default, and loss given default. Assuming that the individual exposures at default with a counterparty are fixed, which of the following statements is correct?
+    Credit risk is a function of the probability of default, exposure at default, and loss given default. Assuming that the individual exposures at default with a counterparty are fixed, which of the following statements is correct?\\
+    信用风险是违约概率、违约时的风险敞口和违约损失的函数。假设与交易对手的违约时的风险敞口是固定的，以下哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item The probability of default can be mitigated by collateral and exposure at default can be mitigated by netting
-    \item The probability of default can be mitigated by netting and exposure at default can be mitigated by collateral
-    \item Loss given default can be mitigated by collateral and exposure at default can be mitigated by netting
-    \item Loss given default can be mitigated by netting and exposure at default can be mitigated by collateral
+    \item The probability of default can be mitigated by collateral and exposure at default can be mitigated by netting\\
+    违约概率可以通过抵押品和违约时的风险敞口通过净额结算来减少
+    \item The probability of default can be mitigated by netting and exposure at default can be mitigated by collateral\\
+    违约概率可以通过净额结算和违约时的风险敞口通过抵押品来减少
+    \item Loss given default can be mitigated by collateral and exposure at default can be mitigated by netting\\
+    违约损失可以通过抵押品和违约时的风险敞口通过净额结算来减少
+    \item Loss given default can be mitigated by netting and exposure at default can be mitigated by collateral\\
+    违约损失可以通过净额结算和违约时的风险敞口通过抵押品来减少
 \end{choices}
 
 \begin{correctanswer}
@@ -224,7 +239,8 @@
 \section{考点2:Credit Value at Risk}
 \setcounter{question}{0}
 \begin{question}
-    Suppose a portfolio has a value of \$1,200,000 with 60 independent credit positions. Each of the credits has a default probability of 2.5\% and a recovery rate of 0\%. The credit portfolio has a default correlation equal to 0. The number of defaults is binomially distributed and the 95th percentile of the number of defaults is 4. What is the credit value at risk at the 95\% confidence level for this credit portfolio?
+    Suppose a portfolio has a value of \$1,200,000 with 60 independent credit positions. Each of the credits has a default probability of 2.5\% and a recovery rate of 0\%. The credit portfolio has a default correlation equal to 0. The number of defaults is binomially distributed and the 95th percentile of the number of defaults is 4. What is the credit value at risk at the 95\% confidence level for this credit portfolio?\\
+    假设一个投资组合有\$1,200,000的价值，有60个独立的信用头寸。每个信用头寸的违约概率为2.5\%，回收率为0\%。信用投资组合的违约相关性为0。违约数量是二项分布的，95\%分位数的违约数量为4。这个信用投资组合在95\%置信水平下的信用VaR是多少？
 \end{question}
 
 \begin{choices}
@@ -271,6 +287,14 @@
     \item Volatility of the loss rate: 10\%
     \end{itemize}
     Assuming default follows a binomial distribution, what is the UL of the loan?
+    \\ 一家银行的资深风险分析师要求一名助理计算一家企业客户的一笔贷款的非预期损失（UL）。助理收集了以下关于贷款一年期的信息，并假设贷款敞口金额不会发生变化：
+    \begin{itemize}
+    \item 贷款敞口金额：SGD 7.5百万
+    \item 违约概率：2.5\%
+    \item 回收率：90\%
+    \item 损失率的标准差：10\%
+    \end{itemize}
+    假设违约遵循二项分布，这笔贷款的非预期损失是多少？
 \end{question}
 
 \begin{choices}
@@ -322,13 +346,18 @@
 \setcounter{question}{0}
 \begin{question}
     A manager of a mutual fund has taken significant credit exposure to North America and Latin America. Concerned with uncertain market conditions, the manager wants to change the assumptions in the fund's risk models by increasing the default correlation between bonds issued in North America and bonds issued in Latin America. If the default correlation is increased and all the other parameters are kept the same, which of the following is true?
+    \\ 一家共同基金的管理者对北美和拉丁美洲的信用风险敞口很大。担心不确定的市场条件，管理者希望改变基金的风险模型假设，增加北美和拉丁美洲发行的债券之间的违约相关性。如果违约相关性增加，所有其他参数保持不变，以下哪一项是正确的？
 \end{question}
 
 \begin{choices}
-    \item The expected loss of the portfolio will increase
-    \item The unexpected loss of the portfolio will decrease
-    \item The expected loss of the portfolio will decrease
-    \item The unexpected loss of the portfolio will increase
+    \item The expected loss of the portfolio will increase\\
+    投资组合的预期损失会增加
+    \item The unexpected loss of the portfolio will decrease\\
+    投资组合的非预期损失会减少
+    \item The expected loss of the portfolio will decrease\\
+    投资组合的预期损失会减少
+    \item The unexpected loss of the portfolio will increase\\
+    投资组合的非预期损失会增加
 \end{choices}
 
 \begin{correctanswer}
@@ -361,6 +390,7 @@
 
 \begin{question}
     Consider a pair of two speculative credits, rated BB and BB-, with default probabilities respectively of 2.5\% and 3.5\%. If their joint default probability is 0.6\%, which is nearest to the implied default correlation?
+    \\ 考虑一对两个投机性信用，评级为BB和BB-，违约概率分别为2.5\%和3.5\%。如果它们的联合违约概率为0.6\%，最接近的隐含违约相关性是多少？
 \end{question}
 
 \begin{choices}
@@ -399,13 +429,18 @@
 
 \begin{question}
     Which of the following statements best describes the calculation of implied correlation?
+    \\ 哪一项陈述最准确地描述了隐含相关系数的计算方法？
 \end{question}
 
 \begin{choices}
-    \item The implied correlation for the mezzanine tranche assumes non-constant pairwise correlation
-    \item Observable market prices of credit default swaps are used to infer the tranche values
-    \item The tranche pricing function is calibrated to match the model price with the market price
-    \item The risk-adjusted default probabilities are used in model calibration
+    \item The implied correlation for the mezzanine tranche assumes non-constant pairwise correlation\\
+    中层分层的隐含相关系数假设两两相关系数是非恒定的
+    \item Observable market prices of credit default swaps are used to infer the tranche values\\
+    信用违约互换的市场价格用于推断分层价值
+    \item The tranche pricing function is calibrated to match the model price with the market price\\
+    分层定价函数是校准模型价格与市场价格相匹配
+    \item The risk-adjusted default probabilities are used in model calibration\\
+    风险调整后的违约概率用于模型校准
 \end{choices}
 
 \begin{correctanswer}
@@ -438,13 +473,18 @@
 
 \begin{question}
     Consider two portfolios. One with USD 120 million credit exposure to a single B-rated counterparty. The second with USD 120 million on credit exposure split evenly between 60 B-rated counterparties. Assume that default probabilities and recovery rates are the same for all B-rated counterparties. Which of the following is correct?
+    \\ 考虑两个投资组合。一个投资组合有USD 120百万的信用风险敞口，一个B评级交易对手。第二个投资组合有USD 120百万的信用风险敞口，60个B评级交易对手平均分配。假设所有B评级交易对手的违约概率和回收率相同。以下哪一项是正确的？
 \end{question}
 
 \begin{choices}
-    \item The expected loss of the first portfolio is greater than the expected loss of the second portfolio AND the unexpected loss of the first portfolio is greater than the unexpected loss of the second portfolio
-    \item The expected loss of the first portfolio is greater than the expected loss of the second portfolio AND the unexpected loss of the first portfolio is equal to the unexpected loss of the second portfolio
-    \item The expected loss of the first portfolio is equal to the expected loss of the second portfolio AND the unexpected loss of the first portfolio is equal to the unexpected loss of the second portfolio
-    \item The expected loss of the first portfolio is equal to the expected loss of the second portfolio AND the unexpected loss of the first portfolio is greater than the unexpected loss of the second portfolio
+    \item The expected loss of the first portfolio is greater than the expected loss of the second portfolio AND the unexpected loss of the first portfolio is greater than the unexpected loss of the second portfolio\\
+    第一个投资组合的预期损失大于第二个投资组合的预期损失，第一个投资组合的非预期损失大于第二个投资组合的非预期损失
+    \item The expected loss of the first portfolio is greater than the expected loss of the second portfolio AND the unexpected loss of the first portfolio is equal to the unexpected loss of the second portfolio\\
+    第一个投资组合的预期损失大于第二个投资组合的预期损失，第一个投资组合的非预期损失等于第二个投资组合的非预期损失
+    \item The expected loss of the first portfolio is equal to the expected loss of the second portfolio AND the unexpected loss of the first portfolio is equal to the unexpected loss of the second portfolio\\
+    第一个投资组合的预期损失等于第二个投资组合的预期损失，第一个投资组合的非预期损失等于第二个投资组合的非预期损失
+    \item The expected loss of the first portfolio is equal to the expected loss of the second portfolio AND the unexpected loss of the first portfolio is greater than the unexpected loss of the second portfolio\\
+    第一个投资组合的预期损失等于第二个投资组合的预期损失，第一个投资组合的非预期损失大于第二个投资组合的非预期损失
 \end{choices}
 
 \begin{correctanswer}
@@ -478,6 +518,7 @@
 
 \begin{question}
     Suppose a credit position has a correlation to the market factor of 0.6. What is the realized market value that is used to compute the probability of reaching a default threshold at the 99\% confidence level?
+    \\ 假设一个信用头寸与市场因子有0.6的相关性。在99\%置信水平下，用于计算达到违约阈值的市场价值是多少？
 \end{question}
 
 \begin{choices}
@@ -505,13 +546,18 @@
 
 \begin{question}
     The single-factor model is used to examine the impact of varying default correlations based on a credit position's beta. Each individual firm or credit, i, has a beta correlation, βi, with the market, m. Which of the following statements most accurately describes the implication of using a specific value m for the market parameter in the single-factor model?
+    \\ 单因素模型用于考察信用头寸的beta对违约相关性的影响。每个单独的公司或信用，i，与市场，m，有beta相关性，βi。在单因素模型中，使用特定的市场参数m时，哪一项陈述最准确地描述了其含义？
 \end{question}
 
 \begin{choices}
-    \item The conditional probability of default will be greater than the unconditional probability of default
-    \item The unconditional standard deviation is less than the conditional standard deviation
-    \item Individual idiosyncratic shocks, εi, are positively correlated to other firms' shocks
-    \item Individual asset returns, aj, are independent from other firms' shocks and returns
+    \item The conditional probability of default will be greater than the unconditional probability of default\\
+    条件违约概率大于无条件违约概率
+    \item The unconditional standard deviation is less than the conditional standard deviation\\
+    无条件标准差小于条件标准差
+    \item Individual idiosyncratic shocks, εi, are positively correlated to other firms' shocks\\
+    个别公司的特定风险冲击与其他公司的特定风险冲击之间存在正相关关系
+    \item Individual asset returns, aj, are independent from other firms' shocks and returns\\
+    个别公司的资产回报与其他公司的特定风险冲击和回报是相互独立的
 \end{choices}
 
 \begin{correctanswer}
@@ -545,13 +591,18 @@
 
 \begin{question}
     A risk analyst at a bank is reviewing the annex to a report on credit risk models that the risk department has prepared for the bank's risk committee. The analyst takes note of the features of the KMV model and the CreditMetrics model as well as the benefits and drawbacks of using the two models. Which of the following statements about these models is correct?
-\end{question}
+    \\ 一家银行的资深风险分析师正在审查风险部门为银行风险委员会准备的信用风险模型报告的附件。分析师注意到了KMV模型和CreditMetrics模型的特点，以及使用两个模型的优缺点。以下哪一项陈述关于这两个模型是正确的？
+    \end{question}
 
 \begin{choices}
-    \item In the CreditMetrics model, the value of a firm can change continually but the firm's default probability may remain the same if there is no change in the firm's rating
-    \item A shortcoming of the KMV model is that it cannot be used to compute the risk of a liabilities portfolio that includes both a zero-coupon debt and a convertible debt
-    \item The CreditMetrics model assumes a simple capital structure of the firm, which renders no need to estimate correlations among the different bonds in the liabilities portfolio
-    \item The KMV model relies on the mark-to-market value of debt while the CreditMetrics model applies a factor model which assumes the risk factors follow a gamma distribution
+    \item In the CreditMetrics model, the value of a firm can change continually but the firm's default probability may remain the same if there is no change in the firm's rating\\
+    CreditMetrics模型中，公司的价值可以不断变化，但如果公司的评级没有发生变化，公司的违约概率可能保持不变
+    \item A shortcoming of the KMV model is that it cannot be used to compute the risk of a liabilities portfolio that includes both a zero-coupon debt and a convertible debt\\
+    KMV模型的缺点是它不能用于计算包括零息债券和可转换债券在内的债务组合的风险
+    \item The CreditMetrics model assumes a simple capital structure of the firm, which renders no need to estimate correlations among the different bonds in the liabilities portfolio\\
+    CreditMetrics模型假设公司资本结构简单，不需要估计负债组合中不同债券之间的相关性
+    \item The KMV model relies on the mark-to-market value of debt while the CreditMetrics model applies a factor model which assumes the risk factors follow a gamma distribution\\
+    KMV模型依赖于债务的市场价值，而CreditMetrics模型应用因子模型假设风险因子服从伽马分布
 \end{choices}
 
 \begin{correctanswer}
@@ -584,13 +635,18 @@
 
 \begin{question}
     A senior risk manager at an investment bank has been asked to give a presentation on correlation risk to a group of junior risk analysts. The manager gives several examples to demonstrate the impact of correlation risk to market and credit risks and how this impact is measured. Which of the following statements would be correct to include in the manager's presentation?
+    \\ 一家投资银行的资深风险经理被要求向一群初级风险分析师做关于相关性风险的报告。经理给出了几个例子来展示相关性风险对市场风险和信用风险的影响，以及如何衡量这种影响。以下哪一项陈述可以正确地包含在经理的报告中？
 \end{question}
 
 \begin{choices}
-    \item VaR explicitly incorporates correlation risk into risk calculations through a multiplier based on the measured correlation of assets in the portfolio
-    \item In assessing the risk in a typical loan portfolio, default correlations between different market sectors are higher than correlations within sectors
-    \item Investors who purchase CDS protection on a specific bond are exposed to the risk of changes in the correlation between the bond and the CDS counterparty
-    \item A creditor with a large number of debtors benefits from a high default correlation of its debtors due to an increased ability to accurately measure credit risk of default
+    \item VaR explicitly incorporates correlation risk into risk calculations through a multiplier based on the measured correlation of assets in the portfolio\\
+    VaR通过基于投资组合中资产相关性的乘数显式地将相关性风险纳入风险计算
+    \item In assessing the risk in a typical loan portfolio, default correlations between different market sectors are higher than correlations within sectors\\
+    在评估典型的贷款组合风险时，不同市场部门之间的违约相关性高于同一市场部门内部的违约相关性
+    \item Investors who purchase CDS protection on a specific bond are exposed to the risk of changes in the correlation between the bond and the CDS counterparty\\
+    购买特定债券CDS保护的投资者面临债券与CDS交易对手之间相关性变化的风险
+    \item A creditor with a large number of debtors benefits from a high default correlation of its debtors due to an increased ability to accurately measure credit risk of default\\
+    拥有大量债务人的债权人从其债务人的高违约相关性中受益，因为增加了准确衡量违约信用风险的能力
 \end{choices}
 
 \begin{correctanswer}

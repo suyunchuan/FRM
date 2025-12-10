@@ -2,7 +2,7 @@
 \contentsline {subsection}{题号1考察: IRC识别的两种风险}{2}{Item.4}%
 \contentsline {subsection}{题号2考察: 交易账户资产的分类标准}{3}{Item.8}%
 \contentsline {subsection}{题号3考察: 巴塞尔协议II.5与FRTB在压力VaR要求上的差异}{3}{Item.12}%
-\contentsline {subsection}{题号4考察: VaR与ES在经济资本要求上的差异}{3}{Item.16}%
+\contentsline {subsection}{题号4考察: VaR与ES在经济资本要求上的差异}{4}{Item.16}%
 \contentsline {section}{\numberline {2}考点2:Fundamental Review ofthe Trading Book}{4}{section.2}%
 \contentsline {section}{\numberline {3}考点3:Minimum capital reuuirement for marketrisk}{4}{section.3}%
 \contentsfinish 

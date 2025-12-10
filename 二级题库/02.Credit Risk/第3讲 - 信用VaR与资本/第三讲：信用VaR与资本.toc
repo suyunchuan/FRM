@@ -6,12 +6,12 @@
 \contentsline {subsection}{题号1考察: 信用VaR的计算方法}{4}{Item.16}%
 \contentsline {subsection}{题号2考察: 非预期损失的计算方法}{5}{Item.20}%
 \contentsline {section}{\numberline {3}考点3:违约相关性和信用VaR}{5}{section.3}%
-\contentsline {subsection}{题号1考察: 违约相关性对投资组合非预期损失的影响}{5}{Item.24}%
+\contentsline {subsection}{题号1考察: 违约相关性对投资组合非预期损失的影响}{6}{Item.24}%
 \contentsline {subsection}{题号2考察: 违约相关性的计算方法}{6}{Item.28}%
-\contentsline {subsection}{题号3考察: 隐含相关系数的计算方法}{6}{Item.32}%
-\contentsline {subsection}{题号4考察: 分散化投资组合的信用风险特征}{7}{Item.36}%
-\contentsline {subsection}{题号5考察: 市场价值计算方法}{7}{Item.40}%
-\contentsline {subsection}{题号6考察: 单因素模型的核心假设}{8}{Item.44}%
+\contentsline {subsection}{题号3考察: 隐含相关系数的计算方法}{7}{Item.32}%
+\contentsline {subsection}{题号4考察: 分散化投资组合的信用风险特征}{8}{Item.36}%
+\contentsline {subsection}{题号5考察: 市场价值计算方法}{8}{Item.40}%
+\contentsline {subsection}{题号6考察: 单因素模型的核心假设}{9}{Item.44}%
 \contentsline {subsection}{题号7考察: CreditMetrics模型的特点}{9}{Item.48}%
-\contentsline {subsection}{题号8考察: CDS投资者的风险暴露}{9}{Item.52}%
+\contentsline {subsection}{题号8考察: CDS投资者的风险暴露}{10}{Item.52}%
 \contentsfinish 

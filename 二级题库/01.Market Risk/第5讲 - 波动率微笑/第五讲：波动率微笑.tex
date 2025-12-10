@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+    % \setCJKmainfont{SourceHanSansCN-Light}[
+    %     BoldFont=SourceHanSansCN-Medium
+    % ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -98,6 +98,7 @@
 
 \begin{question}
     The market price of a European call option is \$3.00, while its Black-Scholes model price is \$3.50. A European put option with the same strike price and time to expiration has a Black-Scholes model price of \$2.00. What should be the market price of this put option?
+    \\ 欧式看涨期权的市场价格为\$3.00，而其Black-Scholes模型价格为\$3.50。一个具有相同行权价格和到期时间的欧式看跌期权的Black-Scholes模型价格为\$2.00。这个看跌期权的市
 \end{question}
 
 \begin{choices}
@@ -147,13 +148,18 @@
 
 \begin{question}
     The 'Sticky Strike Rule' assumes that implied volatility is:
+    \\ 'Sticky Strike Rule'假设隐含波动率是：
 \end{question}
 
 \begin{choices}
     \item The same across maturities for given strike prices
+    \\ 在给定行权价格的情况下，不同到期日的隐含波动率相同
     \item The same for short time periods
+    \\ 在短期内，隐含波动率相同
     \item The same across strike prices for given maturities
+    \\ 在给定到期日的情况下，不同行权价格的隐含波动率相同
     \item Different across strike prices for given maturities
+    \\ 在给定到期日的情况下，不同行权价格的隐含波动率不同
 \end{choices}
 
 \begin{correctanswer}
@@ -190,18 +196,24 @@
     financial crisis of 2008-2010, he is more aware of the limitations of the BSM option pricing
     model. Which of the following statements best characterizes a major limitation of the BSM
     option pricing model?
+    \\ John, FRM，使用Black-Scholes-Merton (BSM)模型为期权定价。在2008-2010年的金融危机之后，他更加意识到BSM期权定价模型的局限性。以下哪项陈述最好地描述了BSM期权定价模型的主要局限性？
+    
 \end{question}
 
 \begin{choices}
-    \item The BSM model assumes strike prices have non-constant volatility.
+    \item The BSM model assumes strike prices have non-constant volatility.\\
+    BSM模型假设行权价格具有非恒定的波动率。
     \item Option traders often use a volatility smile with lower volatilities for out-of-the-money call
     and put options when applying the BSM model.
+    \\ 期权交易员通常在应用BSM模型时，对价外看涨期权和看跌期权使用较低的波动率，形成波动率微笑现象。
     \item For up-and-out calls and puts, the BSM model is insensitive to changes in implied volatility
     when the knock-out strike price is equal to the strike price and the interest rate equals the
     underlying asset return.
+    \\ 对于上升出局期权和看跌期权，BSM模型对隐含波动率的变化不敏感，当敲出价格等于行权价格且利率等于标的资产收益率时。
     \item For down-and-out calls and puts, the BSM model is insensitive to changes in option maturity
     when the knock-out strike price is greater than the strike price and the interest rate is
     greater than the underlying asset return.
+    \\ 对于下降出局期权和看跌期权，BSM模型对期权期限的变化不敏感，当敲出价格大于行权价格且利率大于标的资产收益率时。
 \end{choices}
 
 \begin{correctanswer}
@@ -234,13 +246,18 @@
 
 \begin{question}
     Which of the following statements is incorrect regarding volatility smiles?
+    \\ 关于波动率微笑，哪项陈述是不正确的？
 \end{question}
 
 \begin{choices}
     \item Currency options exhibit volatility smiles because the at-the-money options have higher implied volatility than away-from-the-money options.
+    \\ 货币期权表现出波动率微笑，是因为平价期权的隐含波动率低于价外期权，而不是高于价外期权。
     \item Volatility frowns result when jumps occur in asset prices.
+    \\ 当资产价格出现跳跃时，确实会导致波动率 frown（倒微笑）现象。
     \item Equity options exhibit a volatility smirk because low strike price options have greater implied volatility.
+    \\ 股票期权表现出波动率偏斜，是因为低行权价格的期权具有更高的隐含波动率。
     \item Relative to currency traders, it appears that equity traders' expectations of extreme price movements are more asymmetric.
+    \\ 相对于货币交易者，股票交易者对极端价格变动的预期确实更加不对称。
 \end{choices}
 
 \begin{correctanswer}
@@ -273,13 +290,18 @@
 
 \begin{question}
     Compared to at-the-money currency options, out-of-the-money currency options exhibit which of the following volatility traits?
+    \\ 与平价货币期权相比，价外货币期权表现出哪项波动率特征？
 \end{question}
 
 \begin{choices}
     \item Lower implied volatility
+    \\ 较低的隐含波动率
     \item A frown
+    \\ 波动率frown（倒微笑）
     \item A smirk
+    \\ 波动率偏斜
     \item Higher implied volatility
+    \\ 较高的隐含波动率
 \end{choices}
 
 \begin{correctanswer}
@@ -313,13 +335,18 @@
 
 \begin{question}
     Which of the following regarding equity option volatility is true?
+    \\ 关于股票期权的波动率，哪项陈述是正确的？
 \end{question}
 
 \begin{choices}
     \item There is higher implied price volatility for away-from-the-money equity options
+    \\ 价外股票期权的隐含价格波动率高于平价期权
     \item "Crashophobia" suggests actual equity volatility increases when stock prices decline
+    \\ "Crashophobia"（崩盘恐惧）意味着当股票价格下跌时，实际的股价波动率确实会增加
     \item Compared to the lognormal distribution, traders believe the probability of large down movements in price is similar to large up movements
+    \\ 与对数正态分布相比，交易员认为价格大幅下跌的概率与大幅上涨的概率相似
     \item Increasing leverage at lower equity prices suggests increasing volatility
+    \\ 在较低的股票价格下增加杠杆意味着波动率增加
 \end{choices}
 
 \begin{correctanswer}
@@ -353,13 +380,18 @@
 
 \begin{question}
     The chief risk officer of Alpha Investments Group is planning a change in methodology for some of the risk management models used to estimate risk measures. His aim is to move from models that use the normal distribution of returns to models that use the distribution of returns implied by market prices. Alpha Group has a large long position in the Japanese equity stock index Nikkei, which has a volatility smile that slopes downward to the right. How will the change in methodology affect the estimate of expected shortfall?
+    \\ Alpha Investments Group的首席风险官正在计划改变一些风险管理模型的方法，以估计风险措施。他的目标是转向使用市场价格隐含的收益率分布，而不是使用收益率的正态分布。Alpha Group有一个大量的日本股票指数Nikkei的多头头寸，该指数有一个向右下方倾斜的波动率微笑。这种方法的改变会对期望短缺的估计产生什么影响？
 \end{question}
 
 \begin{choices}
     \item ES with the updated models will be larger than the old estimate
+    \\ 使用更新后的模型计算的ES值大于旧的估计
     \item ES with the updated models will be smaller than the older estimate
+    \\ 使用更新后的模型计算的ES值小于旧的估计
     \item ES will remain unchanged
+    \\ ES值保持不变
     \item Insufficient information to determine
+    \\ 信息不足，无法确定
 \end{choices}
 
 \begin{correctanswer}
@@ -402,13 +434,28 @@
     \end{figure}
 
     Assuming that the implied volatility at USD 50 is used to conduct the valuation, which of the following long positions will be undervalued?
+    \\    一位风险管理师正在对一只当前价格为50美元的ABC非分红股票的多个欧式期权头寸进行估值。使用Black-Scholes-Merton模型和ABC股票在不同执行价格下活跃交易的欧式期权的当前价格估计的隐含波动率偏斜如下：
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/1.png}
+        \caption{示例图片}
+        \label{fig:example}
+    \end{figure}
+
+    假设使用50美元的隐含波动率进行估值，以下哪些多头头寸将被低估？
+    
 \end{question}
 
 \begin{choices}
     \item An out-of-the-money call
+    \\ 价外看涨期权
     \item An in-the-money call
+    \\ 价内看涨期权
     \item An at-the-money put
+    \\ 平价看跌期权
     \item An in-the-money put
+    \\ 价内看跌期权
 \end{choices}
 
 \begin{correctanswer}
@@ -441,13 +488,18 @@
 
 \begin{question}
     With all other things being equal, a risk monitoring system that assumes constant volatility for equity returns will understate the implied volatility for which of the following positions by the largest amount:
+    \\ 在所有其他条件相同的情况下，假设股票收益率的波动率恒定的风险监控系统会对以下哪些头寸的隐含波动率低估最大？
 \end{question}
 
 \begin{choices}
     \item Short position in an at-the-money call
+    \\ 平价看涨期权的空头头寸
     \item Long position in an at-the-money call
+    \\ 平价看涨期权的多头头寸
     \item Short position in a deep out-of-the-money call
+    \\ 深度价外看涨期权的空头头寸
     \item Long position in a deep in-the-money call
+    \\ 深度价内看涨期权的多头头寸
 \end{choices}
 
 \begin{correctanswer}
@@ -481,13 +533,18 @@
 
 \begin{question}
     Michael Chen, FRM, is a hedge fund manager who is explaining implied volatility for currency options to junior analysts. Which of the following statements best completes his explanation?
+    \\ Michael Chen, FRM，是一位对冲基金经理，正在向初级分析师解释货币期权的隐含波动率。以下哪项陈述最好地完成了他的解释？
 \end{question}
 
 \begin{choices}
     \item There is a greater chance of extreme price movements than predicted by a lognormal distribution
+    \\ 存在比对数正态分布预测的更大概率的极端价格变动
     \item Arbitrage opportunities clearly exist
+    \\ 套利机会显然存在
     \item The implied volatility of currency options is expected to increase in the near future
+    \\ 货币期权的隐含波动率预计在未来短期内会增加
     \item There are no arbitrage opportunities unless the implied volatility versus strike price represents a skewness that is referred to as a smirk rather than a smile
+    \\ 除非隐含波动率与行权价格的关系表现为偏斜，而不是微笑，否则不存在套利机会
 \end{choices}
 
 \begin{correctanswer}
@@ -521,13 +578,18 @@
 
 \begin{question}
     David Wang, FRM, uses the Black-Scholes-Merton (BSM) model to value options. Following the financial crisis of 2008-2010, he is more aware of the limitations of the BSM option pricing model. Which of the following statements best characterizes a major limitation of the BSM option pricing model?
+    \\ David Wang, FRM，使用Black-Scholes-Merton (BSM)模型为期权定价。在2008-2010年的金融危机之后，他更加意识到BSM期权定价模型的局限性。以下哪项陈述最好地描述了BSM期权定价模型的主要局限性？
 \end{question}
 
 \begin{choices}
     \item The BSM model assumes strike prices have non-constant volatility
+    \\ BSM模型假设行权价格具有非恒定的波动率
     \item Option traders often use a volatility smile with lower volatilities for out-of-the-money call and put options when applying the BSM model
+    \\ 期权交易员通常在应用BSM模型时，对价外看涨期权和看跌期权使用较低的波动率，形成波动率微笑现象。
     \item For up-and-out calls and puts, the BSM model is insensitive to changes in implied volatility when the knock-out strike price is equal to the strike price and the interest rate equals the underlying asset return
+    \\ 对于上升出局期权和看跌期权，BSM模型对隐含波动率的变化不敏感，当敲出价格等于行权价格且利率等于标的资产收益率时。
     \item For down-and-out calls and puts, the BSM model is insensitive to changes in option maturity when the knock-out strike price is greater than the strike price and the interest rate is greater than the underlying asset return
+    \\ 对于下降出局期权和看跌期权，BSM模型对期权期限的变化不敏感，当敲出价格大于行权价格且利率大于标的资产收益率时。
 \end{choices}
 
 \begin{correctanswer}
@@ -560,6 +622,7 @@
 
 \begin{question}
     An European call with a market price of \$3.5 has a BSM price of \$4.5. All else equal, the BSM price of a European put is \$2.5. What is the market price of the put?
+    \\ 一个市场价格为\$3.5的欧式看涨期权的BSM价格为\$4.5。所有其他条件相同，一个欧式看跌期权的BSM价格为\$2.5。这个看跌期权的市
 \end{question}
 
 \begin{choices}
@@ -617,6 +680,15 @@
     \end{itemize}
  
     Which of her above conclusions is necessarily true?
+    \\ 风险市场分析师Lisa基于苹果公司交易股票的看涨期权计算了隐含波动率。结果表明，相应的隐含波动率偏斜的形状在某种程度上是股票期权的典型特征；即，随着执行价格的增加，隐含波动率递减，呈向下倾斜。她得出以下结论：
+    \begin{itemize}
+ \item I.苹果公司股票价格的隐含分布具有负偏度和负超额峰度。
+\item II.对于相同的到期日，苹果公司股票的实值看涨期权（ITM看涨期权）比虚值看跌期权（OTM看跌期权）更昂贵。
+\item III.与正态分布相比，苹果公司股票价格的隐含分布具有更轻的左尾。
+\item IV.与对数正态分布相比，苹果公司股票价格的隐含分布具有更轻的右尾。
+    \end{itemize}
+ 
+    她的上述结论中哪一个是必然正确的？
 \end{question}
 
 \begin{choices}
@@ -668,13 +740,24 @@
         \item An implied risk-neutral probability distribution obtained from the volatility smile for options of the same maturity
     \end{itemize}
     Using the lognormal instead of the implied risk-neutral probability distribution will tend to:
+    \\    风险管理从业者委员会讨论使用Black-Scholes-Merton（BSM）模型对TSLA股票的深度虚值看涨期权和USD/CNY外汇汇率的深度虚值看涨期权进行定价的差异。从业者基于期权到期日标的资产价格的两种不同概率分布对这些期权进行定价：
+    \begin{itemize}
+        \item 对数正态概率分布
+        \item 从相同到期日期权的波动率微笑中获得的隐含风险中性概率分布
+    \end{itemize}
+    使用对数正态分布而不是隐含风险中性概率分布将倾向于：
+    
 \end{question}
 
 \begin{choices}
     \item Price the option on TSLA relatively high and price the option on USD/CNY relatively low
+    \\ TSLA股票的深度虚值看涨期权相对较高，USD/CNY外汇汇率的深度虚值看涨期权相对较低
     \item Price the option on TSLA relatively low and price the option on USD/CNY relatively high
+    \\ TSLA股票的深度虚值看涨期权相对较低，USD/CNY外汇汇率的深度虚值看涨期权相对较高
     \item Price the option on TSLA relatively low and price the option on USD/CNY relatively low
+    \\ TSLA股票的深度虚值看涨期权相对较低，USD/CNY外汇汇率的深度虚值看涨期权相对较低
     \item Price the option on TSLA relatively high and price the option on USD/CNY relatively high
+    \\ TSLA股票的深度虚值看涨期权相对较高，USD/CNY外汇汇率的深度虚值看涨期权相对较高
 \end{choices}
 
 \begin{correctanswer}
@@ -695,13 +778,18 @@
 
 \begin{question}
     You are asked to mark to market a book of plain-vanilla stock options. The trader is short deep out-of-the-money options and long at-the-money options. There is a pronounced smile for these options. The trader's bonus increases as the value of his book increases. Which approach should you use to mark the book?
+    \\ 你被要求对一揽子普通股票期权进行估值。交易员持有深度价外期权空头头寸和平价期权多头头寸。这些期权表现出明显的波动率微笑。交易员的奖金随着其头寸价值的增加而增加。你应该使用哪种方法来估值？
 \end{question}
 
 \begin{choices}
     \item Use the implied volatility of at-the-money options because the estimation of the volatility is more reliable
+    \\ 使用平价期权的隐含波动率，因为隐含波动率的估计更可靠
     \item Use the average of the implied volatilities for the traded options for which you have data because it provides a balanced view
+    \\ 使用交易期权的平均隐含波动率，因为它提供了平衡的视角
     \item For each option, use the implied volatility of the most similar option traded on the market
+    \\ 对每个期权，使用市场上最相似期权的隐含波动率
     \item Use the historical volatility because doing so corrects for the pricing mistakes in the option mark
+    \\ 使用历史波动率，因为它纠正了期权定价中的错误
 \end{choices}
 
 \begin{correctanswer}
@@ -734,6 +822,7 @@
 
 \begin{question}
     Suppose that a central bank's policy is to allow an exchange rate to fluctuate between 0.95 and 1.05. What pattern of implied volatilities for options on the exchange rate would you expect to see?
+    \\ 假设一个中央银行的政策是允许汇率在0.95和1.05之间波动。你预计汇率期权的隐含波动率会呈现出哪种模式？
 \end{question}
 
 \begin{choices}
@@ -790,13 +879,18 @@
 
 \begin{question}
     An empirical distribution of equity price derived from the price of options of such stock based on BSM that exhibits a fatter right tail than that of a lognormal distribution would indicate:
+    \\ 基于BSM模型对某股票期权价格得出的股票价格经验分布，其右尾比对数正态分布更厚，这表明：
 \end{question}
 
 \begin{choices}
     \item Equal implied volatilities across low and high strike prices
+    \\ 低行权价格和高中行权价格的隐含波动率相等
     \item Greater implied volatilities for low strike prices
+    \\ 低行权价格的隐含波动率更高
     \item Greater implied volatilities for high strike prices
+    \\ 高中行权价格的隐含波动率更高
     \item Higher implied volatilities for mid-range strike prices
+    \\ 中行权价格的隐含波动率更高
 \end{choices}
 
 \begin{correctanswer}
@@ -848,13 +942,37 @@
         \end{table}
     The analyst uses the Black-Scholes-Merton model to calculate the implied volatilities of the options.
     Assuming no arbitrage opportunities, which of the following would the analyst be correct to conclude about these options?
+    \\    一家投资银行新聘用的初级衍生品定价分析师正在评估USD/JPY汇率的期权合约。分析师观察到美国的无风险利率为3\%，日本为0.1\%，并收集了以下四个欧式平值期权的信息：
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        期权 & 期权类型 & 到期天数 & 期权价格 \\
+        \hline
+        1 & 看涨期权 & 30 & 2.15 \\
+        \hline
+        2 & 看跌期权 & 30 & 1.82 \\
+        \hline
+        3 & 看涨期权 & 90 & 3.85 \\
+        \hline
+        4 & 看跌期权 & 90 & 3.65 \\
+        \hline
+        \end{tabular}
+        \end{table}
+    分析师使用Black-Scholes-Merton模型计算期权的隐含波动率。
+    假设不存在套利机会，分析师关于这些期权的以下哪项结论是正确的？
 \end{question}
 
 \begin{choices}
     \item The implied volatility of the options expiring in 90 days is higher than that of the options expiring in 30 days due to the interest rate differential between the two countries
+    \\ 由于两国之间的利率差异，90天到期的期权的隐含波动率高于30天到期的期权
     \item Put-call parity does not hold for these currency options since the prices of the at-the-money call options are not equal to the prices of the at-the-money put options
+    \\ 看涨-看跌期权平价关系不成立，因为平价看涨期权的价格不等于平价看跌期权的价格
     \item The implied volatility of the at-the-money put option expiring in 30 days is the same as the implied volatility of the at-the-money call option expiring in 30 days
+    \\ 30天到期的平价看跌期权的隐含波动率与30天到期的平价看涨期权的隐含波动率相同
     \item The volatility smiles for options on the USD/JPY exchange rate display positive upward skewness since the at-the-money option prices clearly display a preference for calls over puts
+    \\ 汇率期权的波动率微笑显示出正向的上偏斜，因为平价期权的价格明显显示出对看涨期权的偏好超过看跌期权
 \end{choices}
 
 \begin{correctanswer}
@@ -888,13 +1006,18 @@
 
 \begin{question}
     A pharmaceutical company plans to announce the results of a clinical trial in three months, which is expected to cause the price of its stock to move sharply, either up or down. A hedge fund manager would like to take advantage of this event by establishing an options position. In preparation, the manager examines the volatility curves, volatility term structure, and volatility surface of the options on the stock. Which of the following is correct for the manager to find through this examination?
+    \\ 一家制药公司计划在三个月内宣布一项临床试验的结果，预计会导致其股价大幅波动，无论是上涨还是下跌。对冲基金经理希望利用这一事件建立期权头寸。在准备阶段，经理检查了股票期权的波动率曲线、波动率期限结构和波动率曲面。经理通过这项检查可以得出以下哪项结论？
 \end{question}
 
 \begin{choices}
     \item The volatility surface will reflect implied volatilities being an increasing function of time to maturity, regardless of the shape of the volatility curves
+    \\ 波动率曲面将反映隐含波动率随到期时间的增加而增加，无论波动率曲线的形状如何
     \item The volatility curve at each maturity will steepen as the time to maturity of the options increases, regardless of the shape of the volatility curves
+    \\ 每个到期日的波动率曲线随着期权的到期时间增加而变得更加陡峭，无论波动率曲线的形状如何
     \item The volatility curves of short-dated options that mature after the event form a steep smile, while the volatility curves of options with longer-dated maturities are flat
+    \\ 事件发生后到期的短期期权的波动率曲线形成陡峭的微笑，而到期时间较长的期权的波动率曲线是平坦的
     \item The volatility curves for options with maturities of three months or longer are frown-shaped and the term structure of implied volatility is a decreasing function of time to maturity
+    \\ 三个月或更长时间到期的期权的波动率曲线呈frown形状，隐含波动率的期限结构是随时间到期的递减函数
 \end{choices}
 
 \begin{correctanswer}
@@ -928,13 +1051,18 @@
 
 \begin{question}
     A foreign exchange (FX) options analyst at a dealer bank is examining historical daily changes in several FX rates. The analyst compiles these daily changes into distributions that are used to determine the prices of FX options, which shape the options' implied volatility curves. The analyst also compares the typical implied distribution for FX options with a lognormal distribution. Which of the following observations regarding the distribution of FX rate changes is correct for the analyst to make?
+    \\ 一家银行的外汇期权分析师正在检查几种外汇汇率的历史每日变化。分析师将这些每日变化编译成分布，用于确定外汇期权的价格，从而塑造期权的隐含波动率曲线。分析师还比较了外汇期权的典型隐含分布与对数正态分布。分析师关于外汇汇率变化分布的以下哪项观察是正确的？
 \end{question}
 
 \begin{choices}
     \item The excess kurtosis in FX rate distribution leads to higher prices for deep out-of-the-money put options than the prices derived using the lognormal distribution
+    \\ 外汇汇率分布的超额峰度导致深度价外看跌期权的价格高于使用对数正态分布计算的价格
     \item The lognormal distribution reflecting daily FX rate changes causes the implied volatility smile exhibited by foreign exchange options
+    \\ 反映每日外汇汇率变化的对数正态分布导致外汇期权表现出隐含波动率微笑
     \item The negative skewness of FX rate distributions leads to higher implied volatilities for deep out-of-the-money put options than for deep out-of-the-money call options
+    \\ 外汇汇率分布的负偏度导致深度价外看跌期权的隐含波动率高于深度价外看涨期权的隐含波动率
     \item Distributions of historical daily FX rate changes generally have fewer observations close to the mean and more observations in the tails than a lognormal distribution
+    \\ 历史每日外汇汇率变化分布通常在均值附近有更少的观测值，而在尾部有更多的观测值，而不是对数正态分布
 \end{choices}
 
 \begin{correctanswer}
@@ -969,13 +1097,18 @@
 
 \begin{question}
     A financial analyst at a wealth management firm is using the Merton model to value the debt and the equity of NET, a digital media company. NET's capital structure consists of senior debt, subordinated debt, and equity. The analyst notices that the company currently faces financial difficulties, resulting in its total asset value being almost equal to the value of its senior debt. A manager at the wealth management firm informs the analyst that NET's asset volatility is likely to increase and that there is an equal probability of NET being acquired by a larger competitor or filing for bankruptcy. Assuming the manager's information is correct, what is the most likely valuation consequence for NET?
+    \\ 一家财富管理公司的金融分析师正在使用Merton模型对NET（一家数字媒体公司）的债务和股权进行估值。NET的资本结构由高级债务、次级债务和股权组成。分析师注意到公司目前面临财务困难，导致其总资产价值几乎等于其高级债务的价值。财富管理公司的一名经理告知分析师，NET的资产波动率可能会增加，并且NET被更大竞争对手收购或申请破产的可能性是相等的。假设经理的信息正确，NET的估值最可能产生什么后果？
 \end{question}
 
 \begin{choices}
     \item The values of equity and subordinated debt will increase, but the value of senior debt will decrease
+    \\ 权益和次级债务的价值将增加，但高级债务的价值将减少
     \item The values of equity and senior debt will increase, but the value of subordinated debt will decrease
+    \\ 权益和高级债务的价值将增加，但次级债务的价值将减少
     \item The values of equity and senior debt will decrease, but the value of subordinated debt will increase
+    \\ 权益和高级债务的价值将减少，但次级债务的价值将增加
     \item The value of equity will increase, but the values of senior debt and subordinated debt will decrease
+    \\ 权益的价值将增加，但高级债务和次级债务的价值将减少
 \end{choices}
 
 \begin{correctanswer}

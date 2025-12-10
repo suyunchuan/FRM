@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -97,14 +97,19 @@
 
 
 \begin{question}
-    An investment bank finds that current market has been highly volatile but its own capital base is large enough. However, the counterparty of this bank asks for higher and higher collateral for the bank’s repo and repo rollover. This phenomenon shows:
+    An investment bank finds that current market has been highly volatile but its own capital base is large enough. However, the counterparty of this bank asks for higher and higher collateral for the bank’s repo and repo rollover. This phenomenon shows:\\
+    一个投资银行发现当前市场波动性很高，但其资本基础足够大。然而，该银行的交易对手要求更高的抵押品用于回购和回购展期。这种现象表明：
 \end{question}
 
 \begin{choices}
-    \item balance sheet risk
-    \item transactions liquidity risk
-    \item systematic risk
-    \item maturity transformation risk
+    \item balance sheet risk\\
+    资产负债表风险
+    \item transactions liquidity risk\\
+    交易流动性风险
+    \item systematic risk\\
+    系统性风险
+    \item maturity transformation risk\\
+    到期转换风险
 \end{choices}
 
 \begin{correctanswer}
@@ -138,7 +143,8 @@
 
 
 \begin{question}
-    An investor holds two positions: Long shares worth \$35,000 where the bid-offer spread has a mean and standard deviation of 0.040. Long shares worth \$40,000 where the bid-offer spread has a mean and standard deviation of 0.060. Under 99.0\% confidence, which of the following is the nearest to the worst expected cost of unwinding? (assumed bid-ask spread is normally distributed)
+    An investor holds two positions: Long shares worth \$35,000 where the bid-offer spread has a mean and standard deviation of 0.040. Long shares worth \$40,000 where the bid-offer spread has a mean and standard deviation of 0.060. Under 99.0\% confidence, which of the following is the nearest to the worst expected cost of unwinding? (assumed bid-ask spread is normally distributed):\\
+    一个投资者持有两个头寸：价值\$35,000的长期股票，买卖价差均值和标准差为0.040。价值\$40,000的长期股票，买卖价差均值和标准差为0.060。在99.0\%置信水平下，以下哪项最接近最坏的预期解套成本？（假设买卖价差服从正态分布）
 \end{question}
 
 \begin{choices}
@@ -168,13 +174,18 @@
 
 \begin{question}
     Each of the following is true about the liquidity risk typology except which is false?
+    \\以下哪项关于流动性风险分类的说法是正确的，除了哪项是错误的？
 \end{question}
 
 \begin{choices}
-    \item Liquidity risk has three major types: 1. Transaction (aka, asset, market); 2. Funding (aka, cashflow, balance sheet); and 3. Systemic (aka, crisis)
-    \item Transaction liquidity risk (aka, asset or market liquidity risk) can be modeled by either or both of an exogenous-spread approach or/and an endogenous price approach
-    \item A key example of funding (aka, cash flow or balance sheet) liquidity risk is the rollover risk created by the maturity transformation function in a traditional depository institution
-    \item The liquidity risk typology is well-defined into three buckets because the three major liquidity risk types do not interrelate
+    \item Liquidity risk has three major types: 1. Transaction (aka, asset, market); 2. Funding (aka, cashflow, balance sheet); and 3. Systemic (aka, crisis)\\
+    流动性风险有三种主要类型：1. 交易流动性风险（也称为资产或市场流动性风险）；2. 资金流动性风险（也称为现金流或资产负债表流动性风险）；3. 系统性流动性风险（也称为危机流动性风险）
+    \item Transaction liquidity risk (aka, asset or market liquidity risk) can be modeled by either or both of an exogenous-spread approach or/and an endogenous price approach\\
+    交易流动性风险（也称为资产或市场流动性风险）可以通过外生利差方法（exogenous-spread approach）或内生价格方法（endogenous price approach）或两者结合进行建模
+    \item A key example of funding (aka, cash flow or balance sheet) liquidity risk is the rollover risk created by the maturity transformation function in a traditional depository institution\\
+    资金流动性风险（也称为现金流或资产负债表流动性风险）的一个关键例子是传统存款机构中的到期转换功能产生的展期风险
+    \item The liquidity risk typology is well-defined into three buckets because the three major liquidity risk types do not interrelate\\
+    流动性风险分类明确分为三个类别，因为三种主要流动性风险类型互不相关
 \end{choices}
 
 \begin{correctanswer}
@@ -207,7 +218,8 @@
 
 
 \begin{question}
-    Allen holds a portfolio with 100,000 shares of a stock and the value of the position is \$4.0 million. The bid price of the stock is \$39 and the offer price is \$41. The stock's daily volatility is 2.59\%. Allen is interesting in calculating the LVaR of the portfolio, Let's assume the stock's arithmetic returns are normally distributed (aka, normal VaR) and the expected daily return rounds to zero. Which is NEAREST to the position's one-day 99.0\% confident liquidity-adjusted value at risk (LVaR)?
+    Allen holds a portfolio with 100,000 shares of a stock and the value of the position is \$4.0 million. The bid price of the stock is \$39 and the offer price is \$41. The stock's daily volatility is 2.59\%. Allen is interesting in calculating the LVaR of the portfolio, Let's assume the stock's arithmetic returns are normally distributed (aka, normal VaR) and the expected daily return rounds to zero. Which is NEAREST to the position's one-day 99.0\% confident liquidity-adjusted value at risk (LVaR)?\\
+    Allen持有价值\$4.0百万的股票头寸，包含100,000股股票。股票的买卖价分别为\$39和\$41。股票的日波动率为2.59\%。Allen对计算投资组合的流动性调整风险价值（LVaR）感兴趣，假设股票的算术收益率服从正态分布（即正态VaR），且预期日收益率近似为零。哪个选项最接近该头寸一天99.0\%置信水平的流动性调整风险价值（LVaR）？
 \end{question}
 
 \begin{choices}
@@ -238,14 +250,19 @@
 
 
 \begin{question}
-    Lack of liquidity manifests itself in observable, yet hard-to-measure ways. Which of the following refers to "the deterioration in the market price induced by the amount of time it takes to get a trade done?"
+    Lack of liquidity manifests itself in observable, yet hard-to-measure ways. Which of the following refers to "the deterioration in the market price induced by the amount of time it takes to get a trade done?"\\
+    流动性不足以可观察但难以衡量的方式表现出来。以下哪项指的是“由于完成交易所需时间导致的市场价格恶化”？
 \end{question}
 
 \begin{choices}
-    \item Tightness
-    \item Bid-ask spread
-    \item Adverse price impact
-    \item Slippage
+    \item Tightness\\
+    紧度
+    \item Bid-ask spread\\
+    买卖价差
+    \item Adverse price impact\\
+    价格不利影响
+    \item Slippage\\
+    滑移
 \end{choices}
 
 \begin{correctanswer}
@@ -285,13 +302,18 @@
 
 \begin{question}
     A national regulator is developing a set of indicators to serve as warning signs that the liquidity of the stock market could be decreasing. The regulator is particularly concerned about the potential for a "liquidity black hole" to develop which could destabilize the stock market. Which of the following observations would be of greatest concern to the regulator as a signal of a potential liquidity black hole occurring?
+    \\一个国家监管机构正在开发一组指标，作为股市流动性可能下降的预警信号。监管机构特别关注“流动性黑洞”可能发展的潜在风险，这可能导致股市不稳定。以下哪项观察最令监管机构担忧，作为流动性黑洞可能发生的信号？
 \end{question}
 
 \begin{choices}
-    \item A majority of large investors increasingly follow a trend-following trading strategy
-    \item Portfolio managers sell stocks that have increased in value and reached their price target
-    \item Brokerage firms purchase call options as a hedge against the sale of a large number of put options to institutional investors
-    \item Bid-ask spreads for less liquid stocks become narrower
+    \item A majority of large investors increasingly follow a trend-following trading strategy\\
+    大多数大型投资者越来越多地采用趋势跟踪交易策略
+    \item Portfolio managers sell stocks that have increased in value and reached their price target\\
+    投资组合经理卖出增值股票，达到价格目标
+    \item Brokerage firms purchase call options as a hedge against the sale of a large number of put options to institutional investors\\
+    经纪公司购买看涨期权作为对冲向机构投资者出售大量看跌期权的手段
+    \item Bid-ask spreads for less liquid stocks become narrower\\
+    流动性较低的股票的买卖价差收窄
 \end{choices}
 
 \begin{correctanswer}
@@ -345,13 +367,35 @@
 
     \end{table}
     Assume Master Fund LP finances a long position in \$100 million worth of an equity at the margin requirement of 30\%. It invests \$30 million of its own funds and borrows \$70 from a commercial bank, immediately after the trade, its margin account has \$30 million of equity and \$70 million of loan. What is the change in the firm's leverage ratio after this trade?
+    \\    在开业日，Master Fund LP拥有以下经济资产负债表：
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            现金              & \$100 million  \\
+            \hline
+            金融资产  & \$200 million  \\
+            \hline
+            债务              & \$180 million  \\
+            \hline
+            权益            & \$120 million  \\
+            \hline
+        \end{tabular}
+
+    \end{table}
+    假设Master Fund LP以30\%的保证金要求为价值1亿美元的股票多头头寸融资。它投资了3000万美元的自有资金，并从商业银行借入7000万美元，交易后，其保证金账户有3000万美元的权益和7000万美元的贷款。这笔交易后，公司的杠杆比率变化是多少？
 \end{question}
 
 \begin{choices}
-    \item From 1.5 to 2.5
-    \item From 2.50 to 3.08
-    \item From 2.5 to 4.11
-    \item From 1.500 to 1.500
+    \item From 1.5 to 2.5\\
+    从1.5到2.5
+    \item From 2.50 to 3.08\\
+    从2.50到3.08
+    \item From 2.5 to 4.11\\
+    从2.5到4.11
+    \item From 1.500 to 1.500\\
+    从1.500到1.500
 \end{choices}
 
 \begin{correctanswer}
@@ -382,6 +426,13 @@
         \item Bid-ask spread mean: 1.0\%
         \item Bid-ask spread standard deviation: 0.5\%
     \end{itemize}
+    给定以下信息，假设置信参数的买卖价差等于1.96，95\%置信水平的流动性调整VaR是多少？
+    \begin{itemize}
+        \item 当前股票价格：\$200
+        \item 股票价格标准差：3.0\%
+        \item 买卖价差均值：1.0\%
+        \item 买卖价差标准差：0.5\%
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -411,14 +462,19 @@
 
 
 \begin{question}
-    Gilbert has been analyzing bid-ask spreads on over-the-counter equities for the last several years in his job as an equity analyst. He notes that with the exception of the 2007—2008 financial crisis, spreads have generally narrowed over his period of study. If Gilbert is correct, this is an indication that
+    Gilbert has been analyzing bid-ask spreads on over-the-counter equities for the last several years in his job as an equity analyst. He notes that with the exception of the 2007—2008 financial crisis, spreads have generally narrowed over his period of study. If Gilbert is correct, this is an indication that\\
+    Gilbert作为股票分析师已经分析了几年场外股票的买卖价差。他注意到，除了2007-2008年金融危机期间，买卖价差在过去几年中普遍收窄。如果Gilbert正确，这意味着
 \end{question}
 
 \begin{choices}
-    \item Liquidity has improved over the period
-    \item The market has become more resilient over the period
-    \item The depth of the market has improved over the period
-    \item Credit risk has fallen over the period
+    \item Liquidity has improved over the period\\
+    流动性在过去几年中有所改善
+    \item The market has become more resilient over the period\\
+    市场在过去几年中变得更加弹性
+    \item The depth of the market has improved over the period\\
+    市场深度在过去几年中有所改善
+    \item Credit risk has fallen over the period\\
+    信用风险在过去几年中下降
 \end{choices}
 
 \begin{correctanswer}
@@ -452,7 +508,8 @@
 
 
 \begin{question}
-    On opening day, Lever Brothers Multistrategy Master Fund LP has the following economic balance sheet: \$100 in Cash, \$20 in Debt, and Equity of \$80. Assume Lever Brothers creates a short position in a stock, borrowing \$100 of the security and selling it. It has thus created a liability equal to the value of the borrowed stock, and an asset, equal in value, consisting of the cash proceeds from the short sale. The cash cannot be used to fund other investments, as it is collateral; the broker uses it to ensure that the short stock can be repurchased and returned to the stock lender. It remains in a segregated short account, offset by the value of the borrowed stock. The stock might rise in price, in which case the \$100 of proceeds would not suffice to cover its return to the borrower. Lever Brothers must therefore in addition put up margin of \$50. After the trade, what is the leverage in the firm's economic balance sheet?
+    On opening day, Lever Brothers Multistrategy Master Fund LP has the following economic balance sheet: \$100 in Cash, \$20 in Debt, and Equity of \$80. Assume Lever Brothers creates a short position in a stock, borrowing \$100 of the security and selling it. It has thus created a liability equal to the value of the borrowed stock, and an asset, equal in value, consisting of the cash proceeds from the short sale. The cash cannot be used to fund other investments, as it is collateral; the broker uses it to ensure that the short stock can be repurchased and returned to the stock lender. It remains in a segregated short account, offset by the value of the borrowed stock. The stock might rise in price, in which case the \$100 of proceeds would not suffice to cover its return to the borrower. Lever Brothers must therefore in addition put up margin of \$50. After the trade, what is the leverage in the firm's economic balance sheet?\\
+    在开业日，Lever Brothers Multistrategy Master Fund LP拥有以下经济资产负债表：\$100现金，\$20债务，权益为\$80。假设Lever Brothers创建了一个空头头寸，借入100美元的股票并出售。它因此创造了一个等于借入股票价值的负债，和一个等价值的资产，由现金所得的空头销售组成。现金不能用于其他投资，因为它作为抵押品；经纪人使用它确保空头股票可以被回购并返回给股票贷方。它保持在单独的空头账户中，由借入股票的价值抵消。股票价格可能上涨，在这种情况下，100美元的所得不足以覆盖其返回给借方。因此，Lever Brothers必须另外提供50美元的保证金。交易后，公司的杠杆率是多少？
 \end{question}
 
 \begin{choices}
@@ -482,13 +539,19 @@
 
 \begin{question}
     Suppose a firm with a simple capital structure has assets of \$20.0 million and debt of \$10.0 million. Return on assets (ROA) is 9.0\% and cost of debt is 4.0\%, such that the firm's leverage is 2.0 and its return on equity (ROE) is 14.0\%. If the firm borrows an additional \$6.0 million at the same cost of 4.0\%, and asset returns are fixed, what is the firm's new leverage and return on equity (ROE)?
+    \\假设一个简单资本结构的公司拥有\$20.0百万的资产和\$10.0百万的债务。资产回报率（ROA）为9.0\%，债务成本为4.0\%，使得公司的杠杆率为2.0，权益回报率（ROE）为14.0\%。如果公司借入额外的\$6.0百万，成本为4.0\%，且资产回报率固定，公司的新的杠杆率和权益回报率是多少？
 \end{question}
 
 \begin{choices}
-    \item Leverage = 1.7 and ROE = 13.3\%
-    \item Leverage = 2.0 and ROE = 15.7\%
-    \item Leverage = 2.3 and ROE = 23.5\%
+    \item Leverage = 1.7 and ROE = 13.3\%\\
+    杠杆率 = 1.7，权益回报率 = 13.3\%
+    \item Leverage = 2.0 and ROE = 15.7\%\\
+    杠杆率 = 2.0，权益回报率 = 15.7\%
+    \item Leverage = 2.3 and ROE = 23.5\%\\
+    杠杆率 = 2.3，权益回报率 = 23.5\%
     \item Leverage = 2.6 and ROE = 17.0\%
+    \item Leverage = 2.6 and ROE = 17.0\%\\
+    杠杆率 = 2.6，权益回报率 = 17.0\%
 \end{choices}
 
 \begin{correctanswer}
@@ -515,13 +578,18 @@
 
 \begin{question}
     A bank has the following financial metrics: ROE = 18\%, ROA = 12\%, Assets = \$600 million, Equity = \$300 million, and Liabilities = \$300 million. If the bank wants to reduce its ROE to 15\%, which of the following actions would achieve this goal?
+    \\一个银行拥有以下财务指标：权益回报率（ROE）为18\%，资产回报率（ROA）为12\%，资产为\$600百万，权益为\$300百万，债务为\$300百万。如果银行希望将权益回报率（ROE）降低到15\%，哪项行动可以达到这一目标？
 \end{question}
 
 \begin{choices}
-    \item Increase both Assets and Liabilities by \$300 million
-    \item Decrease both Assets and Liabilities by \$300 million
-    \item Increase both Assets and Liabilities by \$150 million
-    \item Decrease both Assets and Liabilities by \$150 million
+    \item Increase both Assets and Liabilities by \$300 million\\
+    增加资产和负债各\$300百万
+    \item Decrease both Assets and Liabilities by \$300 million\\
+    减少资产和负债各\$300百万
+    \item Increase both Assets and Liabilities by \$150 million\\
+    增加资产和负债各\$150百万
+    \item Decrease both Assets and Liabilities by \$150 million\\
+    减少资产和负债各\$150百万
 \end{choices}
 
 \begin{correctanswer}

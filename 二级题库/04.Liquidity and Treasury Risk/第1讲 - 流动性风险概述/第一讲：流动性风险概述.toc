@@ -1,16 +1,16 @@
 \contentsline {section}{\numberline {1}考点1:流动性风险和杠杆}{2}{section.1}%
 \contentsline {subsection}{题号1考察: 资产负债表风险识别}{2}{Item.4}%
 \contentsline {subsection}{题号2考察: 流动性成本最坏情形计算}{3}{Item.8}%
-\contentsline {subsection}{题号3考察: 流动性风险类型分析}{3}{Item.12}%
+\contentsline {subsection}{题号3考察: 流动性风险类型分析}{4}{Item.12}%
 \contentsline {subsection}{题号4考察: 流动性调整风险价值(LVaR)计算}{4}{Item.16}%
-\contentsline {subsection}{题号5考察: 流动性风险表现形式}{4}{Item.20}%
-\contentsline {section}{\numberline {2}考点2: Liquidity challenges}{4}{section.2}%
+\contentsline {subsection}{题号5考察: 流动性风险表现形式}{5}{Item.20}%
+\contentsline {section}{\numberline {2}考点2: Liquidity challenges}{5}{section.2}%
 \contentsline {subsection}{题号1考察: 流动性黑洞预警指标}{5}{Item.24}%
-\contentsline {section}{\numberline {3}考点3: Collateral and leverage}{5}{section.3}%
-\contentsline {subsection}{题号1考察: 杠杆率计算}{5}{Item.28}%
-\contentsline {subsection}{题号2考察: 流动性调整风险价值(LVaR)计算}{6}{Item.32}%
-\contentsline {subsection}{题号3考察: 市场流动性指标分析}{7}{Item.36}%
-\contentsline {subsection}{题号4考察: 杠杆率计算}{7}{Item.40}%
-\contentsline {subsection}{题号5考察: 杠杆率与ROE计算}{8}{Item.44}%
-\contentsline {subsection}{题号6考察: ROE调整策略}{8}{Item.48}%
+\contentsline {section}{\numberline {3}考点3: Collateral and leverage}{6}{section.3}%
+\contentsline {subsection}{题号1考察: 杠杆率计算}{6}{Item.28}%
+\contentsline {subsection}{题号2考察: 流动性调整风险价值(LVaR)计算}{7}{Item.32}%
+\contentsline {subsection}{题号3考察: 市场流动性指标分析}{8}{Item.36}%
+\contentsline {subsection}{题号4考察: 杠杆率计算}{8}{Item.40}%
+\contentsline {subsection}{题号5考察: 杠杆率与ROE计算}{9}{Item.45}%
+\contentsline {subsection}{题号6考察: ROE调整策略}{9}{Item.49}%
 \contentsfinish 

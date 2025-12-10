@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -102,7 +102,14 @@
         \item I.Whereas traditional approaches focus solely on recovery, operational resilience has a broader scope and needs to be integrated into the risk-mitigation fabric of the organization
         \item II.Priorities between firms and FMIs(Financial Market Infrastructures) and the supervisory authorities may not always be aligned. It is possible that the supervisory authorities may believe that a disruption to a business service would harm their objectives, while a firm or FMI might consider the disruption to be a manageable risk
         \item III.Resilience is applicable to all institutions, even if the objectives for each institution might differ. For example, Financial Market Infrastructure's (FMI) resilience objectives will likely focus on avoiding systemic disruptions, while smaller institutions' objectives will likely focus on maintaining shareholder value
+    \end{itemize}   
+    关于操作弹性方法，以下哪项陈述是正确的？
+    \begin{itemize}
+        \item I.虽然传统方法仅关注恢复，但操作弹性具有更广泛的范围，需要整合到组织的风险缓解结构中
+        \item II.公司和金融市场基础设施（FMIs）与监管机构之间的优先事项可能并不总是一致的。监管机构可能认为业务服务的中断会损害其目标，而公司或FMI可能认为该中断是可管理的风险
+        \item III.弹性适用于所有机构，即使每个机构的目标可能不同。例如，金融市场基础设施（FMI）的弹性目标可能侧重于避免系统性中断，而较小机构的目标可能侧重于维持股东价值
     \end{itemize}
+    
 \end{question}
 
 \begin{choices}
@@ -137,13 +144,15 @@
 
 \begin{question}
     Randy Bartell has collected operational loss data to calibrate frequency and severity distributions. Generally, he regards all data points as a sample from an underlying distribution and therefore gives each data point the same weight or probability in the statistical analysis. However, external loss data is inherently biased. Which of the following is not typically associated with external data?
+    \\Randy Bartell收集了操作损失数据来校准频率和严重程度分布。通常，他认为所有数据点都是来自底层分布的样本，因此在统计分析中给每个数据点相同的权重或概率。然而，外部损失数据本身存在偏差。以下哪项通常与外部数据无关？
 \end{question}
 
 \begin{choices}
-    \item Data capture bias
-    \item Scale bias
-    \item Truncation bias
+    \item Data capture bias\\数据捕获偏差
+    \item Scale bias\\规模偏差
+    \item Truncation bias\\截断偏差
     \item Survivorship bias
+    \\生存偏差
 \end{choices}
 
 \begin{correctanswer}
@@ -179,13 +188,14 @@
 
 \begin{question}
     Improving operational resilience of firms and financial market infrastructures (FMIs) is dependent upon effectively managing processes, practices, and culture related to critical business services. Following the best practices methodology outlined by supervisory authorities in the United Kingdom, which of the following statements best describes the first step toward improving operational resiliency for a firm or FMI?
+    \\改进公司和金融市场基础设施（FMIs）的操作弹性依赖于有效管理与关键业务服务相关的流程、实践和文化。按照英国监管机构的最佳实践方法，以下哪项陈述最好地描述了改进公司或FMI操作弹性的第一步？
 \end{question}
 
 \begin{choices}
-    \item Assessing the impact of a failure or disruption in a system or process
-    \item Identifying the most critical business services in various circumstances
-    \item Investing in systems and training to improve response and recovery from disruptions
-    \item Mapping key business services to systems and processes
+    \item Assessing the impact of a failure or disruption in a system or process\\评估系统或流程故障的影响
+    \item Identifying the most critical business services in various circumstances\\识别在各种情况下最重要的业务服务
+    \item Investing in systems and training to improve response and recovery from disruptions\\投资系统和培训以提高对中断的响应和恢复能力
+    \item Mapping key business services to systems and processes\\将关键业务服务映射到系统和流程
 \end{choices}
 
 \begin{correctanswer}
@@ -220,13 +230,14 @@
 
 \begin{question}
     While building the bank's enterprise risk management system, a risk analyst takes an inventory of firm risks and categorizes these risks as market, credit, or operational. Which of the following observations of the bank's data should be considered unexpected if compared to similar industry data?
+    \\在构建银行的全面风险管理体系时，风险分析师对公司风险进行了盘点，并将这些风险分类为市场、信用或操作风险。与类似行业数据相比，银行数据中哪项观察结果应被认为是意外的？
 \end{question}
 
 \begin{choices}
-    \item The operational risk loss distribution has a large number of small losses and therefore, a relatively low mode
-    \item The operational risk loss distribution is symmetric and fat-tailed
-    \item The credit risk distribution is asymmetric and fat-tailed
-    \item The market risk distribution is similar to the distribution of the return on a portfolio of securities
+    \item The operational risk loss distribution has a large number of small losses and therefore, a relatively low mode\\操作风险损失分布有大量小损失，因此众数相对较低
+    \item The operational risk loss distribution is symmetric and fat-tailed\\操作风险损失分布是对称的且厚尾的
+    \item The credit risk distribution is asymmetric and fat-tailed\\信用风险分布是不对称的且厚尾的
+    \item The market risk distribution is similar to the distribution of the return on a portfolio of securities\\市场风险分布类似于证券投资组合的收益分布
 \end{choices}
 
 \begin{correctanswer}
@@ -264,14 +275,15 @@
 \section{考点2:风险管治}
 \setcounter{question}{0}
 \begin{question}
-    For risk culture to be effective, there should be a proper tradeoff between risk-taking and control. Too much strict regulation and actions taken to completely eliminate risk is unrealistic. At the same time, the fear of making mistakes by company personnel only leads to inaction. So, an effective or sound risk culture should balance between risk-taking and maintaining an appropriate level of control. Which of the following is not a Characteristic of a strong risk culture?
+    For risk culture to be effective, there should be a proper tradeoff between risk-taking and control. Too much strict regulation and actions taken to completely eliminate risk is unrealistic. At the same time, the fear of making mistakes by company personnel only leads to inaction. So, an effective or sound risk culture should balance between risk-taking and maintaining an appropriate level of control. Which of the following is not a Characteristic of a strong risk culture?\\
+    为了使风险文化有效，需要在风险承担和控制之间进行适当的权衡。过于严格的监管和采取的完全消除风险的做法是不现实的。同时，公司人员因害怕犯错而导致的行动不足只会导致不作为。因此，有效的或健全的风险文化应该在风险承担和保持适当的控制水平之间取得平衡。以下哪项不是强大风险文化的特征？
 \end{question}
 
 \begin{choices}
-    \item Strong risk culture encompasses an ongoing, dynamic, and formal as well as informal process. It keeps evolving over time with shifts in external and internal factors that affect the behaviors and decisions of the personnel of an organization
-    \item Sound risk culture is an integral part of a business and is not linked to supervision alone
-    \item Establishing a healthy risk culture is a system that deals with just the enhancement of technical skills rather than a collective process
-    \item In a healthy risk culture, the concept of complying with compliance is replaced by compliance to conduct
+    \item Strong risk culture encompasses an ongoing, dynamic, and formal as well as informal process. It keeps evolving over time with shifts in external and internal factors that affect the behaviors and decisions of the personnel of an organization\\强大的风险文化涵盖一个持续的、动态的、正式的和非正式的过程。它随着外部和内部因素的变化而不断发展，这些因素影响组织的员工的行为和决策
+    \item Sound risk culture is an integral part of a business and is not linked to supervision alone\\健全的风险文化是业务的一部分，不应仅与监管挂钩
+    \item Establishing a healthy risk culture is a system that deals with just the enhancement of technical skills rather than a collective process\\建立健康风险文化是一个系统，只是为了增强技术技能，而不是一个集体过程
+    \item In a healthy risk culture, the concept of complying with compliance is replaced by compliance to conduct\\在健康风险文化中，遵守合规的概念被遵守行为所取代
 \end{choices}
 
 \begin{correctanswer}
@@ -305,13 +317,14 @@
 
 \begin{question}
     Lisa Tahara, FRM, is a risk specialist on the board of directors of a financial institution. Her current task involves the implementation of a new risk appetite framework(RAF) for the firm. Which of the following concerns is Lisa least likely to have?
+    \\Lisa Tahara, FRM，是一位风险专家，是某金融机构董事会的成员。她的当前任务是实施新的风险偏好框架（RAF）。以下哪项是她最不可能关注的？
 \end{question}
 
 \begin{choices}
-    \item The mitigation of nonquantifiable risks
-    \item The relationship between risk appetite and employee remuneration
-    \item The educating and training of top management on the details of the RAF
-    \item The development of an approach to translate risk appetite statements into risk limits and tolerances
+    \item The mitigation of nonquantifiable risks\\不可量化风险的缓解
+    \item The relationship between risk appetite and employee remuneration\\风险偏好与员工薪酬的关系
+    \item The educating and training of top management on the details of the RAF\\对高层管理人员进行RAF细节的教育和培训
+    \item The development of an approach to translate risk appetite statements into risk limits and tolerances\\开发一种方法，将风险偏好陈述转化为风险限额和容忍度
 \end{choices}
 
 \begin{correctanswer}
@@ -345,14 +358,15 @@
 
 
 \begin{question}
-    Which of the following statements about its methodology for calculating an operational risk capital charge in Basel II is correct?
+    Which of the following statements about its methodology for calculating an operational risk capital charge in Basel II is correct?\\
+    关于巴塞尔II中操作风险资本要求的计算方法，以下哪项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Basic indicator approach is suitable for institutions with sophisticated operational risk profile
-    \item Under the standardized approach, capital requirement is measured for each of the business line
-    \item Advanced measurement approaches will not allow an institution to adopt its own method of assessment
-    \item AMA is less risk-sensitive than the standardized approach
+    \item Basic indicator approach is suitable for institutions with sophisticated operational risk profile\\基本指标法适用于风险状况较为简单的机构
+    \item Under the standardized approach, capital requirement is measured for each of the business line\\在标准法下，资本要求是按业务线分别计提的
+    \item Advanced measurement approaches will not allow an institution to adopt its own method of assessment\\高级计量法不允许机构采用自己的评估方法
+    \item AMA is less risk-sensitive than the standardized approach\\AMA比标准法更具风险敏感性
 \end{choices}
 
 \begin{correctanswer}
@@ -390,6 +404,13 @@
         \item II. The most popular method to satisfy the AMA is the loss distribution approach
         \item III. The AMA allows a bank to build its own operational risk model and measurement system comparable to market risk standards
         \item IV. BIA is widely used in insurance and actuarial science
+    \end{itemize}
+    由于新的巴塞尔标准，每家银行现在必须使用三种方法之一计算显式操作风险资本要求：基本指标法（BIA）、标准法（SA）和高级计量法（AMA）。以下哪项陈述与这些操作风险方法有关？
+    \begin{itemize}
+        \item I. 在实践中，高级计量法（AMA）是操作风险最严格的方法
+        \item II. 满足高级计量法最流行的方法是损失分布法
+        \item III. 高级计量法允许银行建立自己的操作风险模型和计量系统，可与市场风险标准相媲美
+        \item IV. 基本指标法（BIA）在保险和精算科学中广泛使用
     \end{itemize}
 \end{question}
 
@@ -441,13 +462,24 @@
     \end{center}
     
     The credit risk capital requirement of Bank A will be greater than the credit risk capital requirement of Bank B under the:
+    \\根据以下等规模投资组合，比较银行A和银行B的资本要求。
+
+    \begin{center}
+    \begin{tabular}{l@{\hspace{2cm}}l}
+        \textbf{Bank A} & \textbf{Bank B} \\
+        25\% OECD主权债务 & 50\% OECD主权债务 \\
+        75\% 非OECD主权债务 & 50\% 非OECD主权债务 \\
+    \end{tabular}
+    \end{center}
+    
+    在以下哪种情况下，银行A的信用风险资本要求将大于银行B的信用风险资本要求：
 \end{question}
 
 \begin{choices}
-    \item Principle 7-Accuracy
-    \item Principle 8-Comprehensiveness
-    \item Principle 9-Clarity and Usefulness
-    \item Principle 11-Distribution
+    \item Principle 7-Accuracy\\原则7-准确性
+    \item Principle 8-Comprehensiveness\\原则8-全面性
+    \item Principle 9-Clarity and Usefulness\\原则9-清晰和有用性
+    \item Principle 11-Distribution\\原则11-分发
 \end{choices}
 
 \begin{correctanswer}
@@ -485,6 +517,11 @@
         \item I. In communicating the RAF to the bank's employees, information on the banks risk capacity versus current amount of risk undertaken should be provided.
         \item II. An effective RAF should focus primarily on setting appropriate risk limits within the bank and its respective business units.
     \end{itemize}
+    你是一家银行的资深管理团队成员，你花费了大量时间协助开发风险偏好框架（RAF）。关于RAF，你最有可能同意以下哪项建议：
+    \begin{itemize}
+        \item I. 在向银行员工传达RAF时，应提供银行的风险承受能力与当前承担风险量的信息。
+        \item II. 一个有效的RAF应主要聚焦于在银行及其各业务单元内设定适当的风险限额。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -516,13 +553,14 @@
 
 \begin{question}
     Which of following recommended by the Group of Thirty (2015 and 2018 recommendations) for improving the conduct and culture of banks is wrong?
+    \\根据Group of Thirty（2015年和2018年建议），以下哪项建议对于改善银行的经营和文化是不正确的？
 \end{question}
 
 \begin{choices}
-    \item Banks should look at culture and look to achieve consistent behavior and conduct aligned with firm values, as key to strategic success.
-    \item Asset owners and third-party fund managers should tell boards directly that they consider effective governance and accountability to be a priority cultural matter for the firm and investors.
-    \item Banks should remove the link between quantitative sales targets and compensation for sales staff to minimize the pressure that can lead to misconduct and help staff prioritize meeting customer/client needs.
-    \item Banks should ensure that the third line of defense is robust, operational dependent, suitably staffed, and has a clear mandate to examine adherence to standards.
+    \item Banks should look at culture and look to achieve consistent behavior and conduct aligned with firm values, as key to strategic success.\\银行应该关注文化，追求与公司价值观一致的行为和做法，这是战略成功的关键。
+    \item Asset owners and third-party fund managers should tell boards directly that they consider effective governance and accountability to be a priority cultural matter for the firm and investors.\\资产所有者和第三方基金经理应该直接向董事会传达，他们认为治理和问责是公司和投资者的优先文化事项。
+    \item Banks should remove the link between quantitative sales targets and compensation for sales staff to minimize the pressure that can lead to misconduct and help staff prioritize meeting customer/client needs.\\银行应该取消量化销售目标与销售人员薪酬之间的联系，以最小化可能导致不当行为的压力，并帮助员工优先满足客户/客户需求。
+    \item Banks should ensure that the third line of defense is robust, operational dependent, suitably staffed, and has a clear mandate to examine adherence to standards.\\银行应该确保第三道防线是强大的、运营依赖的、适当配备的，并具有明确的使命来检查遵守标准。
 \end{choices}
 
 \begin{correctanswer}
@@ -556,13 +594,14 @@
 
 \begin{question}
     Which of the following statements regarding the structured process involved with risk appetite frameworks(RAF) and strategic and business planning is most accurate?
+    \\关于风险偏好框架（RAF）和战略与业务规划的结构性流程，以下哪项陈述最准确？
 \end{question}
 
 \begin{choices}
-    \item The process concludes with making any needed changes to the business unit plans.
-    \item The process aims to transform as many of the qualitative objectives into measurable objectives as possible.
-    \item The process begins with either a divisional risk appetite statement or the communication of a risk posture from each of the divisions within the firm.
-    \item The process will differ depending on whether the firm's planning process is top down from the board/senior management or bottom up from the business unit managers.
+    \item The process concludes with making any needed changes to the business unit plans.\\流程以对业务单元计划进行任何必要的修改结束。
+    \item The process aims to transform as many of the qualitative objectives into measurable objectives as possible.\\流程旨在尽可能将定性目标转化为可衡量目标。
+    \item The process begins with either a divisional risk appetite statement or the communication of a risk posture from each of the divisions within the firm.\\流程始于各业务单元的风险偏好陈述或各业务单元的风险姿态沟通。
+    \item The process will differ depending on whether the firm's planning process is top down from the board/senior management or bottom up from the business unit managers.\\流程将取决于公司规划过程是自上而下由董事会/高级管理层发起，还是自下而上由业务单元经理发起。
 \end{choices}
 
 \begin{correctanswer}
@@ -596,13 +635,14 @@
 
 \begin{question}
     If we want to evaluate a firm in order to determine whether they have a robust risk appetite framework (RAF) and whether the firm has a strong risk culture, according to the Institute of International Finance, which of the following is LEAST indicative or LEAST relevant to the evaluation?
+    \\如果我们想评估一家公司，以确定他们是否有一个强大的风险偏好框架（RAF）以及他们是否有一个强大的风险文化，根据国际金融研究所，以下哪项对评估最不具有指示性或最不相关？
 \end{question}
 
 \begin{choices}
-    \item Simple and uniform set of indicators which can be monitored on a single screen (dashboard view).
-    \item Inextricable link to strategy development and business plans.
-    \item Clarity of ownership and responsibility of risk.
-    \item Regular dialog (communication) about risk appetite and evolving risk profiles.
+    \item Simple and uniform set of indicators which can be monitored on a single screen (dashboard view).\\简单统一的指标集，可以在单个屏幕（看板视图）上监控。
+    \item Inextricable link to strategy development and business plans.\\与战略发展不可分割的联系和业务计划。
+    \item Clarity of ownership and responsibility of risk.\\风险的所有权和责任的清晰性。
+    \item Regular dialog (communication) about risk appetite and evolving risk profiles.\\ 关于风险偏好和不断演变的风险状况的定期对话（沟通）。
 \end{choices}
 
 \begin{correctanswer}
@@ -636,13 +676,14 @@
 
 \begin{question}
     A risk management officer at a small commercial bank is trying to institute strong operational risk controls, despite little support from the board of directors. The manager is considering several elements as potentially critical components of a strong control environment. Which of the following is not a required component of an effective risk control environment as suggested by the Basel Committee on Banking Supervision?
+    \\一家小型商业银行的风险管理官员试图实施强大的运营风险控制，尽管董事会的支持很少。经理正在考虑几个元素作为潜在的关键控制环境组件。根据巴塞尔委员会关于银行监管的建议，以下哪项不是有效风险控制环境的一个必要组成部分？
 \end{question}
 
 \begin{choices}
-    \item Information and communication
-    \item Monitoring activities
-    \item A functionally independent corporate operational risk function
-    \item Risk assessment
+    \item Information and communication\\信息和沟通
+    \item Monitoring activities\\监控活动
+    \item A functionally independent corporate operational risk function\\ 功能独立的公司操作风险职能部门
+    \item Risk assessment\\风险评估
 \end{choices}
 
 \begin{correctanswer}
@@ -676,13 +717,14 @@
 
 \begin{question}
     Which of the following courses of action will most likely lead to improved conduct and culture based on the Group of Thirty (G30) report?
+    \\根据Group of Thirty（G30）报告，以下哪项行动最有可能导致行为和文化的改进？
 \end{question}
 
 \begin{choices}
-    \item Promote leadership in the firm based on quantifiable measures of profitability, sales, and other similar qualifications.
-    \item Improve the banks reputation to build a moat of protection when other institutions are involved in scandals so it will not damage the public's trust for their firm.
-    \item Focus primarily on improving employee understanding of culture through human resources training programs and seminars rather than business skill improvement seminars.
-    \item Implement cultural changes that focus on soft managerial skills while recognizing that rebuilding the public's trust is a long-term process.
+    \item Promote leadership in the firm based on quantifiable measures of profitability, sales, and other similar qualifications.\\ 根据可量化的盈利、销售和其他类似资格，在公司中提拔领导。
+    \item Improve the banks reputation to build a moat of protection when other institutions are involved in scandals so it will not damage the public's trust for their firm.\\ 改善银行的声誉，以建立一个护城河，当其他机构卷入丑闻时，不会损害公众对公司的信任。
+    \item Focus primarily on improving employee understanding of culture through human resources training programs and seminars rather than business skill improvement seminars.\\ 主要通过人力资源培训和研讨会，而不是业务技能改进研讨会，提高员工对文化的理解。
+    \item Implement cultural changes that focus on soft managerial skills while recognizing that rebuilding the public's trust is a long-term process.\\ 实施文化变革，专注于软管理技能，同时认识到重建公众信任是一个长期过程。
 \end{choices}
 
 \begin{correctanswer}
@@ -716,13 +758,14 @@
 
 \begin{question}
     Which of the statement can not explain why the supervisory authorities consider that managing operational resilience is most effectively addressed by focusing on business services, rather than on systems and processes.
+    \\监管机构认为，管理运营弹性最有效的方法是专注于业务服务，而不是系统和流程。以下哪项陈述不能解释为什么监管机构认为管理运营弹性最有效的方法是专注于业务服务，而不是系统和流程。
 \end{question}
 
 \begin{choices}
-    \item Operationally resilient business services provided by firms and FMIs directly support resilient economic functions, enabling people to buy goods, borrow money and markets to transact. Resilient business services therefore support financial stability.
-    \item Continuity of business services is also critical to the viability of individual firms and FMIs, and disruptions can cause harm to consumers and market participants.
-    \item The supervisory authorities believe that if firms' and FMIs' boards and senior management focus on the operational resilience of their most important business services, this would assist the supervisory authorities in furthering their objectives.
-    \item Priorities between firms and FMIs and the supervisory authorities are always be aligned due to fact that the disruption to a business service would in no ways to be an uncontrolled risk.
+    \item Operationally resilient business services provided by firms and FMIs directly support resilient economic functions, enabling people to buy goods, borrow money and markets to transact. Resilient business services therefore support financial stability.\\ 由公司和金融市场基础设施（FMIs）提供的运营弹性业务服务直接支持弹性经济功能，使人们能够购买商品、借贷和市场交易。因此，弹性业务服务支持金融稳定。
+    \item Continuity of business services is also critical to the viability of individual firms and FMIs, and disruptions can cause harm to consumers and market participants.\\ 业务服务的连续性对单个公司和FMI的生存能力至关重要，中断可能损害消费者和市场参与者。
+    \item The supervisory authorities believe that if firms' and FMIs' boards and senior management focus on the operational resilience of their most important business services, this would assist the supervisory authorities in furthering their objectives.\\ 监管机构认为，如果公司和FMI的董事会和高级管理层专注于其最重要的业务服务的运营弹性，这将有助于监管机构实现其目标。
+    \item Priorities between firms and FMIs and the supervisory authorities are always be aligned due to fact that the disruption to a business service would in no ways to be an uncontrolled risk.\\ 公司和FMI与监管机构之间的优先事项总是保持一致，因为业务服务的中断不会成为无法控制的风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -756,13 +799,14 @@
 
 \begin{question}
     The CEO of a large bank has reported that the bank's framework for managing operational risk are consistent with Basel II and Basel III model for operational risk governance. Which of the following actions and principles of the bank is correct?
+    \\一家大型银行的CEO报告说，该银行的运营风险管理框架与巴塞尔II和巴塞尔III模型一致。以下哪项是该银行的正确行动和原则？
 \end{question}
 
 \begin{choices}
-    \item The bank considers identification and management of risk as the second line of defense.
-    \item The bank considers independent review and audit of the risk processes and systems as the third line of defense.
-    \item The bank includes damaged reputation due to a failed merger in its measurement of operational risk.
-    \item The bank excludes destruction by fire or other external catastrophes from its measurement of operational risk.
+    \item The bank considers identification and management of risk as the second line of defense.\\银行将风险识别和管理视为第二道防线。
+    \item The bank considers independent review and audit of the risk processes and systems as the third line of defense.\\银行将风险流程和系统的独立审查和审计视为第三道防线。
+    \item The bank includes damaged reputation due to a failed merger in its measurement of operational risk.\\银行在运营风险计量中包括因并购失败而受损的声誉。
+    \item The bank excludes destruction by fire or other external catastrophes from its measurement of operational risk.\\银行在运营风险计量中排除火灾或其他外部灾难造成的破坏。
 \end{choices}
 
 \begin{correctanswer}
@@ -801,6 +845,12 @@
         \item II. The board must be able to evaluate the performance of risk management activities.
         \item III. The board must maintain oversight of risk management activities.
     \end{itemize}
+    董事会成员应有哪些与风险管理相关的职责？
+    \begin{itemize}
+        \item I. 董事会必须批准公司的风险管理政策和程序。
+        \item II. 董事会必须能够评估风险管理活动的表现。
+        \item III. 董事会必须监督风险管理活动。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -836,13 +886,14 @@
 
 \begin{question}
     For risk culture to be effective, there should be a proper tradeoff between risk-taking and control. Too much strict regulation and actions taken to completely eliminate risk is unrealistic. At the same time, the fear of making mistakes by company personnel only leads to inaction. So, an effective or sound risk culture should balance between risk-taking and maintaining an appropriate level of control. Which of the following is not a Characteristic of a strong risk culture?
+    \\为了使风险文化有效，需要在风险承担和控制之间进行适当的权衡。过于严格的监管和采取的完全消除风险的做法是不现实的。同时，公司人员因害怕犯错而导致的行动不足只会导致不作为。因此，有效的或健全的风险文化应该在风险承担和保持适当的控制水平之间取得平衡。以下哪项不是强大风险文化的特征？
 \end{question}
 
 \begin{choices}
-    \item A strong risk culture encompasses an ongoing, dynamic, and formal as well as informal process. It keeps evolving over time with shifts in external and internal factors that affect the behaviors and decisions of the personnel of an organization.
-    \item Sound risk culture is an integral part of a business and is not linked to supervision alone.
-    \item Establishing a healthy risk culture is a system that deals with just the enhancement of technical skills rather than a collective process.
-    \item In a healthy risk culture, the concept of complying with compliance is replaced by compliance to conduct.
+    \item A strong risk culture encompasses an ongoing, dynamic, and formal as well as informal process. It keeps evolving over time with shifts in external and internal factors that affect the behaviors and decisions of the personnel of an organization.\\强大的风险文化涵盖一个持续的、动态的、正式的和非正式的过程。它随着外部和内部因素的变化而不断发展，这些因素影响组织的员工的行为和决策。
+    \item Sound risk culture is an integral part of a business and is not linked to supervision alone.\\健全的风险文化是业务的一部分，不应仅与监管挂钩。
+    \item Establishing a healthy risk culture is a system that deals with just the enhancement of technical skills rather than a collective process.\\建立健康风险文化是一个系统，只是为了增强技术技能，而不是一个集体过程。
+    \item In a healthy risk culture, the concept of complying with compliance is replaced by compliance to conduct.\\在健康风险文化中，遵守合规的概念被遵守行为所取代。
 \end{choices}
 
 \begin{correctanswer}
@@ -875,13 +926,14 @@
 
 \begin{question}
     A global risk advisory firm is preparing a summary of recommendations for banks around the world, as well as national regulators and supervisors, to improve banks' risk conduct and culture. An advisor at the firm is asked to assess current best practices. Which of the following recommendations is most appropriate for the advisor to include in the summary?
+    \\一家全球风险咨询公司正在准备一份建议，为世界各地的银行、国家监管机构和监管机构提供建议，以改进银行的风险行为和文化。一家公司的顾问被要求评估当前的最佳实践。以下哪项建议最适用于顾问在摘要中包括的建议？
 \end{question}
 
 \begin{choices}
-    \item Banks in different countries should implement a standard set of practices in order to achieve their optimal risk culture.
-    \item Banks' conduct reporting should have a broad focus and include positive conduct indicators rather than having an emphasis on employee misconduct.
-    \item Banks should keep their risk culture private rather than disclose it publicly to maintain their competitive advantage.
-    \item Banks' risk culture can be improved most effectively by strengthening their supervision by regulatory authorities.
+    \item Banks in different countries should implement a standard set of practices in order to achieve their optimal risk culture.\\不同国家的银行应该实施一套标准做法，以实现其最佳风险文化。
+    \item Banks' conduct reporting should have a broad focus and include positive conduct indicators rather than having an emphasis on employee misconduct.\\银行的行为报告应该有一个广泛的焦点，并包括积极的 conduct 指标，而不是强调员工不当行为。
+    \item Banks should keep their risk culture private rather than disclose it publicly to maintain their competitive advantage.\\银行应该保持其风险文化秘密，而不是公开披露，以保持其竞争优势。
+    \item Banks' risk culture can be improved most effectively by strengthening their supervision by regulatory authorities.\\银行的风险文化可以通过加强与监管机构的监督来最有效地改进。
 \end{choices}
 
 \begin{correctanswer}
@@ -914,13 +966,14 @@
 
 \begin{question}
     The senior management of a financial services firm would like to strengthen the firm's process of managing operational risk and asks the risk management team to suggest improvements to the process. An enterprise risk manager reviews the Basel principles for the appropriate management of operational risk and recommends improvements in the firm's risk governance structure, its risk controls, and its IT infrastructure. Which of the following recommendations most closely aligns with the Basel principles?
+    \\一家金融服务公司的管理层希望加强公司的运营风险管理流程，并要求风险管理团队提出改进建议。企业风险经理审查了巴塞尔原则，以适当管理运营风险，并建议改进公司的风险治理结构、风险控制和IT基础设施。以下哪项建议最符合巴塞尔原则？
 \end{question}
 
 \begin{choices}
-    \item To reduce operational risk, the firm should build out its IT infrastructure to support new products as soon as those products become successful.
-    \item Business unit managers should work together to lead the process of establishing the firm's risk management culture.
-    \item The firm's operational risk committee should be composed entirely of senior executives who represent different divisions of the firm.
-    \item The firm should consider risk transfer tools, such as insurance, to be complementary to its internal controls rather than a replacement for internal controls.
+    \item To reduce operational risk, the firm should build out its IT infrastructure to support new products as soon as those products become successful.\\为了减少运营风险，公司应该尽快建立IT基础设施，以支持新产品，一旦这些产品成功推出。
+    \item Business unit managers should work together to lead the process of establishing the firm's risk management culture.\\业务单元经理应该一起领导建立公司的风险管理文化的过程。
+    \item The firm's operational risk committee should be composed entirely of senior executives who represent different divisions of the firm.\\公司运营风险委员会应该完全由代表不同业务单元的资深高管组成。
+    \item The firm should consider risk transfer tools, such as insurance, to be complementary to its internal controls rather than a replacement for internal controls.\\公司应该考虑风险转移工具，如保险，作为其内部控制的补充，而不是内部控制的替代品。
 \end{choices}
 
 \begin{correctanswer}
@@ -953,13 +1006,14 @@
 
 \begin{question}
     The CRO notes that the RAF is composed of a combination of quantitative risk limits and qualitative guidelines, with the quantitative limits based on VaR and ES measures. The CRO also notices that the bank's RAF is developed at a firm-wide level and then driven down into each of the business lines, and that the risk limits are updated when changes in external market conditions warrant. In recommending improvements to the RAF, which of the following statements would be most appropriate for the CRO to make?
+    \\CRO注意到RAF由定量风险限额和定性指南的组合组成，定量限额基于VaR和ES衡量。CRO还注意到银行的RAF在公司层面制定，然后驱动到每个业务线，当外部市场条件发生变化时，风险限额会更新。在推荐RAF的改进时，CRO最有可能提出以下哪项陈述？
 \end{question}
 
 \begin{choices}
-    \item The RAF should include an assumption that diversification benefits persist during times of stress when aggregating risk exposures.
-    \item The strategic planning committee should take the lead in developing the RAF and determine the allocation of risk capital across the firm.
-    \item The bank can increase the level of engagement from senior management by adding scenario analysis to the RAF limit-setting process.
-    \item The RAF implementation process should begin at the business line level, and the firm-wide RAF should accommodate the risk appetites of the business lines.
+    \item The RAF should include an assumption that diversification benefits persist during times of stress when aggregating risk exposures.\\RAF应包括一个假设，即在压力时期，当聚合风险暴露时，分散化收益仍然有效。
+    \item The strategic planning committee should take the lead in developing the RAF and determine the allocation of risk capital across the firm.\\战略规划委员会应牵头开发RAF并确定公司在整个公司的风险资本分配。
+    \item The bank can increase the level of engagement from senior management by adding scenario analysis to the RAF limit-setting process.\\银行可以通过添加情景分析来增加高级管理层对RAF限额设定过程的参与度。
+    \item The RAF implementation process should begin at the business line level, and the firm-wide RAF should accommodate the risk appetites of the business lines.\\RAF实施流程应从业务线级别开始，公司层面的RAF应适应业务线的风险偏好。
 \end{choices}
 
 \begin{correctanswer}
@@ -993,13 +1047,14 @@
 
 \begin{question}
     The board of directors of a bank is concerned about the reputational risk that can arise due to employee misconduct. The board calls a meeting to discuss potential steps to be taken to promote better conduct at the bank. Which of the following actions would be most appropriate for the board to propose?
+    \\一家银行的董事会担心由于员工不当行为而可能产生的声誉风险。董事会召开会议讨论促进银行更好行为的潜在步骤。以下哪项行动最适用于董事会提议？
 \end{question}
 
 \begin{choices}
-    \item Restrict the bank's CEO from serving as the chair of the board of directors.
-    \item Establish a compensation system that is primarily tied to the bank's profitability.
-    \item Discourage the use of surveillance technologies for monitoring and analyzing the conduct of bank employees.
-    \item Replace the board-level risk committee with a separate risk committee within each of the business units.
+    \item Restrict the bank's CEO from serving as the chair of the board of directors.\\限制银行的CEO担任董事会主席。
+    \item Establish a compensation system that is primarily tied to the bank's profitability.\\建立一个主要与银行盈利挂钩的薪酬系统。
+    \item Discourage the use of surveillance technologies for monitoring and analyzing the conduct of bank employees.\\鼓励使用监控技术来监测和分析银行员工的行为。
+    \item Replace the board-level risk committee with a separate risk committee within each of the business units.\\用每个业务单元的单独风险委员会取代董事会层面的风险委员会。
 \end{choices}
 
 \begin{correctanswer}
@@ -1044,6 +1099,13 @@
         \item III. That your department immediately assess the operational risk for each business unit using independent data feeds to ensure the information fed into the assessment cannot be manipulated.
         \item IV. A senior manager from each profit center is to be charged with developing their own operational risk self assessment program based on guidelines you provide.
     \end{itemize}
+    你的董事会希望对每个业务单元的运营风险活动进行全面审查。作为公司运营风险部门的负责人，你知道在业务单元层面几乎没有实施运营风险流程，你需要立即提出一个框架。以下哪项陈述提供最佳策略？
+    \begin{itemize}
+        \item I. 审计委员会应首先定义其目标，以确保所有业务单元的运营风险计划提供所需信息。
+        \item II. 审计部门应负责为每个业务单元开发运营风险计划，使业务单元明确意识到他们将对其实施负责。
+        \item III. 你的部门应立即使用独立数据源评估每个业务单元的运营风险，以确保输入评估的信息不能被操纵。
+        \item IV. 每个利润中心的资深经理应负责根据你提供的指南开发自己的运营风险自我评估计划。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -1085,13 +1147,14 @@
 
 \begin{question}
     Which statement about operational risk is true?
+    \\关于操作风险，以下哪项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Measuring operational risk requires both estimating the probability of an operational loss event and the potential size of the loss.
-    \item Measurement of operational risk is well developed, given the general agreement among institutions about the definition of this risk.
-    \item The operational risk manager has the primary responsibility for management of operational risk.
-    \item Operational risks are clearly separate from other risks, such as credit and market.
+    \item Measuring operational risk requires both estimating the probability of an operational loss event and the potential size of the loss.计量操作风险需要同时估计操作损失事件的发生概率和损失的潜在规模。
+    \item Measurement of operational risk is well developed, given the general agreement among institutions about the definition of this risk.计量操作风险已经发展得很好，因为机构之间对这种风险的定义有普遍共识。
+    \item The operational risk manager has the primary responsibility for management of operational risk.操作风险经理对管理操作风险负有主要责任。
+    \item Operational risks are clearly separate from other risks, such as credit and market.操作风险与信用/市场风险完全分离。
 \end{choices}
 
 \begin{correctanswer}
@@ -1130,6 +1193,13 @@
         \item II. Duplicate records
         \item III. Data normalization
         \item IV. Nonstandard formats
+    \end{itemize}
+    以下哪项数据问题最有可能增加组织的风险？
+    \begin{itemize}
+        \item I. 数据转换
+        \item II. 重复记录
+        \item III. 数据标准化
+        \item IV. 非标准格式
     \end{itemize}
 \end{question}
 
@@ -1172,13 +1242,14 @@
 
 \begin{question}
     In regard to Risk Governance and the firm's operational risk (OpRisk) Policy, each of the following is true EXCEPT which is not?
+    \\关于风险治理和公司的操作风险（OpRisk）政策，以下哪项陈述是正确的，除了哪项不是正确的？
 \end{question}
 
 \begin{choices}
-    \item It is the responsibility of the Board of Directors to ensure that a strong OpRisk management culture exists throughout the whole organization.
-    \item With respect to the risk taxonomy exercise, the best approach to the classification methodology is to either (i) use a cause-driven method; or (ii) use a mixture of cause-drive, impact-driven, and event-driven methods.
-    \item Common industry practice for sound OpRisk governance often relies on three lines of defense: Business line management; an independent corporate OpRisk management function; and an independent review (usually internal audit).
-    \item An OpRisk Policy defines a firm's operational risk management framework and includes the following, among other components: a risk taxonomy; loss collection; validation; and governance.
+    \item It is the responsibility of the Board of Directors to ensure that a strong OpRisk management culture exists throughout the whole organization.董事会对确保整个组织有一个强大的OpRisk管理文化负有责任。
+    \item With respect to the risk taxonomy exercise, the best approach to the classification methodology is to either (i) use a cause-driven method; or (ii) use a mixture of cause-drive, impact-driven, and event-driven methods.关于风险分类练习，最佳的方法分类方法是使用原因驱动方法，或者使用原因驱动、影响驱动和事件驱动方法的混合。
+    \item Common industry practice for sound OpRisk governance often relies on three lines of defense: Business line management; an independent corporate OpRisk management function; and an independent review (usually internal audit).常见的行业最佳实践，良好的OpRisk治理通常依赖于三道防线：业务线管理；独立的公司OpRisk管理职能；和独立审查（通常是内部审计）。
+    \item An OpRisk Policy defines a firm's operational risk management framework and includes the following, among other components: a risk taxonomy; loss collection; validation; and governance.一个OpRisk政策定义了公司的操作风险管理框架，并包括以下内容，以及其他组件：一个风险分类法；损失收集；验证；和治理。
 \end{choices}
 
 \begin{correctanswer}
@@ -1213,13 +1284,14 @@
 
 \begin{question}
     Trader Ben Smith enters a foreign exchange (FX) spot transaction, buying euros for dollars. He then quickly enters another transaction selling euros for dollars. He makes a quick profit from these two transactions, however due to confusion in the back office, settlement to the counterparty is delayed to four days later. The counterparty demands compensation for the delayed settlement and the claim includes lost (forgone) interest. The cost of the mistake exceeds the profit on the trade, resulting in an operational loss. To which Level 1 event risk category should this loss be assigned?
+    \\交易员Ben Smith进入了一笔外汇（FX）即期交易，买入欧元兑换美元。然后他迅速进入另一笔交易，卖出欧元兑换美元。他从这两笔交易中快速获利，但由于后台的混乱，结算给对手方的延迟到了四天后。对手方要求补偿延迟结算和索赔包括损失（错过的）利息。这个错误的成本超过了交易的利润，导致了一次操作损失。这个损失应该归属于哪个一级事件风险类别？
 \end{question}
 
 \begin{choices}
-    \item Improper Business or Market Practices
-    \item Business Disruption and System failures
-    \item Clients, Products, and Business Practices
-    \item Execution, Delivery \& Process Management
+    \item Improper Business or Market Practices\\不当的业务或市场行为
+    \item Business Disruption and System failures\\业务中断和系统故障
+    \item Clients, Products, and Business Practices\\客户、产品和业务规则
+    \item Execution, Delivery \& Process Management\\执行、交付与流程管理
 \end{choices}
 
 \begin{correctanswer}
@@ -1256,13 +1328,14 @@
 
 \begin{question}
     Last year, Goodholdings Bank released a major upgrade of its custom-built enterprise resource planning (ERP) software platform. However, the release exposed problems with the extant codebase. Consultants were hired to re-factor the code and resolve the so-called technical debt. Technical debt is the development effort required to fix structural software problems that remain in code due to sub-optimal programming practices; for example, a quick fix might satisfy an immediate user requirement but interfere with long-term compatibility or performance. Management views the cost of hiring the consultants as an operational loss. To which event risk category should the loss be assigned?
+    \\去年，Goodholdings Bank发布了一个主要升级，其定制构建的企业资源规划（ERP）软件平台。然而，发布暴露了现有代码库的问题。顾问被聘请重构代码并解决所谓的技术债务。技术债务是修复结构性软件问题所需的开发努力，由于次优编程实践，这些问题仍然存在于代码中；例如，一个快速修复可能满足即时用户需求，但干扰长期兼容性或性能。管理层将聘请顾问的成本视为一次操作损失。这个损失应该归属于哪个事件风险类别？
 \end{question}
 
 \begin{choices}
-    \item Internal fraud
-    \item Business disruption and system failures
-    \item Employment Practices and Workplace Safety
-    \item None of the above, technical debt is an exception that is excluded from the taxonomy
+    \item Internal fraud\\内部欺诈
+    \item Business disruption and system failures\\业务中断和系统故障
+    \item Employment Practices and Workplace Safety\\雇佣实践和职场安全
+    \item None of the above, technical debt is an exception that is excluded from the taxonomy\\以上都不是，技术债务是一个例外，被排除在分类之外
 \end{choices}
 
 \begin{correctanswer}
@@ -1302,6 +1375,13 @@
         \item III. Compensation scheme for trader should be directly linked to calendar revenues.
         \item IV. Trade tickets need to be confirmed with the counterparty.
     \end{itemize}   
+    以下哪项策略可以有助于最小化操作风险？
+    \begin{itemize}
+        \item I. 负责执行交易的个人应执行清算和会计职能。
+        \item II. 为了估值当前头寸，价格信息应从外部来源获取。
+        \item III. 交易员的薪酬应直接与日历收入挂钩。
+        \item IV. 交易票据需要与对手方进行确认。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -1341,13 +1421,14 @@
 
 \begin{question}
     Which of the following factors would increase the likelihood of positive risk behaviors?
+    \\以下哪项因素会增加积极风险行为的可能性？
 \end{question}
 
 \begin{choices}
-    \item Employees who are more risk averse
-    \item Employees who are well compensated
-    \item Employees who are new to the organization
-    \item Employees at a junior level of the organization
+    \item Employees who are more risk averse\\风险厌恶的员工
+    \item Employees who are well compensated\\薪酬良好的员工
+    \item Employees who are new to the organization\\新加入组织的员工
+    \item Employees at a junior level of the organization\\初级员工
 \end{choices}
 
 \begin{correctanswer}
@@ -1381,13 +1462,14 @@
 
 \begin{question}
     An economist at a regulatory agency is reviewing the latest studies on physical risks related to climate change and their implications on financial stability. The economist focuses on the identification and analysis of channels through which economic agents become expose to physical risks. While exploring the way these channels function, which of the following would the economist find to be correct?
+    \\一位监管机构的经济学家正在审查与气候变化相关的物理风险及其对金融稳定的影响的最新研究。经济学家专注于识别和分析经济代理暴露于物理风险的经济渠道。在探索这些渠道的功能时，经济学家最有可能发现以下哪项是正确的？
 \end{question}
 
 \begin{choices}
-    \item The relationship between projections of future asset prices and changes in physical risks has been found to be statistically significant.
-    \item Global equity markets have proven very efficient in incorporating the costs of climatic events experienced in the past.
-    \item Investors should factor in the rate of insurance penetration when considering the association between physical risks and equity values.
-    \item Climatic events can have direct effects on operational risk but not on liquidity risk.
+    \item The relationship between projections of future asset prices and changes in physical risks has been found to be statistically significant.\\未来资产价格预测与物理风险变化之间的关系被发现是统计显著的。
+    \item Global equity markets have proven very efficient in incorporating the costs of climatic events experienced in the past.\\全球股票市场已经证明非常有效地纳入过去经历的气候事件的成本。
+    \item Investors should factor in the rate of insurance penetration when considering the association between physical risks and equity values.\\投资者在考虑物理风险与股权价值之间的关系时，应考虑保险渗透率。
+    \item Climatic events can have direct effects on operational risk but not on liquidity risk.\\气候事件可以直接影响操作风险，但不会影响流动性风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -1428,13 +1510,14 @@
 \setcounter{question}{0}
 \begin{question}
     Crouhy, Galai \& Mark explain that the main cause of model risk are either (i) model error or (ii) implementation. Model error is when "the model might contain mathematical errors or, more likely, be based on simplifying assumptions that are misleading or inappropriate." Implementation is when "the model might be implemented wrongly, either by accident or as part of a deliberate fraud." Each of the following is a classic example of how model error can be introduced EXCEPT which is the LEAST likely assumption, by itself, to create model error risk?
+    \\Crouhy, Galai \& Mark解释说，模型风险的主要原因是模型错误或实施错误。模型错误是指“模型可能包含数学错误，或者更可能是基于误导性或不适当的简化假设”。实施错误是指“模型可能被错误地实施，要么是偶然的，要么是故意的欺诈”。以下哪项是模型错误引入的经典例子，除了哪项假设，本身最不可能创建模型错误风险？
 \end{question}
 
 \begin{choices}
-    \item To assume an asset's distribution is stationary over time in order to maintain or improve the tractability of the model.
-    \item To assume a delta-neutral hedging strategy is risk-free and can be maintained because active re-balancing is unrealistic.
-    \item To assume asset returns follow an empirical distribution simply because the historical data happens to be easily available.
-    \item To assume the forward rates--i.e., that are used to value fixed-income instruments-- are log normal although interest rates have shifted into a long-term regime of negative territory.
+    \item To assume an asset's distribution is stationary over time in order to maintain or improve the tractability of the model.\\假设资产分布是平稳的，以便维持或改进模型的可处理性。
+    \item To assume a delta-neutral hedging strategy is risk-free and can be maintained because active re-balancing is unrealistic.\\假设delta中性对冲策略是无风险的，可以维持，因为频繁再平衡是不现实的。
+    \item To assume asset returns follow an empirical distribution simply because the historical data happens to be easily available.\\假设资产回报遵循经验分布，只是因为历史数据很容易获得。
+    \item To assume the forward rates--i.e., that are used to value fixed-income instruments-- are log normal although interest rates have shifted into a long-term regime of negative territory.\\假设远期利率（即用于固定收益工具估值的利率）是对数正态的，尽管利率已经进入长期负利率 regime。
 \end{choices}
 
 \begin{correctanswer}
@@ -1474,6 +1557,14 @@
         \item III. Both are modeled based on a normal distribution.
         \item IV. Extreme Value Theory can be used to model extreme losses at the tail of the distribution for both Operational and Market VaR.
     \end{itemize}
+    以下哪项正确描述了操作风险VaR和市场风险VaR之间的相似性？
+    \begin{itemize}
+        \item I. 两者在监管资本测量时都需要与实际损失经验进行验证。
+        \item II. 两者都基于 readily available 的数据（市场价格用于市场VaR，操作损失数据用于操作VaR）。
+        \item III. 两者都基于正态分布建模。
+        \item IV. 极值理论可以用于建模操作风险VaR和市场风险VaR的尾部损失。
+    \end{itemize}
+    
 \end{question}
 
 \begin{choices}
@@ -1514,13 +1605,14 @@
 
 \begin{question}
     Silverfind Financial International is planning to conduct a risk control self-assessment (RCSA) for each of its business units. Which of the following is MOST LIKELY to be a feature or element of the firm's RCSA?
+    \\Silverfind Financial International正在为其每个业务单元进行风险控制自我评估（RCSA）。以下哪项最有可能成为公司RCSA的一个特征或元素？
 \end{question}
 
 \begin{choices}
-    \item Staff within a business unit are excluded from providing input into their own business unit's RCSA scorecard in order to avoid conflicts of interest.
-    \item Any process with an inherent risk that is greater than its residual risk will be assigned a "red flag" because this is a situation that requires a process fix.
-    \item Managers will first identify and assess inherent risks by making no inferences about controls embedded in the process; i.e., controls are assumed to be absent.
-    \item In order to estimate realistic outcomes, risks are identified by assuming the mitigation impact of in-place controls; that is, the risk exposure sought is net of control and mitigation.
+    \item Staff within a business unit are excluded from providing input into their own business unit's RCSA scorecard in order to avoid conflicts of interest.\\业务单元内的员工被排除在提供自身业务单元的RCSA评分卡的输入之外，以避免利益冲突。
+    \item Any process with an inherent risk that is greater than its residual risk will be assigned a "red flag" because this is a situation that requires a process fix.\\任何存在固有风险大于剩余风险的过程将被分配一个“红旗”，因为这是一个需要过程修复的情况。
+    \item Managers will first identify and assess inherent risks by making no inferences about controls embedded in the process; i.e., controls are assumed to be absent.\\经理们首先通过不推断流程中嵌入的控制来识别和评估固有风险；即，假设控制不存在。
+    \item In order to estimate realistic outcomes, risks are identified by assuming the mitigation impact of in-place controls; that is, the risk exposure sought is net of control and mitigation.\\为了估计现实的结果，风险被识别为假设现有控制的减轻影响；即，风险暴露被认为是控制和减轻后的净风险暴露。
 \end{choices}
 
 \begin{correctanswer}
@@ -1552,13 +1644,14 @@
 
 \begin{question}
     In characterizing various dimensions of a bank's data, the Basel Committee has suggested several principles to promote strong and effective risk data aggregation capabilities. Which statement correctly describes a recommendation which the bank should follow in accordance with the given principle?
+    \\在描述银行的各类数据维度时，巴塞尔委员会提出了几个原则，以促进强大的和有效的风险数据聚合能力。以下哪项陈述正确描述了银行应遵循的建议，符合给定的原则？
 \end{question}
 
 \begin{choices}
-    \item The integrity principle recommends that data aggregation should be completely automated without any manual intervention.
-    \item The completeness principle recommends that a financial institution should capture data on its entire universe of material risk exposures.
-    \item The adaptability principle recommends that a bank should frequently update its risk reporting systems to incorporate changes in best practices.
-    \item The accuracy principle recommends that the risk data be reconciled with management's estimates of risk exposure prior to aggregation.
+    \item The integrity principle recommends that data aggregation should be completely automated without any manual intervention.\\完整性原则建议数据聚合应完全自动化，无需任何人工干预。
+    \item The completeness principle recommends that a financial institution should capture data on its entire universe of material risk exposures.\\完整性原则建议金融机构应获取其全部重大风险敞口的数据。
+    \item The adaptability principle recommends that a bank should frequently update its risk reporting systems to incorporate changes in best practices.\\适应性原则建议银行应频繁更新其风险报告系统，以纳入最佳实践的变化。
+    \item The accuracy principle recommends that the risk data be reconciled with management's estimates of risk exposure prior to aggregation.\\准确性原则建议风险数据在与管理层对风险敞口的估计进行对齐之前进行聚合。
 \end{choices}
 
 \begin{correctanswer}
@@ -1597,6 +1690,13 @@
         \item II. The auditing department is to be charged with developing an operational risk program for each business unit, with the business unit being made clearly aware that they will be held accountable for its implementation.
         \item III. That your department immediately assess the operational risk for each business unit using independent data feeds to ensure the information fed into the assessment cannot be manipulated.
         \item IV. A senior manager from each profit center is to be charged with developing their own operational risk self assessment program based on guidelines you provide.
+    \end{itemize}
+    你的董事会希望对每个业务单元的运营风险活动进行全面审查。作为公司运营风险部门的负责人，你知道在业务单元层面几乎没有实施运营风险流程，你需要立即提出一个框架。以下哪项陈述提供最佳策略？
+    \begin{itemize}
+        \item I. 审计委员会应首先定义其目标，以确保所有业务单元的运营风险计划提供所需信息。
+        \item II. 审计部门应负责为每个业务单元开发运营风险计划，使业务单元明确意识到他们将对其实施负责。
+        \item III. 你的部门立即使用独立数据源评估每个业务单元的运营风险，以确保输入评估的信息不能被操纵。
+        \item IV. 每个利润中心的资深经理应负责根据你提供的指南开发自己的运营风险自我评估计划。
     \end{itemize}
 \end{question}
 
@@ -1637,14 +1737,14 @@
 
 
 \begin{question}
-    Impact tolerances are least likely to provide a
+    Impact tolerances are least likely to provide a\\框架，用于公司和金融市场基础设施（FMIs）优先考虑业务服务并分配投资和资源。
 \end{question}
 
 \begin{choices}
-    \item framework for firms and FMIs to prioritize business services and allocate investments and resources.
-    \item clear framework for testing operational resilience.
-    \item focal point for communication and reporting with supervisory authorities.
-    \item standardized benchmark for all firms regardless of firm size or geographical location.
+    \item framework for firms and FMIs to prioritize business services and allocate investments and resources.\\框架，用于公司和金融市场基础设施（FMIs）优先考虑业务服务并分配投资和资源。
+    \item clear framework for testing operational resilience.\\清晰框架，用于测试运营弹性。
+    \item focal point for communication and reporting with supervisory authorities.\\与监管机构的沟通和报告的焦点。
+    \item standardized benchmark for all firms regardless of firm size or geographical location.\\标准化基准，适用于所有公司，无论公司规模或地理位置如何。
 \end{choices}
 
 \begin{correctanswer}
@@ -1678,13 +1778,14 @@
 
 \begin{question}
     Which approach examine firm-specific impacts of adverse events?
+    \\哪项方法评估企业特定的不利事件影响？
 \end{question}
 
 \begin{choices}
-    \item Operational resilience approach
-    \item Traditional approach
-    \item Both the operational resilience approach and the traditional approach
-    \item Neither the operational resilience approach nor the traditional approach
+    \item Operational resilience approach\\运营弹性方法
+    \item Traditional approach\\传统方法
+    \item Both the operational resilience approach and the traditional approach\\运营弹性方法和传统方法
+    \item Neither the operational resilience approach nor the traditional approach\\既不是运营弹性方法也不是传统方法
 \end{choices}
 
 \begin{correctanswer}
@@ -1723,6 +1824,12 @@
         \item II. Priorities between firms and FMIs(Financial Market Infrastructures) and the supervisory authorities may not always be aligned. It is possible that the supervisory authorities may believe that a disruption to a business service would harm their objectives, while a firm or FMI might consider the disruption to be a manageable risk.
         \item III. Resilience is applicable to all institutions, even if the objectives for each institution might differ. For example, Financial Market Infrastructure's (FMI) resilience objectives will likely focus on avoiding systemic disruptions, while smaller institutions' objectives will likely focus on maintaining shareholder value.
     \end{itemize}
+    以下哪项陈述正确描述了运营弹性方法？
+    \begin{itemize}
+        \item I. 虽然传统方法仅关注恢复，但操作弹性具有更广泛的范围，需要整合到组织的风险缓解结构中。
+        \item II. 公司和金融市场基础设施（FMIs）与监管机构之间的优先事项可能并不总是一致的。监管机构可能认为业务服务的中断会损害其目标，而公司或FMI可能认为该中断是可管理的风险。
+        \item III. 弹性适用于所有机构，即使每个机构的目标可能不同。例如，金融市场基础设施（FMI）的弹性目标可能侧重于避免系统性中断，而较小机构的目标可能侧重于维持股东价值。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -1758,13 +1865,15 @@
 
 \begin{question}
     Operational risk loss data is not easy to collect within an institution, especially for extreme loss data. Therefore, financial institutions usually attempt to obtain external data, but doing so may create biases in estimating loss distribution. Which of the following statements regarding characteristics of external loss data is incorrect?
+    \\操作风险损失数据在机构内部收集并不容易，特别是极端损失数据。因此，金融机构通常试图获取外部数据，但这样做可能会在估计损失分布时产生偏差。以下哪项陈述关于外部损失数据的特征是不正确的？
 \end{question}
 
 \begin{choices}
-    \item External loss data often exhibits scale bias as operational risk losses tend to be positively related to the size of the institution (i.e., scale of its operations).
-    \item External loss data often exhibits truncation bias as minimum loss thresholds for collecting loss data are not uniform across all institutions.
-    \item External loss data often exhibits data capture bias as the likelihood that an operational risk loss is reported is positively related to the size of the loss.
+    \item External loss data often exhibits scale bias as operational risk losses tend to be positively related to the size of the institution (i.e., scale of its operations).\\外部损失数据通常表现出规模偏差，因为操作风险损失与机构规模（即其运营的规模）正相关。
+    \item External loss data often exhibits truncation bias as minimum loss thresholds for collecting loss data are not uniform across all institutions.\\外部损失数据通常表现出截断偏差，因为收集损失数据的最小损失阈值在所有机构中并不统一。
+    \item External loss data often exhibits data capture bias as the likelihood that an operational risk loss is reported is positively related to the size of the loss.\\外部损失数据通常表现出数据捕获偏差，因为操作风险损失被报告的可能性与损失的大小正相关。
     \item The biases associated with external loss data are more important for large losses in relation to a bank's assets or revenue than for small losses.
+    \\与外部损失数据相关的偏差对银行资产或收入的大损失比小损失更重要。
 \end{choices}
 
 \begin{correctanswer}
@@ -1797,13 +1906,14 @@
 
 \begin{question}
     Consider a bank that wants to model processing errors in its retail banking business. The number of such errors in a given year is denoted by random variable N. The dollar loss amount when a processing error occurs is denoted by random variable S. Which of the following procedures is the most likely implementation of the first step of the loss distribution approach?
+    \\考虑一家希望在其零售银行业务中模拟处理错误的银行。在给定年份中发生的此类错误的数量由随机变量N表示。处理错误发生时的美元损失金额由随机变量S表示。以下哪项程序最可能是损失分布方法的第一步的最可能实现？
 \end{question}
 
 \begin{choices}
-    \item Convolute a marginal Poisson distribution (to characterize N) with a Weibull (to characterize S).
-    \item Convolute a marginal Poisson distribution (to characterize S) with a Weibull (to characterize N).
-    \item Convolute a marginal lognormal distribution (to characterize N) with a Weibull (to characterize S).
-    \item Convolute a marginal Poisson distribution (to characterize N) with a negative binomial (to Characterize S).
+    \item Convolute a marginal Poisson distribution (to characterize N) with a Weibull (to characterize S).\\将边际泊松分布（用于表征N）与威布尔分布（用于表征S）卷积。
+    \item Convolute a marginal Poisson distribution (to characterize S) with a Weibull (to characterize N).\\将边际泊松分布（用于表征S）与威布尔分布（用于表征N）卷积。
+    \item Convolute a marginal lognormal distribution (to characterize N) with a Weibull (to characterize S).\\将边际对数正态分布（用于表征N）与威布尔分布（用于表征S）卷积。
+    \item Convolute a marginal Poisson distribution (to characterize N) with a negative binomial (to Characterize S).\\将边际泊松分布（用于表征N）与负二项分布（用于表征S）卷积。
 \end{choices}
 
 \begin{correctanswer}
@@ -1837,13 +1947,18 @@
 
 \begin{question}
     Which of the following is false regarding frequency distributions of operational risk events and severity distributions of operational risk events? They:
+    \\以下哪项关于操作风险事件的频率分布和严重程度分布是不正确的？它们：
 \end{question}
 
 \begin{choices}
     \item Can be combined in a process known as convolution.
+    \\可以在称为卷积的过程中组合。
     \item Generally follow the same distribution.
+    \\通常遵循相同的分布。
     \item Can help the analyst ascertain the cause of operational losses.
+    \\可以帮助分析师确定操作损失的原因。
     \item Must account for interdependencies when aggregating across many processes.
+    \\在许多流程中聚合时，必须考虑相互依赖性。
 \end{choices}
 
 \begin{correctanswer}
@@ -1885,6 +2000,15 @@
         \item There is a 1\% chance that there will be an exit of the leaked information.
     \end{itemize}
     Using fault tree analysis (FTA) and assuming that the conditions just listed are fully independent, the likelihood of the risk of data leakage materializing for a given time period is closest to:
+    \\在银行员工可能无意中泄露数据的情况下，提供了以下信息：
+    \begin{itemize}
+        \item 银行员工收到钓鱼邮件的概率为99\%。
+        \item 银行防火墙正常运行的概率为95\%。
+        \item 员工立即删除钓鱼邮件的概率为90\%。
+        \item 侦测控制对可疑网络活动失败的概率为3\%。
+        \item 信息泄露的概率为1\%。
+    \end{itemize}
+    使用故障树分析（FTA）并假设上述条件完全独立，给定时间周期内数据泄露风险实现的概率最接近：
 \end{question}
 
 \begin{choices}
@@ -1911,13 +2035,18 @@
 
 \begin{question}
     An operational risk manager is presenting to a group of representatives from financial institutions about the advantages and disadvantages of different approaches that firms use to manage operational risk. The manager provides an example of a financial institution that uses the Swiss cheese model as a control structure to manage the risk of operational losses due to incorrect transaction processing. Which of the following correctly describes an expected impact of the firm's use of the Swiss cheese model?
+    \\一位操作风险经理正在向金融公司的代表介绍公司用于管理操作风险的不同方法的优缺点。经理提供了一个使用瑞士奶酪模型作为控制结构来管理由于错误交易处理导致的操作损失的金融机构的例子。以下哪项正确描述了公司使用瑞士奶酪模型的预期影响？
 \end{question}
 
 \begin{choices}
     \item Controls are structured in a way that a failure of a single key control would directly result in an operational loss.
+    \\控制结构设计为单个关键控制失效会直接导致操作损失。
     \item Controls are structured in a way that every layer of controls would have to fail in order for an operational loss to occur.
+    \\控制结构设计为每一层控制都必须失效才能导致操作损失。
     \item When using this model, the probability of each subsequent control failure is dependent on whether a previous control for the same process failed.
+    \\使用该模型时，每个后续控制失效的概率取决于同一流程的前一个控制是否失效。
     \item By using this model, the probability of an extreme operational loss decreases significantly but the probability of small operational losses increases.
+    \\使用该模型时，极端操作损失的概率显著降低，但小额操作损失的概率增加。
 \end{choices}
 
 \begin{correctanswer}
@@ -1961,6 +2090,13 @@
         \item II. If an operational risk hedge works properly, a firm will avoid damage to its reputation from a high-severity operational risk event.
         \item III. While all insurance contracts suffer from the problem of moral hazard, deductibles help reduce this problem.
         \item IV. Catastrophe (cat) bonds allow a firm to hedge operational risks associated with natural disasters.
+    \end{itemize}
+    以下哪项陈述关于操作风险对冲工具是正确的？
+    \begin{itemize}
+        \item I. 保险作为操作风险管理工具的主要缺点是保障范围有限。
+        \item II. 如果操作风险对冲工具正常工作，公司将避免由于高严重程度操作风险事件导致的声誉损害。
+        \item III. 尽管所有保险合同都存在道德风险问题，但免赔额有助于减少这个问题。
+        \item IV. 巨灾债券允许公司对与自然灾害相关的操作风险进行对冲。
     \end{itemize}
 \end{question}
 
@@ -2006,13 +2142,18 @@
 \setcounter{question}{0}
 \begin{question}
     From an operational risk perspective, the risks that are unlikely to jeopardize the future of the firm are:
+    \\从操作风险的角度来看，不太可能危及公司未来的风险是：
 \end{question}
 
 \begin{choices}
     \item low-frequency, high-severity risks
+    \\低频高损风险
     \item risks related to business practices
+    \\与业务实践相关的风险
     \item risks related to internal fraud
+    \\与内部欺诈相关的风险
     \item high-frequency, low-severity risks
+    \\高频低损风险
 \end{choices}
 
 \begin{correctanswer}
@@ -2054,13 +2195,18 @@
 \setcounter{question}{0}
 \begin{question}
     Jimi Chong is a risk analyst at a mid-sized financial institution. He has recently come across an article that described the enterprise risk management(ERM)process. Chong does not believe this is a well-written article and he identified four statements that he thinks are incorrect. Which of the following statements identified by chong is actually correct?
+    \\Jimi Chong是一位中型金融机构的风险分析师。他最近阅读了一篇描述企业风险管理（ERM）过程的文章。他认为这篇文章写得不好，并识别了四项他认为不正确的陈述。以下哪项陈述是Chong正确识别的陈述？
 \end{question}
 
 \begin{choices}
     \item One of the drawbacks of a fully centralized ERM process is over-hedging risks and taking out excessive insurance coverage.
+    \\完全集中的ERM过程的一个缺点是过度对冲风险和过度购买保险。
     \item Effective ERM has three key benefits: improved business performance, better risk reporting, and stronger stakeholder management.
+    \\有效的ERM有三个关键好处：改善业务绩效、更好的风险报告和更强的利益相关者管理。
     \item Managing downside risk and earnings volatility are optional ERM strategies.
+    \\管理下行风险和收益波动是可选的ERM策略。
     \item A prudent ERM strategy allows a firm to accept more of the profitable risks.
+    \\一个谨慎的ERM策略允许公司接受更多的盈利风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -2112,13 +2258,35 @@
     \end{table}
 
     Assuming that all Basel III phase-ins have occurred and that the bank's required countercyclical buffer is 0.75\%, which of the capital ratios does the bank satisfy?
+    \\ 南方埃塞克斯银行的风险管理部门正在评估巴塞尔III框架中定义的资本留存缓冲和逆周期缓冲的影响。他们考虑一个场景，其中银行的资本和风险加权资产如下表所示（所有数值均以百万欧元计）：
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{l r}
+            \hline
+            风险加权资产                & 3,110 \\
+            普通股一级资本（CET1） & 230   \\
+            其他一级资本           & 34    \\
+            一级资本总额                & 264   \\
+            二级资本                      & 81    \\
+            三级资本                      & -     \\
+            资本总额                       & 345   \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    假设所有巴塞尔III分阶段实施已完成，且银行所需的逆周期缓冲为0.75\%，该银行满足哪些资本比率？
 \end{question}
 
 \begin{choices}
     \item The CET 1 capital ratio only
+    \\仅满足CET1资本比率
     \item The CET 1 capital ratio plus the capital conservation buffer only
+    \\仅满足CET1资本比率加上资本留存缓冲
     \item The CET 1 capital ratio plus the capital conservation buffer and the countercyclical buffer
+    \\满足CET1资本比率加上资本留存缓冲和逆周期缓冲
     \item All of the above
+    \\全部满足
 \end{choices}
 
 \begin{correctanswer}
@@ -2145,13 +2313,18 @@
 
 \begin{question}
     On the assumption that culture is directly applicable to business situations, which of the following statements regarding the relationship between risk culture and business performance is least accurate?
+    \\假设文化直接适用于商业情况，以下哪项关于风险文化与业务绩效的关系的陈述最不准确？
 \end{question}
 
 \begin{choices}
     \item Culture has a fixed impact on business performance
+    \\文化对业务绩效有固定的影响
     \item Culture has a variable impact on business performance in the long term
+    \\文化对业务绩效有长期的可变影响
     \item Culture has a variable impact on business performance in the short
+    \\文化对业务绩效有短期的可变影响
     \item Culture that is outdated will result in static business performance
+    \\过时的文化会导致静态的业务绩效
 \end{choices}
 
 \begin{correctanswer}
@@ -2184,13 +2357,18 @@
 
 \begin{question}
     Which of the following statements regarding corporate and/or risk culture is correct?
+    \\以下哪项关于公司文化和风险文化的陈述是正确的？
 \end{question}
 
 \begin{choices}
     \item Risk culture is consistent with corporate culture
+    \\风险文化与公司文化一致
     \item Legal and regulatory factors have a greater impact on corporate culture than risk culture
+    \\法律和监管因素对公司文化的影响大于风险文化
     \item Corporate culture explains why an organization reacts a certain way to a current business situation
+    \\公司文化解释为什么组织以某种方式对当前商业情况做出反应
     \item Organizations operating in countries with reliable information sources tend to have less aggressive risk cultures
+    \\在有可靠信息来源的国家运营的组织往往具有较保守的风险文化
 \end{choices}
 
 \begin{correctanswer}
@@ -2224,13 +2402,18 @@
 
 \begin{question}
     Jimi Chong is a risk analyst at a mid-sized financial institution. He has recently come across an article that described the enterprise risk management(ERM)process. Chong does not believe this is a well-written article and he identified four statements that he thinks are incorrect. Which of the following statements identified by chong is actually correct?
+    \\Jimi Chong是一位中型金融机构的风险分析师。他最近阅读了一篇描述企业风险管理（ERM）过程的文章。他认为这篇文章写得不好，并识别了四项他认为不正确的陈述。以下哪项陈述是Chong正确识别的陈述？
 \end{question}
 
 \begin{choices}
     \item One of the drawbacks of a fully centralized ERM process is over-hedging risks and taking out excessive insurance coverage
+    \\完全集中的ERM过程的一个缺点是过度对冲风险和过度购买保险
     \item Effective ERM has three key benefits: improved business performance, better risk reporting, and stronger stakeholder management
+    \\有效的ERM有三个关键好处：改善业务绩效、更好的风险报告和更强的利益相关者管理
     \item Managing downside risk and earnings volatility are optional ERM strategies
+    \\管理下行风险和收益波动是可选的ERM策略
     \item A prudent ERM strategy allows a firm to accept more of the profitable risks
+    \\一个谨慎的ERM策略允许公司接受更多的盈利风险
 \end{choices}
 
 \begin{correctanswer}
@@ -2264,13 +2447,18 @@
 
 \begin{question}
     Which of the following statements regarding the responsibilities of the chief risk officer(CRO) is least accurate?
+    \\以下哪项关于首席风险官（CRO）的职责的陈述最不准确？
 \end{question}
 
 \begin{choices}
     \item The CRO should provide the vision for the organizations risk management
+    \\CRO应为组织的风险管理提供愿景
     \item In addition to providing overall leadership for risk, the CRO should communicate the organizations risk profile to stakeholders
+    \\除了提供整体风险领导外，CRO还应向利益相关者沟通组织的风险状况
     \item Although the CRO is responsible for top-level risk management, he is not responsible for the analytical or systems capabilities for risk management
+    \\尽管CRO负责顶层风险管理，但他不对风险管理的分析或系统能力负责
     \item The CRO may have a solid line reporting to the CEO or a dotted line reporting to the CEO and the board
+    \\CRO可能直接向CEO汇报，也可能同时向CEO和董事会汇报
 \end{choices}
 
 \begin{correctanswer}
@@ -2304,13 +2492,18 @@
 
 \begin{question}
     Which of the following is true about the firm's risk appetite framework (RAF)?
+    \\以下哪项关于公司风险偏好框架（RAF）的陈述是正确的？
 \end{question}
 
 \begin{choices}
     \item A risk appetite framework (RAF), if supported by a strong risk culture, should be able to substitute for systems, controls and limits
+    \\如果得到强大的风险文化支持，风险偏好框架（RAF）应该能够替代系统、控制和限额
     \item The risk appetite framework should be developed in a top-down style, at the board, and should produce a discrete set of mechanisms
+    \\风险偏好框架应该以自上而下的方式在董事会层面制定，并产生一组离散的机制
     \item Aspirational statements relating to "zero tolerance" of certain types of risk are essential as most risks can be completely avoided
+    \\与“零容忍”某些类型风险相关的抱负性陈述是必要的，因为大多数风险可以完全避免
     \item The risk appetite framework is an iterative learn-by-doing process which requires significant time and resources and yields a diversity of approaches among firms
+    \\风险偏好框架是一个迭代的学习过程，需要大量时间和资源，并在公司之间产生多样化的方法
 \end{choices}
 
 \begin{correctanswer}
@@ -2343,13 +2536,18 @@
 
 \begin{question}
     The basis of enterprise risk management(ERM)is that
+    \\企业风险管理（ERM）的基础是：
 \end{question}
 
 \begin{choices}
     \item risks are managed within each risk unit but centralized at the senior management level
+    \\风险被每个风险单元管理，但由高级管理层集中协调
     \item the silo approach to risk management is the optimal risk management strategy
+    \\筒仓方法（各单元独立管理、无协调）是最佳的风险管理策略
     \item risks should be managed and centralized within each risk unit
+    \\风险应该在每个风险单元内管理和集中
     \item it is necessary to appoint a chief risk officer to oversee most risks
+    \\有必要任命首席风险官来监督大多数风险
 \end{choices}
 
 \begin{correctanswer}
@@ -2383,13 +2581,18 @@
 
 \begin{question}
     The board of directors of an insurance company has identified a number of potential growth opportunities for the company to consider. To help assess these opportunities and determine an optimal risk structure to use across the organization, the risk committee has recommended that the company implement an ERM program. Which of the following would best represent an appropriate goal for the firm to state as part of the ERM program?
+    \\一家保险公司的董事会已经识别出公司可以考虑的许多潜在增长机会。为了帮助评估这些机会并确定在整个组织中使用的最佳风险结构，风险委员会建议公司实施一个ERM计划。以下哪项是公司作为ERM计划的一部分应陈述的适当目标？
 \end{question}
 
 \begin{choices}
     \item Determine a risk-return trade-off that reflects the company's target credit rating and ensure that business unit managers evaluate new projects with this firm-wide target in mind
+    \\确定与公司目标信用评级一致的风险-收益权衡，并确保业务单元经理在考虑新项目时考虑全公司的目标
     \item Attempt to eliminate the company's probability of financial distress to maximize company value
+    \\尝试消除公司的财务困境概率，以最大化公司价值
     \item Maximize the firm's leverage ratio within its risk tolerance to ensure the highest expected return on equity
+    \\在风险承受能力内最大化公司的杠杆率，以确保最高的预期股本回报率
     \item Establish a target minimum level of annual earnings and guarantee to shareholders that it will maintain this level
+    \\设定年度盈利目标并保证股东保持这一水平
 \end{choices}
 
 \begin{correctanswer}
@@ -2423,13 +2626,18 @@
 
 \begin{question}
     Which of the following internal controls does not effectively reduce operational risk?
+    \\以下哪项内部控制不能有效地减少操作风险？
 \end{question}
 
 \begin{choices}
     \item Separation of trading from accounting and data entry
+    \\交易、会计与数据录入职责分离
     \item Automated reminders of payments required and contract expirations
+    \\自动提醒付款与合同到期
     \item A multitude of users can modify trade tickets so that errors may be quickly corrected
+    \\允许多人修改交易单，以便错误可以快速纠正
     \item Reconciling results from different systems to ensure data integrity
+    \\不同系统间结果核对，确保数据完整性
 \end{choices}
 
 \begin{correctanswer}
@@ -2463,13 +2671,18 @@
 
 \begin{question}
     The formation of large bank holding companies results in diseconomies of scope with respect to:
+    \\大型银行控股公司的形成导致范围不经济，与以下哪项有关？
 \end{question}
 
 \begin{choices}
     \item Risk management
+    \\风险管理
     \item Technology
+    \\技术
     \item Marketing
+    \\营销
     \item Financial innovation
+    \\金融创新
 \end{choices}
 
 \begin{correctanswer}

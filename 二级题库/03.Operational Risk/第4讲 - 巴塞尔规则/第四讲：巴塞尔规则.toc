@@ -2,25 +2,25 @@
 \contentsline {subsection}{题号1考察: 巴塞尔操作风险计量方法的特点}{2}{Item.4}%
 \contentsline {subsection}{题号2考察: AMA操作风险计量的定量标准}{3}{Item.8}%
 \contentsline {subsection}{题号3考察: 巴塞尔协议下资本要求的比较}{4}{Item.12}%
-\contentsline {subsection}{题号4考察: 巴塞尔II协议的关键特征}{4}{Item.16}%
-\contentsline {subsection}{题号5考察: 市场风险资本要求的计算方法}{5}{Item.20}%
-\contentsline {subsection}{题号6考察: 巴塞尔II/III与Solvency II的比较}{5}{Item.24}%
-\contentsline {section}{\numberline {2}考点2:全球金融危机后的偿付能力、流动性和其他监管问题}{5}{section.2}%
-\contentsline {subsection}{题号1考察: 增量风险资本要求(IRC)的关键特征}{6}{Item.28}%
-\contentsline {subsection}{题号2考察: 增量风险资本要求(IRC)的基本要求}{7}{Item.32}%
-\contentsline {subsection}{题号3考察: 银行流动性风险分析}{7}{Item.36}%
-\contentsline {subsection}{题号4考察: 银行资本结构分析}{8}{Item.40}%
-\contentsline {subsection}{题号5考察: 流动性覆盖率(LCR)的计算}{9}{Item.44}%
-\contentsline {subsection}{题号6考察: CDO交易策略分析}{9}{Item.48}%
-\contentsline {subsection}{题号7考察: OTC衍生品市场监管改革}{10}{Item.52}%
-\contentsline {section}{\numberline {3}考点3:巴塞尔II改革摘要}{11}{section.3}%
-\contentsline {subsection}{题号1考察: 银行杠杆率计算}{11}{Item.56}%
-\contentsline {subsection}{题号2考察: 巴塞尔III杠杆缓冲要求}{12}{Item.60}%
-\contentsline {section}{\numberline {4}考点4: 巴塞尔III：完成危机后改革}{13}{section.4}%
-\contentsline {subsection}{题号1考察: 操作风险事件识别}{13}{Item.64}%
-\contentsline {subsection}{题号2考察: 操作风险资本要求的计算要素}{14}{Item.68}%
-\contentsline {subsection}{题号3考察: FRTB框架的主要特征}{14}{Item.72}%
-\contentsline {subsection}{题号4考察: 银行早期预警指标分析}{15}{Item.76}%
-\contentsline {section}{\numberline {5}考点5: Supplementary（FRTB）}{15}{section.5}%
-\contentsline {subsection}{题号1考察: FRTB内部模型法的实施要求}{16}{Item.80}%
+\contentsline {subsection}{题号4考察: 巴塞尔II协议的关键特征}{5}{Item.16}%
+\contentsline {subsection}{题号5考察: 市场风险资本要求的计算方法}{6}{Item.20}%
+\contentsline {subsection}{题号6考察: 巴塞尔II/III与Solvency II的比较}{6}{Item.24}%
+\contentsline {section}{\numberline {2}考点2:全球金融危机后的偿付能力、流动性和其他监管问题}{6}{section.2}%
+\contentsline {subsection}{题号1考察: 增量风险资本要求(IRC)的关键特征}{7}{Item.28}%
+\contentsline {subsection}{题号2考察: 增量风险资本要求(IRC)的基本要求}{8}{Item.32}%
+\contentsline {subsection}{题号3考察: 银行流动性风险分析}{9}{Item.36}%
+\contentsline {subsection}{题号4考察: 银行资本结构分析}{10}{Item.40}%
+\contentsline {subsection}{题号5考察: 流动性覆盖率(LCR)的计算}{10}{Item.44}%
+\contentsline {subsection}{题号6考察: CDO交易策略分析}{11}{Item.48}%
+\contentsline {subsection}{题号7考察: OTC衍生品市场监管改革}{12}{Item.52}%
+\contentsline {section}{\numberline {3}考点3:巴塞尔II改革摘要}{13}{section.3}%
+\contentsline {subsection}{题号1考察: 银行杠杆率计算}{14}{Item.56}%
+\contentsline {subsection}{题号2考察: 巴塞尔III杠杆缓冲要求}{14}{Item.60}%
+\contentsline {section}{\numberline {4}考点4: 巴塞尔III：完成危机后改革}{15}{section.4}%
+\contentsline {subsection}{题号1考察: 操作风险事件识别}{15}{Item.64}%
+\contentsline {subsection}{题号2考察: 操作风险资本要求的计算要素}{16}{Item.68}%
+\contentsline {subsection}{题号3考察: FRTB框架的主要特征}{17}{Item.72}%
+\contentsline {subsection}{题号4考察: 银行早期预警指标分析}{17}{Item.76}%
+\contentsline {section}{\numberline {5}考点5: Supplementary（FRTB）}{18}{section.5}%
+\contentsline {subsection}{题号1考察: FRTB内部模型法的实施要求}{18}{Item.80}%
 \contentsfinish 

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -105,6 +105,13 @@
     \item III. The AMA allows a bank to build its own operational risk model and measurement system comparable to market risk standards
     \item IV. BIA is widely used in insurance and actuarial science
     \end{itemize}
+    由于新的巴塞尔标准，每家银行现在必须使用三种方法之一计算明确的资本要求以覆盖操作风险：基本指标法（BIA）、标准法（SA）和高级计量法（AMA）。关于这些操作风险方法，以下哪些陈述是正确的？
+    \begin{itemize}
+    \item I. 在实践中，高级计量法（AMA）是操作风险最严格的方法
+    \item II. 满足高级计量法最流行的方法是损失分布法
+    \item III. 高级计量法允许银行建立自己的操作风险模型和计量系统，可与市场风险标准相媲美
+    \item IV. 基本指标法（BIA）在保险和精算科学中广泛使用
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -144,14 +151,19 @@
 
 
 \begin{question}
-    According to the Basel Committee, which of the options below is not a quantitative standard that a bank must meet before it is permitted to use the Advanced Measurement Approach (AMA) for operational risk capital?
+    According to the Basel Committee, which of the options below is not a quantitative standard that a bank must meet before it is permitted to use the Advanced Measurement Approach (AMA) for operational risk capital?\\
+    根据巴塞尔委员会，以下哪项不是银行必须满足的定量标准，才能被允许使用高级计量法（AMA）计算操作风险资本？
 \end{question}
 
 \begin{choices}
-    \item A bank's risk measurement system should be sufficiently 'granular' to capture the major drivers of operational risk affecting the shape of the tail of the loss estimates
-    \item Supervisors will require the bank to calculate its regulatory capital as the Unexpected Loss (UL) disregarding the Expected Losses (EL)
-    \item Internally generated operational risk measures used for regulatory capital purposes must be based on a minimum 5-year observation period of loss data. When the bank first moves to the AMA, a 3-year historical data window is acceptable
-    \item The tracking of internal loss data
+    \item A bank's risk measurement system should be sufficiently 'granular' to capture the major drivers of operational risk affecting the shape of the tail of the loss estimates\\
+    银行的风险计量系统应足够细化，以捕捉影响损失估计尾部形状的操作风险主要驱动因素
+    \item Supervisors will require the bank to calculate its regulatory capital as the Unexpected Loss (UL) disregarding the Expected Losses (EL)\\
+    监管机构将要求银行计算其监管资本，忽略意外损失（UL），但预期损失（EL）不应被忽略
+    \item Internally generated operational risk measures used for regulatory capital purposes must be based on a minimum 5-year observation period of loss data. When the bank first moves to the AMA, a 3-year historical data window is acceptable\\
+    内部生成的操作风险计量用于监管资本目的必须基于至少5年的损失数据观察期。当银行首次采用AMA时，3年的历史数据窗口是可接受的
+    \item The tracking of internal loss data\\
+    内部损失数据的跟踪
 \end{choices}
 
 \begin{correctanswer}
@@ -195,13 +207,28 @@
     \end{center}
     
     The credit risk capital requirement of Bank A will be greater than the credit risk capital requirement of Bank B under the:
+    \\ 根据以下等规模投资组合，比较银行A和银行B的资本要求。
+
+    \begin{center}
+    \begin{tabular}{l@{\hspace{2cm}}l}
+        \textbf{Bank A} & \textbf{Bank B} \\
+        30\% OECD主权债务 & 60\% OECD主权债务 \\
+        70\% 非OECD主权债务 & 40\% 非OECD主权债务 \\
+    \end{tabular}
+    \end{center}
+    
+    在以下哪种情况下，银行A的信用风险资本要求将大于银行B的信用风险资本要求：
 \end{question}
 
 \begin{choices}
-    \item standardized approach of Basel I
-    \item standardized approach of Basel II
-    \item IRB foundation approach of Basel II
-    \item advanced measurement approach of Basel II
+    \item standardized approach of Basel I\\
+    巴塞尔I标准化方法
+    \item standardized approach of Basel II\\
+    巴塞尔II标准化方法
+    \item IRB foundation approach of Basel II\\
+    巴塞尔II基础IRB方法
+    \item advanced measurement approach of Basel II\\
+    巴塞尔II高级计量方法
 \end{choices}
 
 \begin{correctanswer}
@@ -241,6 +268,13 @@
     \item III. Pillar 2 concerns external monitoring and supervisory review
     \end{itemize}
     How many of the statements are correct?
+    \\Michael Chen，FRM，是 Metropolitan Bank 的顾问。Michael Chen参加了一个会议，Senior Vice President 做出了以下关于巴塞尔 II 协议的陈述：
+    \begin{itemize}
+    \item I. 从标准化方法转向基础IRB方法，我们的资产大部分的风险权重会降低，这可能会使我们的资本要求明年减少多达20\%
+    \item II. 在高级IRB方法下，我们生成模型使用的所有估计值
+    \item III. 第二支柱涉及外部监控和监管审查
+    \end{itemize}
+    有多少陈述是正确的？
 \end{question}
 
 \begin{choices}
@@ -288,6 +322,19 @@
         \end{tabular}
         \caption{VaR 相关数据}
     \end{table}
+    作为银行XYZ的风险经理，Michael被要求使用下表中给出的信息，在内部模型法下计算银行交易组合的市场风险资本要求。假设银行交易组合的收益率服从正态分布，该交易组合的市场风险资本要求是多少？
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{l r}
+            \hline
+            最近一个交易日的VaR（95\%，1天）                & USD 45,000 \\
+            最近60个交易日的平均VaR（95\%，1天）   & USD 30,000 \\
+            乘数因子                                & 2.5 \\
+            \hline
+        \end{tabular}
+        \caption{VaR 相关数据}
+    \end{table}
 \end{question}
 
 \begin{choices}
@@ -316,13 +363,18 @@
 
 \begin{question}
     Basel II/III contains capital rules for the banking industry, while Solvency II looks at the regulatory framework and quantifiable risks in the insurance industry. Comparing Solvency II and Basel II/III, which statement best characterizes the Basel II/III approach?
+    \\巴塞尔II/III包含银行行业的资本规则，而偿付能力II关注保险行业的监管框架和可量化风险。比较偿付能力II和巴塞尔II/III，哪项陈述最能代表巴塞尔II/III的方法？
 \end{question}
 
 \begin{choices}
-    \item Basel II/III does not try to achieve safety for the entire company, but rather focuses on asset-specific risks
-    \item Basel II/III requires a more holistic perspective than Solvency II
-    \item Basel II/III does not take in consideration pro-cyclical effects
-    \item The goal of Basel II/III is to operate under no supervisory authority
+    \item Basel II/III does not try to achieve safety for the entire company, but rather focuses on asset-specific risks\\
+    巴塞尔II/III不试图实现整个公司的安全性，而是专注于资产特定风险
+    \item Basel II/III requires a more holistic perspective than Solvency II\\
+    巴塞尔II/III需要比偿付能力II更全面的视角
+    \item Basel II/III does not take in consideration pro-cyclical effects\\
+    巴塞尔II/III不考虑顺周期效应
+    \item The goal of Basel II/III is to operate under no supervisory authority\\
+    巴塞尔II/III的目标不是在没有监管机构的情况下运营
 \end{choices}
 
 \begin{correctanswer}
@@ -370,6 +422,13 @@
     \item III. A bank must calculate the IRC measure at least weekly, or more frequently as directed by its supervisor
     \item IV. The incremental risk capital charge is the maximum of (1) the average of the IRC measures over 12 weeks and (2) the most recent IRC measure
     \end{itemize}
+    在最新的关于计算交易账户增量风险的指南中，增量风险收费（IRC）解决了99\%/10天VaR框架中的一些 被认为的缺点. 以下关于IRC的陈述哪项是正确的？
+    \begin{itemize}
+    \item I. 对于所有IRC覆盖的头寸，IRC模型必须测量一年期限、99.9\%置信水平（而非99\%）下的违约和迁移损失
+    \item II. 银行可以将任何证券化头寸纳入其IRC模型，这些头寸对冲了交易账户中持有的基础信用工具
+    \item III. 银行必须至少每周计算IRC指标，或按监管机构要求更频繁计算
+    \item IV. 增量风险资本要求是12周IRC指标的平均值和最新IRC指标的最大值
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -415,13 +474,22 @@
     \item I. For all IRC-covered positions, a bank's IRC model must measure losses due to default and migration over a one-year capital horizon at a 99\% confidence level
     \item II. A bank must calculate the IRC measure at least weekly, or more frequently as directed by its supervisor
     \end{itemize}
+    2009年3月，巴塞尔委员会发布了咨询文件“关于计算交易账户增量风险的资本指南”。该文件中定义的增量风险收费（IRC）旨在补充应用于价值-风险模型框架的额外标准，这些标准旨在解决99\%/10天VaR框架中的一些 perceived shortcomings. 以下关于IRC的陈述哪项是正确的？
+    \begin{itemize}
+    \item I. 对于所有IRC覆盖的头寸，银行的IRC模型必须测量一年期限、99.9\%置信水平（而非99\%）下的违约和迁移损失
+    \item II. 银行必须至少每周计算IRC指标，或按监管机构要求更频繁计算
+    \end{itemize}
 \end{question}
 
 \begin{choices}
-    \item Statement I only
-    \item Statement II only
-    \item Both statements are correct
-    \item Both statements are incorrect
+    \item Statement I only\\
+    陈述I仅正确
+    \item Statement II only\\
+    陈述II仅正确
+    \item Both statements are correct\\
+    两个陈述都正确
+    \item Both statements are incorrect\\
+    两个陈述都不正确
 \end{choices}
 
 \begin{correctanswer}
@@ -458,6 +526,20 @@
         \end{tabular}
     \end{table}
     In the event that repo creditors become nervous about a bank's solvency, which bank is least vulnerable to a liquidity crisis?
+    \\    近年来，大型交易商银行使用短期（通常是隔夜）回购协议为其资产的很大一部分融资，在这些协议中，债权人持有银行证券作为违约损失的抵押品。下表显示了四家经纪交易商银行的季度末融资情况。所有数值均以十亿美元计：
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{lcccc}
+            \hline
+            & \textbf{Bank A} & \textbf{Bank B} & \textbf{Bank C} & \textbf{Bank D} \\
+            \hline
+            持有的金融工具 & 823 & 629 & 723 & 382 \\
+            作为抵押品质押       & 272 & 289 & 380 & 155 \\
+            \hline
+        \end{tabular}
+    \end{table}
+    如果回购债权人开始担心银行的偿付能力，哪家银行最不容易受到流动性危机的影响？
 \end{question}
 
 \begin{choices}
@@ -499,6 +581,14 @@
         \item Unrealized gains on long-term equity holdings: \$75,000
     \end{itemize}
     Based only on this information, estimate the Tier 1 and Tier 2 capital of Pierce Bankholdings as of 12/31/13.
+    \\Pierce Bankholdings截至2013年12月31日的资产负债表包括以下项目：
+    \begin{itemize}
+        \item 优先股（累积）：\$200,000
+        \item 普通股：\$1,800,000
+        \item 留存收益：\$16,000,000
+        \item 长期股权持有的未实现收益：\$75,000
+    \end{itemize}
+    仅基于此信息，估算Pierce Bankholdings截至2013年12月31日的一级资本和二级资本。
 \end{question}
 
 \begin{choices}
@@ -549,6 +639,17 @@
         \item Long-term economic capital: \$500
         \item Available amount of stable funding: \$255
     \end{itemize}
+    \textbf{Large Bank}正在尝试过渡到新的巴塞尔III标准。具体而言，他们想知道其流动性和融资比率是否满足巴塞尔委员会规定的更新要求。根据以下信息，该银行当前的流动性覆盖率是多少？
+
+    \begin{itemize}
+        \item 高质量流动性资产：\$300
+        \item 可交易证券：\$125
+        \item 所需稳定融资金额：\$250
+        \item 未来30天的现金流入：\$214
+        \item 未来30天的净现金流出：\$285
+        \item 长期经济资本：\$500
+        \item 可用稳定融资金额：\$255
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -577,13 +678,18 @@
 
 \begin{question}
     A common trade during 2004 and 2005 was to sell protection on the equity tranche and buy protection of the mezzanine tranche of the CDX.NA.IG index. Which of the following statements regarding this trade is least accurate?
+    \\2004年和2005年期间，CDX.NA.IG指数的权益层和夹层层的信用违约互换交易是一种常见的交易策略。以下关于这种交易的陈述哪项最不准确？
 \end{question}
 
 \begin{choices}
-    \item The trade was set up to be default-risk neutral at initiation
-    \item The trade was short credit spread risk on the equity tranche and long credit spread risk on the mezzanine tranche
-    \item The main motivation for the trade was to achieve a positively convex payoff profile
-    \item The trade was designed to benefit from credit spread volatilities
+    \item The trade was set up to be default-risk neutral at initiation\\
+    交易在初始时是违约风险中性的
+    \item The trade was short credit spread risk on the equity tranche and long credit spread risk on the mezzanine tranche\\
+    交易在权益层做空信用利差风险，在夹层层做多信用利差风险
+    \item The main motivation for the trade was to achieve a positively convex payoff profile\\
+    交易的主要动机是实现正凸性收益
+    \item The trade was designed to benefit from credit spread volatilities\\
+    交易设计是为了从信用利差波动中获利
 \end{choices}
 
 \begin{correctanswer}
@@ -618,13 +724,18 @@
 
 \begin{question}
     The OTC derivatives market was considered by many to have been partly responsible for the 2008 credit crisis. When the G20 leaders met in Pittsburgh in September 2009 in the aftermath of the 2008 crisis, they wanted to reduce systemic risk by regulating the OTC market. Which of the following is not a post-crisis change in regulation of OTC markets?
+    \\许多市场参与者认为OTC衍生品市场部分导致了2008年的信用危机。在2008年危机之后，G20领导人于2009年9月在匹兹堡会晤，希望通过监管OTC市场来降低系统性风险。以下哪项不是OTC市场监管改革后的变化？
 \end{question}
 
 \begin{choices}
-    \item All standardized OTC derivatives be cleared through CCPs
-    \item Standardized OTC derivatives be traded on electronic platforms
-    \item All trades in the OTC market be reported to a central trade repository
-    \item OTC derivatives can be settled separately
+    \item All standardized OTC derivatives be cleared through CCPs\\
+    所有标准化OTC衍生品通过CCP清算
+    \item Standardized OTC derivatives be traded on electronic platforms\\
+    标准化OTC衍生品在电子平台交易
+    \item All trades in the OTC market be reported to a central trade repository\\
+    所有OTC市场交易报告给中央交易库
+    \item OTC derivatives can be settled separately\\
+    OTC衍生品可以单独结算
 \end{choices}
 
 \begin{correctanswer}
@@ -691,6 +802,32 @@
         \end{tabular}
     \end{table}
     Using the Basel III framework, which of the following is the best estimate of the bank's current leverage ratio?
+    \\银行的首席财务官正在准备一份向董事会提交的关于其遵守巴塞尔要求的报告。该银行最近一个季度的平均资本和总敞口如下：
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabular}{|l|r|}
+            \hline
+            \textbf{监管资本} & \textbf{百万美元} \\
+            \hline
+            普通股一级资本总额 & 108 \\
+            \hline
+            其他一级资本 & 28 \\
+            \quad 监管调整前 & 34 \\
+            \quad 监管调整 & 6 \\
+            \hline
+            一级资本总额 & 136 \\
+            \hline
+            二级资本 & 36 \\
+            \quad 监管调整前 & 45 \\
+            \quad 监管调整 & 9 \\
+            \hline
+            资本总额 & 172 \\
+            平均总敞口 & 3678 \\
+            \hline
+        \end{tabular}
+    \end{table}
+    使用巴塞尔III框架，以下哪项是对该银行当前杠杆比率的最佳估计？
 \end{question}
 
 \begin{choices}
@@ -731,13 +868,18 @@
 
 \begin{question}
     The Basel III reforms introduced a leverage buffer ratio for all:
+    \\巴塞尔III改革引入了一个杠杆缓冲比率适用于所有：
 \end{question}
 
 \begin{choices}
-    \item global banks
-    \item unregulated global banks
-    \item global systemically important banks
-    \item banks regulated by the U.S. Federal Reserve and the European Banking Authority
+    \item global banks\\
+    全球银行
+    \item unregulated global banks\\
+    未受监管的全球银行
+    \item global systemically important banks\\
+    全球系统重要性银行
+    \item banks regulated by the U.S. Federal Reserve and the European Banking Authority\\
+    由美联储和欧洲银行管理局监管的银行
 \end{choices}
 
 \begin{correctanswer}
@@ -779,13 +921,18 @@
 \setcounter{question}{0}
 \begin{question}
     All the following are operational risk loss events, except:
+    \\以下所有都是操作风险损失事件，除了：
 \end{question}
 
 \begin{choices}
-    \item An individual shows up at a branch presenting a check written by a customer for an amount substantially exceeding the customer's low checking account balance. When the bank calls the customer to ask him for the funds, the phone is disconnected and the bank cannot recover the funds
-    \item A bank, acting as a trustee for a loan pool, receives less than the projected funds due to delayed repayment of certain loans
-    \item During an adverse market movement, the computer network system becomes overwhelmed, and only intermittent pricing information is available to the bank's trading desk, leading to large losses as traders become unable to alter their hedges in response to falling prices
-    \item A loan officer inaccurately enters client financial information into the bank's proprietary credit risk model
+    \item An individual shows up at a branch presenting a check written by a customer for an amount substantially exceeding the customer's low checking account balance. When the bank calls the customer to ask him for the funds, the phone is disconnected and the bank cannot recover the funds\\
+    一个人来到分支机构，出示了一张客户写的金额远超客户低额支票账户余额的支票。当银行打电话给客户询问资金时，电话被切断，银行无法追回资金
+    \item A bank, acting as a trustee for a loan pool, receives less than the projected funds due to delayed repayment of certain loans\\
+    银行作为贷款池的受托人，由于某些贷款的延迟还款，收到少于预期的资金
+    \item During an adverse market movement, the computer network system becomes overwhelmed, and only intermittent pricing information is available to the bank's trading desk, leading to large losses as traders become unable to alter their hedges in response to falling prices\\
+    在市场剧烈波动时，计算机网络系统过载，只有间歇性的价格信息可用于银行的交易部门，导致交易员无法在价格下跌时调整对冲，从而造成巨额损失
+    \item A loan officer inaccurately enters client financial information into the bank's proprietary credit risk model\\
+    贷款官员错误地输入客户财务信息到银行的专用信用风险模型
 \end{choices}
 
 \begin{correctanswer}
@@ -819,13 +966,18 @@
 
 \begin{question}
     The Basel Committee requires that four data elements be used to calculate a bank's operational risk capital charge. Which of the following is not one of the four elements?
+    \\巴塞尔委员会要求使用四个数据要素计算银行的操作风险资本要求。以下哪项不是这四个要素之一？
 \end{question}
 
 \begin{choices}
-    \item External data
-    \item Scenario analysis
-    \item Internal loss data
-    \item Regression analysis and other statistical tools
+    \item External data\\
+    外部数据
+    \item Scenario analysis\\
+    情景分析
+    \item Internal loss data\\
+    内部损失数据
+    \item Regression analysis and other statistical tools\\
+    回归分析和其他统计工具
 \end{choices}
 
 \begin{correctanswer}
@@ -859,13 +1011,18 @@
 
 \begin{question}
     A senior compliance officer at a multinational bank is presenting to a group of analysts on the Basel Committee's approaches for calculating market risk capital. The compliance officer describes the evolution of the Basel framework for market risk capital calculations and focuses on the Fundamental Review of the Trading Book(FRTB). Which of the following statements correctly describes an approach feature of the FRTB?
-\end{question}
+    \\一个跨国银行的合规高级官员正在向一组分析师介绍巴塞尔委员会关于计算市场风险资本的方法。合规官员描述了市场风险资本计算的巴塞尔框架的发展，并重点关注基本交易书审查（FRTB）。以下哪项陈述正确描述了FRTB方法的一个特征？
+    \end{question}
 
 \begin{choices}
-    \item Permission to use an internal models approach is granted on a bank-wide basis, however, each trading desk is responsible for carrying out its own market risk capital calculations
-    \item Banks can determine the most appropriate liquidity horizons to use for market variables in market risk capital calculations, rather than relying on guidance in the Basel framework
-    \item Compared to previous Basel frameworks, banks are given more flexibility in allocating instruments to either the trading book or the banking book, potentially reducing the volatility of their calculated market risk capital
-    \item The standardized approach for calculating market risk capital must be used to provide a floor for capital requirements, even if a bank is approved to use an internal models approach
+    \item Permission to use an internal models approach is granted on a bank-wide basis, however, each trading desk is responsible for carrying out its own market risk capital calculations\\
+    内部模型法的批准是基于全行范围的，然而，每个交易台负责执行自己的市场风险资本计算
+    \item Banks can determine the most appropriate liquidity horizons to use for market variables in market risk capital calculations, rather than relying on guidance in the Basel framework\\
+    银行可以自行决定最合适的流动性期限用于市场风险资本计算，而不是依赖巴塞尔框架中的指导
+    \item Compared to previous Basel frameworks, banks are given more flexibility in allocating instruments to either the trading book or the banking book, potentially reducing the volatility of their calculated market risk capital\\
+    与之前的巴塞尔框架相比，银行在分配工具到交易账户或银行账户时有了更多的灵活性，可能会降低计算出的市场风险资本的波动性
+    \item The standardized approach for calculating market risk capital must be used to provide a floor for capital requirements, even if a bank is approved to use an internal models approach\\
+    标准化方法用于计算市场风险资本，必须用于提供资本要求的底线，即使银行被批准使用内部模型法
 \end{choices}
 
 \begin{correctanswer}
@@ -899,13 +1056,18 @@
 
 \begin{question}
     A country that is largely dependent on commodity exports is experiencing a period of very weak economic conditions due to a significant drop in key commodity prices as well as an overall increase in unemployment. A banking supervisor is concerned about the impact of the current market conditions on the country's banks and is using early warning indicators (EWIs) to detect potential adverse changes in the liquidity risk of the banks. Which of the following observations about a bank would be the greatest cause for concern to the supervisor?
+    \\一个主要依赖商品出口的国家正经历一段非常弱的经济发展时期，由于关键商品价格大幅下降以及整体失业率上升。银行监管机构担心当前市场条件对国家银行的影响，并使用早期预警指标（EWIs）来检测银行流动性风险可能出现的负面变化。以下关于银行的观察哪项最令监管机构担忧？
 \end{question}
 
 \begin{choices}
-    \item The bank's capital reserves have increased above its countercyclical buffer
-    \item The bank has shifted some of its funding sources from short-term repo agreements to longer-term liabilities
-    \item The bank's net stable funding ratio has increased
-    \item The bank's Basel II leverage ratio has decreased
+    \item The bank's capital reserves have increased above its countercyclical buffer\\
+    银行资本储备增加到逆周期缓冲以上
+    \item The bank has shifted some of its funding sources from short-term repo agreements to longer-term liabilities\\
+    银行将部分资金来源从短期回购协议转向长期负债
+    \item The bank's net stable funding ratio has increased\\
+    银行净稳定资金比率增加
+    \item The bank's Basel II leverage ratio has decreased\\
+    Basel II杠杆率下降
 \end{choices}
 
 \begin{correctanswer}
@@ -941,13 +1103,18 @@
 \setcounter{question}{0}
 \begin{question}
     A senior market risk analyst at bank ABC is examining Basel Committee's Fundamental Review of the Trading Book (FRTB) rules for calculating capital requirement. ABC would like to use an internal models approach to calculating market risk capital, so that analyst focuses on the FRTB guidelines for calculating ES to determine market risk capital using this approach. Which of the following statements correctly describes FRTB guidance when implementing an internal models approach?
+    \\银行ABC的一位高级市场风险分析师正在审查巴塞尔委员会关于计算交易账户资本要求的基本审查（FRTB）规则。ABC银行希望使用内部模型法计算市场风险资本，分析师专注于FRTB指南计算ES以确定市场风险资本使用这种方法。以下哪项陈述正确描述了FRTB指导方针，在实施内部模型法时？
 \end{question}
 
 \begin{choices}
-    \item If a bank determines that some risk factors cannot be modeled, the required capital will be equal to 1.5 times the prior day's ES
-    \item A bank can choose the most advantageous way to estimate ES, either at the portfolio level or at the trading desk level
-    \item If historical data is not available on certain risk factors, a bank can estimate ES using an approved process of scaling up ES estimated with available data
-    \item A bank can estimate ES by using a cascade approach that averages ten rolling ES estimates during a historically stressed period
+    \item If a bank determines that some risk factors cannot be modeled, the required capital will be equal to 1.5 times the prior day's ES\\
+    如果银行确定某些风险因素无法建模，所需资本将等于前一日ES的1.5倍
+    \item A bank can choose the most advantageous way to estimate ES, either at the portfolio level or at the trading desk level\\
+    银行可以选择最有利的方式估计ES，无论是组合层面还是交易台层面
+    \item If historical data is not available on certain risk factors, a bank can estimate ES using an approved process of scaling up ES estimated with available data\\
+    如果某些风险因素的历史数据不可用，银行可以使用经监管机构批准的放大过程，基于可用数据估计ES来放大估计
+    \item A bank can estimate ES by using a cascade approach that averages ten rolling ES estimates during a historically stressed period\\
+    银行可以使用级联方法平均十个滚动ES估计，在历史上压力期间
 \end{choices}
 
 \begin{correctanswer}

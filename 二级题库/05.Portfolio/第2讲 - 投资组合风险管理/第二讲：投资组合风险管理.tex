@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -101,6 +101,11 @@
         \item I. Risk aversion.  
         \item II. Marginal contribution to active risk.
     \end{itemize}
+    以下哪个因素的增加会扩大资产alpha的无交易区域？  
+    \begin{itemize}
+        \item I. 风险厌恶。  
+        \item II. 对主动风险的边际贡献。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -130,7 +135,8 @@
 
 
 \begin{question}
-    An analyst has forecasts for stocks X, Y, and Z, but not for stocks U and V. Stocks X, Y, and U are part of the benchmark portfolio, while stocks Z and V are not. Which of the following is correct regarding the specific weights the analyst should assign when constructing a portfolio to track this benchmark?
+    An analyst has forecasts for stocks X, Y, and Z, but not for stocks U and V. Stocks X, Y, and U are part of the benchmark portfolio, while stocks Z and V are not. Which of the following is correct regarding the specific weights the analyst should assign when constructing a portfolio to track this benchmark?\\
+    一个分析师对股票X、Y和Z有预测，但对股票U和V没有预测。股票X、Y和U是基准投资组合的一部分，而股票Z和V不是。关于分析师在构建跟踪此基准的投资组合时应分配的具体权重，哪一项是正确的？
 \end{question}
 
 \begin{choices}
@@ -169,13 +175,18 @@
 
 \begin{question}
     During the 2007–2008 financial crisis, concerns arose about the high interconnectedness of institutions like Bear Stearns and Lehman Brothers with other financial firms. What can such interdependency among financial institutions lead to?
+    \\在2007-2008金融危机期间，人们对像Bear Stearns和Lehman Brothers这样的金融机构与其他金融机构的高度互联性表示担忧。金融机构之间的这种相互依赖会导致什么结果？
 \end{question}
 
 \begin{choices}
-    \item Negative kurtosis.
-    \item Lower variance of returns.
-    \item Fat-tailed distributions.
-    \item Excess system-wide leverage.
+    \item Negative kurtosis.\\
+    负峰度。
+    \item Lower variance of returns.\\
+    收益方差降低。
+    \item Fat-tailed distributions.\\
+    厚尾分布。
+    \item Excess system-wide leverage.\\
+    系统性杠杆过度。
 \end{choices}
 
 \begin{correctanswer}
@@ -208,6 +219,7 @@
 
 \begin{question}
     An analyst regresses the returns of 100 stocks against a major market index. The resulting 100 alphas have a residual risk of 20\% and an information coefficient of 10\%. If the alphas are normally distributed with a mean of 0\%, approximately how many stocks have an alpha greater than 4\% or less than -4\%?
+    \\一个分析师将100只股票的回报回归到一个主要市场指数。得到的100个alpha的残差风险为20\%，信息系数为10\%。如果alpha呈正态分布，均值为0\%，大约有多少股票的alpha大于4\%或小于-4\%？
 \end{question}
 
 \begin{choices}
@@ -259,13 +271,35 @@
         \end{tabular}
         }
     \end{table}
+    根据以下投资组合数据，哪项建议最能改善投资组合的风险/收益权衡？
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|c|c|c|c|c|c|}
+            \hline
+            \textbf{资产} & \textbf{预期收益} & \textbf{标准差} & \textbf{当前权重} & \textbf{边际收益} & \textbf{边际风险} & \textbf{边际收益/边际风险} \\
+            \hline
+            Asset 1 & 7.10\% & 17.00\% & 38.70\% & 3.10\% & 13.99\% & 22.17\% \\
+            Asset 2 & 8.00\% & 40.60\% & 6.20\% & 4.00\% & 23.93\% & 16.71\% \\
+            Asset 3 & 6.70\% & 44.80\% & 5.50\% & 2.70\% & 23.39\% & 11.55\% \\
+            Asset 4 & 6.90\% & 21.40\% & 14.60\% & 2.90\% & 13.86\% & 20.92\% \\
+            无风险 & 4.00\% & 0.00\% & 35.00\% &  &  &  \\
+            \hline
+        \end{tabular}
+        }
+    \end{table}
 \end{question}
 
 \begin{choices}
-    \item Increase allocations to assets 1 and 3, decrease allocations to assets 2 and 4.
-    \item Increase allocations to assets 1 and 2, decrease allocations to assets 3 and 4.
-    \item Increase allocations to assets 2 and 3, decrease allocations to assets 1 and 4.
-    \item Increase allocations to assets 1 and 4, decrease allocations to assets 2 and 3.
+    \item Increase allocations to assets 1 and 3, decrease allocations to assets 2 and 4.\\
+    增加资产1和3的分配，减少资产2和4的分配。
+    \item Increase allocations to assets 1 and 2, decrease allocations to assets 3 and 4.\\
+    增加资产1和2的分配，减少资产3和4的分配。
+    \item Increase allocations to assets 2 and 3, decrease allocations to assets 1 and 4.\\
+    增加资产2和3的分配，减少资产1和4的分配。
+    \item Increase allocations to assets 1 and 4, decrease allocations to assets 2 and 3.\\
+    增加资产1和4的分配，减少资产2和3的分配。
 \end{choices}
 
 \begin{correctanswer}
@@ -298,13 +332,18 @@
 
 \begin{question}
     A risk manager is assessing the risk profile of a stock portfolio valued at JPY 150 billion, which includes JPY 30 billion in stock ABC. The annual standard deviation of returns for stock ABC is 12\%, and for the overall portfolio is 20\%. The correlation between stock ABC and the portfolio is 0.5. Assuming a 1-year 95\% VaR and normal return distribution, what is the estimated component VaR of stock ABC?
+    \\一个风险经理正在评估一个价值150亿日元的股票投资组合的风险概况，其中包括30亿日元的股票ABC。股票ABC的年标准差收益为12\%，整个投资组合的年标准差为20\%。股票ABC与投资组合的相关系数为0.5。假设1年95\%VaR和正态分布收益率，股票ABC的估计成分VaR是多少？
 \end{question}
 
 \begin{choices}
-    \item JPY 2.958 billion
-    \item JPY 3.546 billion
-    \item JPY 4.734 billion
-    \item JPY 6.120 billion
+    \item JPY 2.958 billion\\
+    29.58亿日元
+    \item JPY 3.546 billion\\
+    35.46亿日元
+    \item JPY 4.734 billion\\
+    47.34亿日元
+    \item JPY 6.120 billion\\
+    61.20亿日元
 \end{choices}
 
 \begin{correctanswer}
@@ -331,6 +370,11 @@
     \begin{itemize}
         \item Asset X marginal VaR: 0.06250, Asset X value: \$8,000,000  
         \item Asset Y marginal VaR: 0.15000, Asset Y value: \$5,000,000
+    \end{itemize}
+    根据以下信息，Asset X对VaR的百分比贡献是多少？
+    \begin{itemize}
+        \item Asset X边际VaR: 0.06250，Asset X价值: \$8,000,000
+        \item Asset Y边际VaR: 0.15000，Asset Y价值: \$5,000,000
     \end{itemize}
 \end{question}
 
@@ -368,6 +412,15 @@
     Volatility of B: 5\%  
     Correlation between A and B: 20\%  
     What is the closest value to the diversified portfolio VaR at the 95\% confidence level?
+    \\一个投资组合由两个证券组成，具有以下特征：
+    \begin{itemize}
+        \item 投资A: USD 2.0 million
+        \item 投资B: USD 3.0 million
+        \item A的标准差: 10\%
+        \item B的标准差: 5\%
+        \item A和B的相关系数: 20\%
+    \end{itemize}
+    95\%置信水平下，分散化投资组合VaR的最近值是多少？
 \end{question}
 
 \begin{choices}
@@ -396,13 +449,20 @@
     A portfolio manager estimates the VaRs for two positions as follows:  
     VaR(A) = \$6.0 million, VaR(B) = \$3.0 million.  
     What is the portfolio VaR if the returns of the two securities are uncorrelated, and what is the portfolio VaR if the returns are perfectly correlated?
+    \\一个投资组合经理估计了两个头寸的VaR如下：
+    VaR(A) = \$6.0 million, VaR(B) = \$3.0 million.
+    如果两个证券的回报不相关，组合VaR是多少，如果两个证券的回报完全相关，组合VaR是多少？
 \end{question}
 
 \begin{choices}
-    \item For zero correlation, VaR is \$6.71 million; for perfect correlation, VaR is \$9.00 million.
-    \item For zero correlation, VaR is \$5.00 million; for perfect correlation, VaR is \$7.00 million.
-    \item For zero correlation, VaR is \$9.00 million; for perfect correlation, VaR is \$3.00 million.
-    \item For zero correlation, VaR is \$7.71 million; for perfect correlation, VaR is \$12.00 million.
+    \item For zero correlation, VaR is \$6.71 million; for perfect correlation, VaR is \$9.00 million.\\
+    如果两个证券的回报不相关，组合VaR是\$6.71 million，如果两个证券的回报完全相关，组合VaR是\$9.00 million。
+    \item For zero correlation, VaR is \$5.00 million; for perfect correlation, VaR is \$7.00 million.\\
+    如果两个证券的回报不相关，组合VaR是\$5.00 million，如果两个证券的回报完全相关，组合VaR是\$7.00 million。
+    \item For zero correlation, VaR is \$9.00 million; for perfect correlation, VaR is \$3.00 million.\\
+    如果两个证券的回报不相关，组合VaR是\$9.00 million，如果两个证券的回报完全相关，组合VaR是\$3.00 million。
+    \item For zero correlation, VaR is \$7.71 million; for perfect correlation, VaR is \$12.00 million.\\
+    如果两个证券的回报不相关，组合VaR是\$7.71 million，如果两个证券的回报完全相关，组合VaR是\$12.00 million。
 \end{choices}
 
 \begin{correctanswer}
@@ -440,6 +500,29 @@
             Emerging markets  & 0.15 & 2.70 & 8.3  & 1,570 & 0.047 \\
             \hline
             \multicolumn{6}{|r|}{\textbf{Total VAR: 13,322}} \\
+            \hline
+        \end{tabular}
+    \end{table}
+    一家大型公司的养老金分析师使用两步流程进行资产和风险管理：首先，他们使用基于VaR的风险预算在四个类别中分配资产；其次，他们为每个类别设定最大跟踪误差，并向经理分配主动风险预算。根据下表，哪些陈述是正确的？  
+    \begin{itemize}
+        \item I. 使用VaR作为风险预算衡量标准，新兴市场类别的风险预算最小。  
+        \item II. 如果额外投资一美元，小盘股对投资组合VaR的边际影响最大。  
+        \item III. 降低最大跟踪误差限额给经理更多实现超额收益的自由。  
+        \item IV. 设定严格的风险限制和监控并不能保证风险限制不会被超过。
+    \end{itemize}
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|c|}
+            \hline
+            & \textbf{收益率（\%）} & \textbf{波动率（\%）} & \textbf{配置（\%）} & \textbf{VaR（美元）} & \textbf{边际VaR} \\
+            \hline
+            Small Cap         & 0.20 & 2.66 & 35.0 & 6,491 & 0.055 \\
+            Large Cap         & 0.15 & 2.33 & 40.0 & 6,497 & 0.044 \\
+            Commodities       & 0.10 & 1.91 & 16.7 & 2,216 & 0.020 \\
+            Emerging markets  & 0.15 & 2.70 & 8.3  & 1,570 & 0.047 \\
+            \hline
+            \multicolumn{6}{|r|}{\textbf{总VaR: 13,322}} \\
             \hline
         \end{tabular}
     \end{table}
@@ -485,6 +568,11 @@
     A portfolio has two assets: P and Q.
     Asset P marginal VaR: 0.04, Asset P value: \$15,000,000
     Asset Q marginal VaR: 0.10, Asset Q value: \$5,000,000
+    \\根据以下信息，Asset P对VaR的百分比贡献是多少？
+    \begin{itemize}
+        \item Asset P边际VaR: 0.04，Asset P价值: \$15,000,000
+        \item Asset Q边际VaR: 0.10，Asset Q价值: \$5,000,000
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -521,13 +609,18 @@
 
 \begin{question}
     The Q-statistic is a useful measure for assessing liquidity risk in hedge funds. Which of the following statements about the statistical significance of the Q-statistic is true?
+    \\Q统计量是评估对冲基金流动性风险的有用指标。以下关于Q统计量的统计显著性的陈述哪一项是正确的？
 \end{question}
 
 \begin{choices}
-    \item Smaller p-values indicate that autocorrelations are more statistically significant.
-    \item A p-value of 0.1 means we are 99\% confident in rejecting the null hypothesis of no correlation.
-    \item We can reject the null hypothesis of positive autocorrelations when each lagged autocorrelation is close to zero.
-    \item Larger p-values suggest that autocorrelations are more statistically significant.
+    \item Smaller p-values indicate that autocorrelations are more statistically significant.\\
+    p值越小，自相关性越显著。
+    \item A p-value of 0.1 means we are 99\% confident in rejecting the null hypothesis of no correlation.\\
+    p值为0.1表示我们有99\%的信心拒绝原假设，即不存在相关性。
+    \item We can reject the null hypothesis of positive autocorrelations when each lagged autocorrelation is close to zero.\\
+    当每个滞后自相关接近零时，我们可以拒绝原假设，即正自相关。
+    \item Larger p-values suggest that autocorrelations are more statistically significant.\\
+    p值越大，自相关性越显著。
 \end{choices}
 
 \begin{correctanswer}
@@ -560,13 +653,18 @@
 
 \begin{question}
     A corporate sponsor manages a defined benefit pension plan and must consider funding risk. Which of the following statements about the plan's funding risk is correct?
+    \\一个企业赞助商管理一个固定收益养老金计划，必须考虑资金风险。以下关于计划资金风险的陈述哪一项是正确的？
 \end{question}
 
 \begin{choices}
-    \item As the horizon for expected payouts lengthens, funding risk decreases.
-    \item A decline in interest rates will mitigate funding risk.
-    \item The funding risk is effectively borne by the employees.
-    \item For the plan sponsor, funding risk is the genuine long-term risk.
+    \item As the horizon for expected payouts lengthens, funding risk decreases.\\
+    随着预期支付期限的延长，资金风险降低。
+    \item A decline in interest rates will mitigate funding risk.\\
+    利率下降会降低资金风险。
+    \item The funding risk is effectively borne by the employees.\\
+    资金风险由计划发起人有效承担。
+    \item For the plan sponsor, funding risk is the genuine long-term risk.\\
+    对于计划发起人，资金风险是真正的长期风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -615,6 +713,22 @@
             \hline
         \end{tabular}
     \end{table}
+    Quantum Capital的一位分析师需要将少量新资本投资到一个以指数为基准的基金中。分析师不会添加新资产，而是会增加下表中四种资产之一的持有量。分析师希望选择边际VaR最低的资产，前提是其特雷诺比率至少为0.08。假设无风险利率为3\%，应该选择哪种资产？
+
+    \begin{table}[htbp]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \textbf{资产} & \textbf{投资组合权重} & \textbf{预期收益} & \textbf{相对指数的Beta} & \textbf{相对投资组合的Beta} \\
+            \hline
+            \textbf{W} & 1.5\% & 15\% & 1.5 & 1.1 \\
+            \textbf{X} & 1.1\% & 11\% & 0.9 & 0.8 \\
+            \textbf{Y} & 0.9\% & 9\%  & 0.8 & 0.7 \\
+            \textbf{Z} & 0.5\% & 8\%  & 0.5 & 1.0 \\
+            \hline
+        \end{tabular}
+    \end{table}
 \end{question}
 
 \begin{choices}
@@ -653,14 +767,19 @@
 
 
 \begin{question}
-    For a portfolio of illiquid assets, analysts may smooth returns by adjusting valuations. Which of the following is NOT a typical consequence of this practice?
+    For a portfolio of illiquid assets, analysts may smooth returns by adjusting valuations. Which of the following is NOT a typical consequence of this practice?\\
+    对于一个流动性差的资产投资组合，分析师可能会通过调整估值来平滑回报。以下哪一项不是这种做法的典型后果？
 \end{question}
 
 \begin{choices}
-    \item A higher reported Sharpe ratio.
-    \item Lower reported volatility.
-    \item Higher serial correlation in returns.
-    \item A higher measured market beta.
+    \item A higher reported Sharpe ratio.\\
+    更高的报告夏普比率。
+    \item Lower reported volatility.\\
+    更低的报告波动率。
+    \item Higher serial correlation in returns.\\
+    更高的回报序列相关性。
+    \item A higher measured market beta.\\
+    更高的测量市场贝塔。
 \end{choices}
 
 \begin{correctanswer}
@@ -699,6 +818,13 @@
         \item II. Hedge funds often use OTC derivatives and hold illiquid assets, causing their returns to exhibit lower serial correlation than mutual fund returns.  
         \item III. Strategies that use leverage and rely on quick exits require careful monitoring and management of liquidity risk.  
         \item IV. Hedge fund returns can resemble a basket of exotic derivatives with nonlinear payoffs, so risk assessment based on past performance can be misleading.
+    \end{itemize}
+    对冲基金的风险管理与传统投资公司相比具有独特挑战。以下关于对冲基金风险管理的陈述哪一项是正确的？
+    \begin{itemize}
+        \item I. 由于多空、衍生品与杠杆，对冲基金敞口变化迅速，月度回报不足以评估风险。  
+        \item II. 对冲基金经常使用OTC衍生品和持有非流动性资产，导致其回报序列相关性低于共同基金回报。  
+        \item III. 使用杠杆和依赖快速退出的策略需要仔细监控和流动性风险管理。  
+        \item IV. 对冲基金回报可能类似于包含非线性收益的衍生品篮子，因此基于历史表现的线性度量误导。
     \end{itemize}
 \end{question}
 
@@ -740,6 +866,7 @@
 
 \begin{question}
     The Zenith Corp pension fund has \$20 billion invested in equities. Assume a normal distribution and a volatility of 18\% per annum. The fund measures absolute risk with a 95\%, one-year VAR, which is \$4.5 billion. The pension plan wants to allocate this risk to two equity managers, each with the same VAR budget. Given that the correlation between the managers is 0.2, the VAR budget for each should be closest to:
+    \\Zenith Corp养老金基金有\$200亿美元投资于股票。假设正态分布和18\%的年波动率。基金使用95\%的一年期VaR衡量绝对风险，为\$4.5亿美元。养老金计划希望将这个风险分配给两个股票经理，每个经理的VaR预算相同。假设两个经理的相关系数为0.2，每个经理的VaR预算最接近多少？
 \end{question}
 
 \begin{choices}
@@ -774,6 +901,7 @@
 
 \begin{question}
     StarLink Satellites has a defined benefit pension scheme with assets of \$200 million and liabilities of \$180 million. The annual growth of liabilities is expected to be 5.0\% with 3.0\% volatility. The annual return on pension assets has an expected value of 8.0\% with 15\% volatility. The correlation between asset return and liability growth is 0.40. What is the 95\% surplus at risk for StarLink?
+    \\StarLink Satellites有一个固定收益养老金计划，资产为\$200亿美元，负债为\$180亿美元。负债的年增长预期为5.0\%，波动率为3.0\%。养老金资产的年回报预期为8.0\%，波动率为15\%。资产回报和负债增长的相关系数为0.40。StarLink的95\%盈余风险是多少？
 \end{question}
 
 \begin{choices}
@@ -812,6 +940,7 @@
 
 \begin{question}
     A hedge fund has a long position of USD 400 million and a short position of USD 250 million. The fund's equity is USD 200 million, and its overall beta is 0.8. Calculate the Gross and Net leverage.
+    \\一个对冲基金有一个多头头寸为4亿美元，一个空头头寸为2.5亿美元。基金的股权为2亿美元，整体贝塔为0.8。计算总杠杆和净杠杆。
 \end{question}
 
 \begin{choices}
@@ -837,13 +966,18 @@
 
 \begin{question}
     Hedge fund manager Sarah Chen has managed a portfolio for over a decade. During the market turmoil of 2020, she was surprised to see her portfolio's returns fall sharply with the market, despite the fund being structured to have a beta uncorrelated with the market index. She considers several concepts to explain this. Which of the following risk-related items could NOT be used to explain this observation?
+    \\对冲基金经理Sarah Chen管理一个投资组合超过十年。在2020年的市场动荡期间，她惊讶地看到她的投资组合的回报与市场大幅下跌，尽管基金被设计为与市场指数不相关的贝塔。她考虑了几个概念来解释这一点。以下哪一项风险相关项目不能用来解释这一观察？
 \end{question}
 
 \begin{choices}
-    \item Nonlinearity risk.
-    \item Systemic correlation.
-    \item Asymmetric correlation.
-    \item Phase-locking behavior.
+    \item Nonlinearity risk.\\
+    非线性风险。
+    \item Systemic correlation.\\
+    系统性相关性。
+    \item Asymmetric correlation.\\
+    非对称相关性。
+    \item Phase-locking behavior.\\
+    锁相行为。
 \end{choices}
 
 \begin{correctanswer}
@@ -875,7 +1009,8 @@
 
 \begin{question}
     An analyst provides the following information to a pension fund advisor. The fund has an initial surplus of USD 10 million. To evaluate the surplus adequacy, the advisor estimates the surplus value at the end of one year, assuming returns and liability growth are jointly normal with a correlation of 0.7. With a 95\% confidence level, what will the surplus value be greater than or equal to?
-    \begin{table}[htbp]
+    
+    \begin{table}[H]
         \centering
         \renewcommand{\arraystretch}{1.2}
         \begin{tabular}{|l|c|c|}
@@ -885,6 +1020,20 @@
             Amount (in USD million)     & 120             & 110                 \\
             Expected Annual Growth      & 5\%             & 6\%                 \\
             Annual Volatility of Growth & 12\%            & 4\%                 \\
+            \hline
+        \end{tabular}
+    \end{table}
+    一位分析师向养老金基金顾问提供以下信息。该基金的初始盈余为1000万美元。为了评估盈余充足性，顾问估计一年后的盈余价值，假设收益和负债增长是联合正态分布，相关系数为0.7。在95\%的置信水平下，盈余价值将大于或等于多少？
+    \begin{table}[htbp]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|}
+            \hline
+            & \textbf{养老金资产} & \textbf{养老金负债} \\
+            \hline
+            金额（以百万美元计）     & 120             & 110                 \\
+            预期年增长率      & 5\%             & 6\%                 \\
+            年增长波动率 & 12\%            & 4\%                 \\
             \hline
         \end{tabular}
     \end{table}
@@ -924,7 +1073,8 @@
 
 
 \begin{question}
-    A portfolio manager holds 30,000 shares of Innovate Corp. in a portfolio. The average daily trading volume of Innovate Corp. is 80,000 shares. The manager wishes to trade no more than 10\% of the daily trading volume of Innovate Corp. on any given day. Which of the following is closest to the liquidity duration of Innovate Corp. in this portfolio?
+    A portfolio manager holds 30,000 shares of Innovate Corp. in a portfolio. The average daily trading volume of Innovate Corp. is 80,000 shares. The manager wishes to trade no more than 10\% of the daily trading volume of Innovate Corp. on any given day. Which of the following is closest to the liquidity duration of Innovate Corp. in this portfolio?\\
+    一位投资组合经理在投资组合中持有30,000股Innovate Corp.的股票。Innovate Corp.的平均日交易量为80,000股。该经理希望在任何一个交易日交易不超过Innovate Corp.日交易量的10\%。以下哪项最接近Innovate Corp.在该投资组合中的流动性期限？
 \end{question}
 
 \begin{choices}
@@ -958,14 +1108,19 @@
 
 
 \begin{question}
-    Alice, a portfolio manager, claims her skill has consistently produced excess returns (over the benchmark) 99\% of the time. To support this, she provides regression results from 60 monthly observations: alpha = 1.2\%, and the standard error of alpha = 0.5\%. Would you reject the null hypothesis of true $\alpha = 0$ and accept her claim of superior performance at a 99\% confidence level?
+    Alice, a portfolio manager, claims her skill has consistently produced excess returns (over the benchmark) 99\% of the time. To support this, she provides regression results from 60 monthly observations: alpha = 1.2\%, and the standard error of alpha = 0.5\%. Would you reject the null hypothesis of true $\alpha = 0$ and accept her claim of superior performance at a 99\% confidence level?\\
+    一位投资组合经理Alice声称她的技能在过去99\%的时间里持续产生超额回报（相对于基准）。为了支持这一说法，她提供了60个月的回归结果：alpha = 1.2\%，alpha的标准误差为0.5\%。在99\%的置信水平下，你是否会拒绝真实alpha为0的原假设，并接受她关于优越表现的声明？
 \end{question}
 
 \begin{choices}
-    \item t = 2.4; fail to reject the null hypothesis; reject her claim.
-    \item t = 2.4; reject the null hypothesis; accept her claim.
-    \item t = 1.96; fail to reject the null hypothesis; accept her claim.
-    \item t = 1.96; reject the null hypothesis; accept her claim.
+    \item t = 2.4; fail to reject the null hypothesis; reject her claim.\\
+    t = 2.4；无法拒绝原假设；拒绝她的说法。
+    \item t = 2.4; reject the null hypothesis; accept her claim.\\
+    t = 2.4；拒绝原假设；接受她的说法。
+    \item t = 1.96; fail to reject the null hypothesis; accept her claim.\\
+    t = 1.96；无法拒绝原假设；接受她的说法。
+    \item t = 1.96; reject the null hypothesis; accept her claim.\\
+    t = 1.96；拒绝原假设；接受她的说法。
 \end{choices}
 
 \begin{correctanswer}
@@ -982,14 +1137,19 @@
 
 
 \begin{question}
-    Assume a hedge fund reports a substantial positive alpha. The fund is known to use leverage and take both long and short positions in equities. The market experienced a downturn over the reporting period. Based on this information, which statement is most accurate?
+    Assume a hedge fund reports a substantial positive alpha. The fund is known to use leverage and take both long and short positions in equities. The market experienced a downturn over the reporting period. Based on this information, which statement is most accurate?\\ 
+    假设一只对冲基金报告了显著的正alpha。该基金以使用杠杆并在股票中同时持有多头和空头头寸而闻名。市场在报告期内经历了下跌。基于这些信息，哪项陈述最准确？
 \end{question}
 
 \begin{choices}
-    \item If the fund has a net positive beta, a portion of the alpha is attributable to the market's performance.
-    \item If the fund has a net negative beta, the alpha must entirely come from the market's performance.
-    \item If the fund has a net positive beta, the alpha must be generated entirely by stock selection, overcoming the market drag.
-    \item If the fund has a net negative beta, a portion of the alpha is attributable to the market's performance.
+    \item If the fund has a net positive beta, a portion of the alpha is attributable to the market's performance.\\
+    如果基金的净beta为正，alpha的一部分可以归因于市场表现。
+    \item If the fund has a net negative beta, the alpha must entirely come from the market's performance.\\
+    如果基金的净beta为负，alpha必须完全来自市场表现。
+    \item If the fund has a net positive beta, the alpha must be generated entirely by stock selection, overcoming the market drag.\\
+    如果基金的净beta为正，alpha必须完全由股票选择产生，克服市场拖累。
+    \item If the fund has a net negative beta, a portion of the alpha is attributable to the market's performance.\\
+    如果基金的净beta为负，alpha的一部分可以归因于市场表现。
 \end{choices}
 
 \begin{correctanswer}
@@ -1053,13 +1213,49 @@
     \end{table}
 
     Based on these results, Leo made several comments. Which statement is least likely to be correct?
+    \\    Leo Chen是欧洲养老基金的投资分析师，正在考虑在其资产组合中添加一只大盘股共同基金。为了评估这些基金，Leo对四只声称是大盘股的共同基金进行了详细的定量分析。结果见图表1和图表2。
+
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|c|c|c|c|c|}
+            \hline
+            \multicolumn{6}{|c|}{\textbf{图表1：风格分析结果}} \\
+            \hline
+            \multicolumn{2}{|l|}{ } & \textbf{Orion} & \textbf{Pegasus} & \textbf{Phoenix} & \textbf{Hydra} \\
+            \hline
+            \multicolumn{2}{|l|}{MSCI世界价值（大盘股）} & 97\%  & 20\%  & 30\%  & 60\%  \\
+            \multicolumn{2}{|l|}{MSCI世界成长（大盘股）} & 1\%   & 70\%  & 10\%  & 30\%  \\
+            \multicolumn{2}{|l|}{MSCI新兴市场价值（小盘股）}   & 2\%   & 5\%   & 35\%  & 10\%  \\
+            \multicolumn{2}{|l|}{MSCI新兴市场成长（小盘股）}  & 0\%   & 5\%   & 25\%  & 0\%   \\
+            \multicolumn{2}{|l|}{\textbf{总计}}              & 100\% & 100\% & 100\% & 100\% \\
+            \hline
+            \multicolumn{2}{|l|}{$R^2$}                      & 98.5\% & 90.1\% & 82.3\% & 70.2\% \\
+            \hline
+            \multicolumn{6}{|c|}{\textbf{图表2：业绩衡量}} \\
+            \hline
+            & \textbf{基准（Euro Stoxx 50）} & \textbf{Orion} & \textbf{Pegasus} & \textbf{Phoenix} & \textbf{Hydra} \\
+            \hline
+            年化收益率（毛收益） & 5.0\% & 5.2\% & 6.0\% & 6.5\% & 7.5\% \\
+            夏普比率          & 0.35  & 0.38 & 0.45 & 0.41 & 0.44 \\
+            特雷诺比率         & 0.28  & 0.30 & 0.33 & 0.31 & 0.40 \\
+            跟踪误差        & --    & 7.0\%  & 8.0\% & 9.0\% & 8.5\% \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    基于这些结果，Leo发表了若干评论。哪项陈述最不可能正确？
 \end{question}
 
 \begin{choices}
-    \item Orion is a passively managed fund.
-    \item The pension fund should invest in the Pegasus fund because it has the highest Sharpe ratio.
-    \item Phoenix's investment style has drifted to small-capitalization.
-    \item Hydra has the highest Information Ratio.
+    \item Orion is a passively managed fund.\\
+    Orion是一只被动管理的基金。
+    \item The pension fund should invest in the Pegasus fund because it has the highest Sharpe ratio.\\
+    养老金基金应该投资于Pegasus基金，因为它具有最高的夏普比率。
+    \item Phoenix's investment style has drifted to small-capitalization.\\
+    Phoenix的投资风格已经漂移到小盘股。
+    \item Hydra has the highest Information Ratio.\\
+    Hydra具有最高的信噪比。
 \end{choices}
 
 \begin{correctanswer}

@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -94,14 +94,19 @@
 \section{考点1:风险资本归属和风险调整后绩效衡量}
 \setcounter{question}{0}
 \begin{question}
-    As part of its enterprise risk management enhancement initiative, Metropolitan Bank implemented a new economic capital-based decision framework that evaluates risk sources across various business divisions and organizational hierarchies. Which of the following statements about risk correlations is most accurate?
+    As part of its enterprise risk management enhancement initiative, Metropolitan Bank implemented a new economic capital-based decision framework that evaluates risk sources across various business divisions and organizational hierarchies. Which of the following statements about risk correlations is most accurate?\\
+    作为其企业风险管理改进举措的一部分，大都会银行实施了一个新的经济资本为基础的决策框架，评估跨各种业务部门和组织层次的风险来源。以下关于风险相关性的陈述哪项最准确？
 \end{question}
 
 \begin{choices}
-    \item Management decisions can influence the correlations between asset and liability risks.
-    \item Correlations between major risk categories (credit, market, operational) are well understood and easily measurable at the firm level.
-    \item Business unit correlations only matter for firm-wide economic capital allocation and are irrelevant for individual unit decisions.
-    \item Including correlations in firm-wide risk assessment typically results in a total VaR that is greater than or equal to the sum of individual unit VaRs.
+    \item Management decisions can influence the correlations between asset and liability risks.\\
+    管理层决策可以影响资产和负债风险之间的相关性。
+    \item Correlations between major risk categories (credit, market, operational) are well understood and easily measurable at the firm level.\\
+    主要风险类别（信用、市场、操作）之间的相关性在公司层面得到很好的理解且容易衡量。
+    \item Business unit correlations only matter for firm-wide economic capital allocation and are irrelevant for individual unit decisions.\\
+    业务单元相关性仅对公司层面的经济资本分配重要，对单个单元决策无关。
+    \item Including correlations in firm-wide risk assessment typically results in a total VaR that is greater than or equal to the sum of individual unit VaRs.\\
+    在公司层面风险评估中包含相关性通常导致总VaR大于或等于单个单元VaR之和。
 \end{choices}
 
 \begin{correctanswer}
@@ -140,6 +145,13 @@
     \item II. Economic capital is designed to maintain solvency at a specific confidence level
     \item III. For any bank, economic capital must always be lower than regulatory capital
     \item IV. Economic capital allocation is a strategic process that impacts business unit and overall bank performance
+    \end{itemize}
+    以下关于经济资本和监管资本的陈述哪项正确？
+    \begin{itemize}
+        \item I. 监管资本旨在通过确保充足的资本水平来维持银行体系稳定性
+        \item II. 经济资本旨在在特定置信水平下维持偿付能力
+        \item III. 对于任何银行，经济资本必须始终低于监管资本
+        \item IV. 经济资本配置是一个影响业务单元和整体银行绩效的战略过程
     \end{itemize}
 \end{question}
 
@@ -181,13 +193,15 @@
 
 \begin{question}
     Your bank calculates a one-day 95\% VaR for market risk, a one-year 99\% VaR for operational risk, and a one-year 99\% VaR for credit risk. The measures are \$80 million, \$400 million, and \$800 million, respectively. Operational risk is defined to include all risks that are not market risks and credit risks, and these three categories are mutually uncorrelated. The market risk VaR assumes normally distributed returns, and the bank expects to maintain its market risk VaR at that level for the whole year. Your supervisor wants your best estimate of a firm-wide VaR at the 1\% level. Among the following choices, your best estimate is:
+    \\你的银行计算了一天的95\%市场风险VaR、一年的99\%操作风险VaR和一年的99\%信用风险VaR，分别为\$80 million、\$400 million和\$800 million。操作风险定义为不包括市场风险和信用风险的所有风险，这三个类别是相互独立的。市场风险VaR假设正态分布回报，银行期望全年保持该市场风险VaR水平。你的主管希望你给出公司层面的VaR在1\%置信水平下的最佳估计。在以下选项中，你的最佳估计是：
 \end{question}
 
 \begin{choices}
     \item \$1.36 billion
     \item \$1.55 billion
     \item \$2.00 billion
-    \item It is impossible to aggregate risks with different distributions having only this information
+    \item It is impossible to aggregate risks with different distributions having only this information\\
+    由于只有这些信息，无法将不同分布的风险加总
 \end{choices}
 
 \begin{correctanswer}
@@ -219,14 +233,19 @@
 
 
 \begin{question}
-    The Chairman of a commercial bank recognizes that inadequate cash flow planning is one of the most critical mistakes a financial institution can make and insists that a robust liquidity-at-risk (LaR) measurement system be a core component of the bank's risk management framework. Which of the following statements about LaR is most accurate?
+    The Chairman of a commercial bank recognizes that inadequate cash flow planning is one of the most critical mistakes a financial institution can make and insists that a robust liquidity-at-risk (LaR) measurement system be a core component of the bank's risk management framework. Which of the following statements about LaR is most accurate?\\
+    一家商业银行的董事长认识到，资金流动性规划不足是金融机构可能犯的最严重错误之一，并坚持认为一个强大的流动性风险（LaR）测量系统应成为银行风险管理框架的核心组成部分。以下关于LaR的陈述哪项最准确？
 \end{question}
 
 \begin{choices}
-    \item Hedging to reduce basis risk will lower LaR
-    \item Futures hedging and long option positions have identical effects on LaR
-    \item For a hedged portfolio, LaR can be substantially different from VaR
-    \item A bank's LaR typically decreases as its credit rating deteriorates
+    \item Hedging to reduce basis risk will lower LaR\\
+    对冲以减少基差风险会降低LaR
+    \item Futures hedging and long option positions have identical effects on LaR\\
+    期货对冲和期权多头对LaR有相同的影响
+    \item For a hedged portfolio, LaR can be substantially different from VaR\\
+    对于对冲组合，LaR可能与VaR显著不同
+    \item A bank's LaR typically decreases as its credit rating deteriorates\\
+    银行信用评级下降时，LaR通常减少
 \end{choices}
 
 \begin{correctanswer}
@@ -260,7 +279,8 @@
 
 
 \begin{question}
-    You are a portfolio manager at a leading investment fund analyzing a 2,000 share position in an undervalued but illiquid stock XYZ, which has a current stock price of USD 85 (expressed as the midpoint of the current bid-ask spread.) Daily return for XYZ has an estimated volatility of 1.15\%. The average bid-ask spread is USD 0.18. Assuming returns of XYZ are normally distributed, what is the estimated liquidity-adjusted daily 95\% VaR, using the constant spread approach?
+    You are a portfolio manager at a leading investment fund analyzing a 2,000 share position in an undervalued but illiquid stock XYZ, which has a current stock price of USD 85 (expressed as the midpoint of the current bid-ask spread.) Daily return for XYZ has an estimated volatility of 1.15\%. The average bid-ask spread is USD 0.18. Assuming returns of XYZ are normally distributed, what is the estimated liquidity-adjusted daily 95\% VaR, using the constant spread approach?\\
+    你是一家领先投资基金的组合经理，分析一个2,000股头寸的XYZ股票，该股票估值过低但流动性不足，当前股票价格为USD 85（表示为当前买卖价差的中间价）。XYZ的日回报估计波动率为1.15\%，平均买卖价差为USD 0.18。假设XYZ的回报呈正态分布，使用固定价差方法估计流动性调整后的每日95\% VaR是多少？
 \end{question}
 
 \begin{choices}
@@ -302,7 +322,8 @@
 
 
 \begin{question}
-    Global Capital is an investment management firm with USD 30 billion under management. It holds 25\% of the shares in a company. Global Capital's risk manager is concerned that, if the entire position needs to be liquidated, its size would impact the market price. The estimated price elasticity of demand is -0.4. What is the increase in Global Capital's Value-at-Risk estimate for this position if a liquidity adjustment is made?
+    Global Capital is an investment management firm with USD 30 billion under management. It holds 25\% of the shares in a company. Global Capital's risk manager is concerned that, if the entire position needs to be liquidated, its size would impact the market price. The estimated price elasticity of demand is -0.4. What is the increase in Global Capital's Value-at-Risk estimate for this position if a liquidity adjustment is made?\\
+    Global Capital是一家管理USD 30 billion的投资管理公司，持有某公司25\%的股份。Global Capital的风险经理担心，如果整个头寸需要清算，其规模会影响市场价格。估计的需求价格弹性为-0.4。如果进行流动性调整，Global Capital对该头寸的Value-at-Risk估计增加多少？
 \end{question}
 
 \begin{choices}
@@ -349,7 +370,8 @@
 
 
 \begin{question}
-    In calculating its risk-adjusted return on capital, your bank uses a capital charge of 3.00\% for revolving credit facilities with a loan equivalent factor of 0.40 assigned to the undrawn portion. Recently, you have become concerned that the protective covenants in these loans are insufficient and may not prevent customers from drawing on the facilities during stress periods. As such, you have recommended increasing the loan equivalent factor to 0.80. This recommendation has met with resistance from the loan origination team, and senior management has asked you to quantify the impact of your recommendation. For a typical facility that has an original principal of USD 1.2 billion and is 25\% drawn, how much additional economic capital would have to be allocated if you increase the loan equivalent factor from 0.40 to 0.80?
+    In calculating its risk-adjusted return on capital, your bank uses a capital charge of 3.00\% for revolving credit facilities with a loan equivalent factor of 0.40 assigned to the undrawn portion. Recently, you have become concerned that the protective covenants in these loans are insufficient and may not prevent customers from drawing on the facilities during stress periods. As such, you have recommended increasing the loan equivalent factor to 0.80. This recommendation has met with resistance from the loan origination team, and senior management has asked you to quantify the impact of your recommendation. For a typical facility that has an original principal of USD 1.2 billion and is 25\% drawn, how much additional economic capital would have to be allocated if you increase the loan equivalent factor from 0.40 to 0.80?\\
+    在计算风险调整后资本回报率时，你的银行对未提取部分的贷款等效因子为0.40的循环信贷设施使用3.00\%的资本费用。最近，你担心这些贷款的保护性条款不足，可能无法在压力期间阻止客户提取资金。因此，你建议增加贷款等效因子至0.80。这个建议遇到了贷款发起团队的抵制，高级管理层要求你量化你的建议的影响。对于一个原始本金为USD 1.2 billion且已提取25\%的典型设施，如果你将贷款等效因子从0.40增加到0.80，需要分配多少额外的经济资本？
 \end{question}
 
 \begin{choices}
@@ -379,14 +401,19 @@
 
 
 \begin{question}
-    Michael Chen, an analyst at Global Advisors, is analyzing the economic effects of buying stock with borrowed funds for a high net worth individual client. Assume that the client has \$300 cash invested (i.e., no borrowed funds) and then uses the cash to purchase stock. The client then decides to use 60\% borrowed funds to purchase stock on margin. After the margin transaction, the total assets on the full economic balance sheet and the leverage ratio are closest to:
+    Michael Chen, an analyst at Global Advisors, is analyzing the economic effects of buying stock with borrowed funds for a high net worth individual client. Assume that the client has \$300 cash invested (i.e., no borrowed funds) and then uses the cash to purchase stock. The client then decides to use 60\% borrowed funds to purchase stock on margin. After the margin transaction, the total assets on the full economic balance sheet and the leverage ratio are closest to:\\
+    Michael Chen，Global Advisors的分析师，正在分析高净值个人客户使用借入资金购买股票的经济影响。假设客户有\$300现金投资（即没有借入资金），然后使用现金购买股票。客户随后决定使用60\%借入资金以保证金方式购买股票。在保证金交易后，全经济资产负债表上的总资产和杠杆率最接近：
 \end{question}
 
 \begin{choices}
-    \item Total assets: \$300; Leverage ratio: 1.6
-    \item Total assets: \$450; Leverage ratio: 1.6
-    \item Total assets: \$450; Leverage ratio: 2.5
-    \item Total assets: \$600; Leverage ratio: 2.5
+    \item Total assets: \$300; Leverage ratio: 1.6\\
+    总资产: \$300; 杠杆率: 1.6
+    \item Total assets: \$450; Leverage ratio: 1.6\\
+    总资产: \$450; 杠杆率: 1.6
+    \item Total assets: \$450; Leverage ratio: 2.5\\
+    总资产: \$450; 杠杆率: 2.5
+    \item Total assets: \$600; Leverage ratio: 2.5\\
+    总资产: \$600; 杠杆率: 2.5
 \end{choices}
 
 \begin{correctanswer}
@@ -411,7 +438,8 @@
 
 
 \begin{question}
-    A trader observes a quote for Stock ABC, and the midpoint of its current best bid and best ask price is CAD 42. ABC has an estimated daily return volatility of 0.30\% and average bid-ask spread of CAD 0.12\%. Assuming the returns of ABC are normally distributed, what is closest to the estimated liquidity-adjusted, 1-day 95\% VaR, using the constant spread approach on a 15,000 share position?
+    A trader observes a quote for Stock ABC, and the midpoint of its current best bid and best ask price is CAD 42. ABC has an estimated daily return volatility of 0.30\% and average bid-ask spread of CAD 0.12\%. Assuming the returns of ABC are normally distributed, what is closest to the estimated liquidity-adjusted, 1-day 95\% VaR, using the constant spread approach on a 15,000 share position?\\
+    一个交易员观察到Stock ABC的报价，其当前最佳买卖价中间价为CAD 42。ABC的日回报估计波动率为0.30\%，平均买卖价差为CAD 0.12\%。假设ABC的回报呈正态分布，使用固定价差方法估计流动性调整后的1天95\% Va
 \end{question}
 
 \begin{choices}
@@ -444,13 +472,18 @@
 
 \begin{question}
     A firm has determined that the risk-adjusted return on capital (RAROC) for a particular project is 16\%. To evaluate whether the firm should accept the project, an analyst determines that the firm's beta is 1.4, the expected market return is 14\%, and the risk-free interest rate is 6\%. If the analyst uses the adjusted RAROC (ARAROC) methodology to make an accept/reject decision, should the project be accepted?
+    \\一个公司确定了一个特定项目的风险调整后资本回报率（RAROC）为16\%。为了评估公司是否应该接受该项目，分析师确定公司的贝塔系数为1.4，预期市场回报率为14\%，无风险利率为6\%。如果分析师使用调整后的RAROC（ARAROC）方法做出接受/拒绝决策，该项目是否应该被接受？
 \end{question}
 
 \begin{choices}
-    \item No, because the computed ARAROC is approximately 1\% less than the market risk premium
-    \item No, because the RAROC is 1.25\% less than the return predicted by the CAPM
-    \item Yes, because the computed ARAROC is approximately 1\% more than the market risk premium
-    \item Yes, because the ARAROC is approximately 4\% more than the return predicted by the CAPM
+    \item No, because the computed ARAROC is approximately 1\% less than the market risk premium\\
+    不接受，因为计算的ARAROC大约比市场风险溢价低1\%
+    \item No, because the RAROC is 1.25\% less than the return predicted by the CAPM\\
+    不接受，因为RAROC比CAPM预测的回报低1.25\%
+    \item Yes, because the computed ARAROC is approximately 1\% more than the market risk premium\\
+    接受，因为计算的ARAROC大约比市场风险溢价高1\%
+    \item Yes, because the ARAROC is approximately 4\% more than the return predicted by the CAPM\\
+    接受，因为计算的ARAROC大约比市场风险溢价高4\%
 \end{choices}
 
 \begin{correctanswer}
@@ -499,6 +532,15 @@
         \item The expected loss for the loan is 20 basis points per year
     \end{itemize}
     What is the risk-adjusted return on capital (RAROC) for this loan?
+    \\一家银行发行了一个\$250,000,000贷款，具有以下特征：
+    \begin{itemize}
+        \item 贷款支付固定年利率9.0\%
+        \item 与贷款相关的利息费用为6.5\%
+        \item 银行商业贷款部门的运营成本为\$2,000,000
+        \item 支持贷款的经济资本为\$20 million，投资于T-bills支付3.0\%的利率
+        \item 贷款的预期损失为每年20个基点
+    \end{itemize}
+    该贷款的风险调整后资本回报率（RAROC）是多少？
 \end{question}
 
 \begin{choices}
@@ -538,6 +580,16 @@
         \item The adjusted RAROC is equal to 9\%
     \end{itemize}
     What is the worst-case loss for this loan?
+    \\假设一个银行贷款具有以下特征：
+    \begin{itemize}
+        \item 总收入为\$1.5 million
+        \item 利息费用为\$0.4 million
+        \item 投资于T-bills的\$6 million经济资本回报为\$150,000
+        \item 公司贝塔系数为1.6
+        \item 贷款的意外损失估计为\$600,000
+        \item 调整后的RAROC为9\%
+    \end{itemize}
+    该贷款的最坏情况损失是多少？
 \end{question}
 
 \begin{choices}
@@ -567,13 +619,18 @@
 
 \begin{question}
     In its efforts to enhance its enterprise risk management function, Metropolitan Bank implemented a new economic capital-based decision framework that evaluates risk sources across various business divisions and organizational hierarchies. Which of the following statements about risk correlations is most accurate?
+    \\为了增强其企业风险管理功能，大都会银行实施了一个新的经济资本为基础的决策框架，评估跨各种业务部门和组织层次的风险来源。以下关于风险相关性的陈述哪项最准确？
 \end{question}
 
 \begin{choices}
-    \item Management decisions can influence the correlations between asset and liability risks
-    \item Correlations between major risk categories (credit, market, operational) are well understood and easily measurable at the firm level
-    \item Business unit correlations only matter for firm-wide economic capital allocation and are irrelevant for individual unit decisions
-    \item Including correlations in firm-wide risk assessment typically results in a total VaR that is greater than or equal to the sum of individual unit VaRs
+    \item Management decisions can influence the correlations between asset and liability risks\\
+    管理层决策可以影响资产和负债风险之间的相关性
+    \item Correlations between major risk categories (credit, market, operational) are well understood and easily measurable at the firm level\\
+    主要风险类别（信用、市场、操作）之间的相关性在公司层面得到很好的理解且容易衡量
+    \item Business unit correlations only matter for firm-wide economic capital allocation and are irrelevant for individual unit decisions\\
+    业务单元相关性仅对公司层面的经济资本分配重要，对单个单元决策无关
+    \item Including correlations in firm-wide risk assessment typically results in a total VaR that is greater than or equal to the sum of individual unit VaRs\\
+    在公司层面风险评估中包含相关性通常导致总VaR大于或等于单个单元VaR之和
 \end{choices}
 
 \begin{correctanswer}
@@ -617,6 +674,17 @@
         \item Effective tax rate: 25\%
     \end{itemize}
     The analyst assumes a return of 2.5\% on the bank's economic capital over the duration of the loan. What is the after-tax RAROC for this loan?
+    \\一家银行的 treasury analyst正在使用RAROC方法评估是否延长一个新的人民币10亿元贷款。贷款将完全由存款支持，具有以下指标：
+    \begin{itemize}
+        \item 所需经济资本：人民币120亿元
+        \item 贷款利率：5.5\%
+        \item 支持贷款的运营成本：人民币8亿元
+        \item 贷款预期损失：人民币15亿元
+        \item 贷款意外损失：人民币12亿元
+        \item 存款支持贷款的转移价格费用：1.2\%
+        \item 有效税率：25\%
+    \end{itemize}
+    分析师假设贷款期间银行经济资本的回报率为2.5\%。该贷款的税后RAROC是多少？
 \end{question}
 
 \begin{choices}
@@ -661,6 +729,13 @@
     \item II. The typical time horizon of market VaR calculations is 1 day, whereas the typical time horizon of operational VaR calculations is 1 year.
     \item III. Since prices are sufficiently available for liquid assets at all times, the market risk of liquid assets can be modeled using continuous distributions, but the nature of operational risk events requires using discrete distributions.
     \item IV. Market VaR requires a higher confidence level than operational VaR.
+    \end{itemize}
+    以下关于金融机构市场风险和操作风险VaR区别的陈述哪项正确？
+    \begin{itemize}
+        \item I. 操作风险事件分布必须在极端尾部有足够的质量，使得正态分布假设无效。
+        \item II. 市场VaR计算的典型时间范围是1天，而操作VaR计算的典型时间范围是1年。
+        \item III. 由于流动性资产的价格足够可得，市场风险可以建模为连续分布，但操作风险事件的性质需要使用离散分布。
+        \item IV. 市场VaR需要比操作VaR更高的置信水平。
     \end{itemize}
 \end{question}
 
@@ -712,6 +787,16 @@
     \item VI. Counterparties that request additional collateral for credit exposures.
     \item VII. Increasing redemptions of CDs before maturity.
     \end{itemize}
+    你的首席风险官要求你准备一份流动性问题早期预警指标列表。以下哪些是潜在流动性问题的早期预警指标？
+    \begin{itemize}
+        \item I. 快速资产增长，特别是当用潜在不稳定负债融资时。
+        \item II. 资产或负债集中度增加。
+        \item III. 负债加权平均期限增加。
+        \item IV. 接近或突破内部或监管限额的频率降低。
+        \item V. 债务或信用违约互换利差收窄。
+        \item VI. 交易对手要求增加信用敞口的抵押品。
+        \item VII. 提前赎回的CD数量增加。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -762,13 +847,18 @@
 
 \begin{question}
     Metropolitan Bank approaches economic capital and risk aggregation by first estimating the stand-alone economic capital for individual risk factors. In a second step, the bank aggregates risks based on the relative amounts of economic capital allocated to these risks, taking into account the correlations between risk factors. Which of the following variables is not a primary driver of the diversification benefit that accrues from aggregation?
+    \\大都会银行首先估计单个风险因素的经济资本，然后在第二步中，根据分配给这些风险的相对经济资本量，考虑风险因素之间的相关性，对风险进行聚合。以下哪个变量不是分散化收益的主要驱动因素？
 \end{question}
 
 \begin{choices}
-    \item The number of risk positions
-    \item The size of the portfolio
-    \item The concentration of those risk positions, or their relative weights in a portfolio
-    \item The correlation between the positions
+    \item The number of risk positions\\
+    风险头寸数量
+    \item The size of the portfolio\\
+    组合规模
+    \item The concentration of those risk positions, or their relative weights in a portfolio\\
+    风险头寸集中度或相对权重
+    \item The correlation between the positions\\
+    头寸间相关性
 \end{choices}
 
 \begin{correctanswer}
@@ -801,14 +891,19 @@
 
 
 \begin{question}
-    Consider a bank that wants to have an amount of capital so that it can absorb unexpected losses corresponding to a firm-wide VaR at the 1\% level. It measures firm-wide VaR by adding up the VaRs for market risk, operational risk, and credit risk. There is a risk that the bank has too little capital because
+    Consider a bank that wants to have an amount of capital so that it can absorb unexpected losses corresponding to a firm-wide VaR at the 1\% level. It measures firm-wide VaR by adding up the VaRs for market risk, operational risk, and credit risk. There is a risk that the bank has too little capital because\\
+    考虑一家银行希望拥有足够的资本，以吸收与公司层面VaR（1\%置信水平）相对应的意外损失。它通过将市场风险、操作风险和信用风险的VaR相加来衡量公司层面VaR。存在银行资本不足的风险，因为
 \end{question}
 
 \begin{choices}
-    \item It does not take into account the correlations among risks
-    \item It ignores risks that are not market, operational, or credit risks
-    \item It mistakenly uses VaR to measure operational risk because operational risks that matter are rare events
-    \item It is meaningless to add VaRs
+    \item It does not take into account the correlations among risks\\
+    它没有考虑风险之间的相关性
+    \item It ignores risks that are not market, operational, or credit risks\\
+    它忽略了不是市场、操作或信用风险的其他风险
+    \item It mistakenly uses VaR to measure operational risk because operational risks that matter are rare events\\
+    它错误地使用VaR衡量操作风险，因为重要的操作风险是罕见事件
+    \item It is meaningless to add VaRs\\
+    加总VaR没有意义
 \end{choices}
 
 \begin{correctanswer}
@@ -848,6 +943,13 @@
     \item III. Agreement of values with those generated by internal models
     \item IV. Number of independent sources that produce the prices/quotes
 \end{itemize}
+根据巴塞尔委员会发布的“评估银行金融工具公允价值实践的监管指导”，在确定公允价值来源是否可靠和相关时，应考虑以下哪些因素？
+    \begin{itemize}
+        \item I. 价格/报价的频率和可得性
+        \item II. 市场的成熟度
+        \item III. 与内部模型生成的价值的一致性
+        \item IV. 产生价格/报价的独立来源数量
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -888,15 +990,20 @@
 
 \begin{question}
     Alpha Capital, LLC (Alpha) uses monthly model vetting to mitigate potential model risk. Alpha's managers recently accepted the use of a model for valuing short-term options on 25-year corporate bonds, but rejected the same model to value short-term options on five-year government bonds. The managers also frequently test proposed analytical models against a simulation approach. These model vetting techniques are examples of which of the following vetting phases?
-    Accepting/rejecting a model
-    Testing models against simulation
+    Accepting/rejecting a model Testing models against simulation\\
+    Alpha Capital有限责任公司（Alpha）使用月度模型审查来缓解潜在的模型风险。Alpha的管理者最近接受了使用一个模型来估值25年期公司债券的短期期权，但拒绝了使用同一模型来估值五年期政府债券的短期期权。管理者还经常将提议的分析模型与模拟方法进行测试。这些模型审查技术是以下哪些审查阶段的例子？
+    接受/拒绝模型 将模型与模拟进行测试
 \end{question}
 
 \begin{choices}
-    \item Health check of the model Stress testing
-    \item Soundness of a model Stress testing
-    \item Health check of the model Benchmark modeling
-    \item Soundness of a model Benchmark modeling
+    \item Health check of the model Stress testing\\
+    模型健康检查 压力测试
+    \item Soundness of a model Stress testing\\
+    模型健全性检验 压力测试
+    \item Health check of the model Benchmark modeling\\
+    模型健康检查 基准建模
+    \item Soundness of a model Benchmark modeling\\
+    模型健全性检验 基准建模
 \end{choices}
 
 \begin{correctanswer}
@@ -930,13 +1037,18 @@
 
 \begin{question}
     Which of the following risk aggregation methodologies is characterized by great difficulty in validating parameterization and building a joint distribution?
+    \\以下哪种风险加总方法在验证参数化和构建联合分布方面存在极大困难？
 \end{question}
 
 \begin{choices}
-    \item Copulas
-    \item Constant diversification
-    \item Variance-covariance matrix
-    \item Full modeling/Simulation
+    \item Copulas\\
+    联结函数
+    \item Constant diversification\\
+    固定分散化
+    \item Variance-covariance matrix\\
+    方差-协方差矩阵
+    \item Full modeling/Simulation\\
+    全模型/模拟
 \end{choices}
 
 \begin{correctanswer}
@@ -970,13 +1082,18 @@
 
 \begin{question}
     Which of the following model validation processes is specifically characterized by the limitation that it provides little comfort that the model actually reflects reality?
+    \\以下哪种模型验证过程特别具有局限性，即提供的模型反映现实程度的信心很少？
 \end{question}
 
 \begin{choices}
-    \item Backtesting
-    \item Benchmarking
-    \item Stress testing
+    \item Backtesting\\
+    回测
+    \item Benchmarking\\
+    基准测试
+    \item Stress testing\\
+    压力测试
     \item Qualitative review
+    定性审查
 \end{choices}
 
 \begin{correctanswer}
@@ -1011,13 +1128,18 @@
 
 \begin{question}
     A bank credit officer, who has reviewed a loan application, has made the following statement: "On a standalone basis, I was not very keen on granting this loan; however, I granted this loan after looking at the overall asset portfolio of the bank." Based on the above statement, which of the following is true?
+    \\一个信贷官员审查了一个贷款申请，做出了以下陈述：“在独立基础上，我对这个贷款不太感兴趣；然而，在看了银行的整体资产组合后，我批准了这个贷款。”根据上述陈述，以下哪项是正确的？
 \end{question}
 
 \begin{choices}
-    \item The correlation of the newly granted loan with the overall portfolio is low and therefore the credit officer was right in granting the loan
-    \item The correlation of the newly granted loan with the overall portfolio is low and therefore the credit officer was wrong in granting the loan
-    \item The correlation of the newly granted loan with the overall portfolio is high and therefore the credit officer was right in granting the loan
-    \item The correlation of the newly granted loan with the overall portfolio is high and therefore the credit officer was wrong in granting the loan
+    \item The correlation of the newly granted loan with the overall portfolio is low and therefore the credit officer was right in granting the loan\\
+    新贷款与整体组合的相关性低，因此信贷员批准贷款是正确的
+    \item The correlation of the newly granted loan with the overall portfolio is low and therefore the credit officer was wrong in granting the loan\\
+    新贷款与整体组合的相关性低，因此信贷员批准贷款是错误的
+    \item The correlation of the newly granted loan with the overall portfolio is high and therefore the credit officer was right in granting the loan\\
+    新贷款与整体组合的相关性高，因此信贷员批准贷款是正确的
+    \item The correlation of the newly granted loan with the overall portfolio is high and therefore the credit officer was wrong in granting the loan\\
+    新贷款与整体组合的相关性高，因此信贷员批准贷款是错误的
 \end{choices}
 
 \begin{correctanswer}
@@ -1051,13 +1173,18 @@
 
 \begin{question}
     Which of the following is not a major challenge for banks in reporting measures of conduct and culture?
+    \\以下哪项不是银行在报告行为和文化措施方面的主要挑战？
 \end{question}
 
 \begin{choices}
-    \item Quality data are often not available to enable boards and management to drill down into detail at the business level
-    \item Standardized measures are more difficult to define for smaller regional banks than for global banks
-    \item Limited, asymmetric data make comparisons difficult for identifying trends and relationships with other variables
-    \item Management teams at banks are inexperienced in implementing a reporting process for conduct and culture
+    \item Quality data are often not available to enable boards and management to drill down into detail at the business level\\
+    高质量数据通常不可用，无法让董事会和管理层深入业务层面的细节
+    \item Standardized measures are more difficult to define for smaller regional banks than for global banks\\
+    标准化措施对小型区域银行比全球银行更难定义
+    \item Limited, asymmetric data make comparisons difficult for identifying trends and relationships with other variables\\
+    有限且不对称的数据使得比较困难，难以识别趋势和与其他变量的关系
+    \item Management teams at banks are inexperienced in implementing a reporting process for conduct and culture\\
+    银行管理团队在实施行为和文化报告流程方面缺乏经验
 \end{choices}
 
 \begin{correctanswer}
@@ -1090,13 +1217,18 @@
 
 \begin{question}
     The use of which of the following items is meant more for protecting against risk deterioration?
+    \\以下哪项主要用于防范风险恶化？
 \end{question}
 
 \begin{choices}
-    \item Risk based pricing
-    \item Management incentives
-    \item Credit portfolio management
-    \item Customer profitability analysis
+    \item Risk based pricing\\
+    风险定价
+    \item Management incentives\\
+    管理激励
+    \item Credit portfolio management\\
+    信用组合管理
+    \item Customer profitability analysis\\
+    客户盈利分析
 \end{choices}
 
 \begin{correctanswer}
@@ -1131,13 +1263,18 @@
 
 \begin{question}
     A risk manager at bank ABC is evaluating approaches the bank can use to measure the total risk in its portfolio. The bank's portfolio contains foreign currency forwards and swaps, credit instruments and derivatives, as well as various types of loans. The manager is studying how the compartmentalized and the unified risk measurement approaches are applied and the differences between them. Which of the following is correct?
+    \\银行ABC的风险经理正在评估银行可以使用的测量组合总风险的方法。银行组合包含外汇远期和掉期、信用工具和衍生品，以及各种类型的贷款。经理正在研究分块方法和统一风险测量方法的应用以及它们之间的差异。以下哪项是正确的？
 \end{question}
 
 \begin{choices}
-    \item If diversification benefits are present in the portfolio, the compartmentalized approach will typically generate a lower estimate of the bank's total risk than the unified approach
-    \item Interactions between risk categories that result in compounding effects are more appropriately captured by using the compartmentalized approach rather than the unified approach
-    \item The unified approach sums the amount of risk separately measured in each risk category into a single estimate of the bank's total risk
-    \item All else held constant, if wrong-way risk is present in the portfolio, the unified approach will typically generate a higher estimate of the bank's total risk than the compartmentalized approach
+    \item If diversification benefits are present in the portfolio, the compartmentalized approach will typically generate a lower estimate of the bank's total risk than the unified approach\\
+    如果组合中存在分散化收益，分块方法通常会产生比统一方法更低的银行总风险估计
+    \item Interactions between risk categories that result in compounding effects are more appropriately captured by using the compartmentalized approach rather than the unified approach\\
+    风险类别间相互作用导致的复合效应更适于使用分块方法而非统一方法捕捉
+    \item The unified approach sums the amount of risk separately measured in each risk category into a single estimate of the bank's total risk\\
+    统一方法将分别测量的各风险类别风险相加成单一总风险估计
+    \item All else held constant, if wrong-way risk is present in the portfolio, the unified approach will typically generate a higher estimate of the bank's total risk than the compartmentalized approach\\
+    如果组合中存在错误方向风险，统一方法通常会产生比分块方法更高的银行总风险估计
 \end{choices}
 
 \begin{correctanswer}
@@ -1174,13 +1311,18 @@
 
 \begin{question}
     The CRO of a small bank has recommended that the bank develop an economic capital framework. In a meeting with the board of directors, the CRO lists several potential benefits to the bank from adopting the framework. Which of the following correctly describes a potential benefit of implementing an economic capital framework?
+    \\一家小型银行的CRO建议银行发展一个经济资本框架。在与董事会成员的会议上，CRO列出了采用框架对银行潜在的几个好处。以下哪项正确描述了实施经济资本框架的潜在好处？
 \end{question}
 
 \begin{choices}
-    \item It increases the pricing power of banks by allowing them to charge more competitive interest rates on wholesale loans and retail deposits
-    \item It can be extended down to the level of a single customer in order to assess the customer's profitability on a risk-adjusted basis
-    \item It can incentivize senior managers by increasing their compensation as the level of economic capital allocated to their business unit increases
-    \item It allocates capital based on the portfolio's standalone risk rather than its marginal contribution to the bank's total risk
+    \item It increases the pricing power of banks by allowing them to charge more competitive interest rates on wholesale loans and retail deposits\\
+    它通过允许银行对批发贷款和零售存款收取更具竞争力的利率来增强银行的定价能力
+    \item It can be extended down to the level of a single customer in order to assess the customer's profitability on a risk-adjusted basis\\
+    它可以扩展到单个客户层面，以评估客户在风险调整基础上的盈利性
+    \item It can incentivize senior managers by increasing their compensation as the level of economic capital allocated to their business unit increases\\
+    它可以通过增加分配给业务单元的经济资本水平来激励高级管理人员
+    \item It allocates capital based on the portfolio's standalone risk rather than its marginal contribution to the bank's total risk\\
+    它基于投资组合的独立风险而非其对银行总风险的边际贡献分配资本
 \end{choices}
 
 \begin{correctanswer}
@@ -1227,6 +1369,13 @@
     \item III. Credit rating downgrade
     \item IV. Increased asset diversification
 \end{itemize}
+    巴塞尔委员会建议银行使用一组早期预警指标，以识别新兴风险和潜在的流动性问题。以下哪些不是潜在流动性问题的早期预警指标？
+    \begin{itemize}
+        \item I. 快速资产增长
+        \item II. 负面宣传
+        \item III. 信用评级下调
+        \item IV. 资产多样化增加
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -1274,13 +1423,18 @@
 
 \begin{question}
     Which of the following statements regarding stress testing and firm wide risk aggregation is most accurate?
+    \\以下关于压力测试和公司层面风险加总的陈述哪项最准确？
 \end{question}
 
 \begin{choices}
-    \item One potential problem with the risk aggregation process is the underestimation of the diversification effect
-    \item In the context of risk aggregation, stress tests are considered a more reliable alternative than regulatory and economic capital measures
-    \item The process of stress testing can be performed in a relatively objective manner given that many common risks are reasonably quantifiable
-    \item Using the results of stress testing, those scenarios that will result in minimal losses with a very low likelihood of occurrence may be ignored when considering any adjustments to risk appetite
+    \item One potential problem with the risk aggregation process is the underestimation of the diversification effect\\
+    风险加总过程中的常见问题是高估而非低估多样化效应
+    \item In the context of risk aggregation, stress tests are considered a more reliable alternative than regulatory and economic capital measures\\
+    压力测试不应被视为比监管和经济资本计量更可靠的替代方案
+    \item The process of stress testing can be performed in a relatively objective manner given that many common risks are reasonably quantifiable\\
+    压力测试过程可以相对客观地进行，因为许多常见风险可以合理量化
+    \item Using the results of stress testing, those scenarios that will result in minimal losses with a very low likelihood of occurrence may be ignored when considering any adjustments to risk appetite\\
+    使用压力测试结果，那些将导致最小损失且发生概率非常低的情景在考虑风险偏好调整时可能被忽略
 \end{choices}
 
 \begin{correctanswer}
@@ -1314,13 +1468,18 @@
 
 \begin{question}
     Nordlandia is a country with a developed economy maintaining its own currency, the Nordlandian crown (NLC), and whose most important export is domestically produced oil and natural gas. In a recent stress test of Nordlandia's banking system, several scenarios were considered. Which of the following is most consistent with being part of a coherent scenario?
+    \\Nordlandia是一个拥有发达经济体和自己的货币Nordlandian crown (NLC)的国家，其最重要的出口是国内生产的石油和天然气。最近对Nordlandia银行系统的压力测试考虑了几个情景。以下哪项最符合成为连贯情景的一部分？
 \end{question}
 
 \begin{choices}
-    \item An increase in domestic inflation and appreciation of the NLC
-    \item A significant increase in crude oil prices and a decrease in the Nordlandian housing price index
-    \item A drop in crude oil prices and appreciation of the NLC
-    \item A sustained decrease in natural gas prices and a decrease in the Nordlandian stock index
+    \item An increase in domestic inflation and appreciation of the NLC\\
+    国内通胀上升和NLC升值
+    \item A significant increase in crude oil prices and a decrease in the Nordlandian housing price index\\
+    原油价格大幅上涨和房价指数下跌
+    \item A drop in crude oil prices and appreciation of the NLC\\
+    原油价格下跌和NLC升值
+    \item A sustained decrease in natural gas prices and a decrease in the Nordlandian stock index\\
+    天然气价格持续下跌和股市指数下跌
 \end{choices}
 
 \begin{correctanswer}
@@ -1359,6 +1518,12 @@
     \item II. Bid–offer spreads widen because of lower liquidity. 
     \item III. The spreads between off-the-run bonds and benchmark issues widen.
     \end{itemize}
+    在市场崩盘时，以下哪项通常是正确的？
+    \begin{itemize}
+        \item I. 用短期国债和期货对冲的固定收益组合损失通常大于用利率互换对冲的组合（给定相同久期）。
+        \item II. 买卖价差扩大因为流动性下降。
+        \item III. 非主流债券与基准债券之间的利差扩大。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -1395,13 +1560,18 @@
 
 \begin{question}
     Piper Hook, a bank examiner, is trying to make sense of stress tests done by one of the banks she examines. The stress tests are multi-factored and complex. The bank is using multiple extreme scenarios to test capital adequacy, making it difficult for Hook to interpret the results. One of the key stress test design challenges that Hook must deal with in her examination of stress tests is
+    \\Piper Hook，一个银行检查员，试图理解她检查的一家银行进行的压力测试。压力测试是多因素和复杂的。银行使用多个极端情景来测试资本充足性，使得Hook难以解释结果。Hook在检查压力测试时必须处理的关键压力测试设计挑战是
 \end{question}
 
 \begin{choices}
-    \item Multiplicity
-    \item Efficiency
-    \item Coherence
-    \item Efficacy
+    \item Multiplicity\\
+    多重性
+    \item Efficiency\\
+    效率
+    \item Coherence\\
+    连贯性
+    \item Efficacy\\
+    有效性
 \end{choices}
 
 \begin{correctanswer}
@@ -1435,13 +1605,18 @@
 
 \begin{question}
     Sarah Chen, a senior analyst at the Federal Reserve Bank, is presenting research on stress testing methodologies to a group of banking supervisors. She explains that macro-variable stress testing can be misleading for certain banks due to regional variations in economic indicators. She cites the example of significant differences in unemployment rates across European countries following the 2010-2012 sovereign debt crisis. Which type of loan did Chen most likely identify as having the strongest correlation with unemployment rates?
+    \\Sarah Chen，美联储银行的高级分析师，正在向一组银行监管者介绍压力测试方法。她解释说，由于经济指标的地区差异，宏观变量压力测试可能对某些银行产生误导。她引用了2010-2012年主权债务危机期间欧洲各国失业率显著差异的例子。Chen最有可能识别出与失业率相关性最强的贷款类型是什么？
 \end{question}
 
 \begin{choices}
-    \item Residential mortgage loans
-    \item Credit card loans
-    \item Commercial property loans
-    \item Corporate term loans
+    \item Residential mortgage loans\\
+    住房抵押贷款
+    \item Credit card loans\\
+    信用卡贷款
+    \item Commercial property loans\\
+    商业地产贷款
+    \item Corporate term loans\\
+    企业定期贷款
 \end{choices}
 
 \begin{correctanswer}

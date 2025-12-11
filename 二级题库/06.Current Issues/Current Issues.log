@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  11 DEC 2025 09:29
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  11 DEC 2025 09:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**第三讲：对冲基金
-(./第三讲：对冲基金.tex
+**"Current Issues"
+(./Current Issues.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -682,8 +682,8 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count353
- (./第三讲：对冲基金.aux)
-\openout1 = `第三讲：对冲基金.aux'.
+ (./Current Issues.aux)
+\openout1 = `"Current Issues.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
@@ -798,11 +798,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 84.
-(./第三讲：对冲基金.out) (./第三讲：对冲基金.out)
+(./Current Issues.out) (./Current Issues.out)
 \@outlinefile=\write5
-\openout5 = `第三讲：对冲基金.out'.
+\openout5 = `"Current Issues.out"'.
 
- (./第三讲：对冲基金.toc
+ (./Current Issues.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -812,7 +812,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write6
-\openout6 = `第三讲：对冲基金.toc'.
+\openout6 = `"Current Issues.toc"'.
 
 
 
@@ -824,51 +824,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [3]
 
-[4]
-
-[5]
-
-[6]
-
-[7]
-
-[8]
-
-[9]
-
-[10]
-
-[11]
-
-[12]
-
-[13]
-
-[14]
-
-[15]
-
-[16]
-
-[17]
-
-[18]
-
-[19] (./第三讲：对冲基金.aux)
+[4] (./Current Issues.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
-Package rerunfilecheck Info: File `第三讲：对冲基金.out' has not changed.
-(rerunfilecheck)             Checksum: 46925B3319C141FECD9EC780C5285DCC;5166.
+Package rerunfilecheck Info: File `"Current Issues".out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 27090 strings out of 475796
- 583492 string characters out of 5774033
- 987331 words of memory out of 5000000
- 49571 multiletter control sequences out of 15000+600000
+ 26941 strings out of 475796
+ 573584 string characters out of 5774033
+ 977551 words of memory out of 5000000
+ 49422 multiletter control sequences out of 15000+600000
  563846 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,6n,111p,768b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,5n,111p,443b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 第三讲：对冲基金.pdf (19 pages).
+Output written on Current Issues.pdf (4 pages).

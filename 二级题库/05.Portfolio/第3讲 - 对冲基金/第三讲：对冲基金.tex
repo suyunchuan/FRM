@@ -2,9 +2,9 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
-\setCJKmainfont{SourceHanSansCN-Light}[
-    BoldFont=SourceHanSansCN-Medium
-]
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -101,6 +101,13 @@
         \item III. The risk of poor information reporting systems.  
         \item IV. The risk of high ownership concentration of hedge fund shares.
     \end{itemize}
+    在区分对冲基金中的策略风险和结构风险时，以下哪项将被视为策略风险？  
+    \begin{itemize}
+        \item I. 交易流动性风险。  
+        \item II. 管理监督的范围和形式。  
+        \item III. 信息报告系统不佳的风险。  
+        \item IV. 对冲基金份额高度集中的风险。
+    \end{itemize}
 \end{question}
 
 \begin{choices}
@@ -140,13 +147,14 @@
 
 \begin{question}
     Hedge fund managers following a convertible arbitrage strategy are said to be:
+    \\遵循可转债套利策略的对冲基金经理被认为是什么？
 \end{question}
 
 \begin{choices}
-    \item long gamma and short vega
-    \item short gamma and short vega
-    \item long gamma and long vega
-    \item short gamma and long vega
+    \item long gamma and short vega\\做多gamma和做空vega
+    \item short gamma and short vega\\做空gamma和做空vega
+    \item long gamma and long vega\\做多gamma和做多vega
+    \item short gamma and long vega\\做空gamma和做多vega
 \end{choices}
 
 \begin{correctanswer}
@@ -181,6 +189,14 @@
         \item IV. After a recent trip to Germany, the fund manager gained confidence in his existing German equity holdings and levered his existing 4\% weighting in Germany by a 8 to 1 ratio.  
     \end{itemize}
     Which of Chen's findings are indicators that the Quantum Global Fund is at risk for style drift?
+    \\量子全球基金是一家设计为与欧洲资产提供低相关性的全球宏观对冲基金。Sarah Chen，一位基金中的基金经理，正在分析量子全球基金的风格漂移迹象。Chen注意到以下发现：
+    \begin{itemize}
+        \item I. 基金相对于全球宏观同类策略的R²从0.65变为0.72在过去12个月。
+        \item II. 由于出色的回报，基金的资产从€5000万增加到€35000万在过去12个月。
+        \item III. 基金进行了重大分配调整，将其35％的持仓从拉丁美洲股票转移到欧洲股票。
+        \item IV. 最近访问德国后，基金经理对其现有的德国股票持仓充满信心，并将其现有的4％德国敞口提高了8倍。
+    \end{itemize}
+    哪一项Chen的发现表明量子全球基金存在风格漂移风险？
 \end{question}
 
 \begin{choices}
@@ -220,13 +236,14 @@
 
 \begin{question}
     There has been a recent push for financial market participants to consider increasing the number of available reference rates, providing alternatives to the London Interbank Offered Rate (LIBOR) and Euribor. Which of the following criticisms of the commonly used reference rates has encouraged the need for alternative reference rates?
+    \\最近，金融市场的参与者被推动考虑增加可用的参考利率，提供伦敦银行同业拆借利率（LIBOR）和欧元银行同业拆借利率（Euribor）的替代品。以下哪一项对常用参考利率的批评鼓励了需要替代参考利率的需求？
 \end{question}
 
 \begin{choices}
-    \item Commonly used rates contain credit risk, making them unsuitable for some transactions.
-    \item Overnight markets are less liquid, making them unappealing for use in swap contracts.
-    \item Banks have become increasingly reliant on unsecured funding to better manage credit risks.
-    \item LIBOR and Euribor are not consistently published on dedicated sites.
+    \item Commonly used rates contain credit risk, making them unsuitable for some transactions.\\常用参考利率包含信用风险，这使得它们不适合某些交易。
+    \item Overnight markets are less liquid, making them unappealing for use in swap contracts.\\隔夜市场实际上流动性更高，而不是更低。
+    \item Banks have become increasingly reliant on unsecured funding to better manage credit risks.\\银行越来越依赖无担保融资来更好地管理信用风险。
+    \item LIBOR and Euribor are not consistently published on dedicated sites.\\LIBOR和Euribor没有在专用网站上持续发布。
 \end{choices}
 
 \begin{correctanswer}
@@ -266,13 +283,21 @@
         \item IV. The equally-weighted annual return average will underestimate expected hedge fund performance.  
     \end{itemize}
     Which statements are correct?
+    \\一个对冲基金数据库按如下方式构建。第一年是2000年。所有在2000年底存在的基金，并且愿意报告2000年的验证回报的基金都被包括在内。数据库通过要求基金在2000年之前报告验证回报来扩展。随后，当基金愿意报告验证回报时，基金被添加到数据库中。如果一个基金停止报告，其回报将从数据库中删除，但基金同意继续报告，即使他们停止接受新的投资者。考虑以下陈述：
+    \begin{itemize}
+        \item I. 数据库存在回填偏差。
+        \item II. 数据库存在生存偏差。
+        \item III. 数据库存在变量误差偏差。
+        \item IV. 等权重年度收益平均值会低估预期对冲基金表现。
+    \end{itemize}
+    哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item All the above statements are correct.
-    \item Statements I and II are correct.
-    \item Statements I, II, and III are correct.
-    \item Statements II and IV are correct.
+    \item All the above statements are correct.\\所有上述陈述都是正确的。
+    \item Statements I and II are correct.\\陈述I和II是正确的。
+    \item Statements I, II, and III are correct.\\陈述I, II和III是正确的。
+    \item Statements II and IV are correct.\\陈述II和IV是正确的。
 \end{choices}
 
 \begin{correctanswer}
@@ -310,6 +335,13 @@
     \item II. It is a relative value hedge fund.  
     \item III. This fund is exposed to idiosyncratic risks.
     \end{itemize}
+    Alpha Hedge Fund的描述如下。它使用同时做多和做空的股票，净beta接近零。以下哪一项陈述关于Alpha Hedge Fund是正确的？
+    \begin{itemize}
+        \item I. 它使用方向性策略。
+        \item II. 它是一个相对价值对冲基金。
+        \item III. 该基金暴露于特质风险。
+    \end{itemize}
+    哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
@@ -344,13 +376,15 @@
 
 \begin{question}
     Jennifer Lee manages a hedge fund for a mid-sized investment firm. The fund frequently changes styles according to identified profit opportunities. At the beginning of the year, the fund took a long position in 12-year subordinated 7\% coupon debt issued by a firm expected to undergo reorganization under Chapter 11. Lee felt that analysts had been paying too little attention to the issuer. Six months later, the fund completed a second transaction involving a long position in Euro and a short position in British Pounds based on forecasted movements in interest rates in the two regions. What two hedge fund strategies are most likely being employed by Lee's hedge fund?
+    \\Jennifer Lee管理一家中型投资公司的对冲基金。该基金频繁根据识别到的利润机会改变风格。年初，基金做多12年期次级7\%票息债，发行人预计进入Chapter 11重组。Lee认为分析师对发行人关注不足。六个月后，基金完成第二笔交易，做多欧元和做空英镑，基于两地利率预期差的宏观自上而下货币交易。
+    \\Lee的对冲基金最可能采用哪两种对冲基金策略？
 \end{question}
 
 \begin{choices}
-    \item Distressed securities strategy and equity long/short strategy.
-    \item Fixed-income arbitrage and global macro strategy.
-    \item Distressed securities strategy and global macro strategy.
-    \item Fixed-income arbitrage and equity long/short strategy.
+    \item Distressed securities strategy and equity long/short strategy.\\困境证券策略和股票多空策略。
+    \item Fixed-income arbitrage and global macro strategy.\\固定收益套利策略和全球宏观策略。
+    \item Distressed securities strategy and global macro strategy.\\困境证券策略和全球宏观策略。
+    \item Fixed-income arbitrage and equity long/short strategy.\\固定收益套利策略和股票多空策略。
 \end{choices}
 
 \begin{correctanswer}
@@ -380,13 +414,14 @@
 
 \begin{question}
     Michael Chen, FRM, is a credit analyst. In a presentation to investors on the recent Asian financial crisis, Chen mentioned that during the first stages of the crisis, there was generally a positive correlation between bank and sovereign credit default swap (CDS) spreads as both sovereign and bank CDS spreads rose dramatically. However, as the Asian banking sector problems became much more evident, the correlation turned negative as bank CDS spreads rose while sovereign spreads declined. Are Chen's statements with regard to positive and negative correlation correct?
+    \\Michael Chen, FRM，是一位信用分析师。在最近亚洲金融危机的投资者介绍中，Chen提到，在危机初期，银行和主权信用违约互换（CDS）利差之间通常存在正相关性，随着主权和银行CDS利差大幅上升。然而，随着亚洲银行业问题越来越明显，相关性转为负相关，随着银行CDS利差上升而主权利差下降。Chen关于正相关性和负相关性的陈述正确吗？
 \end{question}
 
 \begin{choices}
-    \item Yes, both statements are correct.
-    \item Yes, but only the first statement is correct.
-    \item No, but only the second statement is correct.
-    \item No, neither statement is correct.
+    \item Yes, both statements are correct.\\是的，两个陈述都是正确的。
+    \item Yes, but only the first statement is correct.\\是的，但只有第一个陈述是正确的。
+    \item No, but only the second statement is correct.\\不，但只有第二个陈述是正确的。
+    \item No, neither statement is correct.\\不，两个陈述都不正确。
 \end{choices}
 
 \begin{correctanswer}
@@ -410,13 +445,14 @@
 
 \begin{question}
     Fixed income arbitrage funds attempt to obtain profits by exploiting inefficiencies and price anomalies between related fixed-income securities. The fund managers try to limit volatility by hedging exposure to interest rate risk. Which of the following types of fixed-income trades bets that the fixed side of a spread will stay higher than the floating side of a spread?
+    \\固定收益套利基金试图通过利用固定收益证券之间的效率差异和价格异常来获得利润。基金经理试图通过对冲利率风险来限制波动性。以下哪种类型的固定收益交易押注固定端利差将保持在浮动端利差之上？
 \end{question}
 
 \begin{choices}
-    \item Swap spread trade.
-    \item Credit arbitrage trades.
-    \item Mortgage spread trades.
-    \item Fixed-income volatility trades.
+    \item Swap spread trade.\\互换利差交易。
+    \item Credit arbitrage trades.\\信用套利交易。
+    \item Mortgage spread trades.\\抵押贷款利差交易。
+    \item Fixed-income volatility trades.\\固定收益波动率交易。
 \end{choices}
 
 \begin{correctanswer}
@@ -446,13 +482,14 @@
 
 \begin{question}
     Quantum Tech (QT) and Nexus Systems (NS) are both leading semiconductor manufacturers. Earlier this year, both companies introduced new AI chips that are comparable in almost every category. However, after both companies release pricing for their new chips, NS's model is 25\% less expensive than QT's. As a result, QT's stock price declined while NS's stock price rose. Subsequently, QT and NS announce they have entered into merger discussions where the terms would give QT shareholders 1 share of NS per 2 shares of QT previously held. Post the announcement, QT's stock is trading at USD 30 and NS's stock is trading at USD 65. If you are confident that the merger will be completed, assuming zero transaction costs, which investment should you make?
+    \\量子科技（QT）和Nexus系统（NS）都是领先的半导体制造商。今年早些时候，两家公司都推出了新的AI芯片，在几乎每个类别中都具有可比性。然而，两家公司发布新芯片定价后，NS的模型比QT的模型便宜25\%。因此，QT的股票价格下跌，而NS的股票价格上涨。随后，QT和NS宣布他们已进入合并谈判，合并条款将给予QT股东每2股QT换1股NS。公告后，QT的股票交易价格为30美元，NS的股票交易价格为65美元。如果你确信合并将完成，假设交易成本为零，你应该投资哪一项？
 \end{question}
 
 \begin{choices}
-    \item Buy 200 shares of QT and short 100 shares of NS.
-    \item Short 200 shares of QT and buy 100 shares of NS.
-    \item Buy 200 shares of QT and buy 100 shares of NS.
-    \item Short 200 shares of QT and short 100 shares of NS.
+    \item Buy 200 shares of QT and short 100 shares of NS.\\买入200股QT和做空100股NS。
+    \item Short 200 shares of QT and buy 100 shares of NS.\\做空200股QT和买入100股NS。
+    \item Buy 200 shares of QT and buy 100 shares of NS.\\买入200股QT和买入100股NS。
+    \item Short 200 shares of QT and short 100 shares of NS.\\做空200股QT和做空100股NS。
 \end{choices}
 
 \begin{correctanswer}
@@ -482,13 +519,14 @@
 
 \begin{question}
     Sarah Kim, FRM, is considering investing a client into distressed hedge funds. Which of the following investments would serve as the best proxy for the types of returns to expect?
+    \\Sarah Kim, FRM，正在考虑将客户投资于困境对冲基金。以下哪一项投资最可能作为预期回报的代理？
 \end{question}
 
 \begin{choices}
-    \item Convertible bonds.
-    \item Small-cap equities.
-    \item Managed futures.
-    \item High-yield bonds.
+    \item Convertible bonds.可转债。
+    \item Small-cap equities.小盘股。
+    \item Managed futures.管理期货。
+    \item High-yield bonds.高收益债券。
 \end{choices}
 
 \begin{correctanswer}
@@ -522,13 +560,14 @@
 
 \begin{question}
     Identify the risks in a fixed-income arbitrage strategy that takes long positions in interest rate swaps hedged with short positions in Treasuries.
+    \\识别固定收益套利策略中做多利率互换和对冲做空国债的风险。
 \end{question}
 
 \begin{choices}
-    \item The strategy could lose from decreases in the swap-Treasury spread.
-    \item The strategy could lose from increases in the Treasury rate, all else fixed.
-    \item The payoff in the strategy has negative skewness.
-    \item The payoff in the strategy has positive skewness.
+    \item The strategy could lose from decreases in the swap-Treasury spread.\\利率互换与国债利差下降的风险。
+    \item The strategy could lose from increases in the Treasury rate, all else fixed.\\国债利率上升的风险。
+    \item The payoff in the strategy has negative skewness.\\策略收益的负偏度。
+    \item The payoff in the strategy has positive skewness.\\策略收益的正偏度。
 \end{choices}
 
 \begin{correctanswer}
@@ -561,13 +600,14 @@
 
 \begin{question}
     What critical shift occurred in the hedge fund industry following the collapse of Long-Term Capital Management (LTCM) in 1998 and the dot-com bubble burst in 2001?
+    \\Long-Term Capital Management（LTCM）在1998年崩溃和互联网泡沫在2001年破裂后，对冲基金行业发生了哪些关键转变？
 \end{question}
 
 \begin{choices}
-    \item There was a significant drop in assets under management in the hedge fund industry.
-    \item There was a large influx of institutional investors investing in hedge funds.
-    \item Reporting within the hedge fund industry became more regulated than mutual funds.
-    \item There was a significant increase in hedge fund failures.
+    \item There was a significant drop in assets under management in the hedge fund industry.\\对冲基金行业的管理资产显著下降。
+    \item There was a large influx of institutional investors investing in hedge funds.\\机构投资者大量投资于对冲基金。
+    \item Reporting within the hedge fund industry became more regulated than mutual funds.\\对冲基金行业的报告比共同基金更严格。
+    \item There was a significant increase in hedge fund failures.\\对冲基金失败率显著增加。
 \end{choices}
 
 \begin{correctanswer}
@@ -600,13 +640,14 @@
 
 \begin{question}
     What would be an ideal approach for a hedge fund investor who is concerned about the problem of risk sharing asymmetry between principals and agents within the hedge fund industry?
+    \\一位对冲基金投资者担心对冲基金行业中委托代理问题中的风险分担不对称问题，最理想的方法是什么？
 \end{question}
 
 \begin{choices}
-    \item Focus on investing in funds for which the fund managers have a good portion of their own wealth invested.
-    \item Focus on diversifying among the various niche hedge fund strategies.
-    \item Focus on funds with improved operational efficiency and transparent corporate governance.
-    \item Focus on large funds from the "foresight-assisted" group.
+    \item Focus on investing in funds for which the fund managers have a good portion of their own wealth invested.\\投资于基金经理将大量自有财富投入的基金。
+    \item Focus on diversifying among the various niche hedge fund strategies.\\分散投资于不同策略的对冲基金。
+    \item Focus on funds with improved operational efficiency and transparent corporate governance.\\投资于运营效率提高和公司治理透明的基金。
+    \item Focus on large funds from the "foresight-assisted" group.\\投资于"前瞻性辅助"集团的大型基金。
 \end{choices}
 
 \begin{correctanswer}
@@ -640,13 +681,14 @@
 
 \begin{question}
     Identify the risks in a convertible arbitrage strategy that takes long positions in convertible bonds hedged with short positions in Treasuries and the underlying stock.
+    \\识别可转债套利策略中做多可转债和对冲做空国债和标的股票的风险。
 \end{question}
 
 \begin{choices}
-    \item Short implied volatility
-    \item Long duration
-    \item Long stock delta
-    \item Positive gamma
+    \item Short implied volatility\\做空隐含波动率。
+    \item Long duration\\做多久期。
+    \item Long stock delta\\做多股票delta。
+    \item Positive gamma\\正gamma。
 \end{choices}
 
 \begin{correctanswer}
@@ -681,13 +723,14 @@
 
 \begin{question}
     Which of the following hedge fund strategies would be characterized as an "asset allocation" strategy that performs best during extreme moves in the currency markets?
+    \\哪一种对冲基金策略被认为是"资产配置"策略，在货币市场出现极端波动时表现最佳？
 \end{question}
 
 \begin{choices}
-    \item Global macro.
-    \item Risk arbitrage.
-    \item Dedicated short bias.
-    \item Long/short equity.
+    \item Global macro.\\全球宏观。
+    \item Risk arbitrage.\\风险套利。
+    \item Dedicated short bias.\\专门做空策略。
+    \item Long/short equity.\\股票多空策略。
 \end{choices}
 
 \begin{correctanswer}
@@ -720,13 +763,15 @@
 
 \begin{question}
     When comparing hedge fund performance between the 2002-2010 period and earlier time periods, what was the trend in monthly alpha for large hedge funds?
+    \\在比较2002-2010年期间和早期时间段的对冲基金表现时，大型对冲基金的月度alpha趋势是什么？
 \end{question}
 
 \begin{choices}
-    \item Alpha showed an increase during the 2002-2010 period.
-    \item Alpha remained stable across both time periods.
-    \item A "foresight-assisted" portfolio exhibited no statistically significant alpha in the 2002-2010 period.
-    \item Alpha experienced a decline during the 2002-2010 period.
+    \item Alpha showed an increase during the 2002-2010 period.\\Alpha在2002-2010年期间出现了增长。
+    \item Alpha remained stable across both time periods.\\Alpha在两个时期都保持稳定。
+    \item A "foresight-assisted" portfolio exhibited no statistically significant alpha in the 2002-2010 period.\\
+    "前瞻性辅助"投资组合在2002-2010年期间没有显著的alpha。
+    \item Alpha experienced a decline during the 2002-2010 period.\\Alpha在2002-2010年期间出现了下降。
 \end{choices}
 
 \begin{correctanswer}
@@ -760,13 +805,14 @@
 
 \begin{question}
     An investment manager is presenting hedge fund strategies to junior analysts. Which statement about hedge fund strategies and their risk-return characteristics would be accurate?
+    \\一位投资经理正在向初级分析师介绍对冲基金策略。哪一项关于对冲基金策略和其风险收益特征的陈述是准确的？
 \end{question}
 
 \begin{choices}
-    \item Merger arbitrage funds typically carry no idiosyncratic risk, and any such risk cannot be diversified away.
-    \item Managed futures funds using trend-following strategies focus on single asset classes and employ lower leverage than other strategies.
-    \item Distressed hedge funds hold highly illiquid securities, with tail risk primarily from large movements in short-term interest rates.
-    \item Global macro funds use relatively passive strategies where managers adjust positions only during major macroeconomic developments.
+    \item Merger arbitrage funds typically carry no idiosyncratic risk, and any such risk cannot be diversified away.\\合并套利基金通常不承担特质风险，且这种风险无法通过分散化来降低。
+    \item Managed futures funds using trend-following strategies focus on single asset classes and employ lower leverage than other strategies.\\管理期货基金使用趋势跟随策略，主要关注单一资产类别，且使用较低杠杆。
+    \item Distressed hedge funds hold highly illiquid securities, with tail risk primarily from large movements in short-term interest rates.\\困境对冲基金持有高度非流动性证券，尾部风险主要来自短期利率的大幅波动。
+    \item Global macro funds use relatively passive strategies where managers adjust positions only during major macroeconomic developments.\\全球宏观基金使用相对被动的策略，只有在重大宏观经济事件发生时才调整头寸。
 \end{choices}
 
 \begin{correctanswer}
@@ -800,13 +846,14 @@
 
 \begin{question}
     A portfolio manager at a hedge fund is explaining portfolio construction to new analysts. When discussing alpha refinement, which statement correctly describes the primary goal and mechanics of refining alphas?
+    \\一位对冲基金的投资组合经理正在向初级分析师介绍投资组合构建。在讨论alpha精炼时，哪一项陈述正确描述了alpha精炼的主要目标和机制？
 \end{question}
 
 \begin{choices}
-    \item Minimize noise in portfolio construction techniques like quadratic programming by adjusting alphas after construction.
-    \item Simplify portfolio construction by preprocessing alphas to reflect the manager's constraints and objectives.
-    \item Increase robustness of portfolio construction by making subtle alpha adjustments to facilitate computer model inputs.
-    \item Rebalance portfolios using alphas updated with new information about portfolio and benchmark securities.
+    \item Minimize noise in portfolio construction techniques like quadratic programming by adjusting alphas after construction.\\通过在构建后调整alpha来最小化二次编程等投资组合构建技术中的噪音。
+    \item Simplify portfolio construction by preprocessing alphas to reflect the manager's constraints and objectives.\\通过预处理alpha来简化投资组合构建，使其反映管理者的约束和目标。
+    \item Increase robustness of portfolio construction by making subtle alpha adjustments to facilitate computer model inputs.\\通过细微的alpha调整来增加投资组合构建的稳健性，以促进计算机模型输入。
+    \item Rebalance portfolios using alphas updated with new information about portfolio and benchmark securities.\\使用更新后的alpha再平衡投资组合，以反映投资组合和基准证券的新信息。
 \end{choices}
 
 \begin{correctanswer}
@@ -849,13 +896,14 @@
 
 \begin{question}
     When conducting due diligence on a potential investment manager, which of the following factors should be considered least important by the investor?
+    \\在尽职调查潜在投资经理时，投资者认为哪一项因素最重要？
 \end{question}
 
 \begin{choices}
-    \item Risk controls.
-    \item Business model.
-    \item Past performance.
-    \item Investment process.
+    \item Risk controls.\\风险控制。
+    \item Business model.\\商业模式。
+    \item Past performance.\\过去表现。
+    \item Investment process.\\投资流程。
 \end{choices}
 
 \begin{correctanswer}
@@ -889,13 +937,14 @@
 
 \begin{question}
     A due diligence specialist is evaluating a hedge fund's risk management process for potential investment. Which statement best describes the evaluation criteria?
+    \\一位尽职调查专家正在评估一个对冲基金的风险管理过程，以确定是否值得投资。哪一项陈述最好描述了评估标准？
 \end{question}
 
 \begin{choices}
-    \item Due to the critical importance of tail risk, the company should only invest if the fund fully accounts for fat tails using extreme value theory at the 99.99\% VaR level.
-    \item Current best practices require funds to employ independent risk service providers who play important roles in risk-related decisions.
-    \item When evaluating a leveraged fund, the specialist should assess how the fund estimates leverage-related risks, including funding liquidity risks during market stress periods.
-    \item It is essential to evaluate the fund's valuation policy, and if more than 10\% of asset prices are based on model prices or broker quotes, investment should be avoided regardless of other fund information.
+    \item Due to the critical importance of tail risk, the company should only invest if the fund fully accounts for fat tails using extreme value theory at the 99.99\% VaR level.\\由于尾部风险的重要性，公司只有在基金完全使用极端值理论在99.99\% VaR水平上考虑肥尾时才应该投资。
+    \item Current best practices require funds to employ independent risk service providers who play important roles in risk-related decisions.\\当前最佳实践要求基金雇用独立的风险服务提供商，他们在风险相关决策中扮演重要角色。
+    \item When evaluating a leveraged fund, the specialist should assess how the fund estimates leverage-related risks, including funding liquidity risks during market stress periods.\\在评估杠杆基金时，专家应评估基金如何估计杠杆相关风险，包括在市场压力期间的资金流动性风险。
+    \item It is essential to evaluate the fund's valuation policy, and if more than 10\% of asset prices are based on model prices or broker quotes, investment should be avoided regardless of other fund information.\\评估基金的估值政策至关重要，如果资产价格的10\%以上基于模型价格或经纪报价，则应无论其他基金信息如何，都应避免投资。
 \end{choices}
 
 \begin{correctanswer}
@@ -930,13 +979,14 @@
 
 \begin{question}
     Lisa Tahara, FRM, is evaluating an institutional investment in a hedge fund with volatile but generally positive historical returns. Which consideration about the fund's track record is least relevant for her investment decision?
+    \\Lisa Tahara, FRM，正在评估一个机构投资者对一个波动但总体表现积极的对冲基金的投资。哪一项关于基金表现记录的考虑对她的投资决策最不相关？
 \end{question}
 
 \begin{choices}
-    \item Size of investment assets.
-    \item Absolute level of past returns.
-    \item Verification of returns by a third party.
-    \item Employment continuity of the investment team.
+    \item Size of investment assets.\\投资资产规模。
+    \item Absolute level of past returns.\\过去回报的绝对水平。
+    \item Verification of returns by a third party.\\第三方验证回报。
+    \item Employment continuity of the investment team.\\投资团队就业连续性。
 \end{choices}
 
 \begin{correctanswer}
@@ -970,13 +1020,14 @@
 
 \begin{question}
     Based on historical evidence, which of the following factors is least likely to cause the eventual failure of a hedge fund?
+    \\根据历史证据，哪一项因素最不可能导致对冲基金最终失败？
 \end{question}
 
 \begin{choices}
-    \item Excessive controls in place.
-    \item Taking on more systematic risk.
-    \item Making decisions in a committee setting.
-    \item Materially misstated financial statements.
+    \item Excessive controls in place.\\过度控制。
+    \item Taking on more systematic risk.\\承担更多系统性风险。
+    \item Making decisions in a committee setting.\\在委员会决策中做出决策。
+    \item Materially misstated financial statements.\\重大财务报表错误。
 \end{choices}
 
 \begin{correctanswer}
@@ -1010,13 +1061,14 @@
 
 \begin{question}
     An insurance company's investment team is conducting due diligence on a hedge fund. After comprehensive evaluation of past and current performance and management interviews, which finding would provide the strongest motivation to invest in the hedge fund?
+    \\一家保险公司投资团队正在对一个对冲基金进行尽职调查。在综合评估过去和当前表现以及管理团队访谈后，哪一项发现最能激励投资于该对冲基金？
 \end{question}
 
 \begin{choices}
-    \item The hedge fund management possesses a strong combination of investment, operational, and business skills.
-    \item The hedge fund's investment strategy has performed very well in the past.
-    \item The hedge fund uses higher leverage and has a lower liquidity profile compared to most other hedge funds.
-    \item The CEO of the hedge fund has substantial experience in investment strategy.
+    \item The hedge fund management possesses a strong combination of investment, operational, and business skills.\\对冲基金管理团队具备投资、运营和商业技能的强大组合。
+    \item The hedge fund's investment strategy has performed very well in the past.\\对冲基金的投资策略在过去表现非常出色。
+    \item The hedge fund uses higher leverage and has a lower liquidity profile compared to most other hedge funds.\\对冲基金使用更高的杠杆和较低的流动性特征，与其他对冲基金相比。
+    \item The CEO of the hedge fund has substantial experience in investment strategy.\\对冲基金CEO具有丰富的投资策略经验。
 \end{choices}
 
 \begin{correctanswer}
@@ -1051,13 +1103,14 @@
 
 \begin{question}
     Senior analysts at an investment firm are meeting with managers of a small hedge fund for due diligence. After reviewing the investment process and risk controls, they focus on operational environment and business model. Which situation would constitute a red flag from an operational perspective?
+    \\一家投资公司的资深分析师正在与一个小型对冲基金的管理团队进行尽职调查。在审查投资流程和风险控制后，他们专注于运营环境和商业模式。哪一种情况从运营角度来看是一个红旗？
 \end{question}
 
 \begin{choices}
-    \item The hedge fund's financial statements are unqualified.
-    \item The hedge fund partnership agreement contains an indemnification provision.
-    \item The hedge fund does not use a compliance service provider.
-    \item The hedge fund's general partner has made significant withdrawals.
+    \item The hedge fund's financial statements are unqualified.\\对冲基金的财务报表无保留意见。
+    \item The hedge fund partnership agreement contains an indemnification provision.\\对冲基金合伙协议包含赔偿条款。
+    \item The hedge fund does not use a compliance service provider.\\对冲基金不使用合规服务提供商。
+    \item The hedge fund's general partner has made significant withdrawals.\\对冲基金一般合伙人已做出重大提款。
 \end{choices}
 
 \begin{correctanswer}
@@ -1098,13 +1151,14 @@
 
 \begin{question}
     A junior examiner at a financial supervisory authority is studying US investment fraud cases, analyzing the connection between SEC financial disclosure filings (particularly Form ADV) and fraud instances. Based on the examiner's findings, which statement is correct?
+    \\一位金融监管机构初级审查员正在研究美国投资欺诈案例，分析SEC财务披露文件（特别是Form ADV）与欺诈实例之间的联系。基于审查员的发现，哪一项陈述是正确的？
 \end{question}
 
 \begin{choices}
-    \item Disclosures of past conflicts of interest and prohibitions of future conflicts have proven effective in deterring fraud.
-    \item Investors are typically compensated for fraud risk exposure, which decreases the quality of information disclosures by investment advisors.
-    \item The benefits of using Form ADV filings in fraud protection models have always outweighed the marginal costs of collecting them.
-    \item Using backward-looking fraud prediction models that relate past fraud with contemporaneous data exposes investors to survivorship bias.
+    \item Disclosures of past conflicts of interest and prohibitions of future conflicts have proven effective in deterring fraud.\\过去利益冲突披露和未来冲突禁止已被证明能有效阻止欺诈。
+    \item Investors are typically compensated for fraud risk exposure, which decreases the quality of information disclosures by investment advisors.\\投资者通常会因欺诈风险暴露而获得补偿，这会降低投资顾问的信息披露质量。
+    \item The benefits of using Form ADV filings in fraud protection models have always outweighed the marginal costs of collecting them.\\使用Form ADV文件在欺诈保护模型中的收益总是超过收集的边际成本。
+    \item Using backward-looking fraud prediction models that relate past fraud with contemporaneous data exposes investors to survivorship bias.\\使用将过去欺诈与同期数据关联的回顾性欺诈预测模型会使投资者面临生存偏差。
 \end{choices}
 
 \begin{correctanswer}

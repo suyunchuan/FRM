@@ -1,52 +1,10 @@
 \documentclass{article}
-\usepackage{fontspec} 
-\usepackage{unicode-math}  % 先加载 unicode-math
-\setmathfont{XITS Math}    % 再设置数学字体
-%\usepackage[UTF8]{ctex} % 如果需要支持中文
-
 \usepackage{anyfontsize}
-\usepackage{xeCJK} % XeLaTeX 推荐 xeCJK，LuaLaTeX 也可用   
-\usepackage{setspace}  % 添加这个包
-\setstretch{1.2}      % 设置行距为1.5倍
-
-\setCJKmainfont[
-    Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,  % 改用 Windows 字体目录
-    UprightFont = {SourceHanSansCN-Light1.otf},  % 使用可变字体
-    BoldFont = {SourceHanSansCN-Medium1.otf},
-    LetterSpace = 2.0,  % 增加字间距
-    WordSpace = 1.2,    % 增加词间距
-    %BoldFeatures = {RawFeature={+wght=900}},
-    %Scale=1
-]{SourceHanSansCN}
-
-
-\setmainfont[
-    Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,  % 改用 Windows 字体目录
-    UprightFont = {SourceHanSansCN-Light1.otf},  % 使用可变字体
-    BoldFont = {SourceHanSansCN-Medium1.otf},
-    LetterSpace = 2.0,  % 增加字间距
-    WordSpace = 1.2,    % 增加词间距
-    %BoldFeatures = {RawFeature={+wght=900}},
-    %Scale=1
-]{SourceHanSansCN}
-
-%\setCJKmainfont[
- %   Path = C:/USERS/11252/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/,
- %   UprightFont = {SourceHanSerifCN-Light-5.otf},
- %   BoldFont = {SourceHanSerifCN-Medium-6.otf},
-%    Scale=1
-%]{SourceHanSerifCN}
-
-%\setmainfont{SourceHanSerif}  % 设置英文字体
-
-% 处理冲突的命令
-\let\oldbackepsilon\backepsilon
-\let\backepsilon\relax
-\let\oldeth\eth
-\let\eth\relax
-\let\olddigamma\digamma
-\let\digamma\relax
-\usepackage{float}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
 
 \usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
 \usepackage{enumitem} % 用于自定义列表
@@ -137,14 +95,15 @@
 
 
 \begin{question}
-    Data analysts at an investment bank are using machine learning to detect money laundering activities. The method they use explores data and automatically finds patterns without requiring labels to train the algorithm. Which machine learning method are the analysts using?
+    Data analysts at an investment bank are using machine learning to detect money laundering activities. The method they use explores data and automatically finds patterns without requiring labels to train the algorithm. Which machine learning method are the analysts using?\\
+    一家投资银行的数据分析师正在使用机器学习来检测洗钱活动。他们使用的方法探索数据并自动发现模式，而不需要标签来训练算法。哪一种机器学习方法是被分析师使用的？
 \end{question}
 
 \begin{choices}
-    \item Classification.
-    \item Clustering.
-    \item Principal component analysis.
-    \item Support vector machines.
+    \item Classification.\\分类。
+    \item Clustering.\\聚类。
+    \item Principal component analysis.\\主成分分析。
+    \item Support vector machines.\\支持向量机。
 \end{choices}
 
 \begin{correctanswer}
@@ -178,14 +137,19 @@
 
 
 \begin{question}
-    A researcher at a financial supervisory agency is studying the rapid adoption of artificial intelligence (AI) and machine learning by financial institutions. The researcher prepares a report on potential benefits and risks to financial markets from these technologies. Which conclusion would the researcher correctly reach?
+    A researcher at a financial supervisory agency is studying the rapid adoption of artificial intelligence (AI) and machine learning by financial institutions. The researcher prepares a report on potential benefits and risks to financial markets from these technologies. Which conclusion would the researcher correctly reach?\\
+    一家金融监管机构的研究员正在研究金融机构对人工智能（AI）和机器学习（ML）的快速采用。研究员准备了一份报告，分析这些技术对金融市场潜在的利益和风险。研究员正确得出的结论是什么？
 \end{question}
 
 \begin{choices}
-    \item AI and machine learning help improve data quality by automatically highlighting potential errors to flag them to users.
-    \item AI and machine learning minimize the risk of creating "black boxes" in decision making and potential system-wide stress.
-    \item While AI and machine learning lower trading costs, they will not improve financial securities' price discovery process.
-    \item While AI and machine learning may deliver customized services to investors, they increase customers' fees and borrowing costs.
+    \item AI and machine learning help improve data quality by automatically highlighting potential errors to flag them to users.\\
+    AI和机器学习通过自动突出潜在错误来帮助提高数据质量，并将其标记给用户。
+    \item AI and machine learning minimize the risk of creating "black boxes" in decision making and potential system-wide stress.\\
+    AI和机器学习可以减少决策中的"黑盒"风险和系统性压力。
+    \item While AI and machine learning lower trading costs, they will not improve financial securities' price discovery process.\\
+    虽然AI和机器学习降低了交易成本，但它们不会改善金融证券的价格发现过程。
+    \item While AI and machine learning may deliver customized services to investors, they increase customers' fees and borrowing costs.\\
+    虽然AI和机器学习可能为投资者提供定制服务，但它们会增加客户费用和借贷成本。
 \end{choices}
 
 \begin{correctanswer}
@@ -219,14 +183,19 @@
 
 
 \begin{question}
-    A senior risk manager at a global bank is proposing greater use of artificial intelligence (AI) and machine learning (ML) systems in the bank's risk management practices. In a presentation to the CEO and CFO, the manager provides examples of how these approaches can help mitigate different types of risk exposures. Which example most appropriately describes how AI or ML can mitigate the given risk?
+    A senior risk manager at a global bank is proposing greater use of artificial intelligence (AI) and machine learning (ML) systems in the bank's risk management practices. In a presentation to the CEO and CFO, the manager provides examples of how these approaches can help mitigate different types of risk exposures. Which example most appropriately describes how AI or ML can mitigate the given risk?\\
+    一家全球银行的资深风险经理正在提议在银行的风险管理实践中使用更多的人工智能（AI）和机器学习（ML）系统。在向CEO和CFO的演示中，经理提供了这些方法如何帮助减轻不同类型风险暴露的例子。哪一种例子最恰当地描述了AI或ML如何减轻给定的风险？
 \end{question}
 
 \begin{choices}
-    \item ML can help mitigate operational risk by replacing human judgment-based processes with complex algorithms for lending decisions.
-    \item ML can help mitigate model risk by detecting changes in trading patterns that diverge from modeled estimates.
-    \item AI can help mitigate credit risk by analyzing customer account documentation for instances of missing or fraudulent entries.
-    \item AI can help mitigate market risk by identifying a large position in one asset that traders can take to replicate the performance of a portfolio of smaller, more liquid positions.
+    \item ML can help mitigate operational risk by replacing human judgment-based processes with complex algorithms for lending decisions.\\
+    ML可以通过用复杂算法替代人工判断过程来减轻运营风险，用于借贷决策。
+    \item ML can help mitigate model risk by detecting changes in trading patterns that diverge from modeled estimates.\\
+    ML可以通过检测交易模式变化，偏离模型估计，来减轻模型风险。
+    \item AI can help mitigate credit risk by analyzing customer account documentation for instances of missing or fraudulent entries.\\
+    AI可以通过分析客户账户文档中的缺失或欺诈条目，来减轻信用风险。
+    \item AI can help mitigate market risk by identifying a large position in one asset that traders can take to replicate the performance of a portfolio of smaller, more liquid positions.\\
+    AI可以通过识别一个大型仓位，交易者可以采取来复制小型、更流动性仓位的组合表现，来减轻市场风险。
 \end{choices}
 
 \begin{correctanswer}
@@ -260,13 +229,18 @@
 
 \begin{question}
     A key difference between low-inflation and high-inflation regimes is that:
+    \\低通胀和高通胀制度之间的关键区别是什么？
 \end{question}
 
 \begin{choices}
-    \item High-inflation regimes are increasingly sensitive to relative price shocks.
-    \item High-inflation regimes generally tend to be self-equilibrating (self-stabilizing).
-    \item Low-inflation regimes tend to see a constant level of spillovers across individual price changes.
-    \item In a low-inflation regime, lower inflation volatility is due to a decline in the volatility of individual price changes.
+    \item High-inflation regimes are increasingly sensitive to relative price shocks.\\
+    高通胀制度对相对价格冲击越来越敏感。
+    \item High-inflation regimes generally tend to be self-equilibrating (self-stabilizing).\\
+    高通胀制度通常不是自我平衡的，而是不稳定的。
+    \item Low-inflation regimes tend to see a constant level of spillovers across individual price changes.\\
+    低通胀制度中个体价格变化的溢出效应不是恒定的。
+    \item In a low-inflation regime, lower inflation volatility is due to a decline in the volatility of individual price changes.\\
+    低通胀制度中通胀波动性降低不是由于个体价格变化波动性下降。
 \end{choices}
 
 \begin{correctanswer}

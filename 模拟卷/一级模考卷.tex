@@ -1,0 +1,692 @@
+
+\documentclass{article}
+\usepackage{anyfontsize}
+\usepackage[UTF8]{ctex} % 如果需要支持中文
+\usepackage{fontspec} 
+% \setCJKmainfont{SourceHanSansCN-Light}[
+%     BoldFont=SourceHanSansCN-Medium
+% ]
+
+\usepackage[a4paper, left=0.1in, right=0.1in, top=0.05in, bottom=0.05in]{geometry} % 设置四边页边距为0.1英寸{geometry} % 设置页边距为0.5英寸
+\usepackage{enumitem} % 用于自定义列表
+\usepackage{amsmath}  % 数学公式支持
+
+\setlength{\parindent}{0pt} % 不缩进
+\usepackage{etoolbox} % 用于列表操作
+%调整类代码
+\usepackage{comment}
+\usepackage{tocloft} % 用于定制目录样式
+\usepackage{hyperref} %不需要目录盒子注释这
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{amssymb}  % 提供数学符号，包括\therefore
+%目录设定
+%快捷键 CMD + / 注释
+%  \renewcommand{\cftdot}{} % 隐藏目录中的页码
+%  \cftpagenumbersoff{section}
+%  \cftpagenumbersoff{subsection}
+%  \makeatletter
+%  \renewcommand{\@pnumwidth}{0em}  % 设置页码宽度为0
+%  \renewcommand{\@tocrmarg}{0em}   % 设置右边距为0
+%  \makeatother
+ 
+
+
+\usepackage{environ}
+
+\newif\ifshowcontent  % 定义一个条件判断变量
+\showcontenttrue    % 设置为 false，隐藏所有 question 环境的内容
+
+\newcounter{question} % 题目计数器
+\setcounter{question}{0}
+\NewEnviron{question}{%
+    \ifshowcontent
+    \vspace{1cm}\stepcounter{question}\textbf{\thequestion.} \BODY\par % 如果显示内容，则输出
+    \fi
+}
+
+\NewEnviron{choices}{%
+    \ifshowcontent
+        \begin{enumerate}[label=\Alph*., leftmargin=*]
+            \BODY
+        \end{enumerate}\par
+    \fi
+}
+
+\NewEnviron{correctanswer}{%
+    \ifshowcontent
+        \textbf{答案:}\BODY\par
+    \fi
+}
+
+
+
+\newenvironment{explanation}
+{\textbf{解析:}\par}
+{\par}
+
+
+
+% % 新增考察方面命令
+% \newcommand{\checklist}[1]{
+%     \textbf{考察:} #1 \par % 在题目下方显示考察方面
+%     \addcontentsline{toc}{subsection}{题号\thequestion 考察: #1} % 将考察内容添加到目录
+%     \vspace{2em} % 添加1em的垂直空间
+% }
+
+% \graphicspath{{images/}} %统一
+
+
+
+
+
+
+
+\newcommand{\tocstar}[1]{%
+    \texorpdfstring{%
+        \protect\textcolor{blue}{%
+            \ifnum#1=1 {\protect\textbf{$[\blacksquare\square\square\square\square]$}}\fi%
+            \ifnum#1=2 {\protect\textbf{$[\blacksquare\square\square]$}}\fi%
+            \ifnum#1=3 {\protect\textbf{$[\blacksquare\blacksquare\square]$}}\fi%
+            \ifnum#1=4 {\protect\textbf{$[\blacksquare\blacksquare\blacksquare]$}}\fi%
+            \ifnum#1=5 {\protect\textbf{$[\blacksquare\blacksquare\blacksquare\blacksquare\blacksquare]$}}\fi%
+        }%
+    }{*}%
+}
+
+
+
+% 在导言区添加以下代码（放在 \begin{document} 之前）
+\makeatletter
+% 定义新的目录格式
+\newcommand{\listbookname}[1]{Book#1 目录}
+
+% 设置目录格式
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % 添加虚线
+\renewcommand{\cftsecpagefont}{\normalfont}  % 页码字体
+\setlength{\cftsecindent}{1em}     % 缩进
+\setlength{\cftsecnumwidth}{2.3em}   % 编号宽度
+\setlength{\cftbeforesecskip}{1pt}   % 减小节之间的垂直间距
+
+% 为每个book定义新的目录格式
+\@for\i:={1,2,3,4}\do{
+    \expandafter\newcommand\csname book\i toc\endcsname{\section*{\mdseries\normalfont\listbookname{\i}}}
+    \expandafter\newcommand\csname l@book\i\endcsname{\@dottedtocline{1}{1em}{2em}}
+}
+
+% 定义四个目录命令
+\newcommand{\bookonecontents}{%
+    \section*{Foundations of Risk Management 目录}
+    \@starttoc{book1}%
+}
+
+\newcommand{\booktwocontents}{%
+    \section*{Quantitative Analysis 目录}
+    \@starttoc{book2}%
+}
+
+\newcommand{\bookthreecontents}{%
+    \section*{Financial Markets and Products 目录}
+    \@starttoc{book3}%
+}
+
+\newcommand{\bookfourcontents}{%
+    \section*{Valuation and Risk Models 目录}
+    \@starttoc{book4}%
+}
+\makeatother
+% 修改 checklist 命令
+\newcommand{\checklist}[3]{%
+    \textbf{考察:} #1 
+    \hspace{1em}
+    \textbf{重要程度：}\textcolor{blue}{%
+        \ifthenelse{\equal{#2}{1}}{$[\blacksquare\square\square\square\square]$}{%
+        \ifthenelse{\equal{#2}{2}}{$[\blacksquare\square\square]$}{%
+        \ifthenelse{\equal{#2}{3}}{$[\blacksquare\blacksquare\square]$}{%
+        \ifthenelse{\equal{#2}{4}}{$[\blacksquare\blacksquare\blacksquare]$}{%
+        \ifthenelse{\equal{#2}{5}}{$[\blacksquare\blacksquare\blacksquare\blacksquare\blacksquare]$}{}}}}}%
+    }\par
+    \textbf{科目:} \ifthenelse{\equal{#3}{1}}{Foundations of Risk Management}{\ifthenelse{\equal{#3}{2}}{Quantitative Analysis}{\ifthenelse{\equal{#3}{3}}{Financial Markets and Products}{Valuation and Risk Models}}}\par
+    % 根据不同的 BOOK 添加到相应的目录
+    \ifthenelse{\equal{#3}{1}}{\addcontentsline{book1}{subsection}{题号\thequestion 考察: #1 \tocstar{#2}}}{}
+    \ifthenelse{\equal{#3}{2}}{\addcontentsline{book2}{subsection}{题号\thequestion 考察: #1 \tocstar{#2}}}{}
+    \ifthenelse{\equal{#3}{3}}{\addcontentsline{book3}{subsection}{题号\thequestion 考察: #1 \tocstar{#2}}}{}
+    \ifthenelse{\equal{#3}{4}}{\addcontentsline{book4}{subsection}{题号\thequestion 考察: #1 \tocstar{#2}}}{}
+}
+% \let\oldtextbf\textbf
+% % 重定义 \textbf 命令，使其带有颜色
+% \renewcommand{\textbf}[1]{\textcolor{deepblue}{\oldtextbf{#1}}}
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+%  %\fontsize{23}{31}\selectfont
+%  \tableofcontents % 添加目录
+% \newpage
+% %\pagestyle{empty}
+
+  % 在需要显示目录的位置添加
+  \bookonecontents
+  \newpage
+  \booktwocontents
+  \newpage
+  \bookthreecontents
+  \newpage
+  \bookfourcontents
+  
+      \newpage
+  
+  
+      % 恢复原来的页面设置
+      \restoregeometry
+  
+  
+  \newpage
+  
+  
+
+
+
+
+
+
+
+
+
+\begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+ \begin{question}
+    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
+    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    \end{question}
+    
+    \begin{choices}
+        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
+        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        
+        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
+        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        
+        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
+        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        
+        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
+        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+    \end{choices}
+    
+    \begin{correctanswer}
+    D
+    \end{correctanswer}
+    
+    \begin{explanation}
+
+    
+    \textbf{A选项错误。}
+    \begin{itemize}
+        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
+        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
+    \end{itemize}
+    
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
+    \end{itemize}
+    
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+    \end{itemize}
+    
+    \end{explanation}
+    
+ \checklist{偿付能力II对保险公司的资本要求}{3}{3}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

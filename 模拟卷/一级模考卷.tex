@@ -3,6 +3,7 @@
 \usepackage{anyfontsize}
 \usepackage[UTF8]{ctex} % 如果需要支持中文
 \usepackage{fontspec} 
+\usepackage{bookmark}
 % \setCJKmainfont{SourceHanSansCN-Light}[
 %     BoldFont=SourceHanSansCN-Medium
 % ]
@@ -21,6 +22,7 @@
 \usepackage{tikz}
 \usepackage{titletoc}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{amssymb}  % 提供数学符号，包括\therefore
 \usepackage{xcolor}  % 提供颜色支持，用于\textcolor命令
 %目录设定
@@ -195,7 +197,7 @@
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{1.1.png}
+    \includegraphics[width=0.8\textwidth]{1·2.png}
 \end{figure}
 
 
@@ -203,22 +205,28 @@
 
 
 \begin{question}
-    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
-    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
-    \end{question}
+    Case studies that feature financial engineering by way of complex derivatives include Bankers Trust, the Orange County case, and Sachsen Landesbank. In regard to these financial engineering cases, each of the following statements is true EXCEPT which is false?
+\end{question}
     
     \begin{choices}
-        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
-        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        \item Bankers Trust (BT) proposed an overly complex swap to their clients (P\&G and Gibson
+        Greetings) but the swaps experienced colossal losses; the clients sued BT, who never
+        recovered from the ensuing reputational damage
         
-        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
-        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        \item  Orange County's treasurer (Robert Citron) borrowed through the repo market to
+        purchase inverse floating-rate notes–positions that Citron later said he did not understand–
+        but the combination of excessive leverage and embedded interest-rate risk generated losses
+        that ultimately forced Orange County to file for bankruptcy
         
-        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
-        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        \item Sachsen Landesbank set up off-balance-sheet vehicles (guaranteed by Sachsen) that
+        held highly-rated U.S. mortgage-backed securities; the operation was highly profitable, but
+        the 2007-08 subprime crisis wiped out Sachsen's capital
         
-        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
-        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+        \item  If the purpose of the position is designated as hedging (rather than speculation) and if
+        the hedge consists only of some combination(s) of forwards, swaps and/or options–which are
+        the primary building blocks–then the firm can avoid problems suffered by the financial
+        engineering case studies because the firm avoids undue sophistication
+        
     \end{choices}
     
     \begin{correctanswer}
@@ -227,25 +235,9 @@
     
     \begin{explanation}
 
-    
-    \textbf{A选项错误。}
+    \textbf{D选项错误。}
     \begin{itemize}
-        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
-    \end{itemize}
-    
-    \textbf{B选项错误。}
-    \begin{itemize}
-        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
-    \end{itemize}
-    
-    \textbf{C选项错误。}
-    \begin{itemize}
-        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
-    \end{itemize}
-    
-    \textbf{D选项正确。}
-    \begin{itemize}
-        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+        \item A hedge does not avoid the assumption of embedded risks that may not be understood; the hedge/speculation intention is important but does not completely warranty the risks of the position. More importantly, complex positions are combinations of the primary building blocks such that complex hedge positions do not avoid running significant
     \end{itemize}
     
     \end{explanation}
@@ -258,49 +250,38 @@
 
 
  \begin{question}
-    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
-    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    A very small sample of 10 public companies has one target variable (i.e., Dividend) and four features (i.e., Earnings, LargeCap, Retail, and Tech). Both Dividend and Earnings are binary variables where respectively, one (1) indicates the company recently paid a dividend, and its
+    earnings dropped in the previous year. The data frame is displayed below.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{1·2.png}
+    \end{figure}
+    Based on Dividend as the output (aka, target) variable, the base Gini coefficient is 0.420. That's because $1- [(7/10)^2 + (3/10)^2]$. What is the information gain if we split (as the root node's feature) the Earnings feature?
     \end{question}
     
     \begin{choices}
-        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
-        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        \item Zero
         
-        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
-        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        \item 0.120
         
-        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
-        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        \item 0.348
         
-        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
-        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+        \item 0.875
     \end{choices}
     
     \begin{correctanswer}
-    D
+    B
     \end{correctanswer}
     
     \begin{explanation}
 
     
-    \textbf{A选项错误。}
+    \textbf{B选项正确。}
     \begin{itemize}
-        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
-    \end{itemize}
-    
-    \textbf{B选项错误。}
-    \begin{itemize}
-        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
-    \end{itemize}
-    
-    \textbf{C选项错误。}
-    \begin{itemize}
-        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
-    \end{itemize}
-    
-    \textbf{D选项正确。}
-    \begin{itemize}
-        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+        \item We need the weighted Gini coefficient for (splitting on) the Earnings feature. The four {Earnings=0} all pay dividends: this branch is
+        pure with a Gini of zero! The Gini of the six {Earnings = 1} branch, where 3 pay dividends and 3 do not, is given by $1 – (3/6)^2 – (3/6)^2$
+        = 0.50. The weighted Gini is, therefore, 0*4/10 + 0.50*6/10 = 0.30. The information gain is 0.120 because splitting on the Earnings
+        feature reduces from the base Gini of 0.420 to 0.300.
     \end{itemize}
     
     \end{explanation}
@@ -311,22 +292,19 @@
 
 
  \begin{question}
-    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
-    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    About swaps, each of the following is true EXCEPT which is false?
     \end{question}
     
     \begin{choices}
-        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
-        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        \item At any given time during the life of a bilateral OTC swap, at least one of the
+        counterparties incurs both market and credit risk
         
-        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
-        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        \item A difference between the typical interest rate swap and currency swap is whether the principal (aka, notional principal) is exchanged
         
-        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
-        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
         
-        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
-        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+        \item  Both overnight indexed swaps (OIS) and volatility swaps need to determine a realized (aka, actual) financial variable at the end of a period or tenor
+        
+        \item A commercial bank funded by short-term floating-rate deposits that extends longterm fixed-rate loans can hedge market risk by entering a swap where it is the floating-rate payer and fixed-rate receiver
     \end{choices}
     
     \begin{correctanswer}
@@ -335,25 +313,10 @@
     
     \begin{explanation}
 
-    
-    \textbf{A选项错误。}
-    \begin{itemize}
-        \item LIBOR操纵属于内部欺诈范畴，因为涉及员工故意违规获取个人利益。该事件包含了欺诈、故意违反规定等典型的内部欺诈特征，而不是业务中断和系统故障。
-    \end{itemize}
-    
-    \textbf{B选项错误。}
-    \begin{itemize}
-        \item 交易平台故障应归类为业务中断和系统故障，因为这涉及技术系统的运行中断。而执行、交付和流程管理通常指操作流程和交易处理中的人为错误。
-    \end{itemize}
-    
-    \textbf{C选项错误。}
-    \begin{itemize}
-        \item 地震造成的财产损失应归类为实物资产损坏，这类风险源于自然灾害或其他外部事件对银行实物资产的破坏，而不是内部欺诈行为。
-    \end{itemize}
-    
+ 
     \textbf{D选项正确。}
     \begin{itemize}
-        \item 外部黑客入侵和勒索属于典型的外部欺诈案例。这类事件由外部人员实施，目的是通过非法手段获取经济利益，符合外部欺诈的定义特征。
+        \item This is the opposite of a hedge! The bank hedges with a swap where it is the floating-rate receiver and fixed-rate payer In regard to (A), (B), and (C), each is TRUE
     \end{itemize}
     
     \end{explanation}
@@ -364,22 +327,19 @@
 
 
  \begin{question}
-    Alex is a junior analyst in the operational risk department at Global Trust Bank. His manager Sarah asks him to classify recent operational risk events according to Basel Committee's seven event categories. Which operational risk is correctly categorized?\\
-    Alex是Global Trust Bank运营风险部门的一名初级分析师。他的经理Sarah要求他根据巴塞尔委员会的七个事件类别对最近的运营风险事件进行分类。哪一种运营风险被正确分类？
+    A large international bank uses EWMA for their risk system, with a decay factor of 0.92. On day T the forecast volatility for two variables,
+    X&Y, are identical at 1.25 and the current correlation forecast is 15.0. If on day T the realized returns for X & Y are 0.50 and -0.50
+respectively, which of the following is closest to the new correlation?
     \end{question}
     
     \begin{choices}
-        \item Reuters reports that a senior trader at Global Trust Bank manipulated the LIBOR submission process for three years, resulting in \$5 million illicit gains. Alex categorizes this as business disruption and system failures.\\
-        Reuters报道，Global Trust Bank的一名高级交易员连续三年操纵LIBOR提交过程，非法获利500万美元。Alex将此事归类为业务中断和系统故障。
+        \item  12.5%
         
-        \item The bank's core trading platform experienced a four-hour outage during peak market hours, causing significant trading delays. Alex classifies this as execution, delivery, and process management.\\
-        银行的核心交易平台在高峰市场时段发生四小时宕机，导致重大交易延误。Alex将此事归类为执行、交付和流程管理。
+        \item 13.4%
         
-        \item A severe earthquake damaged several branch offices in the coastal region, leading to \$20 million in property losses. Alex categorizes this as internal fraud.\\
-        一场严重的地震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
+        \item 15.0%震毁坏了沿海地区的一些分支机构，造成2000万美元的财产损失。Alex将此事归类为内部欺诈。
         
-        \item Local media reveals that external hackers breached the bank's security system and stole sensitive client data, demanding \$3 million in ransom. Alex classifies this as external fraud.\\
-        当地媒体透露，外部黑客入侵了银行的安保系统，窃取了敏感的客户数据，并索要300万美元的赎金。Alex将此事归类为外部欺诈。
+        \item  16.2%
     \end{choices}
     
     \begin{correctanswer}

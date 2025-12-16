@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  15 DEC 2025 12:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  16 DEC 2025 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**一级模考卷
-(./一级模考卷.tex
+**二级模考卷
+(./二级模考卷.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -679,8 +679,8 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count354
- (./一级模考卷.aux)
-\openout1 = `一级模考卷.aux'.
+ (./二级模考卷.aux)
+\openout1 = `二级模考卷.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
 LaTeX Font Info:    ... okay on input line 175.
@@ -795,21 +795,7 @@ Package hyperref Info: Link coloring OFF on input line 175.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./一级模考卷.book1)
-\tf@book1=\write5
-\openout5 = `一级模考卷.book1'.
-
-
-
-[1
-
-] (./一级模考卷.book2)
-\tf@book2=\write6
-\openout6 = `一级模考卷.book2'.
-
-
-
-[2] (./一级模考卷.book3
+(./二级模考卷.book1
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -818,99 +804,96 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
+\tf@book1=\write5
+\openout5 = `二级模考卷.book1'.
+
+
+
+[1
+
+] (./二级模考卷.book2)
+\tf@book2=\write6
+\openout6 = `二级模考卷.book2'.
+
+
+
+[2] (./二级模考卷.book3)
 \tf@book3=\write7
-\openout7 = `一级模考卷.book3'.
+\openout7 = `二级模考卷.book3'.
 
 
 
-[3] (./一级模考卷.book4)
+[3] (./二级模考卷.book4)
 \tf@book4=\write8
-\openout8 = `一级模考卷.book4'.
+\openout8 = `二级模考卷.book4'.
 
 
 
 [4]
-File: images/1·2.png Graphic file (type bmp)
-<images/1·2.png>
-File: images/1·2.png Graphic file (type bmp)
-<images/1·2.png>
-
 
 [5]
+File: images/2·3.png Graphic file (type bmp)
+<images/2·3.png>
+
 
 [6]
-File: images/1·4.png Graphic file (type bmp)
-<images/1·4.png>
+File: images/2·5.png Graphic file (type bmp)
+<images/2·5.png>
 
 
 [7]
-File: images/1·7·1.png Graphic file (type bmp)
-<images/1·7·1.png>
+Overfull \hbox (37.06894pt too wide) in paragraph at lines 403--403
+[]\TU/lmr/m/n/10.53937 The additional G-SIB requirement includes five buckets $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-
+ []
+
 
 
 [8]
-File: images/1·7·2.png Graphic file (type bmp)
-<images/1·7·2.png>
-
 
 [9]
 
 [10]
 
 [11]
-File: images/1·14.png Graphic file (type bmp)
-<images/1·14.png>
-
 
 [12]
 
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
-(fontspec)             with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
-
-
-
 [13]
+File: images/2·17·1.png Graphic file (type bmp)
+<images/2·17·1.png>
+File: images/2·17·2.png Graphic file (type bmp)
+<images/2·17·2.png>
+
 
 [14]
 
 [15]
 
 [16]
-File: images/1·22.png Graphic file (type bmp)
-<images/1·22.png>
+File: images/2·21.png Graphic file (type bmp)
+<images/2·21.png>
 
 
 [17]
+File: images/2·23.png Graphic file (type bmp)
+<images/2·23.png>
+
 
 [18]
+File: images/2·26.png Graphic file (type bmp)
+<images/2·26.png>
+
 
 [19]
 
 [20]
 
 [21]
+File: images/2·29.png Graphic file (type bmp)
+<images/2·29.png>
+File: images/2·30.png Graphic file (type bmp)
+<images/2·30.png>
+
 
 [22]
 
@@ -918,19 +901,27 @@ File: images/1·22.png Graphic file (type bmp)
 
 [24]
 
-[25] (./一级模考卷.aux)
+[25]
+
+[26]
+
+[27]
+
+[28]
+
+[29] (./二级模考卷.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27001 strings out of 475796
- 574096 string characters out of 5774033
- 971710 words of memory out of 5000000
- 49461 multiletter control sequences out of 15000+600000
- 563886 words of font info for 77 fonts, out of 8000000 for 9000
+ 26976 strings out of 475796
+ 571794 string characters out of 5774033
+ 967710 words of memory out of 5000000
+ 49441 multiletter control sequences out of 15000+600000
+ 563854 words of font info for 73 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,9n,111p,1082b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,111p,1542b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 一级模考卷.pdf (25 pages).
+Output written on 二级模考卷.pdf (29 pages).

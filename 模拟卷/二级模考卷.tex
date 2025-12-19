@@ -198,14 +198,15 @@
 
   % --- Question 1 ---
   \begin{question}
-      Consider an exposure with a value of $\$30.0$ million. In L(+)/P(-) format, its expected loss is $4.0\%$ with volatility of $15.0\%$; i.e., $\mu(L/P) = +4.0\%$, $\sigma = 15.0\%$. Conveniently, the exposure happens to have a normal distribution. Which is \textbf{nearest} to the single-period $97.5\%$ expected shortfall (ES)?
+      Consider an exposure with a value of $\$30.0$ million. In L(+)/P(-) format, its expected loss is $4.0\%$ with volatility of $15.0\%$; i.e., $\mu(L/P) = +4.0\%$, $\sigma = 15.0\%$. Conveniently, the exposure happens to have a normal distribution. Which is \textbf{nearest} to the single-period $97.5\%$ expected shortfall (ES)?\\
+      考虑一笔名义金额为 $\$30.0$ 百万美元的风险敞口。在 L(+)/P(-) 格式下，其预期损失为 $4.0\%$，波动率为 $15.0\%$；即 $\mu(L/P) = +4.0\%$，$\sigma = 15.0\%$。为方便起见，假定该敞口的分布为正态分布。单期 $97.5\%$ 期望损失（ES）中，哪一个数值与其\textbf{最接近}？
   \end{question}
   
   \begin{choices}
-      \item 6.60 million
-      \item 9.38 million
-      \item 11.72 million
-      \item 14.50 million
+      \item 6.60 million\\六百六十万
+      \item 9.38 million\\九百三十八万
+      \item 11.72 million\\一千一百七十二万
+      \item 14.50 million\\一千四百五十万
   \end{choices}
   
   \begin{correctanswer}
@@ -215,21 +216,24 @@
   \begin{explanation}
       \textbf{C选项正确。} If the distribution is normal, the $97.5\%$ ES is approximated by the $99.0\%$ VaR.
       In this case, we can use $\$30.0 * (4.0\% + 15\% * 2.33) = \$30.0 * 38.950\% = \$11.69$.
-      The exact $97.5\%$ ES is given by $\$11.7210$, so that is given as the correct choice.
+      The exact $97.5\%$ ES is given by $\$11.7210$, so that is given as the correct choice.\\
+      \textbf{C选项正确。} 若分布为正态分布，则 $97.5\%$ ES 可由 $99.0\%$ VaR 近似。此时，我们可以使用 $\$30.0 * (4.0\% + 15\% * 2.33) = \$30.0 * 38.950\% = \$11.69$。精确的 $97.5\%$ ES 为 $\$11.7210$，因此该数值被作为正确选项。
+
   \end{explanation}
   
   \checklist{Market Risk}{3}{2}
   
   % --- Question 2 ---
   \begin{question}
-      Among its financial positions, Zapex Financial Corporation has written a call, entered into an interest rate swap, and written a credit default swap. Among these (the following) four positions, which is the BEST example of wrong-way risk?
+      Among its financial positions, Zapex Financial Corporation has written a call, entered into an interest rate swap, and written a credit default swap. Among these (the following) four positions, which is the BEST example of wrong-way risk?\\
+      在Zapex Financial Corporation的金融头寸中，它写了看涨期权、进入了利率互换并写了信用违约互换。在这些（以下）四个头寸中，哪一个是最典型的反向风险？
   \end{question}
   
   \begin{choices}
-      \item Zapex has written (aka, sold) a call option to a counterparty in the same industry
-      \item Zapex is the fixed-rate payer in an interest rate swap during an economic recovery
-      \item Zapex has written (aka, sold) a credit default swap (CDS) to counterparty whose credit quality is positively correlated with the reference entity
-      \item Zapex has a position in a forward currency contract where its mark-to-market gain is positively correlated with the counterparty's default probability
+      \item Zapex has written (aka, sold) a call option to a counterparty in the same industry\\Zapex 向同一行业的对手方出售了看涨期权
+      \item Zapex is the fixed-rate payer in an interest rate swap during an economic recovery\\Zapex 是利率互换中的固定利率支付方，在经济复苏期间
+      \item Zapex has written (aka, sold) a credit default swap (CDS) to counterparty whose credit quality is positively correlated with the reference entity\\Zapex 向信用质量与参考实体正相关的对手方出售了信用违约互换
+      \item Zapex has a position in a forward currency contract where its mark-to-market gain is positively correlated with the counterparty's default probability\\Zapex 在远期货币合约中持有正相关于对手方违约概率的标记市值收益
   \end{choices}
   
   \begin{correctanswer}
@@ -252,14 +256,17 @@
   
   In regard to these December 2017 revisions to credit risk approaches in Basel III, which of the following statements is TRUE?
   
-  $^1$ ``High-level summary of Basel III reforms,'' (Basel Committee on Banking Supervision Publication, December 2017)
+  $^1$ ``High-level summary of Basel III reforms,'' (Basel Committee on Banking Supervision Publication, December 2017)\\
+  2017年12月，巴塞尔委员会（BCBS）对巴塞尔协议III框架进行了多项修订。其中包括对信用风险标准法的修订（委员会写道：“信用风险占据了大多数银行风险承担活动以及相应监管资本要求的主要部分。标准法被世界上大多数银行采用，包括那些不在巴塞尔委员会成员辖区内的银行”），以及对信用风险内部评级法（IRB）方法的修订（委员会写道：“金融危机凸显了与监管资本内部模型方法使用相关的一些缺陷，其中包括信用风险内部评级法（IRB）方法。这些缺陷包括IRB方法的过度复杂性、各银行内部模型化的IRB资本要求缺乏可比性，以及在对某些资产类别建模时缺乏稳健性”）。$^1$
+  关于2017年12月对巴塞尔III中信用风险计量方法所作的这些修订，以下哪一项表述是正确的？
+  $^1$ “High-level summary of Basel III reforms”（《巴塞尔协议III改革的高层次概要》），巴塞尔银行监管委员会出版物，2017年12月
   \end{question}
   
   \begin{choices}
-      \item In the standardized approach (SA) for residential real estate exposures, the risk weights are lower if the loan-to-value (LTV) falls into a lower band
-      \item The standardized approach (SA) eliminated the treatment of unrated exposures because all exposures are required to have an external credit rating
-      \item The internal ratings-based (IRB) approach removed the option to use the foundation IRB (F-IRB) because the advanced IRB (A-IRB) must be used for all asset classes
-      \item The internal ratings-based (IRB) approach removed the parameter input floors (in the case of PD, LGD, and EAD) to increase RWA variability across different banks
+      \item In the standardized approach (SA) for residential real estate exposures, the risk weights are lower if the loan-to-value (LTV) falls into a lower band\\在住宅房地产敞口中，标准法（SA）下，如果贷款价值比（LTV）落入较低的区间，则风险权重较低
+      \item The standardized approach (SA) eliminated the treatment of unrated exposures because all exposures are required to have an external credit rating\\标准法（SA）消除了对无评级敞口的治疗，因为所有敞口都必须具有外部信用评级
+      \item The internal ratings-based (IRB) approach removed the option to use the foundation IRB (F-IRB) because the advanced IRB (A-IRB) must be used for all asset classes\\内部评级法（IRB）消除了使用基础IRB（F-IRB）的选项，因为所有资产类别都必须使用高级IRB（A-IRB）
+      \item The internal ratings-based (IRB) approach removed the parameter input floors (in the case of PD, LGD, and EAD) to increase RWA variability across different banks\\内部评级法（IRB）消除了参数输入地板（在PD、LGD和EAD的情况下），以增加不同银行之间的RWA可变性
   \end{choices}
   
   \begin{correctanswer}
@@ -288,7 +295,8 @@
   
   % --- Question 4 ---
   \begin{question}
-      An asset that is not very liquid is quoted bid $\$89.00$, offer $\$96.00$. Which is \textbf{nearest} to the proportional bid-offer spread?
+      An asset that is not very liquid is quoted bid $\$89.00$, offer $\$96.00$. Which is \textbf{nearest} to the proportional bid-offer spread?\\
+      一笔不太流动的资产的报价为买入价 $\$89.00$，卖出价 $\$96.00$。哪一个数值与其\textbf{最接近}的相对买卖价差？
   \end{question}
   
   \begin{choices}
@@ -323,14 +331,20 @@
           \centering
           \includegraphics[width=0.6\textwidth]{2·5.png} 
       \end{figure}
-      Please note the regression is based on monthly returns. Each of the following statements is TRUE about these factor regression results EXCEPT which is false?
+      Please note the regression is based on monthly returns. Each of the following statements is TRUE about these factor regression results EXCEPT which is false?\\
+      Richard 对其公司旗舰组合进行了因子回归。他采用了三因子 Fama-French 模型设定，其中因子包括 MKT（市场）、SMB（小盘股减大盘股）以及 HML（价值股减成长股）。其因子回归结果如下所示。\\
+      \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.6\textwidth]{2·5.png}
+     \end{figure}
+     请注意，该回归是基于月度收益率进行的。以下关于这些因子回归结果的陈述中，除了哪一项为假，其余均为真
   \end{question}
       
       \begin{choices}
-          \item The portfolio's style appears to growth-oriented, small-cap
-          \item This portfolio manager(s) appear to be skillful; that is, the alpha is significant
-          \item The low adjusted $R^2$ and low standard errors imply these factors are not appropriate to this portfolio
-          \item The implied CAPM benchmark is leveraged as it borrows cash (i.e., T-bills) to invest more than 100\% (i.e., $> \$1.0$) in the market portfolio
+          \item The portfolio's style appears to growth-oriented, small-cap\\该组合的风格似乎是成长型、小盘股
+          \item This portfolio manager(s) appear to be skillful; that is, the alpha is significant\\该组合经理似乎很擅长；即，alpha 是显著的
+          \item The low adjusted $R^2$ and low standard errors imply these factors are not appropriate to this portfolio\\低调整后的 $R^2$ 和低标准误差表明这些因子不适合该组合
+          \item The implied CAPM benchmark is leveraged as it borrows cash (i.e., T-bills) to invest more than 100\% (i.e., $> \$1.0$) in the market portfolio\\隐含的 CAPM 基准被杠杆化，因为它借入现金（即，T-bills）以投资超过 100\%（即，$> \$1.0$）的市场组合
       \end{choices}
       
       \begin{correctanswer}
@@ -345,14 +359,15 @@
   
   % --- Question 6 ---
   \begin{question}
-      The riskfree rate is $5.0\%$ while the current stock price is $\$80.00$. Two most liquid options both have a strike price of $\$70.00$ such that the ratio $K/S(0) = 0.90$. In addition to the same strike price, both options have the same maturity of three months, $T = 0.25$ years. The implied volatility of the call is $30.0\%$, and the implied volatility of the put is $38.0\%$. What is the trade that exploits this scenario, if any?
+      The riskfree rate is $5.0\%$ while the current stock price is $\$80.00$. Two most liquid options both have a strike price of $\$70.00$ such that the ratio $K/S(0) = 0.90$. In addition to the same strike price, both options have the same maturity of three months, $T = 0.25$ years. The implied volatility of the call is $30.0\%$, and the implied volatility of the put is $38.0\%$. What is the trade that exploits this scenario, if any?\\
+      无风险利率为 $5.0\%$，当前股票价格为 $\$80.00$。两种最流动的期权都以 $\$70.00$ 的执行价格，使得比率 $K/S(0) = 0.90$。此外，两种期权都具有相同的到期时间，即三个月，$T = 0.25$ 年。看涨期权的隐含波动率为 $30.0\%$，看跌期权的隐含波动率为 $38.0\%$。如果存在这样的交易机会，请指出哪种交易策略最合适？
   \end{question}
   
   \begin{choices}
-      \item Buy call, sell put, and short the stock
-      \item Buy put, sell call, and buy the stock
-      \item Buy the call, buy the put, and short a straddle
-      \item Sell the call, sell the put, and buy a straddle
+      \item Buy call, sell put, and short the stock\\买入看涨期权，卖出看跌期权，并卖空股票
+      \item Buy put, sell call, and buy the stock\\买入看跌期权，卖出看涨期权，并买入股票
+      \item Buy the call, buy the put, and short a straddle\\买入看涨期权，买入看跌期权，并卖空跨式期权
+      \item Sell the call, sell the put, and buy a straddle\\卖出看涨期权，卖出看跌期权，并买入跨式期权
   \end{choices}
   
   \begin{correctanswer}
@@ -367,7 +382,8 @@
   
   % --- Question 7 ---
   \begin{question}
-      Consider a netting set with two derivative positions: an interest rate swap (IRS) with a marginal CVA of $-1.450$ and a cross-currency swap (CCS) with a marginal CVA of $-1.550$. If the first transaction is the cross-currency swap (CCS) and its incremental CVA is $-2.100$, then what is the incremental CVA of the IRS?
+      Consider a netting set with two derivative positions: an interest rate swap (IRS) with a marginal CVA of $-1.450$ and a cross-currency swap (CCS) with a marginal CVA of $-1.550$. If the first transaction is the cross-currency swap (CCS) and its incremental CVA is $-2.100$, then what is the incremental CVA of the IRS?\\
+      考虑一个净额结算集，其中包含两个衍生品头寸：一个利率互换（IRS），其边际CVA为 $-1.450$，一个交叉货币互换（CCS），其边际CVA为 $-1.550$。如果第一个交易是交叉货币互换（CCS），其增量CVA为 $-2.100$，那么利率互换（IRS）的增量CVA是多少？
   \end{question}
   
   \begin{choices}
@@ -399,14 +415,27 @@
           \item[V.] The CCyB requirement varies between zero and $2.5\%$ and is meant to protect the banking sector from periods of excess aggregate credit growth that have often been associated with the build-up of system-wide risks
       \end{itemize}
   
-      Is Mary correct in her summary?
-  \end{question}
+      Is Mary correct in her summary?\\
+      巴塞尔III第一支柱的核心特征是监管资本（即CET1、一级资本和总资本）要求，这些要求规定了相对于风险加权资产（RWA）的最低资本比例。除这些最低要求之外，截至2019年初（当各类缓冲全部过渡到位时），巴塞尔还规定了三种缓冲：资本留存缓冲（CCB）、全球系统重要性银行缓冲（G-SIB缓冲）以及逆周期资本缓冲（CCyB）。这些内容非常容易让人困惑，因此你请同事Mary总结这些额外缓冲及其设立动机。她给出了以下五点：
+      \begin{itemize}
+      \item[I.] 对这三类缓冲而言，额外缓冲部分都必须由CET1构成
+      \item[II.] 对这三类缓冲而言，一旦未满足缓冲要求，银行支付股利的能力将受到限制
+      \item[III.] CCB要求额外 $2.5\%$ 的CET1资本，旨在确保银行拥有一层在发生损失时可以被动用的额外可用资本。
+      \item[IV.] 额外的G-SIB要求包含五个档次 $\{1.0\%, 1.5\%, 2.0\%, 2.5\%, \text{or } 3.5\%\}$ https://www.bis.org/fsi/fsisummaries/g-sib\-framework.htm ，旨在降低全球系统重要性金融机构倒闭的可能性及其严重程度
+     \item[V.] CCyB要求在零和 $2.5\%$ 之间变动，旨在保护银行体系免受总量信贷过度增长时期的影响，而这种过度增长往往伴随着系统性风险的积聚
+     \end{itemize}
+     Mary在她的总结中是否正确？
+\end{question}
   
   \begin{choices}
-      \item No, unfortunately, none of her statements is correct
-      \item I. and II. are correct, but the others (III., IV., and V.) are wrong
+      \item No, unfortunately, none of her statements is correct\\
+      不幸的是，她的陈述没有一项是正确的
+      \item I. and II. are correct, but the others (III., IV., and V.) are wrong\\
+      I. 和 II. 是正确的，但其他（III.、IV. 和 V.）是错误的
       \item III., IV., and V. are correct, but the others (I. and II.) are wrong
-      \item Yes, all five statements are correct
+      III.、IV. 和 V. 是正确的，但其他（I. 和 II.）是错误的
+      \item Yes, all five statements are correct\\
+      是的，所有五项陈述都是正确的
   \end{choices}
   
   \begin{correctanswer}
@@ -1049,18 +1078,29 @@
       
       Inflows include:
       Deposit inflows = $100 +$
+
       Scheduled loan repayments = $60 +$
+
       Borrowings from the money market = $80 +$
+
       Sales of bank assets = $30 +$
+
       Revenues from sale of nondeposit services = $10$;
+
       for total inflows of $\$100 + \$60 + \$80 + \$30 + \$10 = 280.0$ million.
       
       Outflows include:
+
       Deposit withdrawals = $70 +$
+
       Acceptable loan requests = $90 +$
+
       Stockholder dividend payments = $20 +$
+
       Repayment of bank borrowings = $50 +$
+
       Operating expenses = $40$;
+
       for total outflows of $\$70 + \$90 + \$20 + \$50 + \$40 = \$270.0$ million
       
       Therefore, the projected net liquidity position = $\$280 - 270 = +10.0$ million.
@@ -1376,8 +1416,6 @@
   
   \checklist{Finance: Hedge Funds}{3}{2}
   
-  \end{document}
-
 
 
 
@@ -1409,8 +1447,11 @@ D
     Your colleague has drafted guidance for your firm’s computation of the credit value adjustment (CVA). The guidance begins with four principles: risk-neutrality, discounting, proportionality, and inseparability. The principles are summarized as follows:
 
     I. Risk-neutrality: CVA can be computed either with risk-neutral (aka, market-implied) or real-world (aka, historical) parameters
+
     II. Discounting: CVA should be discounted to present value, either via discounted expected exposure (EE) or via explicit discount factors
+
     III. Proportionality: CVA will be proportional to the likelihood of default (PD), the exposure (EE) and the percentage amount lost in default (LGD).
+
     IV. Inseparability: It should be impossible to separate the valuation of a transaction from its counterparty risk as measured by CVA
 
     Each of the principles is valid, EXCEPT which of the principles is INCORRECT?
@@ -1490,7 +1531,7 @@ D
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{2·44·1.png.png}
+        \includegraphics[width=0.4\textwidth]{2·44·1.png}
     \end{figure}
 
     Further, the maturities of these accounts are as follows:
@@ -1502,17 +1543,17 @@ D
     Consider the following possible term structures of expected cash flows:
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\textwidth]{2·44·2.png.png}
+        \includegraphics[width=0.4\textwidth]{2·44·2.png}
     \end{figure}
     Which term structure of expected cash flows is accurate for Geofinancial Bank?
 \end{question}
 
-\begin{choices}
-    \item [Option A]
-    \item [Option B]
-    \item [Option C]
-    \item [Option D]
-\end{choices}
+    \begin{choices}
+       \item  Series A
+       \item Series B
+       \item Series C
+       \item Series D
+    \end{choices}
 
 \begin{correctanswer}
 A
@@ -1635,9 +1676,9 @@ D
     Carey explains, ``Two events motivated creation of Basel I.
     \begin{itemize}
         \item First, the growth of cross-border finance continued after Herstatt's failure and it was evident that the G10 nations had a common interest in ensuring that banks had enough equity to absorb large losses.
-        \item Second, international banks were competing vigorously in each other's home countries. However, minimum levels of required capital varied significantly across nations, creating a perception that banks headquartered in countries with low minimums had a competitive advantage. In response, members of the BCBS decided to develop a global minimum standard to ``level the playing field'' and avoid a race to the bottom. That is, while the Basel Accord was partly about ensuring safety and soundness, negotiations also had an element of maneuvering for perceived competitive advantage.''
+        \item Second, international banks were competing vigorously in each other's home countries. However, minimum levels of required capital varied significantly across nations, creating a perception that banks headquartered in countries with low minimums had a competitive advantage. In response, members of the BCBS decided to develop a global minimum standard to ``level the playing field'' and avoid a race to the bottom. That is, while the Basel Accord was partly about ensuring safety and soundness, negotiations also had an element of maneuvering for perceived competitive advantage.''(Source: Chapter 19, 2020 FRM Part II: Operational Risk and Resiliency, 10th Edition. Pearson Learning Solutions.)
     \end{itemize}
-    \textit{(Source: Chapter 19, 2020 FRM Part II: Operational Risk and Resiliency, 10th Edition. Pearson Learning Solutions.)}
+   
 \end{explanation}
 
 \checklist{Finance: Basel Accords}{3}{2}
@@ -1662,11 +1703,12 @@ D
     \textbf{C选项正确。} Contingent liquidity captures cash or assets that are available when a stressing scenario materializes. The liquidity is contingent on the occurrence of the stress situation. Included within this category are financial assets that can be converted into cash without any material loss in value. Capturing contingent liquidity to cover stressed cash outflows represents the main reason for liquidity stress tests.
 
     See also the diagram below (inspired by Venkat’s Figure 3.1($\dagger$) but rendered by David Harper in MS Visio).
+    
+    Also, writes Venkat (emphasis ours), “\textbf{Liquid asset buffer}: The liquid asset buffer represents the contingent liquidity that is currently in place ... The fundamental characteristics of liquid asset buffer securities should include low credit and market risk, ease and certainty of valuation, trading in an active and sizable market, and low concentration of buyers and sellers. The liquid asset buffer should also meet operational requirements that ensure the liquidity is under the control of the central treasury area of the entity undergoing the stress test.”($\dagger$)
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{2·49.png}
     \end{figure}
-    Also, writes Venkat (emphasis ours), “\textbf{Liquid asset buffer}: The liquid asset buffer represents the contingent liquidity that is currently in place ... The fundamental characteristics of liquid asset buffer securities should include low credit and market risk, ease and certainty of valuation, trading in an active and sizable market, and low concentration of buyers and sellers. The liquid asset buffer should also meet operational requirements that ensure the liquidity is under the control of the central treasury area of the entity undergoing the stress test.”($\dagger$)
 \end{explanation}
 
 \checklist{Finance: Liquidity Risk}{3}{2}
@@ -2016,20 +2058,560 @@ B
 
 
 
+% --- Question 62 ---
+\begin{question}
+    Acme Financial has a position in five derivative contracts with its counterparty. The current mark-to-market values of the positions are the following: +12, -9, +20, -6, and +8. The five positions are all included in a single netting set. Let’s define the “netting benefit” as the reduction in current exposure due to netting; that is, the difference between the total current exposure with netting and the current exposure “as if” netting did not apply. What is the netting benefit in this set?
+\end{question}
 
+\begin{choices}
+    \item Zero
+    \item 3
+    \item 15
+    \item 25
+\end{choices}
 
+\begin{correctanswer}
+    C
+\end{correctanswer}
 
+\begin{explanation}
+    \textbf{C选项正确。} True: 15. Without netting, total exposure = $\max(0, +12) + \max(0, -9) + \max(0, 20) + \max(0, -6) + \max(0, +8) = 40$. With netting, total exposure = $+12 - 9 + 20 - 6 + 8 = 25$. Notice this is the same as $-(-9 - 6)$.
+\end{explanation}
 
+\checklist{Counterparty Credit Risk}{3}{2}
 
+% --- Question 63 ---
+\begin{question}
+    Patricia is a risk analyst who works for a large international bank. Her team is developing a new risk management framework for the bank and is currently working on risk identification. As part of extreme risk identification, Patricia has been assigned the important task of designing and performing the firm's scenario analysis. Soon she will facilitate a brainstorming session for which she has prepared the following documents: external loss data, internal loss data (including near misses), risk and control self-assessment (RCSA) results, key risk indicator scores, audit issues, and concentrated exposures.
 
+    Assuming she continues to follow best (or good) practice with respect to scenario analysis, which of the following is a TRUE statement?
+\end{question}
 
+\begin{choices}
+    \item Because most large operational losses result from external causes, her primary focus should be scenarios driven by external causes
+    \item She should compare her firm's generated scenarios to industry-specific list(s) published by external sources, but such a comparison should be made after her firm's own internal generation exercise
+    \item The initial output of scenario identification should be limited to approximately 10 or 12 scenarios in order to avoid the fallacy of missing the forest for the trees
+    \item Because the ultimate goal of scenario analysis is to predict the future with a sufficient degree of certainty, her process should acknowledge and elevate the role of human subjectivity
+\end{choices}
 
+\begin{correctanswer}
+    B
+\end{correctanswer}
 
+\begin{explanation}
+    \textbf{B选项正确。} B. True: She should compare her firm’s generated scenarios to industry-specific list(s) published by external sources, but such a
+    comparison should be made after her firm’s own internal generation exercise.According to GARP (section 3.2), ``Finally, it can be useful for a firm to compare the scenarios it has generated with an industry list of scenarios, to determine whether it has omitted any relevant scenarios or risk drivers. The Operational Risk Consortium for Insurance Companies (ORIC) and ORX are examples of industry-specific organizations that provide ready-made scenario lists to their members. It is recommended, however, for an organization to compare its scenario list to a list of scenarios from an external industry source only after the scenario generation exercise and not before, so that the externally procured scenarios do not bias the generation process.'' (\dag)
 
+    In regard to (A), (C), and (D), each is FALSE. Instead:
+    \begin{itemize}
+        \item Most large operational losses result from internal causes
+        \item GARP recommends more scenarios, e.g., at least 20 to 30 scenarios for mid-sized firms. For large international banks, $\sim$50 scenarios are not uncommon
+        \item Scenario analysis is not about predicting the future but identifying a range of scenarios. Further, says GARP, ``regulators demand that firms minimize subjectivity and biases as much as possible when conducting scenario identification and assessment.'' (\dag)
+    \end{itemize}
 
+    (\dag) 2023 GARP FRM Part II: Operational Risk and Resilience, Pearson Learning Solutions
+\end{explanation}
 
+\checklist{Operational Risk}{3}{2}
 
+% --- Question 64 ---
+\begin{question}
+    In order to identify the presence of illiquidity risk premium(s), Andrew Ang($\dagger$) references data presented by Antti Ilmanen in his well-regarded book Expected Returns (An Investor’s Guide to Harvesting Market Rewards). This data is displayed below as a scatterplot where the y-axis is the long-run average return of the asset class and the x-asset is an index of illiquidity. A higher index (ie, to the right) implies less liquidity. For example, the venture capital as an asset class is assigned to the least liquid (most illiquid) asset class but it also plots the highest long-run average return.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{2·64.png} 
+    \end{figure}
+    In regard to the illiquidity risk premium, which of the following statements it TRUE?
+\end{question}
 
+\begin{choices}
+    \item In general illiquid asset classes offer high risk-adjusted returns
+    \item These charts demonstrate that there do exists large illiquidity risk premiums ACROSS asset classes
+    \item There do exist large illiquidity risk premiums WITHIN many asset classes, but not ACROSS asset classes
+    \item Illiquid equities earn the same returns as liquid equities; and illiquid bonds earn the same returns as liquid bonds
+\end{choices}
 
+\begin{correctanswer}
+C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。} True: There do exist large illiquidity risk premiums WITHIN many asset classes, but not ACROSS asset classes.
+    In regard to (A), (B) and (D), each is FALSE.
+\end{explanation}
+
+\checklist{Finance: Portfolio Management}{3}{2}
+
+% --- Question 65 ---
+\begin{question}
+    Sally represents an investor who likes the strategy and style of a new, entrepreneurial start-up hedge fund. At her client's request, she is going to conduct due diligence. According to Kevin Mirabile (author of the hedge fund due diligence reading), as Sally conducts her diligence of the hedge fund on behalf of the investor, which of the following is the most important principle or ingredient?
+\end{question}
+
+\begin{choices}
+    \item She should observe strong evidence that the fund has eliminated business model risk via the SEC's Zeta Sigma AIML filter
+    \item She should confirm that the CEO is exceptionally good at all three top-level skills sets: investment, operational, and business
+    \item She should follow all the steps in the process but with flexibility as due diligence is also an art and each fund is unique with its own strategy
+    \item She should clarify that the fund's incentives are actual equity ownership grants rather than phantom equity and that they are granted throughout the organization to all full-time employees.
+\end{choices}
+
+\begin{correctanswer}
+C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。} She should follow all the steps in the process but with flexibility as due diligence is also an art and each fund is unique with its own strategy.
+    
+    GARP explains that “performing due diligence on a hedge fund is as much art as it is science. An investor must use a comprehensive checklist to ensure that nothing is left out or omitted yet remain free to ask open-ended questions that provide insights into a firm’s philosophy or culture. The guidelines discussed here for investment, operational, and business model risk assessment were for the most part generic. When performing due diligence, investors must modify their approach to be strategy specific.” (Summary, 2020 Financial Risk Management Part II: Risk Management and Investment Management, 10th Edition. Pearson Learning Solutions, 2019. VitalBook file.)
+    
+    In regard to false (A), (B) and (D):
+    \begin{itemize}
+        \item The Zeta Sigma AIML filter is fictional and business model risk cannot be eliminated
+        \item The authors point out that only “dinosaurs” (as founders) attempt to manage all three because managers are rarely good at all three (nevermind exceptionally good)! Managers should not choose to be both CEO and CIO.
+        \item Incentive structures vary by organization.
+    \end{itemize}
+\end{explanation}
+
+\checklist{Hedge Funds: Due Diligence}{3}{2}
+
+% --- Question 66 ---
+\begin{question}
+    Bertha is a risk manager who estimates the market risk of one of her firm’s portfolios. Because geometric returns are time-additive and arithmetic returns are cross-additive, she measures performance with both arithmetic and geometric returns. Her assumptions are gathered below:
+    \begin{itemize}
+        \item The portfolio value is $\$100.0$ million and she assumes there are 250 trading days per year.
+        \item Using geometric returns, the average return $+12.0\%$ per annum with a standard deviation of $28.0\%$
+        \item Using arithmetic returns, the average return $+14.0\%$ per annum with a standard deviation of $32.0\%$
+    \end{itemize}
+    She wants to measure the one-day $95.0\%$ value at risk (VaR) under both approaches: assuming arithmetic returns are normal (aka, normal VaR) and assuming geometric returns are normal; aka, lognormal VaR. She assumes the returns are serially independent. Which of the following is \textbf{nearest} to the difference between the one-day $95.0\%$ normal VaR and the one-day $95.0\%$ lognormal VaR?
+\end{question}
+
+\begin{choices}
+    \item The one-day $95\%$ normal VaR is approximately $\$37,700$ less than the one-day $95\%$ lognormal VaR
+    \item The one-day $95\%$ normal VaR is approximately $\$380,100$ less than the one-day $95\%$ lognormal VaR
+    \item The one-day $95\%$ normal VaR is approximately $\$29,400$ greater than the one-day $95\%$ lognormal VaR
+    \item The one-day $95\%$ normal VaR is approximately $\$448,800$ greater than the one-day $95\%$ lognormal VaR
+\end{choices}
+
+\begin{correctanswer}
+D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{Option D is correct.} The one-day $95\%$ normal VaR is approximately $\$448,800$ greater than the one-day $95\%$ lognormal VaR.
+    
+    The one-day $95\%$ normal VaR(\%) is given by:
+    $$-14\%/250 + 32\% \times 1/\sqrt{250} \times 1.645 = 3.273246\%$$
+    
+    The one-day $95\%$ lognormal VaR(\%) is given by:
+    $$1 - \exp(12\%/250 - 28\% \times 1/\sqrt{250} \times 1.645) = 2.824436\%$$
+    
+    The difference is $3.273246\% - 2.824436\% = 0.448810\%$, or about $0.448810\% \times \$100.0 \text{ million} = \$448,810$; with an exact quantile, the difference is $\$448,765.91$.
+\end{explanation}
+
+\checklist{Quantitative Analysis: Value at Risk}{3}{2}
+
+% --- Question 67 ---
+\begin{question}
+    The graph below represents a trilateral scenario between three different counterparties (called A, B, and C) with position sizes in a certain fungible (aka, interchangeable) product. The values represent notional sizes and the direction represents exposures:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{2·67.png} 
+    \end{figure}
+
+    In this ring, the current total notional is 370. If trade compression can be achieved, which of the following is an efficient solution?
+\end{question}
+
+\begin{choices}
+    \item a) A -> 25 -> B -> 60 -> C (new total notional = 110)
+    \item b) A -> 30 -> B -> 45 -> C (new total notional = 150)
+    \item c) B -> 35 -> C -> 30 -> A (new total notional = 65)
+    \item d) B -> 25 -> C -> 10 -> A (new total notional = 70)
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{Option D is correct.} D. True: B -> 25 -> C -> 10 -> A (new total notional = 70)
+    
+    The easiest approach is to identify the lowest exposure, in this case 50, and subtract it from all three. In this way,
+    \begin{itemize}
+        \item current A -> 50 -> B is eliminated;
+        \item current B -> 75 -> C is reduced to B -> $(75 - 50 = 25)$ -> C; and
+        \item current C -> 60 -> A is reduced to C -> $(60 - 50 = 10)$ -> A
+    \end{itemize}
+\end{explanation}
+
+\checklist{Finance}{3}{2}
+
+% --- Question 68 ---
+\begin{question}
+    Sally is a risk analyst at an international bank who is leading a project to conduct a causal analysis of the bank’s operational risk. The project will coordinate with, and inform modifications to, the bank’s loss database. One of the project’s goals is to analyze the organization’s controls, control layers, and key risk indicators (KRIs), and key control indicators (KCIs).
+
+    She prefers to use a factor model, and her candidates include the following approaches:
+    \begin{itemize}
+        \item \textit{Fault tree analysis (FTA)}: this deductive method will build a series of and/or conditions that can happen simultaneously or alternatively
+        \item \textit{Root-cause analysis with bowtie tool}: the visual tool will employ the 5-why analysis to probe deeply into the root causes of events
+        \item \textit{FAIR methodology}: this structured framework will generate scenarios, where each scenario will assume an asset at risk, a threat community, a threat type, and an effect
+        \item \textit{Swiss cheese model}; aka cumulative act effects: by anticipating active failures and identifying latent conditions, this model will promote effective control layering and identifying active failures
+    \end{itemize}
+
+    Each of these four approaches has advantages and disadvantages. For ANY of these approaches, which of the following paired statements (i.e., a single advantage paired with a single disadvantage) is a TRUE statement?
+\end{question}
+
+\begin{choices}
+    \item Fault tree analysis (FTA) is simple and non-reliant on domain expertise; however, it is unrealistic because it can only assume independent events
+    \item The Bowtie tool is proactive because it assesses the likelihood and/or impact of risks before they materialize by examining controls and indirect causes; however, it natively lacks a quantitative framework such that prioritization is harder
+    \item The FAIR model is inclusive because it emphasizes subjective identification (aka, findability) of factors; however, it is not a probabilistic approach and may be insufficient when distributions are required
+    \item The Swiss cheese model is elegant because clusters and their centroids (aka, holes) are quantitatively retrieved via k-means clustering; however, it struggles when incorporating human factors into a holistic risk perspective
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。} True: The Bowtie tool is proactive because it assesses the likelihood and/or impact of risks before they materialize by examining controls and indirect causes; however, it natively lacks a quantitative framework such that prioritization is harder
+    
+    In regard to (A), (C), and (D), each is false.
+\end{explanation}
+
+\checklist{Operational Risk}{3}{3}
+
+% --- Question 69 ---
+\begin{question}
+    According to Rose and Hudgins, the factors affecting the choice of non-deposit funding sources include the following: the relative costs of each funding source; the risk of each funding source, including the dependability and volatility; the length of time for which funds will be needed; the size of the financial institution needing the funds; and regulations on the use of other sources of funds. In regard to the various sources of non-deposit funding, which of the following statements is TRUE?
+\end{question}
+
+\begin{choices}
+    \item The Fed Funds market is the least popular because its effective interest rate is higher than the alternatives
+    \item Repurchase agreements are more popular than Fed Funds because they are simpler, however, they incur greater credit risk
+    \item The advantages of the commercial paper (CP) market are the lack of credit risk and consistently high (i.e., low volatility) credit availability, however, volume tends to be low and relative cost is high
+    \item Advances from Federal Home Loan Banks (aka, FHLBanks) are highly popular among thrifts and small banks as a stable source of flexible (with respect to maturity) funding at below-market interest rates
+\end{choices}
+
+\begin{correctanswer}
+D
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{D选项正确。} Advances from Federal Home Loan Banks (aka, FHLBanks) are highly popular among thrifts and small banks as a stable source of flexible (with respect to maturity) funding at below-market interest rates.
+
+From the Study Notes: “Advanced from Federal Home Loan Banks: In recent years the Federal Home Loan Bank (FHLB) System has moved into lending money to home mortgage lenders. Comprising 12 regional banks, the FHLB was created in 1932 as a source of stable funding for depository institutions facing potential runs by depositors. According to many scholars, the involvement of FHLB in the “sources of funds” arena has not only increased the amount of available funds for financial institutions that use FHLB as a source (with mortgages as collateral), but FHLB has also increased the liquidity of home loans and provided an incentive for more financial institutions to provide credit to the housing market.
+
+The presence of FHLB has quickly expanded in recent years, with over 6,000 commercial banks, over 1,300 thrift institutions, over 700 credit unions, and over 80 insurance companies now eligible to borrow from the FHLB. The draw to FHLB funds stems from it being a stable source of finance and offering below-market interest rates. Financial institutions can borrow from the FHLB for a flexible time period, ranging from overnight to over 20 years, with fixed or variable interest rates. Part of the reason the FHLB can offer below-market interest rates is because its federal charter allows it to borrow money on the cheap and pass those savings on to member banks, who are stockholders and receive dividends. The Federal Home Loan Banks System also has a favorable position in the event of failure. Legally, the FHLB is first in line, even in front of the FDIC, to recover funds if a failure occurs.”
+
+In regard to (A), (B) and (C), each is FALSE. Instead:
+\begin{itemize}
+    \item The Fed Funds market is the most popular and its effective interest rate tends to be LOWER than the alternatives, although it is VOLATILE (is its downside)
+    \item Repurchase agreements are less popular and more complex than Fed Funds; also, they incur less credit risk because they are secured by collateral (they are often viewed as “collateralized Fed funds transactions”).
+    \item Commercial paper (CP) is high in volume, moderate in cost (advantages) but volatility in available capacity and subject to credit risk (disadvantages)
+\end{itemize}
+\end{explanation}
+
+\checklist{Finance: Non-deposit Funding Sources}{3}{2}
+
+% --- Question 70 ---
+\begin{question}
+    We can add a momentum factor to the Fama-French so that it becomes a four-factor model. This momentum factor is denoted by WML (i.e., past winners minus past losers) or UMD (i.e., stocks that have gone up minus stocks that have gone down). At least with respect to the historical window analyzed, which is the long period from January 1965 to December 2011, which of the following statements is TRUE about the momentum factor?
+\end{question}
+
+\begin{choices}
+    \item Momentum is a negative feedback strategy which is inherently stabilizing
+    \item The momentum factor is observed in equities but is NOT observed in bonds, commodities, and real estate
+    \item Momentum investing by definition is an anti-value strategy; correlations between HML and WML are strongly negative
+    \item The cumulated profits on momentum strategies have been an order of magnitude larger than cumulated profits on either size or value
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{Option D is correct.} The cumulated profits on momentum strategies have been an order of magnitude larger than cumulated profits on either size or value.
+    
+    In regard to (A), (B) and (C), each is false.
+\end{explanation}
+
+\checklist{Factor Investing}{3}{2}
+
+% --- Question 71 ---
+\begin{question}
+    Peter has collected the historical sample of daily profit and loss (P/L) observations for his firm's new equity portfolio but his dataset only contains 250 days. Ideally, he would prefer 1,000 observations because the board asked for a presentation that displays value at risk (VaR) at confidence levels of ($99.0\%$, $99.1\%$, ..., $99.8\%$, and $99.9\%$). The board also expressed a preference for a non-parametric approach; apparently, some directors are concerned that parametric approaches might be too difficult to communicate and understand. In addition to granular VaR confidence levels (e.g., $99.1\%$), if possible, the board would like to see confidence INTERVALS around the VaR estimates in order to gauge their precision; e.g., a $9X\%$ confidence interval around the $99.1\%$ VaR.
+
+    Therefore, Peter considers the following four approaches: basic historical simulation (BHS), bootstrapped historical simulation (BOOT), historical simulation using non-parametric density estimation (NPDE), and age-weighted historical simulation (AWHS). Given the realities of his relatively small, empirical dataset, which of the following statements is TRUE?
+\end{question}
+
+\begin{choices}
+    \item Peter can easily eliminate the BHS approach because basic historical simulation cannot even retrieve a $99.10\%$ (or $99.20\%$ etc.) VaR quantile due to the fact that $1/250$ is greater than $0.10\%$
+    \item Peter has a dilemma (i.e., none of the four approaches is feasible) as the construction of confidence levels around VaR estimates will require him to employ a parametric (or semi-parametric at least) approach
+    \item Peter has a dilemma (i.e., no approach is good here) simply because his sample size is too small to meet the board's preferences under any of the four approaches
+    \item Non-parametric density estimation (NPDE) can retrieve VaRs at granular confidence levels (e.g., $99.10\%$) as if the distribution is a continuous probability density function (pdf)
+\end{choices}
+
+\begin{correctanswer}
+D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{D选项正确。} Non-parametric density estimation (NPDE) can retrieve VaRs at granular confidence levels (e.g., $99.10\%$) as if the distribution is a continuous probability density function (pdf)
+
+    In regard to (A), (B), and (C), each is FALSE. Instead, the following are TRUE statements:
+    \begin{itemize}
+        \item Basic historical simulation definitely does return a $99.1\%$ VaR here it will (probably) be the same as the $99.0\%$ VaR
+        \item Due to the convenient power of order statistics, confidence intervals can be generated under all four approaches; or really, confidence intervals can be built for any parametric or non-parametric VaR or ES estimate!
+        \item The small sample size might favor the bootstrap or the non-parametric density estimation
+    \end{itemize}
+\end{explanation}
+
+\checklist{Market Risk Measurement and Management}{3}{2}
+
+% --- Question 72 ---
+\begin{question}
+    Two counterparties (A and B, illustrated below) have between them a set of OTC derivative transactions.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{2·72.png} 
+    \end{figure}
+    Associated with the positions, these counterparties also entered into a bilateral collateral agreement prior to initiation of the underlying transactions. Each of the following is true EXCEPT which is false?
+\end{question}
+
+\begin{choices}
+    \item If they followed best practice, collateral posting should be continuous for both of them
+    \item As a counterparty risk mitigant, collateral posting is generally superior to a reset feature
+    \item Variation margin is a type of collateral that aims to track the change in valuation (aka, change in MTM) of the position over time
+    \item As a bilateral agreement, in the case of a positive MTM, the party will call for collateral; and in the case of negative MTM, the party will be required to themselves post collateral
+\end{choices}
+
+\begin{correctanswer}
+A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。} False. Continuous posting of collateral is operationally too expensive In regard to (B), (C) and (D), each is TRUE.
+\end{explanation}
+
+\checklist{Counterparty Credit Risk}{3}{2}
+
+% --- Question 73 ---
+\begin{question}
+    MetroScape Bank prides itself on its modern banking solutions and customer-centric approach. During the last quarter, however, a series of events occurred that suggest the bank’s controls should (or at least can) be improved. Specifically, each of the four major types of human error was observed:
+    \begin{itemize}
+        \item I. Jane, a seasoned cashier at MetroScape, had been handling cash transactions for years. One busy Friday afternoon, while multitasking between customer queries and cash handling, she inadvertently gave out \$500 more to a customer than he had withdrawn. Her muscle memory, developed from years of handling similar transactions, failed her in that moment of distraction.
+        \item II. MetroScape recently redesigned its compensation and incentive programs. The incentive program rewards cross-selling, especially when a valuable customer adds an additional account and/or utilizes a new program. Due to this incentive plan, some branches aggressively cross-sold products to existing customers without sufficient regard for product suitability. Several customers called headquarters to complain about the sales tactics.
+        \item III. A new investment product was introduced at MetroScape, and the bank’s financial advisors were tasked with guiding interested clients. Tom, one of the advisors, faced a unique situation where a client wanted to merge this new product with another existing one. Unsure and without prior experience or training in this scenario, Tom made an educated guess. Unfortunately, his decision led to significant tax implications for the client.
+        \item IV. Lucy, a senior executive at MetroScape, was aware of the bank’s policy against insider trading. However, tempted by the prospect of significant personal gain, she used confidential information about an upcoming merger to buy shares in a company that MetroScape was about to acquire. Her actions, driven by personal greed, were a clear violation of both the bank’s policy and federal regulations.
+    \end{itemize}
+    In regard to these events and their associated control implications, each of the following statements is true EXCEPT which is false?
+\end{question}
+
+\begin{choices}
+    \item The fourth (IV.) is a violation which is best mitigated by supervisory controls
+    \item The third (III.) is a type of knowledge-based (KB) mistake which can be mitigated by directive controls
+    \item The second (II.) is a quality-based (QB) mistake where the best mitigation is typically lean Six Sigma response
+    \item The first (I.) is a skill-based (SB) slip, and root-cause analysis may imply process re-engineering, environmental factors, and/or workflow changes
+\end{choices}
+
+\begin{correctanswer}
+    C
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{C选项正确。} False. This is a knowledge-based (KB) mistake. According to the reading (GARP), the relevant response(s) to knowledge-based mistakes are directive controls.
+    
+    In regard to (A), (B), and (D), each is TRUE.
+\end{explanation}
+
+\checklist{Operational Risk: Human Error}{3}{2}
+
+% --- Question 74 ---
+\begin{question}
+    What is the primary (valid) reason that banks need proper liquidity transfer pricing (LTP)?
+\end{question}
+
+\begin{choices}
+    \item Because banks engage in maturity transformation
+    \item Because there is a lack of liquidity transformation products in the marketplace
+    \item Because the true economic cost of liquidity risk is approximately zero
+    \item Because markets are volatile; e.g., volatility 1-year LIBOR/Swap spread
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。} True: Because banks engage in maturity transformation (maturity transformation is the recurring causal theme in the reading).
+    
+    \textit{As Grant explains (in 3.1), Why banks need LTP}: In their daily operations, banks make money by funding long-term loans (assets) with short-term deposits (liabilities), a process that is commonly referred to as maturity transformation. As pointed out by the BCBS (September 2008), this “makes banks inherently vulnerable to liquidity risk, both of an institution-specific nature and that which affects markets as a whole” (p 3). But provided banks use LTP to account for the costs, benefits and risks of liquidity in product pricing, new product approval processes and profit and performance assessments, they should not be discouraged from engaging in maturity transformation. Banks with poor LTP practices are more likely to accrue larger amounts of long-term illiquid assets, contingent commitments and shorter-dated volatile liabilities, substantially increasing their vulnerability to funding shortfalls.” (Joel Grant, 2011. “Liquidity Transfer Pricing: A Guide to Better Practice,” Occasional Paper, Financial Stability Board, Bank for International Settlements.)
+    
+    In regard to (B), (C) and (D) each is FALSE.
+\end{explanation}
+
+\checklist{Liquidity Risk Management}{3}{2}
+
+% --- Question 75 ---
+\begin{question}
+    In the paper “Finding Bernie Madoff” (by Dimmock and Gerken), the authors produce several findings as they attempt to test the predictability of investment fraud. In regard to their findings specifically, each of the following is TRUE except which is not?
+\end{question}
+
+\begin{choices}
+    \item Disclosed soft dollars do not significantly predict fraud
+    \item Direct Theft and Self Dealing are the most common types of fraud
+    \item Current disclosures required by the SEC have significant power for predicting future fraud
+    \item Investors (on average) are compensated for fraud risk through superior performance and/or higher fees
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{D选项正确。} FALSE. Instead, the authors find that investors are NOT compensated for fraud risk, either through superior performance and/or higher fees
+    
+    In regard to (A), (B), and (C), each is TRUE.
+\end{explanation}
+
+\checklist{Operational Due Diligence}{3}{2}
+
+% --- Question 76 ---
+\begin{question}
+    Ralph employed the peaks-over-threshold (POT) approach under extreme value theory (EVT) to the estimation of value at risk (VaR) for his firm’s portfolio. He has four years of data, $n = 1,000$ days. He would prefer to apply a maximum likelihood estimation method (aka, MLE) to parameter estimation, but he thinks he needs to choose the threshold first. When he selects a threshold of $u = 4.0\%$, he observes $N(u) = 28$ exceedances such that $N(u)/n = 2.80\%$. Fitting the data generates these parameters: scale, $\beta = 0.80\%$; and tail index, $\xi = 0.310$. Based on these assumptions, the $99.90\%$ confident VaR is $8.670\%$.
+
+    He subsequently decides to increases the threshold from $4.0\%$ to $5.0\%$ while retaining the tail index at $0.310$ and the scale parameter at $0.80\%$. The number of exceptions declines to $N(u) = 17$ such that $N(u)/n = 17/1,000 = 1.70\%$. His revised $99.90\%$ VaR is similar at $8.630\%$. In regard to choosing a threshold, which of the following statements is TRUE?
+\end{question}
+
+\begin{choices}
+    \item The higher threshold offers the benefit of lower bias but the drawback of higher variance
+    \item The higher threshold offers the benefit of lower variance but the drawback of higher bias
+    \item Because the desired confidence is $99.90\%$ and $0.10\% = 1/1,000$, the (optimal) threshold should be set equal to the dataset’s second-worst return
+    \item He can avoid a subjective choice of the threshold by applying an analytical maximum log-likelihood estimation (MLE) function to all three parameters simultaneously
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。} We confront a bias-variance tradeoff in either EVT approach. In the blocks approach, the tradeoff is a reflection of the size (or number) of blocks. In the POT approach, it is a reflection of the arbitrary threshold choice, which is analogous to the block size choice. If the threshold is too low, then our model will not comport with EVT’s asymptotic properties and the model is likely to be inaccurate (aka, biased). A higher threshold implies lower bias (aka, greater accuracy) but this necessarily fits to fewer data points such that we can expect higher variance (aka, less precision).
+
+    Dowd$_{(\dagger)}$ references the bias-variance tradeoff in the context of semi-parametric estimation methods (e.g., Hill estimator): “... procedure based on the fact that the choice of $k$ implies a trade-off between bias and variance. If we increase $k$, we get more data and so move to the centre of the distribution. This increases the precision of our estimator (and therefore reduces its variance), but also increases the bias of the tail estimator by placing relatively more weight on observations closer to the centre of our distribution. Alternatively, if we decrease $k$ and move further out along the tail, we decrease bias but have fewer data to work with and get a higher variance.”
+\end{explanation}
+
+\checklist{Quantitative Analysis: Extreme Value Theory}{3}{2}
+
+% --- Question 77 ---
+\begin{question}
+    Consider two counterparties who are about to enter into bilateral framework under an ISDA Master Agreement. They are currently negotiating the credit support annex (CSA) which will govern the terms of collateral posting. Each of the following is true EXCEPT which is inaccurate?
+\end{question}
+
+\begin{choices}
+    \item If the goal is to minimize funding costs, both parties prefer to avoid rehypothecation rights
+    \item With respect to VARIATION margin, both parties probably prefer rehypothecation rights; and probably will NOT require segregation
+    \item With respect to INITIAL margin, both parties probably are likely to insist on non-rehypothecation; and probably will require segregation
+    \item Whoever is the collateral poster (aka, collateral giver) prefers the method of Security Interest rather than the method of Title Transfer (which is preferred by the collateral receiver)
+\end{choices}
+
+\begin{correctanswer}
+    A
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{A选项正确。} A. FALSE. Rehypothecation minimizes funding cost. The trade-off is that rehypothecation minimizes funding cost but increases counterparty risk.
+    
+    In regard to (B), (C) and (D), each is TRUE.
+\end{explanation}
+
+\checklist{Counterparty Risk}{3}{2}
+
+% --- Question 78 ---
+\begin{question}
+    Reporting on operational risks presents a unique set of challenges. As GARP explains, ``Unlike other risk factors, assessing the volatility of operational risk is especially challenging given this is a relatively new discipline. Credit and market risk metrics often have over a hundred years of historical trend information. Operational risk measurement is relatively new, requiring more attention to the qualitative and quantitative tracking measures used to evaluate changes in risk profiles.''({\dag})
+
+    Let’s assume the organization’s central operational risk function (ORF) has primary responsibility for operational risk reporting. In regard to the challenges to reporting operational risks, each of the following statements is true EXCEPT which is false?
+\end{question}
+
+\begin{choices}
+    \item The ORF should focus scarce resources on preventing and addressing major incidents rather than getting distracted by daily volatility
+    \item When the purpose is benchmarking across business units, losses should be reported in dollar terms (i.e., rather than percentage or basis points) because low percentages could mask high dollar losses
+    \item The ORF should regularly review small, frequent losses to spot potential control breaches or process flaws; if these losses are consistent and random, consider including their average cost in the service price
+    \item The ORF can address the challenge of compiling qualitative risk data through either (i) conversion and summation, (ii) categorization, and (iii) worst-case reporting.
+\end{choices}
+
+\begin{correctanswer}
+    B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。} False. Instead, percentages are preferred to dollars.
+
+    Says GARP, ``Reporting operational losses as a percentage of gross income, of total cost (for a cost center), total budget (for a project), or in basis points of capital facilitates the comparability of similar entities across business units. Reporting in percentages instead of absolute values also makes the reporting scalable and applicable to entities of all sizes. Ideally, operational risk managers will also better understand the cost–benefit assessment and trade-offs related to implementing the appropriate controls and operating restrictions.''({\dag})
+
+    In regard to (A), (C) and (D), each is TRUE.
+    \begin{itemize}
+        \item The ORF should focus scarce resources on preventing and addressing major incidents rather than getting distracted by daily volatility. Says GARP, ``A proper allocation of risk management resources is to focus on the prevention and remediation of large incidents and not to be dispersed and distracted by the containment of daily volatility''({\dag})
+        \item The ORF should regularly review small, frequent losses to spot potential control breaches or process flaws; if these losses are consistent and random, consider including their average cost in the service price. Says GARP, ``Small and frequent losses should be identified and analyzed regularly to detect any pattern that could signal a breach in control or a structural flaw in a process that would warrant an action plan. If these losses occur randomly, without any specific structure, and are structurally limited, stable, and repetitive, their average cost can be passed through to the customers as part of the cost of services.''({\dag})
+        \item The ORF can address the challenge of compiling qualitative risk data through either (i) conversion and summation, (ii) categorization, and (iii) worst-case reporting.
+    \end{itemize}
+
+    ({\dag}) GARP Chapter 6, Risk Reporting, 2023 FRM Part 2, Topic 7.
+\end{explanation}
+
+\checklist{Operational Risk Reporting}{3}{2}
+
+% --- Question 79 ---
+\begin{question}
+According to Patrick McGuire, which of the following best summarizes the proximate cause of the US dollar shortage during the global financial crisis (GFC)?
+\end{question}
+
+\begin{choices}
+    \item Depositors initiated a classic run on the banks and converted their domestic deposits to foreign currency
+    \item The effective maturity of banks’ dollar funding lengthened while their dollar assets shortened, and this decreased their maturity mismatch.
+    \item The effective maturity of banks’ dollar funding shortened while their dollar assets lengthened, and this increased their maturity mismatch.
+    \item Banks shifted their portfolios to non-bank assets that included banks’ retail and corporate lending, lending to hedge funds, and holdings of securities ranging from US Treasury and agency securities to structured finance products
+\end{choices}
+
+\begin{correctanswer}
+C
+\end{correctanswer}
+
+\begin{explanation}
+\textbf{Option C is correct.} The effective maturity of banks’ dollar funding shortened while their dollar assets lengthened, and this increased their maturity mismatch.
+
+McGuire (emphasis ours): “Events during the crisis led to severe disruptions in banks’ sources of short-term funding. Interbank markets seized up, and dislocations in FX swap markets made it even more expensive to obtain US dollars via swaps. Banks’ funding pressures were compounded by instability in non-bank sources of funds as well, notably dollar money market funds and dollar-holding central banks. The market stress meant that the effective maturity of banks’ US dollar funding shortened just as that of their US dollar assets lengthened, since many assets became difficult to sell in illiquid markets. This endogenous rise in maturity mismatch, difficult to hedge ex ante, generated the global US dollar shortage. Our estimate of the size of banks’ US dollar funding gaps at the onset of the crisis shed light on why the international policy response was necessary, and why it took the form of a global network of central bank swap lines.” (Patrick McGuire, Gotz von Peter, 2009. “The US Dollar Shortage in Global Banking and the International Policy Response,” BIS Working Papers, Bank for International Settlements.)
+\end{explanation}
+
+\checklist{Finance: Global Banking}{3}{2}
+
+% --- Question 80 ---
+\begin{question}
+    Janice is preparing to conduct factor regressions in order to discover the factor loadings in her firm’s equity portfolio. She will begin by regressing three explanatory (aka, independent) variables: the market factor (MKT) plus two additional factors. Each of the following pairs of factors are good candidates for these additional factors EXCEPT which of the following pair is NOT a good candidate?
+\end{question}
+
+\begin{choices}
+    \item Quality and momentum (style factors)
+    \item Strategy and reputation (style factors)
+    \item Economic growth and inflation (macro factors)
+    \item Real interest rates and liquidity (macro factors)
+\end{choices}
+
+\begin{correctanswer}
+B
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{B选项正确。} False. In reality, it is difficult to invest directly in reputation, and it seems almost impossible to imagine how to operationalize strategy as an investable factor.
+
+    According to Andrew Ang (see https://www.blackrock.com/us/individual/investment-ideas/what-is-factor-investing) there are two primary types of factors: macroeconomic factors and style factors. Macroeconomic factors include economic growth, credit (default risk), real interest rates, emerging markets (political and sovereign risk), inflation, and liquidity. Style factors include value, quality, minimum volatility, size, momentum, and carry.
+
+    In this regard, each of (A), (C) and (D) is TRUE:
+    \begin{itemize}
+        \item Quality and momentum are genuine style factors
+        \item Economic growth and inflation are genuine macro factors
+    \end{itemize}
+\end{explanation}
+
+\checklist{Factor Investing}{3}{2}
 
 \end{document}

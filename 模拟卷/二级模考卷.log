@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  16 DEC 2025 18:22
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.14)  19 DEC 2025 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,88 +811,96 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [1
 
-] (./二级模考卷.book2)
+] (./二级模考卷.book2
+
+[2])
 \tf@book2=\write6
 \openout6 = `二级模考卷.book2'.
 
 
 
-[2] (./二级模考卷.book3)
+[3] (./二级模考卷.book3)
 \tf@book3=\write7
 \openout7 = `二级模考卷.book3'.
 
 
 
-[3] (./二级模考卷.book4)
+[4] (./二级模考卷.book4)
 \tf@book4=\write8
 \openout8 = `二级模考卷.book4'.
 
 
 
-[4]
-
 [5]
+
+[6]
 File: images/2·3.png Graphic file (type bmp)
 <images/2·3.png>
 
 
-[6]
+[7]
 File: images/2·5.png Graphic file (type bmp)
 <images/2·5.png>
 
 
-[7]
-Overfull \hbox (37.06894pt too wide) in paragraph at lines 403--403
-[]\TU/lmr/m/n/10.53937 The additional G-SIB requirement includes five buckets $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-
+[8]
+File: images/2·5.png Graphic file (type bmp)
+<images/2·5.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
+
  []
 
 
 
-[8]
-
 [9]
 
 [10]
+Overfull \hbox (37.06894pt too wide) in paragraph at lines 428--428
+[]\TU/lmr/m/n/10.53937 The additional G-SIB requirement includes five buckets $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-
+ []
+
+
+Overfull \hbox (19.73163pt too wide) in paragraph at lines 428--428
+[]\TU/SimSun(0)/m/n/10.53937 额 外 的 \TU/lmr/m/n/10.53937 G-SIB \TU/SimSun(0)/m/n/10.53937 要 求 包 含 五 个 档 次 $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-sib-framework.htm
+ []
+
+
 
 [11]
 
 [12]
 
 [13]
-File: images/2·17·1.png Graphic file (type bmp)
-<images/2·17·1.png>
-File: images/2·17·2.png Graphic file (type bmp)
-<images/2·17·2.png>
-
 
 [14]
 
 [15]
 
 [16]
+File: images/2·17·1.png Graphic file (type bmp)
+<images/2·17·1.png>
+File: images/2·17·2.png Graphic file (type bmp)
+<images/2·17·2.png>
+
+
+[17]
+
+[18]
+
+[19]
 File: images/2·21.png Graphic file (type bmp)
 <images/2·21.png>
 
 
-[17]
+[20]
 File: images/2·23.png Graphic file (type bmp)
 <images/2·23.png>
 
 
-[18]
+[21]
 File: images/2·26.png Graphic file (type bmp)
 <images/2·26.png>
-
-
-[19]
-
-[20]
-
-[21]
-File: images/2·29.png Graphic file (type bmp)
-<images/2·29.png>
-File: images/2·30.png Graphic file (type bmp)
-<images/2·30.png>
 
 
 [22]
@@ -900,8 +908,14 @@ File: images/2·30.png Graphic file (type bmp)
 [23]
 
 [24]
+File: images/2·29.png Graphic file (type bmp)
+<images/2·29.png>
+
 
 [25]
+File: images/2·30.png Graphic file (type bmp)
+<images/2·30.png>
+
 
 [26]
 
@@ -909,19 +923,97 @@ File: images/2·30.png Graphic file (type bmp)
 
 [28]
 
-[29] (./二级模考卷.aux)
+[29]
+
+[30]
+
+[31]
+
+[32]
+
+[33]
+File: images/2·44·1.png Graphic file (type bmp)
+<images/2·44·1.png>
+File: images/2·44·2.png Graphic file (type bmp)
+<images/2·44·2.png>
+File: images/2·44·3.png Graphic file (type bmp)
+<images/2·44·3.png>
+
+
+[34]
+
+[35]
+
+[36]
+File: images/2·49.png Graphic file (type bmp)
+<images/2·49.png>
+
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+File: images/2·57.png Graphic file (type bmp)
+<images/2·57.png>
+
+
+[42]
+
+[43]
+
+[44]
+
+[45]
+File: images/2·64.png Graphic file (type bmp)
+<images/2·64.png>
+
+
+[46]
+
+[47]
+File: images/2·67.png Graphic file (type bmp)
+<images/2·67.png>
+
+
+[48]
+
+[49]
+
+[50]
+
+[51]
+File: images/2·72.png Graphic file (type bmp)
+<images/2·72.png>
+
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56]
+
+[57] (./二级模考卷.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26976 strings out of 475796
- 571794 string characters out of 5774033
- 967710 words of memory out of 5000000
- 49441 multiletter control sequences out of 15000+600000
+ 27256 strings out of 475796
+ 586416 string characters out of 5774033
+ 971710 words of memory out of 5000000
+ 49713 multiletter control sequences out of 15000+600000
  563854 words of font info for 73 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,6n,111p,1542b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,111p,1542b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 二级模考卷.pdf (29 pages).
+Output written on 二级模考卷.pdf (57 pages).

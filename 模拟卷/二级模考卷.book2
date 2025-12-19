@@ -1,33 +1,72 @@
-\contentsline {subsection}{题号1考察: Market Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{5}{Item.4}%
-\contentsline {subsection}{题号3考察: Operational Risk and Resiliency \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{6}{Item.12}%
-\contentsline {subsection}{题号4考察: Market Liquidity \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{7}{Item.16}%
-\contentsline {subsection}{题号5考察: Finance: Portfolio Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{7}{Item.20}%
-\contentsline {subsection}{题号6考察: Derivatives: Options \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{8}{Item.24}%
-\contentsline {subsection}{题号8考察: Finance: Regulatory Capital \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{9}{Item.32}%
-\contentsline {subsection}{题号9考察: Market Risk: Liquidity Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{10}{Item.36}%
-\contentsline {subsection}{题号10考察: Portfolio Management: Fundamental Law of Active Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{10}{Item.40}%
-\contentsline {subsection}{题号11考察: Term Structure Models \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{10}{Item.44}%
-\contentsline {subsection}{题号12考察: Finance: Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{12}{Item.55}%
-\contentsline {subsection}{题号13考察: Finance: Basel Accords \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{12}{Item.59}%
-\contentsline {subsection}{题号14考察: Financial Markets and Products \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{13}{Item.63}%
-\contentsline {subsection}{题号15考察: Finance: CAPM \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{13}{Item.67}%
-\contentsline {subsection}{题号16考察: Fixed Income: Vasicek Model \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{14}{Item.71}%
-\contentsline {subsection}{题号17考察: Finance: Financial Statement Analysis \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{15}{Item.75}%
-\contentsline {subsection}{题号18考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{15}{Item.79}%
-\contentsline {subsection}{题号19考察: Liquidity Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{16}{Item.83}%
-\contentsline {subsection}{题号20考察: Finance: Factor Theory \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{17}{Item.87}%
-\contentsline {subsection}{题号21考察: Fixed Income \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{17}{Item.91}%
-\contentsline {subsection}{题号22考察: Credit Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{18}{Item.95}%
-\contentsline {subsection}{题号23考察: Market Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{19}{Item.99}%
-\contentsline {subsection}{题号26考察: Fixed Income Analysis \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{20}{Item.111}%
-\contentsline {subsection}{题号27考察: Credit Risk \textcolor {blue}{}}{21}{Item.115}%
-\contentsline {subsection}{题号28考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{22}{Item.119}%
-\contentsline {subsection}{题号29考察: Finance \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{22}{Item.123}%
-\contentsline {subsection}{题号30考察: Finance: Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{23}{Item.127}%
-\contentsline {subsection}{题号31考察: Fixed Income: Hedging \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{24}{Item.131}%
-\contentsline {subsection}{题号32考察: Credit Risk: Wrong-Way Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{24}{Item.135}%
-\contentsline {subsection}{题号33考察: Operational Risk: Model Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{25}{Item.139}%
-\contentsline {subsection}{题号34考察: Market Risk: Interest Rate Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{25}{Item.143}%
-\contentsline {subsection}{题号37考察: Credit Risk: Retail vs Corporate \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{26}{Item.155}%
-\contentsline {subsection}{题号38考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{27}{Item.159}%
-\contentsline {subsection}{题号40考察: Finance: Hedge Funds \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{29}{Item.167}%
+\contentsline {subsection}{题号1考察: Market Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{6}{Item.4}%
+\contentsline {subsection}{题号3考察: Operational Risk and Resiliency \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{8}{Item.12}%
+\contentsline {subsection}{题号4考察: Market Liquidity \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{8}{Item.16}%
+\contentsline {subsection}{题号5考察: Finance: Portfolio Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{10}{Item.20}%
+\contentsline {subsection}{题号6考察: Derivatives: Options \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{10}{Item.24}%
+\contentsline {subsection}{题号8考察: Finance: Regulatory Capital \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{12}{Item.32}%
+\contentsline {subsection}{题号9考察: Market Risk: Liquidity Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{12}{Item.36}%
+\contentsline {subsection}{题号10考察: Portfolio Management: Fundamental Law of Active Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{13}{Item.40}%
+\contentsline {subsection}{题号11考察: Term Structure Models \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{13}{Item.44}%
+\contentsline {subsection}{题号12考察: Finance: Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{14}{Item.55}%
+\contentsline {subsection}{题号13考察: Finance: Basel Accords \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{15}{Item.59}%
+\contentsline {subsection}{题号14考察: Financial Markets and Products \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{16}{Item.63}%
+\contentsline {subsection}{题号15考察: Finance: CAPM \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{16}{Item.67}%
+\contentsline {subsection}{题号16考察: Fixed Income: Vasicek Model \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{17}{Item.71}%
+\contentsline {subsection}{题号17考察: Finance: Financial Statement Analysis \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{18}{Item.75}%
+\contentsline {subsection}{题号18考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{18}{Item.79}%
+\contentsline {subsection}{题号19考察: Liquidity Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{19}{Item.83}%
+\contentsline {subsection}{题号20考察: Finance: Factor Theory \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{20}{Item.87}%
+\contentsline {subsection}{题号21考察: Fixed Income \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{20}{Item.91}%
+\contentsline {subsection}{题号22考察: Credit Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{21}{Item.95}%
+\contentsline {subsection}{题号23考察: Market Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{22}{Item.99}%
+\contentsline {subsection}{题号26考察: Fixed Income Analysis \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{23}{Item.111}%
+\contentsline {subsection}{题号27考察: Credit Risk \textcolor {blue}{}}{24}{Item.115}%
+\contentsline {subsection}{题号28考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{25}{Item.119}%
+\contentsline {subsection}{题号29考察: Finance \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{26}{Item.123}%
+\contentsline {subsection}{题号30考察: Finance: Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{26}{Item.127}%
+\contentsline {subsection}{题号31考察: Fixed Income: Hedging \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{27}{Item.131}%
+\contentsline {subsection}{题号32考察: Credit Risk: Wrong-Way Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{27}{Item.135}%
+\contentsline {subsection}{题号33考察: Operational Risk: Model Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{28}{Item.139}%
+\contentsline {subsection}{题号34考察: Market Risk: Interest Rate Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{28}{Item.143}%
+\contentsline {subsection}{题号37考察: Credit Risk: Retail vs Corporate \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{30}{Item.155}%
+\contentsline {subsection}{题号38考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{31}{Item.159}%
+\contentsline {subsection}{题号40考察: Finance: Hedge Funds \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{32}{Item.167}%
+\contentsline {subsection}{题号41考察: Quantitative Analysis: Correlation \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{32}{Item.171}%
+\contentsline {subsection}{题号42考察: Counterparty Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{33}{Item.175}%
+\contentsline {subsection}{题号43考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{34}{Item.179}%
+\contentsline {subsection}{题号44考察: Finance: Asset Liability Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{35}{Item.183}%
+\contentsline {subsection}{题号45考察: Financial Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{35}{Item.187}%
+\contentsline {subsection}{题号46考察: Market Risk: Correlation \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{36}{Item.191}%
+\contentsline {subsection}{题号47考察: Counterparty Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{36}{Item.195}%
+\contentsline {subsection}{题号48考察: Finance: Basel Accords \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{37}{Item.199}%
+\contentsline {subsection}{题号49考察: Finance: Liquidity Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{38}{Item.203}%
+\contentsline {subsection}{题号50考察: Financial Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{39}{Item.207}%
+\contentsline {subsection}{题号51考察: Market Risk Measurement and Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{39}{Item.211}%
+\contentsline {subsection}{题号52考察: Credit Risk: Current Exposure \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{40}{Item.215}%
+\contentsline {subsection}{题号53考察: Operational Risk: Outsourcing Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{40}{Item.222}%
+\contentsline {subsection}{题号54考察: Liquidity Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{41}{Item.226}%
+\contentsline {subsection}{题号55考察: Finance: Hedge Fund Strategies \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{41}{Item.230}%
+\contentsline {subsection}{题号56考察: Value at Risk (VaR) \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{42}{Item.234}%
+\contentsline {subsection}{题号57考察: Finance: Counterparty Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{43}{Item.238}%
+\contentsline {subsection}{题号58考察: Alternative Investments: Illiquid Assets \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.242}%
+\contentsline {subsection}{题号59考察: Liquidity Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.246}%
+\contentsline {subsection}{题号60考察: Portfolio Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.250}%
+\contentsline {subsection}{题号61考察: Quantitative Analysis: Extreme Value Theory \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{45}{Item.254}%
+\contentsline {subsection}{题号62考察: Counterparty Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{45}{Item.258}%
+\contentsline {subsection}{题号63考察: Operational Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{46}{Item.262}%
+\contentsline {subsection}{题号64考察: Finance: Portfolio Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{47}{Item.266}%
+\contentsline {subsection}{题号65考察: Hedge Funds: Due Diligence \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{48}{Item.270}%
+\contentsline {subsection}{题号66考察: Quantitative Analysis: Value at Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{48}{Item.274}%
+\contentsline {subsection}{题号67考察: Finance \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{49}{Item.278}%
+\contentsline {subsection}{题号69考察: Finance: Non-deposit Funding Sources \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{51}{Item.286}%
+\contentsline {subsection}{题号70考察: Factor Investing \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{51}{Item.290}%
+\contentsline {subsection}{题号71考察: Market Risk Measurement and Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{52}{Item.294}%
+\contentsline {subsection}{题号72考察: Counterparty Credit Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{52}{Item.298}%
+\contentsline {subsection}{题号73考察: Operational Risk: Human Error \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{53}{Item.302}%
+\contentsline {subsection}{题号74考察: Liquidity Risk Management \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{54}{Item.306}%
+\contentsline {subsection}{题号75考察: Operational Due Diligence \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{54}{Item.310}%
+\contentsline {subsection}{题号76考察: Quantitative Analysis: Extreme Value Theory \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{55}{Item.314}%
+\contentsline {subsection}{题号77考察: Counterparty Risk \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{55}{Item.318}%
+\contentsline {subsection}{题号78考察: Operational Risk Reporting \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{56}{Item.322}%
+\contentsline {subsection}{题号79考察: Finance: Global Banking \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{57}{Item.326}%
+\contentsline {subsection}{题号80考察: Factor Investing \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{57}{Item.330}%

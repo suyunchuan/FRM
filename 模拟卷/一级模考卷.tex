@@ -836,6 +836,11 @@
 % --- Question 16 ---
     \begin{question}
         When is the soonest that an obligation rated AAA (the highest rating) can default?
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.4\textwidth]{1·16.png}
+        \end{figure}
+        When is the soonest that an obligation rated AAA (the highest rating) can default?
     \end{question}
     
     \begin{choices}
@@ -900,7 +905,7 @@
 
 
 \begin{question}
-    Consider the probability mass function (pmf) below. For example, Pr(X = -1.0) = 20.0\%. The pmf is given by $f(x) = x \times a$. The domain of the variable is the set of integers $\{6, 7, 8, 9, 10\}$. What is the expected value of this discrete random variable?
+    A discrete random variable is characterized by the probability mass function (pmf) as given by $f(x) = x \cdot a$, and its domain is the set of integers $\{6, 7, 8, 9, 10\}$. What is the variable's expected value?
 \end{question}
 
 \begin{choices}
@@ -1321,17 +1326,17 @@
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} It is unclear: each has two negative (and two positive) indicators; further, quantification of this scorecard is an insufficient predictor.
-    
-    Damodaran: "In summary, a full assessment of default risk in a sovereign entity requires the assessor to go beyond the numbers and understand how the country's economy works, the strength of its tax system and the trustworthiness of its governing institutions."\textsuperscript{[1]}
-    
+    It is unclear: each has two negative (and two positive) indicators; further, quantification of this scorecard is an insufficient predictor.
+
+    Damodaran: ``In summary, a full assessment of default risk in a sovereign entity requires the assessor to go beyond the numbers and understand how the country's economy works, the strength of its tax system and the trustworthiness of its governing institutions.''$^1$
+
     In regard to (A), (B) and (C), each is not the best answer:
-    \begin{itemize}
-        \item In regard to (A), Damodaran casts debt as a percentage of GDP as an incomplete measure of default risk. Countries with high debt include Greece, Congo, Jamaica, Egypt (high risk) but also US, Japan, France, Canada (creditworthy).\textsuperscript{[1]} In regard to (B), Country B has only two negative indicators: high debt/GDP and an economy concentrated in tourism. But in regard to Damodaran casts EU membership as net positive: "6. Implicit backing from other entities: When Greece, Portugal and Spain entered the European Union, investors, analysts and ratings agencies reduced their assessment of default risk because of the implicit backing from stronger EU members. This backing is not explicit or legally binding, but it does exist."\textsuperscript{[1]} In regard to (C), Damodaran: "Default is a political decision, and autocracies might be more likely to default because there is less political backlash." However, "The independence and power of the central bank can affect default risk assessments."\textsuperscript{[1]}
-    \end{itemize}
-    
-    \textsuperscript{[1]} 2020 FRM Part I: Foundations of Risk Management, 10th Edition. Pearson Learning Solutions, 10/2019
-    
+
+    In regard to (A), degree of indebtedness is ``the most logical place to start assessing default risk'' but ``[the list of 20 countries that owe the most] suggests that this statistic (government debt as percent of GDP) is an incomplete measure of default risk. The list includes some countries with high default risk (Greece, Congo, Jamaica, Egypt) but it also includes some countries that were viewed as among the most creditworthy by ratings agencies and markets (US, Japan, France and Canada).''$^1$
+
+    In regard to (B), Country B has only two negative indicators: high debt/GDP and an economy concentrated in tourism. But in regard to Damodaran casts EU membership as net positive: ``6. Implicit backing from other entities: When Greece, Portugal and Spain entered the European Union, investors, analysts and ratings agencies reduced their assessments of default risk in these countries. Implicitly, they were assuming that the stronger European Union countries -- Germany, France and the Scandinavian countries -- would step in to protect the weaker countries from defaulting. The danger, of course, is that the backing is implicit and not explicit, and lenders may very well find themselves disappointed by lack of backing, and no legal recourse.''$^1$
+
+    In regard to (C), Damodaran: ``5. Political risk: Ultimately, the decision to default is as much a political decision as it is an economic decision. Given that sovereign default often exposes the political leadership to pressure, it is entirely possible that autocracies (where there is less worry about political backlash) are more likely to default than democracies. Since the alternative to default is printing more money, the independence and power of the central bank will also affect assessments of default risk.''$^1$
 \end{explanation}
 
 
@@ -1341,7 +1346,9 @@
 
 
 \begin{question}
-    GARP explains that the Basel Committee on Banking Supervision's standard number 239 (aka, BCBS 239) "was a major driver in the rise of the chief data officer (CDO) function. The CDO is typically responsible for standardizing a firm's approach to data management."\textsuperscript{[1]} In addition, which of the following statements is also TRUE about the Basel Committee on Banking Supervision's standard number 239 (aka, BCBS 239)?
+    GARP explains that the Basel Committee on Banking Supervision's standard number 239 (aka, BCBS 239) "was a major driver in the rise of the chief data officer (CDO) function. The CDO is typically responsible for standardizing a firm's approach to data management."\textsuperscript{[1]} In addition, which of the following statements is also TRUE about the Basel Committee on Banking Supervision's standard number 239 (aka, BCBS 239)
+
+    [1] 2020 FRM Part I: Foundations of Risk Management, 10th Edition. Pearson Learning Solutions, 10/2019
 \end{question}
 
 \begin{choices}
@@ -1501,8 +1508,9 @@
     \begin{itemize}
         \item Portfolio A: $E[ER(A)] = \beta(A,1) \times F(1) + \beta(A,2) \times F(2) = 0.40 \times F(1) + 1.20 \times F(2) = 6.0\%$
         \item Portfolio B: $E[ER(B)] = \beta(B,1) \times F(1) + \beta(B,2) \times F(2) = 0.80 \times F(1) + 1.50 \times F(2) = 8.4\%$
+        \item Portfolio C has the following betas: $\beta(C,1) = 1.30$ and $\beta(C,2) = 0.90$.
     \end{itemize}
-    Portfolio C has the following betas: $\beta(C,1) = 1.30$ and $\beta(C,2) = 0.90$.
+    
     If Portfolio C has betas as given by $\beta(C,1) = 1.30$ and $\beta(C,2) = 0.90$, what is the expected excess return of Portfolio C?
 \end{question}
 
@@ -1532,7 +1540,9 @@
 % --- Question 34 ---
 
 \begin{question}
-    Robert is trying to price an exotic path-dependent option (Price(E)) for which no analytical solution exists. He uses a Black-Scholes option pricing model (BSM OPM) for vanilla options, referring to its analytical price as BSM(V). He also employs a Monte Carlo simulation (MCS) to estimate the exotic option's price as MCS(E). He re-uses the same simulated paths to get a simulated value for the vanilla option, MCS(V). He then applies an error correction formula: $Price(E) = MSC(E) + \beta \times [BSM(V) - MCS(V)]$. The goal is to improve accuracy by reducing variance. The text states that a good control variate should be inexpensive to construct, and asks for the other property that Bob seeks.
+    Robert is trying to price an exotic path-dependent option (Price(E)) for which no analytical solution exists. He uses a Black-Scholes option pricing model (BSM OPM) for vanilla options, referring to its analytical price as BSM(V). He also employs a Monte Carlo simulation (MCS) to estimate the exotic option's price as MCS(E). He re-uses the same simulated paths to get a simulated value for the vanilla option, MCS(V). He then applies an error correction formula:\\
+     $Price(E) = MSC(E) + \beta \times [BSM(V) - MCS(V)]$. \\
+     The goal is to improve accuracy by reducing variance. The text states that a good control variate should be inexpensive to construct, and asks for the other property that Bob seeks.
 \end{question}
 
 \begin{choices}
@@ -1570,7 +1580,7 @@
 
 
 \begin{question}
-    Every year, Acme Corporation grants stock options to its executives and employees. Like most of its peers, the employee stock options (ESOs) vest over four years and always have a 10-year term. In the event of termination, depending on the particulars, options sometimes accelerate and sometimes are forfeited. Newly recruited executives often receive abnormally large, front-loaded option grants. All option grants always have a fixed strike price, and to date, Acme has never re-priced grants. In the majority of cases, Acme grants at-the-money (ATM) options; in rare cases, Acme grants out-of-the-money (OTM) options. However, Acme never grants in-the-money (ITM) ESOs. To value ESOs, the company has developed basic and advanced versions of both the Black-Scholes-Merton (BSM) and the binomial (aka, lattice) models.
+    Every year, Acme Corporation grants stock options to its executives and employees. Like most of its peers, the employee stock options (ESOs) vest over four years and always have a 10-year term. In the event of termination, depending on the particulars, options sometimes accelerate and sometimes are forfeited. Newly recruited executives often receive abnormally large, front-loaded option grants. All option grants always have a fixed strike price, and to date, Acme has never re-priced grants. In the majority of cases, Acme grants at-the-money (ATM) options; in rare cases, Acme grants out-of-the-money (OTM) options. However, Acme never grants in-the-money (ITM) ESOs. To value ESOs, the company has developed basic and advanced versions of both the Black-Scholes-Merton (BSM) and the binomial (aka, lattice) models.\\
     Which of the following statements is TRUE?
 \end{question}
 
@@ -1645,8 +1655,10 @@
 
 
 \begin{question}
-    Over a 36-month period, the risk-free rate is 2.0\%. The market portfolio has an excess return of +6.0\% (gross return = +8.0\%) with volatility of 24.0\% per annum. Two fund managers, Betty and Peter, have the following portfolios:
+    During a 36-month period during which the risk-free rate was 2.0\%, consider a comparison between the market portfolio and two fund managers, Betty and Peter:
+
     \begin{itemize}
+        \item  The market portfolio’s excess return was +6.0\% (its gross return was +8.0\%) with a volatility of 24.0\% per annum
         \item Peter's Portfolio: Excess return = +7.0\% (gross return = +9.0\%), Volatility = 36.0\% per annum, Beta $\beta(P,M) = 0.750$
         \item Betty's Portfolio: Excess return = +11.0\% (gross return = +13.0\%), Volatility = 44.0\% per annum, Beta $\beta(B,M) = 1.650$
     \end{itemize}
@@ -1814,7 +1826,37 @@ A
 
 \checklist{Finance: Portfolio Management}{3}{2}
 
+
+
+
 % --- Question 42 ---
+\begin{question}
+    Jeremy simulates four time series: white noise, white noise with trend, a random walk, and a random walk with drift. They are plotted below.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{1·42.png} 
+    \end{figure}
+    Jeremy conducts an Augmented Dickey-Fuller (ADF) test with the R function \texttt{adf.test()}. According to GARP, the ADF is the most widely used unit root test. Its null hypothesis is that the series is a unit root process and its corresponding alternative hypothesis is that the series is stationary. Importantly, this \texttt{adf.test()} does allow an intercept and trend: it evaluates a trend-stationary process as stationary but evaluates a difference-stationary process (prior to transformation) as non-stationary.
+
+    If Jeremy performs an ADF test on each of these four series, what is the most likely outcome?
+\end{question}
+
+\begin{choices}
+    \item All four have low p-values; e.g., p-values below 0.050
+    \item All four have high p-values; e.g., p-values above 0.100
+    \item The random walks have low p-values but the white noise processes have high p-values
+    \item The white noise processes have low p-values but the random walks have high p-values
+\end{choices}
+
+\begin{correctanswer}
+    D
+\end{correctanswer}
+
+\begin{explanation}
+    \textbf{D选项正确。} The white noise processes have low p-values but the random walks have high p-values
+\end{explanation}
+
+
 
 
 % --- Question 43 ---
@@ -1927,10 +1969,9 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{Option D is correct.} False. A dummy variable is a categorical zero or one, but this is a stochastic (and stationary) ARMA model with a coefficient of 0.26 weighting the lag 12; as such, this is a special case of an ARMA model and it can be symbolically represented by ARMA(1,0) $\times$ (1,0)12.
-    
-    In regard to (A), (B), and (C), each is TRUE. Specifically:
-    
+    \textbf{D选项错误。} 虚拟变量是分类的0或1，但这是一个随机（且平稳）的ARMA模型，其系数$0.26$对滞后$12$项加权；因此，这是ARMA模型的一个特例，可以用符号表示为ARMA$(1,0) \times (1,0)_{12}$。
+
+关于(A)、(B)和(C)，每个都是正确的。具体而言：这个季节性模型是一个受限的AR$(13)$模型。滞后$13$的系数为$-0.13780$，因为$[1 - \phi(1)L] \times [1 - \phi(s)L^{12}] \times Y(t) = \delta + \varepsilon(t) \rightarrow [1 - \phi(1)L - \phi(s)L^{12} + \phi(1) \times \phi(s)L^{13}] \times Y(t) = \delta + \varepsilon(t) \rightarrow Y(t) = \delta + \phi(1) \times Y(t-1) + \phi(s) \times Y(t-12) - \phi(1) \times \phi(s) \times Y(t-13) + \varepsilon(t)$。滞后$2$到$11$的系数为零。
 \end{explanation}
 
 \checklist{Quantitative Methods: Time Series}{3}{2}
@@ -3036,12 +3077,13 @@ C
 
 % --- Question 84 ---
 \begin{question}
-    Scott is a risk manager for an investment manager. He is interested in estimating the potential loss the portfolio can expect over a specific time frame at a given confidence level (VaR) and the average of all potential losses beyond that potential loss (aka, expected shortfall, ES). Over the past 120 days, the portfolio’s ten worst daily returns were the following:
-    \begin{tabular}{rrrrrrrrrr}
+    Scott is a risk manager for an investment manager. He is interested in estimating the potential loss the portfolio can expect over a specific time frame at a given confidence level (VaR) and the average of all potential losses beyond that potential loss (aka, expected shortfall, ES). Over the past 120 days, the portfolio’s ten worst daily returns were the following:\\
+    \begin{tabular}{|r|r|r|r|r|r|r|r|r|r|}
         \hline
         -6.90\% & -7.55\% & -7.43\% & -4.85\% & -15.69\% & -14.48\% & -0.97\% & -18.38\% & -16.54\% & -24.10\% \\
         \hline
-        \end{tabular}
+    \end{tabular}
+    
     Find the 1-day 5\% VaR and ES for Scott (per Ch 2 Calculating and Applying VaR).
 \end{question}
 

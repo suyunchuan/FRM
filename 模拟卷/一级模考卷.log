@@ -3,8 +3,8 @@ entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**二级模考卷
-(./二级模考卷.tex
+**一级模考卷
+(./一级模考卷.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -679,8 +679,9 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count354
- (./二级模考卷.aux)
-\openout1 = `二级模考卷.aux'.
+
+No file 一级模考卷.aux.
+\openout1 = `一级模考卷.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
 LaTeX Font Info:    ... okay on input line 175.
@@ -761,6 +762,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 175.
 Package hyperref Info: Link coloring OFF on input line 175.
 
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -795,7 +798,7 @@ Package hyperref Info: Link coloring OFF on input line 175.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./二级模考卷.book1
+(./一级模考卷.book1
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -805,254 +808,290 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@book1=\write5
-\openout5 = `二级模考卷.book1'.
+\openout5 = `一级模考卷.book1'.
 
 
 
 [1
 
-] (./二级模考卷.book2
+] (./一级模考卷.book2
 
 [2])
 \tf@book2=\write6
-\openout6 = `二级模考卷.book2'.
+\openout6 = `一级模考卷.book2'.
 
 
 
-[3] (./二级模考卷.book3)
+[3] (./一级模考卷.book3)
 \tf@book3=\write7
-\openout7 = `二级模考卷.book3'.
+\openout7 = `一级模考卷.book3'.
 
 
 
-[4] (./二级模考卷.book4)
+[4] (./一级模考卷.book4)
 \tf@book4=\write8
-\openout8 = `二级模考卷.book4'.
+\openout8 = `一级模考卷.book4'.
 
 
 
 [5]
+File: images/1·2.png Graphic file (type bmp)
+<images/1·2.png>
+
 
 [6]
-File: images/2·3.png Graphic file (type bmp)
-<images/2·3.png>
+File: images/1·4.png Graphic file (type bmp)
+<images/1·4.png>
 
 
 [7]
-File: images/2·5.png Graphic file (type bmp)
-<images/2·5.png>
-
 
 [8]
-File: images/2·5.png Graphic file (type bmp)
-<images/2·5.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
-
- []
-
+File: images/1·7·1.png Graphic file (type bmp)
+<images/1·7·1.png>
+File: images/1·7·2.png Graphic file (type bmp)
+<images/1·7·2.png>
 
 
 [9]
 
 [10]
-Overfull \hbox (37.06894pt too wide) in paragraph at lines 428--428
-[]\TU/lmr/m/n/10.53937 The additional G-SIB requirement includes five buckets $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-
- []
-
-
-Overfull \hbox (19.73163pt too wide) in paragraph at lines 428--428
-[]\TU/SimSun(0)/m/n/10.53937 额 外 的 \TU/lmr/m/n/10.53937 G-SIB \TU/SimSun(0)/m/n/10.53937 要 求 包 含 五 个 档 次 $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-sib-framework.htm
- []
-
-
 
 [11]
 
 [12]
+File: images/1·14.png Graphic file (type bmp)
+<images/1·14.png>
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+
+
 
 [13]
+File: images/1·16.png Graphic file (type bmp)
+<images/1·16.png>
+
 
 [14]
 
 [15]
 
 [16]
+File: images/1·22.png Graphic file (type bmp)
+<images/1·22.png>
+
 
 [17]
-File: images/2·17·1.png Graphic file (type bmp)
-<images/2·17·1.png>
-File: images/2·17·1.png Graphic file (type bmp)
-<images/2·17·1.png>
-
 
 [18]
-File: images/2·17·2.png Graphic file (type bmp)
-<images/2·17·2.png>
-
 
 [19]
 
 [20]
-File: images/2·21.png Graphic file (type bmp)
-<images/2·21.png>
-
 
 [21]
-File: images/2·21.png Graphic file (type bmp)
-<images/2·21.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 907--907
+[22]
 
+[23]
+
+[24]
+Overfull \hbox (9.9684pt too wide) in paragraph at lines 1646--1647
+[]\TU/lmr/m/n/10.53937 In dollars, portfolio volatility = $[] \OT1/cmr/m/n/10.53937 =
+ []
+
+
+Overfull \hbox (38.07939pt too wide) in paragraph at lines 1648--1649
+[]\TU/lmr/m/n/10.53937 In percentage terms, portfolio volatility = $[] \OT1/cmr/m/n/10.53937 =
  []
 
 
 
-[22]
-File: images/2·23.png Graphic file (type bmp)
-<images/2·23.png>
-
-
-[23]
-File: images/2·23.png Graphic file (type bmp)
-<images/2·23.png>
-
-
-[24]
-
 [25]
-File: images/2·26.png Graphic file (type bmp)
-<images/2·26.png>
-File: images/2·26.png Graphic file (type bmp)
-<images/2·26.png>
+File: images/1·38.png Graphic file (type bmp)
+<images/1·38.png>
 
 
 [26]
 
 [27]
+File: images/1·41·1.png Graphic file (type bmp)
+<images/1·41·1.png>
+
 
 [28]
-File: images/2·29.png Graphic file (type bmp)
-<images/2·29.png>
-File: images/2·29.png Graphic file (type bmp)
-<images/2·29.png>
+File: images/1·41·2.png Graphic file (type bmp)
+<images/1·41·2.png>
+File: images/1·42.png Graphic file (type bmp)
+<images/1·42.png>
 
 
 [29]
-File: images/2·30.png Graphic file (type bmp)
-<images/2·30.png>
+File: images/1·44.png Graphic file (type bmp)
+<images/1·44.png>
 
 
 [30]
-File: images/2·30.png Graphic file (type bmp)
-<images/2·30.png>
+File: images/1·46.png Graphic file (type bmp)
+<images/1·46.png>
 
 
 [31]
 
 [32]
+File: images/1·50.png Graphic file (type bmp)
+<images/1·50.png>
+
 
 [33]
+File: images/1·51.png Graphic file (type bmp)
+<images/1·51.png>
+
 
 [34]
 
 [35]
+File: images/1·54.png Graphic file (type bmp)
+<images/1·54.png>
+
 
 [36]
 
 [37]
+File: images/1·56.png Graphic file (type bmp)
+<images/1·56.png>
+
 
 [38]
+File: images/1·58.png Graphic file (type bmp)
+<images/1·58.png>
+
 
 [39]
-File: images/2·44·1.png Graphic file (type bmp)
-<images/2·44·1.png>
-
 
 [40]
-File: images/2·44·2.png Graphic file (type bmp)
-<images/2·44·2.png>
-File: images/2·44·1.png Graphic file (type bmp)
-<images/2·44·1.png>
-File: images/2·44·2.png Graphic file (type bmp)
-<images/2·44·2.png>
-
 
 [41]
-File: images/2·44·3.png Graphic file (type bmp)
-<images/2·44·3.png>
+File: images/1·62.png Graphic file (type bmp)
+<images/1·62.png>
 
 
 [42]
 
 [43]
+File: images/1·66·1.png Graphic file (type bmp)
+<images/1·66·1.png>
+
 
 [44]
-File: images/2·49.png Graphic file (type bmp)
-<images/2·49.png>
+File: images/1·66·2.png Graphic file (type bmp)
+<images/1·66·2.png>
 
 
 [45]
+File: images/1·69.png Graphic file (type bmp)
+<images/1·69.png>
+
 
 [46]
 
 [47]
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 2106--2106
+File: images/1·72.png Graphic file (type bmp)
+<images/1·72.png>
 
+
+[49]
+File: images/1·73.png Graphic file (type bmp)
+<images/1·73.png>
+
+
+[50]
+Overfull \hbox (36.86282pt too wide) in paragraph at lines 2830--2831
+[]\TU/lmr/m/n/10.53937 The Affordable Care Act modified the treatment of pre-existing conditions (https://en.wikipedia.org/wiki/Pre-existing_condition).
  []
 
 
 
-[49]
-
-[50]
-
 [51]
-File: images/2·57.png Graphic file (type bmp)
-<images/2·57.png>
-File: images/2·57.png Graphic file (type bmp)
-<images/2·57.png>
+File: images/1·77.png Graphic file (type bmp)
+<images/1·77.png>
+File: images/1·78.png Graphic file (type bmp)
+<images/1·78.png>
 
 
 [52]
+Overfull \hbox (3.01006pt too wide) in paragraph at lines 2925--2926
+[]\TU/lmr/m/n/10.53937 Because $\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = [\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )]/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )$ \TU/lmr/m/n/10.53937 such that $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )$\TU/lmr/m/n/10.53937 ;
+ []
+
+
 
 [53]
 
 [54]
 
 [55]
+File: images/1·83.png Graphic file (type bmp)
+<images/1·83.png>
+File: images/1·84·1.png Graphic file (type bmp)
+<images/1·84·1.png>
+
 
 [56]
-File: images/2·64.png Graphic file (type bmp)
-<images/2·64.png>
-File: images/2·64.png Graphic file (type bmp)
-<images/2·64.png>
+File: images/1·84·2.png Graphic file (type bmp)
+<images/1·84·2.png>
+File: images/1·86.png Graphic file (type bmp)
+<images/1·86.png>
 
 
 [57]
 
 [58]
+File: images/1·88.png Graphic file (type bmp)
+<images/1·88.png>
+
 
 [59]
-File: images/2·67.png Graphic file (type bmp)
-<images/2·67.png>
-File: images/2·67.png Graphic file (type bmp)
-<images/2·67.png>
-
 
 [60]
 
 [61]
+File: images/1·94.png Graphic file (type bmp)
+<images/1·94.png>
+
 
 [62]
 
 [63]
 
 [64]
-File: images/2·72.png Graphic file (type bmp)
-<images/2·72.png>
+File: images/1·98.png Graphic file (type bmp)
+<images/1·98.png>
 
 
 [65]
@@ -1067,19 +1106,19 @@ File: images/2·72.png Graphic file (type bmp)
 
 [70]
 
-[71] (./二级模考卷.aux)
+[71] (./一级模考卷.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27392 strings out of 475796
- 595539 string characters out of 5774033
- 979557 words of memory out of 5000000
- 49848 multiletter control sequences out of 15000+600000
- 563862 words of font info for 74 fonts, out of 8000000 for 9000
+ 27375 strings out of 475796
+ 584738 string characters out of 5774033
+ 972710 words of memory out of 5000000
+ 49807 multiletter control sequences out of 15000+600000
+ 563902 words of font info for 79 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 102i,6n,111p,1542b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,111p,1217b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 二级模考卷.pdf (71 pages).
+Output written on 一级模考卷.pdf (71 pages).

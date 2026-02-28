@@ -1,0 +1,74 @@
+% 债券期货计算图（中文版）Hull 例 6-2
+% 在一级模考卷.tex 中可用 \input{bond-futures-figure-cn}
+% 导言区需有: \usepackage{xcolor}, \usepackage{tikz}, \newcommand{\dollar}{...}
+
+\noindent
+\begin{tikzpicture}[
+  box/.style={draw=gray!60, line width=0.4pt, inner sep=6pt, minimum width=0.45\textwidth, minimum height=0pt, align=flush left, anchor=north west},
+]
+  \useasboundingbox (0,-5.2) rectangle (1.02\textwidth, 0.4);
+  \node[box] (A) at (0,0) {
+    \begin{minipage}[t]{0.44\textwidth}
+      \textbf{\underline{假设}}\\[4pt]
+      \renewcommand{\arraystretch}{1.1}
+      \begin{tabular}{@{}lr@{}}
+        面值 & \colorbox{yellow!30}{\dollar100.00} \\
+        当前报价（净价） & \colorbox{yellow!30}{\dollar124.80} \\
+        票面利率 & \colorbox{yellow!30}{9.0\%} \\
+        利率 & \colorbox{yellow!30}{5.0\%} \\
+        转换因子 & \colorbox{yellow!30}{1.300} \\
+        交割（天数） & 180 \\
+        上次付息（-天数） & 76 \\
+        下次付息（+天数） & 108 \\
+        之后付息间隔（天） & 182 \\
+      \end{tabular}
+    \end{minipage}
+  };
+  \node[box] (B) at (0.5\textwidth,0) {
+    \begin{minipage}[t]{0.44\textwidth}
+      \textbf{\underline{时间线}}\\[4pt]
+      2023/7/1 付息\\
+      \hfill {\small $-76$ 天}\\[2pt]
+      \colorbox{orange!25}{2023/9/15 当前时点}\\
+      \hfill {\small 108 天}\\[2pt]
+      \colorbox{orange!25}{2024/1/1 （下次）付息}\\
+      \hfill {\small 72 天}\\[2pt]
+      \colorbox{orange!25}{2024/3/13 期货到期}\\
+      \hfill {\small 110 天}\\[2pt]
+      \colorbox{orange!25}{2024/7/1 付息}\\
+    \end{minipage}
+  };
+
+  \node[box] (C) at (0,-4.2) {
+    \begin{minipage}[t]{0.44\textwidth}
+      \textbf{\underline{解答（Hull 例 6-2）}}\\[4pt]
+      \begin{tabular}{@{}lr@{}}
+        应计利息 & \dollar1.859 \\
+        现金（全价）价格 & \dollar126.6587 \\
+        下次息票现值 & \colorbox{yellow!30}{\dollar4.434} \\
+        期货现金价格 & \colorbox{yellow!30}{\dollar125.2760} \\
+        交割时已计息天数 & 72 \\
+        交割时剩余天数 & 110 \\
+        期货报价（12\% 债券） & \dollar123.4958 \\
+        期货报价（CTD） & \colorbox{yellow!30}{\dollar94.9968} \\
+      \end{tabular}
+    \end{minipage}
+  };
+  \node[box] (D) at (0.5\textwidth,-4.2) {
+    \begin{minipage}[t]{0.44\textwidth}
+      \textbf{\underline{持有成本：$F_0=(S_0-I)\cdot\text{EXP}(rT)$}}\\[4pt]
+      \textbf{\underline{1. 用持有成本求远期现金价}}\\[2pt]
+      \begin{tabular}{@{}lr@{}}
+        现货 & \dollar126.659 \\
+        收益（利息） & \dollar4.434 \\
+        远期现金价格 & \underline{\dollar125.276} \\
+      \end{tabular}\\[6pt]
+      \textbf{\underline{2. 再由全价转为净价并标准化}}\\[2pt]
+      \begin{tabular}{@{}lr@{}}
+        减去应计利息 & \dollar1.780 \\
+        报价（12\% 债券）= & \dollar123.496 \\
+        除以转换因子 1.30： & \dollar94.997 \\
+      \end{tabular}
+    \end{minipage}
+  };
+\end{tikzpicture}

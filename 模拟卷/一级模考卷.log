@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  27 FEB 2026 17:46
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  28 FEB 2026 12:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,30 +676,29 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count354
-
-No file 一级模考卷.aux.
+ (./一级模考卷.aux)
 \openout1 = `一级模考卷.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -707,59 +706,57 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 175.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 175.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 175.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 175.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 175.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 175.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 175.
-LaTeX Font Info:    Redeclaring math accent \check on input line 175.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 175.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 175.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 175.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 175.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 175.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 176.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 176.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 176.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 176.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 176.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 176.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 176.
+LaTeX Font Info:    Redeclaring math accent \check on input line 176.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 176.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 176.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 176.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 176.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 175.
+(Font)              `operators' in the math version `normal' on input line 176.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 175.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 176.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 175.
+(Font)              `operators' in the math version `bold' on input line 176.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 175.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 176.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 175.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 175.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 175.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 175.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 175.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 176.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 175.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 175.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 175.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 176.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 175.
-Package hyperref Info: Link coloring OFF on input line 175.
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 176.
+Package hyperref Info: Link coloring OFF on input line 176.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -847,22 +844,11 @@ File: images/1·4.png Graphic file (type bmp)
 
 [8]
 
-./一级模考卷.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.431     \end{itemize}
-                       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[9]
 File: images/1·7·1.png Graphic file (type bmp)
 <images/1·7·1.png>
-
-
-[9]
+File: images/1·7·1.png Graphic file (type bmp)
+<images/1·7·1.png>
 File: images/1·7·2.png Graphic file (type bmp)
 <images/1·7·2.png>
 
@@ -872,11 +858,14 @@ File: images/1·7·2.png Graphic file (type bmp)
 [11]
 
 [12]
-File: images/1·14.png Graphic file (type bmp)
-<images/1·14.png>
-
 
 [13]
+
+[14]
+File: images/1·14.png Graphic file (type bmp)
+<images/1·14.png>
+File: images/1·14.png Graphic file (type bmp)
+<images/1·14.png>
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -910,24 +899,27 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
 
+
+
+[15]
+File: images/1·16.png Graphic file (type bmp)
+<images/1·16.png>
 File: images/1·16.png Graphic file (type bmp)
 <images/1·16.png>
 
 
-[14]
-
-[15]
-
 [16]
 
 [17]
-File: images/1·22.png Graphic file (type bmp)
-<images/1·22.png>
-
 
 [18]
 
 [19]
+File: images/1·22.png Graphic file (type bmp)
+<images/1·22.png>
+File: images/1·22.png Graphic file (type bmp)
+<images/1·22.png>
+
 
 [20]
 
@@ -940,184 +932,213 @@ File: images/1·22.png Graphic file (type bmp)
 [24]
 
 [25]
-Overfull \hbox (9.9684pt too wide) in paragraph at lines 1634--1635
-[]\TU/lmr/m/n/10.53937 In dollars, portfolio volatility = $[] \OT1/cmr/m/n/10.53937 =
- []
-
-
-Overfull \hbox (38.07939pt too wide) in paragraph at lines 1636--1637
-[]\TU/lmr/m/n/10.53937 In percentage terms, portfolio volatility = $[] \OT1/cmr/m/n/10.53937 =
- []
-
-
 
 [26]
-File: images/1·38.png Graphic file (type bmp)
-<images/1·38.png>
-
 
 [27]
 
 [28]
-File: images/1·41·1.png Graphic file (type bmp)
-<images/1·41·1.png>
-File: images/1·41·2.png Graphic file (type bmp)
-<images/1·41·2.png>
-
 
 [29]
-File: images/1·42.png Graphic file (type bmp)
-<images/1·42.png>
+Overfull \hbox (10.9358pt too wide) in paragraph at lines 1770--1771
+[]\TU/SongtiSCLight(0)/m/n/10.53937 以 美 元 计 算，|  投 资 组 合 波 动 率 \TU/lmr/m/n/10.53937 = $[] \OT1/cmr/m/n/10.53937 =
+ []
+
+
+Overfull \hbox (2.73872pt too wide) in paragraph at lines 1772--1773
+[]\TU/SongtiSCLight(0)/m/n/10.53937 以 百 分 比 计 算，|  投 资 组 合 波 动 率 \TU/lmr/m/n/10.53937 = $[] \OT1/cmr/m/n/10.53937 =
+ []
+
 
 
 [30]
-File: images/1·44.png Graphic file (type bmp)
-<images/1·44.png>
+File: images/1·38.png Graphic file (type bmp)
+<images/1·38.png>
+File: images/1·38.png Graphic file (type bmp)
+<images/1·38.png>
 
 
 [31]
-File: images/1·46.png Graphic file (type bmp)
-<images/1·46.png>
-
 
 [32]
 
 [33]
-File: images/1·50.png Graphic file (type bmp)
-<images/1·50.png>
+File: images/1·41·1.png Graphic file (type bmp)
+<images/1·41·1.png>
+File: images/1·41·1.png Graphic file (type bmp)
+<images/1·41·1.png>
 
 
 [34]
-File: images/1·51.png Graphic file (type bmp)
-<images/1·51.png>
+File: images/1·41·2.png Graphic file (type bmp)
+<images/1·41·2.png>
 
 
 [35]
+File: images/1·42.png Graphic file (type bmp)
+<images/1·42.png>
+File: images/1·42.png Graphic file (type bmp)
+<images/1·42.png>
+
 
 [36]
-File: images/1·54.png Graphic file (type bmp)
-<images/1·54.png>
-
 
 [37]
-File: images/1·56.png Graphic file (type bmp)
-<images/1·56.png>
+File: images/1·44.png Graphic file (type bmp)
+<images/1·44.png>
+File: images/1·44.png Graphic file (type bmp)
+<images/1·44.png>
 
 
 [38]
+Overfull \hbox (6.56026pt too wide) in paragraph at lines 2126--2126
+\TU/lmr/m/n/10.53937 Securitization \TU/SongtiSCLight(0)/m/n/10.53937 是 一 个 已 经 存 在 了 五 十 年 的 趋 势：| \TU/lmr/m/n/10.53937 1968 \TU/SongtiSCLight(0)/m/n/10.53937 年 的 住 房 和 城 市 发 展 法 案 催 生 了 \TU/lmr/m/n/10.53937 Ginnie Mae |\TU/SongtiSCLight(0)/m/n/10.53937 （\TU/lmr/m/n/10.53937 https://www.ginniemae.gov/\TU/SongtiSCLight(0)/m/n/10.53937 ） ，|
+ []
+
+File: images/1·46.png Graphic file (type bmp)
+<images/1·46.png>
+
 
 [39]
-File: images/1·58.png Graphic file (type bmp)
-<images/1·58.png>
+File: images/1·46.png Graphic file (type bmp)
+<images/1·46.png>
 
 
 [40]
 
 [41]
-File: images/1·62.png Graphic file (type bmp)
-<images/1·62.png>
+File: images/1·50.png Graphic file (type bmp)
+<images/1·50.png>
+File: images/1·50.png Graphic file (type bmp)
+<images/1·50.png>
 
 
 [42]
+File: images/1·51.png Graphic file (type bmp)
+<images/1·51.png>
+
 
 [43]
-File: images/1·66·1.png Graphic file (type bmp)
-<images/1·66·1.png>
+File: images/1·51.png Graphic file (type bmp)
+<images/1·51.png>
 
 
 [44]
-File: images/1·66·2.png Graphic file (type bmp)
-<images/1·66·2.png>
-
 
 [45]
+File: images/1·54.png Graphic file (type bmp)
+<images/1·54.png>
+File: images/1·54.png Graphic file (type bmp)
+<images/1·54.png>
+
 
 [46]
-File: images/1·69.png Graphic file (type bmp)
-<images/1·69.png>
-
 
 [47]
+File: images/1·56.png Graphic file (type bmp)
+<images/1·56.png>
+File: images/1·56.png Graphic file (type bmp)
+<images/1·56.png>
+
 
 [48]
 
 [49]
-File: images/1·72.png Graphic file (type bmp)
-<images/1·72.png>
-File: images/1·73.png Graphic file (type bmp)
-<images/1·73.png>
+File: images/1·58.png Graphic file (type bmp)
+<images/1·58.png>
+File: images/1·58.png Graphic file (type bmp)
+<images/1·58.png>
+
+Overfull \hbox (56.07533pt too wide) in paragraph at lines 2615--2615
+\TU/lmr/m/n/10.53937 Debra \TU/SongtiSCLight(0)/m/n/10.53937 是 一 位 经 济 学 家，|  她 对 消 费 者 支 出 和 国 内 生 产 总 值  |（\TU/lmr/m/n/10.53937 GDP\TU/SongtiSCLight(0)/m/n/10.53937 ）|  之 间 的 关 系 感 兴 趣。|  她 从 联 邦 储 备 银 行 圣 路 易 斯  |（\TU/lmr/m/n/10.53937 https://fred.stlouisfed.org/\TU/SongtiSCLight(0)/m/n/10.53937 ）|
+ []
+
 
 
 [50]
 
 [51]
-Overfull \hbox (36.86282pt too wide) in paragraph at lines 2818--2819
-[]\TU/lmr/m/n/10.53937 The Affordable Care Act modified the treatment of pre-existing conditions (https://en.wikipedia.org/wiki/Pre-existing_condition).
- []
-
-File: images/1·77.png Graphic file (type bmp)
-<images/1·77.png>
-
 
 [52]
-File: images/1·78.png Graphic file (type bmp)
-<images/1·78.png>
-
-Overfull \hbox (3.01006pt too wide) in paragraph at lines 2913--2914
-[]\TU/lmr/m/n/10.53937 Because $\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = [\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )]/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )$ \TU/lmr/m/n/10.53937 such that $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )$\TU/lmr/m/n/10.53937 ;
- []
-
+File: images/1·62.png Graphic file (type bmp)
+<images/1·62.png>
 
 
 [53]
+File: images/1·62.png Graphic file (type bmp)
+<images/1·62.png>
+
 
 [54]
 
 [55]
-File: images/1·83.png Graphic file (type bmp)
-<images/1·83.png>
+File: images/1·66·1.png Graphic file (type bmp)
+<images/1·66·1.png>
 
 
 [56]
-File: images/1·84·1.png Graphic file (type bmp)
-<images/1·84·1.png>
-File: images/1·84·2.png Graphic file (type bmp)
-<images/1·84·2.png>
+File: images/1·66·1.png Graphic file (type bmp)
+<images/1·66·1.png>
+File: images/1·66·2.png Graphic file (type bmp)
+<images/1·66·2.png>
 
 
 [57]
-File: images/1·86.png Graphic file (type bmp)
-<images/1·86.png>
-
 
 [58]
-File: images/1·88.png Graphic file (type bmp)
-<images/1·88.png>
+File: images/1·69.png Graphic file (type bmp)
+<images/1·69.png>
 
 
 [59]
+File: images/1·69.png Graphic file (type bmp)
+<images/1·69.png>
+
 
 [60]
 
 [61]
 
 [62]
-File: images/1·94.png Graphic file (type bmp)
-<images/1·94.png>
+File: images/1·72.png Graphic file (type bmp)
+<images/1·72.png>
+File: images/1·73.png Graphic file (type bmp)
+<images/1·73.png>
 
 
 [63]
+File: images/1·73.png Graphic file (type bmp)
+<images/1·73.png>
+
 
 [64]
-File: images/1·98.png Graphic file (type bmp)
-<images/1·98.png>
+Overfull \hbox (36.86282pt too wide) in paragraph at lines 3225--3226
+[]\TU/lmr/m/n/10.53937 The Affordable Care Act modified the treatment of pre-existing conditions (https://en.wikipedia.org/wiki/Pre-existing_condition).
+ []
+
 
 
 [65]
+File: images/1·77.png Graphic file (type bmp)
+<images/1·77.png>
+
 
 [66]
+File: images/1·77.png Graphic file (type bmp)
+<images/1·77.png>
+File: images/1·78.png Graphic file (type bmp)
+<images/1·78.png>
+
 
 [67]
+File: images/1·78.png Graphic file (type bmp)
+<images/1·78.png>
+
+Overfull \hbox (3.01006pt too wide) in paragraph at lines 3340--3341
+[]\TU/lmr/m/n/10.53937 Because $\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = [\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )]/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )$ \TU/lmr/m/n/10.53937 such that $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )$\TU/lmr/m/n/10.53937 ;
+ []
+
+
 
 [68]
 
@@ -1125,19 +1146,86 @@ File: images/1·98.png Graphic file (type bmp)
 
 [70]
 
-[71] (./一级模考卷.aux)
+[71]
+File: images/1·83.png Graphic file (type bmp)
+<images/1·83.png>
+File: images/1·84·1.png Graphic file (type bmp)
+<images/1·84·1.png>
+
+
+[72]
+File: images/1·84·2.png Graphic file (type bmp)
+<images/1·84·2.png>
+File: images/1·86.png Graphic file (type bmp)
+<images/1·86.png>
+
+
+[73]
+File: images/1·86.png Graphic file (type bmp)
+<images/1·86.png>
+
+
+[74]
+
+[75]
+File: images/1·88.png Graphic file (type bmp)
+<images/1·88.png>
+File: images/1·88.png Graphic file (type bmp)
+<images/1·88.png>
+
+
+[76]
+
+[77]
+
+[78]
+
+[79]
+File: images/1·94.png Graphic file (type bmp)
+<images/1·94.png>
+File: images/1·94.png Graphic file (type bmp)
+<images/1·94.png>
+
+
+[80]
+
+[81]
+
+[82]
+File: images/1·98.png Graphic file (type bmp)
+<images/1·98.png>
+
+
+[83]
+File: images/1·98.png Graphic file (type bmp)
+<images/1·98.png>
+
+
+[84]
+
+[85]
+
+[86]
+
+[87]
+
+[88]
+
+[89]
+
+[90] (./一级模考卷.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27512 strings out of 473832
- 599345 string characters out of 5729481
- 978685 words of memory out of 5000000
- 50073 multiletter control sequences out of 15000+600000
- 563886 words of font info for 77 fonts, out of 8000000 for 9000
+ 27751 strings out of 473832
+ 616802 string characters out of 5729481
+ 989475 words of memory out of 5000000
+ 50308 multiletter control sequences out of 15000+600000
+ 563902 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,9n,114p,1224b,509s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,114p,1274b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 一级模考卷.pdf (71 pages).
+Output written on 一级模考卷.pdf (90 pages).

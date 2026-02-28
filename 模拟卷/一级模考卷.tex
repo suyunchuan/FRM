@@ -308,7 +308,7 @@
  
     \textbf{D选项正确。}
     \begin{itemize}
-        \item This is the opposite of a hedge! The bank hedges with a swap where it is the floating-rate receiver and fixed-rate payer In regard to (A), (B), and (C), each is TRUE
+        \item 银行通过进入一笔自身支付浮动利率、收取固定利率的互换来对冲市场风险，这是相反的套期保值！在 A、B 和 C 中，每个陈述都是正确的
     \end{itemize}
     
     \end{explanation}
@@ -320,7 +320,7 @@
 % --- Question 4 ---
  \begin{question}
     A large international bank uses EWMA for their risk system, with a decay factor of 0.92. On day T the forecast volatility for two variables, X\&Y, are identical at 1.25 and the current correlation forecast is 15.0. If on day T the realized returns for X \& Y are 0.50 and -0.50 respectively, which of the following is closest to the new correlation?\\
-    
+    一家大型国际银行使用 EWMA 模型进行风险系统管理，衰减因子为 0.92。在第 T 天，两个变量 X 和 Y 的预测波动率均为 1.25，当前的预测相关系数为 15.0。如果第 T 天的实际回报分别为 0.50 和 -0.50，则以下哪个选项最接近新的相关系数？
     \end{question}
     
     \begin{choices}
@@ -342,40 +342,40 @@
     
     \textbf{A选项错误。}
     \begin{itemize}
-        \item 12.5\% is the answer if we use yesterday’s volatilities in the correlation equation
+        \item 12.5\% 是如果使用昨天的波动率计算相关系数的结果
 
     \end{itemize}
     
     \textbf{B选项错误。}
     \begin{itemize}
-        \item Recall the EWMA equations for variance and covariance:
+        \item 回想 EWMA 方差和协方差的公式：
         
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.3\textwidth]{1·4.png}
         \end{figure}
         
-        So, the covariance forecast for day T is $0.15 \times 0.0125 \times 0.0125 = 2.34 \times 10^{-5}$.
+        因此，第 T 天的协方差预测为 $0.15 \times 0.0125 \times 0.0125 = 2.34 \times 10^{-5}$.
 
-        We need to update the variance estimates for X \& Y \& cov(X,Y):
+        我们需要更新 X、Y 和 cov(X,Y) 的方差估计：
 
-        $\text{Variance}(X) = 0.92 \times (0.0125^2) + (0.08) \times (0.005^2) = 0.00014575$, $\text{Std}(X) = 1.21\%$.
+        $\text{Variance}(X) = 0.92 \times (0.0125^2) + (0.08) \times (0.005^2) = 0.00014575$, $\text{Std}(X) = 1.21\%$。
 
-        $\text{Variance}(Y) = 0.92 \times (0.0125^2) + (0.08) \times (-0.005^2) = 0.00014575$, $\text{Std}(Y) = 1.21\%$.
+        $\text{Variance}(Y) = 0.92 \times (0.0125^2) + (0.08) \times (-0.005^2) = 0.00014575$, $\text{Std}(Y) = 1.21\%$。
 
-        $\text{Cov}(X,Y) = 0.92 \times (2.34 \times 10^{-5}) + 0.08 \times (0.005) \times (-0.005) = 1.956 \times 10^{-5}$.
+        $\text{Cov}(X,Y) = 0.92 \times (2.34 \times 10^{-5}) + 0.08 \times (0.005) \times (-0.005) = 1.956 \times 10^{-5}$。
 
-        $\text{Corr}(X,Y) = \text{Cov}(X,Y)/(\text{Std}(X) \times \text{Std}(Y)) = 13.4\%$.
+        $\text{Corr}(X,Y) = \text{Cov}(X,Y)/(\text{Std}(X) \times \text{Std}(Y)) = 13.4\%$。
     \end{itemize}
     
     \textbf{C选项错误。}
     \begin{itemize}
-        \item 15.0\% is the incumbent correlation
+        \item 15.0\% 是当前的相关系数
     \end{itemize}
     
     \textbf{D选项正确。}
     \begin{itemize}
-        \item 16.2\% is the value if use 0.5\% instead of 0.05\% for the return on Y
+        \item 16.2\% 是如果使用 0.5\% 的回报率而不是 0.05\% 的回报率计算得到的结果
     \end{itemize}
     
     \end{explanation}
@@ -386,17 +386,18 @@
 
  \begin{question}
     According to GARP, each of the following was a causal factor in the 2007-2009 global financial crisis (GFC) EXCEPT which is not a causal factor?
+    根据 GARP，下列各项被认为是2007-2009年全球金融危机（GFC）的原因，除了哪一项不是原因？
     \end{question}
     
     \begin{choices}
-        \item  Low interest rates
+        \item  Low interest rates\\低利率
         
-        \item The originate-to-distribute (OTD) business model and securitization, especially CDOs
+        \item The originate-to-distribute (OTD) business model and securitization, especially CDOs\\发起-分销（OTD）业务模式和证券化，特别是CDO
         
-        \item An unexpected spike in prepayments due to an acceleration in repeat refinancing
+        \item An unexpected spike in prepayments due to an acceleration in repeat refinancing\\由于重复再融资的加速，预付意外飙升
 
         
-        \item Dubious lending practices and risky mortgage loan products (e.g., NINJA) and loan features (e.g., teaser rates)
+        \item Dubious lending practices and risky mortgage loan products (e.g., NINJA) and loan features (e.g., teaser rates)//可疑的贷款实践和风险抵押贷款产品（例如NINJA）和贷款特征（例如 teaser rates）
     \end{choices}
     
     \begin{correctanswer}
@@ -408,33 +409,25 @@
     
     \textbf{A选项错误。}
     \begin{itemize}
-        \item Low interest rates (note the dual role in terms of housing demand and investor supply): “Growth in housing demand
-        and concomitant mortgage financing was fueled (in part) by the low-interest-rate environment that existed in the
-        early 2000s. This demand helped drive substantial increases in housing prices. Low interest rates also spurred investors,
-        including institutional investors, to look for investments that offered yield enhancement. They found this yield in
-        subprime mortgages, which typically carry premiums of up to 300-basis points over the rates charged to prime
-        borrowers.” — Source: 2020 FRM Part I: Foundations of Risk Management, 10th Edition
+        \item 低利率（请注意其在住房需求和投资者供给中的双重作用）：“住房需求的增长及随之而来的抵押贷款融资，部分是由2000年代初期存在的低利率环境推动的。这种需求助推了房价的显著上涨。低利率环境也促使投资者，包括机构投资者，寻找能提高收益的投资。他们在次级抵押贷款中找到了这种收益，次级贷款的利率通常比优质贷款高出最多300个基点。”——引自2020年FRM一级《风险管理基础》第10版
 
     \end{itemize}
     
     \textbf{B选项错误。}
     \begin{itemize}
-        \item The shift toward banks’ originate-to-distribute (OTD) business model which enabled a moral hazard by discouraging careful scrutiny of borrower creditworthiness.
+        \item 银行向“发起-分销”（OTD）业务模式的转变助长了道德风险，因为这种模式降低了对借款人信用状况的严格审查。
     \end{itemize}
     
     \textbf{C选项正确。}
     \begin{itemize}
-        \item Refinancing enabled borrowers to avoid higher interest rates (as the reset rate) after their initial, teaser rates; the
-        PROBLEM was that home price declines halted the refinance practice that fueled much of the subprime borrowing. In this way,
-        prepayments were not really a cause.
-        In regard to (A), (B) and (D), each is TRUE. Although there were several causes (some disputed), according to GARP’s Chapter 10,
-        causal factors included:
+        \item 再融资使借款人能够在最初的诱导利率期结束后，避免因利率重置而带来的更高利率；但问题在于，住房价格的下跌终止了这种曾推动许多次级抵押贷款的再融资行为。因此，提前还款实际上并不是危机的真正原因。
+        就（A）、（B）和（D）而言，这些选项都是真实的。虽然导致危机的原因有很多（部分有争议），但根据GARP第10章，成因包括：
         
     \end{itemize}
     
     \textbf{D选项错误。}
     \begin{itemize}
-        \item Risky mortgage loan products, in particular, teaser rates; e.g., 2/28 adjustable-rate mortgages. (But also interest-only teaser periods and other “innovations” like NINJA loans).
+       //风险抵押贷款产品，特别是诱导利率；例如，2/28可调利率抵押贷款。（但也有只付利息的诱导利率期和其他“创新”，如NINJA贷款）
     \end{itemize}
     
     \end{explanation}

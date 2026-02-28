@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  27 FEB 2026 16:22
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  27 FEB 2026 17:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,7 +676,8 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count354
- (./一级模考卷.aux)
+
+No file 一级模考卷.aux.
 \openout1 = `一级模考卷.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
@@ -758,6 +759,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 175.
 Package hyperref Info: Link coloring OFF on input line 175.
 
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -838,19 +841,28 @@ File: images/1·2.png Graphic file (type bmp)
 [6]
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
-
- []
-
 File: images/1·4.png Graphic file (type bmp)
 <images/1·4.png>
 
 
 [8]
 
-[9]
+./一级模考卷.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431     \end{itemize}
+                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: images/1·7·1.png Graphic file (type bmp)
 <images/1·7·1.png>
+
+
+[9]
 File: images/1·7·2.png Graphic file (type bmp)
 <images/1·7·2.png>
 
@@ -860,10 +872,11 @@ File: images/1·7·2.png Graphic file (type bmp)
 [11]
 
 [12]
-
-[13]
 File: images/1·14.png Graphic file (type bmp)
 <images/1·14.png>
+
+
+[13]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -897,12 +910,11 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
 
-
-
-[14]
 File: images/1·16.png Graphic file (type bmp)
 <images/1·16.png>
 
+
+[14]
 
 [15]
 
@@ -928,12 +940,12 @@ File: images/1·22.png Graphic file (type bmp)
 [24]
 
 [25]
-Overfull \hbox (9.9684pt too wide) in paragraph at lines 1644--1645
+Overfull \hbox (9.9684pt too wide) in paragraph at lines 1634--1635
 []\TU/lmr/m/n/10.53937 In dollars, portfolio volatility = $[] \OT1/cmr/m/n/10.53937 =
  []
 
 
-Overfull \hbox (38.07939pt too wide) in paragraph at lines 1646--1647
+Overfull \hbox (38.07939pt too wide) in paragraph at lines 1636--1637
 []\TU/lmr/m/n/10.53937 In percentage terms, portfolio volatility = $[] \OT1/cmr/m/n/10.53937 =
  []
 
@@ -1039,7 +1051,7 @@ File: images/1·73.png Graphic file (type bmp)
 [50]
 
 [51]
-Overfull \hbox (36.86282pt too wide) in paragraph at lines 2828--2829
+Overfull \hbox (36.86282pt too wide) in paragraph at lines 2818--2819
 []\TU/lmr/m/n/10.53937 The Affordable Care Act modified the treatment of pre-existing conditions (https://en.wikipedia.org/wiki/Pre-existing_condition).
  []
 
@@ -1051,7 +1063,7 @@ File: images/1·77.png Graphic file (type bmp)
 File: images/1·78.png Graphic file (type bmp)
 <images/1·78.png>
 
-Overfull \hbox (3.01006pt too wide) in paragraph at lines 2923--2924
+Overfull \hbox (3.01006pt too wide) in paragraph at lines 2913--2914
 []\TU/lmr/m/n/10.53937 Because $\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = [\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )]/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )$ \TU/lmr/m/n/10.53937 such that $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )$\TU/lmr/m/n/10.53937 ;
  []
 
@@ -1120,12 +1132,12 @@ L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27407 strings out of 473832
- 591301 string characters out of 5729481
- 977685 words of memory out of 5000000
- 49966 multiletter control sequences out of 15000+600000
+ 27512 strings out of 473832
+ 599345 string characters out of 5729481
+ 978685 words of memory out of 5000000
+ 50073 multiletter control sequences out of 15000+600000
  563886 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,9n,114p,1224b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,114p,1224b,509s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on 一级模考卷.pdf (71 pages).

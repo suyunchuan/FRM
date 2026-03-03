@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  28 FEB 2026 12:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  3 MAR 2026 17:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -809,14 +809,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 ] (./一级模考卷.book2
-
-[2])
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no λ (U+03BB) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
+)
 \tf@book2=\write6
 \openout6 = `一级模考卷.book2'.
 
 
 
-[3] (./一级模考卷.book3)
+[2] (./一级模考卷.book3
+
+[3]
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
+)
 \tf@book3=\write7
 \openout7 = `一级模考卷.book3'.
 
@@ -867,6 +874,9 @@ File: images/1·14.png Graphic file (type bmp)
 File: images/1·14.png Graphic file (type bmp)
 <images/1·14.png>
 
+
+[15]
+
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
 (fontspec)             'STFangsong'. Check the typeset output, and if it is
@@ -899,29 +909,27 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
 
-
-
-[15]
-File: images/1·16.png Graphic file (type bmp)
-<images/1·16.png>
 File: images/1·16.png Graphic file (type bmp)
 <images/1·16.png>
 
 
 [16]
+File: images/1·16.png Graphic file (type bmp)
+<images/1·16.png>
+
 
 [17]
 
 [18]
 
 [19]
-File: images/1·22.png Graphic file (type bmp)
-<images/1·22.png>
-File: images/1·22.png Graphic file (type bmp)
-<images/1·22.png>
-
 
 [20]
+File: images/1·22.png Graphic file (type bmp)
+<images/1·22.png>
+File: images/1·22.png Graphic file (type bmp)
+<images/1·22.png>
+
 
 [21]
 
@@ -940,131 +948,136 @@ File: images/1·22.png Graphic file (type bmp)
 [28]
 
 [29]
-Overfull \hbox (10.9358pt too wide) in paragraph at lines 1770--1771
+
+[30]
+
+[31]
+Overfull \hbox (10.9358pt too wide) in paragraph at lines 1787--1788
 []\TU/SongtiSCLight(0)/m/n/10.53937 以 美 元 计 算，|  投 资 组 合 波 动 率 \TU/lmr/m/n/10.53937 = $[] \OT1/cmr/m/n/10.53937 =
  []
 
 
-Overfull \hbox (2.73872pt too wide) in paragraph at lines 1772--1773
+Overfull \hbox (2.73872pt too wide) in paragraph at lines 1789--1790
 []\TU/SongtiSCLight(0)/m/n/10.53937 以 百 分 比 计 算，|  投 资 组 合 波 动 率 \TU/lmr/m/n/10.53937 = $[] \OT1/cmr/m/n/10.53937 =
  []
 
 
 
-[30]
-File: images/1·38.png Graphic file (type bmp)
-<images/1·38.png>
-File: images/1·38.png Graphic file (type bmp)
-<images/1·38.png>
-
-
-[31]
-
 [32]
+File: images/1·38.png Graphic file (type bmp)
+<images/1·38.png>
+File: images/1·38.png Graphic file (type bmp)
+<images/1·38.png>
+
 
 [33]
-File: images/1·41·1.png Graphic file (type bmp)
-<images/1·41·1.png>
-File: images/1·41·1.png Graphic file (type bmp)
-<images/1·41·1.png>
-
 
 [34]
-File: images/1·41·2.png Graphic file (type bmp)
-<images/1·41·2.png>
+File: images/1·41·1.png Graphic file (type bmp)
+<images/1·41·1.png>
 
 
 [35]
-File: images/1·42.png Graphic file (type bmp)
-<images/1·42.png>
-File: images/1·42.png Graphic file (type bmp)
-<images/1·42.png>
+File: images/1·41·1.png Graphic file (type bmp)
+<images/1·41·1.png>
 
 
 [36]
+File: images/1·41·2.png Graphic file (type bmp)
+<images/1·41·2.png>
+File: images/1·42.png Graphic file (type bmp)
+<images/1·42.png>
+
 
 [37]
-File: images/1·44.png Graphic file (type bmp)
-<images/1·44.png>
-File: images/1·44.png Graphic file (type bmp)
-<images/1·44.png>
+File: images/1·42.png Graphic file (type bmp)
+<images/1·42.png>
 
 
 [38]
-Overfull \hbox (6.56026pt too wide) in paragraph at lines 2126--2126
-\TU/lmr/m/n/10.53937 Securitization \TU/SongtiSCLight(0)/m/n/10.53937 是 一 个 已 经 存 在 了 五 十 年 的 趋 势：| \TU/lmr/m/n/10.53937 1968 \TU/SongtiSCLight(0)/m/n/10.53937 年 的 住 房 和 城 市 发 展 法 案 催 生 了 \TU/lmr/m/n/10.53937 Ginnie Mae |\TU/SongtiSCLight(0)/m/n/10.53937 （\TU/lmr/m/n/10.53937 https://www.ginniemae.gov/\TU/SongtiSCLight(0)/m/n/10.53937 ） ，|
- []
-
-File: images/1·46.png Graphic file (type bmp)
-<images/1·46.png>
+File: images/1·44.png Graphic file (type bmp)
+<images/1·44.png>
+File: images/1·44.png Graphic file (type bmp)
+<images/1·44.png>
 
 
 [39]
+Overfull \hbox (6.56026pt too wide) in paragraph at lines 2147--2147
+\TU/lmr/m/n/10.53937 Securitization \TU/SongtiSCLight(0)/m/n/10.53937 是 一 个 已 经 存 在 了 五 十 年 的 趋 势：| \TU/lmr/m/n/10.53937 1968 \TU/SongtiSCLight(0)/m/n/10.53937 年 的 住 房 和 城 市 发 展 法 案 催 生 了 \TU/lmr/m/n/10.53937 Ginnie Mae |\TU/SongtiSCLight(0)/m/n/10.53937 （\TU/lmr/m/n/10.53937 https://www.ginniemae.gov/\TU/SongtiSCLight(0)/m/n/10.53937 ） ，|
+ []
+
+
+
+[40]
+File: images/1·46.png Graphic file (type bmp)
+<images/1·46.png>
 File: images/1·46.png Graphic file (type bmp)
 <images/1·46.png>
 
 
-[40]
-
 [41]
-File: images/1·50.png Graphic file (type bmp)
-<images/1·50.png>
-File: images/1·50.png Graphic file (type bmp)
-<images/1·50.png>
-
 
 [42]
-File: images/1·51.png Graphic file (type bmp)
-<images/1·51.png>
+File: images/1·50.png Graphic file (type bmp)
+<images/1·50.png>
 
 
 [43]
+File: images/1·50.png Graphic file (type bmp)
+<images/1·50.png>
+
+
+[44]
+File: images/1·51.png Graphic file (type bmp)
+<images/1·51.png>
 File: images/1·51.png Graphic file (type bmp)
 <images/1·51.png>
 
 
-[44]
-
 [45]
-File: images/1·54.png Graphic file (type bmp)
-<images/1·54.png>
-File: images/1·54.png Graphic file (type bmp)
-<images/1·54.png>
-
 
 [46]
+File: images/1·54.png Graphic file (type bmp)
+<images/1·54.png>
+File: images/1·54.png Graphic file (type bmp)
+<images/1·54.png>
+
 
 [47]
-File: images/1·56.png Graphic file (type bmp)
-<images/1·56.png>
-File: images/1·56.png Graphic file (type bmp)
-<images/1·56.png>
-
 
 [48]
+File: images/1·56.png Graphic file (type bmp)
+<images/1·56.png>
+File: images/1·56.png Graphic file (type bmp)
+<images/1·56.png>
+
 
 [49]
+
+[50]
 File: images/1·58.png Graphic file (type bmp)
 <images/1·58.png>
 File: images/1·58.png Graphic file (type bmp)
 <images/1·58.png>
 
-Overfull \hbox (56.07533pt too wide) in paragraph at lines 2615--2615
+Overfull \hbox (56.07533pt too wide) in paragraph at lines 2640--2640
 \TU/lmr/m/n/10.53937 Debra \TU/SongtiSCLight(0)/m/n/10.53937 是 一 位 经 济 学 家，|  她 对 消 费 者 支 出 和 国 内 生 产 总 值  |（\TU/lmr/m/n/10.53937 GDP\TU/SongtiSCLight(0)/m/n/10.53937 ）|  之 间 的 关 系 感 兴 趣。|  她 从 联 邦 储 备 银 行 圣 路 易 斯  |（\TU/lmr/m/n/10.53937 https://fred.stlouisfed.org/\TU/SongtiSCLight(0)/m/n/10.53937 ）|
  []
 
 
 
-[50]
-
 [51]
+Overfull \hbox (7.91432pt too wide) in paragraph at lines 2666--2667
+\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 ([]) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 ([]) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 ([])/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 ([])$\TU/SongtiSCLight(0)/m/n/10.53937 ，|  所 以 $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 ([]) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 ([]) \OMS/cmsy/m/n/10.53937 ^^B
+ []
+
+
 
 [52]
-File: images/1·62.png Graphic file (type bmp)
-<images/1·62.png>
-
 
 [53]
+File: images/1·62.png Graphic file (type bmp)
+<images/1·62.png>
 File: images/1·62.png Graphic file (type bmp)
 <images/1·62.png>
 
@@ -1072,25 +1085,29 @@ File: images/1·62.png Graphic file (type bmp)
 [54]
 
 [55]
-File: images/1·66·1.png Graphic file (type bmp)
-<images/1·66·1.png>
-
 
 [56]
 File: images/1·66·1.png Graphic file (type bmp)
 <images/1·66·1.png>
-File: images/1·66·2.png Graphic file (type bmp)
-<images/1·66·2.png>
+File: images/1·66·1.png Graphic file (type bmp)
+<images/1·66·1.png>
 
 
 [57]
+File: images/1·66·2.png Graphic file (type bmp)
+<images/1·66·2.png>
+
+Overfull \hbox (95.84036pt too wide) in paragraph at lines 2933--2938
+[]\TU/SongtiSCLight(0)/m/n/10.53937 如 果 你 想 进 行 更 深 入 的 探 索，|  下 面 是 相 关 电 子 表 格 链 接  |（但 对 于 本 次 考 试，|  这 部 分 理 解 不 是 必 需 的！ ） ：| \TU/lmr/m/n/10.53937 https://www.dropbox.com/s/i7bx2iewfrezgph/t2-
+ []
+
+
 
 [58]
-File: images/1·69.png Graphic file (type bmp)
-<images/1·69.png>
-
 
 [59]
+File: images/1·69.png Graphic file (type bmp)
+<images/1·69.png>
 File: images/1·69.png Graphic file (type bmp)
 <images/1·69.png>
 
@@ -1102,21 +1119,16 @@ File: images/1·69.png Graphic file (type bmp)
 [62]
 File: images/1·72.png Graphic file (type bmp)
 <images/1·72.png>
-File: images/1·73.png Graphic file (type bmp)
-<images/1·73.png>
 
 
 [63]
 File: images/1·73.png Graphic file (type bmp)
 <images/1·73.png>
+File: images/1·73.png Graphic file (type bmp)
+<images/1·73.png>
 
 
 [64]
-Overfull \hbox (36.86282pt too wide) in paragraph at lines 3225--3226
-[]\TU/lmr/m/n/10.53937 The Affordable Care Act modified the treatment of pre-existing conditions (https://en.wikipedia.org/wiki/Pre-existing_condition).
- []
-
-
 
 [65]
 File: images/1·77.png Graphic file (type bmp)
@@ -1126,6 +1138,8 @@ File: images/1·77.png Graphic file (type bmp)
 [66]
 File: images/1·77.png Graphic file (type bmp)
 <images/1·77.png>
+
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
 File: images/1·78.png Graphic file (type bmp)
 <images/1·78.png>
 
@@ -1134,15 +1148,14 @@ File: images/1·78.png Graphic file (type bmp)
 File: images/1·78.png Graphic file (type bmp)
 <images/1·78.png>
 
-Overfull \hbox (3.01006pt too wide) in paragraph at lines 3340--3341
-[]\TU/lmr/m/n/10.53937 Because $\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = [\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )]/\OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )$ \TU/lmr/m/n/10.53937 such that $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X; Y\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y; X\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 )$\TU/lmr/m/n/10.53937 ;
- []
-
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
 
 
 [68]
 
 [69]
+Missing character: There is no λ (U+03BB) in font [lmroman10-regular]:mapping=tex-text;!
+
 
 [70]
 
@@ -1151,11 +1164,12 @@ File: images/1·83.png Graphic file (type bmp)
 <images/1·83.png>
 File: images/1·84·1.png Graphic file (type bmp)
 <images/1·84·1.png>
+File: images/1·84·2.png Graphic file (type bmp)
+<images/1·84·2.png>
 
 
 [72]
-File: images/1·84·2.png Graphic file (type bmp)
-<images/1·84·2.png>
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
 File: images/1·86.png Graphic file (type bmp)
 <images/1·86.png>
 
@@ -1181,6 +1195,7 @@ File: images/1·88.png Graphic file (type bmp)
 [78]
 
 [79]
+Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
 File: images/1·94.png Graphic file (type bmp)
 <images/1·94.png>
 File: images/1·94.png Graphic file (type bmp)
@@ -1194,12 +1209,11 @@ File: images/1·94.png Graphic file (type bmp)
 [82]
 File: images/1·98.png Graphic file (type bmp)
 <images/1·98.png>
-
-
-[83]
 File: images/1·98.png Graphic file (type bmp)
 <images/1·98.png>
 
+
+[83]
 
 [84]
 
@@ -1211,21 +1225,19 @@ File: images/1·98.png Graphic file (type bmp)
 
 [88]
 
-[89]
-
-[90] (./一级模考卷.aux)
+[89] (./一级模考卷.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27751 strings out of 473832
- 616802 string characters out of 5729481
- 989475 words of memory out of 5000000
- 50308 multiletter control sequences out of 15000+600000
+ 27775 strings out of 473832
+ 618626 string characters out of 5729481
+ 989903 words of memory out of 5000000
+ 50332 multiletter control sequences out of 15000+600000
  563902 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,9n,114p,1274b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,114p,911b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 一级模考卷.pdf (90 pages).
+Output written on 一级模考卷.pdf (89 pages).

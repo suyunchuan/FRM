@@ -214,9 +214,12 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 若分布为正态分布，则 $97.5\%$ ES 可由 $99.0\%$ VaR 近似。
-      在这种情况下，我们可以使用 $\$30.0 * (4.0\% + 15\% * 2.33) = \$30.0 * 38.950\% = \$11.69$。
-      精确的 $97.5\%$ ES 为 $\$11.7210$，因此该数值被作为正确选项。
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 若分布为正态分布，则 $97.5\%$ ES 可由 $99.0\%$ VaR 近似。
+          \item     在这种情况下，我们可以使用 $\$30.0 * (4.0\% + 15\% * 2.33) = \$30.0 * 38.950\% = \$11.69$。
+          \item 精确的 $97.5\%$ ES 为 $\$11.7210$，因此该数值被作为正确选项。
+      \end{itemize}
   \end{explanation}
   
   \checklist{市场风险}{3}{2}
@@ -239,11 +242,13 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} Zapex 在远期货币合约中持有正相关于对手方违约概率的标记市值收益。
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item Zapex 在远期货币合约中持有正相关于对手方违约概率的标记市值收益。
       
-      反向风险（信用风险）是敞口与信用质量之间的不利相关性，因此反向风险是敞口与违约概率（信用质量）之间的正（负）相关性。这是反向风险，因为更大的敞口与较低的支付可能性相关。代数上，反向风险（或正向风险）是敞口/EAD和PD之间的一些依赖性。我们通常写$EL\% = PD \times EAD$，但假设PD和EAD之间是独立的，因此考虑WWR的一种简单方法是当$EL > PD \times EAD$时，因为$EL \neq PD \times EAD$也是非独立性的条件。
-      
-      关于（A）、（B）和（C），每项都是正向风险的例子。
+          \item 反向风险（信用风险）是敞口与信用质量之间的不利相关性，因此反向风险是敞口与违约概率（信用质量）之间的正（负）相关性。这是反向风险，因为更大的敞口与较低的支付可能性相关。代数上，反向风险（或正向风险）是敞口/EAD和PD之间的一些依赖性。我们通常写$EL\% = PD \times EAD$，但假设PD和EAD之间是独立的，因此考虑WWR的一种简单方法是当$EL > PD \times EAD$时，因为$EL \neq PD \times EAD$也是非独立性的条件。
+          \item 关于（A）、（B）和（C），每项都是正向风险的例子。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Credit Risk}{3}{3}
@@ -272,20 +277,26 @@
   \end{correctanswer}
   
   \begin{explanation}
-  \textbf{A选项正确。} 在住宅房地产敞口中，标准法（SA）下，如果贷款价值比（LTV）落入较低的区间，则风险权重较低。
+  \textbf{A选项正确。} 
+  \begin{itemize}
+      \item 在住宅房地产敞口中，标准法（SA）下，如果贷款价值比（LTV）落入较低的区间，则风险权重较低。
   
-  见下文。巴塞尔委员会（High-level summary of Basel III reforms, December 2017）写道：“对于住宅房地产敞口，已经开发了更多风险敏感的方法，其中风险权重根据抵押贷款的贷款价值比（而不是现有的单一风险权重）以及更好地反映市场结构差异的方式而变化。”
+      \item 见下文。巴塞尔委员会（High-level summary of Basel III reforms, December 2017）写道：“对于住宅房地产敞口，已经开发了更多风险敏感的方法，其中风险权重根据抵押贷款的贷款价值比（而不是现有的单一风险权重）以及更好地反映市场结构差异的方式而变化。”
+  \end{itemize}
   
   \begin{figure}[H]
       \centering
       \includegraphics[width=0.6\textwidth]{2·3.png}
   \end{figure}
   
-  关于（B）、（C）和（D），每项都是错误的。相反，以下是正确的：
+      
   \begin{itemize}
-      \item 巴塞尔III改革包括对无评级敞口的更细粒度方法，并减少了“机械依赖信用评级”
-      \item 关于内部评级法，GARP写道，“金融危机凸显了与监管资本内部模型方法使用相关的一些缺陷，其中包括信用风险内部评级法（IRB）方法。这些缺陷包括IRB方法的过度复杂性、各银行内部模型化的IRB资本要求缺乏可比性，以及在对某些资产类别建模时缺乏稳健性。为了解决这些缺陷，委员会对IRB方法进行了以下修订：（i）消除了对某些资产类别使用高级IRB（A-IRB）方法的选项；（ii）采用了“输入”地板（对于诸如违约概率（PD）和违约损失率（LGD）等指标），以确保在IRB方法仍然可用的资产类别中模型参数的最小水平保守性；（iii）提供了更详细的参数估计实践规范，以减少RWA可变性。”--- 来源：2020 FRM 二级：《运营风险和复原力》，第10版，Pearson Learning Solutions.
-      \item 关于输入地板的规范：“修订后的IRB框架还引入了银行估计的IRB参数的最小地板值，这些参数用作RWA计算的输入。这些包括F-IRB和A-IRB方法的PD地板，以及A-IRB方法的LGD和EAD地板。在某些情况下，这些地板由现有巴塞尔II地板的重新校准值组成。在其他情况下，地板代表银行IRB模型的新的约束条件。”--- 来源：2020 FRM 二级：《操作风险和复原力》，第10版，Pearson Learning Solutions.
+    \item 关于（B）、（C）和（D），每项都是错误的。相反，以下是正确的：
+    \begin{itemize}
+    \item 巴塞尔III改革包括对无评级敞口的更细粒度方法，并减少了“机械依赖信用评级”
+        \item 关于内部评级法，GARP写道，“金融危机凸显了与监管资本内部模型方法使用相关的一些缺陷，其中包括信用风险内部评级法（IRB）方法。这些缺陷包括IRB方法的过度复杂性、各银行内部模型化的IRB资本要求缺乏可比性，以及在对某些资产类别建模时缺乏稳健性。为了解决这些缺陷，委员会对IRB方法进行了以下修订：（i）消除了对某些资产类别使用高级IRB（A-IRB）方法的选项；（ii）采用了“输入”地板（对于诸如违约概率（PD）和违约损失率（LGD）等指标），以确保在IRB方法仍然可用的资产类别中模型参数的最小水平保守性；（iii）提供了更详细的参数估计实践规范，以减少RWA可变性。”--- 来源：2020 FRM 二级：《运营风险和复原力》，第10版，Pearson Learning Solutions.
+        \item 关于输入地板的规范：“修订后的IRB框架还引入了银行估计的IRB参数的最小地板值，这些参数用作RWA计算的输入。这些包括F-IRB和A-IRB方法的PD地板，以及A-IRB方法的LGD和EAD地板。在某些情况下，这些地板由现有巴塞尔II地板的重新校准值组成。在其他情况下，地板代表银行IRB模型的新的约束条件。”--- 来源：2020 FRM 二级：《操作风险和复原力》，第10版，Pearson Learning Solutions.
+    \end{itemize}
   \end{itemize}
   \end{explanation}
   
@@ -309,14 +320,16 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{B选项正确。} 0.0757。因为 $(96.00 - 89.00)/92.50 = 0.075676$
+      \textbf{B选项正确。} 
+      \begin{itemize}
+          \item 0.0757。因为 $(96.00 - 89.00)/92.50 = 0.075676$
       
-      根据Hull (24.1.2. Measuring Market Liquidity)，两种衡量买卖价差的方法是：
+      \item 根据Hull (24.1.2. Measuring Market Liquidity)，两种衡量买卖价差的方法是：
       \begin{itemize}
           \item 美元买卖价差 $= p =$ 卖出价 -- 买入价
           \item 相对买卖价差 $= s =$ (卖出价 -- 买入价) / 中间价
       \end{itemize}
-      
+      \end{itemize}
       (来源：John C. Hull, Risk Management and Financial Institutions, 5th Edition (Hoboken, NJ: John Wiley \& Sons, 2018))
   \end{explanation}
   
@@ -350,7 +363,10 @@
       \end{correctanswer}
       
       \begin{explanation}
-      \textbf{C选项正确。} C. 错误的：这些因子每个都是显著的，调整后的 $R^2$ 对于实证金融来说相对较高。关于（A）、（B）和（D），每项都是正确的。
+      \textbf{C选项错误。} 
+      \begin{itemize}
+          \item 错误的：这些因子每个都是显著的，调整后的 $R^2$ 对于实证金融来说相对较高。
+      \end{itemize}
       \end{explanation}
       
   \checklist{Finance: Portfolio Management}{3}{2}
@@ -373,7 +389,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 正确的：买入看涨期权，卖出看跌期权，并卖空股票
+      \textbf{A选项正确。} 
+      \begin{itemize}
+          \item 正确的：买入看涨期权，卖出看跌期权，并卖空股票
+      \end{itemize}
   \end{explanation}
   
   \checklist{Derivatives: Options}{3}{2}
@@ -396,7 +415,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-        \textbf{A选项正确。} 总CVA是边际CVA的总和，因此必须为 $-1.450 + (-1.550) = -3.000$。增量CVA必须等于总（净额）CVA，因此，如果IRS是第二个，其增量CVA等于 $-3.000 - (-2.100) = -0.900$。
+        \textbf{A选项正确。} 
+        \begin{itemize}
+            \item 总CVA是边际CVA的总和，因此必须为 $-1.450 + (-1.550) = -3.000$。
+            \item 增量CVA必须等于总（净额）CVA，因此，如果IRS是第二个，其增量CVA等于 $-3.000 - (-2.100) = -0.900$。
+        \end{itemize}
   \end{explanation}
   
   \checklist{Credit Risk}{1}{1}
@@ -441,14 +464,16 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 是的，所有五项陈述都是正确的
+      \textbf{D选项正确。} 
       \begin{itemize}
           \item 关于正确的陈述（I.）和（II.），资本留存缓冲（CCB）、G-SIB缓冲和逆周期缓冲（CCyB）每个都需要普通股一级资本（CET1），这是最高质量的缓冲。此外，任何一项的违约都意味着对股息支付的限制（除了其他监管工具，如对高管奖金的限制）
           \item 关于正确的陈述（III.），BCBS写道，“资本留存缓冲（CCB）被引入以确保银行在发生损失时拥有额外的可用资本层，可以被提取”（见https://www.bis.org/fsi/fsisummaries/b3\_capital.htm）和GARP写道，“在CCB的情况下，大致遵循了美国资本监管中内置的促动纠正行动（PCA）系统的逻辑；即，比例开始接近最低值的银行应受到越来越严格的监管干预，以促使回到资本充足的状态。”– 2020 FRM 二级：《操作风险和复原力》，第10版，Pearson Learning Solutions.
           \item 关于正确的陈述（IV.），G-SIB要求包括五个档次 $\{1.0\%, 1.5\%, 2.0\%, 2.5\%, \text{or } 3.5\%\}$ ，GARP解释说，“在G-SIB缓冲的情况下，大致遵循了CCB的逻辑，但也认识到G-SIBs在社会中造成巨大成本的困境（以及它们中一些损失的更高波动性）。因此，较大的缓冲被指定为进一步降低失败的可能性。”
           \item 关于正确的陈述（V.），“逆周期资本缓冲（CCyB）有两个理性。一个是提供一个宏观审慎的工具来抑制过热；另一个是关注资本成本。”GARP说道。进一步，BCBS解释说，“逆周期资本缓冲（CCyB）旨在确保银行资本要求考虑银行运营的宏观金融环境。其主要目标是使用资本缓冲来实现更广泛的宏观审慎目标，即保护银行体系免受过量信贷增长时期的影响，而这种过量信贷增长往往与系统性风险的积累有关。由于其逆周期性质，逆周期资本缓冲制度也可能首先有助于对抗信贷周期积累阶段。在衰退期间，该制度应有助于减少信贷供应可能受到监管资本要求制约的风险，这可能削弱实体经济的表现，并在银行系统中导致额外的信贷损失。”见https://www.bis.org/bcbs/ccyb/
       \end{itemize}
-      记住这些三个额外缓冲的基本要求：CCB需要 $+2.5\%$ CET1; G-SIB需要 $\{+1.0\%, +1.5\%, +2.0\%, +2.5\%, \text{or } +3.5\%\}$ 取决于银行的评分 (见https://trtl.bz/fsb-g-sibs); 和 CCyB 需要在零和 $2.5\%$ 之间。
+      \begin{itemize}
+          \item 记住这些三个额外缓冲的基本要求：CCB需要 $+2.5\%$ CET1; G-SIB需要 $\{+1.0\%, +1.5\%, +2.0\%, +2.5\%, \text{or } +3.5\%\}$ 取决于银行的评分 (见https://trtl.bz/fsb-g-sibs); 和 CCyB 需要在零和 $2.5\%$ 之间。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance: Regulatory Capital}{3}{2}
@@ -471,11 +496,13 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 单日 $99.0\%$ VaR 由 $-0 + 1.43\% * 2.326 * \$3.0 \text{ million} = \$99,800$ 给出。
-      
-      流动性成本（LC）由 $(31.00 - 29.00)/30.00 * 0.5 * \$3.0 \text{ million} = \$100,000$ 给出。
-      
-      因此，单日 $99.0\%$ VaR 为 $99,800 + 100,000 = 199,800$
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 单日 $99.0\%$ VaR 由 $-0 + 1.43\% * 2.326 * \$3.0 \text{ million} = \$99,800$ 给出。
+          \item 流动性成本（LC）由 $(31.00 - 29.00)/30.00 * 0.5 * \$3.0 \text{ million} = \$100,000$ 给出。
+          \item 因此，单日 $99.0\%$ VaR 为 $99,800 + 100,000 = 199,800$
+      \end{itemize}
+
   \end{explanation}
   
   \checklist{Market Risk: Liquidity Risk}{3}{2}
@@ -502,8 +529,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 正确的：最优主动风险翻倍
-      因为最优主动风险由 $IR/(2*\lambda)$ 给出，帕特丽莎在从 $0.750/(2*0.10) = 3.750$ 到 $0.750/(2*0.050) = 7.500$ 时，最优主动风险翻倍。
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 正确的：最优主动风险翻倍
+          \item 因为最优主动风险由 $IR/(2*\lambda)$ 给出，帕特丽莎在从 $0.750/(2*0.10) = 3.750$ 到 $0.750/(2*0.050) = 7.500$ 时，最优主动风险翻倍。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Portfolio Management: Fundamental Law of Active Management}{3}{2}
@@ -530,9 +560,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 正确的：与Vasicek模型的恒定波动率不同，CIR的基点波动率不是恒定的，这确保了短期利率不会变为负数。
-      
-      关于（A）、（B）和（C），每项都是错误的。
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 正确的：与Vasicek模型的恒定波动率不同，CIR的基点波动率不是恒定的，这确保了短期利率不会变为负数。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Term Structure Models}{3}{2}
@@ -562,16 +593,17 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 正确的：他的信用风险在所有引用的交易日期增加；即，1月日期（4日和31日）和所有2月日期（8日、9日和13日）
-  
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 正确的：他的信用风险在所有引用的交易日期增加；即，1月日期（4日和31日）和所有2月日期（8日、9日和13日）
       \begin{itemize}
           \item 1月4日：购买保险增加了信用风险，因为贾森购买了一份保险，如果发生事件，保险将不会交付。\textit{ contingent claims} 是一种信用风险。根据文本，“第六种类型的事务是资产索赔的特殊情况—— contingent claim. 索赔取决于某些事件的发生，例如保险政策覆盖的损失。在政策开始时，政策持有者对保险公司没有索赔。然而，一旦被保险人遭受 covered loss, 被保险人有索赔。如果保险公司未能支付索赔，这将构成信用损失。” ($\dagger$)
           \item 1月31日：他预付了订单，因此有他的对手方不履行义务的可能性。根据文本，“\textit{Prepayment of goods and services} 是一种涉及信用风险的交易类型。交付预计在某个时间以某种质量和/或性能进行，对手方的失败可能导致预付款的损失，并产生业务中断成本。” ($\dagger$)
           \item 2月8日和9日：贾森向他的客户交付了钢铁订单。他的任何一个客户都可能不履行向他付款的义务，因此，贾森增加了他的信用风险。根据文本，“第三种类型是产品或服务的销售，没有立即现金支付。卖方在产品发货或服务完成后向买方发送发票，买方有几周时间付款。这被称为 \textit{account receivable}.” ($\dagger$)
           \item 2月13日：他将销售所得和上一季度的收益存入ABC银行。贾森将他的资产委托给第三方保管，因此，他面临银行无法偿还其资产的风险。根据文本，“第五种类型的事务涉及一方对另一方保管或管理的资产的索赔，例如银行存款。” ($\dagger$)
       \end{itemize}
-  
-      信用风险可以通过多种方式产生。文本($\dagger$)列出了七种：
+   
+      \item 信用风险可以通过多种方式产生。文本($\dagger$)列出了七种：
       \begin{enumerate}
           \item 贷款：借款人向贷款人偿还的风险。
           \item 租赁：承租人无法履行未来对资产使用费的支付的风险。
@@ -581,7 +613,7 @@
           \item  contingent claims (例如，保险，养老金基金索赔)：保险公司或赞助商无法支付索赔或养老金负债的风险。
           \item 衍生敞口：衍生交易（如互换或期货）未来支付义务的风险，这些义务依赖于底层资产的市场价值。
       \end{enumerate}
-  
+    \end{itemize}
       ($\dagger$) \textbf{Sylvain Bouteille 和 Diane Coogan-Pushner, 《信贷风险管理手册：发起、评估和管理信贷敞口》（第2版，美国新泽西州霍博肯：约翰威利与子公司，2022年）。}
   \end{explanation}
   
@@ -625,7 +657,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。}巴塞尔II并没有取消风险加权资产（或风险权重）；风险加权资产（RWA）在巴塞尔III/IV中仍然存在。根据GARP的Mark Carey，作为对原始巴塞尔I协议的改进，巴塞尔II的四项重大创新包括：更为复杂的风险权重公式；新增了操作风险资本要求；引入了第二支柱和第三支柱；以及多次采用量化影响研究（QIS）。许多专家认为新增的支柱是十分重大的进展。Carey解释道：“三大支柱代表了各国监管实践趋同的努力，特别是在‘规则与原则’分歧的背景下。具体来说，第二支柱要求监管者让银行持有高于最低要求的资本，并建立与其风险状况相符的内部资本充足评估流程（ICAAP）…… 协议条款执行方面的国家自主权被削弱，国家监管机构须对其执行协议的努力保持透明，包括那些高于最低要求的措施。第三支柱则要求进行更多定性和定量的信息披露，希望市场参与者的压力能帮助提升银行的实践水平（即市场约束）。”（来源：2020 FRM Part II: Operational Risk and Resiliency，第10版，Pearson Learning Solutions）
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 巴塞尔II并没有取消风险加权资产（或风险权重）；风险加权资产（RWA）在巴塞尔III/IV中仍然存在。根据GARP的Mark Carey，作为对原始巴塞尔I协议的改进，巴塞尔II的四项重大创新包括：更为复杂的风险权重公式；新增了操作风险资本要求；引入了第二支柱和第三支柱；以及多次采用量化影响研究（QIS）。许多专家认为新增的支柱是十分重大的进展。
+          \item Carey解释道：“三大支柱代表了各国监管实践趋同的努力，特别是在‘规则与原则’分歧的背景下。具体来说，第二支柱要求监管者让银行持有高于最低要求的资本，并建立与其风险状况相符的内部资本充足评估流程（ICAAP）…… 协议条款执行方面的国家自主权被削弱，国家监管机构须对其执行协议的努力保持透明，包括那些高于最低要求的措施。第三支柱则要求进行更多定性和定量的信息披露，希望市场参与者的压力能帮助提升银行的实践水平（即市场约束）。”（来源：2020 FRM Part II: Operational Risk and Resiliency，第10版，Pearson Learning Solutions）
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance: Basel Accords}{3}{2}
@@ -648,9 +684,12 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 正确的： $F - S = -2.20$ USDJPY
+      \textbf{A选项正确。} 
+      \begin{itemize}
+          \item  $F - S = -2.20$ USDJPY
       
-      如果CIP被强制执行，那么 $F - S = S \times [(1 + \text{Rf\_JPY})/(1 + \text{Rf\_USD}) - 1] = 110.00 \times [(1 + 0.45\%)/(1 + 2.50\%) - 1] = -2.20$。
+          \item 如果CIP被强制执行，那么 $F - S = S \times [(1 + \text{Rf\_JPY})/(1 + \text{Rf\_USD}) - 1] = 110.00 \times [(1 + 0.45\%)/(1 + 2.50\%) - 1] = -2.20$。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Financial Markets and Products}{3}{2}
@@ -680,14 +719,13 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 股票的波动率增加（伴随着与市场的相关性增加），而市场波动率保持不变。
-  
-      股票的波动率增加（伴随着与市场的相关性增加），而市场波动率保持不变（aka, ceteris paribus），意味着股票的beta增加。这增加了股票的预期回报。因此，股票的价格应该下降。
-  
-      Ang（强调 ours）：“VIX变化和股票回报之间的相关性是-39\%，所以当波动率上升时，股票表现不好。波动率和回报之间的负关系被称为杠杆效应。当股票回报下降时，公司的财务杠杆增加，因为债务大致保持不变，而股权的市场价值下降。这使得股权风险更大，增加了它们的波动性。另一个通道是高波动率导致低股票回报：\textbf{波动率上升提高了投资者要求的股权回报，也导致股票价格下降。}这个第二个通道是一个时间变化的风险溢价故事，是基本CAPM倡导的：随着市场波动率增加，折现率增加，股票价格必须今天下降，以便未来股票回报可以高。” ($\dagger$)
-  
-      关于（A）、（B）和（C），每项都是错误的。
-  
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 股票的波动率增加（伴随着与市场的相关性增加），而市场波动率保持不变。
+          \item 股票的波动率增加（伴随着与市场的相关性增加），而市场波动率保持不变（aka, ceteris paribus），意味着股票的beta增加。这增加了股票的预期回报。因此，股票的价格应该下降。
+          \item Ang（强调 ours）：“VIX变化和股票回报之间的相关性是-39\%，所以当波动率上升时，股票表现不好。波动率和回报之间的负关系被称为杠杆效应。当股票回报下降时，公司的财务杠杆增加，因为债务大致保持不变，而股权的市场价值下降。这使得股权风险更大，增加了它们的波动性。另一个通道是高波动率导致低股票回报：\textbf{波动率上升提高了投资者要求的股权回报，也导致股票价格下降。}这个第二个通道是一个时间变化的风险溢价故事，是基本CAPM倡导的：随着市场波动率增加，折现率增加，股票价格必须今天下降，以便未来股票回报可以高。” ($\dagger$)
+          \item 关于（A）、（B）和（C），每项都是错误的。
+      \end{itemize}
       $(\dagger)$ \textbf{Andrew Ang, 《资产管理：因子投资系统方法》（纽约：牛津大学出版社，2014年）。}
   \end{explanation}
   
@@ -715,9 +753,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 错误的：Vasicek是一个单因素模型；为了对冲短期、中期和长期债券，需要例如三因素Gauss+模型。
+      \textbf{D选项错误。} 
+      \begin{itemize}
+          \item 错误的：Vasicek是一个单因素模型；为了对冲短期、中期和长期债券，需要例如三因素Gauss+模型。
+      \end{itemize}
       
-      关于（A）、（B）和（C），每项都是正确的。
   \end{explanation}
   
   \checklist{Fixed Income: Vasicek Model}{3}{2}
@@ -754,7 +794,9 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 正确的：公司C拥有最高的ROE，因为它有较低的股权地位。
+      \textbf{A选项错误。} 
+      \begin{itemize}
+          \item 正确的：公司C拥有最高的ROE，因为它有较低的股权地位。
       \begin{itemize}
           \item 公司A拥有负的ROE（$-0.33\%$），因为它有较大的债务地位（如下图所示）。即使遭受信用损失，公司仍必须偿还其债务持有者。公司A遭受了严重的信用损失，降低了EBIT。然而，即使调整了其信用损失，公司A仍然会比公司B和C拥有更小的ROE。
           \item 公司B拥有正的ROE，但ROE非常小，因为它与公司C和A相比有较大的股权。公司A遭受了较大的信用损失，降低了EBIT。然而，即使调整了其信用损失，公司仍然会比公司C拥有更小的ROE。
@@ -764,6 +806,7 @@
           \centering
           \includegraphics[width=0.6\textwidth]{2·17·2.png} 
       \end{figure}
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance: Financial Statement Analysis}{3}{2}
@@ -792,9 +835,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 错误的：两项。相反，以下是正确的：风险偏好（即风险偏好声明）由高级管理层开发并由董事会批准。风险文化不是唯一责任，而是公司实际ORMF的基础，因此所有员工都对文化承担一定责任。
+      \textbf{A选项错误。} 
+      \begin{itemize}
+          \item 错误的：两项。相反，以下是正确的：风险偏好（即风险偏好声明）由高级管理层开发并由董事会批准。风险文化不是唯一责任，而是公司实际ORMF的基础，因此所有员工都对文化承担一定责任。
+      \end{itemize}
       
-      关于（B）、（C）和（D），每项都是正确的。
   \end{explanation}
   
   \checklist{Operational Risk}{3}{2}
@@ -821,10 +866,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 错误的：流动性EWI是：债务/CDS利差扩大（与债务成本突然增加一致）
-      
-      关于（B）、（C）和（D），每项都是流动性EWI的候选，根据研究笔记：
-      ``巴塞尔银行监管委员会（BCBS）建议将以下措施作为流动性早期预警指标（EWI）。这些措施包括[重点摘要如下]：
+      \textbf{A选项正确。} 
+      \begin{itemize}
+      \item 错误的：流动性EWI是：债务/CDS利差扩大（与债务成本突然增加一致）
+      \item 关于（B）、（C）和（D），每项都是流动性EWI的候选，根据研究笔记：
+      \item ``巴塞尔银行监管委员会（BCBS）建议将以下措施作为流动性早期预警指标（EWI）。这些措施包括[重点摘要如下]：
       \begin{itemize}
           \item 资产的异常增长，尤其是伴随着负债的波动性增强时；
           \item 债务（信用）利差\textit{扩大}，和/或信用违约掉期（CDS）利差\textit{扩大}；
@@ -838,6 +884,7 @@
           \item 信贷额度被下调；
           \item 零售存款外流加速；定期存单（CDs）被大量提前赎回；
           \item 长期融资渠道变得更困难；短期负债发行变得更困难''
+      \end{itemize}
       \end{itemize}
   \end{explanation}
   
@@ -874,11 +921,12 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} The expected excess return, $E(r_i) - R_f = \beta(i,m) \times \lambda(m)$ where $\beta(i,m) = \text{cov}(r_i, m)/\text{var}(m)$ and $\lambda(m) = -\text{var}(m)/E(m)$.
-      
-      In this case, $\beta(i,m) = \text{cov}(r_i, m)/\text{var}(m) = -0.10680/0.090 = -1.186667$, and $\lambda(m) = -\text{var}(m)/E(m) = -0.090/0.9709 = -0.0926975$.
-      
-      Therefore, $E(r_i) - R_f = \beta(i,m) \times \lambda(m) = -1.186667 \times -0.0926975 = 0.1100011$ or about $11.0\%$.
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 预期超额回报 $E(r_i) - R_f = \beta(i,m) \times \lambda(m)$，其中 $\beta(i,m) = \text{cov}(r_i, m)/\text{var}(m)$，而 $\lambda(m) = -\text{var}(m)/E(m)$。
+          \item 在本题中，$\beta(i,m) = \text{cov}(r_i, m)/\text{var}(m) = -0.10680/0.090 = -1.186667$，$\lambda(m) = -\text{var}(m)/E(m) = -0.090/0.9709 = -0.0926975$。
+          \item 因此，$E(r_i) - R_f = \beta(i,m) \times \lambda(m) = -1.186667 \times -0.0926975 = 0.1100011$，约等于 $11.0\%$。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance: Factor Theory}{3}{2}
@@ -920,9 +968,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{B选项正确。} 正确：接下来一年的预期回报是$9.00\%$。
-
-      我们不需要套用公式。每一年久期风险的风险溢价为50个基点，而这只三年期债券具有两年的久期风险。因此预期回报比$8.0\%$高出100个基点。
+      \textbf{B选项正确。} 
+      \begin{itemize}
+          \item 正确：接下来一年的预期回报是$9.00\%$。
+          \item 我们不需要套用公式。每一年久期风险的风险溢价为50个基点，而这只三年期债券具有两年的久期风险。因此预期回报比$8.0\%$高出100个基点。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Fixed Income}{3}{2}
@@ -963,7 +1013,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 在这个场景中，所有批准文件都在会议前恰当地分发给了委员会。Jan确实花了时间向委员会解释投资，但她还帮助促进了委员会成员之间的讨论，并听取了每个人的意见。投票不必一致通过，但除非决定一致通过，否则应该举行投票。然而，会议应该准确记录，以防投资出现问题。在不良交易的情况下，审计师希望知道会议中讨论了什么，以及投资决策背后的推理。
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 在这个场景中，所有批准文件都在会议前恰当地分发给了委员会。Jan确实花了时间向委员会解释投资，但她还帮助促进了委员会成员之间的讨论，并听取了每个人的意见。投票不必一致通过，但除非决定一致通过，否则应该举行投票。然而，会议应该准确记录，以防投资出现问题。在不良交易的情况下，审计师希望知道会议中讨论了什么，以及投资决策背后的推理。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Credit Risk Management}{3}{2}
@@ -996,12 +1049,13 @@
       \end{correctanswer}
       
       \begin{explanation}
-      \textbf{C选项正确。} 正确的：\$1,230.0 million
-      
-      巴塞尔2.5市场风险资本要求需要99.0\%的置信水平，由以下公式给出：
-      \[ MRC = \max[VaR(t-1), m \times VaR(60\text{-day avg})] + \max[SVaR(t-1), m(S) \times SVaR(60\text{-day avg})] \]
-      在这种情况下，
-      \[ MRC = \max[185.0, 3.0 \times 140.0] + \max[360.0, 3.0 \times 270.0] = \$1,230.0 \text{ million}. \]
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 巴塞尔2.5市场风险资本要求需要99.0\%的置信水平，由以下公式给出：
+          \[ MRC = \max[VaR(t-1), m \times VaR(60\text{-day avg})] + \max[SVaR(t-1), m(S) \times SVaR(60\text{-day avg})] \]
+          \item 在这种情况下，
+          \[ MRC = \max[185.0, 3.0 \times 140.0] + \max[360.0, 3.0 \times 270.0] = \$1,230.0 \text{ million}. \]
+      \end{itemize}
       \end{explanation}
       
   \checklist{Market Risk}{3}{2}
@@ -1024,7 +1078,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 正确的：$6.00\%$。 $\text{TEY} = \text{after-tax return on tax-exempt investment} / (1 - \text{marginal tax rate})$; in this case, $\text{TEY} = 4.20\%/(1 - 0.30) = 6.00\%$
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 正确的：$6.00\%$。 $\text{TEY} = \text{after-tax return on tax-exempt investment} / (1 - \text{marginal tax rate})$; in this case, $\text{TEY} = 4.20\%/(1 - 0.30) = 6.00\%$
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance: Fixed Income}{1}{1}
@@ -1060,9 +1117,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 错误的：为了正确，这应该改为：在高通货膨胀期间，所有五个资产类别都比在低通货膨胀期间表现显著更差。
+        \textbf{C选项错误。} 
+        \begin{itemize}
+            \item 应该改为：在高通货膨胀期间，所有五个资产类别都比在低通货膨胀期间表现显著更差。
+        \end{itemize}
       
-      关于（A）、（B）和（D），每项都是正确的。
   \end{explanation}
   
   \checklist{Factor Investing}{3}{3}
@@ -1103,7 +1162,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 正确的：模型返回市场价格，如果我们使用贴现率为 2.25\%（时点 0，状态 0）、1.75\%（时点 1，状态 0）和 2.75\%（时点 1，状态 1）
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 模型返回市场价格，如果我们使用贴现率为 2.25\%（时点 0，状态 0）、1.75\%（时点 1，状态 0）和 2.75\%（时点 1，状态 1）
+      \end{itemize}
   \end{explanation}
   
   \checklist{Fixed Income Analysis}{3}{2}
@@ -1135,9 +1197,11 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} \$516,000
-      
-      $CVA = -LGD \times PD(0,T) \times V(t)$。本题中，$V(t) = S \times N(d1) - K \times \exp(-rt) \times N(d2) = 25 \times 0.66750 - 25 \times \exp(-0.030 \times 3) \times 0.53450 = \$4.475$ 百万美元。累积 $PD = 1 - \exp(-0.060 \times 3) = 16.473\%$。因此，CVA 的近似计算为 $70\% \times 16.473\% \times 4.475 \text{ 百万美元} = \$0.5160 \text{ 百万美元}$，约为 \$516,002。
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item \$516,000
+          \item $CVA = -LGD \times PD(0,T) \times V(t)$。本题中，$V(t) = S \times N(d1) - K \times \exp(-rt) \times N(d2) = 25 \times 0.66750 - 25 \times \exp(-0.030 \times 3) \times 0.53450 = \$4.475$ 百万美元。累积 $PD = 1 - \exp(-0.060 \times 3) = 16.473\%$。因此，CVA 的近似计算为 $70\% \times 16.473\% \times 4.475 \text{ 百万美元} = \$0.5160 \text{ 百万美元}$，约为 \$516,002。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Credit Risk}{27}{2}
@@ -1172,16 +1236,28 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 大多数运营风险的原因归因于控制弱点；人类偏见和行为失败；以及/或 operating environment changes
-  
-      关于（A）、（B）和（C），每项都是错误的。
+
+      \textbf{A选项错误。} 
       \begin{itemize}
           \item 运营风险主要是异质性的，并在公司内部扩散。Beta 是一种系统性风险。
+      \end{itemize}
+
+      \textbf{B选项错误。} 
+      \begin{itemize}
           \item 运营风险高度异质但相互关联。此外，边界事件是“风险事件，它们表现为不同于它们导致的事件” –Source: GARP Introduction to Operational Risk and Resilience, Section 1.5)
+      \end{itemize}
+
+      \textbf{C选项错误。} 
+      \begin{itemize}
           \item 根据GARP，“监管运营风险资本对公司的风险状况不敏感，因此没有真正的激励来优化运营风险的管理。事实上，监管资本通常是风险管理质量的糟糕指标。” –Source: Chapter (GARP Introduction to Operational Risk and Resilience, Section 1.7)
       \end{itemize}
+
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 大多数运营风险的原因归因于控制弱点；人类偏见和行为失败；以及/或 operating environment changes
+      \end{itemize}
   \end{explanation}
-  
+
   \checklist{Operational Risk}{3}{2}
   
   % --- Question 29 ---
@@ -1212,36 +1288,31 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{B. TRUE: +10.0 million}
-      
-      流入包括：
-      存款流入 = $100 +$
+      \textbf{B选项正确。} 
+      \begin{itemize}
+      \item 流入包括：
+      \begin{itemize}
+          \item 存款流入 = $100 +$
+          \item 计划贷款偿还 = $60 +$
+          \item 从货币市场借款 = $80 +$
+          \item 银行资产的出售 = $30 +$
+          \item 非存款服务销售收入 = $10$;
+      \end{itemize}
+      \item 总流入为 $\$100 + \$60 + \$80 + \$30 + \$10 = 280.0$ 百万。
 
-      计划贷款偿还 = $60 +$
+      \item 流出包括：
+      \begin{itemize}
+          \item 存款提取 = $70 +$
+          \item 可接受的贷款请求 = $90 +$
+          \item 股东分红支付 = $20 +$
+          \item 银行借款的偿还 = $50 +$
+          \item 运营支出 = $40$;
+      \end{itemize}
 
-      从货币市场借款 = $80 +$
+      \item 总流出为 $\$70 + \$90 + \$20 + \$50 + \$40 = \$270.0$ 百万
 
-      银行资产的出售 = $30 +$
-
-      非存款服务销售收入 = $10$;
-
-      总流入为 $\$100 + \$60 + \$80 + \$30 + \$10 = 280.0$ 百万。
-
-      流出包括：
-
-      存款提取 = $70 +$
-
-      可接受的贷款请求 = $90 +$X
-
-      股东分红支付 = $20 +$
-
-      银行借款的偿还 = $50 +$
-
-      运营支出 = $40$;
-
-      总流出为 $\$70 + \$90 + \$20 + \$50 + \$40 = \$270.0$ 百万
-
-      因此，预计的净流动性头寸为 $\$280 - 270 = +10.0$ 百万。
+      \item 因此，预计的净流动性头寸为 $\$280 - 270 = +10.0$ 百万。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance}{3}{2}
@@ -1280,9 +1351,14 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{C选项正确。} 混合 \#3 分配给科技ETF 65.0\%
-      
-      当边际VaR保持不变时，风险被最小化（即，投资组合的分散VaR被最小化）。在四种混合中，混合 \#3 显然是边际VaR最接近的选择（即，$0.231$ 与 $0.232$ 几乎完全匹配）。混合 \#1 具有最大的分散VaR。从混合 \#1 开始，风险通过添加边际VaR较低的组件（在本混合中，科技ETF的边际VaR仅为 $0.020$，而REIT ETF的边际VaR为 $0.461$）并减少边际VaR较高的组件来减少。如果我们从混合 \#1 开始，并添加 $15.0\%$ 到科技ETF，那么我们“到达”混合 \#2。然而，在混合 \#2 中，REIT ETF的边际VaR仍然比科技ETF的边际VaR高得多（即，$0.386$ 与 $0.118$），因此我们可以继续向边际VaR较低的组件（仍然是科技ETF）转移。如果我们再添加 $15\%$ 到科技ETF，那么我们到达混合 \#3：这里边际VaR几乎相等，因此我们非常接近于最小化投资组合的分散VaR的分配。记录在案，四种混合的分散投资组合VaR分别为 $\$6,131.14$（混合 \#1）、$\$5,043.03$（混合 \#2）、$\$4,621.42$（混合 \#3）和 $\$5,036.58$（混合 \#4）。
+      \textbf{C选项正确。} 
+      \begin{itemize}
+          \item 混合 \#3 分配给科技ETF 65.0\%
+          \item 当边际VaR保持不变时，风险被最小化（即，投资组合的分散VaR被最小化）。在四种混合中，混合 \#3 显然是边际VaR最接近的选择（即，$0.231$ 与 $0.232$ 几乎完全匹配）。
+          \item 混合 \#1 具有最大的分散VaR。从混合 \#1 开始，风险通过添加边际VaR较低的组件（在本混合中，科技ETF的边际VaR仅为 $0.020$，而REIT ETF的边际VaR为 $0.461$）并减少边际VaR较高的组件来减少。
+          \item 如果我们从混合 \#1 开始，并添加 $15.0\%$ 到科技ETF，那么我们“到达”混合 \#2。然而，在混合 \#2 中，REIT ETF的边际VaR仍然比科技ETF的边际VaR高得多（即，$0.386$ 与 $0.118$），因此我们可以继续向边际VaR较低的组件（仍然是科技ETF）转移。
+          \item 如果我们再添加 $15\%$ 到科技ETF，那么我们到达混合 \#3：这里边际VaR几乎相等，因此我们非常接近于最小化投资组合的分散VaR的分配。记录在案，四种混合的分散投资组合VaR分别为 $\$6,131.14$（混合 \#1）、$\$5,043.03$（混合 \#2）、$\$4,621.42$（混合 \#3）和 $\$5,036.58$（混合 \#4）。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Finance: Risk Management}{3}{2}
@@ -1309,14 +1385,21 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 正确的：回归对冲最小化了对冲头寸的利润和损失（P\&L）方差。
-      
-      如Tuckman所解释（加粗为我们所强调）：“\textbf{回归对冲的最佳论据}实际上并不是先前关于债券收益率完全依赖回归模型变化的假设。将头寸的盈亏（P\&L）写为……公式6.11……其中负号表示，名义本金为正且收益率上升时，P\&L会减少。可以证明，公式(6.8)中的回归对冲能够最小化方差。换句话说，\textbf{只要将P\&L方差作为适当的风险度量，回归对冲就能最小化被对冲头寸的风险。}”——引自Tuckman, Bruce; Serrat, Angel.《固定收益证券》（Wiley Finance）（第159页），Wiley出版社，Kindle版。
-      
-      关于（B）、（C）和（D），每项都是错误的。相反，以下是正确的陈述：
+      \textbf{A选项正确。} 
+      \begin{itemize}
+          \item 正确的：回归对冲最小化了对冲头寸的利润和损失（P\&L）方差。
+          \item 如Tuckman所解释（加粗为我们所强调）：“\textbf{回归对的最佳论据}实际上并不是先前关于债券收益率完全依赖回归模型变化的假设。将头寸的盈亏（P\&L）写为……公式6.11……其中负号表示，名义本金为正且收益率上升时，P\&L会减少。可以证明，公式(6.8)中的回归对冲能够最小化方差。换句话说，\textbf{只要将P\&L方差作为适当的风险度量，回归对冲就能最小化被对冲头寸的风险。}”——引自Tuckman, Bruce; Serrat, Angel.《固定收益证券》（Wiley Finance）（第159页），Wiley出版社，Kindle版。
+      \end{itemize}
+      \textbf{B选项错误。} 
       \begin{itemize}
           \item 回归对冲基于经验分析，而不是经济理论和未来发展
+      \end{itemize}
+      \textbf{C选项错误。} 
+      \begin{itemize}
           \item 回归对冲通常需要（或至少偏好）样本外测试（s）
+      \end{itemize}
+      \textbf{D选项错误。} 
+      \begin{itemize}
           \item 风险权重是beta系数，与巴塞尔法规下的风险加权资产（RWA）无关
       \end{itemize}
   \end{explanation}
@@ -1345,11 +1428,16 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} Zapex 有一个远期货币合同头寸，其公允价值收益与交易对手的违约概率正相关
-      
-      反向风险（信用风险）是敞口与信用质量之间的不利相关性，因此反向风险是敞口与违约概率（信用质量）之间的正（负）相关性。这是反向风险，因为更大的敞口与较低的支付可能性相关。代数上，反向风险（或正向风险）是敞口/EAD和PD之间的一些依赖性。我们通常写$EL\% = PD \times EAD$，但假设PD和EAD之间是独立的，因此考虑WWR的一种简单方法是当$EL > PD \times EAD$时，因为$EL \neq PD \times EAD$也是非独立性的条件。
-      
-      关于（A）、（B）和（C），每项都是正向风险的例子。
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item Zapex 有一个远期货币合同头寸，其公允价值收益与交易对手的违约概率正相关
+      \end{itemize}
+      \begin{itemize}
+          \item 反向风险（信用风险）是敞口与信用质量之间的不利相关性，因此反向风险是敞口与违约概率（信用质量）之间的正（负）相关性。这是反向风险，因为更大的敞口与较低的支付可能性相关。代数上，反向风险（或正向风险）是敞口/EAD和PD之间的一些依赖性。我们通常写$EL\% = PD \times EAD$，但假设PD和EAD之间是独立的，因此考虑WWR的一种简单方法是当$EL > PD \times EAD$时，因为$EL \neq PD \times EAD$也是非独立性的条件。
+      \end{itemize}
+      \begin{itemize}
+          \item 关于（A）、（B）和（C），每项都是正向风险的例子。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Credit Risk: Wrong-Way Risk}{3}{2}
@@ -1373,14 +1461,25 @@
   \end{correctanswer}
   
   \begin{explanation}
-    \textbf{D. TRUE:} 尽管测试的性质因上下文和模型类型而异，但测试是模型开发不可或缺的一部分
-      
-      关于（A）、（B）和（C），每项都是错误的。
-      \begin{itemize}
-          \item 模型开发既不简单也不是一个常规的技术过程！
-          \item 在给定的模型分布上选择一个极端点并不一定是审慎的，如果分布首先被错误指定或错误估计。
-          \item 主观判断或定性调整是模型开发/实施/使用的关键部分：“此外，在模型开发、实施、使用和验证的各个阶段都进行了相当数量的主观判断。决策者应认识到这种主观性提高了对健全和综合模型风险管理过程重要性的认识。” ... “银行应确保其模型的主观和定性方面的发展也是健全的。在某些情况下，银行可能从模型中获取统计输出，并将其与主观或定性调整一起作为模型开发的一部分进行修改。”
-      \end{itemize}
+    \textbf{A选项错误。} 
+    \begin{itemize}
+        \item 模型开发既不简单也不是一个常规的技术过程！
+    \end{itemize}
+
+    \textbf{B选项错误。} 
+    \begin{itemize}
+        \item 在给定的模型分布上选择一个极端点并不一定是审慎的，如果分布首先被错误指定或错误估计。
+    \end{itemize}
+
+    \textbf{C选项错误。} 
+    \begin{itemize}
+        \item 主观判断或定性调整是模型开发/实施/使用的关键部分：“此外，在模型开发、实施、使用和验证的各个阶段都进行了相当数量的主观判断。决策者应认识到这种主观性提高了对健全和综合模型风险管理过程重要性的认识。” ... “银行应确保其模型的主观和定性方面的发展也是健全的。在某些情况下，银行可能从模型中获取统计输出，并将其与主观或定性调整一起作为模型开发的一部分进行修改。”
+    \end{itemize}
+
+    \textbf{D选项正确。} 
+    \begin{itemize}
+        \item 尽管测试的性质因上下文和模型类型而异，但测试是模型开发不可或缺的一部分
+    \end{itemize}   
   \end{explanation}
   
   \checklist{Operational Risk: Model Risk Management}{3}{2}
@@ -1407,7 +1506,13 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{B选项正确。} 利息敏感缺口（Dollar IS GAP）= 利息敏感资产（ISA）- 利息敏感负债（ISL）= $\$490.0 - \$610.0 = -120.0$。相对利息敏感缺口（Relative IS GAP）= $-120.0/490.0 = -0.245$。利息敏感比率（ISR）= $490.0/610.0 = 0.803$。这个银行是负债敏感的，因此上升的利率将降低其净利息收入（NIM）。
+      \textbf{B选项正确。} 
+      \begin{itemize}
+          \item 利息敏感缺口（Dollar IS GAP）= 利息敏感资产（ISA）- 利息敏感负债（ISL）= $\$490.0 - \$610.0 = -120.0$。
+          \item 相对利息敏感缺口（Relative IS GAP）= $-120.0/490.0 = -0.245$。
+          \item 利息敏感比率（ISR）= $490.0/610.0 = 0.803$。
+          \item 这个银行是负债敏感的，因此上升的利率将降低其净利息收入（NIM）。
+      \end{itemize}
   \end{explanation}
   
   \checklist{Market Risk: Interest Rate Risk}{3}{2}
@@ -1437,14 +1542,24 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A. TRUE:} 仔细应用包括特定问题列表的综合检查清单
+      \textbf{A选项正确。} 
+      \begin{itemize}
+          \item 仔细应用包括特定问题列表的综合检查清单
+      \end{itemize}
       
-      作者建议审查SEC网站，包括其问题列表；例如，投资欺诈红旗检查清单 at https://www.investor.gov/.
-      
-      关于（B）、（C）和（D），每项都是错误的：
+      \begin{itemize}
+          \item 作者建议审查SEC网站，包括其问题列表；例如，投资欺诈红旗检查清单 at https://www.investor.gov/.
+      \end{itemize}
+      \textbf{B选项错误。} 
       \begin{itemize}
           \item 与相关方之间强有力的现有个人关系是投资者应该要求的\textbf{独立性}的相反。
+      \end{itemize}
+      \textbf{C选项错误。} 
+      \begin{itemize}
           \item 对卓越绩效的保证，风险很小或没有风险是一个经典的\textbf{红旗}。
+      \end{itemize}
+      \textbf{D选项错误。} 
+      \begin{itemize}
           \item 关于同质群体：这些是欺诈的著名目标，因为参与者倾向于信任他们的同伴。
       \end{itemize}
   \end{explanation}
@@ -1473,7 +1588,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{B选项正确。} 将各种（甚至不寻常）单变量边际分布映射到具有可访问或熟悉依赖结构的分布，指定一个多元分布作为这些单变量边际分布的函数
+      \textbf{B选项正确。} 
+      \begin{itemize}
+          \item 将各种（甚至不寻常）单变量边际分布映射到具有可访问或熟悉依赖结构的分布，指定一个多元分布作为这些单变量边际分布的函数
+      \end{itemize}
   \end{explanation}
   
   \checklist{Quantitative Analysis: Copulas}{1}{1}
@@ -1500,7 +1618,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 这通常是企业信用风险的一个特征：投资组合风险由由于暴露集中而导致信用损失上升到意外水平的风险主导。
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 这通常是企业信用风险的一个特征：投资组合风险由由于暴露集中而导致信用损失上升到意外水平的风险主导。
+      \end{itemize}
       \begin{itemize}
           \item 关于（A）、（B）和（C），每项都是零售信用风险的一个倾向。
       \end{itemize}
@@ -1533,13 +1654,24 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 错误。这里所说的“渗透率”这一指标并不合理（用它来比较监管机构的有效性也同样如此），不过巴塞尔委员会多次讨论了渗透测试（penetration testing）作为网络风险有效的控制方法。不过需要注意，渗透测试（按类型：测试次数和发现等级）确实是一种常见且有效的网络弹性度量指标。详见4.2.2渗透测试部分。
+      
 
-      关于（A）、（B）和（C），每一项都是正确的。具体来说：
+      \textbf{A选项恰当，不选。} 
       \begin{itemize}
           \item 没有任何单一的网络安全/弹性指标可以独立满足需求：“这些指标（即由受监管机构收集的网络指标）可以整体反映机构的网络和操作弹性水平对其业务需求和风险偏好的适应性。然而，单独任何一项指标都不足以作为充分的度量，而且到目前为止还没有确定出可以提供有意义基准的标准化指标集。”($\dagger$)
+      \end{itemize}
+      \textbf{B选项恰当，不选。} 
+      \begin{itemize}
           \item 补丁老化（即打补丁所需的天数）是一项广泛且可比较的指标：“附录C包含了一组受监管机构为决策机构（董事会及其下属委员会）整理的以网络为中心的指标。值得注意的是，这些数据通常能体现出趋势信息，让审核者能够评估情况是在好转还是恶化。有些指标用于跟踪内部政策的合规性，其他指标则衡量固有风险。特别是补丁老化是一项广泛且具有可比性的指标。”($\dagger$)
+      \end{itemize}
+      \textbf{C选项恰当，不选。} 
+      \begin{itemize}
           \item 向后看的指标有帮助但不充分；由于对手会动态适应，因此还需要向前看的指标：“向后看的指标是用以往的表现为未来表现提供参考，这在机构的运营和风险环境长期相对稳定且较少受外部影响时是合理的。但在网络风险管理中，这是不够的，因为攻击者是动态的，会根据机构的应对和防护措施调整自己的策略，有时甚至在一次网络事件过程中就会改变他们的战术和策略。分布式拒绝服务（DDoS）事件就是一个典型例子，相关网络流量在最近两年内显著增长，而攻击者会针对机构防御进行技巧上的调整。尽管向后看的指标依然重要，但各司法管辖区日益认识到需要引入向前看的指标，作为直接或间接衡量弹性的指标，以判断受监管机构在风险事件发生时是否具备更强或更弱的应对能力。”($\dagger$)
+      \end{itemize}
+
+      \textbf{D选项错误。}
+      \begin{itemize}
+          \item 这里所说的“渗透率”这一指标并不合理（用它来比较监管机构的有效性也同样如此），不过巴塞尔委员会多次讨论了渗透测试（penetration testing）作为网络风险有效的控制方法。不过需要注意，渗透测试（按类型：测试次数和发现等级）确实是一种常见且有效的网络弹性度量指标。详见4.2.2渗透测试部分。
       \end{itemize}
   \end{explanation}
   
@@ -1567,13 +1699,23 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{D选项正确。} 日内流动性风险应该纳入风险分类，是风险自评估的一部分，包括结算风险。
       
-      关于（A）、（B）和（C），每项都是错误的。
+      \textbf{A选项错误。} 
       \begin{itemize}
           \item Venkat($\dag$) 解释说，主动风险管理是日内流动性风险管理治理的一个特征：“主动风险管理。在许多机构中，日内流动性风险被接受为经营成本，并且不如其他类型的企业风险或甚至其他流动性风险那样积极管理。拥有大量PCS活动的领先银行认识到减少日内流动性风险的重要性。这些机构将结算和系统性风险分类为风险分类的组成部分，并且至关重要，将它们纳入公司的风险偏好框架”($\dag$)
+      \end{itemize}
+      \textbf{B选项错误。} 
+      \begin{itemize}
           \item 与风险治理的整合包括三条防线的模型：Treasure，Corporate Risk Management，和 Internal Audit。Venkat($\dag$) 说，“日内流动性风险管理框架遵循行业三条防线的模型，特别强调第二条防线的专业知识，以协调机构之间的活动 ... Corporate Risk Management 是第二条防线，负责监督与资金相关的政策和程序：在风险管理计划的发展方面提供建议，监控银行所有资金部门的持续风险承担活动，汇总银行的报告，并提供银行整体日内流动性风险管理计划有效性的独立观点。”($\dag$)
+      \end{itemize}
+      \textbf{C选项错误。} 
+      \begin{itemize}
           \item 支付、清算和结算（PCS）系统可以是资金的来源或用途：“PCS系统的结算。大多数PCS系统每天有一个结算，许多发生在下午晚些时候。这可能作为资金的来源或用途，取决于参与者在任何给定日的净头寸。”($\dag$)
+      \end{itemize}
+
+      \textbf{D选项正确。} 
+      \begin{itemize}
+          \item 日内流动性风险应该纳入风险分类，是风险自评估的一部分，包括结算风险。
       \end{itemize}
   \end{explanation}
   
@@ -1601,11 +1743,10 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项正确。} 缺乏可靠、长期绩效报告
-      
-      根据作者（加粗为我们所强调）：“然而，轻监管确实带来了意想不到的后果。首先，\textbf{对冲基金的绩效记录通常不是标准化的，可用的报告容易出现测量误差}。直到1990年代早期，对冲基金的历史绩效往往与他们的投资者一样私密，对冲基金绩效的评估既像艺术又像科学 ... \textbf{1994年事件}促使投资者重新审视他们对对冲基金持有的看法的多样化。反过来，这有助于开发电子可用的对冲基金数据库，其中可以进行更正式的对冲基金绩效分析及其伴随风险。电子数据库的到来使得对对冲基金的学术研究成为可行的提议。” — 来源：Handbook of the Economics of Finance, Volume 2B, edited by G. Constantinides, M. Harris, and R. Stulz.
-      
+      \textbf{A选项正确。} 
       \begin{itemize}
+          \item 缺乏可靠、长期绩效报告
+        \item 根据作者（加粗为我们所强调）：“然而，轻监管确实带来了意想不到的后果。首先，\textbf{对冲基金的绩效记录通常不是标准化的，可用的报告容易出现测量误差}。直到1990年代早期，对冲基金的历史绩效往往与他们的投资者一样私密，对冲基金绩效的评估既像艺术又像科学 ... \textbf{1994年事件}促使投资者重新审视他们对对冲基金持有的看法的多样化。反过来，这有助于开发电子可用的对冲基金数据库，其中可以进行更正式的对冲基金绩效分析及其伴随风险。电子数据库的到来使得对对冲基金的学术研究成为可行的提议。” — 来源：Handbook of the Economics of Finance, Volume 2B, edited by G. Constantinides, M. Harris, and R. Stulz.
           \item 关于（B）和（D），这些是错误的陈述。
           \item 关于（C），它是全球宏观基金的一个特征（aka，优势），它们可以利用各种风格的机会主义。
       \end{itemize}
@@ -1639,7 +1780,10 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 错误。相反，自相关倾向于随着更大的滞后而衰减（即，减少）。关于（A）、（B）和（C），每项都是正确的。
+    \textbf{D选项错误。} 
+    \begin{itemize}
+        \item 相反，自相关倾向于随着更大的滞后而衰减（即，减少）。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Quantitative Analysis: Correlation}{3}{2}
@@ -1681,9 +1825,11 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 错误（不可分离性）。相反，CVA 是可分离的，这一点具有实际重要性。
-    最基本的、关键的关系是：$\text{风险价值} = \text{无风险价值} - \text{CVA}$。
-    关于（A）、（B）和（C），每项都是正确的原则。
+    \textbf{D选项错误。} 
+    \begin{itemize}
+        \item 相反，CVA 是可分离的，这一点具有实际重要性。
+    \item 最基本的、关键的关系是：$\text{风险价值} = \text{无风险价值} - \text{CVA}$。
+\end{itemize}
 \end{explanation}
 
 \checklist{Counterparty Credit Risk}{3}{2}
@@ -1710,34 +1856,45 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 正确：损益（P\&L）中针对潜在损失影响计提的准备金或储备应计入总损失计算
-    
-    关于选项 (B)、(C) 和 (D)，每一项都是错误的。实际上，正确的内容如下：
+    \textbf{A选项正确。} 
     \begin{itemize}
-        \item 虽然损失数据必须涵盖“所有重大活动”，但低于最低阈值的损失不必被包括在内。
-        \item 与事件直接相关的法律费用应包括在内（见下文）。请注意，操作风险包括法律风险。
-        \item 应收账款不算作回收（recoveries）（见下文）。
+        \item 损益（P\&L）中针对潜在损失影响计提的准备金或储备应计入总损失计算
+        \item  摘自“总损失、净损失及回收的定义”（6. 损失数据识别、收集与处理的具体标准）：
+        \begin{itemize}
+       
+        \item 21. 总损失是指在任何类型回收前的损失。净损失是指在考虑回收影响后的损失。回收是与原始损失事件相关、在时间上分开的独立事件，由第三方支付资金或经济利益流入的情况。
+        
+        \item 22. 银行必须能够识别所有操作损失事件的总损失金额、非保险回收和保险回收。银行应在损失数据集中使用扣除回收后的净损失（包括保险回收）。但只有在银行实际收到回收款后，回收才能用于减少损失。应收账款不计作回收。收到回收款以净额结算损失的验证材料须根据监管要求提供。
+        
+        \item 23. 损失数据集中总损失计算必须包括以下项目：
+        \begin{itemize}
+        \item (a) 由于操作风险事件对银行损益账户的直接计提，包括减值和和解，以及相关的资产减记；
+        
+        \item (b) 作为事件后果产生的费用，包括与操作风险事件直接相关的外部支出（如与事件直接相关的法律费用及支付给顾问、律师或供应商的费用）及为恢复事件发生前状态而产生的修理或替换费用；
+        
+        \item (c) 损益中就潜在操作损失影响计提的准备金或储备；
+        
+        \item (d) 因操作风险事件而产生具有明确财务影响的损失，这些损失暂时计入过渡和/或暂记账户，在损益尚未反映（“待决损失”）。重大待决损失应在符合其金额和时间要求的期限内计入数据集；
+        
+        \item (e) 某一财务会计期间因操作风险事件影响以前期间现金流或财务报表而记入的负面经济影响（“跨期损失”）。当操作风险事件跨越多个财务会计期间并引发法律风险时，重大“跨期损失”应计入损失数据集。”
+        \end{itemize}
+        （来源：《巴塞尔协议III：危机后改革最终方案》，巴塞尔银行监管委员会出版物（2017年12月），第132页。）
+        \end{itemize}
     \end{itemize}
     
-    摘自“总损失、净损失及回收的定义”（6. 损失数据识别、收集与处理的具体标准）：
-    
-    “21. 总损失是指在任何类型回收前的损失。净损失是指在考虑回收影响后的损失。回收是与原始损失事件相关、在时间上分开的独立事件，由第三方支付资金或经济利益流入的情况。
-    
-    22. 银行必须能够识别所有操作损失事件的总损失金额、非保险回收和保险回收。银行应在损失数据集中使用扣除回收后的净损失（包括保险回收）。但只有在银行实际收到回收款后，回收才能用于减少损失。应收账款不计作回收。收到回收款以净额结算损失的验证材料须根据监管要求提供。
-    
-    23. 损失数据集中总损失计算必须包括以下项目：
-    
-    (a) 由于操作风险事件对银行损益账户的直接计提，包括减值和和解，以及相关的资产减记；
-    
-    (b) 作为事件后果产生的费用，包括与操作风险事件直接相关的外部支出（如与事件直接相关的法律费用及支付给顾问、律师或供应商的费用）及为恢复事件发生前状态而产生的修理或替换费用；
-    
-    (c) 损益中就潜在操作损失影响计提的准备金或储备；
-    
-    (d) 因操作风险事件而产生具有明确财务影响的损失，这些损失暂时计入过渡和/或暂记账户，在损益尚未反映（“待决损失”）。重大待决损失应在符合其金额和时间要求的期限内计入数据集；
-    
-    (e) 某一财务会计期间因操作风险事件影响以前期间现金流或财务报表而记入的负面经济影响（“跨期损失”）。当操作风险事件跨越多个财务会计期间并引发法律风险时，重大“跨期损失”应计入损失数据集。”
-    
-    （来源：《巴塞尔协议III：危机后改革最终方案》，巴塞尔银行监管委员会出版物（2017年12月），第132页。）
+    \textbf{B选项错误。} 
+    \begin{itemize}
+        \item 虽然损失数据必须涵盖“所有重大活动”，但低于最低阈值的损失不必被包括在内。
+    \end{itemize}
+    \textbf{C选项错误。} 
+    \begin{itemize}
+        \item 与事件直接相关的法律费用应包括在内（见下文）。请注意，操作风险包括法律风险。
+    \end{itemize}
+    \textbf{D选项错误。} 
+    \begin{itemize}
+        \item 应收账款不算作回收（recoveries）（见下文）。
+    \end{itemize}
+
 \end{explanation}
 
 \checklist{Operational Risk}{3}{2}
@@ -1799,7 +1956,7 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 正确：系列 A。见下文。
+    \textbf{A选项正确。} 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{2·44·3.png}
@@ -1831,9 +1988,10 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 错误。风险计划应该对“重大、可预测且可避免”的错误/损失零容忍。
-    
-    关于（A）、（B）和（D），每项都是正确的。根据作者，风险计划中的五个指导原则是：
+    \textbf{C选项错误。} 
+    \begin{itemize}
+        \item 风险计划应该对“重大、可预测且可避免”的错误/损失零容忍。
+        \item 关于（A）、（B）和（D），每项都是正确的。根据作者，风险计划中的五个指导原则是：
     \begin{itemize}
         \item 预期回报和波动率目标；以及里程碑，以识别失败。
         \item 成功或失败的定义
@@ -1841,6 +1999,7 @@ A
         \item “仅仅是令人失望的事件”和严重损害损失之间的明确界限。此外，“战略响应应该存在任何威胁 franchise 的事件——即使这些事件是低概率情况。风险计划应该识别那些如此严重以至于应寻求保险覆盖（例如，资产类别 put）来覆盖下行风险的损失类型。”（来源：2020年财务风险管理第二部分：风险管理和投资管理，第10版。Pearson Learning Solutions，2019。VitalBook 文件。）
         \item 识别存在于组织内部和外部的关键依赖关系
     \end{itemize}
+\end{itemize}
 \end{explanation}
 
 \checklist{Financial Risk Management}{3}{2}
@@ -1867,11 +2026,15 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} Bertha 想要“做空相关性”，并且随着相关性的下降，更好的两个选项变得更有价值。另一方面：
+    \textbf{B选项正确。} 
+    \begin{itemize}
+        \item Bertha 想要“做空相关性”，并且随着相关性的下降，更好的两个选项变得更有价值。
+        \item 另一方面：
     \begin{itemize}
         \item 篮子选项的价值随着相关性的下降而减少，因此购买篮子选项是做多相关性
         \item 在相关性交换中购买相关性（aka，支付固定利率）是做多相关性
         \item 交换选项随着相关性的下降而变得更有价值，因此交换选项的多头头寸是做空相关性，交换选项的空头头寸是做多相关性
+    \end{itemize}
     \end{itemize}
 \end{explanation}
 
@@ -1899,11 +2062,18 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 她正在使用蒙特卡洛模拟，因为合同的未来价值高度不确定。
+    \textbf{D选项正确。} 
+    \begin{itemize}
+        \item 她正在使用蒙特卡洛模拟，因为合同的未来价值高度不确定。
+    \end{itemize}
     
-    根据 Jon Gregory 的说法，对手方信用风险与贷款风险之间的两个主要区别是：（1）贷款方知道其所承担的风险金额，但在对手方信用风险的情况下，风险金额高度不确定；（2）贷款通常只涉及单方风险（由贷款方承担），而对手方信用风险则是双边的，即双方都面临风险。
+    \begin{itemize}
+        \item 根据 Jon Gregory 的说法，对手方信用风险与贷款风险之间的两个主要区别是：（1）贷款方知道其所承担的风险金额，但在对手方信用风险的情况下，风险金额高度不确定；（2）贷款通常只涉及单方风险（由贷款方承担），而对手方信用风险则是双边的，即双方都面临风险。
+    \end{itemize}
 
-    关于错误选项（a），Herstatt 风险是结算风险的一种特殊情形（跨币种），而不是预结算风险。
+    \begin{itemize}
+        \item 关于错误选项（a），Herstatt 风险是结算风险的一种特殊情形（跨币种），而不是预结算风险。
+    \end{itemize}
 \end{explanation}
 
     \checklist{Counterparty Credit Risk}{3}{2}
@@ -1930,14 +2100,16 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 正确：跨境金融的增长要求银行在压力时期保持偿付能力，并要求在彼此本国市场竞争的银行之间实现公平竞争（即“公平竞争环境”）；因此其动机是银行安全性和竞争方面的考量。
-    
-    Carey 解释道：“有两个事件促成了巴塞尔I的诞生。
+    \textbf{C选项正确。} 
+    \begin{itemize}
+        \item 跨境金融的增长要求银行在压力时期保持偿付能力，并要求在彼此本国市场竞争的银行之间实现公平竞争（即“公平竞争环境”）；因此其动机是银行安全性和竞争方面的考量。
+   
+        \item Carey 解释道：“有两个事件促成了巴塞尔I的诞生。
     \begin{itemize}
         \item 首先，Herstatt银行倒闭后，跨境金融的增长仍在继续，这使得G10国家意识到，他们有共同的利益，确保银行拥有足够的资本来吸收大量损失。
         \item 其次，国际银行在彼此的本国市场激烈竞争。然而，各国所要求的最低资本标准差别显著，这导致人们认为总部设在最低标准较低国家的银行具有竞争优势。为此，巴塞尔银行监管委员会（BCBS）成员决定制定全球统一的最低标准，以“创造公平竞争环境”，避免向下竞赛。也就是说，虽然巴塞尔协议部分目的是保证银行安全与稳健，但谈判本身也包含了对竞争优势的博弈成分。”（来源：2020 FRM Part II: Operational Risk and Resiliency，第19章，第10版，Pearson Learning Solutions。）
     \end{itemize}
-   
+    \end{itemize}
 \end{explanation}
 
 \checklist{Finance: Basel Accords}{3}{2}
@@ -1964,9 +2136,14 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 偶然性流动性捕捉现金或资产，当压力情景出现时可用。流动性取决于压力情景的发生。包括在这种情况下的金融资产，可以在不损失价值的情况下转换为现金。捕捉偶然性流动性以覆盖压力现金流出是流动性压力测试的主要原因。
+    \textbf{C选项正确。} 
+    \begin{itemize}
+        \item 偶然性流动性捕捉现金或资产，当压力情景出现时可用。流动性取决于压力情景的发生。包括在这种情况下的金融资产，可以在不损失价值的情况下转换为现金。捕捉偶然性流动性以覆盖压力现金流出是流动性压力测试的主要原因。
+    \end{itemize}
 
-    Venkat 写道：“\textbf{流动性资产缓冲}：流动性资产缓冲代表当前存在的偶然性流动性... 流动性资产缓冲证券的基本特征应包括低信用和市场风险、估值的易性和确定性、在活跃且规模较大的市场上交易、以及买家和卖家集中度低。流动性资产缓冲还应满足运营要求，确保流动性在实体承受压力测试时处于中央 Treasury 部门的控制之下。”($\dagger$)
+    \begin{itemize}
+        \item Venkat 写道：“\textbf{流动性资产缓冲}：流动性资产缓冲代表当前存在的偶然性流动性... 流动性资产缓冲证券的基本特征应包括低信用和市场风险、估值的易性和确定性、在活跃且规模较大的市场上交易、以及买家和卖家集中度低。流动性资产缓冲还应满足运营要求，确保流动性在实体承受压力测试时处于中央 Treasury 部门的控制之下。”($\dagger$)
+    \end{itemize}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{2·49.png}
@@ -1997,20 +2174,33 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-\textbf{D选项正确。} 错误。相反，每个投资组合经理的主观哲学陈述总是必要的，作为量化工具的补充，以澄清是否存在风格漂移。
-
-    根据 GARP 的阅读，显式（和主观）的哲学陈述总是量化工具的必要补充，因为除了帮助识别 \textit{风格漂移} 之外，没有其他原因。摘自阅读：“在讨论这些[即 commonly used performance tools]之前，值得注意的是，尽管性能工具是必要的，但它们并不是在出现异常行为迹象时及时进行管理干预的替代品。当异常行为以 poor performance statistics 的形式显现时，损害可能已经无法挽回。因此，我们相信性能工具必须补充：
-    \begin{itemize}
-        \item 每个投资组合经理的清晰管理哲学陈述。该哲学陈述应确定经理如何期望从市场中提取回报。它应确定经理何时成功、何时失败。
-        \item 设计用于识别哲学或流程偏离的例行位置和风格监控流程。这是一种早期预警系统。” — 来源：2020年财务风险管理第二部分：风险管理和投资管理，第10版。Pearson Learning Solutions，2019。VitalBook 文件。
-    \end{itemize}
-
-    关于（A）、（B）和（C），每项都是正确的。具体来说：
-    \begin{itemize}
+   \textbf{A选项正确。} 
+   \begin{itemize}
         \item 银行的监控不依赖于任何单一工具或指标，而是依赖于各种工具和指标的集合
+   \end{itemize}
+
+   \textbf{B选项正确。} 
+   \begin{itemize}
         \item 银行测量 alpha 作为回归截距，其中 alpha 可以帮助评估经理技能，但不幸的是，其统计显著性通常需要更多数据（即更长的历史），而不是可用的数据
+   \end{itemize}
+
+   \textbf{C选项正确。} 
+   \begin{itemize}
         \item 银行测量风险资本回报（RORC），其中价值 at risk（VaR）是风险资本的度量；除了 RORC 的水平，银行还监控其可变性
-    \end{itemize}
+   \end{itemize}
+
+   \textbf{D选项错误。} 
+   \begin{itemize}
+       \item 相反，每个投资组合经理的主观哲学陈述总是必要的，作为量化工具的补充，以澄清是否存在风格漂移。
+   \end{itemize}
+
+   \begin{itemize}
+       \item 根据 GARP 的阅读，显式（和主观）的哲学陈述总是量化工具的必要补充，因为除了帮助识别 \textit{风格漂移} 之外，没有其他原因。摘自阅读：“在讨论这些[即 commonly used performance tools]之前，值得注意的是，尽管性能工具是必要的，但它们并不是在出现异常行为迹象时及时进行管理干预的替代品。当异常行为以 poor performance statistics 的形式显现时，损害可能已经无法挽回。因此，我们相信性能工具必须补充：
+   \begin{itemize}
+       \item 每个投资组合经理的清晰管理哲学陈述。该哲学陈述应确定经理如何期望从市场中提取回报。它应确定经理何时成功、何时失败。
+       \item 设计用于识别哲学或流程偏离的例行位置和风格监控流程。这是一种早期预警系统。” — 来源：2020年财务风险管理第二部分：风险管理和投资管理，第10版。Pearson Learning Solutions，2019。VitalBook 文件。
+       \end{itemize}
+   \end{itemize}
 \end{explanation}
 
 \checklist{Financial Risk Management}{3}{2}
@@ -2053,10 +2243,10 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 错误。相反，映射是专门解决数据不足问题的解决方案。根据 Jorion 的说法，“风险经理必须用系统中已经存在的类似风险因素的敞口替换这些头寸。”$_{(\dagger)}$
-    
-    关于（A）、（C）和（D），每项都是正确的。
-
+    \textbf{B选项错误。} 
+    \begin{itemize}
+        \item 相反，映射是专门解决数据不足问题的解决方案。根据 Jorion 的说法，“风险经理必须用系统中已经存在的类似风险因素的敞口替换这些头寸。”$_{(\dagger)}$
+    \end{itemize}
     （$\dagger$）Philippe Jorion，《价值-at-风险：金融风险管理的新基准》，第3版。（纽约：麦格劳-希尔，2007年）
 \end{explanation}
 
@@ -2080,7 +2270,10 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 当前敞口 = $\max(\text{MtM value}, 0)$。在这种情况下，$\text{CE} = \max(-335,900, 0) = 0$。Freecone 在互换中处于亏损状态；其对手方由于对手方在违约事件中遭受损失，因此具有正的当前敞口。但 Freecone 在违约事件中不会遭受当前损失。
+    \textbf{A选项正确。} 
+    \begin{itemize}
+        \item 当前敞口 = $\max(\text{MtM value}, 0)$。在这种情况下，$\text{CE} = \max(-335,900, 0) = 0$。Freecone 在互换中处于亏损状态；其对手方由于对手方在违约事件中遭受损失，因此具有正的当前敞口。但 Freecone 在违约事件中不会遭受当前损失。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Credit Risk: Current Exposure}{3}{2}
@@ -2106,13 +2299,17 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 并未提及对ESG因素的审查。
-    根据美联储理事会的指导，尽职调查应涵盖以下三大类：
-    \begin{enumerate}
-        \item \textit{业务背景、声誉和战略}： ``金融机构应当审查潜在服务提供商在行业内的地位及其公司历史与资质；审查服务提供商及其高级管理人员的背景与声誉；并确保服务提供商为其员工建立了合适的背景审查程序。''
-        \item \textit{财务状况与表现}： ``金融机构应审查服务提供商及其密切相关关联公司的财务状况。财务审查可包括：服务提供商最近的财务报表和年度报告，涵盖未了承诺、资本实力、流动性及经营业绩；还应考虑服务提供商的可持续性，包括该服务提供商经营年限以及其在特定服务领域的市场份额增长等因素……''
-        \item \textit{运营与内部控制}。
-    \end{enumerate}
+    \textbf{C选项正确。} 
+    \begin{itemize}
+        \item C选项并未提及对ESG因素的审查。
+        \item 根据美联储理事会的指导，尽职调查应涵盖以下三大类：
+        \begin{enumerate}
+            \item \textit{业务背景、声誉和战略}： ``金融机构应当审查潜在服务提供商在行业内的地位及其公司历史与资质；审查服务提供商及其高级管理人员的背景与声誉；并确保服务提供商为其员工建立了合适的背景审查程序。''
+            \item \textit{财务状况与表现}： ``金融机构应审查服务提供商及其密切相关关联公司的财务状况。财务审查可包括：服务提供商最近的财务报表和年度报告，涵盖未了承诺、资本实力、流动性及经营业绩；还应考虑服务提供商的可持续性，包括该服务提供商经营年限以及其在特定服务领域的市场份额增长等因素……''
+            \item \textit{运营与内部控制}。
+        \end{enumerate}
+    \end{itemize}
+
 \end{explanation}
 
 \checklist{Operational Risk: Outsourcing Risk}{3}{2}
@@ -2139,8 +2336,11 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-\textbf{B选项正确。} 正确：贷款-存款（LTD）比率（当前和预测）与董事会批准的最高天花板（限制）$80.0\%$
-    关于（A）、（C）和（D），每项都是错误的。
+\textbf{B选项正确。} 
+\begin{itemize}
+    \item 贷款-存款（LTD）比率（当前和预测）与董事会批准的最高天花板（限制）$80.0\%$
+\end{itemize}
+
 \end{explanation}
 
 \checklist{Liquidity Risk Management}{3}{2}
@@ -2186,9 +2386,17 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。}标签/描述存在三重不一致：（1）股票市场中性策略与可观察的市场风险因子无关（在引用的研究中，这是唯一没有与市场风险因子关联的策略）；因此，股票市场中性基金不可能“带来一篮子贝塔”，其目的正是中和贝塔，即对主流市场因子的贝塔为零；（2）此外，股票市场中性策略并不属于事件驱动型策略，它本身是非方向性的，被作者归类为“小众策略”（niche strategy），有时也归于股票对冲（equity hedge）策略。（3）描述将其归为事件驱动，也是错误的。
+    \textbf{D选项正确。} 
+    \begin{itemize}
+        \item 标签/描述存在三重不一致：
+        \item （1）股票市场中性策略与可观察的市场风险因子无关（在引用的研究中，这是唯一没有与市场风险因子关联的策略）；因此，股票市场中性基金不可能“带来一篮子贝塔”，其目的正是中和贝塔，即对主流市场因子的贝塔为零；
+        \item （2）此外，股票市场中性策略并不属于事件驱动型策略，它本身是非方向性的，被作者归类为“小众策略”（niche strategy），有时也归于股票对冲（equity hedge）策略。
+        \item （3）描述将其归为事件驱动，也是错误的。
+    \end{itemize}
 
-    关于（A）、（B）和（C），其他三只基金（Acheilus、Boreas 和 Chimera）的策略、宣传语及描述彼此一致，具有可信度。
+    \begin{itemize}
+        \item 关于（A）、（B）和（C），其他三只基金（Acheilus、Boreas 和 Chimera）的策略、宣传语及描述彼此一致，具有可信度。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Finance: Hedge Fund Strategies}{3}{2}
@@ -2215,17 +2423,24 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 为了增加回测的威力，她可以降低 VaR 置信水平并应用更高的（k）资本乘数。
-    
-    一个关键的统计挑战是，高置信水平意味着异常样本量很小。解决方法是降低置信水平，但应用乘数（降低置信水平的 VaR）以近似高置信水平的 VaR。
-    
-    根据 Jorion 的说法，“这个框架缺乏威力的原因是选择了高 VAR 置信水平（$99$ 百分比），这导致异常样本量太少，无法进行可靠的测试。相比之下，考虑 $95$ 百分比 VAR 置信水平的效果。（为了确保资本金额不受影响，我们可以使用更大的乘数 k。）” — Philippe Jorion. Value at Risk, 3rd Ed.: The New Benchmark for Managing Financial Risk (p. 150). Kindle Edition.
-    
-    关于（B）、（C）和（D），每项都是错误的。具体来说：
+    \textbf{A选项正确。} 
+    \begin{itemize}
+        \item 为了增加回测的威力，她可以降低 VaR 置信水平并应用更高的（k）资本乘数。
+        \item 一个关键的统计挑战是，高置信水平意味着异常样本量很小。解决方法是降低置信水平，但应用乘数（降低置信水平的 VaR）以近似高置信水平的 VaR。
+        \item 根据 Jorion 的说法，“这个框架缺乏威力的原因是选择了高 VAR 置信水平（$99$ 百分比），这导致异常样本量太少，无法进行可靠的测试。相比之下，考虑 $95$ 百分比 VAR 置信水平的效果。（为了确保资本金额不受影响，我们可以使用更大的乘数 k。）” — Philippe Jorion. Value at Risk, 3rd Ed.: The New Benchmark for Managing Financial Risk (p. 150). Kindle Edition.
+    \end{itemize}
+    \textbf{B选项错误。} 
     \begin{itemize}
         \item 一般准则表明，当 $n \times p$ 和 $n \times (1-p)$ 大于 $10$ 时，可以使用正态近似；有些人认为大于 $5$。在这种情况下，$0.5\% \times 500 = 2.5$，因此二项分布可能过于偏斜。
         \item 阅读（Jorion、Hull 或 Dowd）并未提及通过监管批准的扩展获得功率增益
+    \end{itemize}
+    \textbf{C选项错误。} 
+    \begin{itemize}
         \item VaR 总是单尾分位数（例如，$95.0\%$ 标准正态 VaR 总是 $1.645$ 且从不 $1.960$），但回测是统计检验，可以是单尾（1T）或双尾（2T）
+    \end{itemize}
+    \textbf{D选项错误。} 
+    \begin{itemize}
+        \item 尽管 VaR 总是单尾分位数（例如，$95.0\%$ 标准正态 VaR 总是 $1.645$ 且从不 $1.960$），但回测总是双尾（2T）回测，因此 Betty 必须有一个下限和一个上限
     \end{itemize}
 \end{explanation}
 
@@ -2264,11 +2479,22 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 正确：融资成本（FVA）为正。为了对冲，需要抵押品，这笔金额需要融资。关于（B）、（C）和（D），每项都是错误的。
+    \textbf{A选项正确。} 
+    \begin{itemize}
+        \item ß融资成本（FVA）为正。为了对冲，需要抵押品，这笔金额需要融资。
+    \end{itemize}
+    \textbf{B选项错误。} 
     \begin{itemize}
         \item 关于错误的（B），CVA 可能会随着进一步增加正向敞口而增加
-        \item 关于错误的（C），他们的对冲不会消除对监管资本的需求！Gregory 说：“资本：会有资本要求，这些要求会变化——这很重要，因为资本是一种成本。无抵押交易的资本会随着成为实值而增加。对冲的资本不会抵消这一点，因为它是抵押的——即使它是无抵押的，也可能会有凸性影响（一笔交易的资本会增加超过另一笔交易的资本减少）。”
-        \item 关于错误的（D），这里的问题是交易员需要购买（购买）而不是出售（卖出）一个 CCDS。Gregory 说：“更定制化的信用衍生产品，如或有 CDS（CCDS），已被设计为更直接地对冲对手方风险。CCDS 本质上是一种 CDS，但保护的名义金额与合同指定的衍生品（或甚至衍生品组合）的敞口挂钩。它们允许将特定交易和对手方的对手方风险合成转移给第三方。然而，CCDS 市场从未发展出任何重要的流动性。”
+    \end{itemize}
+
+    \textbf{C选项错误。} 
+    \begin{itemize}
+        \item 他们的对冲不会消除对监管资本的需求！Gregory 说：“资本：会有资本要求，这些要求会变化——这很重要，因为资本是一种成本。无抵押交易的资本会随着成为实值而增加。对冲的资本不会抵消这一点，因为它是抵押的——即使它是无抵押的，也可能会有凸性影响（一笔交易的资本会增加超过另一笔交易的资本减少）。”
+    \end{itemize}
+    \textbf{D选项错误。} 
+    \begin{itemize}
+        \item 这里的问题是交易员需要购买（购买）而不是出售（卖出）一个 CCDS。Gregory 说：“更定制化的信用衍生产品，如或有 CDS（CCDS），已被设计为更直接地对冲对手方风险。CCDS 本质上是一种 CDS，但保护的名义金额与合同指定的衍生品（或甚至衍生品组合）的敞口挂钩。它们允许将特定交易和对手方的对手方风险合成转移给第三方。然而，CCDS 市场从未发展出任何重要的流动性。”
     \end{itemize}
     (来源：Jon Gregory，《xVA 挑战：对手方信用风险、融资、抵押和资本》，第3版（西萨塞克斯，英国：约翰·威利父子有限公司，2015年）)
 \end{explanation}
@@ -2297,9 +2523,13 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。}错误。turnover bias（换手率偏差）是杜撰出来的。
-    关于（A）、（B）和（D），每一项都正确。
-    根据 Ang 的说法，对于流动性较差资产，使投资者高估预期回报并低估风险的三种偏差分别是：生存偏差、不频繁采样和选择偏差。
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item turnover bias（换手率偏差）是杜撰出来的。
+        \item 根据 Ang 的说法，对于流动性较差资产，使投资者高估预期回报并低估风险的三种偏差分别是：生存偏差、不频繁采样和选择偏差。
+        \item 因此，turnover bias 降低了交易之间的典型时间，并倾向于人为地增加预期回报 5.0\% 或更多。
+    \end{itemize}
+
 \end{explanation}
 
 \checklist{Alternative Investments: Illiquid Assets}{3}{2}
@@ -2326,9 +2556,12 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 正确：限制结构和升级级别
-    
-    解释 Lai 和 Tuosto 的观点（加重号为原文所有）：“II. 与更广泛的风险管理框架整合：CFP（应急融资计划）不是一个孤立的工具，而是机构流动性风险管理和集团范围风险管理框架的有机组成部分……CFP 应当与流动性风险度量框架和流动性压力测试框架明确地结合起来，尤其是通过其限额结构和升级级别。举例来说，机构在日常（BAU）风险管理活动中使用的流动性风险度量，为 CFP 确定其预警指标（EWI）提供了基础。此外，与业务连续性和危机管理框架的关联，会在危机时期加强关键的运营和沟通流程。”——摘自 Chi Lai 和 Richard Tuosto，《Venkat 的流动性风险管理》中的《应急融资计划》
+    \textbf{B选项正确。} 
+    \begin{itemize}
+        \item 解释 Lai 和 Tuosto 的观点（加重号为原文所有）：“II. 与更广泛的风险管理框架整合：CFP（应急融资计划）不是一个孤立的工具，而是机构流动性风险管理和集团范围风险管理框架的有机组成部分……CFP 应当与流动性风险度量框架和流动性压力测试框架明确地结合起来，尤其是通过其限额结构和升级级别。
+        \item 举例来说，机构在日常（BAU）风险管理活动中使用的流动性风险度量，为 CFP 确定其预警指标（EWI）提供了基础。此外，与业务连续性和危机管理框架的关联，会在危机时期加强关键的运营和沟通流程。”——摘自 Chi Lai 和 Richard Tuosto，《Venkat 的流动性风险管理》中的《应急融资计划》
+        \item 因此，限制结构和升级级别是银行 contingency funding plan（CFP）与其流动性压力测试框架之间最佳的显式链接。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Liquidity Risk Management}{3}{2}
@@ -2355,8 +2588,11 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 在这种情况下，$0.5 \sigma(e) \sqrt{T} = 0.5 \times 36.0\% \times \sqrt{1} = 18.0\% = 0.180$ 和 $N(0.18) = 0.57140$ 如果按照查找表四舍五入。
-    然后 $c = 2 \times 0.57140 - 1 = 14.28\%$。
+    \textbf{B选项正确。} 
+    \begin{itemize}
+        \item 在这种情况下，$0.5 \sigma(e) \sqrt{T} = 0.5 \times 36.0\% \times \sqrt{1} = 18.0\% = 0.180$ 和 $N(0.18) = 0.57140$ 如果按照查找表四舍五入。
+        \item 然后 $c = 2 \times 0.57140 - 1 = 14.28\%$。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Portfolio Management}{3}{2}
@@ -2387,7 +2623,12 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 首先需要求解 $k$。Dowd($\dagger$) 使用指数 $(-1/\xi)$，但我们将在指数中使用更简单的倒数 $(-\xi)$。这样，幂律说：$\text{Prob}(v > x) = F(x) \approx k x^{-\xi}$。求解常数 $k$，必须有：$k = F(x) x^{\xi}$。在这种情况下，当 $x = 6.0$ 时 $F(x) = 0.50\%$ 且 $\xi = 4.0$，我们可以找到 $k = 0.50\% \cdot 6.0^4 = 6.480$。现在我们知道，因为我们假设常数 ($k$) 近似，我们的分布是 $F(x) \approx k x^{-\xi} = 6.480 x^{-4.0}$。我们想要 $F(x) = 0.10\%$ 的 VaR，即 $0.10\% = 6.480 x^{-4.0}$，其中 $x = (6.480/0.10\%)^{1/4.0} = 8.97$，四舍五入到 \$9.0 百万。
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 首先需要求解 $k$。Dowd($\dagger$) 使用指数 $(-1/\xi)$，但我们将在指数中使用更简单的倒数 $(-\xi)$。这样，幂律说：$\text{Prob}(v > x) = F(x) \approx k x^{-\xi}$。求解常数 $k$，必须有：$k = F(x) x^{\xi}$。
+        \item 在这种情况下，当 $x = 6.0$ 时 $F(x) = 0.50\%$ 且 $\xi = 4.0$，我们可以找到 $k = 0.50\% \cdot 6.0^4 = 6.480$。现在我们知道，因为我们假设常数 ($k$) 近似，我们的分布是 $F(x) \approx k x^{-\xi} = 6.480 x^{-4.0}$。
+        \item 我们想要 $F(x) = 0.10\%$ 的 VaR，即 $0.10\% = 6.480 x^{-4.0}$，其中 $x = (6.480/0.10\%)^{1/4.0} = 8.97$，四舍五入到 \$9.0 百万。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Quantitative Analysis: Extreme Value Theory}{3}{2}
@@ -2413,7 +2654,11 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 正确：15。没有净额结算时，总敞口 = $\max(0, +12) + \max(0, -9) + \max(0, 20) + \max(0, -6) + \max(0, +8) = 40$。有净额结算时，总敞口 = $+12 - 9 + 20 - 6 + 8 = 25$。注意这与 $-(-9 - 6)$ 相同。
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 没有净额结算时，总敞口 = $\max(0, +12) + \max(0, -9) + \max(0, 20) + \max(0, -6) + \max(0, +8) = 40$。
+        \item 有净额结算时，总敞口 = $+12 - 9 + 20 - 6 + 8 = 25$。注意这与 $-(-9 - 6)$ 相同。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Counterparty Credit Risk}{3}{2}
@@ -2444,12 +2689,24 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} B. 正确：她应当将自己公司生成的场景与外部来源发布的行业特定场景列表进行比较，但这种比较应在公司自行内部生成场景之后进行。根据GARP（第3.2节），“最后，公司比较自己所生成的场景与行业场景列表是有益的，可以判断是否遗漏了相关场景或风险驱动因素。比如，保险业操作风险协会（ORIC）和ORX等行业组织会向其成员提供现成的场景列表。然而，建议企业只在场景生成结束后，再将其自有场景与外部行业列表比较，而非事前进行，以避免外部场景影响公司的生成过程。” (\dag)
-
-    至于（A）、（C）和（D），它们都是错误的。具体来说：
+    
+    \textbf{A选项错误。}
     \begin{itemize}
         \item 大多数大型操作风险损失来源于内部因素
+    \end{itemize}
+
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 她应当将自己公司生成的场景与外部来源发布的行业特定场景列表进行比较，但这种比较应在公司自行内部生成场景之后进行。根据GARP（第3.2节），“最后，公司比较自己所生成的场景与行业场景列表是有益的，可以判断是否遗漏了相关场景或风险驱动因素。比如，保险业操作风险协会（ORIC）和ORX等行业组织会向其成员提供现成的场景列表。然而，建议企业只在场景生成结束后，再将其自有场景与外部行业列表比较，而非事前进行，以避免外部场景影响公司的生成过程。” (\dag)
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
         \item GARP建议应有更多场景，例如中等规模公司至少应有20~30个场景。对于大型国际银行，$\sim$50个场景也并不少见
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
         \item 场景分析不是为了预测未来，而是为了识别多种情景。GARP还指出：“监管机构要求公司在进行场景识别与评估过程中尽可能减少主观性和偏见。” (\dag)
     \end{itemize}
 
@@ -2490,7 +2747,10 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 正确：许多资产类别内部确实存在较大的流动性风险溢价，但不是跨资产类别。
+    \textbf{C选项正确。}
+    \begin{itemize}
+        \item 许多资产类别内部确实存在较大的流动性风险溢价，但不是跨资产类别。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Finance: Portfolio Management}{3}{2}
@@ -2517,14 +2777,26 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 她应该遵循所有步骤，但要有灵活性，因为尽职调查也是一种艺术，每个基金都有自己独特的策略。
+  
     
-    GARP 解释说：“对对冲基金进行尽职调查既像艺术又像科学。投资者必须使用全面的检查清单，确保没有任何遗漏或遗漏，同时保持自由提出开放式问题，以提供对公司哲学或文化的洞察。这里讨论的投资、运营和商业模型风险评估指南主要是通用的。在执行尽职调查时，投资者必须修改他们的方法，使其具有策略针对性。” (Summary, 2020 Financial Risk Management Part II: Risk Management and Investment Management, 10th Edition. Pearson Learning Solutions, 2019. VitalBook file.)
-    
-    关于错误的（A）、（B）和（D）：
+    \textbf{A选项错误。}
     \begin{itemize}
         \item Zeta Sigma AIML 过滤器是虚构的，商业模型风险无法消除
+    \end{itemize}
+    
+    \textbf{B选项错误。}
+    \begin{itemize}
         \item 作者指出，只有“恐龙”（作为创始人）试图管理所有三个，因为经理们很少在所有三个方面都做得很好（更不用说特别好了）！经理们不应该选择同时担任 CEO 和 CIO。
+    \end{itemize}
+
+    \textbf{C选项正确。} 
+    \begin{itemize}
+        \item 她应该遵循所有步骤，但要有灵活性，因为尽职调查也是一种艺术，每个基金都有自己独特的策略。
+        \item GARP 解释说：“对对冲基金进行尽职调查既像艺术又像科学。投资者必须使用全面的检查清单，确保没有任何遗漏或遗漏，同时保持自由提出开放式问题，以提供对公司哲学或文化的洞察。这里讨论的投资、运营和商业模型风险评估指南主要是通用的。在执行尽职调查时，投资者必须修改他们的方法，使其具有策略针对性。” (Summary, 2020 Financial Risk Management Part II: Risk Management and Investment Management, 10th Edition. Pearson Learning Solutions, 2019. VitalBook file.)
+    \end{itemize}
+
+    \textbf{D选项错误。}
+    \begin{itemize}
         \item 激励结构因组织而异。
     \end{itemize}
 \end{explanation}
@@ -2565,17 +2837,20 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 一日 $95.0\%$ 正态 VaR 大约比一日 $95.0\%$ 对数正态 VaR 多 \$448,800。
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 一日 $95.0\%$ 正态 VaR 大约比一日 $95.0\%$ 对数正态 VaR 多 \$448,800。
+    \end{itemize}
     
-    The one-day $95\%$ normal VaR(\%) is given by:
-    $$-14\%/250 + 32\% \times 1/\sqrt{250} \times 1.645 = 3.273246\%$$
-    一日 $95.0\%$ 正态 VaR（\%）为：
-    $$-14\%/250 + 32\% \times 1/\sqrt{250} \times 1.645 = 3.273246\%$$
-    
-    一日 $95.0\%$ 对数正态 VaR（\%）为：
-    $$1 - \exp(12\%/250 - 28\% \times 1/\sqrt{250} \times 1.645) = 2.824436\%$$
-    
-    差异为 $3.273246\% - 2.824436\% = 0.448810\%$，或大约 $0.448810\% \times \$100.0 \text{ million} = \$448,810$；使用精确分位数，差异为 $\$448,765.91$。
+    \begin{itemize}
+        \item The one-day $95\%$ normal VaR(\%) is given by:
+        $$-14\%/250 + 32\% \times 1/\sqrt{250} \times 1.645 = 3.273246\%$$
+        \item 一日 $95.0\%$ 正态 VaR（\%）为：
+        $$-14\%/250 + 32\% \times 1/\sqrt{250} \times 1.645 = 3.273246\%$$
+        \item 一日 $95.0\%$ 对数正态 VaR（\%）为：
+        $$1 - \exp(12\%/250 - 28\% \times 1/\sqrt{250} \times 1.645) = 2.824436\%$$
+        \item 差异为 $3.273246\% - 2.824436\% = 0.448810\%$，或大约 $0.448810\% \times \$100.0 \text{ million} = \$448,810$；使用精确分位数，差异为 $\$448,765.91$。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Quantitative Analysis: Value at Risk}{3}{2}
@@ -2614,13 +2889,18 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 正确：B -> 25 -> C -> 10 -> A (新总名义金额 = 70)
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 正确：B -> 25 -> C -> 10 -> A (新总名义金额 = 70)
+    \end{itemize}
     
-    最简单的方法是识别最低敞口，在这种情况下为 50，并从所有三个中减去它。这样：
+    \begin{itemize}
+        \item 最简单的方法是识别最低敞口，在这种情况下为 50，并从所有三个中减去它。这样：
     \begin{itemize}
         \item 当前 A -> 50 -> B 被消除；
         \item 当前 B -> 75 -> C 减少为 B -> $(75 - 50 = 25)$ -> C；
         \item 当前 C -> 60 -> A 减少为 C -> $(60 - 50 = 10)$ -> A
+    \end{itemize}
     \end{itemize}
 \end{explanation}
 
@@ -2668,7 +2948,10 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 正确：Bowtie 工具是前瞻性的，因为它通过检视控制和间接原因，在风险尚未发生前评估风险的可能性和/或影响；然而，它本身缺少定量框架，因此优先级排序更困难
+    \textbf{B选项正确。}
+    \begin{itemize}
+        \item 工具是前瞻性的，因为它通过检视控制和间接原因，在风险尚未发生前评估风险的可能性和/或影响；然而，它本身缺少定量框架，因此优先级排序更困难
+    \end{itemize}
 \end{explanation}
 
 \checklist{Operational Risk}{3}{3}
@@ -2695,17 +2978,28 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-\textbf{D选项正确。} 联邦住房贷款银行（aka，FHLBanks）的贷款在储蓄机构和中小银行中非常受欢迎，作为稳定来源的灵活（相对于到期日）资金，以低于市场的利率
-
-    根据研究笔记：“联邦住房贷款银行（FHLB）系统近年来已进入向住房抵押贷款提供者贷款。由 12 个地区银行组成，FHLB 于 1932 年创建，作为存款机构面对存款人潜在挤兑时的一个稳定资金来源。根据许多学者，FHLB 在“资金来源”领域的作用不仅增加了使用 FHLB 作为资金来源的金融机构（以住房抵押品为担保）的可用资金量，而且还增加了住房贷款的流动性，并提供了激励更多金融机构向住房市场提供信贷。
-
-    近年来，FHLB 的影响力迅速扩大，现在已有 6,000 多家商业银行、1,300 多家储蓄机构、700 多家信用合作社和 80 多家保险公司有资格向 FHLB 借款。FHLB 资金的吸引力在于它是一个稳定的融资来源，并能提供低于市场利率的资金。金融机构可以从 FHLB 按灵活的时间期限借款，期限从隔夜到 20 多年不等，利率可以是固定或浮动的。FHLB 能够提供低于市场利率资金的部分原因是其联邦特许章程允许其低成本融资，并将这些节省下来的成本转嫁给会员银行，后者作为股东可获得分红。此外，在机构发生倒闭时，联邦住房贷款银行系统处于有利地位。根据法律规定，FHLB 在追偿资金方面优先于包括 FDIC 在内的其他机构。
-
-    关于（A）、（B）和（C），每项都是错误的。具体来说：
+    \textbf{A选项错误。}
     \begin{itemize}
         \item 联邦基金市场是最受欢迎的，其有效利率比其他选择更低，尽管它是有波动的（这是它的缺点）
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
         \item 回购协议比联邦基金更受欢迎，因为它们更复杂，但它们承担更少的信用风险，因为它们由抵押品担保（它们通常被视为“抵押的联邦基金交易”）。
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
         \item 商业票据（CP）在交易量上很高，成本适中（优势）但可用容量和信用风险（劣势）有波动
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 联邦住房贷款银行（aka，FHLBanks）的贷款在储蓄机构和中小银行中非常受欢迎，作为稳定来源的灵活（相对于到期日）资金，以低于市场的利率
+ 
+        \item 根据研究笔记：“联邦住房贷款银行（FHLB）系统近年来已进入向住房抵押贷款提供者贷款。由 12 个地区银行组成，FHLB 于 1932 年创建，作为存款机构面对存款人潜在挤兑时的一个稳定资金来源。根据许多学者，FHLB 在“资金来源”领域的作用不仅增加了使用 FHLB 作为资金来源的金融机构（以住房抵押品为担保）的可用资金量，而且还增加了住房贷款的流动性，并提供了激励更多金融机构向住房市场提供信贷。
+
+        \item 近年来，FHLB 的影响力迅速扩大，现在已有 6,000 多家商业银行、1,300 多家储蓄机构、700 多家信用合作社和 80 多家保险公司有资格向 FHLB 借款。FHLB 资金的吸引力在于它是一个稳定的融资来源，并能提供低于市场利率的资金。金融机构可以从 FHLB 按灵活的时间期限借款，期限从隔夜到 20 多年不等，利率可以是固定或浮动的。FHLB 能够提供低于市场利率资金的部分原因是其联邦特许章程允许其低成本融资，并将这些节省下来的成本转嫁给会员银行，后者作为股东可获得分红。此外，在机构发生倒闭时，联邦住房贷款银行系统处于有利地位。根据法律规定，FHLB 在追偿资金方面优先于包括 FDIC 在内的其他机构。
     \end{itemize}
 \end{explanation}
 
@@ -2733,7 +3027,10 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 动量策略的累积利润比规模或价值策略的累积利润大一个数量级。
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 动量策略的累积利润比规模或价值策略的累积利润大一个数量级。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Factor Investing}{3}{2}
@@ -2764,13 +3061,25 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 非参数密度估计（NPDE）可以在细粒度置信水平（例如 $99.10\%$）下检索 VaR，就像分布是一个连续概率密度函数（pdf）
 
-    关于（A）、（B）和（C），每项都是错误的。相反，以下是 TRUE 陈述：
+    \textbf{A选项错误。}
     \begin{itemize}
         \item 基本历史模拟肯定返回一个 $99.1\%$ VaR，这里它将与 $99.0\%$ VaR 相同
+    \end{itemize}
+
+    \textbf{B选项错误。}
+    \begin{itemize}
         \item 由于顺序统计量的便利性，可以在所有四种方法下生成置信区间；或者，实际上，可以为任何参数或非参数 VaR 或 ES 估计构建置信区间！
+    \end{itemize}
+
+    \textbf{C选项错误。}
+    \begin{itemize}
         \item 小样本量可能有利于引导或非参数密度估计
+    \end{itemize}
+
+    \textbf{D选项正确。}
+    \begin{itemize}
+        \item 非参数密度估计（NPDE）可以在细粒度置信水平（例如 $99.10\%$）下检索 VaR，就像分布是一个连续概率密度函数（pdf）
     \end{itemize}
 \end{explanation}
 
@@ -2803,8 +3112,11 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 错误：连续存入抵押品在操作上太昂贵
-    关于（B）、（C）和（D），每项都是正确的。
+    \textbf{A选项正确。} 
+    \begin{itemize}
+        \item 错误：连续存入抵押品在操作上太昂贵
+    \end{itemize}
+   
 \end{explanation}
 
 \checklist{Counterparty Credit Risk}{3}{2}
@@ -2845,7 +3157,10 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项正确。} 错误：这是一项知识基础（KB）错误。根据阅读（GARP），知识基础错误的相应响应是指令控制。
+    \textbf{C选项错误。}
+    \begin{itemize}
+        \item 这是一项知识基础（KB）错误。根据阅读（GARP），知识基础错误的相应响应是指令控制。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Operational Risk: Human Error}{3}{2}
@@ -2872,11 +3187,16 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 正确答案：因为银行参与期限转换（maturity transformation 是该章节反复出现的因果主题）。
-
-    \textit{如 Grant 在3.1中所解释，为什么银行需要LTP}：在日常业务中，银行通过用短期存款（负债）为长期贷款（资产）提供资金来赚钱，这一过程通常称为期限转换。正如巴塞尔银行监管委员会（BCBS，2008年9月）所指出的，这“使得银行本质上容易受到流动性风险的影响，无论是机构特定的流动性风险还是影响整个市场的流动性风险”（第3页）。但只要银行在产品定价、新产品审批流程以及利润和绩效评估中使用LTP来计量流动性的成本、收益和风险，就不应阻止银行参与期限转换。拥有糟糕LTP实践的银行更可能积累大量长期非流动性资产、有条件承诺以及短期波动性更大的负债，从而显著增加其资金短缺的脆弱性。”（Joel Grant, 2011, “Liquidity Transfer Pricing: A Guide to Better Practice,” Occasional Paper, Financial Stability Board, Bank for International Settlements.）
-
-    关于 (B)、(C) 和 (D)，均为错误陈述。
+    \textbf{A选项错误。} 
+    \begin{itemize}
+        \item 因为银行参与期限转换（maturity transformation 是该章节反复出现的因果主题）。
+    \end{itemize}
+    \begin{itemize}
+        \item 如 Grant 在3.1中所解释，为什么银行需要LTP：在日常业务中，银行通过用短期存款（负债）为长期贷款（资产）提供资金来赚钱，这一过程通常称为期限转换。正如巴塞尔银行监管委员会（BCBS，2008年9月）所指出的，这“使得银行本质上容易受到流动性风险的影响，无论是机构特定的流动性风险还是影响整个市场的流动性风险”（第3页）。
+        \item 但只要银行在产品定价、新产品审批流程以及利润和绩效评估中使用LTP来计量流动性的成本、收益和风险，就不应阻止银行参与期限转换。
+        \item 拥有糟糕LTP实践的银行更可能积累大量长期非流动性资产、有条件承诺以及短期波动性更大的负债，从而显著增加其资金短缺的脆弱性。（Joel Grant, 2011, “Liquidity Transfer Pricing: A Guide to Better Practice,” Occasional Paper, Financial Stability Board, Bank for International Settlements.）
+    \end{itemize}
+   
 \end{explanation}
 
 \checklist{Liquidity Risk Management}{3}{2}
@@ -2903,8 +3223,10 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} 错误：相反，作者发现投资者并没有因为欺诈风险而得到补偿，无论是通过卓越表现和/或更高的费用
-    关于（A）、（B）和（C），每项都是正确的。
+    \textbf{D选项错误。} 
+    \begin{itemize}
+        \item 相反，作者发现投资者并没有因为欺诈风险而得到补偿，无论是通过卓越表现和/或更高的费用
+    \end{itemize}
 \end{explanation}
 
 \checklist{Operational Due Diligence}{3}{2}
@@ -2934,9 +3256,12 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 我们在任何 EVT 方法中都面临偏差-方差权衡。在块方法中，权衡是块大小（或数量）的反映。在 POT 方法中，它是任意阈值选择，类似于块大小选择。如果阈值太低，那么我们的模型将不符合 EVT 的渐近性质，模型可能不准确（aka，偏差）。更高的阈值意味着更低的偏差（aka，更高的准确性），但这必然适合更少的数据点，因此我们可以预期更高的方差（aka，更低的精度）。
-
-    Dowd$_{(\dagger)}$ 在半参数估计方法（例如，Hill 估计器）的上下文中参考了偏差-方差权衡：“... 基于 $k$ 的选择意味着偏差和方差之间的权衡。如果我们增加 $k$，我们获得更多数据，因此移动到分布的中心。这增加了我们的估计器的精度（因此降低了它的方差），但也增加了尾部估计器的偏差，通过在分布中心附近放置相对更多的权重来观察。或者，如果我们减少 $k$ 并进一步沿着尾部移动，我们减少偏差，但有更少的数据来使用，并且得到更高的方差。”
+    \textbf{A选项正确。} 
+    \begin{itemize}
+        \item 我们在任何 EVT 方法中都面临偏差-方差权衡。在块方法中，权衡是块大小（或数量）的反映。在 POT 方法中，它是任意阈值选择，类似于块大小选择。如果阈值太低，那么我们的模型将不符合 EVT 的渐近性质，模型可能不准确（aka，偏差）。更高的阈值意味着更低的偏差（aka，更高的准确性），但这必然适合更少的数据点，因此我们可以预期更高的方差（aka，更低的精度）。
+   
+        \item Dowd$_{(\dagger)}$ 在半参数估计方法（例如，Hill 估计器）的上下文中参考了偏差-方差权衡：“... 基于 $k$ 的选择意味着偏差和方差之间的权衡。如果我们增加 $k$，我们获得更多数据，因此移动到分布的中心。这增加了我们的估计器的精度（因此降低了它的方差），但也增加了尾部估计器的偏差，通过在分布中心附近放置相对更多的权重来观察。或者，如果我们减少 $k$ 并进一步沿着尾部移动，我们减少偏差，但有更少的数据来使用，并且得到更高的方差。”
+    \end{itemize}
 \end{explanation}
 
 \checklist{Quantitative Analysis: Extreme Value Theory}{3}{2}
@@ -2963,7 +3288,10 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 错误：再抵押最小化融资成本。权衡是再抵押最小化融资成本但增加交易对手风险。
+    \textbf{A选项错误。} 
+    \begin{itemize}
+        \item 再抵押最小化融资成本。权衡是再抵押最小化融资成本但增加交易对手风险。
+    \end{itemize}
 \end{explanation}
 
 \checklist{Counterparty Risk}{3}{2}
@@ -2993,17 +3321,26 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 错误：相反，百分比比美元更受欢迎。
-
-    GARP 说：“报告运营损失作为毛收入、总成本（用于成本中心）、总预算（用于项目）或资本基点，有助于跨业务单位比较类似实体。报告以百分比而不是绝对值也使报告可扩展并适用于所有规模的实体。理想情况下，运营风险管理人员也将更好地理解实施适当控制和运营限制的成本效益评估和权衡。”({\dag})
-
-    关于（A）、（C）和（D），每项都是正确的。
+    
+    \textbf{A选项正确。} 
     \begin{itemize}
         \item 中央操作风险职能部门应将稀缺资源集中在预防和解决重大事件，而不是被日常波动分散注意力。GARP 说：“适当分配风险管理资源是专注于预防和解决大型事件，而不是被日常波动分散和分散注意力。”({\dag})
-        \item 中央操作风险职能部门应定期审查小、频繁的损失，以发现潜在的控制违规或流程缺陷；如果这些损失是连续且随机的，应考虑将它们的平均成本包含在服务价格中。GARP 说：“小而频繁的损失应定期识别和分析，以检测任何可能表明控制违规或流程缺陷的模式，这需要采取行动计划。如果这些损失随机发生，没有特定的结构，并且结构有限、稳定和重复，它们的平均成本可以作为服务成本的一部分传递给客户。”({\dag})
-        \item 中央操作风险职能部门可以通过（i）转换和汇总，（ii）分类，和（iii）最坏情况报告来应对编译定性风险数据的挑战。
     \end{itemize}
 
+    \textbf{B选项错误。} 
+    \begin{itemize}
+        \item 相反，百分比比美元更受欢迎。
+        \item GARP 说：“报告运营损失作为毛收入、总成本（用于成本中心）、总预算（用于项目）或资本基点，有助于跨业务单位比较类似实体。报告以百分比而不是绝对值也使报告可扩展并适用于所有规模的实体。理想情况下，运营风险管理人员也将更好地理解实施适当控制和运营限制的成本效益评估和权衡。”({\dag})
+    \end{itemize}
+
+    \textbf{C选项正确。} 
+    \begin{itemize}
+        \item 中央操作风险职能部门应定期审查小、频繁的损失，以发现潜在的控制违规或流程缺陷；如果这些损失是连续且随机的，应考虑将它们的平均成本包含在服务价格中。GARP 说：“小而频繁的损失应定期识别和分析，以检测任何可能表明控制违规或流程缺陷的模式，这需要采取行动计划。如果这些损失随机发生，没有特定的结构，并且结构有限、稳定和重复，它们的平均成本可以作为服务成本的一部分传递给客户。”({\dag})
+    \end{itemize}
+    \textbf{D选项正确。} 
+    \begin{itemize}
+        \item 中央操作风险职能部门可以通过（i）转换和汇总，（ii）分类，和（iii）最坏情况报告来应对编译定性风险数据的挑战。
+    \end{itemize}
     ({\dag}) GARP Chapter 6, Risk Reporting, 2023 FRM Part 2, Topic 7.
 \end{explanation}
 
@@ -3031,9 +3368,13 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-\textbf{C选项正确。} 银行美元资金的有效期限缩短，而美元资产期限延长，这增加了它们的期限错配。
-
-McGuire (emphasis ours): “危机期间的事件导致了银行短期资金来源的严重中断。银行间市场陷入瘫痪，外汇掉期市场的混乱使得通过掉期获得美元的成本更高。银行的资金压力也因非银行资金来源的不稳定性而加剧，特别是美元货币市场基金和持有美元的中央银行。市场压力意味着银行美元资金的有效期限缩短，而美元资产期限延长，因为许多资产在流动性不足的市场上难以出售。这种内生性的期限错配，难以事前对冲，导致了全球美元短缺。我们对银行美元资金缺口在危机开始时的估计揭示了为什么国际政策响应是必要的，以及为什么它采取了全球中央银行掉期线的形式。” (Patrick McGuire, Gotz von Peter, 2009. “The US Dollar Shortage in Global Banking and the International Policy Response,” BIS Working Papers, Bank for International Settlements.)
+\textbf{C选项正确。} 
+    \begin{itemize}
+        \item 银行美元资金的有效期限缩短，而美元资产期限延长，这增加了它们的期限错配。
+        \item McGuire (emphasis ours): “危机期间的事件导致了银行短期资金来源的严重中断。银行间市场陷入瘫痪，外汇掉期市场的混乱使得通过掉期获得美元的成本更高。银行的资金压力也因非银行资金来源的不稳定性而加剧，特别是美元货币市场基金和持有美元的中央银行。
+        \item 市场压力意味着银行美元资金的有效期限缩短，而美元资产期限延长，因为许多资产在流动性不足的市场上难以出售。
+        \item 这种内生性的期限错配，难以事前对冲，导致了全球美元短缺。我们对银行美元资金缺口在危机开始时的估计揭示了为什么国际政策响应是必要的，以及为什么它采取了全球中央银行掉期线的形式。” (Patrick McGuire, Gotz von Peter, 2009. “The US Dollar Shortage in Global Banking and the International Policy Response,” BIS Working Papers, Bank for International Settlements.)
+    \end{itemize}
 \end{explanation}
 
 \checklist{Finance: Global Banking}{3}{2}
@@ -3047,7 +3388,8 @@ McGuire (emphasis ours): “危机期间的事件导致了银行短期资金来�
 \begin{choices}
     \item Quality and momentum (style factors)\\
     质量与动量（风格因子）
-    \item Strategy and reputation (style factors)
+    \item Strategy and reputation (style factors)\\
+    策略与声誉（风格因子）
     \item Economic growth and inflation (macro factors)\\
     经济增长与通胀（宏观因子）
     \item Real interest rates and liquidity (macro factors)\\
@@ -3059,16 +3401,25 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项正确。} 错误：在现实中，直接投资于声誉是困难的，几乎不可能想象如何将策略操作化为可投资的因子。
-
- 
-
-    根据 Andrew Ang（见 https://www.blackrock.com/us/individual/investment-ideas/what-is-factor-investing），有两种主要类型的因子：宏观经济因子和风格因子。宏观经济因子包括经济增长、信用（违约风险）、实际利率、新兴市场（政治和主权风险）、通胀和流动性。风格因子包括价值、质量、最小波动、规模、动量和carry。
-
-    在这方面，（A）、（C）和（D）每项都是正确的：
+  
+    \textbf{A选项正确。} 
     \begin{itemize}
         \item 质量和动量是真正的风格因子
+    \end{itemize}
+
+    \textbf{B选项错误。} 
+    \begin{itemize}
+        \item 在现实中，直接投资于声誉是困难的，几乎不可能想象如何将策略操作化为可投资的因子。
+        \item 根据 Andrew Ang（见 https://www.blackrock.com/us/individual/investment-ideas/what-is-factor-investing），有两种主要类型的因子：宏观经济因子和风格因子。宏观经济因子包括经济增长、信用（违约风险）、实际利率、新兴市场（政治和主权风险）、通胀和流动性。风格因子包括价值、质量、最小波动、规模、动量和carry。
+    \end{itemize}
+
+    \textbf{C选项正确。} 
+    \begin{itemize}
         \item 经济增长和通胀是真正的宏观因子
+    \end{itemize}
+    \textbf{D选项正确。} 
+    \begin{itemize}
+        \item 实际利率和流动性是真正的宏观因子
     \end{itemize}
 \end{explanation}
 

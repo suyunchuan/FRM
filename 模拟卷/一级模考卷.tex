@@ -225,7 +225,7 @@
     
     \begin{explanation}
 
-    \textbf{D选项错误。}
+    \textbf{D选项为假。}
     \begin{itemize}
         \item 对冲并不能避免那些可能未被理解的嵌入风险；虽然对冲/投机的意图很重要，但这并不能完全保证头寸不存在风险。更重要的是，复杂头寸本身就是由这些基本构件组合而成，因此即便是复杂的对冲头寸，也无法避免承担重大风险。
     \end{itemize}
@@ -307,7 +307,7 @@
     \begin{explanation}
 
  
-    \textbf{D选项正确。}
+    \textbf{D选项为假。}
     \begin{itemize}
         \item 银行通过进入一笔自身支付浮动利率、收取固定利率的互换来对冲市场风险，这是相反的套期保值！在 A、B 和 C 中，每个陈述都是正确的
     \end{itemize}
@@ -347,7 +347,7 @@
 
     \end{itemize}
     
-    \textbf{B选项错误。}
+    \textbf{B选项正确。}
     \begin{itemize}
         \item 回想 EWMA 方差和协方差的公式：
         
@@ -374,7 +374,7 @@
         \item 15.0\% 是当前的相关系数
     \end{itemize}
     
-    \textbf{D选项正确。}
+    \textbf{D选项错误。}
     \begin{itemize}
         \item 16.2\% 是如果使用 0.5\% 的回报率而不是 0.05\% 的回报率计算得到的结果
     \end{itemize}
@@ -386,7 +386,7 @@
 
 
  \begin{question}
-    According to GARP, each of the following was a causal factor in the 2007-2009 global financial crisis (GFC) EXCEPT which is not a causal factor?
+    According to GARP, each of the following was a causal factor in the 2007-2009 global financial crisis (GFC) EXCEPT which is not a causal factor?\\
     根据 GARP，下列各项被认为是2007-2009年全球金融危机（GFC）的原因，除了哪一项不是原因？
     \end{question}
     
@@ -551,19 +551,24 @@
     \begin{itemize}
         \item 我们可以使用如下公式计算EWMA（指数加权移动平均）：
 
+        \begin{center}
         $Cov_N = \lambda \times Cov_{N-1} + (1-\lambda) \times X_{n-1} \times Y_{n-1}$
+        \end{center}
 
-        其中，$\lambda$ 表示第 $n-1$ 天最近协方差的权重；
-
+        \item 其中，$\lambda$ 表示第 $n-1$ 天最近协方差的权重；
+        \begin{center}
         $X$ 表示第 $n-1$ 天变量 $X$ 的百分比变化；
 
         $Y$ 表示第 $n-1$ 天变量 $Y$ 的百分比变化。
+        \end{center}
 
-        我们知道 $Cov_{xy} = \rho_{xy} \times \sigma_x \times \sigma_y$。
+        \item 我们知道 $Cov_{xy} = \rho_{xy} \times \sigma_x \times \sigma_y$。
+        \begin{center}
 
         $Cov(n-1) = 0.55 \times 0.015 \times 0.017 = 0.00014025$。
 
         $Cov_N = 0.7 \times 0.00014025 + (1-0.7) \times 3\% \times 4\% = 0.000458175 = 4.58 \times 10^{-4}$
+        \end{center}
     \end{itemize}
     \end{explanation}
 
@@ -608,12 +613,13 @@
 
     \begin{choices}
         \item Less than 0.01\%
-        
+        \\小于0.01\%
         \item 10.0\%
-        
+        \\10.0\%
         \item  20.0\%
-        
+        \\20.0\%
         \item 33.3\%
+        \\33.3\%
     \end{choices}
 
     \begin{correctanswer}
@@ -623,10 +629,11 @@
     \begin{explanation}
     \textbf{C选项正确。}
     \begin{itemize}
-        \item 二项分布的均值为 $p \times n$，方差为 $p \times (1-p) \times n$。已知 $p \times n = 4.0$，$p \times (1-p) \times n = 3.80$。我们可以将第一个公式代入第二个公式，据此求得投资组合中的资产数量以及违约概率：
+        \item 二项分布的均值为 $p \times n$，方差为 $p \times (1-p) \times n$。已知 $p \times n = 4.0$，$p \times (1-p) \times n = 3.80$。
+        \item 我们可以将第一个公式代入第二个公式，据此求得投资组合中的资产数量以及违约概率：
         若 $p \times (1-p) \times n = [p \times n] \times (1-p) = 3.80$，又已知 $p \times n = 4.0$，则有 $4.0 \times (1-p) = 3.80$，解得 $p = 1 - \frac{3.80}{4.0} = 5.0\%$。
-        因为 $n \times p = 4.0$，所以 $n = \frac{4}{0.050} = 80$。
-        所以，$\Pr(X = 4) = \text{BINOM.DIST}(4, 80 \text{次实验}, 0.050, \text{false}) = 20.043\%$。
+        \item 因为 $n \times p = 4.0$，所以 $n = \frac{4}{0.050} = 80$。
+        \item 所以，$\Pr(X = 4) = \text{BINOM.DIST}(4, 80 \text{次实验}, 0.050, \text{false}) = 20.043\%$。
     \end{itemize}
 
     \end{explanation}
@@ -657,14 +664,15 @@
     
     \begin{explanation}
         \textbf{C选项错误。} 
-        
-        相反，提高PSA率实际上反映了未计划提前还款的增加，这将降低MBS池的价值。
+        \begin{itemize}
+        \item 相反，提高PSA率实际上反映了未计划提前还款的增加，这将降低MBS池的价值。
 
-        关于A、B和D，每一项都是正确的。具体来说：
+        \item 关于A、B和D，每一项都是正确的。具体来说：
         \begin{itemize}
             \item 转按揭抵押贷款支持证券支付给投资者的利率将低于7.50\%
-            \item 由于计划和非计划提前还款，池因子（Pool Factor）会随时间逐渐下降
-            \item 单月死亡率（SMM）不包括计划提前还款，三年后大约为0.7285\%
+            \item 由于计划和非计划提前还款，池因子（Pool Factor）会随时间逐渐下降。
+            \item 单月死亡率（SMM）不包括计划提前还款，三年后大约为0.7285\%。
+        \end{itemize}
         \end{itemize}
     \end{explanation}
 
@@ -787,8 +795,6 @@
         \begin{itemize}
             \item 她可以遵守，但应该对其发现进行限定，以避免高估预测的准确性；例如，她可以绘制未来分布。
             \item 根据（4.）基本责任，GARP成员：
-        \end{itemize}
-       
         \begin{itemize}
             \item[4.1] 应遵守所有适用于GARP成员专业活动的适用法律、规则和法规（包括本Code），并不得故意参与或协助任何违反此类法律、规则或法规的行为。
             \item[4.2] 应承担道德责任，不能外包或委托这些责任给他人。
@@ -797,7 +803,7 @@
             \item[4.5] 应明确披露其特定知识、行业实践和适用法律和法规在风险评估方面的相关限制。
         \end{itemize}
         
-       
+    \end{itemize}
     \end{explanation}
 
     \checklist{蒙特卡罗模拟的局限性}{3}{3}
@@ -1062,22 +1068,22 @@
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项恰当,不选。} 
+    \textbf{A说法恰当,不选。} 
     \begin{itemize}
         \item   外部评级机构的信用评级倾向于通过周期（TTC）。
     \end{itemize}
 
-    \textbf{B选项错误。} 
+    \textbf{B选项正确。} 
     \begin{itemize}
         \item   正确的说法是：通过周期（TTC）是无条件的，而时点（PIT）是有条件的.
     \end{itemize}
 
-    \textbf{C选项恰当,不选。} 
+    \textbf{C说法恰当,不选。} 
     \begin{itemize}
         \item   信用利差属于时点（PIT），而PIT度量理论上包含更多信息。但请注意，这一点是有争议的，一些人认为某些PIT方法（如结构型方法）中很多所谓的信息其实是噪音伪装的。
     \end{itemize}
     
-    \textbf{D选项恰当,不选。} 
+    \textbf{D说法恰当,不选。} 
     \begin{itemize}
         \item   在危机期间，PIT方法意味着更高的预期和意外损失（EL \& UL），因此PIT方法具有顺周期性。
     \end{itemize}
@@ -1272,11 +1278,12 @@
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项正确。} BBB（标准普尔）或Baa（穆迪）评级最有可能被分配给该债券；也就是说，这是投资级别中最低的评级。参考 \url{https://en.wikipedia.org/wiki/Credit_rating}。
-
-    根据标准普尔（S\&P），“BBB”级别的债务表明具有充分的保护性参数。然而，如果经济条件不利或环境变化，债务人的偿付能力更有可能削弱。
-
-    根据穆迪（Moody's），“Baa”评级对应的是具有中等信用风险的债务，这些债务可能带有投机性特征。
+    \textbf{D选项正确。} 
+    \begin{itemize}
+    \item BBB（标准普尔）或Baa（穆迪）评级最有可能被分配给该债券；也就是说，这是投资级别中最低的评级。参考 \url{https://en.wikipedia.org/wiki/Credit_rating}。
+    \item 根据标准普尔（S\&P），“BBB”级别的债务表明具有充分的保护性参数。然而，如果经济条件不利或环境变化，债务人的偿付能力更有可能削弱。
+    \item 根据穆迪（Moody's），“Baa”评级对应的是具有中等信用风险的债务，这些债务可能带有投机性特征。
+    \end{itemize}
     
 \end{explanation}
 
@@ -1305,7 +1312,7 @@
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项错误。} 
+    \textbf{C选项正确。} 
     \begin{itemize}
         \item 正确的说法是：将企业风险的更好理解（特别是可保风险）转化为成本节约或更好的资源分配。
         \item 识别隐藏和/或危险集中包括（例如）地理、行业、产品或供应商
@@ -1345,7 +1352,6 @@
 \begin{explanation}
     \textbf{D选项正确。} 
     \begin{itemize}
-        \item 正确答案是：1,500
         \item 第二个应用程序在第一个应用程序已识别的机器人浏览中发现了 $40/200 = 20.0\%$，因此（考虑到独立性），我们可以推断它自己识别到的300个机器人浏览约占总数的 $20.0\%$，据此估算总的机器人浏览数为 $300/20\% = 1,500$。
         \item 同理，第一个应用程序在第二个应用程序已识别的机器人浏览中发现了 $40/300 = 13.33\%$，所以它自己检测到的200个也约占总数的 $13.33\%$，因此 $200/13.33\% = 1,500$。
     \end{itemize}
@@ -1378,8 +1384,6 @@
 \begin{explanation}
     \textbf{B选项正确。} 
     \begin{itemize}
-        \item 正确答案为：\dollar9.88
-
         \item $\dollar100.00 \times 0.10 \times \exp(-4.0\% \times 0.25) = \dollar9.88$。
         \item 或者，我们可以通过资产或无价值期权的价格计算：$\dollar85.00 \times 0.12350 \times \exp(0\% \times 0.25) = \dollar10.50$，因此 $\dollar10.50 - \dollar0.62 = \dollar9.88$。
     \end{itemize}
@@ -1761,7 +1765,6 @@
 \begin{explanation}
     \textbf{A选项正确。} 
     \begin{itemize}
-        \item 正确：Price(E) 和 BSM(V) 之间的高相关性。
         \item 按照教材中的记号，未知分布为 $g(X)$，蒙特卡洛模拟用于逼近其期望值 $E[g(X)]$，但这个近似实际上可以表示为 $E[g(X(i))] + \eta(i)$，其中 $\eta(i)$ 是均值为零的误差项。控制变量（control variate）是另一个随机变量 $h(X(i))$，它与误差项相关。在本题中，Bob 估算 $E[Price(E)] = g(X)$，而 BSM(V) 是其控制变量。
         \item 根据教材，“一个好的控制变量应具备两个特性：
     \begin{itemize}
@@ -1856,7 +1859,6 @@
 \begin{explanation}
     \textbf{B选项正确。} 
     \begin{itemize}
-        \item 正确的答案是：\dollar170,100。
         \item 以美元计算，投资组合波动率 = $\sqrt{(\dollar2,100.0)^2 \times (12.0)^2 + (\dollar6,300.0)^2 \times (25.0)^2 + 2 \times \dollar2,100.0 \times \dollar6,300.0 \times 12.0 \times 25.0 \times 0.440} = \dollar170,000.00$，其中 $\dollar2,100 = \dollar0.030 \times \dollar7,000,000/100$ 和 $\dollar6,300 = \dollar0.090 \times \dollar7,000,000/100$。
         \item 以百分比计算，投资组合波动率 = $\sqrt{(0.00030)^2 \times (12.0)^2 + (0.00090)^2 \times (25.0)^2 + 2 \times 0.00030 \times 0.00090 \times 12.0 \times 25.0 \times 0.440} = 2.430\%$，因此 $2.430\% \times \dollar7,000,000 = \dollar170,100.00$。
     \end{itemize}
@@ -2007,15 +2009,12 @@
 % --- Question 40 ---
 \begin{question}
     Peter is a Financial Analyst whose boss asked him to develop a model, or if necessary a set of models, that are multi-factor risk models for the firm's fixed income and derivative investment portfolios. Specifically, there are four objectives as follows:
-
-    I. To measure and hedge the risk of bond portfolios in terms of the relatively small number of liquid bonds available, in particular, on-the-run government bonds
-
-    II. To measure and hedge the risk of a portfolio of swaps in terms of the highly liquid money market and swap instruments, which are more numerous
-
-    III. To measure the risk of mixed portfolios not terms of other securities but instead to model direct changes to the shape of the term structure
-
-    IV. To measure portfolio volatility by assuming a term structure of volatility but doing so without an excessive “curse of dimensionality;” i.e., avoiding too many correlation pairs
-
+    \begin{itemize}
+    \item I. To measure and hedge the risk of bond portfolios in terms of the relatively small number of liquid bonds available, in particular, on-the-run government bonds
+    \item II. To measure and hedge the risk of a portfolio of swaps in terms of the highly liquid money market and swap instruments, which are more numerous
+    \item III. To measure the risk of mixed portfolios not terms of other securities but instead to model direct changes to the shape of the term structure
+    \item IV. To measure portfolio volatility by assuming a term structure of volatility but doing so without an excessive “curse of dimensionality;” i.e., avoiding too many correlation pairs
+    \end{itemize}
     For these four objectives, Peter has three basic multi-factor risk metrics: key-rate exposures, partial ’01s, and forward-bucket ’01s. For which of the four objectives is key-rate exposures best suited?
     \\彼得是一名金融分析师，他的老板要求他开发多因子风险模型，用于公司固定收益和衍生品投资组合的风险衡量。具体来说，有四个目标：
     \begin{itemize}
@@ -2063,7 +2062,7 @@
     The green point is the minimum variance portfolio, MVP, which has an expected return of $7.70\%$ and standard deviation, $\sigma$, of $10.0\%$. The red triangle is the Market Portfolio that has an expected return of $11.0\%$ and standard deviation, $\sigma$, of $13.7\%$. If the riskfree rate is $4.0\%$, what is the formula for the capital market line (CML)?
 
     下图显示了一个实际的投资组合可能性曲线（PPC，虚线）。图中还绘制了两个重要的投资组合（最小方差组合和市场投资组合）。
-    \begin{figure}[H]
+    \begin{figure}[!p]
         \centering
         \includegraphics[width=0.6\textwidth]{1·41·1.png} 
     \end{figure}
@@ -2534,9 +2533,10 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-\textbf{C选项正确。} $\text{DV01} = 0.0747$。
-
-当收益率下降15个基点时，债券价格的变化为 $\dollar120.900 - \dollar119.780 = \dollar1.120$，所以每个基点的价格变化为 $\dollar1.120/15 = 0.0746667$。需要注意的是，严格来说（技术上），DV01 指的是收益率下降1个基点对应的价格变化。收益率上升1个基点时的价格变化几乎相同，但不会完全一致。
+\textbf{C选项正确。} 
+\begin{itemize}
+\item 当收益率下降15个基点时，债券价格的变化为 $\dollar120.900 - \dollar119.780 = \dollar1.120$，所以每个基点的价格变化为 $\dollar1.120/15 = 0.0746667$。需要注意的是，严格来说（技术上），DV01 指的是收益率下降1个基点对应的价格变化。收益率上升1个基点时的价格变化几乎相同，但不会完全一致。
+\end{itemize}
 \end{explanation}
 
 \checklist{固定收益风险衡量指标的计算}{3}{3}
@@ -2569,13 +2569,10 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 
+    \textbf{A选项正确。}
     \begin{itemize}
-        \item 公司风险经理（们）是享有丰厚薪酬的执行人员，拥有诱人的职业发展机会。
-    \end{itemize}
-    
-    \begin{itemize}
-        \item GARP 认为，真正考验公司对风险经理看法的是如何对待人力资本。GARP 解释说：“衡量风险管理过程严肃性的一个方法是检查雇用的员工以及风险经理在公司层级中的地位：风险经理是否被视为执行人员，并且这个职位是否能带来其他职业机会？风险经理有多独立？他或她拥有什么权力？他或她向谁报告？风险经理相对于其他因绩效（例如交易员）而获得奖励的员工来说，是否得到了很好的补偿？企业伦理文化有多强大和有弹性，能够抵御不良行为者的行动？公司是否制定了明确的伦理标准，并且这些标准是否被积极执行？”
+        \item GARP 认为，真正考验公司对风险经理看法的是如何对待人力资本。
+        \item GARP 解释说：“衡量风险管理过程严肃性的一个方法是检查雇用的员工以及风险经理在公司层级中的地位：风险经理是否被视为执行人员，并且这个职位是否能带来其他职业机会？风险经理有多独立？他或她拥有什么权力？他或她向谁报告？风险经理相对于其他因绩效（例如交易员）而获得奖励的员工来说，是否得到了很好的补偿？企业伦理文化有多强大和有弹性，能够抵御不良行为者的行动？公司是否制定了明确的伦理标准，并且这些标准是否被积极执行？”
     \end{itemize}
     
     [1] 2020 FRM 一级：风险管理基础，第10版。培生学习解决方案，2019年10月。
@@ -2732,7 +2729,7 @@ C
 \begin{question}
     To hedge risk, the firm’s toolbox includes derivatives such as swaps, futures, forwards, and options. About the use of derivatives to hedge, each of the following is true EXCEPT which is inaccurate?
 
-    为了对冲风险，公司的工具箱包括衍生品，如互换、期货、远期和期权。关于使用衍生品对冲，下列每个陈述都是正确的，除了哪一项是不准确的？
+    为了对冲风险，公司的工具箱包括衍生品，如互换、期货、远期和期权。关于使用衍生品对冲，下列每个陈述都是正确的，除了哪一项是错误的？
 \end{question}
 
 \begin{choices}
@@ -2799,24 +2796,24 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项错误。} 
+    \textbf{A选项正确。} 
     \begin{itemize}
         \item 错误的：每个（aka，两个）系数都是显著的（as we can immediately observe by their small p-values），因此没有一个双侧95.0\%的置信区间包含零。
         \item  $95.0\%$置信水平下，截距系数的置信区间为$0.9000 \pm 1.96 \times 0.3156 = (0.281, 1.518)$。
         \item $95.0\%$置信水平下，斜率系数的置信区间为$0.3659 \pm 1.96 \times 0.0499 = (0.268, 0.464)$。
     \end{itemize}
     
-    \textbf{B选项正确。} 
+    \textbf{B说法恰当，不选。} 
     \begin{itemize}
         \item GDP的t统计量（"t-stat"）为7.3285，等于系数估计值（0.3659）除以其标准误差（0.0499）
     \end{itemize}
     
-    \textbf{C选项正确。} 
+    \textbf{C说法恰当，不选。} 
     \begin{itemize}
         \item 给定变量之间的交叉波动性，$\sigma(\text{C\_SPEND})/\sigma(\text{GDP}) = 2.484 \div 3.412 = 0.7280$，变量之间的相关性约为0.50。因为$\beta(\text{C\_SPEND, GDP}) = \rho(\text{C\_SPEND, GPD}) \times \sigma(\text{C\_SPEND})/\sigma(\text{GDP})$，所以$\rho(\text{C\_SPEND, GPD}) = \beta(\text{C\_SPEND, GDP}) \times \sigma(\text{GDP})/\sigma(\text{C\_SPEND})$；在这种情况下，$\rho(\text{C\_SPEND, GPD}) = 0.3659 \times 3.412/2.484 = 0.5026$或约为0.50。
     \end{itemize}
 
-    \textbf{D选项正确。} 
+    \textbf{D说法恰当，不选。} 
     \begin{itemize}
         \item 判定系数（$R^2$）约为0.25，因此我们可以认为消费者支出（C\_SPEND）变异的$25\%$可以由国内生产总值（GPD）解释。在单变量回归中，$R^2$是相关系数的平方；在这种情况下，$R^2 = 0.50^2 = 0.25$（确实，数据集的回归产生了精确的R-squared为0.2525，和调整后的R-squared为0.2478，两者都四舍五入为0.25）。
     \end{itemize}
@@ -2924,22 +2921,22 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 
+    \textbf{A说法恰当，不选。} 
     \begin{itemize}
         \item 若一项活动要提升股东价值，其RAROC应高于股权资本成本。
     \end{itemize}
     
-    \textbf{B选项正确。} 
+    \textbf{B说法恰当，不选。} 
     \begin{itemize}
         \item RAROC的四个应用场景包括：业务比较、投资分析、定价策略和风险管理的成本/效益分析。
     \end{itemize}
 
-    \textbf{C选项错误。} 
+    \textbf{C选项正确。} 
     \begin{itemize}
         \item C选项是错误的，并且有两方面原因。首先，RAROC（风险调整后资本回报率）因缺乏统一的定义且存在多种变体而广为诟病。正如GARP所说：“RAROC公式有很多变体，被应用于许多不同的行业和机构。”此外，RAROC在实际操作中并不容易：“在应用RAROC时存在许多实际困难，包括其对底层风险计算的依赖。业务线通常会出于自身利益质疑RAROC数据的有效性。”（引自GARP）。
     \end{itemize}
 
-    \textbf{D选项正确。} 
+    \textbf{D说法恰当，不选。} 
     \begin{itemize}
         \item 如果RAROC的分母是经济资本（这很典型），那么其分子应为税后风险调整后的预期回报，其中“风险调整”指的是对预期损失的调整。
     \end{itemize}
@@ -3520,7 +3517,9 @@ A
     [1] Siddique and Hasan, Stress Testing: Approaches, Methods, and Applications (London: Risk Books, 2013)
 
     在金融危机（GFC）之后，压力测试受到了媒体的高度关注。Siddique 和 Hasan 解释说，“压力测试有多种方法。例如，在许多机构中，财务和 Treasury 拥有预算过程的所有权。因此，集中化的压力测试可以放在这样一个中心职能中。其他机构采取了更加分散的方法，即中心职能只充当一个聚合器。有效的压力测试不需要特定的组织形式或方法。然而，特定的组织形式需要确保某些方面是有效的。例如，在分散的压力测试方法中，组织的一致性变得重要，机构需要找到方法来确保这种一致性。”[1]
+    
     下列每个陈述都是关于压力测试的，除了哪一个是错误的？
+
     [1] Siddique 和 Hasan，压力测试：方法和应用（伦敦：风险图书，2013年）
 \end{question}
 
@@ -3602,7 +3601,8 @@ D
         \centering
         \includegraphics[width=0.6\textwidth]{1·78.png} 
     \end{figure}
-    Which of the following is \textbf{nearest} to the correlation between X and Y? (Bonus question: if we flipped the axes, then what is the correlation?)
+    Which of the following is nearest to the correlation between X and Y? (Bonus question: if we flipped the axes, then what is the correlation?)
+
     下图展示了过去五年内六十对月度回报的散点图；每个点代表给定月份中Y的回报（在y轴上）和X的回报（在x轴上）。还显示了Excel生成的普通最小二乘（OLS）回归线：$Y = 1.50 \times X + 0.78$。最后，每个系列的单变量方差也显示了。
     \begin{figure}[H]
         \centering
@@ -3625,7 +3625,7 @@ C
 \begin{explanation}
     \textbf{C选项正确。} 
     \begin{itemize}
-        \item 正确的：0.64，因为$\rho(X,Y) = 1.50 \times \sqrt{3.813} / \sqrt{20.721} = 0.6435$
+        \item 因为$\rho(X,Y) = 1.50 \times \sqrt{3.813} / \sqrt{20.721} = 0.6435$
         \item 因为$\beta(Y,X) = \sigma(X,Y)/\sigma^2(X) = [\rho(X,Y)\sigma(X)\sigma(Y)]/\sigma^2(X) = \rho(X,Y)\sigma(Y)/\sigma(X)$，因此$\rho(X,Y) = \beta(Y,X)\sigma(X)/\sigma(Y)$; 在这种情况下，$\rho(X,Y) = 1.50 \times \sqrt{3.813}/\sqrt{20.721} = 0.643457$。注意，如果我们使用有偏方差，我们会得到相同的结果（！），因为$(n-1)$被抵消了：$\rho(X,Y) = 1.50 \times \sqrt{3.749}/\sqrt{20.376} = 0.643457$。
         \item 关于附加问题，相关性不会改变，尽管beta会改变。如果我们翻转轴，回归线是$y = 1.237 + 0.276x$，在这种情况下$\rho(X,Y) = 0.276 \times \sqrt{20.376}/\sqrt{3.749} = 0.643457$。
     \end{itemize}
@@ -3792,22 +3792,22 @@ C
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。}
+    \textbf{A说法错误。}
     \begin{itemize}
-        \item A. 错误。实际情况相反：大数定律要求独立同分布(i.i.d.)的随机变量，但与中心极限定理类似，它对分布没有要求；大数定律当然不要求正态分布的随机变量。
+        \item 实际情况相反：大数定律要求独立同分布(i.i.d.)的随机变量，但与中心极限定理类似，它对分布没有要求；大数定律当然不要求正态分布的随机变量。
     \end{itemize}
 
-    \textbf{B选项恰当，不选。}
+    \textbf{B说法恰当，不选。}
     \begin{itemize}
         \item 大数定律（LLN）指出，随着样本容量的增加（$n \to \infty$），$\text{Pr}(X_{\text{avg}} = \mu)$ 接近100\%。这就是大数定律的本质。正如 GARP 所说：“大数定律（LLN）确立了均值估计量在大样本下的性质，并给出了平均值收敛于期望的条件。对于独立同分布随机变量，最简单的大数定律就是 Kolmogorov 强大数定律。”——2020 FRM 一级定量分析，第10版。
     \end{itemize}
     
-    \textbf{C选项恰当，不选。}
+    \textbf{C说法恰当，不选。}
     \begin{itemize}
         \item 中心极限定理（CLT）在大数定律的基础上增加了一个额外的假设：方差是有限的。大数定律只要求有限均值，而中心极限定理还要求方差有限。
     \end{itemize}
     
-    \textbf{D选项恰当，不选。}
+    \textbf{D说法恰当，不选。}
     \begin{itemize}
         \item CLT 说明，随着样本容量的增加，样本均值的分布收敛于正态分布 $N(\mu, \sigma^2/n)$。这就是中心极限定理的精髓：它的神奇之处在于，无需了解随机变量的分布，只要样本是 i.i.d.、均值和方差有限，样本均值渐近服从正态分布。
     \end{itemize}
@@ -3967,7 +3967,7 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-\textbf{D选项错误。} 
+\textbf{D选项正确。} 
 \begin{itemize}
     \item 关于（A）、（B）和（C），每项都是正确的。
 \end{itemize}
@@ -4011,7 +4011,7 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项错误。} 
+    \textbf{D选项正确。} 
     \begin{itemize}
         \item 基金D的行为（市场时机）被监管机构允许，并被许多投资者实践。这种时机与“市场时机”混淆，市场时机是指在下午4点购买/出售开放式共同基金份额，实际价值可能高于略微过时的净资产价值（NAV）。
     \end{itemize}
@@ -4090,7 +4090,7 @@ D
     \end{correctanswer}
     
     \begin{explanation}
-    \textbf{D选项错误。} 
+    \textbf{D选项正确。} 
 
     \begin{itemize}
         \item D. “手动工作（Manual workarounds）”是指“采用人工流程和工具来传输、处理或更改用于数据聚合或报告的数据”。在风险数据聚合的监管指引中（第39条），手动工作被专门提及：监管机构要求银行记录并解释所有风险数据聚合过程，无论是自动化还是人工（基于判断或其他方式）。文档应包括对任何手动工作的合理性说明、这些手动方法对风险数据聚合准确性的重要性描述，以及拟定的减缓影响的措施。[1]
@@ -4323,7 +4323,7 @@ D
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项错误。} 
+    \textbf{D选项正确。} 
     \begin{itemize}
         \item 实际上，他需要对路径依赖性进行建模，因此会更倾向于使用蒙特卡洛模拟。
     \end{itemize}
@@ -4485,7 +4485,7 @@ B
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{B选项错误。} 
+    \textbf{B选项正确。} 
     \begin{itemize}
         \item $N$年互换利率是市场$N$年面值收益率，因为它是$N$年票面利率，目前初始互换以面值定价。换句话说，互换利率是面值收益率。另一方面，当前$N$年债券的到期收益率（aka，收益率）会随着它们的票面利率而变化。
         \item 关于（A）、（C）和（D），每项都是正确的。

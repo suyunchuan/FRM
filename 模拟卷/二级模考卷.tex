@@ -363,9 +363,9 @@
       \end{correctanswer}
       
       \begin{explanation}
-      \textbf{C选项错误。} 
+      \textbf{C选项为假。} 
       \begin{itemize}
-          \item 错误的：这些因子每个都是显著的，调整后的 $R^2$ 对于实证金融来说相对较高。
+          \item 这些因子每个都是显著的，调整后的 $R^2$ 对于实证金融来说相对较高。
       \end{itemize}
       \end{explanation}
       
@@ -422,7 +422,7 @@
         \end{itemize}
   \end{explanation}
   
-  \checklist{Credit Risk}{1}{1}
+  \checklist{Credit Risk}{3}{2}
   
   % --- Question 8 ---
   \begin{question}
@@ -531,7 +531,6 @@
   \begin{explanation}
       \textbf{D选项正确。} 
       \begin{itemize}
-          \item 正确的：最优主动风险翻倍
           \item 因为最优主动风险由 $IR/(2*\lambda)$ 给出，帕特丽莎在从 $0.750/(2*0.10) = 3.750$ 到 $0.750/(2*0.050) = 7.500$ 时，最优主动风险翻倍。
       \end{itemize}
   \end{explanation}
@@ -570,9 +569,7 @@
   
   % --- Question 12 ---
   \begin{question}
-      Jason is a small business owner specializing in the wholesale of steel. Jason worked hard on his business, so he purchased insurance to help safeguard his company on January 4th, 2023. Later that month, on January 31st, he made a significant payment to secure a shipment of steel that will arrive on February 2nd, 2023. Jason delivered the steel to two clients on February 8th and 9th; however, he did not receive payment from the clients until February 13th. After receiving the proceeds Jason deposited the money at ABC bank.
-  
-      Among these transaction dates, on which did Jason increase his credit risk?\\
+      Jason is a small business owner specializing in the wholesale of steel. Jason worked hard on his business, so he purchased insurance to help safeguard his company on January 4th, 2023. Later that month, on January 31st, he made a significant payment to secure a shipment of steel that will arrive on February 2nd, 2023. Jason delivered the steel to two clients on February 8th and 9th; however, he did not receive payment from the clients until February 13th. After receiving the proceeds Jason deposited the money at ABC bank. Among these transaction dates, on which did Jason increase his credit risk?\\
       贾森是一家钢铁批发商。贾森努力经营他的业务，所以他在2023年1月4日购买了保险，以帮助保护他的公司在1月31日，他支付了一大笔钱以确保在2月2日到货的钢铁。贾森在2月8日和2月9日向两个客户交付了钢铁；然而，他直到2月13日才收到客户的付款。收到款项后，贾森将钱存入ABC银行。
       在这些交易日期中，哪一天贾森增加了他的信用风险？
   \end{question}
@@ -632,12 +629,12 @@
   
       Is Mary correct?\\
       Peter 正在备考金融风险管理师（FRM）考试，他觉得巴塞尔法规的历史演进非常令人困惑。具体来说，他想更好地理解最初的巴塞尔I协议（又称1988年巴塞尔协议，并在1992年前后实施）与巴塞尔II（于十多年后的2004年发布）之间的差异。他的同事 Mary 解释说，与最初的协议相比，巴塞尔II 包含了四项重要创新。特别是，相较之前的巴塞尔I原始协议（其中包括1995/1996年的修订），Mary 认为巴塞尔II 的重大创新包括以下内容：
-      \begin{enumerate}
-      \item[I.] 除了信用风险和市场风险之外，巴塞尔II 还要求对操作风险计提资本
-     \item[II.] 巴塞尔II 取消了风险权重和风险加权资产（RWA），改为直接计算风险资本占用
-     \item[III.] 巴塞尔II 包含与资本和风险管理相关的监管要求（第二支柱），并要求公开披露（第三支柱）
-     \item[IV.] 为了对协议设计进行微调，巴塞尔II 多次采用量化影响研究（QIS），银行提供数据（反馈），由监管方进行分析
-    \end{enumerate}
+      \begin{enumerate}[label=\Roman*.]
+        \item 除了信用风险和市场风险之外，巴塞尔II 还要求对操作风险计提资本
+        \item 巴塞尔II 取消了风险权重和风险加权资产（RWA），改为直接计算风险资本占用
+        \item 巴塞尔II 包含与资本和风险管理相关的监管要求（第二支柱），并要求公开披露（第三支柱）
+        \item 为了对协议设计进行微调，巴塞尔II 多次采用量化影响研究（QIS），银行提供数据（反馈），由监管方进行分析
+      \end{enumerate}
      Mary 的说法正确吗？
     \end{question}
   
@@ -669,14 +666,18 @@
   % --- Question 14 ---
   \begin{question}
       Assume the spot foreign exchange (FX) rate between the US dollar and the Japanese Yen is 110.00 which can be represented as USDJPY 110.00 or JPY 110.00 where USD is the base currency and JPY is the quote currency; aka, quote 110.00 yen per one dollar of the base or “per unit” currency. The USD interest rate is $2.50\%$ and the JPY interest rate is $0.450\%$. The period is one year, and the compound frequency is annual. If the covered interest rate (CIP) arbitrage framework enforces a perfectly accurate one-year forward exchange rate, then what is the implied one-year “swap rate” which is here simply defined as the difference between the forward FX rate and the spot FX rate; put simply, what is the difference, $F(\text{USDJPY}) - S(\text{USDJPY})$, or $F(\text{USDJPY}) - 110.00$?\\
-      假设美元/日元即期汇率是110.00，可以表示为USDJPY 110.00或JPY 110.00，其中USD是基础货币，JPY是报价货币；即，报价110.00日元每单位基础货币美元。美元利率为2.50\%，日元利率为0.450\%。期限为一年，复利频率为年复利。如果套利框架中的覆盖利率（CIP）强制执行一个完美准确的远期汇率，那么什么是隐含的一年“掉期率”，这里 simply defined as the difference between the forward FX rate and the spot FX rate; put simply, what is the difference, $F(\text{USDJPY}) - S(\text{USDJPY})$, or $F(\text{USDJPY}) - 110.00$?
+      假设美元/日元即期汇率是110.00，可以表示为USDJPY 110.00或JPY 110.00，其中USD是基础货币，JPY是报价货币；即，报价110.00日元每单位基础货币美元。美元利率为2.50\%，日元利率为0.450\%。期限为一年，复利频率为年复利。如果套利框架中的覆盖利率（CIP）强制执行一个完美准确的远期汇率，那么什么是隐含的一年“掉期率”，这里简单定义为远期汇率和即期汇率的差值；即，$F(\text{USDJPY}) - S(\text{USDJPY})$，或 $F(\text{USDJPY}) - 110.00$?
   \end{question}
   
   \begin{choices}
       \item -2.20 JPY (or -2.20 USDJPY)
+      \\-2.20 日元（或 -2.20 USDJPY）
       \item Zero
+      \\零
       \item + 5.80 JPY
+      \\+ 5.80 日元
       \item + 13.70 JPY
+      \\+ 13.70 日元
   \end{choices}
   
   \begin{correctanswer}
@@ -724,7 +725,6 @@
           \item 股票的波动率增加（伴随着与市场的相关性增加），而市场波动率保持不变。
           \item 股票的波动率增加（伴随着与市场的相关性增加），而市场波动率保持不变（aka, ceteris paribus），意味着股票的beta增加。这增加了股票的预期回报。因此，股票的价格应该下降。
           \item Ang（强调 ours）：“VIX变化和股票回报之间的相关性是-39\%，所以当波动率上升时，股票表现不好。波动率和回报之间的负关系被称为杠杆效应。当股票回报下降时，公司的财务杠杆增加，因为债务大致保持不变，而股权的市场价值下降。这使得股权风险更大，增加了它们的波动性。另一个通道是高波动率导致低股票回报：\textbf{波动率上升提高了投资者要求的股权回报，也导致股票价格下降。}这个第二个通道是一个时间变化的风险溢价故事，是基本CAPM倡导的：随着市场波动率增加，折现率增加，股票价格必须今天下降，以便未来股票回报可以高。” ($\dagger$)
-          \item 关于（A）、（B）和（C），每项都是错误的。
       \end{itemize}
       $(\dagger)$ \textbf{Andrew Ang, 《资产管理：因子投资系统方法》（纽约：牛津大学出版社，2014年）。}
   \end{explanation}
@@ -755,7 +755,7 @@
   \begin{explanation}
       \textbf{D选项错误。} 
       \begin{itemize}
-          \item 错误的：Vasicek是一个单因素模型；为了对冲短期、中期和长期债券，需要例如三因素Gauss+模型。
+          \item Vasicek是一个单因素模型；为了对冲短期、中期和长期债券，需要例如三因素Gauss+模型。
       \end{itemize}
       
   \end{explanation}
@@ -794,9 +794,9 @@
   \end{correctanswer}
   
   \begin{explanation}
-      \textbf{A选项错误。} 
+      \textbf{A选项正确。} 
       \begin{itemize}
-          \item 正确的：公司C拥有最高的ROE，因为它有较低的股权地位。
+          \item 公司C拥有最高的ROE，因为它有较低的股权地位。
       \begin{itemize}
           \item 公司A拥有负的ROE（$-0.33\%$），因为它有较大的债务地位（如下图所示）。即使遭受信用损失，公司仍必须偿还其债务持有者。公司A遭受了严重的信用损失，降低了EBIT。然而，即使调整了其信用损失，公司A仍然会比公司B和C拥有更小的ROE。
           \item 公司B拥有正的ROE，但ROE非常小，因为它与公司C和A相比有较大的股权。公司A遭受了较大的信用损失，降低了EBIT。然而，即使调整了其信用损失，公司仍然会比公司C拥有更小的ROE。
@@ -837,7 +837,7 @@
   \begin{explanation}
       \textbf{A选项错误。} 
       \begin{itemize}
-          \item 错误的：两项。相反，以下是正确的：风险偏好（即风险偏好声明）由高级管理层开发并由董事会批准。风险文化不是唯一责任，而是公司实际ORMF的基础，因此所有员工都对文化承担一定责任。
+          \item 风险偏好（即风险偏好声明）由高级管理层开发并由董事会批准。风险文化不是唯一责任，而是公司实际ORMF的基础，因此所有员工都对文化承担一定责任。
       \end{itemize}
       
   \end{explanation}
@@ -898,8 +898,8 @@
           \item The variance$(m)$ equals $30.0\%^2 = 0.090$
           \item The covariance$(r_i, m)$ equals $-0.10680$
       \end{itemize}
-      Which is \textbf{nearest} to the asset's risk premium which refers to the asset's expected excess return, $E(r_i) - R_f$?
-      \\
+      Which is nearest to the asset's risk premium which refers to the asset's expected excess return, $E(r_i) - R_f$?
+      
       在因子理论中，资产的风险溢价（aka，预期超额回报）由$E(r_i) - R_f = \beta(i,m) \times \lambda(m)$给出，其中资产的beta是相对于随机贴现因子（SDF；aka，定价核）和$(m)$中的一个指数的坏时间。让我们对资产做出以下假设：
       \begin{itemize}
           \item 无风险利率为3.0\%，使得$E(m) = 1/1.03 = 0.9709$
@@ -1080,7 +1080,7 @@
   \begin{explanation}
       \textbf{C选项正确。} 
       \begin{itemize}
-          \item 正确的：$6.00\%$。 $\text{TEY} = \text{after-tax return on tax-exempt investment} / (1 - \text{marginal tax rate})$; in this case, $\text{TEY} = 4.20\%/(1 - 0.30) = 6.00\%$
+          \item $\text{TEY} = \text{after-tax return on tax-exempt investment} / (1 - \text{marginal tax rate})$; in this case, $\text{TEY} = 4.20\%/(1 - 0.30) = 6.00\%$
       \end{itemize}
   \end{explanation}
   
@@ -1095,8 +1095,7 @@
       In regard to his historical analysis, each of the following statements is true EXCEPT which is false?\\
       安德鲁·安（Andrew Ang）介绍了因素并将其主要分为两类：宏观、基本面因素 \underline{versus} 投资风格因素。他写道：“因素驱动风险溢价。一组因素描述了基本面的、经济范围的变量，如增长、通货膨胀、波动性、生产率和人口风险。另一组包括可交易的、投资风格，如市场投资组合、价值增长投资和动量投资。”（$\dagger$）
       
-      安还声称，三个最重要的宏观因素是增长、通货膨胀和波动性。他对这些宏观因素的评估是基于一个长期的历史样本（具体来说，1952年第一季度至2011年第四季度）。qualify the sample window because we cannot be sure that past is prologue; e.g., interest rates experienced two long-term secular trends during this window.
-      重要的是要限定样本窗口，因为我们不能确定过去是序言；例如，利率在这段时间内经历了两个长期的大趋势。
+      安还声称，三个最重要的宏观因素是增长、通货膨胀和波动性。他对这些宏观因素的评估是基于一个长期的历史样本（具体来说，1952年第一季度至2011年第四季度）。重要的是要限定样本窗口，因为我们不能确定过去是序言；例如，利率在这段时间内经历了两个长期的大趋势。
       
       关于他的历史分析，下列各项陈述均为真，除了哪一项是假的？
   \end{question}
@@ -1199,12 +1198,11 @@
   \begin{explanation}
       \textbf{C选项正确。} 
       \begin{itemize}
-          \item \$516,000
           \item $CVA = -LGD \times PD(0,T) \times V(t)$。本题中，$V(t) = S \times N(d1) - K \times \exp(-rt) \times N(d2) = 25 \times 0.66750 - 25 \times \exp(-0.030 \times 3) \times 0.53450 = \$4.475$ 百万美元。累积 $PD = 1 - \exp(-0.060 \times 3) = 16.473\%$。因此，CVA 的近似计算为 $70\% \times 16.473\% \times 4.475 \text{ 百万美元} = \$0.5160 \text{ 百万美元}$，约为 \$516,002。
       \end{itemize}
   \end{explanation}
   
-  \checklist{Credit Risk}{27}{2}
+  \checklist{Credit Risk}{3}{2}
   
   % --- Question 28 ---
   \begin{question}
@@ -1387,7 +1385,6 @@
   \begin{explanation}
       \textbf{A选项正确。} 
       \begin{itemize}
-          \item 正确的：回归对冲最小化了对冲头寸的利润和损失（P\&L）方差。
           \item 如Tuckman所解释（加粗为我们所强调）：“\textbf{回归对的最佳论据}实际上并不是先前关于债券收益率完全依赖回归模型变化的假设。将头寸的盈亏（P\&L）写为……公式6.11……其中负号表示，名义本金为正且收益率上升时，P\&L会减少。可以证明，公式(6.8)中的回归对冲能够最小化方差。换句话说，\textbf{只要将P\&L方差作为适当的风险度量，回归对冲就能最小化被对冲头寸的风险。}”——引自Tuckman, Bruce; Serrat, Angel.《固定收益证券》（Wiley Finance）（第159页），Wiley出版社，Kindle版。
       \end{itemize}
       \textbf{B选项错误。} 
@@ -1430,9 +1427,6 @@
   \begin{explanation}
       \textbf{D选项正确。} 
       \begin{itemize}
-          \item Zapex 有一个远期货币合同头寸，其公允价值收益与交易对手的违约概率正相关
-      \end{itemize}
-      \begin{itemize}
           \item 反向风险（信用风险）是敞口与信用质量之间的不利相关性，因此反向风险是敞口与违约概率（信用质量）之间的正（负）相关性。这是反向风险，因为更大的敞口与较低的支付可能性相关。代数上，反向风险（或正向风险）是敞口/EAD和PD之间的一些依赖性。我们通常写$EL\% = PD \times EAD$，但假设PD和EAD之间是独立的，因此考虑WWR的一种简单方法是当$EL > PD \times EAD$时，因为$EL \neq PD \times EAD$也是非独立性的条件。
       \end{itemize}
       \begin{itemize}
@@ -1445,7 +1439,7 @@
   % --- Question 33 ---
   \begin{question}
       According to the FDIC, model risk management starts with robust model development, implementation, and use (aka, the first element. The second element is a sound validation process. The third element is governance). Which of the following is a TRUE statement about this \textit{first element} (development, implementation and use) of model risk management?\\
-      根据FDIC，模型风险管理始于强大的模型开发、实施和使用（aka，第一个元素。第二个元素是一个健全的验证过程。第三个元素是治理）。下列哪一项是关于模型风险管理 \textit{第一个元素}（开发、实施和使用）的 TRUE 陈述？
+      根据FDIC，模型风险管理始于强大的模型开发、实施和使用（aka，第一个元素。第二个元素是一个健全的验证过程。第三个元素是治理）。下列哪一项是关于模型风险管理 \textit{第一个元素}（开发、实施和使用）的正确陈述？
   \end{question}
   
   \begin{choices}
@@ -1564,7 +1558,7 @@
       \end{itemize}
   \end{explanation}
   
-  \checklist{Finance: Due Diligence}{35}{4}
+  \checklist{Finance: Due Diligence}{3}{2}
   
   % --- Question 36 ---
   \begin{question}
@@ -1594,7 +1588,7 @@
       \end{itemize}
   \end{explanation}
   
-  \checklist{Quantitative Analysis: Copulas}{1}{1}
+  \checklist{Quantitative Analysis: Copulas}{3}{2}
   
   % --- Question 37 ---
   \begin{question}
@@ -1656,20 +1650,20 @@
   \begin{explanation}
       
 
-      \textbf{A选项恰当，不选。} 
+      \textbf{A说法恰当，不选。} 
       \begin{itemize}
           \item 没有任何单一的网络安全/弹性指标可以独立满足需求：“这些指标（即由受监管机构收集的网络指标）可以整体反映机构的网络和操作弹性水平对其业务需求和风险偏好的适应性。然而，单独任何一项指标都不足以作为充分的度量，而且到目前为止还没有确定出可以提供有意义基准的标准化指标集。”($\dagger$)
       \end{itemize}
-      \textbf{B选项恰当，不选。} 
+      \textbf{B说法恰当，不选。} 
       \begin{itemize}
           \item 补丁老化（即打补丁所需的天数）是一项广泛且可比较的指标：“附录C包含了一组受监管机构为决策机构（董事会及其下属委员会）整理的以网络为中心的指标。值得注意的是，这些数据通常能体现出趋势信息，让审核者能够评估情况是在好转还是恶化。有些指标用于跟踪内部政策的合规性，其他指标则衡量固有风险。特别是补丁老化是一项广泛且具有可比性的指标。”($\dagger$)
       \end{itemize}
-      \textbf{C选项恰当，不选。} 
+      \textbf{C说法恰当，不选。} 
       \begin{itemize}
           \item 向后看的指标有帮助但不充分；由于对手会动态适应，因此还需要向前看的指标：“向后看的指标是用以往的表现为未来表现提供参考，这在机构的运营和风险环境长期相对稳定且较少受外部影响时是合理的。但在网络风险管理中，这是不够的，因为攻击者是动态的，会根据机构的应对和防护措施调整自己的策略，有时甚至在一次网络事件过程中就会改变他们的战术和策略。分布式拒绝服务（DDoS）事件就是一个典型例子，相关网络流量在最近两年内显著增长，而攻击者会针对机构防御进行技巧上的调整。尽管向后看的指标依然重要，但各司法管辖区日益认识到需要引入向前看的指标，作为直接或间接衡量弹性的指标，以判断受监管机构在风险事件发生时是否具备更强或更弱的应对能力。”($\dagger$)
       \end{itemize}
 
-      \textbf{D选项错误。}
+      \textbf{D选项正确。}
       \begin{itemize}
           \item 这里所说的“渗透率”这一指标并不合理（用它来比较监管机构的有效性也同样如此），不过巴塞尔委员会多次讨论了渗透测试（penetration testing）作为网络风险有效的控制方法。不过需要注意，渗透测试（按类型：测试次数和发现等级）确实是一种常见且有效的网络弹性度量指标。详见4.2.2渗透测试部分。
       \end{itemize}
@@ -1802,10 +1796,15 @@ D
 
     Each of the principles is valid, EXCEPT which of the principles is INCORRECT?\\
     你的同事已经为你公司的信用价值调整（CVA）的计算起草了指导原则。指导原则以四个原则开始：风险中性、折现、比例性和不可分离性。原则总结如下：
+
     I. 风险中性：CVA 可以使用风险中性（aka，市场隐含）或实际世界（aka，历史）参数计算
+
     II. 折现：CVA 应该折现到现值，无论是通过折现预期暴露（EE）还是通过显式折现因子
+
     III. 比例性：CVA 将与违约概率（PD）、暴露（EE）和违约损失率（LGD）成比例。
+
     IV. 不可分离性：应该不可能将交易的价值与其对手方风险（由 CVA 衡量）分开
+
     每个原则都是有效的，除了哪一项原则是不正确的？
 \end{question}
 
@@ -2255,7 +2254,9 @@ B
 % --- Question 52 ---
 \begin{question}
     Freecone Financial LLC entered into an interest rate swap some time ago where it agreed to make semi-annual fixed payments at a rate of $3.0\%$ per annum, in exchange for receiving floating payments on a notional amount of $\$50.0$ million. The floating rate is the six-month secured overnight financing rate (SOFR) and this is also the discount rate used to value the swap. The swap has a remaining life of $1.25$ years. The SOFR rate applicable to the exchange in three months was determined three months ago: it was $2.40\%$. Just as with a LIBOR-based swap, the floating rate is observed at the beginning of each six-month period but paid at the end of the period. Currently, the SOFR term structure is flat at $2.60\%$ per annum with continuous compounding. With respect to its position in this swap, which of the following is nearest to Freecone Financial’s current exposure?
+
     Freecone Financial LLC 不久前进入了一个利率互换，其中它同意每半年支付一次固定利率，年利率为 $3.0\%$，以换取收到名义金额为 $\$50.0$ 百万的浮动支付。浮动利率是六个月期有担保隔夜融资利率（SOFR），这也是用于估值互换的贴现率。互换剩余期限为 $1.25$ 年。三个月前确定的适用于交换的 SOFR 利率为 $2.40\%$。与基于 LIBOR 的互换一样，浮动利率在每个六个月期初观察，但在每个六个月期末支付。目前，SOFR 期限结构是平坦的，年利率为 $2.60\%$，连续复利。就其在该互换中的头寸而言，下列哪一项最接近 Freecone Financial 的当前暴露？
+
 \end{question}
 
 \begin{choices}
@@ -2286,6 +2287,7 @@ B
 
 \begin{choices}
     \item Ensure service provider has an appropriate background check program for its employees\\
+    确保服务提供商为其员工建立了适当的背景审查程序
     \item Financial review of service provider's most recent annual report and financial statements\\
     对服务提供商最近年度报告和财务报表的财务审查
     \item Evaluate the service provider's performance along environmental, social, and governance (ESG) factors\\
@@ -2304,9 +2306,9 @@ B
         \item C选项并未提及对ESG因素的审查。
         \item 根据美联储理事会的指导，尽职调查应涵盖以下三大类：
         \begin{enumerate}
-            \item \textit{业务背景、声誉和战略}： ``金融机构应当审查潜在服务提供商在行业内的地位及其公司历史与资质；审查服务提供商及其高级管理人员的背景与声誉；并确保服务提供商为其员工建立了合适的背景审查程序。''
-            \item \textit{财务状况与表现}： ``金融机构应审查服务提供商及其密切相关关联公司的财务状况。财务审查可包括：服务提供商最近的财务报表和年度报告，涵盖未了承诺、资本实力、流动性及经营业绩；还应考虑服务提供商的可持续性，包括该服务提供商经营年限以及其在特定服务领域的市场份额增长等因素……''
-            \item \textit{运营与内部控制}。
+            \item 业务背景、声誉和战略： ``金融机构应当审查潜在服务提供商在行业内的地位及其公司历史与资质；审查服务提供商及其高级管理人员的背景与声誉；并确保服务提供商为其员工建立了合适的背景审查程序。''
+            \item 财务状况与表现： ``金融机构应审查服务提供商及其密切相关关联公司的财务状况。财务审查可包括：服务提供商最近的财务报表和年度报告，涵盖未了承诺、资本实力、流动性及经营业绩；还应考虑服务提供商的可持续性，包括该服务提供商经营年限以及其在特定服务领域的市场份额增长等因素……''
+            \item 运营与内部控制。
         \end{enumerate}
     \end{itemize}
 
@@ -2940,7 +2942,8 @@ D
     \item The FAIR model is inclusive because it emphasizes subjective identification (aka, findability) of factors; however, it is not a probabilistic approach and may be insufficient when distributions are required\\
     FAIR 模型是包容的，因为它强调对因素的主观识别（即可发现性）；然而，它不是一种概率方法，在需要分布时可能不足
     \item The Swiss cheese model is elegant because clusters and their centroids (aka, holes) are quantitatively retrieved via k-means clustering; however, it struggles when incorporating human factors into a holistic risk perspective
-    he Swiss cheese模型很优雅，因为聚类及其中心（即“洞”）是通过 k-means 聚类定量获得的；但是，当需要把人因纳入整体风险视角时，它会遇到困难
+    he Swiss cheese\\
+    模型很优雅，因为聚类及其中心（即“洞”）是通过 k-means 聚类定量获得的；但是，当需要把人因纳入整体风险视角时，它会遇到困难
 \end{choices}
 
 \begin{correctanswer}
@@ -3112,9 +3115,9 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项正确。} 
+    \textbf{A选项为假。} 
     \begin{itemize}
-        \item 错误：连续存入抵押品在操作上太昂贵
+        \item 连续存入抵押品在操作上太昂贵
     \end{itemize}
    
 \end{explanation}
@@ -3157,7 +3160,7 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{C选项错误。}
+    \textbf{C选项为假。}
     \begin{itemize}
         \item 这是一项知识基础（KB）错误。根据阅读（GARP），知识基础错误的相应响应是指令控制。
     \end{itemize}
@@ -3223,7 +3226,7 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{D选项错误。} 
+    \textbf{D选项为假。} 
     \begin{itemize}
         \item 相反，作者发现投资者并没有因为欺诈风险而得到补偿，无论是通过卓越表现和/或更高的费用
     \end{itemize}
@@ -3288,7 +3291,7 @@ A
 \end{correctanswer}
 
 \begin{explanation}
-    \textbf{A选项错误。} 
+    \textbf{A选项为假。} 
     \begin{itemize}
         \item 再抵押最小化融资成本。权衡是再抵押最小化融资成本但增加交易对手风险。
     \end{itemize}
@@ -3327,7 +3330,7 @@ A
         \item 中央操作风险职能部门应将稀缺资源集中在预防和解决重大事件，而不是被日常波动分散注意力。GARP 说：“适当分配风险管理资源是专注于预防和解决大型事件，而不是被日常波动分散和分散注意力。”({\dag})
     \end{itemize}
 
-    \textbf{B选项错误。} 
+    \textbf{B选项为假。} 
     \begin{itemize}
         \item 相反，百分比比美元更受欢迎。
         \item GARP 说：“报告运营损失作为毛收入、总成本（用于成本中心）、总预算（用于项目）或资本基点，有助于跨业务单位比较类似实体。报告以百分比而不是绝对值也使报告可扩展并适用于所有规模的实体。理想情况下，运营风险管理人员也将更好地理解实施适当控制和运营限制的成本效益评估和权衡。”({\dag})

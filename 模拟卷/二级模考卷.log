@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  5 MAR 2026 16:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.27)  5 MAR 2026 15:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**一级模考卷
-(./一级模考卷.tex
+**二级模考卷
+(./二级模考卷.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -164,37 +164,32 @@ File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctex-c5size.clo
 File: ctex-c5size.clo 2022/07/14 v2.5.10 c5size option (CTEX)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def
-File: ctex-fontset-mac.def 2022/07/14 v2.5.10 macOS fonts definition (CTEX)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-macnew.def
-File: ctex-fontset-macnew.def 2022/07/14 v2.5.10 macOS fonts definition for El Capitan or later version (CTEX)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+File: ctex-fontset-fandol.def 2022/07/14 v2.5.10 Fandol fonts definition (CTEX)
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'Songti SC Light'. Check the typeset output, and if it
-(fontspec)             is okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
+(fontspec)             'FandolSong-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
 
 
 Package fontspec Info: 
-(fontspec)             Font family 'SongtiSCLight(0)' created for font 'Songti
-(fontspec)             SC Light' with options
-(fontspec)             [Script={CJK},BoldItalicFont={Kaiti SC
-(fontspec)             Bold},BoldFont={Songti SC Bold},ItalicFont={Kaiti SC}].
+(fontspec)             Font family 'FandolSong-Regular(0)' created for font
+(fontspec)             'FandolSong-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolKai-Regular}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Songti SC
-(fontspec)             Light/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Songti SC
-(fontspec)             Bold/OT:script=hani;language=dflt;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Kaiti
-(fontspec)             SC/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Kaiti SC
-(fontspec)             Bold/OT:script=hani;language=dflt;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
 
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
@@ -676,29 +671,29 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \c@question=\count354
- (./一级模考卷.aux)
-\openout1 = `一级模考卷.aux'.
+ (./二级模考卷.aux)
+\openout1 = `二级模考卷.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -706,57 +701,57 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 176.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 176.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 176.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 176.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 176.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 176.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 176.
-LaTeX Font Info:    Redeclaring math accent \check on input line 176.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 176.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 176.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 176.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 176.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 176.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 175.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 175.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 175.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 175.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 175.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 175.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 175.
+LaTeX Font Info:    Redeclaring math accent \check on input line 175.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 175.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 175.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 175.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 175.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 176.
+(Font)              `operators' in the math version `normal' on input line 175.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 176.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 175.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 176.
+(Font)              `operators' in the math version `bold' on input line 175.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 176.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 175.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 176.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 176.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 176.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 176.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 176.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 175.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 176.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 176.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 176.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 175.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 176.
-Package hyperref Info: Link coloring OFF on input line 176.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 175.
+Package hyperref Info: Link coloring OFF on input line 175.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -792,15 +787,7 @@ Package hyperref Info: Link coloring OFF on input line 176.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./一级模考卷.book1)
-\tf@book1=\write5
-\openout5 = `一级模考卷.book1'.
-
-
-
-[1
-
-] (./一级模考卷.book2
+(./二级模考卷.book1
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -808,59 +795,69 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no λ (U+03BB) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-)
+))
+\tf@book1=\write5
+\openout5 = `二级模考卷.book1'.
+
+
+
+[1
+
+] (./二级模考卷.book2
+
+[2])
 \tf@book2=\write6
-\openout6 = `一级模考卷.book2'.
+\openout6 = `二级模考卷.book2'.
 
 
 
-[2] (./一级模考卷.book3
-
-[3]
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-)
+[3] (./二级模考卷.book3)
 \tf@book3=\write7
-\openout7 = `一级模考卷.book3'.
+\openout7 = `二级模考卷.book3'.
 
 
 
-[4] (./一级模考卷.book4)
+[4] (./二级模考卷.book4)
 \tf@book4=\write8
-\openout8 = `一级模考卷.book4'.
+\openout8 = `二级模考卷.book4'.
 
 
 
 [5]
-File: images/1·2.png Graphic file (type bmp)
-<images/1·2.png>
-File: images/1·2.png Graphic file (type bmp)
-<images/1·2.png>
-
 
 [6]
+File: images/2·3.png Graphic file (type bmp)
+<images/2·3.png>
+
 
 [7]
-File: images/1·4.png Graphic file (type bmp)
-<images/1·4.png>
+File: images/2·5.png Graphic file (type bmp)
+<images/2·5.png>
 
 
 [8]
+File: images/2·5.png Graphic file (type bmp)
+<images/2·5.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+
+ []
+
+
 
 [9]
-File: images/1·7·1.png Graphic file (type bmp)
-<images/1·7·1.png>
-File: images/1·7·1.png Graphic file (type bmp)
-<images/1·7·1.png>
-File: images/1·7·2.png Graphic file (type bmp)
-<images/1·7·2.png>
-
 
 [10]
+Overfull \hbox (37.06894pt too wide) in paragraph at lines 452--452
+[]\TU/lmr/m/n/10.53937 The additional G-SIB requirement includes five buckets $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-
+ []
+
+
+Overfull \hbox (19.73163pt too wide) in paragraph at lines 452--452
+[]\TU/FandolSong-Regular(0)/m/n/10.53937 额 外 的 \TU/lmr/m/n/10.53937 G-SIB \TU/FandolSong-Regular(0)/m/n/10.53937 要 求 包 含 五 个 档 次 $\OMS/cmsy/m/n/10.53937 f\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OML/cmm/m/it/10.53937 ; []\OT1/cmr/m/n/10.53937 3\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5[]\OMS/cmsy/m/n/10.53937 g$ \TU/lmr/m/n/10.53937 https://www.bis.org/fsi/fsisummaries/g-sib-framework.htm
+ []
+
+
 
 [11]
 
@@ -869,394 +866,221 @@ File: images/1·7·2.png Graphic file (type bmp)
 [13]
 
 [14]
-File: images/1·14.png Graphic file (type bmp)
-<images/1·14.png>
-File: images/1·14.png Graphic file (type bmp)
-<images/1·14.png>
-
 
 [15]
 
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'STFangsong'. Check the typeset output, and if it is
-(fontspec)             okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'STFangsong(0)' created for font
-(fontspec)             'STFangsong' with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
-
-File: images/1·16.png Graphic file (type bmp)
-<images/1·16.png>
-
-
 [16]
-File: images/1·16.png Graphic file (type bmp)
-<images/1·16.png>
-
 
 [17]
+File: images/2·17·1.png Graphic file (type bmp)
+<images/2·17·1.png>
+File: images/2·17·1.png Graphic file (type bmp)
+<images/2·17·1.png>
+
 
 [18]
+File: images/2·17·2.png Graphic file (type bmp)
+<images/2·17·2.png>
+
 
 [19]
 
 [20]
-File: images/1·22.png Graphic file (type bmp)
-<images/1·22.png>
-File: images/1·22.png Graphic file (type bmp)
-<images/1·22.png>
+File: images/2·21.png Graphic file (type bmp)
+<images/2·21.png>
 
 
 [21]
+File: images/2·21.png Graphic file (type bmp)
+<images/2·21.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+
+ []
+
+
 
 [22]
+File: images/2·23.png Graphic file (type bmp)
+<images/2·23.png>
+
 
 [23]
+File: images/2·23.png Graphic file (type bmp)
+<images/2·23.png>
+
 
 [24]
 
 [25]
+File: images/2·26.png Graphic file (type bmp)
+<images/2·26.png>
+File: images/2·26.png Graphic file (type bmp)
+<images/2·26.png>
+
 
 [26]
 
 [27]
 
 [28]
+File: images/2·29.png Graphic file (type bmp)
+<images/2·29.png>
+
 
 [29]
+File: images/2·29.png Graphic file (type bmp)
+<images/2·29.png>
+
 
 [30]
-Overfull \hbox (4.0279pt too wide) in paragraph at lines 1768--1769
-[]\TU/SongtiSCLight(0)/m/n/10.53937 按 照 教 材 中 的 记 号，|  未 知 分 布 为 $\OML/cmm/m/it/10.53937 g\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )$\TU/SongtiSCLight(0)/m/n/10.53937 ，|  蒙 特 卡 洛 模 拟 用 于 逼 近 其 期 望 值 $\OML/cmm/m/it/10.53937 E\OT1/cmr/m/n/10.53937 [\OML/cmm/m/it/10.53937 g\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 )]$\TU/SongtiSCLight(0)/m/n/10.53937 ，|  但 这 个 近 似 实 际 上 可 以 表 示 为 $\OML/cmm/m/it/10.53937 E\OT1/cmr/m/n/10.53937 [\OML/cmm/m/it/10.53937 g\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 X\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 i\OT1/cmr/m/n/10.53937 ))] +
- []
-
+File: images/2·30.png Graphic file (type bmp)
+<images/2·30.png>
+File: images/2·30.png Graphic file (type bmp)
+<images/2·30.png>
 
 
 [31]
 
 [32]
-Overfull \hbox (35.9358pt too wide) in paragraph at lines 1862--1863
-[]\TU/SongtiSCLight(0)/m/n/10.53937 以 美 元 计 算，|  投 资 组 合 波 动 率 \TU/lmr/m/n/10.53937 = $[] \OT1/cmr/m/n/10.53937 =
- []
-
-
-Overfull \hbox (27.73872pt too wide) in paragraph at lines 1863--1864
-[]\TU/SongtiSCLight(0)/m/n/10.53937 以 百 分 比 计 算，|  投 资 组 合 波 动 率 \TU/lmr/m/n/10.53937 = $[] \OT1/cmr/m/n/10.53937 =
- []
-
-
 
 [33]
-File: images/1·38.png Graphic file (type bmp)
-<images/1·38.png>
-File: images/1·38.png Graphic file (type bmp)
-<images/1·38.png>
-
 
 [34]
 
 [35]
 
 [36]
-File: images/1·41·1.png Graphic file (type bmp)
-<images/1·41·1.png>
-File: images/1·41·1.png Graphic file (type bmp)
-<images/1·41·1.png>
-
 
 [37]
-File: images/1·41·2.png Graphic file (type bmp)
-<images/1·41·2.png>
-
 
 [38]
-File: images/1·42.png Graphic file (type bmp)
-<images/1·42.png>
-File: images/1·42.png Graphic file (type bmp)
-<images/1·42.png>
-
 
 [39]
 
 [40]
-File: images/1·44.png Graphic file (type bmp)
-<images/1·44.png>
-File: images/1·44.png Graphic file (type bmp)
-<images/1·44.png>
+File: images/2·44·1.png Graphic file (type bmp)
+<images/2·44·1.png>
 
 
 [41]
-Overfull \hbox (6.56026pt too wide) in paragraph at lines 2242--2242
-\TU/lmr/m/n/10.53937 Securitization \TU/SongtiSCLight(0)/m/n/10.53937 是 一 个 已 经 存 在 了 五 十 年 的 趋 势：| \TU/lmr/m/n/10.53937 1968 \TU/SongtiSCLight(0)/m/n/10.53937 年 的 住 房 和 城 市 发 展 法 案 催 生 了 \TU/lmr/m/n/10.53937 Ginnie Mae |\TU/SongtiSCLight(0)/m/n/10.53937 （\TU/lmr/m/n/10.53937 https://www.ginniemae.gov/\TU/SongtiSCLight(0)/m/n/10.53937 ） ，|
- []
-
-File: images/1·46.png Graphic file (type bmp)
-<images/1·46.png>
+File: images/2·44·2.png Graphic file (type bmp)
+<images/2·44·2.png>
+File: images/2·44·1.png Graphic file (type bmp)
+<images/2·44·1.png>
+File: images/2·44·2.png Graphic file (type bmp)
+<images/2·44·2.png>
 
 
 [42]
-File: images/1·46.png Graphic file (type bmp)
-<images/1·46.png>
-
-Overfull \hbox (202.8439pt too wide) detected at line 2316
-\OT1/cmr/m/n/10.53937 [1 \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (1)\OML/cmm/m/it/10.53937 L\OT1/cmr/m/n/10.53937 ] \OMS/cmsy/m/n/10.53937 ^^B \OT1/cmr/m/n/10.53937 [1 \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 s\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 L[]\OT1/cmr/m/n/10.53937 ] \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^N \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 "\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ! \OT1/cmr/m/n/10.53937 [1 \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (1)\OML/cmm/m/it/10.53937 L \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 s\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 L[] \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (1) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 s\OT1/cmr/m/n/10.53937 )\OML/cmm/m/it/10.53937 L[]\OT1/cmr/m/n/10.53937 ] \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^N \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 "\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ! \OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t\OT1/cmr/m/n/10.53937 ) = \OML/cmm/m/it/10.53937 ^^N \OT1/cmr/m/n/10.53937 + \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (1) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t \OMS/cmsy/m/n/10.53937 ^^@ \OT1/cmr/m/n/10.53937 1) + \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 s\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t \OMS/cmsy/m/n/10.53937 ^^@ \OT1/cmr/m/n/10.53937 12) \OMS/cmsy/m/n/10.53937 ^^@ \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (1) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 ^^^\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 s\OT1/cmr/m/n/10.53937 ) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 Y\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t \OMS/cmsy/m/n/10.53937 ^^@ \OT1/cmr/m/n/10.53937 13) + \OML/cmm/m/it/10.53937 "\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 t\OT1/cmr/m/n/10.53937 )
- []
-
+File: images/2·44·3.png Graphic file (type bmp)
+<images/2·44·3.png>
 
 
 [43]
 
 [44]
-File: images/1·50.png Graphic file (type bmp)
-<images/1·50.png>
-
 
 [45]
-File: images/1·50.png Graphic file (type bmp)
-<images/1·50.png>
+File: images/2·49.png Graphic file (type bmp)
+<images/2·49.png>
 
 
 [46]
-File: images/1·51.png Graphic file (type bmp)
-<images/1·51.png>
-File: images/1·51.png Graphic file (type bmp)
-<images/1·51.png>
-
 
 [47]
 
 [48]
-File: images/1·54.png Graphic file (type bmp)
-<images/1·54.png>
-File: images/1·54.png Graphic file (type bmp)
-<images/1·54.png>
-
 
 [49]
 
 [50]
-File: images/1·56.png Graphic file (type bmp)
-<images/1·56.png>
-
 
 [51]
-File: images/1·56.png Graphic file (type bmp)
-<images/1·56.png>
-
 
 [52]
-File: images/1·58.png Graphic file (type bmp)
-<images/1·58.png>
+File: images/2·57.png Graphic file (type bmp)
+<images/2·57.png>
+File: images/2·57.png Graphic file (type bmp)
+<images/2·57.png>
 
 
 [53]
-File: images/1·58.png Graphic file (type bmp)
-<images/1·58.png>
-
-Overfull \hbox (56.07533pt too wide) in paragraph at lines 2781--2781
-\TU/lmr/m/n/10.53937 Debra \TU/SongtiSCLight(0)/m/n/10.53937 是 一 位 经 济 学 家，|  她 对 消 费 者 支 出 和 国 内 生 产 总 值  |（\TU/lmr/m/n/10.53937 GDP\TU/SongtiSCLight(0)/m/n/10.53937 ）|  之 间 的 关 系 感 兴 趣。|  她 从 联 邦 储 备 银 行 圣 路 易 斯  |（\TU/lmr/m/n/10.53937 https://fred.stlouisfed.org/\TU/SongtiSCLight(0)/m/n/10.53937 ）|
- []
-
-
-Overfull \hbox (7.91432pt too wide) in paragraph at lines 2813--2814
-\OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 ([]) = \OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 ([]) \OMS/cmsy/m/n/10.53937 ^^B \OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 ([])/\OML/cmm/m/it/10.53937 ^^[\OT1/cmr/m/n/10.53937 ([])$\TU/SongtiSCLight(0)/m/n/10.53937 ，|  所 以 $\OML/cmm/m/it/10.53937 ^^Z\OT1/cmr/m/n/10.53937 ([]) = \OML/cmm/m/it/10.53937 ^^L\OT1/cmr/m/n/10.53937 ([]) \OMS/cmsy/m/n/10.53937 ^^B
- []
-
-
 
 [54]
+Underfull \hbox (badness 10000) in paragraph at lines 2589--2589
+
+ []
+
+
 
 [55]
 
 [56]
-File: images/1·62.png Graphic file (type bmp)
-<images/1·62.png>
-File: images/1·62.png Graphic file (type bmp)
-<images/1·62.png>
-
 
 [57]
+File: images/2·64.png Graphic file (type bmp)
+<images/2·64.png>
+
 
 [58]
+File: images/2·64.png Graphic file (type bmp)
+<images/2·64.png>
+
 
 [59]
-File: images/1·66·1.png Graphic file (type bmp)
-<images/1·66·1.png>
-File: images/1·66·1.png Graphic file (type bmp)
-<images/1·66·1.png>
-
 
 [60]
-File: images/1·66·2.png Graphic file (type bmp)
-<images/1·66·2.png>
-
-Overfull \hbox (95.84036pt too wide) in paragraph at lines 3145--3150
-[]\TU/SongtiSCLight(0)/m/n/10.53937 如 果 你 想 进 行 更 深 入 的 探 索，|  下 面 是 相 关 电 子 表 格 链 接  |（但 对 于 本 次 考 试，|  这 部 分 理 解 不 是 必 需 的！ ） ：| \TU/lmr/m/n/10.53937 https://www.dropbox.com/s/i7bx2iewfrezgph/t2-
- []
-
+File: images/2·67.png Graphic file (type bmp)
+<images/2·67.png>
 
 
 [61]
+File: images/2·67.png Graphic file (type bmp)
+<images/2·67.png>
+
 
 [62]
-File: images/1·69.png Graphic file (type bmp)
-<images/1·69.png>
-
 
 [63]
-File: images/1·69.png Graphic file (type bmp)
-<images/1·69.png>
-
 
 [64]
 
 [65]
+File: images/2·72.png Graphic file (type bmp)
+<images/2·72.png>
+
 
 [66]
-File: images/1·72.png Graphic file (type bmp)
-<images/1·72.png>
+File: images/2·72.png Graphic file (type bmp)
+<images/2·72.png>
 
 
 [67]
-File: images/1·73.png Graphic file (type bmp)
-<images/1·73.png>
-File: images/1·73.png Graphic file (type bmp)
-<images/1·73.png>
-
 
 [68]
 
 [69]
-File: images/1·77.png Graphic file (type bmp)
-<images/1·77.png>
-
 
 [70]
-File: images/1·77.png Graphic file (type bmp)
-<images/1·77.png>
-
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-File: images/1·78.png Graphic file (type bmp)
-<images/1·78.png>
-
 
 [71]
-File: images/1·78.png Graphic file (type bmp)
-<images/1·78.png>
-
 
 [72]
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
 
-
-[73]
-Missing character: There is no λ (U+03BB) in font [lmroman10-regular]:mapping=tex-text;!
-
-
-[74]
-
-[75]
-File: images/1·83.png Graphic file (type bmp)
-<images/1·83.png>
-
-
-[76]
-File: images/1·84·1.png Graphic file (type bmp)
-<images/1·84·1.png>
-File: images/1·84·2.png Graphic file (type bmp)
-<images/1·84·2.png>
-
-Overfull \hbox (3.70026pt too wide) in paragraph at lines 3923--3924
-[]\TU/SongtiSCLight(0)/m/n/10.53937 因 为 \TU/lmr/m/n/10.53937 Treynor = (\TU/SongtiSCLight(0)/m/n/10.53937 投 资 组 合 的 超 额 回 报\TU/lmr/m/n/10.53937 )/beta\TU/SongtiSCLight(0)/m/n/10.53937 ，|  投 资 组 合 的 超 额 回 报 \TU/lmr/m/n/10.53937 = $\OT1/cmr/m/n/10.53937 0\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 080 \OMS/cmsy/m/n/10.53937 ^^B \OT1/cmr/m/n/10.53937 0\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 750 = 6\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]$ \TU/SongtiSCLight(0)/m/n/10.53937 和 它 的 夏 普 比 率 \TU/lmr/m/n/10.53937 = $\OT1/cmr/m/n/10.53937 6\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[]/30\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 0[] =
- []
-
-
-
-[77]
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-File: images/1·86.png Graphic file (type bmp)
-<images/1·86.png>
-File: images/1·86.png Graphic file (type bmp)
-<images/1·86.png>
-
-
-[78]
-
-[79]
-File: images/1·88.png Graphic file (type bmp)
-<images/1·88.png>
-File: images/1·88.png Graphic file (type bmp)
-<images/1·88.png>
-
-
-[80]
-
-[81]
-
-[82]
-
-[83]
-
-[84]
-Missing character: There is no β (U+03B2) in font [lmroman10-regular]:mapping=tex-text;!
-File: images/1·94.png Graphic file (type bmp)
-<images/1·94.png>
-File: images/1·94.png Graphic file (type bmp)
-<images/1·94.png>
-
-
-[85]
-
-[86]
-
-[87]
-File: images/1·98.png Graphic file (type bmp)
-<images/1·98.png>
-File: images/1·98.png Graphic file (type bmp)
-<images/1·98.png>
-
-
-[88]
-
-[89]
-
-[90] (./一级模考卷.aux)
+[73] (./二级模考卷.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27777 strings out of 473832
- 618673 string characters out of 5729481
- 990122 words of memory out of 5000000
- 50334 multiletter control sequences out of 15000+600000
- 563902 words of font info for 79 fonts, out of 8000000 for 9000
+ 27617 strings out of 473832
+ 623156 string characters out of 5729481
+ 997775 words of memory out of 5000000
+ 50205 multiletter control sequences out of 15000+600000
+ 563854 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,9n,114p,911b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,112p,941b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 一级模考卷.pdf (90 pages).
+Output written on 二级模考卷.pdf (73 pages).

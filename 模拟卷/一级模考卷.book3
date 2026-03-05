@@ -36,21 +36,16 @@
 \contentsline {subsection}{题号37考察: 业绩衡量：Sharpe、Treynor 与 Jensen's alpha \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{34}{Item.148}%
 \contentsline {subsection}{题号38考察: 斯皮尔曼排名相关系数与肯德尔tau的计算 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{35}{Item.152}%
 \contentsline {subsection}{题号39考察: 远期价格计算与预期市场走势 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{36}{Item.156}%
-\contentsline {subsection}{题号41考察: 资本市场线（CML）的公式与市场投资组合的夏普比率 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{38}{Item.164}%
-\contentsline {subsection}{题号42考察: ADF 测试的假设与应用场景 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{39}{Item.168}%
-\contentsline {subsection}{题号43考察: 指数套利交易策略与远期合约价格计算 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{40}{Item.172}%
-\contentsline {subsection}{题号45考察: 证券化交易的信用风险分散与转移特征 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{42}{Item.180}%
-\contentsline {subsection}{题号46考察: 季节性时间序列模型的特征与形式化表示 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{43}{Item.184}%
-\contentsline {subsection}{题号47考察: 远期汇率点计算与利率平价关系 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{43}{Item.188}%
-\contentsline {subsection}{题号48考察: 债券凸性计算与冲击值选择 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.192}%
-\contentsline {subsection}{题号49考察: 风险管理基础原则与限制政策类型 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.196}%
-\contentsline {subsection}{题号50考察: 机器学习线性回归模型的诊断图表分析 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{46}{Item.200}%
-\contentsline {subsection}{题号51考察: 金融市场的产品与对冲策略 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{47}{Item.204}%
-\contentsline {subsection}{题号52考察: 固定收益风险衡量指标的计算 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{47}{Item.208}%
-\contentsline {subsection}{题号53考察: 企业风险管理（ERM）与风险管理有效性指标 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{48}{Item.212}%
-\contentsline {subsection}{题号93考察: 证券市场线（SML）与 β 的推算（由相关系数与波动率） \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{84}{Item.372}%
-\contentsline {subsection}{题号101考察: 偿付能力II对保险公司的资本要求 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{90}{Item.404}%
-\contentsline {subsection}{题号102考察: 偿付能力II对保险公司的资本要求 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{91}{Item.408}%
-\contentsline {subsection}{题号103考察: 偿付能力II对保险公司的资本要求 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{92}{Item.412}%
-\contentsline {subsection}{题号104考察: 偿付能力II对保险公司的资本要求 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{93}{Item.416}%
-\contentsline {subsection}{题号105考察: 偿付能力II对保险公司的资本要求 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{94}{Item.420}%
+\contentsline {subsection}{题号41考察: 资本市场线（CML）的公式与市场投资组合的夏普比率 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{39}{Item.164}%
+\contentsline {subsection}{题号42考察: ADF 测试的假设与应用场景 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{40}{Item.168}%
+\contentsline {subsection}{题号43考察: 指数套利交易策略与远期合约价格计算 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{41}{Item.172}%
+\contentsline {subsection}{题号45考察: 证券化交易的信用风险分散与转移特征 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{43}{Item.180}%
+\contentsline {subsection}{题号46考察: 季节性时间序列模型的特征与形式化表示 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.184}%
+\contentsline {subsection}{题号47考察: 远期汇率点计算与利率平价关系 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{44}{Item.188}%
+\contentsline {subsection}{题号48考察: 债券凸性计算与冲击值选择 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{45}{Item.192}%
+\contentsline {subsection}{题号49考察: 风险管理基础原则与限制政策类型 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{45}{Item.196}%
+\contentsline {subsection}{题号50考察: 机器学习线性回归模型的诊断图表分析 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{47}{Item.200}%
+\contentsline {subsection}{题号51考察: 金融市场的产品与对冲策略 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{48}{Item.204}%
+\contentsline {subsection}{题号52考察: 固定收益风险衡量指标的计算 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{48}{Item.208}%
+\contentsline {subsection}{题号53考察: 企业风险管理（ERM）与风险管理有效性指标 \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{49}{Item.212}%
+\contentsline {subsection}{题号93考察: 证券市场线（SML）与 β 的推算（由相关系数与波动率） \textcolor {blue}{{\textbf {$[\blacksquare \blacksquare \square ]$}}}}{85}{Item.372}%
